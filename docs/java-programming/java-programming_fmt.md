@@ -1,7 +1,7 @@
 
 # Java 编程入门指南
 
-## 语法树（修剪后）
+## 语法分析树（修剪后）
 
 Python `addS()` 函数
 
@@ -88,11 +88,12 @@ Python `addS()` 函数
 - 运行时异常
   - 空指针异常 (`NullPointerException`)
 - 主要异常类
-- 检出异常 (Checked exceptions)
+- 检查异常 (Checked exceptions)
 - 未检查异常 (Unchecked exceptions)
 - 防止空指针异常
 
 1. 重定向模板:Java编程:并发编程
+
 模板:流
 
 # 反射
@@ -149,88 +150,89 @@ JavaBeans 简介
 
 ```
 {{Java://comment}}
+用于代码块中的注释。示例：{{Java//Check for a null value}}
+yield // 检查值是否为空
 ```
-用于代码块中的注释。示例：`{{Java//Check for a null value}}` yield `// 检查值是否为空`
 
 ```
 {{Java:kw}}
+用于标记关键字。这将创建指向书中该关键字页面的链接。示例：{{Java:kw{for}} yields for
 ```
-用于标记关键字。这将创建指向书中该关键字页面的链接。示例：`{{Java:kw{for}}` yields `for`
 
 ```
 {{Java:int}}
+用于 int 关键字。每个 Java 关键字都有对应的 Java: 模板；参见关键字。
 ```
-用于 `int` 关键字。每个 Java 关键字都有对应的 `Java:` 模板；参见关键字。
 
 ```
 {{Java:string}}
+用于标记字符串字面量。Java:String 模板会为你添加前后引号。这纯粹是一个格式模板，不创建任何链接。示例：{{Java:string|}}
 ```
-用于标记字符串字面量。`Java:String` 模板会为你添加前后引号。这纯粹是一个格式模板，不创建任何链接。示例：`{{Java:string|}}`
 
 ```
 {{Java:null}}
-```
 用于空值
+```
 
 ```
 {{Java:true}}
+用于 true
 ```
-用于 `true`
 
 ```
 {{Java:false}}
+用于 false
 ```
-用于 `false`
 
 ```
 {{Java:exception}}
-```
 用于异常类
+```
 
 ```
 {{Java:Object}}
+用于 Object
 ```
-用于 `Object`
 
 ```
 {{Java:Class}}
+用于 Class
 ```
-用于 `Class`
 
 ```
 {{Java:String}}
+用于 String
 ```
-用于 `String`
 
 ```
 {{Java:util}}
+用于 util
 ```
-用于 `util`
 
 ```
 {{Java:pkg}}
-```
 用于包
+```
 
 ```
 {{Java:name}}
-```
 用于名称
+```
 
 ```
 {{Java:version}}
-```
 用于版本
+```
 
 ```
 {{Java:io}}
-```
 用于 IO
+```
 
 ```
 {{Java:content}}
-```
 用于内容
+```
 
 ## JIT 即时编译编译器简介
 
@@ -257,21 +259,21 @@ Java 平台是 Sun Microsystems 提供的一种计算环境（或平台），它
 
 ## Java 技术
 
-Java 平台由广泛的技术组成，每种技术都提供了整体开发或运行时环境的不同部分。例如，最终用户通常与 Java 虚拟机和类库集交互。此外，Java 应用程序有许多部署方式，包括嵌入到网页中。最后，为该平台创建应用程序的开发者使用一套称为 Java 开发包（JDK）的开发工具。
+Java 平台由广泛的技术组成，每种技术都提供了整体开发或运行时环境的不同部分。例如，最终用户通常与 Java 虚拟机和类库集交互。此外，Java 应用程序有许多部署方式，包括嵌入到网页中。最后，为该平台创建应用程序的开发者使用一套称为 Java 开发包（`JDK`）的开发工具。
 
 ## Java 运行时环境
 
-针对 Java 平台的程序需要在其主机上存在两个组件：一个 Java 虚拟机和一个一组提供其依赖的任何服务的类库。Sun 的 JVM 分发及其标准类的实现被称为 Java 运行时环境（JRE）。
+针对 Java 平台的程序需要在其主机上存在两个组件：一个 Java 虚拟机和一个一组提供其依赖的任何服务的类库。Sun 的 JVM 分发及其标准类的实现被称为 Java 运行时环境（`JRE`）。
 
 ## Java 虚拟机
 
-Java 平台的核心是通用“虚拟”处理器的概念，用于执行 Java 字节码程序。无论程序在什么硬件或操作系统下运行，字节码都是相同的。Java 平台提供了一个称为 Java 虚拟机（JVM）的解释器，它在运行时将 Java 字节码翻译成原生处理器指令。这使得同一个应用程序可以在任何带有可用虚拟机的平台上运行。
+Java 平台的核心是通用“虚拟”处理器的概念，用于执行 Java 字节码程序。无论程序在什么硬件或操作系统下运行，字节码都是相同的。Java 平台提供了一个称为 Java 虚拟机（`JVM`）的解释器，它在运行时将 Java 字节码翻译成原生处理器指令。这使得同一个应用程序可以在任何带有可用虚拟机的平台上运行。
 
-从 JRE 版本 1.2 开始，Sun 的 JVM 实现中还包含了一个即时编译器。
+从 `JRE` 版本 1.2 开始，Sun 的 `JVM` 实现中还包含了一个即时编译器。
 
 它不是一次解释一条字节码指令，而是在程序加载到虚拟机时，将程序的字节码转换为可执行的原生机器码，从而在每次加载新字节码时以微小延迟为代价，使其执行速度快得多。
 
-这允许 JIT 编译器针对特定的主机平台和硬件，甚至可能优化输出代码。
+这允许 `JIT` 编译器针对特定的主机平台和硬件，甚至可能优化输出代码。
 
 ## 语言
 
@@ -286,9 +288,9 @@ Java 一词本身通常指的是为 Java 平台设计的 Java 编程语言。编
 
 ## 类似平台
 
-Java 的成功及其“一次编写，随运行”的概念也导致了其他类似的努力。其中最注意的是微软 .NET 平台，它借用了 Java 的许多概念和创新；事实上，它是对类 Java 语言 Visual J#（以前称为 J++）的实现。
+Java 的成功及其“一次编写，随运行”的概念也导致了其他类似的努力。其中最值得注意的是微软 `.NET` 平台，它借用了 Java 的许多概念和创新；事实上，它是对类 Java 语言 Visual J#（以前称为 J++）的实现。
 
-后来微软停止并撤回了对 J# 的支持，并了一种名为 C# 的新语言。C# 与 J# 和 Java 非常相似，但与它们不兼容。Java 和 C# 之间的差异可以阅读 w:Comparison of C Sharp and Java。
+后来微软停止并撤回了对 J# 的支持，并推出了一种名为 C# 的新语言。C# 与 J# 和 Java 非常相似，但与它们不兼容。Java 和 C# 之间的差异可以阅读 w:Comparison of C Sharp and Java。
 
 | Java 编程 | | 索引 |
 |---|---|---|
@@ -298,15 +300,15 @@ Java 的成功及其“一次编写，随运行”的概念也导致了其他类
 
 ## Java 编程环境
 
-要编译 Java 程序，你需要下载并安装 Java 开发工具包 (JDK)。你可以从 Sun 网站获取它。其他硬件和操作系统供应商也为他们的平台提供 Java 开发工具包，尽管它们可能会更改工具包的名称。Sun 为 Windows、Linux 和 Solaris 提供了 JDK。
+要编译 Java 程序，你需要下载并安装 Java 开发工具包 (`JDK`)。你可以从 Sun 网站获取它。其他硬件和操作系统供应商也为他们的平台提供 Java 开发工具包，尽管它们可能会更改工具包的名称。Sun 为 Windows、Linux 和 Solaris 提供了 `JDK`。
 
-你有许多环境可以用来开发你的 Java 程序。你可以选择在文本编辑器中编写程序，然后使用命令行进行编译，或者你可以使用集成开发环境 (IDE)。像 NetBeans 和 Eclipse 这样的 IDE 提供了许多有用功能，如语法错误检查、代码补全、自动编译和调试，你可能会发现这些功能非常有用，特别是当你第一次尝试编程时。
+你有许多环境可以用来开发你的 Java 程序。你可以选择在文本编辑器中编写程序，然后使用命令行进行编译，或者你可以使用集成开发环境 (`IDE`)。像 `NetBeans` 和 `Eclipse` 这样的 `IDE` 提供了许多有用功能，如语法错误检查、代码补全、自动编译和调试，你可能会发现这些功能非常有用，特别是当你第一次尝试编程时。
 
 ## Java 编译器
 
-JDK 包含了一组构建 Java 程序所必需的工具。JDK 中最著名的工具是 Java 编译器，也称为 `javac`。
+`JDK` 包含了一组构建 Java 程序所必需的工具。`JDK` 中最著名的工具是 Java 编译器，也称为 `javac`。
 
-`javac` 将 Java 源文件编译成可执行的 Java 类文件。源文件是带有 `.java` 扩展名的文件。你可以使用文本编辑器（如记事本）或 IDE 创建此类文件。然后 `javac` 将这些文件编译为可加载和执行的类文件，使用 `.class` 扩展名。例如，如果你创建了一个 Java 类 `org/yahoos/util/PrintDate.java`
+`javac` 将 Java 源文件编译成可执行的 Java 类文件。源文件是带有 `.java` 扩展名的文件。你可以使用文本编辑器（如记事本）或 `IDE` 创建此类文件。然后 `javac` 将这些文件编译为可加载和执行的类文件，使用 `.class` 扩展名。例如，如果你创建了一个 Java 类 `org/yahoos/util/PrintDate.java`
 
 ```java
 package org.yahoos.util;
@@ -322,25 +324,25 @@ public class PrintDate {
 
 你通常会在包含所有源文件的根目录工作目录的 shell 中调用它。Java 的包语句 `package org.yahoos.util` 对应于目录结构 `org/yahoos/util`，详见 Java 包。
 
-`javac` 会会在源文件所在目录中创建 `PrintDate.class`。如果有语法错误，`javac` 将错误信息打印到 shell 中。`PrintDate.class` 文件包含了在 Java 运行时安装的任何硬件上运行的代码。如果 `PrintDate.class` 文件是在 Windows 操作系统中创建的，你可以将此文件复制到 unix，它将正常执行。
+`javac` 会在源文件所在目录中创建 `PrintDate.class`。如果有语法错误，`javac` 将错误信息打印到 shell 中。`PrintDate.class` 文件包含了在 Java 运行时安装的任何硬件上运行的代码。如果 `PrintDate.class` 文件是在 Windows 操作系统中创建的，你可以将此文件复制到 unix，它将正常执行。
 
 通常会创建多个类，这些文件被打包成一个 `application_name.jar` 文件，以便分发并在任何硬件上运行。
 
-IDE 会自动管理这个过程。例如，Eclipse 包含它自己的 Java 编译器，并不直接使用 `javac`。它会在你保存文件时自动编译 Java 源文件。然而，使用像 Eclipse 这样的 IDE 超出了本模块的范围，因此请参考 IDE 的教程和帮助，查看它们如何提供 Java 编程环境。
+`IDE` 会自动管理这个过程。例如，`Eclipse` 包含它自己的 Java 编译器，并不直接使用 `javac`。它会在你保存文件时自动编译 Java 源文件。然而，使用像 `Eclipse` 这样的 `IDE` 超出了本模块的范围，因此请参考 `IDE` 的教程和帮助，查看它们如何提供 Java 编程环境。
 
 ## 字节码
 
 从上述段落可以看出，Java 编译器将扩展名为 `.java` 的源文本文件编译成位于 `.class` 扩展类文件中的可执行代码。这种代码被称为字节码。
 
-在 Java 之前的许多语言中，源代码通常编译为编译程序时特定机器的机器码。因此，如果程序在 X86 机器上编译，它将只在 X86 机器上运行，其他机器均不行。相反，Java 生成字节码 —— 一种中间二进制代码，它是 Java 类的可迁移表示。任何硬件/操作系统平台上的 Java 虚拟机都可以执行这种字节码。这种可移植性有一些限制：例如，Java ME 系统无法执行所有为 Java SE 环境编译的程序，因为 Java ME 是精简后用于小型设备的。但通常情况下，Java SE 程序可以在任何 Java SE 机器上无需修改地运行。
+在 Java 之前的许多语言中，源代码通常编译为编译程序时特定机器的机器码。因此，如果程序在 X86 机器上编译，它将只在 X86 机器上运行，其他机器均不行。相反，Java 生成字节码 —— 一种中间二进制代码，它是 Java 类的可迁移表示。任何硬件/操作系统平台上的 Java 虚拟机都可以执行这种字节码。这种可移植性有一些限制：例如，`Java ME` 系统无法执行所有为 `Java SE` 环境编译的程序，因为 `Java ME` 是精简后用于小型设备的。但通常情况下，`Java SE` 程序可以在任何 `Java SE` 机器上无需修改地运行。
 
 ## JIT 编译器
 
-由于只编译了一半，Java 虚拟机的任务是在执行时将程序的剩余部分编译为原生代码，使 Java 遵循“一次编写，随运行”(WORA) 策略。在运行时将字节码编译为机器码的编译器是即时编译器（Just-In-Time 或 JIT）。一旦一段代码被 JVM 编译为执行代码，该代码就会被反复使用，以加速执行。
+由于只编译了一半，Java 虚拟机的任务是在执行时将程序的剩余部分编译为原生代码，使 Java 遵循“一次编写，随运行”(WORA) 策略。在运行时将字节码编译为机器码的编译器是即时编译器（Just-In-Time 或 `JIT`）。一旦一段代码被 `JVM` 编译为执行代码，该代码就会被反复使用，以加速执行。
 
 ## Java 运行环境
 
-Java 运行环境（或简称 JRE）负责 Java 程序的执行。Sun JDK 也也包含了 JRE。但是，可以在不安装 JDK 的情况下安装 JRE，这对于只想运行 Java 程序而不是构建程序的人来说是很有用的。JRE 帮助将 Java 程序加载到内存中并执行它们。
+Java 运行环境（或简称 `JRE`）负责 Java 程序的执行。Sun `JDK` 也包含了 `JRE`。但是，可以在不安装 `JDK` 的情况下安装 `JRE`，这对于只想运行 Java 程序而不是构建程序的人来说是很有用的。`JRE` 帮助将 Java 程序加载到内存中并执行它们。
 
 ## 入口点
 
@@ -350,7 +352,7 @@ Java 运行环境（或简称 JRE）负责 Java 程序的执行。Sun JDK 也也
 public static void main(String[] args)
 ```
 
-`main` 方法是 Java 程序启动时由 JVM 执行的第一段代码。`args` 参数是一个 String 数组，包含了传递给程序的命令行参数。
+`main` 方法是 Java 程序启动时由 `JVM` 执行的第一段代码。`args` 参数是一个 `String` 数组，包含了传递给程序的命令行参数。
 
 
 
@@ -441,11 +443,15 @@ Java 为用户提供了一种通过特殊的注释系统和 `javadoc` 工具轻�
 
 如果说 Javadoc 提供 Java 类 API 和文档的详细视图，那么 `javap` 工具则打印有关类中成员（构造函数、方法和变量）的信息。换句话说，它列出了类的 API 以及类编译后的指令。`javap` 是 Java 字节码的反汇编器。
 
----
+| Java 编程 | 索引 |
+|---|---|
+| 入门 | 基础 | 类与对象 |
+| 集合 | 异常 | 反射 |
+| Applets | JavaBeans | 库 |
 
-# 安装
+## 安装
 
-## 检查 Java
+### 检查 Java
 
 Java 开发包 (JDK) 是构建 Java 程序所需的。Java 运行时环境 (JRE) 是执行 Java 程序所需的。对于我们的目的，你必须使用 JDK。首先，检查系统是否已安装了 JDK。为此，请打开终端窗口或命令行窗口并执行 `javac -version` 命令。如果 JDK 已安装并位于可执行路径中，你应该能看到关于运行版本的输出。输出结果取决于安装了哪个版本以及哪个供应商提供的 Java 安装。
 
@@ -468,17 +474,21 @@ javac: command not found
 
 如果你从 Sun 网站下载 Java，你也可以安装 NetBeans IDE + JDK 5.0 Update 6 绑定包。
 
-## 安装验证
+### 安装验证
 
 当你完成上述 JDK 下载和安装说明后，请重复执行 `javac -version` 命令以验证你的路径是否获取了正确的 JDK 版本。
 
----
+| Java 编程 | 索引 |
+|---|---|
+| 概述 | 入门 | 基础 | 类与对象 |
+| 集合 | 异常 | 并发编程 反射 |
+| Applets | JavaBeans | 库 |
 
-# 编译
+## 编译
 
 我们已经讨论过编译的基本知识。这里是对我们之前看到的概念的总结以及一些额外的细节。
 
-## 编译为字节码
+### 编译为字节码
 
 在 Java 中，程序并不是被编译成可执行文件；它们被编译成字节码（如之前所述），由 JVM 在运行时执行字节码。当我们使用 `javac` 编译器时，Java 源代码会被编译成字节码。字节码以 `.class` 扩展名保存在磁盘上。当运行程序时，字节码将由即时编译器（JIT）转换。结果是机器码，它被输入内存并执行。
 
@@ -491,7 +501,7 @@ Java 类/字节码会被编译成机器码，并在第一次需要时由 JVM 加
 
 JIT 编译器编译一次字节码，编译后的机器码会被反复使用以加快执行速度。JIT 更好的名称应该是“仅编译一次”编译器，COO，或“仅一次”编译器，JOT。早期的 Java 编译器每次使用时都会将字节码编译成机器码，那速度很慢。但它仍然比“解释型语言”快，解释型语言每次使用时都是从高级语言编译代码，而不是从字节码编译。
 
-## 依赖类的自动编译
+### 依赖类的自动编译
 
 在 Java 中，如果你使用了任何其他对象的引用，如果该对象的类尚未编译，它将被自动编译。这些自动编译是嵌套的，并且会持续进行直到运行程序所需的所有类都被编译。因此，只需编译高层类就足够了，所有的依赖类都将自动编译。
 
@@ -515,7 +525,7 @@ xml 文件包含了构建应用程序所需的所有信息。
 
 构建应用程序最流行的方法是使用 IDE。IDE 代表集成开发环境。下面列出了其中一些。
 
-## 包与子目录
+### 包与子目录
 
 每个 Java 级别的类都属于一个包（在关于“包”的章节中介绍）。这可以在文件开头的 `package` 语句中声明；如果缺少该语句，类属于未命名包。
 
@@ -523,7 +533,7 @@ xml 文件包含了构建应用程序所需的所有信息。
 
 惯例是包名和对应包的目录名仅由小写字母组成。
 
-### 顶层包
+#### 顶层包
 
 具有此包声明的类：
 
@@ -533,7 +543,7 @@ package example;
 
 必须位于名为 `example` 的目录中。
 
-### 子包
+#### 子包
 
 具有此包声明的类：
 
@@ -543,31 +553,31 @@ package org.yahoos.en;
 
 必须位于名为 `en` 的目录中，该目录必须是 `yahoos` 的子目录，而该目录又是 `org` 的子目录，结果为 `org/yahoos/en/`。
 
-## 文件名大小写
+### 文件名大小写
 
 Java 源文件名必须与该文件包含的 public 类名相同。每个文件只能定义一个 public 类。Java 类名对大小写敏感，源文件名也是如此。
 
 类名的命名惯例是以大写字母开头。
 
-## 编译器选项
+### 编译器选项
 
-### 调试与符号信息
+#### 调试与符号信息
 
-## 附加工具
+### 附加工具
 
-## IDEs
+### IDEs
 
 本节简要介绍了一些不同的 IDE 及其优缺点。
 
-### JBuilder
+#### JBuilder
 
 JBuilder 是一个拥有私有源代码的 IDE，由 Borland 销售。它的优势之一是与建模工具 together 集成。
 
-### JCreator
+#### JCreator
 
 信息见：http://www.apcomputerscience.com/ide/jcreator/index.htm
 
-### Eclipse
+#### Eclipse
 
 Eclipse 是一个免费的 IDE，也是一个可以根据特定开发需求扩展的开发者框架，IBM 是该免费软件的开发者，它取代了 Age 工具。扩展性使它区别于其他 IDE。Eclipse 旨在与 Visual Studio 工具竞争。其目标有两个：
 
@@ -585,21 +595,21 @@ Eclipse 特性：
 - 代码重构（全局引用）
 - 基于插件的架构（能够与环境和其他工具集成）
 
-### NetBeans
+#### NetBeans
 
 NetBeans IDE 是一个面向软件开发者的开源集成开发环境。该 IDE 运行在 Windows、Linux、Solaris 和 MacOS 等多个平台上。它易于安装和使用。IDE 为开发者提供了创建跨平台桌面、企业、Web 和移动应用程序所需的所有工具。
 
-### BlueJ
+#### BlueJ
 
 BlueJ 是一个包含模板的 IDE，并为你编译和运行应用程序。BlueJ 经常被类使用，因为它不需要设置类路径。BlueJ 有自己的库集，你可以在偏好设置中添加任何一个。它会为其产生的所有编译设置类路径，包括你添加的和 BlueJ 的库。
 
 BlueJ 提供了一个有趣的图形化界面，用于创建包和程序。类用框表示，类之间的箭头表示继承/实现，或者一个类在另一个类中构造。在编译时，BlueJ 会将所有类（整个项目）添加到类路径中。
 
-### Kawa
+#### Kawa
 
 Kawa 由 Tek-Tools 开发。它基本上是一个 Java 编辑器，不包含向导和 GUI 工具，最适合中小型开发团队经验丰富的 Java 程序员。
 
-### Ant
+#### Ant
 
 Ant 是一种构建管理工具，旨在取代 MAKE 作为大型 Java 应用程序自动化构建的工具。与 Java 类似，Ant 设计为平台无关。
 
@@ -611,13 +621,18 @@ Ant 是一种构建管理工具，旨在取代 MAKE 作为大型 Java 应用程�
 
 此外，Ant 工具是用 Java 编写的，并且可以扩展，因此，如果你想在构建期间执行某项任务，而该任务不在预定义的任务列表中，你可以自己编写它。将你的 Ant 任务代码挂接到其他任务上非常简单，你只需要它在类路径中，Ant 工具就会在运行时加载它。你的 Ant 任务代码只需要遵循 Ant 框架，此就足够。
 
-## JIT 编译器
+### JIT 编译器
 
 标准的 JIT 编译器是按需运行。当一个方法被反复调用时，JIT 编译器会分析字节码并产生高效的机器码，这种机器码的运行速度非常快。JIT 编译器足够智能，能够识别代码是否已经编译，因此随着应用程序的运行，编译仅在需要时发生。随着 Java 应用程序的运行，它们往往变得越来越快，因为 JIT 可以对代码进行运行时分析和优化，以适应执行环境。不经常运行的方法或代码块接收的优化较少；经常运行的（所谓的热点）接收更多的分析和优化。
 
----
+| Java 编程 | 索引 |
+|---|---|
+| 概述 | 快速上手 |
+| 基础 | 类与对象 |
+| 集合 | 异常 |
+| 并发反射 | Applets, JavaBeans, 库 |
 
-# 执行
+## 执行
 
 
 
@@ -629,8 +644,8 @@ Java 代码有多种执行方式。复杂的 Java 应用程序通常使用第三
 
 Java 语言第一版出现在客户端/服务器时代。当时开发了具有丰富 GUI 界面的胖客户端。Java 第一版 JSE（Java 标准版）具备以下功能：
 
-- GUI 能力（AWT, Swing）
-- 网络计算能力（RMI）
+- GUI 能力（`AWT`、`Swing`）
+- 网络计算能力（`RMI`）
 - 多任务能力（线程）
 
 通过以下 Java 代码执行是可能的：
@@ -639,7 +654,7 @@ Java 语言第一版出现在客户端/服务器时代。当时开发了具有�
 
 ### 独立 Java 应用程序
 
-（图 1）独立应用程序指的是用户界面和业务模块都运行在同一台计算机上的 Java 程序。应用程序可能使用也可能不使用数据库来持久化数据。用户界面可以是 AWT 或 Swing。
+独立应用程序指的是用户界面和业务模块都运行在同一台计算机上的 Java 程序。应用程序可能使用也不使用数据库来持久化数据。用户界面可以是 `AWT` 或 `Swing`。
 
 应用程序将从类的 `main()` 方法开始启动。当 `main()` 方法退出，或者应用程序向 JVM 抛出异常时，应用程序停止。类由 JVM 根据需要加载到内存并进行编译，可以来自文件系统，也可以来自 `*.jar` 文件。
 
@@ -651,7 +666,7 @@ Java 语言第一版出现在客户端/服务器时代。当时开发了具有�
 
 ## Java Applet
 
-（图 2）Java Applets 是在 HTML 页面中通过 `<APPLET>` 标签引用的 Java 代码。Java 代码从服务器下载并在客户端浏览器的 JVM 中运行。Java 内置支持在浏览器窗口中渲染 applet。
+Java Applets 是在 HTML 页面中通过 `<APPLET>` 标签引用的 Java 代码。Java 代码从服务器下载并在客户端浏览器的 JVM 中运行。Java 内置支持在浏览器窗口中渲染 applet。
 
 在本书时（2006 年），Applets 并没有实现它的承诺。复杂的 GUI 客户端被发现很难开发，主要是因为下载时间、浏览器 JVM 之间的兼容性以及返回服务器的通信需求。Applet 现在仍然被使用，如果被使用，它们被作为小型图形动画使用。微软造成了致命打击，首先是从 Internet Explorer 中撤销对 Java 的支持，其次是在 Internet Explorer 的默认配置中排除了 Java JRE。
 
@@ -661,10 +676,10 @@ Java 语言第一版出现在客户端/服务器时代。当时开发了具有�
 
 客户端服务器应用程序由前端和后端组成，运行在独立的计算机上。这种设计理念是业务逻辑位于后端部分，供所有客户端复用。这里的挑战是实现前端用户界面代码与后端业务逻辑代码的分离。
 
-前端与后端之间的通信可以通过以下方式实现：
+前端与后端之间的通信可以通过方式实现：
 
 - 一种方法是在两层之间定义通信协议。后端部分将监听传入的请求。根据协议它解释请求并以数据形式返回结果。
-- 另一种方法是使用 Java 远程方法调用（RMI）。通过使用 RMI，可以创建并供客户端使用的对象。在这种情况下，Java 对象跨网络传输。
+- 另一种方法是使用 Java 远程方法调用（`RMI`）。通过使用 `RMI`，可以创建并供客户端使用的对象。在这种情况下，Java 对象跨网络传输。
 
 ## Web 应用程序
 
@@ -672,39 +687,39 @@ Java 语言第一版出现在客户端/服务器时代。当时开发了具有�
 
 业务逻辑在服务器上，而呈现层发送到浏览器。这就是客户端-服务器架构。客户端处理用户界面和交互，而服务器处理业务逻辑和数据处理。这种分离有利于扩展和便于维护。
 
-客户端与服务器之间的通信通常通过 HTTP 完成。客户端向服务器发送请求，服务器返回响应。这些响应通常包含 HTML、JSON 或其他类型的数据，客户端随后对这些数据进行渲染。
+客户端与服务器之间的通信通常通过 `HTTP` 完成。客户端向服务器发送请求，服务器返回响应。这些响应通常包含 `HTML`、`JSON` 或其他类型的数据，客户端随后对这些数据进行渲染。
 
-EJB 面临着与其他任何重用代码相同的问题。EJB 需要具有足够的通用性才能被重用。它们的更改和维护可能会影响现有客户端。很多时候，EJB 在并不真正需要的情况下被过度使用。一个 EJB 应该被设计成企业中一个独立的应用程序，实现一个功能。
+`EJB` 面临着与其他任何重用代码相同的问题。`EJB` 需要具有足够的通用性才能被重用。它们的更改和维护可能会影响现有客户端。很多时候，`EJB` 在并不真正需要的情况下被过度使用。一个 `EJB` 应该被设计成企业中一个独立的应用程序，实现一个功能。
 
 ![图 6：MVC 执行](img/4e89b81da69e356cec19bc7ce6e739a0_37_0.png)
 
 ### 组合 J2EE 组件创建 MVC 架构
 
-这引导我们进入（图 6）所示的三层/分层架构。
+这引导我们进入三层/分层架构。
 
 在现代 Web 应用中，由于大量的静态数据和精美的图形，数据如何呈现给用户变得非常重要，通常需要图形设计师的帮助。
 
 为了帮助程序员和图形设计师共同工作，数据与呈现方式之间的分离至关重要。
 
-- **视图（用户界面逻辑）**：包含了构建呈现层所需的逻辑。这可以通过 JSP 技术处理。
-- **Servlet**：充当控制器，包含了处理用户事件和选择恰当响应所需的逻辑。
-- **业务逻辑（模型）**：实际上实现了交互的目标。这可能是对数据库的查询或更新。这可以通过 EJB 技术处理。
+- **视图**（用户界面逻辑）包含了构建呈现层所需的逻辑。这可以通过 `JSP` 技术处理。
+- **Servlet** 充当控制器，包含了处理用户事件和选择恰当响应所需的逻辑。
+- **业务逻辑**（模型）实际上实现了交互的目标。这可能是对数据库的查询或更新。这可以通过 `EJB` 技术处理。
 
 ## JINI
 
-在 Sun J2EE 对网络计算的下一步有了愿景之后，出现了 JINI。其核心思想是：在网络环境中会有许多独立的服务和消费者。JINI 允许这些服务/消费者以稳健的方式相互进行动态交互。JINI 的基本特征是：
+在 Sun J2EE 对网络计算的下一步有了愿景之后，出现了 `JINI`。其核心思想是：在网络环境中会有许多独立的服务和消费者。`JINI` 允许这些服务/消费者以稳健的方式相互进行动态交互。`JINI` 的基本特征是：
 
-- 服务上线或离线时不需要用户干预。（相比之下，EJB 的客户端程序必须知道部署 EJB 的服务器和端口号。在 JINI 中，客户端应该在网络中查找并发现该服务。）
+- 服务上线或离线时不需要用户干预。（相比之下，`EJB` 的客户端程序必须知道部署 `EJB` 的服务器和端口号。在 `JINI` 中，客户端应该在网络中查找并发现该服务。）
 - 当服务（服务的消费者）出现或离开时，通过自适应来实现自愈。（服务需要定期续租，以标明它们仍然可用。）
-- JINI 服务的消费者不需要预先了解服务的实现。实现代码是动态下载并运行在消费者的 JVM 上的，无需配置和用户干预。（例如，根据当前正在使用的服务，终端用户可能会看到略有不同的界面。这些用户界面代码的实现将由所使用的服务提供。）
+- `JINI` 服务的消费者不需要预先了解服务的实现。实现代码是动态下载并运行在消费者的 JVM 上的，无需配置和用户干预。（例如，根据当前正在使用的服务，终端用户可能会看到略有不同的界面。这些用户界面代码的实现将由所使用的服务提供。）
 
-一个简易的 JINI 网络环境由以下部分组成：
+一个简易的 `JINI` 网络环境由以下部分组成：
 
 - 一个或多个服务
 - 保存注册服务列表查找服务
 - 一个或多个消费者
 
-在本文写作时（2006年），JINI 尚未广泛使用。有两个可能的原因。一是 JINI 的理解和设置有点复杂。另一个原因是由于微软退出了 Java，这导致行业转向使用专有解决方案。
+在本文写作时（2006年），`JINI` 尚未广泛使用。有两个可能的原因。一是 `JINI` 的理解和设置有点复杂。另一个原因是由于微软退出了 Java，这导致行业转向使用专有解决方案。
 
 # 第一个 Java 程序
 
@@ -722,7 +737,7 @@ public class HelloWorld {
 }
 ```
 
-将其保存为 `HelloWorld.java`。再次，确保文件名与类名的大小写一致。编译并运行它：
+将其保存为 `HelloWorld.java`。再次，确保文件名与名称的大小写一致。编译并运行它：
 
 ```bash
 javac HelloWorld.java
@@ -762,7 +777,7 @@ System.out.println("Hello, world!");
 现在，我们将修改此程序，以便在存在命令行参数时，打印出第一个命令行参数（如果有的话），并打印问候语。例如，如果你通过如下方式调用程序：
 
 ```bash
-java HelloWorld yahoos
+java HelloWorld yaaho
 ```
 
 它将打印：
@@ -855,7 +870,7 @@ public class Distance {
 
 ## Java 语法介绍
 
-Java 类的语法是使用 Unicode 编写类时的字符和符号及其结构。关于 Java 语法元素的更充分的处理可以参阅语法。我们仅提供足够的语法描述来理解上述程序。
+Java 类的语法是使用 Unicode 因子编写类时的字符和符号及其结构。关于 Java 语法元素的更充分的处理可以参阅语法。我们仅提供足够的语法描述来理解上述程序。
 
 Java 程序由标记序列组成。有不同类型的标记。例如，有像 `class` 和 `public` 这样的单词标记，代表关键字 - 具有特殊的 Java 中的保留字含义。其他单词（非关键字，如 `Distance.point0.x` 和 `printDistance`）是标识符。标识符在 Java 中有许多用途，但主要被用作名称。Java 还有表示数字的标记，例如 `1` 和 `3`；这些被称为字面量。字符串字面量，例如 `"Distance between "`，由嵌入双引号中的零或多个字符组成；运算符如 `+` 和 `=` 被用于表示基本计算，如加法、字符串拼接或赋值。还有用于包含块的左、右括号 `(( ))`。类的体就是一个块。某些标记是标点符号，如句号、逗号和分号。你使用空白字符（空格、制表符和换行符）来分隔标记。例如，关键字和标识符之间需要空白：`publicstatic` 是一个包含12个字符的单一标识符，而不是两个 Java 关键字。
 
@@ -909,7 +924,7 @@ private java.awt.Point point1 = null;
 
 但没有必要，大多数程序员都会省略此类默认赋值。
 
-### 示例：构造方法
+## 示例：构造方法
 
 构造方法是类中的一种特殊方法，用于构造类的实例。构造方法可以对对象执行初始化，超出 Java VM 自动完成范围。例如，Java 将自动将字段 `point0` 和 `point1` 初始化为 `null`。
 
@@ -1134,37 +1149,184 @@ double \u03A0 = Math.PI;
 # Java 关键字参考
 
 ## `extends`
-`extends` 是 Java 关键字，用于类和接口定义，声明被继承的类或接口。
+
+`extends` 是 Java 关键字。
+
+用于类和接口定义，声明被继承的类或接口。
 
 ## `final`
-`final` 是 Java 关键字，含义取决于用于类、方法还是变量。
 
-- **`final` 变量**：用于指定常量，类似于其他语言中的 `const`。用 `final` 关键字声明的变量在初始化后无法修改。
-- **`final` 方法**：修饰方法，意味着子类不能重写该方法。如果尝试重写，编译器会检查并报错。
-- **`final` 类**：修饰类，意味着该类不能被子类化。
+`final` 是 Java 关键字。
+
+它有多种含义，取决于是否用于类、方法还是变量。
+
+- `final` 变量用于指定常量。这类似于其他语言中的 `const`。用 `final` 关键字声明的变量在初始化后无法修改。
+- `final` 方法用于修饰方法，意味着子类不能重写该方法。如果你尝试重写，编译器会检查并报错。
+- `final` 类修饰类，意味着该类不能被子类化。
 
 ## `finally`
-`finally` 是 Java 关键字，是 `try` 块的可选部分。即使 `try` 块中发生异常，`finally` 块中的代码始终会被执行。
+
+`finally` 是 Java 关键字。
+
+它是 `try` 块的可选部分。即使 `try` 块中发生异常，`finally` 块中的代码始终会被执行。
 
 ## `float`
-`float` 是 Java 关键字，指定 32 位浮点原始类型。
 
-当你需要存储一个 `float` 值但需要对象引用时，`java.lang.Float` 是命名的包装类。
+`float` 是 Java 关键字。
 
-**语法：**
+## `interface`
+
+`interface` 是 Java 关键字。
+
+它用于定义接口。
+
+## `import`
+
+`import` 是 Java 关键字。
+
+## `instanceof`
+
+`instanceof` 是 Java 关键字。
+
+## `int`
+
+`int` 是 Java 关键字。
+
+## `native`
+
+`native` 是 Java 关键字。
+
+## `private`
+
+`private` 是 Java 关键字。
+
+## `protected`
+
+`protected` 是 Java 关键字。
+
+## `public`
+
+`public` 是 Java 关键字。
+
+## `return`
+
+`return` 是 Java 关键字。
+
+## `short`
+
+`short` 是 Java 关键字。
+
+## `static`
+
+`static` 是 Java 关键字。
+
+## `super`
+
+`super` 是 Java 关键字。
+
+## `synchronized`
+
+`synchronized` 是 Java 关键字。
+
+## `this`
+
+`this` 是 Java 关键字。
+
+## `throw`
+
+`throw` 是 Java 关键字。
+
+## `throws`
+
+`throws` 是 Java 关键字。
+
+## `volatile`
+
+`volatile` 是 Java 关键字。
+
+## `void`
+
+`void` 是 Java 关键字。
+
+## `while`
+
+`while` 是 Java 关键字。
+
+## `transient`
+
+`transient` 是 Java 关键字。
+
+---
+
+## try-catch-finally 执行流程
+
+- 抛出了一个异常并找到了匹配的 `catch` 块。在这种情况下，将执行以下内容：
+  - `try` 块中直到异常发生处之前的代码
+  - 匹配的 `catch` 块中的代码
+  - `finally` 块中的代码
+  - `try-catch` 块之后的代码
+- 抛出了一个异常但不存在匹配的 `catch` 块。在这种情况下，将执行以下内容：
+  - `try` 块中直到异常发生处之前的代码
+  - `finally` 块中的代码
+
+> **注意**：在第三种也是最后一种情况下，`try-catch` 块之后的**没有任何代码**会被执行。
+
+### 示例
+
+```java
+public void method() throws NoMatchedException {
+    try {
+        throw new Exception_1(1);
+    } catch (Exception_1 e) {
+        // --- 在此处处理 Exception_1
+    } catch (Exception_2 e) {
+        // --- 在此处处理 Exception_2
+    } finally {
+        // --- 无论如何，这始终会被执行
+        // --- try-catch 块之后的代码
+    }
+}
+```
+
+> **注意**：如果在 `try-catch` 块之前发生了异常，则 `finally` 块不会执行。
+
+### 相关链接
+
+- 关键字/try
+- 关键字/catch
+- 抛出与捕获异常#捕获规则
+
+---
+
+## `float` 详解
+
+**float** 是一个指定 32 位浮点原始类型的关键字。
+
+当你需要存储一个 `float` 值但需要对象引用时，**java.lang.Float** 是命名的包装类。
+
+### 语法
+
 ```java
 float <variable-name> = <float-value>;
 ```
 
-**示例：**
+### 示例
+
 ```java
 float f = 65.55;
 ```
 
-> **相关链接**：原始类型
+### 相关链接
+
+- 原始类型
+
+---
 
 ## `for`
-`for` 是一个 Java 关键字，用于启动一个循环块。
+
+`for` 是一个 Java 关键字。
+
+它启动一个循环块。
 
 使用扩展巴科斯-诺尔范式（EBNF）`for` 的通用语法为：
 
@@ -1176,16 +1338,25 @@ single-statement ::= Statement
 block-statement ::= { Statement [ Statement ] }
 ```
 
-**示例：**
+### 示例
+
 ```java
 for (int i = 0; i < maxLoopIter; i++)
     System.out.println("Iter-" + i);
 ```
 
-> **相关链接**：关键字/while、关键字/do
+### 相关链接
+
+- 关键字/while
+- 关键字/do
+
+---
 
 ## `if`
-`if` 是一个 Java 关键字，用于启动一个分支语句。
+
+`if` 是一个 Java 关键字。
+
+它启动一个分支语句。
 
 使用扩展巴科斯-诺尔范式 `if` 的通用语法为：
 
@@ -1199,7 +1370,8 @@ single-statement ::= Statement
 block-statement ::= { Statement [ Statements ] }
 ```
 
-**示例：**
+### 示例
+
 ```java
 if (boolean Expression) {
     System.out.println("True statement block");
@@ -1208,45 +1380,209 @@ if (boolean Expression) {
 }
 ```
 
-> **相关链接**：关键字/else
+### 相关链接
+
+- 关键字/else
+
+---
 
 ## `goto`
+
 `goto` 是一个保留关键字，目前未使用。
 
-## `implements`
-`implements` 是一个 Java 关键字，用于类定义中，声明该类要实现的接口。
+---
 
-**语法：**
+## `implements`
+
+`implements` 是一个 Java 关键字。
+
+用于类定义中，声明该类要实现的接口。
+
+### 语法
+
 ```java
 public class MyClass implements MyInterface1, MyInterface2 {
     ...
 }
 ```
 
-> **相关链接**：创建对象、关键字/class
+### 相关链接
+
+- 创建对象
+- 关键字/class
+
+---
 
 ## `import`
-`import` 是一个 Java 关键字，声明了一个在 `import` 语句下方代码中使用的 Java 类。一旦声明了 Java 类，就可以在代码中使用类名，而无需指定它所属的包类。
+
+`import` 是一个 Java 关键字。
+
+它声明了一个在 `import` 语句下方代码中使用的 Java 类。一旦声明了 Java 类，就可以在代码中使用类名，而无需指定它所属的包类。
 
 使用字符 `*` 来声明该包下的所有类。
 
-**语法：**
+### 语法
+
 ```java
 import package.JavaClass;
 import package.*;
 ```
 
-> **相关链接**：包
+### 相关链接
+
+- 包
+
+---
 
 ## `instanceof`
-`instanceof` 是一个关键字，检查对象引用是否由某个类或其子类定义，并返回一个布尔值。`<object-reference> instanceof Object` 将对所有对象引用返回 `true`，因为所有 Java 对象都继承自 `Object`。
+
+`instanceof` 是一个关键字。
+
+它检查对象引用是否由某个类或其子类定义，并返回一个布尔值；
+
+`<object-reference> instanceof Object` 将对所有对象引用返回 `true`，因为所有 Java 对象都继承自 `Object`。
+
+### 语法
+
+```java
+<object-reference> instanceof ClassName
+```
+
+### 示例
+
+```java
+class Fruit {
+    ...
+}
+
+class Apple extends Fruit {
+    ...
+}
+
+class Orange extends Fruit {
+    ...
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Collection coll = new ArrayList();
+        Apple app1 = new Apple();
+        Apple app2 = new Apple();
+        coll.add(app1);
+        coll.add(app2);
+        Orange or1 = new Orange();
+        Orange or2 = new Orange();
+        coll.add(or1);
+        coll.add(or2);
+        printColl(coll);
+    }
+
+    private static String printColl(Collection coll) {
+        Iterator iter = coll.iterator();
+        while (iter.hasNext()) {
+            Object obj = iter.next();
+            if (obj instanceof Object) {
+                System.out.print("It is a Java Object and ");
+            }
+            if (obj instanceof Fruit) {
+                System.out.print("It is a Fruit and ");
+                if (obj instanceof Apple) {
+                    System.out.println("it is an Apple\n");
+                }
+                if (obj instanceof Orange) {
+                    System.out.println("it is an Orange\n");
+                }
+            }
+        }
+    }
+}
+```
+
+### 运行程序
+
+```bash
+java Test
+```
+
+### 输出结果
+
+> It is a Java Object and It is a Fruit and it is an Apple
+>
+> It is a Java Object and It is a Fruit and it is an Apple
+>
+> It is a Java Object and It is a Fruit and it is an Orange
+>
+> It is a Java Object and It is a Fruit and it is an Orange
+
+
+
+# Java 关键字与语法参考
+
+## 分支语句语法
+
+```
+branching-statement ::= if condition-clause
+single-statement | block-statement
+else
+single-statement | block-statement
+condition-clause ::= ( Boolean Expression )
+single-statement ::= Statement
+block-statement ::= { Statement [ Statements ] }
+```
+
+例如：
+
+```java
+if (boolean Expression) {
+    System.out.println("True statement block");
+} else {
+    System.out.println("False statement block");
+}
+```
+
+---
+
+## 关键字详解
+
+### else
+
+`goto` 是一个保留关键字，目前未使用。
+
+### implements
+
+`implements` 是一个 Java 关键字，用于类定义中，声明该类要实现的接口。
 
 **语法：**
+
+```java
+public class MyClass implements MyInterface1, MyInterface2 {
+    ...
+}
+```
+
+### import
+
+`import` 是一个 Java 关键字，它声明了一个在 import 语句下方代码中使用的 Java 类。一旦声明了 Java 类，就可以在代码中使用类名，而无需指定它所属的包类。使用字符 `*` 来声明该包下的所有类。
+
+**语法：**
+
+```java
+import package.JavaClass;
+import package.*;
+```
+
+### instanceof
+
+`instanceof` 是一个关键字，它检查对象引用是否由某个类或其子类定义，并返回一个布尔值。`<object-reference> instanceof Object` 将对所有对象引用返回 `true`，因为所有 Java 对象都继承自 `Object`。
+
+**语法：**
+
 ```java
 <object-reference> instanceof ClassName
 ```
 
 **示例：**
+
 ```java
 class Fruit { ... }
 class Apple extends Fruit { ... }
@@ -1266,7 +1602,7 @@ public class Test {
         printColl(coll);
     }
 
-    private static void printColl(Collection coll) {
+    private static String printColl(Collection coll) {
         Iterator iter = coll.iterator();
         while (iter.hasNext()) {
             Object obj = iter.next();
@@ -1276,10 +1612,10 @@ public class Test {
             if (obj instanceof Fruit) {
                 System.out.print("It is a Fruit and ");
                 if (obj instanceof Apple) {
-                    System.out.println("it is an Apple");
+                    System.out.println("it is an Apple\n");
                 }
                 if (obj instanceof Orange) {
-                    System.out.println("it is an Orange");
+                    System.out.println("it is an Orange\n");
                 }
             }
         }
@@ -1287,225 +1623,34 @@ public class Test {
 }
 ```
 
-**运行程序：**
-```bash
-java Test
-```
-
-**输出结果：**
-> It is a Java Object and It is a Fruit and it is an Apple
-> It is a Java Object and It is a Fruit and it is an Apple
-> It is a Java Object and It is a Fruit and it is an Orange
-> It is a Java Object and It is a Fruit and it is an Orange
-
-## 其他关键字简表
-
-- `interface`：用于定义接口。
-- `int`：基本数据类型关键字。
-- `native`：修饰方法，表示该方法由本地代码实现。
-- `private`、`protected`、`public`：访问控制修饰符。
-- `return`：从方法返回。
-- `short`：基本数据类型关键字。
-- `static`：修饰静态成员。
-- `super`：引用父类对象。
-- `synchronized`：同步代码块或方法。
-- `this`：引用当前对象。
-- `throw`：抛出异常。
-- `throws`：声明抛出异常。
-- `transient`：修饰字段，序列化时忽略。
-- `volatile`：修饰变量，保证可见性。
-- `void`：表示方法无返回值。
-- `while`：循环关键字。
-
----
-
-## `try`、`catch`、`finally` 执行流程
-
-### 情况一：抛出了一个异常并找到了匹配的 `catch` 块
-执行顺序：
-1. `try` 块中直到异常发生处之前的代码
-2. 匹配的 `catch` 块中的代码
-3. `finally` 块中的代码
-4. `try-catch` 块之后的代码
-
-### 情况二：抛出了一个异常但不存在匹配的 `catch` 块
-执行顺序：
-1. `try` 块中直到异常发生处之前的代码
-2. `finally` 块中的代码
-
-> **注意**：在情况二中，`try-catch` 块之后的**没有任何代码**会被执行。
-
-### 代码示例
-```java
-public void method() throws NoMatchedException {
-    try {
-        throw new Exception_1(1);
-    } catch (Exception_1 e) {
-        // --- 在此处处理 Exception_1
-    } catch (Exception_2 e) {
-        // --- 在此处处理 Exception_2
-    } finally {
-        // --- 无论如何，这始终会被执行
-        // --- try-catch 块之后的代码
-    }
-}
-```
-
-> **注意**：如果在 `try-catch` 块之前发生了异常，则 `finally` 块不会执行。
-
-> **相关链接**：关键字/try、关键字/catch、抛出与捕获异常#捕获规则
-
-
-
-# 分支语句语法
-
-```
-branching-statement ::= if condition-clause
-single-statement | block-statement
-else
-single-statement | block-statement
-condition-clause ::= ( Boolean Expression )
-single-statement ::= Statement
-block-statement ::= { Statement [ Statements ] }
-```
-
-例如：
-
-```java
-if (boolean Expression)
-{
-    System.out.println("True statement block");
-}
-else
-{
-    System.out.println("False statement block");
-}
-```
-
-- 关键字/else
-
-`goto` 是一个保留关键字，目前未使用。
-
-`implements` 是一个 Java 关键字。
-
-用于类定义中，声明该类要实现的接口。
-
-语法：
-
-```java
-public class MyClass implements MyInterface1, MyInterface2
-{
-    ...
-}
-```
-
-- 创建对象
-
-- 关键字/class
-
-`import` 是一个 Java 关键字。
-
-它声明了一个在 `import` 语句下方代码中使用的 Java 类。一旦声明了 Java 类，就可以在代码中使用类名，而无需指定它所属的包类。
-
-使用字符 `*` 来声明该包下的所有类。
-
-语法：
-
-```java
-import package.JavaClass;
-import package.*;
-```
-
-- * 包
-
-`instanceof` 是一个关键字。
-
-它检查对象引用是否由某个类或其子类定义，并返回一个布尔值；
-
-`<object-reference> instanceof Object` 将对所有对象引用返回 `true`，因为所有 Java 对象都继承自 `Object`。
-
-语法：
-
-```
-<object-reference> instanceof ClassName
-```
-
-例如：
-
-```java
-class Fruit {
-    ...
-}
-class Apple extends Fruit {
-    ...
-}
-class Orange extends Fruit {
-    ...
-}
-public class Test {
-    public static void main(String[] args) {
-        Collection coll = new ArrayList();
-        Apple app1 = new Apple();
-        Apple app2 = new Apple();
-        coll.add(app1);
-        coll.add(app2);
-        Orange or1 = new Orange();
-        Orange or2 = new Orange();
-        coll.add(or1);
-        coll.add(or2);
-        printColl(coll);
-    }
-    private static String printColl(Collection coll) {
-    }
-}
-```
-
-```java
-{
-    Iterator iter = coll.iterator();
-    while (iter.hasNext()) {
-        Object obj = iter.next();
-        if (obj instanceof Object) {
-            System.out.print("It is a Java Object and ");
-        }
-        if (obj instanceof Fruit) {
-            System.out.print("It is a Fruit and ");
-            if (obj instanceof Apple) {
-                System.out.println("it is an Apple\n");
-            }
-            if (obj instanceof Orange) {
-                System.out.println("it is an Orange\n");
-            }
-        }
-    }
-}
-```
+### return
 
 返回原始值、对象引用或无（`void`）。它不返回对象值，只返回对象引用。
 
-语法：
+**语法：**
 
 ```java
-return variable; // --- 返回变量
-或
-return; // --- 返回无
+return variable; // 返回变量
+return;          // 返回无
 ```
 
-`short` 是一个关键字。
+### short
 
-它定义了一个 16 位有符号整数原始数据类型。
+`short` 是一个关键字，它定义了一个 16 位有符号整数原始数据类型。
 
-语法：
+**语法：**
 
-```
+```java
 short <variable-name> = <integer-value>;
 ```
 
-示例：
+**示例：**
 
-- `short shr = 65;`
+```java
+short shr = 65;
+```
 
-### 原始数据类型
+### static
 
 `static` 是一个关键字，表示给定类的所有实例都是相同的，以便共享变量/方法。它用于常量变量或类中每个实例都相同的方法，例如 `Math` 类中的方法。类的 `main` 方法被标记为 `static`。
 
@@ -1513,83 +1658,59 @@ short <variable-name> = <integer-value>;
 
 静态方法不能调用非静态方法。静态方法中也无法使用 `this` 当前对象引用。
 
-语法：
+**语法：**
 
 ```java
 public static variableName;
-或
+// 或
 static public variableName;
-而对于方法：
+
+// 对于方法：
+public static void methodName() { ... }
+// 或
+static public void methodName() { ... }
 ```
 
-```java
-public static void methodName()
-{
-    ...
-}
-or
-static public void methodName()
-{
-    ...
-}
-```
-
-访问方式：
-
-`ClassName.variableName = 10;`
+**访问方式：**
 
 ```java
+ClassName.variableName = 10;
 ClassName.methodName();
 ```
 
-示例：
+**示例：**
 
 ```java
 public static final double pi = 3.14159;
-public static void main(String[] args)
-{
-    ...
-}
+public static void main(String[] args) { ... }
 ```
 
-`strictfp` 是一个 Java 关键字，自 Java 1.2 以来一直存在。
+### strictfp
 
-它确保浮点计算结果无论底层的操作系统和硬件平台如何，都是精确一致的，即使可以获得更高的精度。这与早版本的 Java 1.1 兼容。如果你需要，请使用它。
+`strictfp` 是一个 Java 关键字，自 Java 1.2 以来一直存在。它确保浮点计算结果无论底层的操作系统和硬件平台如何，都是精确一致的，即使可以获得更高的精度。这与早版本的 Java 1.1 兼容。
 
-语法：
+**语法：**
 
 ```java
-public strictfp class MyClass
-{
-    ...
-}
-or
-strictfp public class MyClass
-{
-    ...
-}
-public strictfp void method()
-{
-    ...
-}
+public strictfp class MyClass { ... }
+// 或
+strictfp public class MyClass { ... }
 
-strictfp public void method()
-{
-    ...
-}
+public strictfp void method() { ... }
+strictfp public void method() { ... }
 ```
 
-`super` 是一个关键字。
+### super
 
-用于子类方法定义内部，以调用父类定义的方法。父类的私有方法无法被调用。只有公共和受保护的方法才能通过 `super` 关键字调用。
+`super` 是一个关键字，用于子类方法定义内部，以调用父类定义的方法。父类的私有方法无法被调用。只有公共和受保护的方法才能通过 `super` 关键字调用。
 
-语法：
+**语法：**
 
-```
+```java
 super.<method-name>();
 ```
 
-示例：
+**示例：**
 
 ```java
 public class SuperClass {
@@ -1614,27 +1735,27 @@ public class SubClass {
 }
 ```
 
-运行上述程序：
+**运行上述程序：**
 
-```
-Java SubClass
-```
-
-输出结果：
-
-```
-"Hello from SuperClass"
-"Hello from SubClass"
+```bash
+java SubClass
 ```
 
-- * 关键字/extends
+**输出结果：**
 
-`switch` 是一个 Java 关键字。它基于数字的分支操作。“数字”必须是 `char`、`byte`、`short` 或 `int` 原始数据类型。
+```
+Hello from SuperClass
+Hello from SubClass
+```
 
-语法：
+### switch
+
+`switch` 是一个 Java 关键字，基于数字的分支操作。“数字”必须是 `char`、`byte`、`short` 或 `int` 原始数据类型。
+
+**语法：**
 
 ```java
-switch ( <integer-var> ) {
+switch (<integer-var>) {
     case <label>: <statements>;
     case <label>: <statements>;
     case <label>: <statements>;
@@ -1642,13 +1763,13 @@ switch ( <integer-var> ) {
 }
 ```
 
-当 `<integer-var>` 的值匹配其中一个 `<label>` 时：匹配的标签后的语句将执行执行，包括后续标签的语句，直到 `switch` 块结束，或者直到遇到 `break` 关键字。
+当 `<integer-var>` 的值匹配其中一个 `<label>` 时：匹配的标签后的语句将执行，包括后续标签的语句，直到 `switch` 块结束，或者直到遇到 `break` 关键字。
 
-示例：
+**示例：**
 
 ```java
 int var = 3;
-switch ( var ) {
+switch (var) {
     case 1: System.out.println("Case: 1");
         System.out.println("Execute until break");
         break;
@@ -1667,11 +1788,12 @@ switch ( var ) {
 }
 ```
 
-上述代码的输出为：
+**输出：**
 
+```
 Case: 3
-
 Execute until break
+```
 
 相同的代码可以用 `if-else` 块编写：
 
@@ -1695,11 +1817,11 @@ if (var == 1) {
 }
 ```
 
-- * 关键字/if
+### if
 
-`if` 是一个关键字。它是基于条件的分支操作。条件必须是 `boolean` 原始数据类型。
+`if` 是一个关键字，基于条件的分支操作。条件必须是 `boolean` 原始数据类型。
 
-语法：
+**语法：**
 
 ```java
 if (condition) {
@@ -1713,7 +1835,7 @@ if (condition) {
 
 当 `<condition>` 为真时，执行 `if` 块中的语句。如果条件为假，程序进入 `else if` 或 `else` 块。
 
-示例：
+**示例：**
 
 ```java
 int x = 5;
@@ -1726,11 +1848,11 @@ if (x > 3) {
 }
 ```
 
-- * 关键字/synchronized
+### synchronized
 
-`synchronized` 是一个关键字。它确保一次只有一个线程可以执行代码块或方法。这防止了竞态条件等线程问题。
+`synchronized` 是一个关键字，它确保一次只有一个线程可以执行代码块或方法。这防止了竞态条件等线程问题。
 
-语法：
+**语法：**
 
 ```java
 synchronized(object) {
@@ -1742,7 +1864,7 @@ public synchronized void methodName() {
 }
 ```
 
-示例：
+**示例：**
 
 ```java
 public class Counter {
@@ -1753,18 +1875,18 @@ public class Counter {
 }
 ```
 
-- * 关键字/this
+### this
 
-`this` 是一个 Java 关键字。用于引用类的当前实例。
+`this` 是一个 Java 关键字，用于引用类的当前实例。
 
-语法：
+**语法：**
 
-```
+```java
 this.variableName = value;
 this.methodName();
 ```
 
-示例：
+**示例：**
 
 ```java
 public class Student {
@@ -1775,17 +1897,17 @@ public class Student {
 }
 ```
 
-- * 关键字/throw
+### throw
 
-`throw` 是一个 Java 关键字。用于显式地抛出异常。
+`throw` 是一个 Java 关键字，用于显式地抛出异常。
 
-语法：
+**语法：**
 
-```
+```java
 throw new Exception("Error message");
 ```
 
-示例：
+**示例：**
 
 ```java
 public void checkAge(int age) throws Exception {
@@ -1801,27 +1923,27 @@ try {
 }
 ```
 
-- * 关键字/throws
+### throws
 
-`throws` 是一个 Java 关键字。它用于方法签名中声明该方法可能抛出的异常。
+`throws` 是一个 Java 关键字，用于方法签名中声明该方法可能抛出的异常。
 
-语法：
+**语法：**
 
-```
+```java
 public void methodName() throws Exception1, Exception2
 ```
 
-- * 关键字/transient
+### transient
 
-`transient` 是一个 Java 关键字。它标记字段不被序列化。
+`transient` 是一个 Java 关键字，它标记字段不被序列化。
 
-语法：
+**语法：**
 
-```
+```java
 private transient type variableName;
 ```
 
-示例：
+**示例：**
 
 ```java
 public class User {
@@ -1830,77 +1952,84 @@ public class User {
 }
 ```
 
-+   • try-catch 块之后的代码将执行
+### try-catch-finally 执行流程
 
-当抛出异常且在 catch 块中没有找到匹配项时：
++   **正常情况**：try-catch 块之后的代码将执行
++   **当抛出异常且在 catch 块中没有找到匹配项时**：
+    *   执行 try 块中的代码，直到异常发生为止
+    *   finally 块将执行
+    *   **try-catch 块之后没有代码将执行**
 
-  • 执行 try 块中的代码，直到异常发生为止
-
-  • finally 块将执行
-
-  • **try-catch 块之后没有代码代码将执行**
-
-例如：
+**示例：**
 
 ```java
 public void method() throws NoMatchedException {
-  try {
-    throw new MyException_1();
-  ...
-  } catch (MyException_1 e ) {
-    // 在此处处理 Exception_1
-  } catch (MyException_2 e ) {
-    // 在此处处理 Exception_2
-  } finally {
-    // 无论如何，这都将会在执行
-    ...
-    // try-catch 块之后的代码
-  }
+    try {
+        throw new MyException_1();
+        ...
+    } catch (MyException_1 e) {
+        // 在此处处理 Exception_1
+    } catch (MyException_2 e) {
+        // 在此处处理 Exception_2
+    } finally {
+        // 无论如何，这都将会在执行
+        ...
+        // try-catch 块之后的代码
+    }
 }
 ```
 
-关于 catch 块如何评估，请参见[捕获规则](#捕获规则)
+关于 catch 块如何评估，请参见[捕获规则](#捕获规则)。
 
-+   • 关键字/catch
+### catch
 
-• 关键字/finally
+`catch` 是一个关键字，用于捕获异常。
 
-• 抛出和捕获异常
+### finally
 
-# 捕获规则
+`finally` 是一个关键字，用于定义无论是否发生异常都会执行的代码块。
 
-`void` 是 Java 关键字。
+### 抛出和捕获异常
 
-用于方法的声明和定义，以指定该方法不返回任何类型，该方法返回 `void`。它不是一种类型，且不像 C/C++ 那样没有 `void` 引用/指针。
+相关机制请参考上述 `try-catch-finally` 示例。
 
-例如：
+---
+
+## 捕获规则
+
+### void
+
+`void` 是 Java 关键字，用于方法的声明和定义，以指定该方法不返回任何类型，该方法返回 `void`。它不是一种类型，且不像 C/C++ 那样没有 `void` 引用/指针。
+
+**示例：**
 
 ```java
 public void method() {
-  return; // 在这种情况下，return 是可选的
+    return; // 在这种情况下，return 是可选的
 }
 ```
 
-+   • 关键字/return
+### return
 
-`volatile` 是一个关键字。
+`return` 是一个关键字，用于从方法返回值或结束方法执行。
 
-它标记成员变量在编译期间不用于优化。编译器可能会重新排列代码以获得性能，当成员变量可以被许多线程更改时，这可能会导致问题。那些可以被多个线程更改的成员变量应该设置为 `volatile`。
+### volatile
 
-语法：
+`volatile` 是一个关键字，它标记成员变量在编译期间不用于优化。编译器可能会重新排列代码以获得性能，当成员变量可以被许多线程更改时，这可能会导致问题。那些可以被多个线程更改的成员变量应该设置为 `volatile`。
+
+**语法：**
 
 ```java
 private volatile <member-variable>;
-for volatile private <member-variable>;
+// 或
+volatile private <member-variable>;
 ```
 
-例如：
+**示例：**
 
 ```java
 private volatile changingVar;
 ```
-
-*    关键字/synchronized
 
 
 
@@ -1933,8 +2062,6 @@ while ( i < maxLoopIter) {
 - 语句
 - 关键字/for
 - 关键字/do
-
----
 
 # 字面量
 
@@ -1985,8 +2112,6 @@ Java 有一个称为“块”的概念，它被括在 `{` 和 `}` 字符之间�
 }
 ```
 
----
-
 # 空格
 
 Java 中的空白用于分隔 Java 源文件中的标记。在某些地方，空白是必须的，例如在访问修饰符、类型名称和标识符之间，而在其他地方则用于提高可读性。
@@ -2004,9 +2129,7 @@ Java 空格字符包括：
 
 其他 Unicode 空格字符（包括垂直制表符）不允许在 Java 中作为空白。
 
----
-
-# 必要的空白
+## 必要的空白
 
 下面摘自一个 Java 类的抽象方法声明：
 
@@ -2030,9 +2153,7 @@ publicabstractDistance distanceTo(Destination dest);
 
 但它的意思是完全不同的：它声明了一个返回类型为 `publicabstractDistance` 的方法。这种类型可能不存在，因此上述会导致语义错误。
 
----
-
-# 缩进
+## 缩进
 
 Java 忽略语句前的所有空白。因此，这两个代码段对于编译器来说是相同的：
 
@@ -2062,8 +2183,6 @@ void printMessage() {
 
 然而，第一种方式（带空格）的可读性更高。我们应该缩进我们的代码。
 
----
-
 # 语句
 
 在 Java 编程中，指令被称为**语句**。一个语句的清晰指示是它的结束。例如，考虑以下语句：
@@ -2092,8 +2211,6 @@ int a = 10; int b = 20; int result = a + b;
 - 分支
 - 循环(迭代)
 
----
-
 # 程序流
 
 当程序遇到多个语句时，它们按照出现的顺序进行评估。流的执行从顶部开始向下进行。这种流是完全直接的，需要大量的代码。现代语言使用被称为**分支**的编程结构来解决这个问题，将在后面详细介绍。
@@ -2104,9 +2221,9 @@ int a = 10; int b = 20; int result = a + b;
 
 ```java
 {
-    int a = 10;
-    int b = 20;
-    int result = a + b;
+  int a = 10;
+  int b = 20;
+  int result = a + b;
 }
 ```
 
@@ -2117,9 +2234,7 @@ int a = 10; int b = 20; int result = a + b;
 - 无条件分支
 - 条件分支
 
----
-
-# 无条件分支
+## 无条件分支
 
 如果你仔细观察方法，你会发现方法是一个可以通过调用的命名语句块。无条件分支通过调用方法或调用 `break`、`continue`、`return` 或 `throw` 创建，所有这些在下文中描述。
 
@@ -2157,9 +2272,7 @@ public class UnconditionalBranching {
 
 程序执行流从 `main` 方法开始。每当 `aMethod` 被调用时，执行流就会跳转到调用的方法。就在此时，执行流会分支到另一个方法。一旦方法完成，执行流将返回到离开的地方，并从方法调用后的下一个语句继续执行。
 
----
-
-# 条件分支语句
+## 条件分支语句
 
 条件分支通过 `if...else` 和 `switch` 语句来实现。只有当特定条件的求值为真（true）时，才会发生条件分支。
 
@@ -2303,8 +2416,6 @@ return x;
 
 在此示例中，由于 `n` 等于 2，将执行该语句。
 
----
-
 # 迭代语句
 
 迭代语句用于遍历一个块。Java 提供了四种循环语句：
@@ -2396,9 +2507,7 @@ Sunday
 
 注意，当集合中的最后一个项在语句块中检查完毕，循环会自动退出。
 
----
-
-# continue 和 break 语句
+## continue 和 break 语句
 
 有时，你希望在不执行循环内剩余语句的情况下重新迭代循环。`continue` 语句导致循环重新迭代并从循环内部顶层语句重新开始。
 
@@ -2422,9 +2531,7 @@ for (int i=0;i<s.length(); i++) {
 
 编译并运行此语句将产生
 
-```
 Ateststringfortheswitch!
-```
 
 | Java 编程 | 索引 | |
 | --- | --- | --- |
@@ -2474,7 +2581,7 @@ new ClassName().operations();
 
 ```java
 ClassName objRefVariable = new ClassName();
-ObjRefVariable.operations();
+objRefVariable.operations();
 ```
 
 你可以将创建的对象引用赋值给父类，或该类实现的接口：
@@ -2490,7 +2597,7 @@ Interface inter = new ClassName(); // 特征/操作列表由接口定义
 
 在 java 中：
 
-- 向上转型（up casting）：在继承树中向上移动，直到到达 `Object` 类
+- 向上转型（up casting）：在继承树中向上移动，直到到达 Object 类
 - 向上转型（up casting）：到接口
 - 向下转型（down casting）：直到到达创建创建的类
 
@@ -2681,18 +2788,16 @@ public void method(String b) {
 }
 ```
 
-另一个规则是，当你进行重写时，新方法的可见性父类方法的可见性不能降低。然而，可见性可以提高。因此，如果父类方法是公共的（public），则重写方法不能是包级（package）或私有的（private）。
+另一个规则是，当你进行重写时，新方法的可见性不能低于父类方法的可见性。然而，可见性可以提高。因此，如果父类方法是公共的（public），则重写方法不能是包级（package）或私有的（private）。
 
 重写方法可能抛出的异常可以与父类相同，也可以是继承类中的某一个异常。通用规则是，重写方法必须抛出相同的异常或其任何子类异常。
 
 **注意：** 一个常见的错误是认为既然我们可以重写方法，就能重写成员变量。事实并非如此。成员变量不会被重写。
 
 ```java
-1 {
-2 MyClass obj = new SubOfClass();
-3 MyClass obj = new MyClass();
-4 String var = obj.memberVar; // myMemberVar 是在 MyClass 对象中定义的
-}
+1 MyClass obj = new SubOfClass();
+2 MyClass obj = new MyClass();
+3 String var = obj.memberVar; // myMemberVar 是在 MyClass 对象中定义的
 ```
 
 在示例中，`obj` 引用指向哪里并不重要，因为它在第 1 行和第 3 行都被声明为 `MyClass` 类型，因此将引用 `MyClass` 对象中的变量。在实际文件中，我们很少使用公共变量，但如果你确实这样做，请记住该变量是可以被重写的。我好奇这在 C++ 中是否可以实现。如果有人知道，可以在这里添加吗？
@@ -2744,6 +2849,8 @@ public void method(String b) {
 
 
 
+在第 2 行，我们创建了一个对象，在第 3 行我们将其属性设置为 'Christin'。在第 5 行我们调用了 `myMethod(obj)`。在方法内部，我们通过传递的对象引用将名称更改为 'Susan'。该更改将保留。注意，在我们重新将对象引用赋值给新对象后，对传递的对象没有任何影响。
+
 ## 返回参数
 
 方法可以返回值，也可以不返回值。如果方法不返回值，我们使用 `void` Java 关键字。与参数传递相同，方法可以返回原始类型或对象引用。因此，如果你想从方法返回多个值，你始终可以向方法传递一个对象引用，并让方法修改对象的属性。然而，修改后的值可以被视为方法的输出值。更好且更整洁的选择是在方法内部创建一个数组（`Array`），分配返回值并将数组返回给调用者。但是，如果你想混合数据类型和对象引用作为方法的输出值，可能会遇到问题。这里有一个更好的方法：定义一个带有所需返回值的特殊返回对象。在方法内部创建该对象，赋值并返回该对象的引用。这个特殊对象被“绑定”到此方法并仅用于返回值，因此不要使用公共类（`public class`）。最好的方法是使用嵌套类，如下例所示：
@@ -2752,7 +2859,9 @@ public void method(String b) {
 public class MyObject {
 
     /**
+
      * 嵌套对象用于从 'getPersonInfoById' 方法返回结果
+
      */
 
     public static class ReturnObj {
@@ -2762,19 +2871,27 @@ public class MyObject {
         private String name;
 
         public void setAge(int val) {
+
             this.age = val;
+
         }
 
         public int getAge() {
+
             return age;
+
         }
 
         public void setName(String val) {
+
             name = val;
+
         }
 
         public String getName() {
+
             return name;
+
         }
 
     }
@@ -2782,12 +2899,19 @@ public class MyObject {
     /** -- 根据数据库中的 ID 获取姓名和年龄 -- */
 
     public ReturnObj getPersonInfoById(int ID) {
+
         int age;
+
         String name;
+
         ReturnObj ret = new ReturnObj();
+
         ret.setAge(age);
+
         ret.setName(name);
+
         return ret;
+
     }
 
 }
@@ -2797,8 +2921,11 @@ public class MyObject {
 
 ```java
 MyObject obj = new MyObject();
+
 MyObject.ReturnObj person = obj.getPersonInfoById(10);
+
 System.out.println("Name = " + person.getName());
+
 System.out.println("Age = " + person.getAge());
 ```
 
@@ -2812,19 +2939,27 @@ public class MyClass {
     private String memberVar;
 
     /**
+
      * 构造函数，没有输入参数
+
      */
 
     public MyClass() {
+
         MyClass("Default Value");
+
     }
 
     /**
+
      * 构造函数，有一个输入参数
+
      */
 
     public MyClass(String paraml) {
+
         memberVar = paraml;
+
     }
 
 }
@@ -2834,6 +2969,7 @@ public class MyClass {
 
 ```java
 MyClass obj1 = new MyClass(); // 调用无参数构造函数
+
 MyClass obj2 = new MyClass("Init Value"); // 调用带参数的构造函数
 ```
 
@@ -2843,18 +2979,19 @@ MyClass obj2 = new MyClass("Init Value"); // 调用带参数的构造函数
 public class MyClass {
 
     /**
+
      * MyClass 空构造函数
+
      */
 
     public MyClass() {
+
     }
 
 }
 ```
 
----
-
-调用 `myStaticMethod`：
+--- 调用 `myStaticMethod` ---
 `System.out.println(" Output from myStaticMethod:" + MyObject.myStaticMethod());`
 
 你可以仅通过 Java 中的静态方法（`Static Methods`）来编写非面向对象的程序。因为 Java 是从 C 语言演变而来的，静态方法是非面向对象语言的遗留。
@@ -2869,12 +3006,19 @@ public class MyObject {
     static private String memberStaticVar;
 
     static public String myStaticMethod() {
+
         memberVar = "Value";  // --> 错误无法引用成员变量。
+
         memberStaticVar = "Value"; // --- 这是可以的，静态变量可以使用
+
         // 创建一个对象
+
         MyObject obj = new MyObject();
+
         obj.memberVar = "Value"; // --- 这是可以的，因为创建了对象
+
         return("I am a Static Method");
+
     }
 
 }
@@ -2890,15 +3034,15 @@ Java 基本类型包含纯值，不包含操作。它们基本上是类似于其
 
 | 大小（位） | 示例 | 最小值 | 最大值 | 包装对象 |
 |---|---|---|---|---|
-| char | 16 | `char c = 'A';` | Unicode 0 | Unicode 2¹⁶-1 | Character |
-| short | 16 | `short s = 65;` | -2¹⁵ | 2¹⁵-1 | Short |
-| int | 32 | `int i = 65;` | -2³¹ | 2³¹-1 | Integer |
-| long | 64 | `long l = 65;` | -2⁶³ | 2⁶³-1 | Long |
-| float | 32 | `float f = 65f;` | | | Float |
-| double | 64 | `double d = 65.55d;` | | | Double |
-| byte | 8 | `byte b = 65;` | -128 | 127 | Byte |
-| boolean | 1 | `boolean b = true;` | | | Boolean |
-| void | -- | -- | -- | -- | Void |
+| char | 16 | `char c = 'A';` | Unicode 0 | Unicode 2¹⁶-1 | `Character` |
+| short | 16 | `short s = 65;` | -2¹⁵ | 2¹⁵-1 | `Short` |
+| int | 32 | `int i = 65;` | -2³¹ | 2³¹-1 | `Integer` |
+| long | 64 | `long l = 65;` | -2⁶³ | 2⁶³-1 | `Long` |
+| float | 32 | `float f = 65f;` | | | `Float` |
+| double | 64 | `double d = 65.55d;` | | | `Double` |
+| byte | 8 | `byte b = 65;` | -128 | 127 | `Byte` |
+| boolean | 1 | `boolean b = true;` | | | `Boolean` |
+| void | -- | -- | -- | -- | `Void` |
 
 如 `char` 和 `byte` 等字符类型用于文件输入输出操作。
 
@@ -2908,13 +3052,14 @@ Java 基本类型包含纯值，不包含操作。它们基本上是类似于其
 
 数据转换（强制转换）发生在两个基本类型之间。有两种类型：
 
-- **隐式**（`Implicit`）：不需要强制转换操作；转换不会导致数据精度丢失。
-- **显式**（`Explicit`）：需要强制转换操作；转换可能会导致数据精度丢失。
+- *隐式*（`Implicit`）：不需要强制转换操作；转换不会导致数据精度丢失。
+- *显式*（`Explicit`）：需要强制转换操作；转换可能会导致数据精度丢失。
 
 隐式转换的示例：
 
 ```java
 int i = 65;
+
 long l = i; // int 转换为 long，不需要强制转换
 ```
 
@@ -2922,6 +3067,7 @@ long l = i; // int 转换为 long，不需要强制转换
 
 ```java
 long l = 6566661;
+
 int i = (int)l; // long 转换为 int，需要强制转换（注：原文此处"casting is not needed"应为笔误，实际上是需要的）
 ```
 
@@ -2944,30 +3090,33 @@ int i = (int)l; // long 转换为 int，需要强制转换（注：原文此处"
 
 ```java
 int age = 23;
+
 Integer gameObject = new Integer(age);
 ```
 
 基本包装对象是 Java 允许将基本数据类型视为对象的方式。因此，人们预期会将基本数据类型“包装”为对应的基本包装对象，如所示。
 
-### 自动装箱 (Autoboxing)
+## 自动装箱 (Autoboxing)
 
 自 Java 1.5 起，可以像下面一样编写，编译器会自动创建包装对象。不再需要额外的包装类型的步骤。它已经“自动”装箱了。
 
-### 思考点 (Points to ponder)
+## 思考点 (Points to ponder)
 
 请记住以下操作将产生性能问题。研究 `String` 类及其方法：
 
 ```java
 int age = 23;
+
 Integer gameObject = new Integer(age);
 ```
 
-### 拆箱 (Unboxing)
+## 拆箱 (Unboxing)
 
 由于 `String` 对象是不可变的（不能更改），对 `String` 的任何操作都会创建一个新的 `String`，而旧的将可以进行垃圾回收。不应使用以下代码：
 
 ```java
 int age = 23;
+
 Integer gameObject = age;
 ```
 
@@ -2995,30 +3144,49 @@ name = name.trim();
 
 ```java
 public String convertToString( Collection coll ) {
+
     String sRet = "";
+
     Iterator iter = coll.iterator();
+
     while (iter.hasNext()) {
+
         String oneElement = (String) iter.next();
+
         sRet = sRet + oneElement + "\n";
+
     }
+
     return sRet;
+
 }
 ```
 
-在 `(+ )` 操作期间，每次迭代都会创建一个新的 `String` 对象。不要使用它。相反，使用 `StringBuffer`，如下，只创建一个 `StringBuffer` 对象：
+在 (`+`) 操作期间，每次迭代都会创建一个新的 `String` 对象。不要使用它。相反，使用 `StringBuffer`，如下，只创建一个 `StringBuffer` 对象：
 
 ```java
 public String convertToString( Collection coll ) {
+
     String sRet = "";
+
     StringBuffer buf = new StringBuffer();
+
     Iterator iter = coll.iterator();
+
     while (iter.hasNext()) {
+
         String oneElem = (String) iter.next();
+
         buf.append(oneElem);
+
         buf.append("\n");
+
     }
+
     sRet = buf.toString();
+
     return sRet;
+
 }
 ```
 
@@ -3030,7 +3198,9 @@ public String convertToString( Collection coll ) {
 
 ```java
 if(myString == "Hello World!") {
+
     System.out.println("Match Found");
+
 }
 ```
 
@@ -3038,8 +3208,11 @@ if(myString == "Hello World!") {
 
 ```java
 String myString = "Hello World!";
+
 if(myString.compareTo("Hello World!") == 0) {
+
     System.out.println("Match Found");
+
 }
 ```
 
@@ -3049,8 +3222,11 @@ if(myString.compareTo("Hello World!") == 0) {
 
 ```java
 String myString = "Hello World!";
+
 if(myString.equals("Hello World!")) == true {
+
     System.out.println("Match Found");
+
 }
 ```
 
@@ -3059,7 +3235,7 @@ if(myString.equals("Hello World!")) == true {
 有时，根据“正则表达式”将字符串分割成单独的字符串是有用的。自 Java 1.4 以来，`String` 类就有 `split()` 方法，它会返回一个 `String` 数组。
 
 > 参见以下示例：
-> `String person = "John:Brows:100 Yonge Street, Toronto: (416)777-9999";`
+`String person = "John:Brows:100 Yonge Street, Toronto: (416)777-9999";`
 
 另一个实用的应用可能是根据“换行”字符“分割”字符串文本，这样你就可以逐行处理文本。
 
@@ -3073,6 +3249,7 @@ if(myString.equals("Hello World!")) == true {
 
 ```java
 String str = "coffee";
+
 String substr = str.substring(3);
 ```
 
@@ -3084,10 +3261,10 @@ String substr = str.substring(3);
 
 ```java
 String str = "supporting";
-String substr = str.substring(3,7);
+String substr = str.substring(3, 7);
 ```
 
-`substr` 返回的字符串将是 'port'。请注意，`endIndex` 是不包含的。这意味着最后一个字符的索引是 `endIndex-1`。在这个例子中，从索引 3 到 6 的每个字符都被复制到了子字符串中。
+`substr` 返回的字符串将是 'port'。请注意，`endIndex` 是不包含的。这意味着最后一个字符的索引是 `endIndex - 1`。在这个例子中，从索引 3 到 6 的每个字符都被复制到了子字符串中。
 
 注意：“Substring”被视为一个单词。为什么该方法的命名似乎没有遵循 Java 的常用语法呢？人们很容易将方法 `substr()` 误认为 `subString()`（后者不存在且编译时会产生语法错误）。只需记住，这种风格仅适用于由多个单词组成的方法或其他元素。
 
@@ -3154,7 +3331,7 @@ public class ArrayExample {
 }
 ```
 
-复制代码并编译它。程序将要求你输入一些名称，然后按顺序打印这些名称。它展示了数组的两个主要方面：如何定义数组以及如何访问它。代码 `String[] names = new String[numNames];` Java 创建一个大小为 `numNames` 的用于存储 String 的数组。使用索引设置数组。数组从 0 开始到 `length-1`。
+复制代码并编译它。程序将要求你输入一些名称，然后按顺序打印这些名称。它展示了数组的两个主要方面：如何定义数组以及如何访问它。代码 `String[] names = new String[numNames];` Java 创建一个大小为 `numNames` 的用于存储 String 的数组。使用索引设置数组。数组从 0 开始到 `length - 1`。
 
 上述示例代码的输出为：
 
@@ -3197,6 +3374,7 @@ private Person<T> person;
 ```java
 // --- 创建一个 Employee person ---
 Person<Employee> emplPerson = new Person<Employee>();
+
 // -- 创建一个 Customer person ---
 Person<Customer> custPerson = new Person<Customer>();
 ```
@@ -3206,17 +3384,16 @@ Person<Customer> custPerson = new Person<Customer>();
 就像类声明一样，方法声明也可以是泛型的——即通过一个或多个参数参数化。
 
 ```java
-static public <T> assign(Person<T> person, T obj) {
+static public <T> void assign(Person<T> person, T obj) {
     person.setPerson(obj);
 }
 ```
 
-使用 "T" 是可选的
-使用参数类型是可选的。如果未指定，T 将替换为 Java Object 类，且不会进行泛型规则检查。
+使用 "T" 是可选的。使用参数类型是可选的。如果未指定，`T` 将替换为 Java `Object` 类，且不会进行泛型规则检查。
 
 ## 简介
 
-Java 是一门“强”类型语言。这就是为什么它如此易用。许多潜在问题可以被编译器捕获。Java 受到批评的一个领域是关于“容器/集合”对象。容器对象是包含其他对象的对象。在泛型引入之前，没有方法可以确保容器对象只包含一种类型的对象。当对象被添加到容器中时，它会被强制转换为 Java Object。当它被取出时，则需要显式的强制转换。通常，显式强制转换由编译器检查。
+Java 是一门“强”类型语言。这就是为什么它如此易用。许多潜在问题可以被编译器捕获。Java 受到批评的一个领域是关于“容器/集合”对象。容器对象是包含其他对象的对象。在泛型引入之前，没有方法可以确保容器对象只包含一种类型的对象。当对象被添加到容器中时，它会被强制转换为 Java `Object`。当它被取出时，则需要显式的强制转换。通常，显式强制转换由编译器检查。
 
 ```java
 String s = "This is a String";
@@ -3231,7 +3408,7 @@ collString.add("This is a String");
 Integer integer = (Integer) collString.get(0); // --- 无编译错误；运行时 CastException
 ```
 
-仅看第 3 行，我们不知道 collString 包含什么类型的对象。如果它包含 Integer，那么代码就是没问题的。
+仅看第 3 行，我们不知道 `collString` 包含什么类型的对象。如果它包含 `Integer`，那么代码就是没问题的。
 
 上述使用泛型的代码：
 
@@ -3242,7 +3419,7 @@ collString.add("This is a String");
 Integer integer = (Integer) collString.get(0); // --- 编译错误
 ```
 
-collString 是一个容器对象，它只能包含 String 对象，不能包含其他任何东西，因此当我们取出元素时，它只能被转换为通常 String 可以转换的类。
+`collString` 是一个容器对象，它只能包含 `String` 对象，不能包含其他任何东西，因此当我们取出元素时，它只能被转换为通常 `String` 可以转换的类。
 
 有了泛型，Java 的严格类型检查可以扩展到容器对象。使用泛型容器类给人一种印象，每个不同的类型参数都创建了一个新类型。在泛型之前：
 
@@ -3262,7 +3439,7 @@ collCustomer.add(new Customer());
 Collection<Object> collObject = collCustomer; // --- 编译错误
 ```
 
-collObject 和 collCustomer 具有相同的类型，但它违反了泛型规则，即 collCustomer 只能包含 Customer 对象，而 collObject 只能包含 Object 对象。因此在常规类型检查之外还有额外的检查，参数的类型也必须匹配。
+`collObject` 和 `collCustomer` 具有相同的类型，但它违反了泛型规则，即 `collCustomer` 只能包含 `Customer` 对象，而 `collObject` 只能包含 `Object` 对象。因此在常规类型检查之外还有额外的检查，参数的类型也必须匹配。
 
 ## 给 C++ 程序员的备注
 
@@ -3270,7 +3447,7 @@ Java 泛型与 C++ 模板相似，因为它们是出于相同的原因添加的�
 
 它们存在一些区别。C++ 模板可以被视为一种宏，在编译前生成代码。生成的代码取决于模板类是如何被引用的。生成的代码量取决于模板创建了多少种不同类型的类。C++ 模板没有任何运行时机制。编译器创建普通代码来替换模板，类似于任何“手写”代码。
 
-相比之下，Java 泛型是内置在语言中的。
+相比之下，Java 泛型是内置在语言中的。（注：此处原文存在大量段落重复，译文已按逻辑处理并去除了冗余重复内容，保持结构清晰）。
 
 # 通配符类型
 
@@ -3288,11 +3465,11 @@ Java 泛型与 C++ 模板相似，因为它们是出于相同的原因添加的�
 Collection<?> collUnk;
 ```
 
-请注意，我们不能向此集合中添加任何内容。我们只能从中取出类型为 *Object* 的元素。那么，如果我们无法向所代表的集合中添加任何内容，这个变量的用途是什么？当你想要生成一个接受任何集合的泛型方法时，这种新方法的用途就会显而易见。
+请注意，我们不能向此集合中添加任何内容。我们只能从中取出类型为 `Object` 的元素。那么，如果我们无法向所代表的集合中添加任何内容，这个变量的用途是什么？当你想要生成一个接受任何集合的泛型方法时，这种新方法的用途就会显而易见。
 
 ```java
 public static void printElements(Collection<?> anyColl) {
-    Iterator<Object> iter = coll.iterator();
+    Iterator<Object> iter = anyColl.iterator();
     while (iter.hasNext()) {
         System.out.print(iter.next());
     }
@@ -3301,7 +3478,7 @@ public static void printElements(Collection<?> anyColl) {
 
 ### 针对特定类型类的通配符
 
-> "?? extends ClassName" 指定了可以使用的类类型的限制。
+> "`<? extends ClassName>` 指定了可以使用的类类型的限制。
 
 例如，要创建一个可能只包含 "Serializable"（可序列化）对象的集合，请指定：
 
@@ -3311,7 +3488,7 @@ Collection<? extends Serializable> serColl = new ArrayList<String>();
 
 上述代码是有效的，因为 **String** 类是可序列化的。使用不可序列化的类会导致编译错误。
 
-以下集合只能包含继承自 Animal 类的对象。
+以下集合只能包含继承自 `Animal` 类的对象。
 
 ```java
 class Dog extends Animal {
@@ -3331,24 +3508,23 @@ Java 中的每个类都可以由以下元素组成：
 
 - **字段 (fields)**：字段持有每个对象特有的数据。例如，一个员工可能有一个 ID 号。（它有时也被称为成员变量）
 - **成员方法 (member methods)**：成员方法对对象执行操作。例如，一个员工可能有一个方法来发放工资单或访问其姓名。
-- **静态字段 (static fields)**：静态字段对于同类的任何对象都是通用的。例如，Employee 类中的一个静态字段可以跟踪最后发放的 ID。
+- **静态字段 (static fields)**：静态字段对于同类的任何对象都是通用的。例如，`Employee` 类中的一个静态字段可以跟踪最后发放的 ID。
 - **静态方法 (static methods)**：静态方法是不影响特定对象的方法。
 - **其他类 (other classes)**：有时，如果一个类在类外部没有用处或不应该在类外部访问，那么将其包含在另一个类内部是有用的。
 - **构造方法 (Constructors)**：用于生成新对象的特殊方法。
-- **泛型类型 (Parameterized types)**：自 1.5 版本以来，“泛型类型”可以在定义定义分配给类。它们将在类实例化时被替换为类实例化时指定的类型。这是由编译器完成的。它类似于 C 语言中的宏 `#define`，其中预处理器会评估这些宏。
+- **泛型类型 (Parameterized types)**：自 1.5 版本以来，“泛型类型”可以在定义时分配给类。它们将在类实例化时被替换为类实例化时指定的类型。这是由编译器完成的。它类似于 C 语言中的宏 `#define`，其中预处理器会评估这些宏。
 
 ```java
 public class Employee { // 这定义了 Employee 类。
 
     // public 修饰符表示
     // 它可以被任何其他类访问
-
     private static int nextID; // 定义将存储的数据
     private String name; // 属于每个 Employee。
 
     public Employee(String name) { // 构造方法
         this.name = name;
-        nextID = nextID; // 自动分配 ID
+        this.nextID = nextID; // 自动分配 ID
         nextID++; // 增加 ID 计数
     }
 
@@ -3385,7 +3561,7 @@ System.out.println(c.getID() + " " + c.getName());
 
 ## 通用概念
 
-### 抽象
+## 抽象
 
 Java 中的每个类都可以由以下元素组成。实体由世界定义。
 
@@ -3406,7 +3582,7 @@ class Animal {
 
 ## 创建对象
 
-### 简介
+## 简介
 
 Java 中的每个类都可以由以下元素组成。实体由世界定义。
 
@@ -3477,12 +3653,12 @@ public Customer createCustomerObject() {
 }
 ```
 
-现在，让我们看看如何让 Customer 对象可克隆。
+现在，让我们看看如何让 `Customer` 对象可克隆。
 
-- 首先，Customer 类需要实现 `Cloneable` 接口。
+- 首先，`Customer` 类需要实现 `Cloneable` 接口。
 - 重写并使 `clone()` 方法设为公有，因为它在 `Object` 类中是受保护的。
 - 在 `clone` 方法的开头调用 `super.clone()` 方法。
-- 在 Customer 的所有子类中重写 `clone()` 方法。
+- 在 `Customer` 的所有子类中重写 `clone()` 方法。
 
 ```java
 public class Customer implements Cloneable {
@@ -3594,15 +3770,15 @@ Java 中的类型定义了允许的数据值以及可能在这些值上执行的
 - 原始类型（Primitive Type）
 - 对象引用（Object Reference）
 
-## 关于类型
+### 关于类型
 
 Java 是强类型语言；某些类型错误会导致运行时异常，而不是数据损坏。Java 也被认为是一种混合语言。虽然 Java 支持面向对象（OO）编程，但它并不是像 Smalltalk 或 Ruby 那样的纯面向对象语言。引用变量的操作适用于所有引用类型，例如比较操作 `==`、`!=` 和赋值 `=`。`null` 引用是另一个有效值。原始类型用于布尔、字符和数值。
 
-## 类型示例
+### 类型示例
 
 以下是 Java 类型的示例以及对允许的值的操作简要描述。关于每个类型的详细信息可以在其他模块中找到。
 
-### 示例：int
+**示例：int**
 
 原始类型 `int` 代表 32 位整数值。`int` 允许的数据值为 -2147483648 到 2147483647（包含边界）。
 
@@ -3614,7 +3790,7 @@ Java 是强类型语言；某些类型错误会导致运行时异常，而不是
 private int length;
 ```
 
-### 示例：String
+**示例：String**
 
 你使用类和接口定义来定义新类型。类和接口类型与对象引用相关，有时称为引用类型（Reference types）。对象引用有两个主要属性：
 
@@ -3647,7 +3823,7 @@ private Object name = "Marry Brown";
 
 只有 `java.lang.Object` 类的方法可以该对象引用名使用。
 
-# 数组类型
+## 数组类型
 
 Java 中的数组表示为内置的 Java 数组对象（Array object）。
 
@@ -3657,13 +3833,13 @@ Java 中的数组表示为内置的 Java 数组对象（Array object）。
 | 集合 | 异常 | 并发编程 | 反射 |
 | Applets | JavaBeans | 库 |
 
-# 销毁对象
+## 销毁对象
 
 与许多其他面向对象的编程语言不同，Java 执行自动垃圾回收——任何未被引用的对象都会自动从内存中删除——并禁止用户手动销毁对象。
 
-# finalize()
+## finalize()
 
-当对象被垃圾回收时，程序员可能想要手动执行清理工作，例如关闭任何打开的输入/输出流。为了实现这一目标，使用了 `finalize()` 方法。请注意，`finalize()` 永远不应该被手动调用，除非从派生类的 finalize 方法调用父类的 finalize 方法。此外，我们无法依赖 `finalize()` 方法何时被调用。如果 Java 应用程序在对象被垃圾回收之前退出，则 `finalize()` 方法可能永远不会被调用。
+当对象被垃圾回收时，程序员可能想要手动执行清理工作，例如关闭任何打开的输入/输出流。为了实现这一目标，使用了 `finalize()` 方法。请注意，`finalize()` 永远不应该被手动调用，除非从派生类的 `finalize` 方法调用父类的 `finalize` 方法。此外，我们无法依赖 `finalize()` 方法何时被调用。如果 Java 应用程序在对象被垃圾回收之前退出，则 `finalize()` 方法可能永远不会被调用。
 
 ```java
 protected void finalize() throws Throwable {
@@ -3675,7 +3851,7 @@ protected void finalize() throws Throwable {
 }
 ```
 
-# 方法和构造函数的重载
+## 方法和构造函数的重载
 
 如果一个类中的两个方法（无论是在类中都声明，还是两个都由类继承，或者是一个声明而一个继承）具有相同的名称但不同的签名（signature），则该方法名称被称为重载。这不会引起任何困难，其本身永远不会导致编译错误。两个具有相同名称但不同签名的方法之间，其返回类型之间或 throws 子句之间没有强制性关系。
 
@@ -3685,26 +3861,24 @@ protected void finalize() throws Throwable {
 
 当方法被调用时，在编译时使用实际参数的数量和参数的编译类型来确定将调用的方法签名。如果要调用的方法是实例方法，则实际调用的方法将在运行时通过动态方法查找（dynamic method lookup）确定。
 
-# 数组
+## 数组
 
-## 数组简介
+### 数组简介
 
 数组类似于一个以数字为键的数据表。在 Java 中，数组像所有对象一样是一个对象。查看以下程序：
 
-复制代码并编译它。程序将要求你输入一些名称，然后按顺序重打印这些名称。它演示了数组三个方面：如何定义数组、如何设置数据以及如何访问数据。代码 `String[] names = new String[numNames];` 告诉 Java 创建一个大小为 numNames 的用于存储 String 的数组。要设置数据，使用 `names[x] = data`，其中 x 是访问的索引。注意，所有数组都从 0 开始，到数组大小 - 1。因此，如果你决定数组大小为 10，则最高索引为 9。
+复制代码并编译它。程序将要求你输入一些名称，然后按顺序重打印这些名称。它演示了数组三个方面：如何定义数组、如何设置数据以及如何访问数据。代码 `String[] names = new String[numNames];` 告诉 Java 创建一个大小为 `numNames` 的用于存储 String 的数组。要设置数据，使用 `names[x] = data`，其中 `x` 是访问的索引。注意，所有数组都从 0 开始，到数组大小 - 1。因此，如果你决定数组大小为 10，则最高索引为 9。
 
-## 数组基础
+### 数组基础
 
 - 要创建一个数组，语法为 `DataType[] variable = new DataType[ArraySize]`。或者，如果你提前知道数据，可以写 `DataType[] variable = {item 1}`。
-- 访问数据，使用 `names[x] = data`，其中 x 是访问的索引。
-- 设置数据，使用 `names[x] = data`，其中 x 是访问的索引。
+- 访问数据，使用 `names[x] = data`，其中 `x` 是访问的索引。
+- 设置数据，使用 `names[x] = data`，其中 `x` 是访问的索引。
 - 注意，所有数组都从 0 开始，到数组大小 - 1。
 
-## 二维数组
+### 二维数组
 
-二维数组类似于一个以数字为键的数据表。在 Java 中，数组像所有对象一样是一个对象。查看以下程序：
-
-复制代码并编译它。程序将要求你输入一些名称，然后按顺序重打印这些名称。它演示了数组三个方面：如何定义数组、如何设置数据以及如何访问数据。代码 `String[] names = new String[numNames];` 告诉 Java 创建一个大小为 numNames 的用于存储 String 的数组。要设置数据，使用 `names[x] = data`，其中 x 是访问的索引。注意，所有数组都从 0 开始，到数组大小 - 1。因此，如果你决定数组大小为 10，则最高索引为 9。
+二维数组类似于一个以数字为键的数据表。在 Java 中，数组像所有对象一样是一个对象。
 
 ```java
 int[][] arrayArray = new int[3][3];
@@ -4027,7 +4201,7 @@ Java JDK 包含两个高级接口：
 - `java.util.Collection`
 - `java.util.Map`
 
-这些接口的实现类是不可互换的。`Collections` 用于收集 Java 对象。`Maps` 用于映射键/值对（key/value pairs）。
+这些接口的实现类是不可互换的。`Collection` 用于收集 Java 对象。`Map` 用于映射键/值对。
 
 ## Collection
 
@@ -4037,7 +4211,7 @@ Java JDK 包含两个高级接口：
 - 列出元素
 - 维护并更改元素的顺序
 - 通过索引号访问元素
-- 通过集合的基本操作（添加、删除、更新...）维护元素
+- 通过集合的基本操作（添加、删除、更新……）维护元素
 
 使用 `Collection` 接口的优势是：
 
@@ -4074,17 +4248,13 @@ public String addAll(Collection coll) {
 }
 ```
 
-上面的代码只是遍历了传入的集合并将元素添加到链表中。你不需要手动这样做，因为这已经定义好了。你可能需要编写的是遍历一个“自定义”（Custom）集合：
+上面的代码只是遍历了传入的集合并将元素添加到链表中。你不需要手动这样做，因为这已经定义好了。你可能需要编写的是遍历一个“自定义”集合：
 
 ```java
 import java.util.Collection;
 import java.util.Iterator;
 import java.yourcompany.Customer;
-```
-
-...
-
-```java
+// ...
 public String printCustomerNames(Collection customerColl) {
     StringBuilder buf = new StringBuilder();
     Iterator iter = customerColl.iterator();
@@ -4108,16 +4278,16 @@ public String printCustomerNames(Collection customerColl) {
 
 图 1：Map 接口
 
-Map 有时也称为关联数组（Associated Array），有时称为字典（Dictionary），可以被视为一个索引不需要是整数的数组。
+`Map` 有时也称为关联数组，有时称为字典，可以被视为一个索引不需要是整数的数组。
 
-如果你需要将相关的对象组合在一个 Map 中，请使用 `Map`，你可以：
+如果你需要将相关的对象组合在一个 `Map` 中，请使用 `Map`，你可以：
 
 - 通过键对象访问元素
 - 将一个对象映射到另一个
 
-`java.util.Map<K,V>` 将键映射到值。Map 不能有重复的键；每个键可以映射到一个值。`Map` 接口提供了三个集合视图，允许将 Map 的内容视为键的集合、值的集合或键值映射的集合。键通常是一个不可变对象。然而，值对象可以是一个可变对象。
+`java.util.Map<K,V>` 将键映射到值。`Map` 不能有重复的键；每个键可以映射到一个值。`Map` 接口提供了三个集合视图，允许将 `Map` 的内容视为键的集合、值的集合或键值映射的集合。键通常是一个不可变对象。然而，值对象可以是一个可变对象。
 
-`java.util.SortedMap<K,V>` 与 `Map` 接口相同，但 Map 中的键是经过排序的。
+`java.util.SortedMap<K,V>` 与 `Map` 接口相同，但 `Map` 中的键是经过排序的。
 
 ## Set 或 List 或 Queue
 
@@ -4137,7 +4307,7 @@ Map 有时也称为关联数组（Associated Array），有时称为字典（Dic
 - 列出元素
 - 维护并更改元素的顺序
 - 通过索引号访问元素
-- 通过集合的基本操作（添加、删除、更新...）维护元素
+- 通过集合的基本操作（添加、删除、更新……）维护元素
 
 - `hashCode()` 可能会用于其他集合实现，例如在 `HashTable` 中快速查找对象。重写默认的 `hashCode()` 方法可能会在这些地方引起性能问题。
 - 默认的 `hashCode` 对于每个创建的对象都是唯一的，如果你决定不重写 `hashCode()` 方法，那么重写 `equals()` 方法没有意义，因为它不会被调用。
@@ -4158,7 +4328,7 @@ Map 有时也称为关联数组（Associated Array），有时称为字典（Dic
 
 ## List（列表）
 
-List 有以下实现：
+`List` 有以下实现：
 
 ![](img/4e89b81da69e356cec19bc7ce6e739a0_155_0.png)
 
@@ -4208,13 +4378,13 @@ List 有以下实现：
 
 ## Map Classes（Map 类）
 
-Map 接口有以下实现：
+`Map` 接口有以下实现：
 
 ![](img/4e89b81da69e356cec19bc7ce6e739a0_158.png)
 
 - `java.util.TreeMap<E>`：保证按键升序排列，非同步
 - `java.util.HashMap<E>`：大致相当于 `Hashtable`，不同在于它是非同步的且允许空值
-- `java.util.concurrent.ConcurrentHashMap`：与 `HashTable` 相同，但检索操作（包括 `get`）通常不会阻塞更新操作（包括 `put` 和 `remove`）。
+- `java.util.concurrent.ConcurrentHashMap`：与 `HashTable` 相同，但在检索操作（包括 `get`）通常不会阻塞更新操作（包括 `put` 和 `remove`）。
 - `java.util.Hashtable<E>`：同步，不能使用 `null` 作为键
 - `java.util.WeakHashMap<E>`：当键不再被使用时，entry 会自动移除。非同步
 - `java.util.LinkedHashMap<E>`：该类遵循迭代顺序，通常是键插入 map 的顺序。如果一个键重新插入 map，则插入顺序不受影响。
@@ -4232,11 +4402,9 @@ Map 接口有以下实现：
 | `java.util.Vector` | `java.util.ArrayList` |
 | `java.util.Stack` | `java.util.LinkedList` |
 | `java.util.concurrent.CopyOnWriteArrayList` | |
-| | `java.util.TreeSet` |
+| `java.util.concurrent.CopyOnWriteArraySet` | `java.util.TreeSet` |
 | | `java.util.HashSet` |
 | | `java.util.LinkedHashSet` |
-| `java.util.concurrent.CopyOnWriteArraySet` | |
-| | `java.util.TreeMap` |
 | `java.util.Hashtable` | `java.util.HashMap` |
 | `java.util.concurrent.ConcurrentHashMap` | `java.util.LinkedHashMap` |
 | | `java.util.IdentityHashMap` |
@@ -4256,7 +4424,7 @@ Map 接口有以下实现：
 
 ### 异常 (Exception)
 
-异常是 Java 处理错误的方式。当发生意外情况时，可以抛出一个以异常对象为参数的异常对象。这意味着正常的程序控制流停止，并开始搜索 `catch` 块（异常块）。如果在当前方法中没有找到，搜索将继续到调用者方法级别，直到未找到为止，异常将由 JVM 处理，Java 程序终止。
+异常是 Java 处理错误的方式。当发生意外情况时，可以抛出一个以异常对象为参数的异常对象。这意味着正常的程序控制流停止，并开始搜索 `catch` 块（异常块）。如果在当前方法中没有找到，搜索将继续到调用者方法级别，直到找到为止，否则异常将由 JVM 处理，Java 程序终止。
 
 当找到“匹配”的 `catch` 块时，该块将被执行，异常对象将作为参数传递给该块。然后，在 `catch` 块之后继续执行程序的正常运行。参见 Java 异常处理语法。
 
@@ -4501,7 +4669,7 @@ objects = new Object[]{"blah"};
 File file = new File("/etc");
 File[] files = file.listFiles();
 if (files == null) {
-  // tstuff
+  tstuff
 }
 ```
 
