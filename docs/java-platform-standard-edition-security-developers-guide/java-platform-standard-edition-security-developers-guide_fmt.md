@@ -105,7 +105,7 @@ Java 安全标准算法规范描述了 Java 要求和使用的标准算法、证
 
 在协商阶段，两个套接字端同意使用新会话或现有会话。握手协议是通过记录协议交换的一系列消息。在握手结束时，将根据会话中的密钥协商机密生成新的特定连接的加密和完整性密钥。
 
-### `java-home`
+### java-home
 
 本文档中使用的变量占位符，用于引用 Java 开发工具包 (JDK) 的安装目录。
 
@@ -177,9 +177,9 @@ Java 安全标准算法规范描述了 Java 要求和使用的标准算法、证
 
 ## Java 安全概述
 
-### Java 安全导论
-
 Java 安全包含大量的 API、工具以及常用算法、机制和协议的实现。Java 安全 API 跨越了广泛领域，包括密码学、公钥基础设施、安全通信、身份验证和访问控制。Java 安全技术为开发者为编写应用程序提供了一个全面的安全框架，同时也为用户或管理员提供了一套安全管理应用程序的工具。
+
+### Java 安全导论
 
 JDK 在设计时就非常强调安全性。在其核心，Java 语言是类型安全的并提供了自动垃圾回收，增强了应用程序代码的健壮性。类加载和验证机制确保了只执行合法的 Java 代码。Java 架构包含了大量的编程接口 (API)、工具和常用安全服务的实现。
 
@@ -191,18 +191,18 @@ JDK 包含了许多实现核心安全服务的提供者。它还允许安装额�
 
 JDK 被分为多个模块。包含安全 API 的模块包括以下：
 
-### 表 1-1 包含安全 API 的模块
+#### 表 1-1 包含安全 API 的模块
 
 | 模块 | 描述 |
 | --- | --- |
-| `java.base` | 定义 Java SE 的功能性 API；包包括 `java.security`、`java.crypto`、`java.net.ssl` 和 `java.security.auth` |
-| `java.security.jgss` | 定义通用安全服务 API (GSS-API) 的绑定。该模块还包含 GSS-API 机制，包括 Kerberos 和 SPNEGO |
-| `java.security.sasl` | 定义对简单身份验证和安全层 (SASL)的支持。该模块还包含 SASL 机制，包括 DIGEST-MD5、CRA-MD5 和 NTLM |
-| `java.smartcard` | 定义 Java 智能卡 I/O API |
-| `java.xml.crypto` | 定义 XML 加密 API |
-| `jdk.jartool` | 定义签名 jar 文件的 API |
-| `jdk.security.auth` | 提供 `java.security.auth.*` 接口的实现以及各种认证模块 |
-| `jdk.security.jgss` | 定义 Java 对 GSS-API 的扩展以及 SASL GSS-API 机制的实现 |
+| java.base | 定义 Java SE 的功能性 API；包包括 `java.security`、`java.crypto`、`java.net.ssl` 和 `java.security.auth` |
+| java.security.jgss | 定义通用安全服务 API (GSS-API) 的绑定。该模块还包含 GSS-API 机制，包括 Kerberos 和 SPNEGO |
+| java.security.sasl | 定义对简单身份验证和安全层 (SASL)的支持。该模块还包含 SASL 机制，包括 DIGEST-MD5、CRA-MD5 和 NTLM |
+| java.smartcard | 定义 Java 智能卡 I/O API |
+| java.xml.crypto | 定义 XML 加密 API |
+| jdk.jartool | 定义签名 jar 文件的 API |
+| jdk.security.auth | 提供 `java.security.auth.*` 接口的实现以及各种认证模块 |
+| jdk.security.jgss | 定义 Java 对 GSS-API 的扩展以及 SASL GSS-API 机制的实现 |
 
 ### Java 语言安全与字节码验证
 
@@ -381,7 +381,7 @@ Java 平台还包含一个 LDAP 存储（用于访问存储在 LDAP 目录中的
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_30_0.png)
 
-> **注意**：`jarsigner` 可以可选生成包含时间戳的签名。验证签名的系统可以检查时间戳并接受在证书有效时签名的 JAR，而不是要求证书是当前有效的（证书通常会过期，预计每年更新一次是合理的）。请参见 `keytool` 和 `jarsigner`。
+> 注意：`jarsigner` 可以可选生成包含时间戳的签名。验证签名的系统可以检查时间戳并接受在证书有效时签名的 JAR，而不是要求证书是当前有效的（证书通常会过期，预计每年更新一次是合理的）。请参见 `keytool` 和 `jarsigner`。
 
 ## 认证
 
@@ -415,13 +415,13 @@ Java 平台提供了内置登录模块，全部位于 `com.sun.security.auth.mod
 
 传输层安全 (TLS) 及其前身安全套接字层 (SSL) 是在两个通信端之间提供安全通道的加密协议。TLS 通过结合加密过程，为不可信或敌对网络上的通信提供认证、机密性和完整性属性。TLS 运行在可靠的流式传输通道（TCP）之上。数据报传输层安全 (DTLS) 与其类似，但为基于数据报的传输（UDP）设计。
 
-### GSS-API 和 SASL
+### GSS-API 和 Kerberos
 
 Java 平台提供了通用安全服务应用程序接口 (GSS-API) 的 Java 语言绑定 API，该 API 位于 `java.security.jgss` 模块。
 
 GSS-API 为应用程序开发人员提供了基于多种底层安全机制的安全服务访问。GSS-API 目前要求使用 Kerberos v5 机制，而 Java 平台包含了该机制的内置实现。目前，无法接入额外的机制。
 
-> **注意**：在“认证”节中提到的 `Krb5LoginModule` 可以与 GSS Kerberos 机制结合使用。
+> 注意：在“认证”节中提到的 `Krb5LoginModule` 可以与 GSS Kerberos 机制结合使用。
 
 Java 平台还包含了简单和受保护 GSS-API 协商机制（SPNEGO）GSS-API 机制的内置实现。
 
@@ -433,9 +433,9 @@ Java GSS API 位于 `org.ietf.jgss` 包中。Java 还定义了 Kerberos 类，�
 
 Java 平台中的访问控制提供了对敏感资源（例如文件）或敏感应用程序代码（例如类中的方法）的访问保护。所有的访问控制决策都由安全管理器调解，由 `java.lang.SecurityManager` 类表示。必须在 Java 运行时安装 SecurityManager 才能激活访问控制。
 
-> **警告**：安全管理器及其相关 API 已被弃用，并可能在未来的发布中删除。安全管理器没有替代品。请参阅 JEP 411 获取讨论和替代方案。
+> 警告：安全管理器及其相关 API 已被弃用，并可能在未来的发布中删除。安全管理器没有替代品。请参阅 JEP 411 获取讨论和替代方案。
 
-通过 `java` 命令执行的本地应用程序默认不在安装了 SecurityManager 的情况下运行。要在安装 SecurityManager 的情况下运行本地应用程序，可以由应用程序本身通过 `setSecurityManager` 方法（在 `java.lang.System` 类中）以编程方式设置自己，或者在命令行上使用 `-Djava.security.manager` 参数来调用 `java`。
+通过 `java` 命令执行的本地应用程序默认不在安装了 SecurityManager 的情况下运行。要在安装 SecurityManager 的情况下运行本地应用程序，可以由应用程序本身通过 `setSecurityManager` 方法（在 `java.lang.System` 类中）程序化地设置自己，或者在命令行上使用 `-Djava.security.manager` 参数来调用 `java`。
 
 ### 权限
 
@@ -455,13 +455,13 @@ Java 平台中的访问控制提供了对敏感资源（例如文件）或敏感
 
 授予下载代码的默认权限包括返回其源主机建立网络连接的能力。自动授予从本地文件系统加载的代码的默认权限包括从其所在目录及其子目录中读取文件的能力。
 
-请注意，执行代码的用户身份在加载时是不可用的。身份验证终端用户是应用程序代码的责任（请参见[身份验证（Authentication）]节）。一旦用户通过了身份验证，应用程序可以通过调用 `javax.security.auth.Subject` 类中的 `doAs` 方法，在执行代码时动态地关联该用户。
+请注意，执行代码的用户身份在加载时是不可用的。身份验证终端用户是应用程序代码的责任（请参见[身份验证（Authentication）”节）。一旦用户通过了身份验证，应用程序可以通过调用 `javax.security.auth.Subject` 类中的 `doAs` 方法，在执行代码时动态地关联该用户。
 
 ## 安全策略
 
 代码按类授予一组有限的默认权限。管理员可以灵活地通过安全策略管理额外的代码权限。
 
-Java 在 `java.security.Policy` 类中封装了策略的概念。在任何时刻，Java 运行时只安装一个 `Policy` 对象。`Policy` 对象的基本责任是判断是否允许代码访问受保护资源（其特征为加载位置、谁签署了它以及谁在执行它）。例如，`Policy` 对象如何做出这种判断取决于实现。它可能会咨询包含授权数据的数据库，或联系另一个服务。
+Java 在 `java.security.Policy` 类中封装了策略的概念。在任何时刻，Java 运行时只安装一个 `Policy` 对象。`Policy` 对象的的基本责任是判断是否允许代码访问受保护资源（其特征为加载位置、谁签署了它以及谁在执行它）。例如，`Policy` 对象如何做出这种判断取决于实现。它可能会咨询包含授权数据的数据库，或联系另一个服务。
 
 Java 包含一个默认 Policy 实现，该实现从安全属性文件中配置的一个或多个 ASCII (UTF-8) 文件中读取其授权数据。这些文件包含了授予代码的权限集：具体来说，是授予从特定位置加载、由特定实体签署并作为特定用户执行的代码的权限集。每个文件中的策略条目必须符合记录的语法，并可以通过简单的文本编辑器进行组合。
 
@@ -546,7 +546,7 @@ Java XML 处理 API (JAXP) 用于使用 Java 应用程序处理 XML 数据。它
 
 以下表格描述了 Java 安全和 Kerberos 相关的工具。
 
-## 表 1-2 Java 安全工具
+### 表 1-2 Java 安全工具
 
 | 工具 | 用途 |
 | --- | --- |
@@ -554,9 +554,9 @@ Java XML 处理 API (JAXP) 用于使用 Java 应用程序处理 XML 数据。它
 | jarsigner | 对 JAR 文件签名并验证签名 |
 | keytool | 创建和管理密钥 |
 
-还有三个随 Windows 版 JDK 提供的 Kerberos 相关的工具。Linux 和 macOS 自动包含同名的工具，并提供了等效的功能。
+还有三个随 Windows 版 JDK 提供的的 Kerberos 相关的工具。Linux 和 macOS 自动包含同名的工具，并提供了等效的功能。
 
-## 表 1-3 Kerberos 相关的工具
+### 表 1-3 Kerberos 相关的工具
 
 | 工具 | 用途 |
 | --- | --- |
@@ -589,7 +589,7 @@ Oracle 的 Java SE 实现包含了许多内置提供者包。请参见 JDK 提�
 
 Java 平台提供的原始沙箱模型被称为沙箱模型，其存在是为了提供一个非常受限的环境，在其中运行来自开放网络的不可信代码。沙箱模型的本质是：本地代码被信任为完全访问关键系统资源（如文件系统），而下载的代码（applet）是不受信任的，只能访问沙箱内部提供的有限资源。沙箱模型如图 1-5 所示。
 
-## 图 1-5 原始 Java 平台安全模型
+### 图 1-5 原始 Java 平台安全模型
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_40_0.png)
 
@@ -605,7 +605,7 @@ Java 平台提供的原始沙箱模型被称为沙箱模型，其存在是为了
 
 JDK 1.1 引入了“沙箱”的概念，沙箱模型如图 1-6 所示。沙箱模型通过 JDK 部署，并通常被使用 JDK 1.0 的应用程序采用，包括启用 Java 的 Web 浏览器。
 
-## 图 1-6 Java 平台安全模型
+### 图 1-6 Java 平台安全模型
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_41_0.png)
 
@@ -613,7 +613,7 @@ JDK 1.1 引入了“沙箱”的概念，沙箱模型如图 1-6 所示。沙箱�
 
 新的 Java SE 安全架构如图 1-7 所示，其引入的主要目的是：
 
-## 图 1-7 Java SE 安全架构
+### 图 1-7 Java SE 安全架构
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_42_0.png)
 
@@ -706,12 +706,19 @@ perm = new java.io.FilePermission("/tmp/abc", "read");
 
 ```
 file
+
 directory（同于 directory/）
+
 directory/file
+
 directory/*（目录下的所有文件）
+
 *（当前目录下的所有文件）
+
 directory/-（该目录在文件系统下的所有文件）
-- （当前目录下文件系统中的所有文件）
+
+-（当前目录下文件系统中的所有文件）
+
 <<ALL FILES>>（文件系统中的所有文件）
 ```
 
@@ -723,25 +730,33 @@ directory/-（该目录在文件系统下的所有文件）
 import java.io.FilePermission;
 
 FilePermission p = new FilePermission("myfile", "read,write");
+
 FilePermission p = new FilePermission("/home/gong/", "read");
+
 FilePermission p = new FilePermission("/tmp/mytmp", "read,delete");
+
 FilePermission p = new FilePermission("/bin/**", "execute");
+
 FilePermission p = new FilePermission("**", "read");
+
 FilePermission p = new FilePermission("/-", "read,execute");
+
 FilePermission p = new FilePermission("-*", "read, execute");
+
 FilePermission p = new FilePermission("<<ALL FILES>>", "read");
 ```
 
 该类中的 `implies` 方法可以正确解释文件系统。例如，`FilePermission("/*", "read, execute")` 包含 `FilePermission("/home/gong/public_html/index.html", "read")`，而 `FilePermission("/bin/**", "execute")` 包含 `FilePermission("/bin/emacs19.31", "execute")`。
 
-> **注意：**
-> 大多数字符串是以依赖于平台的格式提供的。例如，要表示 Windows 系统 c 盘临时目录下的文件名 `foo`，你会使用：
+# 注意：
+
+大多数字符串是以依赖于平台的格式提供的。例如，要表示 Windows 系统 c 盘临时目录下的文件名 `foo`，你会使用：
 
 ```java
 FilePermission p = new FilePermission("c:\\temp\\foo", "read");
 ```
 
-双反斜杠是为了表示单个反斜杠，这是因为字符串是由 `StreamTokenizer` 处理的，它允许将 `\` 用于转义字符串（例如用 `\n` 表示换行），并要求两个反斜杠来表示单个反斜杠。在分词器处理 `FilePermission` 目标字符串并将双反斜杠转换为单反斜杠后，结果就是实际路径：
+双反斜杠是为了表示单个反斜杠，这是因为字符串是由 `StreamTokenizer (java.io.StreamTokenizer)` 处理的，它允许将 `\` 用于转义字符串（例如用 `\n` 表示换行），并要求两个反斜杠来表示单个反斜杠。在分词器处理 `FilePermission` 目标字符串并将双反斜杠转换为单反斜杠后，结果就是实际路径：
 
 ```
 "c:\temp\foo"
@@ -759,7 +774,9 @@ FilePermission p = new FilePermission("/home/gong/", "read");
 
 ```java
 FilePermission p = new FilePermission("/home/gong/myfile", "read");
+
 FilePermission p = new FilePermission("/home/gong/*", "read");
+
 FilePermission p = new FilePermission("/home/gong/-", "read");
 ```
 
@@ -798,21 +815,27 @@ FilePermission p = new FilePermission("/home/gong/-", "read");
 import java.net.SocketPermission;
 
 SocketPermission p = new SocketPermission("java.example.com", "accept");
+
 p = new SocketPermission("192.0.2.99", "accept");
+
 p = new SocketPermission("*.com", "connect");
+
 p = new SocketPermission("*.example.com:80", "accept");
+
 p = new SocketPermission("java.example.com:-", "accept");
+
 p = new SocketPermission("*.example.com:80", "accept");
+
 p = new SocketPermission("java.example.com:-", "accept");
+
 p = new SocketPermission("java.example.com:80", "accept");
+
 p = new SocketPermission("java.example.com:-", "connect");
+
 p = new SocketPermission("java.example.com:80", "accept");
+
 p = new SocketPermission("java.example.com:-", "accept,connect,listen");
 ```
-
-> **注意：**
-> `SocketPermission("java.example.com:80,8080","accept")` 和 `SocketPermission("java.example.com,javasun.example.com","accept")` 不是有效的套接字权限。
-> 此外，listen 是一个仅适用于本地主机的操作，而 accept 是一个适用于本地和远程主机端口的操作，这两个操作都是必要的。
 
 ### java.security.BasicPermission
 
@@ -820,23 +843,41 @@ p = new SocketPermission("java.example.com:-", "accept,connect,listen");
 
 ```
 createClassLoader
+
 getClassLoader
+
 setContextClassLoader
+
 setSecurityManager
+
 createSecurityManager
+
 exitVM
+
 setFactory
+
 setID
+
 modifyThread
+
 stopThread
+
 modifyThreadDomain
+
 getProtectionDescriptor
+
 readFileDescriptor
+
 writeFileDescriptor
+
 loadLibrary.(library name)
+
 accessInPackage.(package name)
+
 defineInPackage.(package name)
+
 accessDeclaredMembers.(class name)
+
 queuePrintJob
 ```
 
@@ -846,8 +887,11 @@ queuePrintJob
 
 ```
 accessClipboard
+
 accessEventQueue
+
 listenToAWTEvents
+
 showWindowWithoutWarningBanner
 ```
 
@@ -857,7 +901,9 @@ showWindowWithoutWarningBanner
 
 ```
 requestPasswordAuthentication
+
 defaultAuthenticator
+
 specifyStreamHandler
 ```
 
@@ -873,36 +919,58 @@ specifyStreamHandler
 
 `RuntimePermission` 的目标可以是任何字符串，并且与目标没有关联的操作。例如，`RuntimePermission("exitVM")` 表示退出虚拟机的权限。
 
+> 注意：
+> `SocketPermission("java.example.com:80,8080","accept")` 和 `SocketPermission("java.example.com,javasun.example.com","accept")` 不是有效的套接字权限。
+>
+> 此外，listen 是一个仅适用于本地主机的操作，而 accept 是一个适用于本地和远程主机端口的操作，这两个操作都是必要的。
+
 ### java.io.SerializablePermission
 
 该类包含以下目标，但不包含任何操作：
 
 ```
 enableSubClassImplementation
+
 enableSubSubstitution
 ```
 
 ### java.security.SecurityPermission
 
-`SecurityPermission` 控制对安全相关对象的访问，例如 Security、Policy、Provider、Signer 和 Identity 对象。该类包含以下目标，但不包含任何操作：
+`SecurityPermission` 控制对安全相关对象的访问，例如 `Security`、`Policy`、`Provider`、`Signer` 和 `Identity` 对象。该类包含以下目标，但不包含任何操作：
 
 ```
 getPolicy
+
 setPolicy
+
 getProperty.{key}
+
 setProperty.{key}
+
 insertProvider.{provider name}
+
 removeProvider.{provider name}
+
 setSystemScope
+
 IdentityPublicKey
+
 setIdentityInfo
+
 printIdentity
+
 addIdentityCertificate
+
 removeIdentityCertificate
+
 clearProviderProperties.{provider name}
+
 putProvider.{provider name}
+
 removeProperty.{provider name}
+
 getSignerPrivateKey
+
 setSignerKey
 ```
 
@@ -914,22 +982,35 @@ setSignerKey
 
 ### javax.security.auth.AuthPermission
 
-`AuthPermission` 处理身份验证权限以及相关的对象，如 Subject、SubjectDomainCombiner、LoginContext 和 Configuration。该类包含以下目标，但不包含任何操作：
+`AuthPermission` 处理身份验证权限以及相关的对象，如 `Subject`、`SubjectDomainCombiner`、`LoginContext` 和 `Configuration`。该类包含以下目标，但不包含任何操作：
 
 ```
 doAs
+
 doAsPrivileged
+
 getSubject
+
 getSubjectFromDomainCombiner
+
 setReadOnly
+
 modifyPrincipals
+
 modifyPublicCredentials
+
 modifyPrivateCredentials
+
 refreshCredential
+
 destroyCredential
+
 createLoginContext.{name}
+
 getLoginConfiguration
+
 setLoginConfiguration
+
 refreshLoginConfiguration
 ```
 
@@ -963,15 +1044,17 @@ public class com.abc.TVPermission extends com.abc.Permission
 
 图 1-10 显示了子类关系。
 
-### 图 1-10 com.abc.TV.Permission 的子类关系
+## 图 1-10 com.abc.TV.Permission 的子类关系
 
 ![Subclass Relationship of com.abc.TV.Permission](img/subclass_relationship.png)
 
 其次，将这些类包含在策略文件中。假设要允许来自 `http://example.com` 的权限，其语法如下：
 
-```java
+```
 grant code "http://example.com" {
+
     permission com.abc.TVPermission "channel-5";
+
 }
 ```
 
@@ -979,6 +1062,7 @@ grant code "http://example.com" {
 
 ```java
 com.abc.TVPermission tvperm = new com.abc.TVPermission("channel-5");
+
 AccessController.checkPermission(tvperm);
 ```
 
@@ -1000,13 +1084,13 @@ Policy 对象利用的策略信息源取决于 Policy 的实现。策略配置�
 
 URL 相对于策略文件所在的位置。因此，如果策略文件在安全属性文件中指定为：
 
-```properties
+```
 policy.url=http://foo.bar.example.com/blah/some.policy
 ```
 
 且该策略文件包含以下条目：
 
-```properties
+```
 keystore "*.keystore";
 ```
 
@@ -1023,12 +1107,14 @@ URL 可以是绝对路径。
 
 策略文件中的每个条目采用以下格式，其中开头的 `grant` 是一个保留字，表示对一个新条目的签名，可选项目出现在括号中。在每个条目内部，开头的 `permission` 是另一个保留字，标记该条目中权限的开始。每个 `grant` 条目为指定的源代码和主体（principals）授予一组权限。
 
-```bnf
+```
 grant [SignedBy "signer_name"], CodeBase "URL"
 , Principal [principal_class_name] "principal_name"
 , Principal [principal_class_name] "principal_name" {
+
  permission permission_class_name ["target_name"
  permission "action"], SignedBy "signer_names";
+
 };
 ```
 
@@ -1048,43 +1134,67 @@ grant [SignedBy "signer_name"], CodeBase "URL"
 
 主体值（principal value）指定了一个 `class_name/principal_name` 对，该对必须存在于执行的主体集中。主体通过 `Subject` 方式与执行代码关联。`principal` 字段是可选的，如果省略，则表示“任何主体”。
 
-> **注意**：关于密钥库别名替换：如果 `principal_class/principal_name` 对被指定为单引号字符串，则它被视为密钥库别名。将查询密钥库（通过别名）获取 X509 证书。如果找到了，则 `principal_class` 被自动视为 `principal_name`，而 `principal_name` 被自动视为 `javax.security.auth.x509.X509Principal`；如果没有找到 X509 映射，则忽略整个 `grant` 语句。
+> 注意：关于密钥库别名替换：如果 `principal_class/principal_name` 对被指定为单引号字符串，则它被视为密钥库别名。将查询密钥库（通过别名）获取 X509 证书。如果找到了，则 `principal_class` 被自动视为 `principal_name`，而 `principal_name` 被自动视为 `javax.security.auth.x509.X509Principal`；如果没有找到 X509 映射，则忽略整个 `grant` 语句。
 
 `CodeBase`、`SignedBy` 和 `Principal` 字段之间的顺序不重要。
 以下是策略文件格式的非正式 BNF 语法，其中未大写的项是终结符：
 
-```bnf
+```
 PolicyFile -> PolicyEntry | PolicyFile |
+
 PolicyEntry -> grant (PermissionEntry); | 
+
 g grant SignerEntry (PermissionEntry) | 
+
 g grant CodeBaseEntry (PermissionEntry) | 
+
 g grant PrincipalEntry (PermissionEntry) | 
+
 g grant SignerEntry, CodeBaseEntry (PermissionEntry) | 
+
 g grant CodeBaseEntry, SignerEntry (PermissionEntry) | 
+
 g grant SignerEntry, PrincipalEntry (PermissionEntry) | 
+
 g grant PrincipalEntry, SignerEntry (PermissionEntry) | 
+
 g grant CodeBaseEntry, PrincipalEntry (PermissionEntry) | 
+
 g grant PrincipalEntry, CodeBaseEntry (PermissionEntry)
 
+```
+
+```
 grant SignerEntry, CodeBaseEntry, PrincipalEntry
 {PermissionEntry} |
+
 grant CodebaseEntry, SignerEntry, PrincipalEntry
 {PermissionEntry} |
+
 grant SignerEntry, PrincipalEntry, CodebaseEntry
 {PermissionEntry} |
+
 grant CodebaseEntry, PrincipalEntry, SignerEntry
 {PermissionEntry} |
+
 grant PrincipalEntry, SignerEntry, CodebaseEntry
 {PermissionEntry} |
+
 grant PrincipalEntry, CodebaseEntry, SignerEntry
 {PermissionEntry} |
+
 keystore store "url"
 
 SignerEntry -> signedby (逗号分隔的字符串列表)
+
 CodebaseEntry -> codebase (a URL 的字符串表示)
+
 PrincipalEntry -> OnePrincipal | OnePermission, PrincipalEntry
+
 OnePrincipal -> principal | "class_name" "principal_name" (a principal)
+
 PermissionEntry -> OnePermission | OnePermission PermissionEntry
+
 OnePermission -> permission_class_name
   ["target_name"] { ["action_list",
   SignerEntry];
@@ -1092,47 +1202,59 @@ OnePermission -> permission_class_name
 
 现在给出示例。以下策略为 Roland 签名的代码授予 `a.b.Foo`：
 
-```java
+```
 grant signedBy "Roland" {
+
 permission a.b.Foo;
+
 };
 ```
 
 以下策略为所有代码（无论签名者或代码库如何）授予 `FilePermission`：
 
-```java
+```
 grant {
+
 permission java.io.FilePermission ".tmp", "read";
+
 };
 ```
 
 以下策略为由 Li 和 Roland 共同签名的代码授予两个权限：
 
-```java
+```
 grant signedBy "Roland, Li" {
+
 permission java.io.FilePermission "/tmp", "read";
+
 permission java.util.PropertyPermission "user.*", "read";
+
 };
 ```
 
 以下策略为由 Li 签名且来自 http://example.com/ 的代码授予两个权限：
 
-```java
+```
 grant codebase "http://example.com/**", signedBy "Li" {
+
 permission java.io.FilePermission "/tmp/**", "read";
+
 permission java.io.SocketPermission "**", "connect";
+
 };
 ```
 
-这允许任何执行 X500Principal、\text{cn}=Alice 的代码读写 `/home/Alice`。
+这允许任何执行 X500Principal、`\text{cn}=Alice` 的代码读写 `/home/Alice`。
 
 以下示例显示了一个包含源代码（codesource）和主体（principal）信息的授权语句（grant statement）。
 
-```java
+```
 grant codebase "http://www.games.example.com",
  signedBy="Duke",
     principal javax.security.auth.x500.X500Principal "cn=Alice" {
+
     permission java.io.FilePermission "/tmp/games", "read, write";
+
 };
 ```
 
@@ -1140,10 +1262,13 @@ grant codebase "http://www.games.example.com",
 
 接下来的示例显示了一个带有 KeyStore 别名替换的授权语句：
 
-```java
+```
 keystore "http://foo.example.com/blah/keystore";
+
 grant principal "alice" {
+
     permission java.io.FilePermission "/tmp/games", "read, write";
+
 };
 ```
 
@@ -1153,32 +1278,32 @@ grant principal "alice" {
 
 策略文件和安全属性文件中都可以进行属性扩展。属性扩展类似于在 shell 中扩展变量。也就是说，当字符串 `$(some.property)` 出现在策略文件或安全属性文件中时，它将被扩展为所指定系统属性的值。例如：
 
-```java
+```
 permission java.io.FilePermission "${user.home}" "read";
 ```
 
 会将 `${user.home}` 扩展为使用 user.home 系统属性的值。如果该属性的值为 /home/cathy，那么上一个示例等于：
 
-```java
+```
 permission java.io.FilePermission "/home/cathy", "read";
 ```
 
 为了辅助实现平台无关的策略文件，你还可以使用特殊符号 `$()`，它是 `$(file.separator)` 的快捷方式。这允许如下权限指定：
 
-```java
-permission java.io.FilePermission "${user.home}${/}" "read";
+```
+permission java.io.FilePermission "${user.home}${/}", "read";
 ```
 
 如果 user.home 是 /home/cathy 且你处于 Linux 上，上一个示例会被转换为：
 
-```java
-permission java.io.FilePermission "/home/cathy/**" "read";
+```
+permission java.io.FilePermission "/home/cathy/**", "read";
 ```
 
 反之，如果 user.home 是 C:\users\cathy 且你处于 Windows 系统上，上一个示例会被转换为：
 
-```java
-permission java.io.FilePermission "C:\users\cathy**" "read";
+```
+permission java.io.FilePermission "C:\users\cathy**", "read";
 ```
 
 
@@ -1212,7 +1337,7 @@ grant codebase "file:C:/j2sdk12/lib/ext/*";
 ```
 grant codebase "${foo}" {
 
-  permission "${foo}\
+  permission "${foo}"
 ```
 
 那么该 grant 条目中的所有权限将被忽略。如果你有：
@@ -1279,7 +1404,7 @@ permission java.io.FilePermission "C:\users\cathy**", "read";
 
 默认实现中支持两种形式：
 
-- 1. `${self}`
+### 1. ${self}
 
 协议 `self` 表示将整个字符串 `${self}` 替换为一个或多个类/名称对。具体的替换取决于 grant 语句的内容。
 
@@ -1303,7 +1428,7 @@ grant javax.security.auth.x500.X500Principal "cn=Duke" {
 };
 ```
 
-如果 grant 语句中有逗号分隔的相同主体列表，则 `${self}` 将替换为相同的逗号分隔列表。当 grant 语句中的主体类和名称都使用通配符时，`${self}` 被替换为与 `AccessControlContext` 相关的所有主体。以下示例描述了涉及 `self` 和 keystore 别名结合的场景：
+如果 grant 语句中有逗号分隔的相同主体列表，则 `${self}` 将替换为相同的逗号分隔列表。当 grant 语句中的主体类和名称都使用通配符时，`${self}` 被替换为与 `AccessControlContext` 相关的所有主体。以下示例描述了涉及 self 和 keystore 别名结合的场景：
 
 ```
 keystore "http://foo.bar.example.com/blah/keystore";
@@ -1317,7 +1442,7 @@ grant principal "duke" {
 
 在上例中，“duke”将被扩展为 `javax.security.auth.x500.principal "cn=Duke"`，因为与 keystore 别名 duke 关联的 X500 证书主体区别名称为 cn=Duke。接下来，`${self}` 将替换为刚刚在 grant 语句中扩展的相同主体信息：
 
-- 2. `${alias:alias_name}`
+### 2. ${alias:alias_name}
 
 协议 `alias` 表示一个 `java.security.KeyStore`。使用的 keystore 是 keystore 条目中指定的；参见策略文件格式。`alias_name` 代表 keystore 中的一个别名。`${alias:alias_name}` 被替换为带有 `javax.security.auth.x500.X500Principal "DN"`，其中 DN 代表属于 `alias_name` 的证书的主体区分名（distinguished name）。例如：
 
@@ -1331,7 +1456,7 @@ grant codebase "www.foo.example.com" {
 }
 ```
 
-在上一个示例中，具有别名 `duke` 的 X.509 证书是从 KeyStore `foo.bar.example.com/blah/.keystore` 获取的。假设 duke 的证书指定 "o=duke0, cn=duke" 为区分名，那么 `${alias:duke}` 将被替换为 `javax.security.auth.x500.X500Principal "o=duke0, cn=duke"`。在以下错误条件下，该权限条目将被忽略：
+在在上一个示例中，具有别名 `duke` 的 X.509 证书是从 KeyStore `foo.bar.example.com/blah/.keystore` 获取的。假设 duke 的证书指定 "o=duke0, cn=duke" 为区分名，那么 `${alias:duke}` 将被替换为 `javax.security.auth.x500.X500Principal "o=duke0, cn=duke"`。在以下错误条件下，该权限条目将被忽略：
 
 - 未指定密钥库（keystore）
 - 未提供 alias_name
@@ -1409,7 +1534,7 @@ grant codebase "www.foo.example.com" {
 
 ## 访问控制机制与算法
 
-## java.security.ProtectionDomain
+### java.security.ProtectionDomain
 
 `ProtectionDomain` 类封装了区域的特征。一个区域由一组类组成，当这些类的实例代表一组主体（Principals）执行时，它们会被授予一组权限。
 
@@ -1423,7 +1548,7 @@ grant codebase "www.foo.example.com" {
 
 可以确保任何非系统区域中的对象无法自动发现另一个非系统区域的对象。这种划分可以通过仔细的解析和加载来实现，例如，`SecureClassLoader`（或其子类）可以根据选择从不同的区域加载类，从而允许它们
 
-## java.security.AccessController
+### java.security.AccessController
 
 `AccessController` 类用于以下三个目的：
 
@@ -1492,7 +1617,7 @@ if (security != null) {
 
 ### 图 1-11 跨越保护区域边界的多次方法调用
 
-| Java 运行时中的 AccessController.check.Permission(Permission p) 类 | 安全策略 |
+| Java 运行时中的 AccessController.checkPermission(Permission p) 类 | 安全策略 |
 | --- | --- |
 | File.class | 区域 A ---> 权限 |
 | c.class | 区域 B ---> 权限 |
@@ -1513,37 +1638,22 @@ if (security != null) {
 for (int i = m; i > 0; i--) {
 
     if (调用者 i 的区域没有权限)
-
-        throw new AccessAccessException
-
+        throw new AccessControlException
     else if (调用者 i 被标记为特权) {
-
         if (调用 doPrivileged 指定了上下文)
-
             context.checkPermission(permission)
-
         if (调用 doPrivileged 指定了限制权限)
-
             for (每个限制权限) {
-
                     if (限制权限隐含了请求)
-
                         return;
-
                 }
-
             ) else
-
             return;
-
     }
-
 }
 
 // 接下来，检查线程创建时的上下文。
-
 // 每当创建新线程时，当时的 AccessControlContext
-
 // 被存储并与新线程关联，作为“继承”上下文。
 
 inheritedContext.checkPermission(permission);
@@ -1559,29 +1669,14 @@ inheritedContext.checkPermission(permission);
 
 ```
 somethod() {
-
     ...此处是普通代码...
-
     AccessController.doPrivileged(new PrivilegedAction() {
-
         public Object run() {
-
             // 特权代码在这里，例如：
-
             System.loadLibrary("awt");
-
-        return null; // 无需返回
-
+            return null; // 无需返回
         }
-
     });
-
-}
-
-));
-
-...此处普通代码...
-
 }
 ```
 
@@ -1591,63 +1686,38 @@ somethod() {
 
 ```
 smethod() {
-
-...此处普通代码...
-
-String user = (String) AccessController.doPrivileged(
-
-new PrivilegedAction() {
-
-    public Object run() {
-
-        return System.getProperty("user.name");
-
-    }
-
-});n...此处普通代码...
-
+    ...此处普通代码...
+    String user = (String) AccessController.doPrivileged(
+        new PrivilegedAction() {
+            public Object run() {
+                return System.getProperty("user.name");
+            }
+        });
+    ...此处普通代码...
 }
 ```
 
-如果你在 `run` 方法中执行的操作可能会抛出“受检”异常（方法签名子中列出的异常），则你需要使用 `PrivilegedException` 接口来代替 `PrivilegedAction` 接口：
+如果你在 `run` 方法中执行的操作可能会抛出“受检”异常（方法签名中列出的异常），则你需要使用 `PrivilegedExceptionAction` 接口来代替 `PrivilegedAction` 接口：
 
 ```
 smethod() throws FileNotFoundException {
-
-...此处普通代码...
-
-try {
-
-FileStream fis = (FileInputStream)
-
-AccessController.doPrivileged(
-
-new PrivilegedActionException() {
-
-    public Object run() throws FileNotFoundException {
-
-        return new FileInputStream("someFile");
-
+    ...此处普通代码...
+    try {
+        FileInputStream fis = (FileInputStream)
+            AccessController.doPrivileged(
+                new PrivilegedExceptionAction() {
+                    public Object run() throws FileNotFoundException {
+                        return new FileInputStream("someFile");
+                    }
+                });
+    } catch (PrivilegedActionException e) {
+        // e.getException() 应该是
+        // FileNotFoundException 的实例，
+        // 因为只有“受检”异常会被“包装”在
+        // `PrivilegedActionException` 中。
+        throw (FileNotFoundException) e.getException();
     }
-
-}));
-
-} catch (PrivilegedActionException e) {
-
-// e.getException() 应该是
-
-// FileNotFoundException 的实例，
-
-// 因为只有“受检”异常会被“包装”在
-
-// <code>PrivilegedActionException</code> 中。
-
-throw (FileNotFoundException) e.getException();
-
-}
-
-...此处普通代码...
-
+    ...此处普通代码...
 }
 ```
 
@@ -1663,7 +1733,7 @@ throw (FileNotFoundException) e.getException();
 
 当创建一个新线程时，会创建一个新的堆栈。如果在此创建此新线程时没有保留当前的安全上下文，那么当在新线程内部调用 `AccessController.checkPermission` 时，安全决策将完全基于新线程的上下文做出，而不考虑父线程的上下文。
 
-这个纯洁的问题本身并不是一个安全问题，但它会使得编写安全代码（尤其是系统代码）更容易产生细微的错误。例如，非专家开发者可能会假设，不涉及不信任代码的线程会从父线程继承相同的安全上下文（例如，涉及不信任代码的上下文）。如果父上下文没有被保存，当从新线程访问资源（并将资源传递给信任度较低的代码）时，就会导致安全漏洞。
+这个问题本身并不是一个安全问题，但它会使得编写安全代码（尤其是系统代码）更容易产生细微的错误。例如，非专家开发者可能会假设，不涉及不信任代码的线程会从父线程继承相同的安全上下文（例如，涉及不信任代码的上下文）。如果父上下文没有被保存，当从新线程访问资源（并将资源传递给信任度较低的代码）时，就会导致安全漏洞。
 
 因此，当创建一个新线程时，它实际上会继承子线程创建时的父线程安全上下文，使得子线程中的 `checkPermission` 调用将考虑到继承的父上下文。
 
@@ -1671,51 +1741,32 @@ throw (FileNotFoundException) e.getException();
 
 ```
 for (int i = m; i > 0; i--) {
-
     if (调用者的域没有该权限)
-
         throw AccessControlException
-
     else if (调用者被标记为特权) {
-
         if (在调用 doPrivileged 时保存了上下文)
-
             context.checkPermission(permission)
-
         if (在调用 doPrivileged() 时指定了限制权限) {
-
             for (每个限制权限) {
-
                 if (限制性权限隐含了所请求的权限)
-
             }
-
         }
-
     }
-
 }
 ```
 
-![](img/e26375bcfe04cf1374fe3293bdab5076_73_0.png)
+![图片](img/e26375bcfe04cf1374fe3293bdab5076_73_0.png)
 
 ```
-}
-
 } else
-
-return;
-
+    return;
 }
-
-```
 
 // 接下来，检查线程创建时继承的上下文。
 // 每当创建一个新线程时，当时的 AccessControlContext
 // 被存储并与新线程关联，作为
 // “继承的”上下文。
 
-```
 inheritedContext.checkPermission(permission);
 ```
 
@@ -1731,7 +1782,7 @@ inheritedContext.checkPermission(permission);
 AccessControlContext acc = AccessController.getContext();
 ```
 
-此上下文捕获了相关信息，以便在不同的上下做出访问决策。例如，一个线程向另一个线程发送请求时提供此上下文。第二个线程可以通过调用以下代码执行必要的安全检查：
+此上下文捕获了相关信息，以便在不同的上下文中做出访问决策。例如，一个线程向另一个线程发送请求时提供此上下文。第二个线程可以通过调用以下代码执行必要的安全检查：
 
 ```
 acc.checkPermission(permission);
@@ -1739,68 +1790,64 @@ acc.checkPermission(permission);
 
 此方法等同于在第一个线程执行相同的安全检查，尽管它是在第二个线程执行的。
 
-## 动态类加载
+## 类加载器
 
-动态类加载是 Java 虚拟机的一个重要特性，因为它为 Java 平台提供了运行时安装软件组件的能力。它有许多独特的特性。首先，懒加载意味着类是在需要并在尽可能最后的时刻加载的。其次，动态类加载维护了类型安全
-
-![](img/e26375bcfe04cf1374fe3293bdab5076_75_0.png)
-
-通过添加链接时检查来增强 Java 虚拟机，这些检查替换了运行时检查并且仅执行一次。此外，程序员可以定义自己的类加载器，例如，指定从哪些位置加载类，或为这些类分配安全属性。最后，类加载器可以用于为不同的软件组件提供独立的命名空间。例如，浏览器可以使用不同的类加载器从不同的网页加载小程序（applets），从而在这些小程序之间保持某种程度的隔离。这些小程序可能包含同名的类——但 Java 虚拟机会将它们视为不同的类型。
+动态类加载是 Java 虚拟机的一个重要特性，因为它为 Java 平台提供了运行时安装软件组件的能力。它有许多独特的特性。首先，懒加载意味着类是在需要并在尽可能最后的时刻加载的。其次，动态类加载维护了类型安全，通过添加链接时检查来增强 Java 虚拟机，这些检查替换了运行时检查并且仅执行一次。此外，程序员可以定义自己的类加载器，例如，指定从哪些位置加载类，或为这些类分配安全属性。最后，类加载器可以用于为不同的软件组件提供独立的命名空间。例如，浏览器可以使用不同的类加载器从不同的网页加载小程序，从而在这些小程序之间保持某种程度的隔离。这些小程序可能包含同名的类——但 Java 虚拟机会将它们视为不同的类型。
 
 类加载机制不仅是 Java 语言动态特性的核心，它在提供安全性方面也起着至关重要的作用，因为类加载器负责加载和获取类文件、查询安全策略并使用相应的权限定义类对象。
 
-## 类加载器的类层次结构
+### 类加载器的类层次结构
 
 在加载类时，由于一个 Java 虚拟机中存在多个类加载器对象的实例，一个重要问题是我们如何确定使用哪一个类加载器。JDK 引入了多种具有不同属性的类加载器，另一个重要问题是我们应该使用什么类型的类加载器。
 
 类加载器层次结构的根节点是一个名为 `java.lang.ClassLoader` 的抽象类。`java.security.SecureClassLoader` 类是抽象类 `ClassLoader` 的子类和具体实现。`java.net.URLClassLoader` 类是 `SecureClassLoader` 的子类。
 
-在创建自定义类加载器类时，可以根据类加载器的特定需要自上述任何类加载器类。
+在创建自定义类加载器类时，可以根据类加载器的特定需要继承上述任何类加载器类。
 
-## 原始类加载器（Primordial Class Loader）
+### 原始类加载器
 
-由于每个类都由其类加载器加载，而每个类加载器本身又是一个类且必须由另一个类加载器加载，我们似乎遇到了显而易见的鸡生蛋问题，即：第一个类加载器从哪里来？有一个“原始”类加载器来启动类加载过程。原始类加载器通常用原生语言（如 C 语言）编写，不会在 Java 上文中体现。原始类加载器通常以依赖于平台的方式从本地文件系统加载类。
+由于每个类都由其类加载器加载，而每个类加载器本身又是一个类且必须由另一个类加载器加载，我们似乎遇到了显而易见的鸡生蛋问题，即：第一个类加载器从哪里来？有一个“原始”类加载器来启动类加载过程。原始类加载器通常用原生语言（如 C 语言）编写，不会在 Java 上下文中体现。原始类加载器通常以依赖于平台的方式从本地文件系统加载类。
 
-某些类（如在 `java.` 包中定义的类）对于 Java 虚拟机和运行时系统的正确运行至关重要。它们被称为基类。由于历史原因，所有类的类加载器都是 `null`（空）。这个 `null` 类加载器也许是原始类加载器存在的唯一迹象。事实上，简单将 `null` 类加载器视为原始加载器更为简单。
+某些类（如在 `java.` 包中定义的类）对于 Java 虚拟机和运行时系统的正确运行至关重要。它们被称为基类。由于历史原因，所有基类的类加载器都是 `null`（空）。这个 `null` 类加载器也许是原始类加载器存在的唯一迹象。事实上，简单将 `null` 类加载器视为原始加载器更为简单。
 
-给定 Java 应用环境中的所有类，我们可以很容易构建一个类加载树来反映类加载关系。每个不是类加载器的类都是叶子节点。每个类的父类是其类加载器，而 `null` 类是根节点。这种结构是一棵树，因为其中不能存在循环——类加载器不能加载过它的祖先类加载器。
+给定 Java 应用环境中的所有类，我们可以很容易构建一个类加载树来反映类加载关系。每个不是类加载器的类都是叶子节点。每个类的父类是其类加载器，而 `null` 类是根节点。这种结构是一棵树，因为其中不能存在循环——类加载器不能加载其祖先类加载器。
 
-![](img/e26375bcfe04cf1374fe3293bdab5076_76_0.png)
+![图片](img/e26375bcfe04cf1374fe3293bdab5076_76_0.png)
 
-## 类委托
+### 类委托
 
 当一个类加载器被要求加载某个类时，该类加载器要么自己加载该类，也可以请求另一个加载器来加载。换句话说，第一个类加载器可以委托给第二个类。这种委托关系是虚拟的，因为它与“哪个类加载器加载了哪个类加载器”无关。相反，委托关系是在类加载器对象创建时形成的，并以父子关系的形式存在。尽管如此，系统类加载器确保委托关系不包含循环。否则，委托过程可能会无限循环。
 
-## 类解析算法
+### 类解析算法
 
 JDK 用于加载类的 `ClassLoader` 实现按以下顺序搜索类：
 
-1. 检查该类是否已经加载加载。
+1. 检查该类是否已经加载。
 2. 如果当前类加载器有指定的委托父类，则委托给父类尝试加载此类。如果没有父类，则委托给原始类加载器。
 3. 调用一个可自定义的方法在其他地方查找该类。
 
-在这里，第一步查看类加载器的缓存（或其功能等价物，如全局缓存），以查看已加载的类是否匹配目标。最后一步为类提供了自定义机制机制；因此，自定义类加载器可以重写此方法以指定如何查找类。例如，应用程序类加载器可以重写此方法，返回应用程序宿主机并尝试通过网络加载类文件。
+在这里，第一步查看类加载器的缓存（或其功能等价物，如全局缓存），以查看已加载的类是否匹配目标。最后一步为类提供了自定义机制；因此，自定义类加载器可以重写此方法以指定如何查找类。例如，应用程序类加载器可以重写此方法，返回应用程序宿主机并尝试通过网络加载类文件。
 
-如果在任何一步找到了类，则返回该类。如果通过这些步骤未找到该类，则将抛出 `ClassNotFound` 异常。
+如果在任何一步找到了类，则返回该类。如果通过这些步骤未找到该类，则将抛出 `ClassNotFoundException` 异常。
 
 注意，对于类型安全来说，同一个类加载器不能重复加载同一个类是至关重要的。如果该类不在已加载的类中，当前类加载器会尝试将任务委托给父类加载器。这种情况经常发生。例如，当定位合适的类加载器时。这确保了委托过程一直持续到到达系统类加载器。
 
 我们之前已经看到了委托。但是，通过给出任何类的名称，我们从哪个类加载器开始尝试加载该类呢？确定类加载器的规则如下：
 
 - 当加载应用程序的第一个类时，使用 `URLClassLoader` 的新实例。
-- 当加载小程序的第一个类加载时，使用 `AppletClassLoader` 的新实例。
-- 当直接调用 `java.lang.ClassName` 时，使用原始类加载器。
+- 当加载小程序的第一个类时，使用 `AppletClassLoader` 的新实例。
+- 当直接调用 `java.lang.Class.forName` 时，使用原始类加载器。
 - 如果加载类的请求是由现有类对它的引用触发的，则要求现有类的类加载器来加载该类。
 
-注意，关于 `URLClassLoader` 和 `AppletClassLoader` 实例的使用存在异常，并可能根据特定的系统环境而异。例如，
+注意，关于 `URLClassLoader` 和 `AppletClassLoader` 实例的使用存在异常，并可能根据特定的系统环境而异。
 
 ## 安全管理
 
-## 管理小程序和应用程序
+### 管理小程序和应用程序
 
-目前，所有 JDK 系统代码都会调用 `SecurityManager` 方法来检查生效的策略并执行访问检查。每当小程序运行时，通常有一个安全管理器（`SecurityManager` 实现）；appviewer 和大多数浏览器都会安装安全管理器。
+目前，所有 JDK 系统代码都会调用 `SecurityManager` 方法来检查生效的策略并执行访问检查。每当小程序运行时，通常有一个安全管理器（`SecurityManager` 实现）；appletviewer 和大多数浏览器都会安装安全管理器。
 
-当应用程序运行时，不会自动安装安全管理器。要对本地文件系统的应用程序应用与下载的小程序相同的安全策略，用户必须使用带有 `-java.security.manager` 命令行参数启动 Java 虚拟机，例如：
+当应用程序运行时，不会自动安装安全管理器。要对本地文件系统的应用程序应用与下载的小程序相同的安全策略，用户必须使用带有 `-Djava.security.manager` 命令行参数启动 Java 虚拟机，例如：
 
 ```
 java -Djava.security.manager SomeApp
@@ -1812,13 +1859,13 @@ java -Djava.security.manager SomeApp
 
 可以在命令行指定特定的安全管理器，在 `-java.security.manager` 后加上等号和作为安全管理器的类名，例如：
 
-```
+```bash
 java -Djava.security.manager=COM.abc.MySecMgr SomeApp
 ```
 
 如果没有指定安全管理器，则内置的默认安全管理器（除非应用程序安装了默认安全管理器）。以下所有方法在使用默认安全管理器方面都是等价的：
 
-```
+```bash
 java -Djava.security.manager SomeApp
 java -Djava.security.manager=** SomeApp
 java -Djava.security.manager=default SomeApp
@@ -1830,13 +1877,13 @@ JDK 包含一个名为 `java.class.path` 的属性。存储在本地文件系统
 
 你可以使用 `-java.security.policy` 命令行参数在调用应用程序执行时指定额外的或不同的策略文件。例如，如果你输入以下内容，`pURL` 是一个指定策略文件位置的 URL，那么指定的策略文件将除了在安全属性文件中指定的所有策略文件之外外被加载：
 
-```
+```bash
 java -Djava.security.manager -Djava.security.policy=pURL Some
 ```
 
 如果你改用下面的命令（使用双等号），则仅将使用指定的策略文件；所有其他文件都将被忽略：
 
-```
+```bash
 java -Djava.security.manager -Djava.security.policy==pURL SomeManager
 ```
 
@@ -1856,7 +1903,7 @@ java -Djava.security.manager -Djava.security.policy==pURL SomeManager
 
 本文简要描述了两个辅助部署安全功能的工具用法。
 
-# 密钥和证书管理工具
+### 密钥和证书管理工具
 
 `keytool` 是一个密钥和证书管理实用程序。它允许用户管理公钥/私钥对以及关联证书，用于自身份验证（用户向其他用户/服务验证自身）或数据完整性和身份验证服务（使用数字签名）。认证信息包含了 X.509 证书的序列（链）以及关联的私钥，私钥可以通过所谓的“别名”（alias）进行引用。该工具还管理证书（用户“信任”的证书），这些证书存储在与认证信息相同的数据库中，并可以通过“别名”引用。
 
@@ -1870,7 +1917,7 @@ X509 证书链由认证机构（或 CA）提供。身份（包括 CA）使用它
 
 验证的一个典型示例如下（在接收到 `SignedObject` 之后），如果算法名称已知，则不需要第一行：
 
-```
+```java
 String algorithm = so.getAlgorithm();
 Signature verificationEngine = Signature.getInstance(algorithm, provider);
 so.verify(verificationObject);
@@ -1886,17 +1933,17 @@ so.verify(verificationObject);
 
 ## 讨论与未来方向
 
-# 资源消耗管理
+### 资源消耗管理
 
 在某些情况下，实现资源消耗相对容易（例如，限制任何应用程序在任何时候弹出窗口的数量），而在其他情况下，高效实现可能非常困难（例如，内存或文件系统使用）。我们计划在未来连贯地解决这些问题。
 
-## 权限的任意分组
+### 权限的任意分组
 
 有时，将许多权限分组并使用简短名称来引用它们是方便的。例如，如果我们希望权限 `SuperPermission` 包含（并隐含）`FilePermission("*, "read,write")` 和 `SocketPermission("*, "connect,accept")`，从技术上讲，我们可以使用 `Permissions` 或类似的类，通过使用 `add` 方法添加所需的权限来实现这种超级权限。这种分组可以是任意复杂的。
 
 更困难的问题在于：首先，在授予此类超级权限时，要理解实际的权限是什么，要么是创建一个固定的命名的权限类来表示特定指定的一组权限，要么需要在策略文件中列出成员权限。其次，策略（文件）可能会变得更加复杂，因为分组的权限可能需要被扩展。此外，分组权限的嵌套进一步增加了复杂性。
 
-## 对象级保护
+### 对象级保护
 
 考虑到 Java 编程语言的面向对象特性，可以想象开发人员将受益于一组适当的对象级保护机制，这些机制 (1) 超出了 Java 编程语言提供的自然保护，并在 (2) 补充了基于线程的访问控制机制。
 
@@ -1904,7 +1951,7 @@ so.verify(verificationObject);
 
 `GuardedObject` 是在类/每个方法级别强制控制的通用方法。然而，这应该有选择地使用，部分是因为这种类型的控制在高级可能难以管理。
 
-## 保护域的细分
+### 保护域的细分
 
 一个潜在有用但尚未实现的概念是“子域（subdomains）”。子域是被封装在另一个域中的域。子域的权限或特权不会超过其所属域的权限。例如，可以创建一个域，以选择性地限制程序可以执行的操作。
 
@@ -1912,12 +1959,12 @@ so.verify(verificationObject);
 
 为了方便起见，我们可以将系统域视为所有系统代码的单一集合。但是，为了更好的保护，系统代码应该运行在多个域中，每个域保护特定类型的资源并被赋予特殊的权限。然而，系统代码应该运行在多个域中，其中每个域保护特定类型的资源并被赋予特殊的权限。如果系统代码和网络代码运行在不同的域中，前者拥有权限而后者没有。
 
-## 带有签名内容的 Applets
+### 带有签名内容的 Applets
 
 JAR 和 Manifest 规范允许以非常灵活的格式进行签名，这使得签名内容具有灵活性。在同一个归包内的类可以使用不同的密钥签名，而要的类本身可以使用不同的密钥签名。这种这种灵活性带来了解释。以下问题需要回答：
 
-- 1. 权限应该被扩展吗？
-- 2. 应该在相同的？
+1. 权限应该被扩展吗？
+2. 应该在相同的？
 
 此外，分组权限的嵌套增加了复杂性。
 
@@ -1929,13 +1976,13 @@ JAR 和 Manifest 规范允许以非常灵活的格式进行签名，这使得签
 
 本节解释了什么是特权代码以及它的用途。它还展示了如何使用：
 
-- 使用 doPriv API
+- 使用 `doPriv` API
 - 什么是特权代码
 - 反射
 
-# 使用 doPriv API
+### 使用 doPriv API
 
-本节描述了 doPriv API 以及特权功能的使用。
+本节描述了 `doPriv` API 以及特权功能的使用。
 
 - 无返回值、无异常
 - 访问局部变量
@@ -1944,19 +1991,19 @@ JAR 和 Manifest 规范允许以非常灵活的格式进行签名，这使得签
 - 最小权限
 - 更多权限
 
-## 无返回值、无异常
+#### 无返回值、无异常
 
-如果你不需要从特权块返回值，你对 doPriv 的调用可以像示例 1-1。
+如果你不需要从特权块返回值，你对 `doPriv` 的调用可以像示例 1-1。
 
-使用 lambda 表达式调用 doPriv 会显式地将 lambda 表达式调用为 `PrivilegedAction<Void>`。另一个 doPriv 方法接受一个 `PrivilegedAction` 类型的对象；请参见处理异常。
+使用 lambda 表达式调用 `doPriv` 会显式地将 lambda 表达式调用为 `PrivilegedAction<Void>`。另一个 `doPriv` 方法接受一个 `PrivilegedAction` 类型的对象；请参见处理异常。
 
 `PrivilegedAction` 是一个函数接口，有一个抽象方法 `run`，它返回一个由参数指定的值。
 
 此示例指示了 `run` 方法的返回值。此外，取决于特权代码的组成，你可能需要让内部类工作。例如，如果特权代码抛出异常或尝试访问局部变量，你必须进行某些更改，这在这里进行了描述。
 
-在使用特权结构时要小心，并始终记住将特权代码做得尽可能小。尽量将方法内部的代码做得尽可能小。尽量将 `run` 方法内部的代码限制在仅需要运行的部分，并将更通用的部分放在启用其权限的代码之外，以便 doPriv 的调用。不要尝试编写本身调用 doPriv 的工具类，因为这可能导致安全漏洞。不过，你可以为 `PrivilegeAction` 类使用子类，如前面的示例。
+在使用特权结构时要小心，并始终记住将特权代码做得尽可能小。尽量将方法内部的代码做得尽可能小。尽量将 `run` 方法内部的代码限制在仅需要运行的部分，并将更通用的部分放在启用其权限的代码之外，以便 `doPriv` 的调用。不要尝试编写本身调用 `doPriv` 的工具类，因为这可能导致安全漏洞。不过，你可以为 `PrivilegeAction` 类使用子类，如前面的示例。
 
-## 示例 1-1 实现特权块的代码
+### 示例 1-1 实现特权块的代码
 
 - 在实现 `PrivilegedAction` 接口的类中。
 - 在匿名类中。
@@ -1969,13 +2016,16 @@ public class NoReturnNoException {
 
     class MyAction implements PrivilegedAction<Void> {
 
-        public Void run() {
+        public void run() {
 
             // 特权代码在此处，例如：
+
             System.loadLibrary("awt");
 
             return null; // 无返回值
+
         }
+
     }
 
     public void somemethod() {
@@ -1983,43 +2033,67 @@ public class NoReturnNoException {
         MyAction mya = new MyAction();
 
         // 变为特权：
+
         AccessController.doPrivileged(mya);
 
         // 匿名类
+
         AccessController.doPrivileged(new PrivilegedAction<Void>() {
+
             public Void run() {
+
                 // 特权代码在此处，例如：
+
                 System.loadLibrary("awt");
+
                 return null; // 无返回值
+
             }
+
         });
 
         // Lambda 表达式
-        AccessController.doPrivileged((PrivilegedAction<Void>) () -> {
-            // 特权代码在此处，例如：
-            System.loadLibrary("awt");
-            return null; // 无返回值
-        });
+
+        AccessController.doPrivileged((PrivilegedAction<Void>)
+
+            () -> {
+
+                // 特权代码在此处，例如：
+
+                System.loadLibrary("awt");
+
+                return null; // 无返回值
+
+            }
+
+        );
+
     }
 
     public static void main(String... args) {
+
         NoReturnNoException myApplication = new NoReturnNoException();
+
         myApplication.somemethod();
+
     }
+
 }
 ```
 
-### 返回值
+#### 返回值
 
 如果你需要返回一个值，可以像下面所示操作：
 
 ```java
 System.out.println(
-    AccessController.doPrivileged((PrivilegedAction<String>) () -> System.getProperty("user.name"))
+    AccessController.doPrivileged(PrivilegedAction<String>(
+        () -> System.getProperty("user.name")
+    ))
 );
 ```
 
-## 访问局部变量
+#### 访问局部变量
 
 如果你使用 lambda 表达式或匿名内部类，则对局部变量的访问必须是 `final`（常量）或有效 `final`（effectively final）。
 
@@ -2028,10 +2102,12 @@ System.out.println(
 ```java
 String lib = "awt";
 
-AccessController.doPrivileged((PrivilegedAction<Void>) () -> {
-    System.loadLibrary(lib);
-    return null; // 无返回值
-});
+AccessController.doPrivileged(PrivilegedAction<Void>(
+    () -> {
+        System.loadLibrary(lib);
+        return null; // 无返回值
+    })
+);
 
 AccessController.doPrivileged(new PrivilegedAction<Void>() {
     public Object run() {
@@ -2047,7 +2123,7 @@ AccessController.doPrivileged(new PrivilegedAction<Void>() {
 lib = "swing";
 ```
 
-当编译器在 lambda 表达式和匿名类中遇到 `System.loadLibrary` 调用时，会生成以下错误：
+当编译器在 lambda 表达式和匿名类中遇到 `System.loadlibrary` 调用时，会生成以下错误：
 
 - error: 从 lambda 表达式引用的局部变量必须是 final 或 effectively final
 - error: 从内部类引用的局部变量必须是 final 或 effectively final
@@ -2058,52 +2134,40 @@ lib = "swing";
 
 ```java
 String lib;
-// lib 变量被赋值了多次，因此无法将其变为有效 final。
+
+// lib 变量被赋值了多次，因此无法将其变为
+// 有效 final。
 
 // 创建一个可以在 run 方法内部使用的 final String
 final String fLib = lib;
 
-AccessController.doPrivileged((PrivilegedAction<Void>) () -> {
-    System.loadLibrary(fLib);
-    return null; // 无返回值
-});
+AccessController.doPrivileged((PrivilegedAction<Void>)
+    () -> {
+        System.loadLibrary(fLib);
+        return null; // 无返回值
+    }
+);
 ```
 
-## 处理异常
+# 第 1 章 Java SE 平台安全架构
 
-如果在你的 `run` 方法中执行的操作抛出了受检异常（即必须在方法的 `throws` 子句中列出的异常），你需要使用 `PrivilegedExceptionAction` 接口而不是 `PrivilegedAction` 接口。
+#### 处理异常
 
-## 示例 1-2 处理异常的示例
+如果在你的 `run` 方法中执行的操作抛出了受检异常（即必须在方法的 `throws` 子句中列出的异常），你需要使用 `PrivilegedActionException` 接口而不是 `PrivilegedAction` 接口。
+
+### 示例 1-2 处理异常的示例
 
 如果在执行 `run` 方法期间抛出了受检异常，该异常将被放入 `PrivilegedActionException` 包装异常中，然后抛出并由你的代码捕获，如下所示：
 
 ```java
 public void processSomeFile() throws IOException {
+
     try {
 ```
 
 
 
-## 代码示例
-
-```java
-Path path = FileSystems.getDefault().getPath("somefile");
-
-BufferedReader br = AccessController.doPrivileged(
-    (PrivilegedAction<BufferedReader>) () -> Files.newBufferedReader(path)
-);
-
-// ... 从文件读取并进行某些操作
-
-} catch (PrivilegedActionException e) {
-    // `e.getException()` 应该是 `IOException` 的实例
-    // 因为只有受检异常才会被包装在
-    // `PrivilegedActionException` 中。
-    throw (IOException) e.getException();
-}
-```
-
-## 断言特权子集
+# 断言特权子集
 
 从 JDK 8 开始，可以使用 `doPrivileged` 的变体，允许代码断言特权的子集，而不会阻止完整堆栈遍历以检查其他权限。此版本的 `doPrivileged` 有三个参数，你使用它们来指定该特权子集。例如，以下代码断言了获取系统属性的特权：
 
@@ -2165,30 +2229,32 @@ JDK 安装的策略允许哪些类型的系统资源对于来自特定代码源�
 
 每个 applet 或应用程序运行在其适当的域中，该域由其代码源决定。为了让 applet（或在安全管理器下运行的应用程序）被允许执行受保护的操作（如读取或写入文件），该 applet 或应用程序必须被授予该特定操作的权限。
 
-具体来说，当访问资源时，执行线程遍历的所有代码都必须具有该访问的权限，除非线程上的某些代码已被标记为特权代码。也就是说，假设访问控制发生在多个调用者的执行链中（将其想象为多次方法调用），`ViewController.checkPermission` 方法由最近的调用者调用，决定允许或拒绝请求的基本算法如下：如果调用链中的代码没有请求的权限，则抛出 `AccessControlException`；否则满足：授予该权限的调用者及其随后调用的所有部分（直接或间接）都具有该权限。
+具体来说，当访问资源时，执行线程遍历的所有代码都必须具有该访问的权限，除非线程上的某些代码已被标记为特权代码。也就是说，假设访问控制发生在多个调用者的执行链中（将其想象为多次方法调用），`AccessController.checkPermission` 方法由最近的调用者调用，决定允许或拒绝请求的基本算法如下：如果调用链中的代码没有请求的权限，则抛出 `AccessControlException`；否则满足：授予该权限的调用者及其随后调用的所有部分（直接或间接）都具有该权限。
 
 > 注意：
-> `AccessController.checkPermission` 方法通常通过以 check 开头的特定 SecurityManager 方法（如 `checkConnect`）或 `SecurityManager.checkPermission` 间接调用。通常，这些检查只在安装了 SecurityManager 时发生；被 `AccessController.checkPermission` 检查的代码首先检查 `System.getSecurity` 是否返回 null。
+> `AccessController.checkPermission` 方法通常通过以 check 开头的特定 SecurityManager 方法（如 `checkConnect`）或 `SecurityManager.checkPermission` 间接调用。通常，这些检查只在安装了 SecurityManager 时发生；被 `AccessController.checkPermission` 检查的代码首先检查 `System.getSecurityManager()` 是否返回 null。
 
 将代码标记为特权可以允许受信任的代码临时访问比其调用代码直接访问的更多的资源。这在某些情况下是必要的。例如，应用程序可能不允许直接访问包含字体的文件，但显示文档的系统工具代表用户获取这些字体。系统工具必须变为特权才能获取字体。
 
 ## 反射
 
-`doPriv` 方法可以使用 `java.lang.reflect.Method.invoke` 方法进行反射调用。
+`doPrivileged` 方法可以使用 `java.lang.reflect.Method.invoke` 方法进行反射调用。
 
-一个微妙之处在于可以考虑此 API 与反射的交互。`doPriv` 方法可以使用 `java.lang.reflect.Method.invoke` 方法进行反射调用。在这种情况下，在特权模式下授予的权限并非非反射代码的权限。否则，在使用反射时存在系统特权。
+一个微妙之处在于可以考虑此 API 与反射的交互。`doPrivileged` 方法可以使用 `java.lang.reflect.Method.invoke` 方法进行反射调用。在这种情况下，在特权模式下授予的权限并非非反射代码的权限。否则，在使用反射时存在系统特权。
 
-## 参考文献
+---
 
-- J.H. Saltzer and M.D. Schroeder. The Protection of Information in Computer Systems). Proceedings of the IEEE, 63(9):1278–1308, September 1975.
-- M.D. Schroeder. Cooperation of Mutually Suspicious Systems in a Computer Utility. Ph.D. dissertation, Massachusetts Institute of Technology, Cambridge, MA 02139, September 1972.
-- W.A. Wulf, R. Levin, and S.P. Harrison. HYDRA/C.mmp -- An Experimental Computer System. McGraw-Hill, 1981.
+J.H. Saltzer and M.D. Schroeder. The Protection of Information in Computer Systems). Proceedings of the IEEE, 63(9):1278–1308, September 1975.
 
-## 标准算法名称
+M.D. Schroeder. Cooperation of Mutually Suspicious Systems in a Computer Utility. Ph.D. dissertation, Massachusetts Institute of Technology, Cambridge, MA 02139, September 1972.
+
+W.A. Wulf, R. Levin, and S.P. Harrison. HYDRA/C.mmp -- An Experimental Computer System. McGraw-Hill, 1981.
+
+# 标准算法名称
 
 请参阅 [Java 安全标准算法名称规范](#) 以获取有关 Java SE 需要和使用的算法标准名称、证书和密钥库类型集合的信息。
 
-## JDK 中的权限
+# JDK 中的权限
 
 权限代表一种系统资源。为了允许应用程序（或带有安全管理器的运行的应用程序）访问资源，必须显式地向尝试该访问的代码授予相应的权限。
 
@@ -2209,7 +2275,7 @@ perm = new java.io.FilePermission("/tmp/abc", "read");
 Java 应用环境的策略由 `Policy` 对象表示。"JavaPolicy" 策略实现可以在一个或多个策略配置文件中指定。策略文件指定了允许来自特定源代码的代码的权限。以下是一个示例策略条目，它授予来自 /home/sysadmin 目录的代码对文件 /tmp/abc 的读取访问权限。
 
 ```java
-grantBase "file:/home/sysadmin/ {
+grantBase "file:/home/sysadmin/" {
   permission java.io.FilePermission "/tmp/abc", "read";
 };
 ```
@@ -2264,12 +2330,12 @@ grantBase "file:/home/sysadmin/ {
 
 | 方法 | 调用的 SecurityManager 方法 | 权限 |
 | --- | --- | --- |
-| `java.awt.Toolkit public final EventQueue getSystemEventQueue()` | `checkPermission` | `java.awt.AWTPermission "*accessEventQueue";` |
+| `java.awt.Toolkit public final EventQueue getSystemEventQueue()` | `checkPermission` | `java.awt.AWTPermission "accessEventQueue"` |
 
 此行指定 `java.awt.Toolkit` 类中的 `getSystemEventQueue` 方法会导致调用 `checkPermission` SecurityManager，只有当调用栈中的代码被授予了以下权限时，调用才能成功：
 
 ```java
-java.awt.AWTPermission "*accessEventQueue";
+java.awt.AWTPermission "accessEventQueue";
 ```
 
 
@@ -2343,14 +2409,14 @@ java.awt.AWTPermission "*accessEventQueue";
 | `public final void setPriority(int priority) public final void setName(String name)` | | |
 | `public final void setDaemon(boolean on)` | | |
 | `java.lang.Thread public static int enumerate(Thread[] array)` | `checkAccess(threadGroup)` | `java.lang.RuntimePermission "modifyThreadGroup"` |
-| `java.lang.Thread public final void stop()` | `checkAccess(this)`。还会检查 Permission（如果当前线程正尝试停止自身以外的线程）。 | `java.lang.RuntimePermission "modifyThread"`。如果当前线程正尝试停止自身以外的线程，还需要 `java.lang.RuntimePermission "stopThread"` |
-| `java.lang.Thread public final synchronized void stop(Throwable obj)` | `checkAccess(this)`。还会检查 Permission（如果当前线程正尝试停止自身以外的线程，或者 obj 不是 ThreadDeath 的实例）。 | `java.lang.RuntimePermission "modifyThread"`。如果当前线程正尝试停止自身以外的线程，或者 obj 不是 ThreadDeath 的实例，还需要 `java.lang.RuntimePermission "stopThread"` |
+| `java.lang.Thread public final void stop()` | `checkAccess(this). 还会检查Permission（如果当前线程正尝试停止自身以外的线程）。` | `java.lang.RuntimePermission "modifyThread"`。如果当前线程正尝试停止自身以外的线程，还需要 `java.lang.RuntimePermission "stopThread"` |
+| `java.lang.Thread public final synchronized void stop(Throwable obj)` | `checkAccess(this). 还会检查Permission（如果当前线程正尝试停止自身以外的线程，或者 obj 不是 ThreadDeath 的实例）。` | `java.lang.RuntimePermission "modifyThread"`。如果当前线程正尝试停止自身以外的线程，或者 `obj` 不是 `ThreadDeath` 的实例，还需要 `java.lang.RuntimePermission "stopThread"` |
 
 | 方法 | SecurityManager 方法 | 权限 |
 | :--- | --- | :--- |
 | `java.lang.Thread Thread() Thread(Runnable target) Thread(String name) Thread(Runnable target, String name)` | `checkAccess(parentThreadGroup)` | `java.lang.RuntimePermission "modifyThreadGroup"` |
 | `java.lang.Thread ThreadGroup(String name) ThreadGroup(ThreadGroup parent, String name)` | | |
-| `java.lang.Thread Thread(ThreadGroup group, ... )` | 对于 ThreadGroup 方法调用 `checkAccess(this)`，对于 Thread 方法调用 `checkAccess(group)` | `java.lang.RuntimePermission "modifyThreadGroup"` |
+| `java.lang.Thread Thread(ThreadGroup group, ... )` | 对于 `ThreadGroup` 方法调用 `checkAccess(this)`，对于 `Thread` 方法调用 `checkAccess(group)` | `java.lang.RuntimePermission "modifyThreadGroup"` |
 | `java.lang.ThreadGroup public final void checkAccess() public int enumerate(Thread list[]) public int enumerate(Thread list[], boolean recurse) public int enumerate(ThreadGroup list[]) public int enumerate(ThreadGroup list[], boolean recurse) public final ThreadGroup getParent() public final void setDaemon(boolean daemon) public final void setPriority(int pri) public final void suspend() public final void resume() public final void destroy()` | | |
 
 | 方法 | SecurityManager (this) | 权限 |
@@ -2364,11 +2430,11 @@ java.awt.AWTPermission "*accessEventQueue";
 | --- | --- | --- |
 | `java.net.Authenticator public static void setDefault(Authenticator a)` | `checkPermission` | `java.net.NetPermission "setDefaultAuthenticator"` |
 | `java.net.MulticastSocket public void joinGroup(InetAddress multicastaddr) public void leaveGroup(InetAddress multicastaddr)` | `checkMulticast(InetAddress ss)` | `java.net.SocketPermission(castaddr.getHostAddress(), "accept,connect")` |
-| `java.net.DatagramSocket public void send(DatagramPacket p)` | `checkMulticast(p.getAddress()) or checkConnect(p.getAddress().getHostAddress(), p.getPort())` | if (p.getAddress().isMulticastAddress()) { `java.net.SocketPermission(p.getAddress().getHostAddress(), "accept,connect")` } else { port = p.getPort(); host = p.getAddress().getHostAddress(); if (port == -1) { `java.net.SocketPermission("host","resolve")` } else { `java.net.SocketPermission("host":"port","connect")` } } |
+| `java.net.DatagramSocket public void send(DatagramPacket p)` | `checkMulticast(p.getAddress()) or checkConnect(p.getAddress().getHostAddress(), p.getPort())` | if (`p.getAddress().isMulticastAddress()`) { `java.net.SocketPermission(p.getAddress().getHostAddress(), "accept,connect")` } else { port = `p.getPort()`; host = `p.getAddress().getHostAddress()`; if (port == -1) { `java.net.SocketPermission("host","resolve")` } else { `java.net.SocketPermission("host":"port","connect")` } } |
 
 | 方法 | SecurityManager 方法 | 权限 |
 | --- | --- | --- |
-| `java.net.MulticastSocket public void send(DatagramPacket p, byte ttl)` | `checkMulticast(p.getAddress(), ttl) or checkConnect(p.getAddress().getHostAddress(), p.getPort())` | if (p.getAddress().isMulticastAddress()) { `java.net.SocketPermission(p.getAddress().getHostAddress(), "accept,connect")` } else { port = p.getPort(); host = p.getAddress().getHostAddress(); if (port == -1) { `java.net.SocketPermission("host","resolve")` } else { `java.net.SocketPermission("host":"port","connect")` } } |
+| `java.net.MulticastSocket public void send(DatagramPacket p, byte ttl)` | `checkMulticast(p.getAddress(), ttl) or checkConnect(p.getAddress().getHostAddress(), p.getPort())` | if (`p.getAddress().isMulticastAddress()`) { `java.net.SocketPermission(p.getAddress().getHostAddress(), "accept,connect")` } else { port = `p.getPort()`; host = `p.getAddress().getHostAddress()`; if (port == -1) { `java.net.SocketPermission("host","resolve")` } else { `java.net.SocketPermission("host":"port","connect")` } } |
 | `java.net.InetAddress public String getHostName() public static InetAddress[] getAllByName(String host) public static InetAddress getLocalHost()` | `checkConnect({host}, -1)` | `java.net.SocketPermission("{host}",resolve")` |
 | `java.net.DatagramSocket public InetAddress getLocalAddress()` | | |
 
@@ -2412,13 +2478,13 @@ java.awt.AWTPermission "*accessEventQueue";
 | `java.security.Identity public void setPublicKey(PublicKey key)` | `checkSecurityAccess("setPublicKey")` | `java.security.SecurityPermission("setPublicKey")` |
 | `java.security.Identity public String toString(...)` | `checkSecurityAccess("printIdentity")` | `java.security.SecurityPermission("printIdentity")` |
 | `java.security.IdentityScope protected static void setSystemScope()` | `checkSecurityAccess("setSystemScope")` | `java.security.SecurityPermission("setSystemScope")` |
-| `java.security.Permission public void checkGuard(Object object)` | `checkPermission(this)` | 此 Permission 对象是被检查的权限。 |
+| `java.security.Permission public void checkGuard(Object object)` | `checkPermission(this)` | 此 `Permission` 对象是被检查的权限。 |
 | `java.security.Policy public static void getPolicy()` | `checkPermission` | `java.security.SecurityPermission("getPolicy")` |
 | `java.security.Policy public static void setPolicy(Policy policy)` | `checkPermission` | `java.security.SecurityPermission("setPolicy")` |
 | `java.security.Policy public static void getInstance(String type, SpiParameter provider) getInstance(String type, SpiParameter provider) getInstance(String type, SpiParameter provider)` | `checkPermission` | `java.security.SecurityPermission("createPolicy.{type}")` |
-| `java.security.Provider public synchronized void clear()` | `checkSecurityAccess("clearProviderProperties." + (name))")` | `java.security.SecurityPermission("ProviderProperties.{name}")` 其中 name 是提供者名称 |
-| `java.security.Provider public synchronized put(Object key, Object value)` | `checkSecurityAccess("putProviderProperty." + (name))")` | `java.security.SecurityPermission("putProviderProperty.{name}")` 其中 name 是提供者名称 |
-| `java.security.Provider public synchronized Object remove(Object key)` | `checkSecurityAccess("removeProviderProperty." + (name))")` | `java.security.SecurityPermission("removeProviderProperty.{name}")` 其中 name 是提供者名称 |
+| `java.security.Provider public synchronized void clear()` | `checkSecurityAccess("clearProviderProperties." + (name))")` | `java.security.SecurityPermission("ProviderProperties.{name}")` 其中 `name` 是提供者名称 |
+| `java.security.Provider public synchronized put(Object key, Object value)` | `checkSecurityAccess("putProviderProperty." + (name))")` | `java.security.SecurityPermission("putProviderProperty.{name}")` 其中 `name` 是提供者名称 |
+| `java.security.Provider public synchronized Object remove(Object key)` | `checkSecurityAccess("removeProviderProperty." + (name))")` | `java.security.SecurityPermission("removeProviderProperty.{name}")` 其中 `name` 是提供者名称 |
 | `java.security.ClassLoader SecureClassLoader(...)` | `checkCreateClassLoader` | `java.lang.RuntimePermission("createClassLoader")` |
 | `java.security.Security public static void getProperty(String key)` | `checkPermission` | `java.security.SecurityPermission("getProperty.{key}")` |
 | `java.security.Security public static int addProvider(Provider provider)` | `checkSecurityAccess("insertProvider."+provider.getName())\` | `java.security.SecurityPermission("insertProvider.(name)")` |
@@ -2445,53 +2511,53 @@ java.awt.AWTPermission "*accessEventQueue";
 
 | 方法 | SecurityManager 方法 | 权限 |
 | --- | --- | --- |
-| `java.net.Socket` `public synchronized void setSocketFactory(...)` | `checkConnect({host}, {port})` | `java.net.SocketPermission "{host}:{port}", "connect"` |
-| `java.net.Socket` `Socket (...)` | `checkAccept({host}, {port})` | `java.net.SocketPermission "{host}:{port}", "accept"` |
-| `java.net.DatagramSocket` `public synchronized void receive(DatagramPacket p)` | | |
-| `java.net.URL` `URL(...)` | `checkPermission` | `java.net.NetPermission "specifyStreamHandler"` |
-| `java.net.URLClassLoader` `URLClassLoader(...)` | `createClassLoader` | `java.lang.RuntimePermission "createClassLoader"` |
-| `java.security.AccessControlContext` `public AccessControlContext(acc, DomainCombiner combiner)` `public DomainCombiner getDomainCombiner(...)` | `checkPermission` | `java.security.SecurityPermission "createAccessControlContext"` |
-| `java.security.Identity` `public void addCertificate(...)` | `checkSecurityAccess("addIdentityCertificate")` | `java.security.SecurityPermission "addIdentityCertificate"` |
-| `java.security.Identity` `public void removeCertificate(...)` | `checkSecurityAccess("removeIdentityCertificate")` | `java.security.SecurityPermission "removeIdentityCertificate"` |
-| `java.security.Identity` `public void initState(String info)` | `checkSecurityAccess("setIdentityInfo")` | `java.security.SecurityPermission("setIdentityInfo")` |
-| `java.security.Identity` `public void setPublicKey(PublicKey key)` | `checkSecurityAccess("setPublicKey")` | `java.security.SecurityPermission("setPublicKey")` |
-| `java.security.Identity` `public String toString(...)` | `checkSecurityAccess("printIdentity")` | `java.security.SecurityPermission("printIdentity")` |
-| `java.security.IdentityScope` `protected static void setSystemScope()` | `checkSecurityAccess("setSystemScope")` | `java.security.SecurityPermission("setSystemScope")` |
-| `java.security.Permission` `public void checkGuard(Object object)` | `checkPermission(this)` | 此 `Permission` 对象是被检查的权限。 |
-| `java.security.Policy` `public static void getPolicy()` | `checkPermission` | `java.security.SecurityPermission("getPolicy")` |
-| `java.security.Policy` `public static void setPolicy(Policy policy)` | `checkPermission` | `java.security.SecurityPermission("setPolicy")` |
-| `java.security.Policy` `public static void getInstance(String type, SpiParameter provider)` `getInstance(String type, SpiParameter provider)` `getInstance(String type, SpiParameter provider)` | `checkPermission` | `java.security.SecurityPermission("createPolicy.{type}")` |
-| `java.security.Provider` `public synchronized void clear()` | `checkSecurityAccess("clearProviderProperties." + {name})` | `java.security.SecurityPermission("ProviderProperties.{name}")` 其中 `name` 是提供者名称 |
-| `java.security.Provider` `public synchronized put(Object key, Object value)` | `checkSecurityAccess("putProviderProperty." + {name})` | `java.security.SecurityPermission("putProviderProperty.{name}")` 其中 `name` 是提供者名称 |
-| `java.security.Provider` `public synchronized Object remove(Object key)` | `checkSecurityAccess("removeProviderProperty." + {name})` | `java.security.SecurityPermission("removeProviderProperty.{name}")` 其中 `name` 是提供者名称 |
-| `java.security.SecureClassLoader` `SecureClassLoader(...)` | `checkCreateClassLoader` | `java.lang.RuntimePermission("createClassLoader")` |
-| `java.security.Security` `public static void getProperty(String key)` | `checkPermission` | `java.security.SecurityPermission("getProperty.{key}")` |
-| `java.security.Security` `public static int addProvider(Provider provider)` | `checkSecurityAccess("insertProvider."+provider.getName())` | `java.security.SecurityPermission("insertProvider.{name}")` |
+| `ctor` `public synchronized void setSocketFactory(...)` | `checkConnect({host}, {port})` | `java.net.SocketPermission "{host}:{port}", "connect"` |
+| `java.net.Socket Socket (...)` | `checkAccept({host}, {port})` | `java.net.SocketPermission "{host}:{port}", "accept"` |
+| `java.net.DatagramSocket public synchronized void receive(DatagramPacket p)` | | |
+| `java.net.URL URL(...)` | `checkPermission` | `java.net.NetPermission "specifyStreamHandler"` |
+| `java.net.URLClassLoader URLClassLoader(...)` | `createClassLoader` | `java.lang.RuntimePermission "createClassLoader"` |
+| `java.security.AccessControlContext public AccessControlContext(acc, DomainCombiner combiner)` `public DomainCombiner getDomainCombiner(...)` | `checkPermission` | `java.security.SecurityPermission "createAccessControlContext"` |
+| `java.security.Identity public void addCertificate(...)` | `checkSecurityAccess("addIdentityCertificate")` | `java.security.SecurityPermission "addIdentityCertificate"` |
+| `java.security.Identity public void removeCertificate(...)` | `checkSecurityAccess("removeIdentityCertificate")` | `java.security.SecurityPermission "removeIdentityCertificate"` |
+| `java.security.Identity public void initState(String info)` | `checkSecurityAccess("setIdentityInfo")` | `java.security.SecurityPermission("setIdentityInfo")` |
+| `java.security.Identity public void setPublicKey(PublicKey key)` | `checkSecurityAccess("setPublicKey")` | `java.security.SecurityPermission("setPublicKey")` |
+| `java.security.Identity public String toString(...)` | `checkSecurityAccess("printIdentity")` | `java.security.SecurityPermission("printIdentity")` |
+| `java.security.IdentityScope protected static void setSystemScope()` | `checkSecurityAccess("setSystemScope")` | `java.security.SecurityPermission("setSystemScope")` |
+| `java.security.Permission public void checkGuard(Object object)` | `checkPermission(this)` | 此 `Permission` 对象是被检查的权限。 |
+| `java.security.Policy public static void getPolicy()` | `checkPermission` | `java.security.SecurityPermission("getPolicy")` |
+| `java.security.Policy public static void setPolicy(Policy policy)` | `checkPermission` | `java.security.SecurityPermission("setPolicy")` |
+| `java.security.Policy public static void getInstance(String type, SpiParameter provider)` `getInstance(String type, SpiParameter provider)` `getInstance(String type, SpiParameter provider)` | `checkPermission` | `java.security.SecurityPermission("createPolicy.{type}")` |
+| `java.security.Provider public synchronized void clear()` | `checkSecurityAccess("clearProviderProperties." + {name})` | `java.security.SecurityPermission("ProviderProperties.{name}")` 其中 `name` 是提供者名称 |
+| `java.security.Provider public synchronized put(Object key, Object value)` | `checkSecurityAccess("putProviderProperty." + {name})` | `java.security.SecurityPermission("putProviderProperty.{name}")` 其中 `name` 是提供者名称 |
+| `java.security.Provider public synchronized Object remove(Object key)` | `checkSecurityAccess("removeProviderProperty." + {name})` | `java.security.SecurityPermission("removeProviderProperty.{name}")` 其中 `name` 是提供者名称 |
+| `java.security.ClassLoader SecureClassLoader(...)` | `checkCreateClassLoader` | `java.lang.RuntimePermission("createClassLoader")` |
+| `java.security.Security public static void getProperty(String key)` | `checkPermission` | `java.security.SecurityPermission("getProperty.{key}")` |
+| `java.security.Security public static int addProvider(Provider provider)` | `checkSecurityAccess("insertProvider."+provider.getName())` | `java.security.SecurityPermission("insertProvider.{name}")` |
 | `public static int insertProviderAt(Provider provider, int position);` | | |
-| `java.security.Security` `public static void removeProvider(String name)` | `checkSecurityAccess("removeProvider."+name)` | `java.security.SecurityPermission("removeProvider.{name}")` |
-| `java.security.Security` `public static void setProperty(String key)` | `checkSecurityAccess("setProperty."+key)` | `java.security.SecurityPermission("setPropertyKey")` |
-| `java.security.Signer` `public final getPrivateKey()` | `checkSecurityAccess("getSigner")` | `java.security.SecurityPermission("getSigner")` |
-| `java.security.Signer` `public void setKey(KeyPair pair)` | `checkSecurityAccess("setKey")` | `java.security.SecurityPermission("setKey")` |
-| `java.sql.DriverManager` `public static void setLog(PrintWriter out)` | `checkPermission` | `java.sql.SQLPermission("set")` |
-| `java.util.Locale` `public static void setDefault(Locale locale)` | `checkPermission` | `java.util.PropertyPermission("language")` |
-| `java.util.zip.ZipFile` `ZipFile(String name)` | `checkRead` | `java.io.FilePermission("name")` |
-| `java.security.auth.Subject` `public static getSubject(AccessControlContext acc)` | `checkPermission` | `java.security.auth.AuthorizationPermission("getSubject")` |
-| `java.security.auth.Subject` `public void setReadOnly()` | `checkPermission` | `java.security.auth.AuthorizationPermission("setReadOnly")` |
-| `java.security.auth.Subject` `public static doAs(Subject subject, PrivilegedAction action)` | `checkPermission` | `java.security.auth.AuthorizationPermission("doAs")` |
-| `java.security.auth.Subject` `public static doAs(Subject subject, PrivilegedActionAction action) throws java.security.PrivilegedActionException` | `checkPermission` | `java.security.auth.AuthorizationPermission("doAs")` |
-| `java.security.auth.Subject` `public static voidAsPrivileged(Subject subject, PrivilegedActionAction action, AccessControlContext acc)` | `checkPermission` | `java.security.auth.AuthPermission("doAsPrivileged")` |
-| `java.security.auth.Subject` `public static voidAsPrivileged(Subject subject, PrivilegedActionAction action, AccessControlContext acc) throws java.security.PrivilegedActionException` | `checkPermission` | `java.security.auth.AuthPermission("doAsPrivileged")` |
+| `java.security.Security public static void removeProvider(String name)` | `checkSecurityAccess("removeProvider."+name)` | `java.security.SecurityPermission("removeProvider.{name}")` |
+| `java.security.Security public static void setProperty(String key)` | `checkSecurityAccess("setProperty."+key)` | `java.security.SecurityPermission("setPropertyKey")` |
+| `java.security.Signer public final getPrivateKey()` | `checkSecurityAccess("getSigner")` | `java.security.SecurityPermission("getSigner")` |
+| `java.security.Signer public void setKey(KeyPair pair)` | `checkSecurityAccess("setKey")` | `java.security.SecurityPermission("setKey")` |
+| `java.sql.DriverManager public static void setLog(PrintWriter out)` | `checkPermission` | `java.sql.SQLPermission("set")` |
+| `java.util.Locale public static void setDefault(Locale locale)` | `checkPermission` | `java.util.PropertyPermission("language")` |
+| `java.util.zip.ZipFile ZipFile(String name)` | `checkRead` | `java.io.FilePermission("name")` |
+| `java.security.auth.Subject public static getSubject(AccessControlContext acc)` | `checkPermission` | `java.security.auth.AuthorizationPermission("getSubject")` |
+| `java.security.auth.Subject public void setReadOnly()` | `checkPermission` | `java.security.auth.AuthorizationPermission("setReadOnly")` |
+| `java.security.auth.Subject public static doAs(Subject subject, PrivilegedAction action)` | `checkPermission` | `java.security.auth.AuthorizationPermission("doAs")` |
+| `java.security.auth.Subject public static doAs(Subject subject, PrivilegedActionAction action) throws java.security.PrivilegedActionException` | `checkPermission` | `java.security.auth.AuthorizationPermission("doAs")` |
+| `java.security.auth.Subject public static voidAsPrivileged(Subject subject, PrivilegedActionAction action, AccessControlContext acc)` | `checkPermission` | `java.security.auth.AuthPermission("doAsPrivileged")` |
+| `java.security.auth.Subject public static voidAsPrivileged(Subject subject, PrivilegedActionAction action, AccessControlContext acc) throws java.security.PrivilegedActionException` | `checkPermission` | `java.security.auth.AuthPermission("doAsPrivileged")` |
 | `java.security.PrivilegedActionException` | - | - |
-| `java.security.auth.DomainCombiner` `public getSubject()` | `checkPermission` | `java.security.auth.AuthPermission("*getSubjectFromDomainCombiner")` |
+| `java.security.auth.DomainCombiner public getSubject()` | `checkPermission` | `java.security.auth.AuthPermission("*getSubjectFromDomainCombiner")` |
 
 ## 表 1-4（续）方法与权限
 
 | 方法 | SecurityManager 方法 | 权限 |
 | --- | --- | --- |
-| `javax.security.auth.login.Configuration` `public static Configuration Configuration()` | `checkPermission` | `javax.security.auth.Authentication "getLoginConfiguration"` |
-| `javax.security.auth.login.Configuration` `public static void setConfiguration(Configuration configuration)` | `checkPermission` | `javax.security.auth.Authentication "setConfiguration"` |
-| `javax.security.auth.login.Configuration` `public static void refresh()` | `checkPermission` | `javax.security.auth.Authentication "refreshLoginConfiguration"` |
-| `javax.security.auth.login.Configuration` `public static getInstance(String type, SpiParameter params), getInstance(String type, SpiParameter params), getInstance(String type, SpiParameter params, Provider provider)` | `checkPermission` | `javax.security.auth.Authentication "createLoginConfiguration.{type}"` |
+| `javax.security.auth.login.Configuration public static Configuration Configuration()` | `checkPermission` | `javax.security.auth.Authentication "getLoginConfiguration"` |
+| `javax.security.auth.login.Configuration public static void setConfiguration(Configuration configuration)` | `checkPermission` | `javax.security.auth.Authentication "setConfiguration"` |
+| `javax.security.auth.login.Configuration public static void refresh()` | `checkPermission` | `javax.security.auth.Authentication "refreshLoginConfiguration"` |
+| `javax.security.auth.login.Configuration public static getInstance(String type, SpiParameter params), getInstance(String type, SpiParameter params), getInstance(String type, SpiParameter params, Provider provider)` | `checkPermission` | `javax.security.auth.Authentication "createLoginConfiguration.{type}"` |
 
 # java.lang.SecurityManager 方法权限检查
 
@@ -2518,6 +2584,8 @@ java.awt.AWTPermission "*accessEventQueue";
 
 
 
+# 表 1-5 java.lang.SecurityManager 方法与权限
+
 | 方法 | 权限 |
 |---|---|
 | `public void checkDelete(String file)` | `java.io.FilePermission "(file)", "delete"` |
@@ -2525,19 +2593,19 @@ java.awt.AWTPermission "*accessEventQueue";
 | `public void checkExit(int status)` | `java.lang.RuntimePermission "exitVM.(status)"` |
 | `public void checkLink(String lib)` | `java.lang.RuntimePermission "loadLibrary.(lib)"` |
 | `public void checkListen(int port)` | `java.net.SocketPermission "localhost:(port)", "listen"` |
-| `public void checkMemberAccess(Class clazz, int which)` | if (`which != Member.PUBLIC`) { if (`currentClassLoader()` != `clazz.getClassLoader()`) { `checkPermission(new java.lang.RuntimePermission("accessDeclaredMembers"))`; } } |
+| `public void checkMemberAccess(Class clazz, int which)` | if (`which != Member.PUBLIC`) { if (`currentClassLoader() != clazz.getClassLoader()`) { `checkPermission(new java.lang.RuntimePermission("accessDeclaredMembers"))`; } } |
 
 # 表 1-5（续）java.lang.SecurityManager 方法与权限
 
 | 方法 | 权限 |
 |---|---|
-| `public void checkMulticast(InetAddress madrr)` | `java.net.SocketPermission(maddr.getHostAddress(),"accept,connect")` |
-| `public void checkMulticast(InetAddress madrr, byte ttl)` | `java.net.SocketPermission(maddr.getHostAddress(),"accept,connect")` |
+| `public void checkMulticast(InetAddress maddr)` | `java.net.SocketPermission(maddr.getHostAddress(), "accept,connect")` |
+| `public void checkMulticast(InetAddress maddr, byte ttl)` | `java.net.SocketPermission(maddr.getHostAddress(), "accept,connect")` |
 | `public void checkPackageAccess(String pkg)` | `java.lang.RuntimePermission "accessClassInPackage.(pkg)"` |
 | `public void checkPackageDefinition(String pkg)` | `java.lang.RuntimePermission "defineClassInPackage.(pkg)"` |
 | `public void checkPrintJobAccess()` | `java.lang.RuntimePermission "queuePrintJob"` |
 | `public void checkPropertiesAccess()` | `java.util.PropertyPermission "*,read,write"` |
-| `public void checkPropertyAccess(String key)` | `java.util.PropertyPermission "{key}",read,write"` |
+| `public void checkPropertyAccess(String key)` | `java.util.PropertyPermission "{key}", "read,write"` |
 | `public void checkRead(FileDescriptor fd)` | `java.lang.RuntimePermission "readDescriptor"` |
 
 # 表 1-5（续）java.lang.SecurityManager 方法与权限
@@ -2549,9 +2617,9 @@ java.awt.AWTPermission "*accessEventQueue";
 | `public void checkSecurityAccess(String target)` | `java.security.SecurityPermission("target")` |
 | `public void checkSetFactory()` | `java.lang.RuntimePermission("setFactory")` |
 | `public void checkSystemClipboardAccess()` | `java.awt.AWTPermission("accessClipboard")` |
-| 注意：此方法已弃用；请使用 `public void checkPermission(Permission perm)` | `java.awt.AWTPermission("showWindowWithoutWarningBanner")` |
+| **注意：此方法已弃用；请使用 `public void checkPermission(Permission perm)`** | `java.awt.AWTPermission("showWindowWithoutWarningBanner")` |
 | `public boolean checkTopLevelWindow(Object window)` | |
-| 注意：此方法已弃用；请使用 `public void checkPermission(Permission perm)` | |
+| **注意：此方法已弃用；请使用 `public void checkPermission(Permission perm)`** | |
 | `public void checkWrite(FileDescriptor fd)` | `java.lang.RuntimePermission("writeFileDescriptor")` |
 
 # 表 1-5（续）java.lang.SecurityManager 方法与权限
@@ -2581,7 +2649,7 @@ java.awt.AWTPermission "*accessEventQueue";
 policy.url.n=URL
 ```
 
-在这里，URL 是一个 URL 规范。例如，默认的系统和用户策略文件在安全属性文件中定义如下：
+在这里，`URL` 是一个 URL 规范。例如，默认的系统和用户策略文件在安全属性文件中定义如下：
 
 ```
 policy.url.1=file:${java.home}/conf/security/java.policy
@@ -2650,7 +2718,7 @@ policy.provider=com.mycom.MyPolicy
 
 ## 策略文件语法
 
-JDK 安装的策略配置文件指定了授予来自特定源代码并以指定主体（principal）身份执行的代码的权限（对哪些类型系统资源的访问）。
+JDK 安装的策略配置文件指定了授予来自特定源代码并以指定主体身份执行的代码的权限（对哪些类型系统资源的访问）。
 
 为了允许 applet（或在安全管理器下运行的应用程序）执行受保护的操作（如读取或写入文件），必须授予 applet（或应用程序）该特定操作的权限。在策略引用实现中，必须通过策略配置文件中的 `grant` 项授予权限。唯一的例外是代码始终具有自动读取其 (URL) 位置及其子目录文件的权限；不需要明确权限。
 
@@ -2669,21 +2737,10 @@ keystorePasswordURL "some_password_url";
 
 在这里，
 
-**some_keystore_url**
-
-指定 keystore 的 URL 位置。
-
-**some_password_url**
-
-指定 keystore 密码的 URL 位置。
-
-**keystore_type**
-
-指定 keystore 的类型。
-
-**keystore_provider**
-
-指定 keystore 提供者。
+*   **some_keystore_url**：指定 keystore 的 URL 位置。
+*   **some_password_url**：指定 keystore 密码的 URL 位置。
+*   **keystore_type**：指定 keystore 的类型。
+*   **keystore_provider**：指定 keystore 提供者。
 
 ## codeBase 值
 
@@ -2698,23 +2755,23 @@ codebase 值表示代码源位置；你授予从该位置加载代码的权限�
 > ..}
 > ```
 
-codebase 值的具体含义取决于末尾的字符。以 `/*` 结尾的 codebase 会匹配指定目录中的所有类文件（而非 JAR 文件）。以 `/` 结尾的 codebase 会匹配该目录包含的所有文件（包括类文件和 JAR 文件）。以 `/-` 结尾的 codebase 会匹配目录中的所有文件（包括类文件和 JAR 文件）以及该目录下子目录中的所有文件。下表说明了不同的情况：
+codebase 值的具体含义取决于末尾的字符。以 `/` 结尾的 codebase 会匹配指定目录中的所有类文件（而非 JAR 文件）。以 `/*` 结尾的 codebase 会匹配该目录包含的所有文件（包括类文件和 JAR 文件）。以 `/-` 结尾的 codebase 会匹配目录中的所有文件（包括类文件和 JAR 文件）以及该目录下子目录中的所有文件。下表说明了不同的情况：
 
 ### 表 1-6 下载代码中的 CodeURL 在策略文件中的匹配方式
 
 | 下载代码的 CodeURL | 策略文件中的 CodeURL | 匹配 |
 |---|---|---|
-| www.example.com/usr/ann/ | www.example.com/usr/ann/ | 是 |
-| www.example.com/usr/ann/ | www.example.com/usr/ann/* | 是 |
-| www.example.com/usr/ann/ | www.example.com/usr/ann/- | 是 |
-| www.example.com/usr/ann/ | www.example.com/usr/ann/ | 否 |
-| www.example.com/usr/ann/app.jar | www.example.com/usr/ann/- | 是 |
-| www.example.com/usr/ann/app.jar | www.example.com/usr/ann/* | 是 |
-| www.example.com/usr/ann/app.jar | www.example.com/usr/* | 否 |
-| www.example.com/usr/ann/app.jar | www.example.com/usr/- | 是 |
-| www.example.com/usr/ann/ | www.example.com/usr/* | 否 |
+| `www.example.com/usr/ann/` | `www.example.com/usr/ann/` | 是 |
+| `www.example.com/usr/ann/` | `www.example.com/usr/ann/*` | 是 |
+| `www.example.com/usr/ann/` | `www.example.com/usr/ann/-` | 是 |
+| `www.example.com/usr/ann/app.jar` | `www.example.com/usr/ann/` | 否 |
+| `www.example.com/usr/ann/app.jar` | `www.example.com/usr/ann/-` | 是 |
+| `www.example.com/usr/ann/app.jar` | `www.example.com/usr/ann/*` | 是 |
+| `www.example.com/usr/ann/app.jar` | `www.example.com/usr/*` | 否 |
+| `www.example.com/usr/ann/app.jar` | `www.example.com/usr/-` | 是 |
+| `www.example.com/usr/ann/` | `www.example.com/usr/*` | 否 |
 
-如果你正在使用运行时镜像（参见 `jlink` 工具），你可以在策略中指定 jrt URL 作为 codebase 值，从而授予镜像中应用和库模块权限。有关 jrt URL 的更多信息，请参见 JEP 220：Modular Run-Time Images.
+如果你正在使用运行时镜像（参见 `jlink` 工具），你可以在策略中指定 `jrt` URL 作为 codebase 值，从而授予镜像中应用和库模块权限。有关 `jrt` URL 的更多信息，请参见 JEP 220：Modular Run-Time Images.
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_133_0.png)
 
@@ -2744,15 +2801,15 @@ grant signedBy "alias" {
 
 只有当权限由指定证书中的密钥签名时，才会授予该权限。
 
-这允许任何作为 `X500Principle` 执行的代码（无论区分名称为何）具有读取和写入 "/tmp" 的权限。
+这允许任何作为 `X500Principal` 执行的代码（无论区分名称为何）具有读取和写入 "/tmp" 的权限。
 
 以下示例显示了一个包含代码源（codesource）和执行者信息的语句：
 
 ```
-grant codebase "http://www.games.example.com",signedBy "Duke",
-principal java.security.auth.x500.X500Principle "cn=Alice" (
+grant codebase "http://www.games.example.com", signedBy "Duke",
+principal java.security.auth.x500.X500Principal "cn=Alice" {
     permission java.io.FilePermission "/tmp/games", "read, write";
-);
+};
 ```
 
 
@@ -2787,7 +2844,7 @@ java.security.auth.x500.X500Principle "cn=Alice"
 permission java.io.FilePermission "${user.home}", "read";
 ```
 
-将把 `"${user.home}"` 扩展为使用 `user.home` 系统属性的值。如果该属性的值为 `/home/cathy`，那么上一个示例等同于
+将把 `"${user.home}"` 扩展为使用 `user.home` 系统属性的值。如果该属性的值为 `/home/cathy`，那么上一个示例等同于：
 
 ```
 permission java.io.FilePermission "/home/cathy", "read";
@@ -2817,7 +2874,7 @@ permission java.io.FilePermission "C:\users\cathy**", "read";
 grant codeBase "file:${my.libraries}/api/*";
 ```
 
-那么 codebase 中任何使用 `/` 作为分隔符的地方将自动转换为字符。例如，假设 `my.libraries` 的值为 `C:\Users\me\lib`。因此，在 Windows 系统上，上一个示例被转换为
+那么 codebase 中任何使用 `/` 作为分隔符的地方将自动转换为对应平台的分隔符字符。例如，假设 `my.libraries` 的值为 `C:\Users\me\lib`。因此，在 Windows 系统上，上一个示例被转换为：
 
 ```
 grant codeBase "C:/Users/me/lib/api/*";
@@ -2825,9 +2882,9 @@ grant codeBase "C:/Users/me/lib/api/*";
 
 因此，你不需要在 codebase 字符串中使用 `${}`（虽然你也不应该这样做）。策略文件中允许在双引号字符串内部进行属性扩展。这包括 `signer_names`、`URL`、`target_name` 和 `action` 字段。是否允许属性扩展由安全属性文件中 `policy.expandProperties` 属性的值控制。如果该属性的值为 `true`（默认值），则允许扩展。
 
-> 注意：
+> **注意：**
 >
-> 你不能嵌套属性；它们将不起作用。例如，
+> 你不能嵌套属性；它们将不起作用。例如：
 >
 > `${user.${foo}}`
 >
@@ -2835,7 +2892,7 @@ grant codeBase "C:/Users/me/lib/api/*";
 
 ## 注意
 
-在 `grant` 条目、权限（`permission entry`）条目或 `keystore` 条目中，无法扩展属性，该条目将被忽略。例如，如果系统属性 `foo` 未定义，且你拥有：
+在 `grant` 条目、`permission` 条目或 `keystore` 条目中，无法扩展属性，该条目将被忽略。例如，如果系统属性 `foo` 未定义，且你拥有：
 
 ```
 grant codeBase "$foo" {
@@ -2854,7 +2911,7 @@ keystore "$foo";
 
 ## Windows 系统、文件路径和属性扩展
 
-Windows 系统上的文件路径规范应为每个实际的反斜杠包含两个反斜杠。正如“Windows 系统上的文件路径”部分提到的，在 Windows 系统上，当你直接在字符串中指定文件路径（但不在 codebase 中）时，你需要为每个实际的反斜杠包含两个反斜杠，如下
+Windows 系统上的文件路径规范应为每个实际的反斜杠包含两个反斜杠。正如“Windows 系统上的文件路径”部分提到的，在 Windows 系统上，当你直接在字符串中指定文件路径（但不在 codebase 中）时，你需要为每个实际的反斜杠包含两个反斜杠，如下：
 
 ```
 grant {
@@ -2862,25 +2919,25 @@ grant {
 }
 ```
 
-这是因为字符串是由分词器（`StreamTokenizer`）处理的，它允许使用 `\` 作为转义字符串（例如用 `\n` 表示换行），并要求两个反斜杠来表示单个反斜杠。分词器处理文件路径字符串并将双反斜杠转换为单斜杠后，结果是
+这是因为字符串是由分词器（`StreamTokenizer`）处理的，它允许使用 `\` 作为转义字符串（例如用 `\n` 表示换行），并要求两个反斜杠来表示单个反斜杠。分词器处理文件路径字符串并将双反斜杠转换为单斜杠后，结果是：
 
 ```
 "C:\users\cathy\foo.bat"
 ```
 
-另一方面，如果 `user.home` 属性值为 `C:\users\cathy` 且你在 Windows 系统上，上一个示例被转换为
+另一方面，如果 `user.home` 属性值为 `C:\users\cathy` 且你在 Windows 系统上，上一个示例被转换为：
 
 ```
 permission java.io.FilePermission "C:\users\cathy**", "read";
 ```
 
-此外，作为特殊情况，如果你在 codebase 中扩展属性，例如
+此外，作为特殊情况，如果你在 codebase 中扩展属性，例如：
 
 ```
 grant codeBase "file:${my.libraries}/api/*";
 ```
 
-那么 codebase 中任何使用 `/` 作为分隔符的地方将自动转换为字符。例如，假设 `my.libraries` 的值为 `C:\Users\me\lib`。因此，在 Windows 系统上，上一个示例被转换为
+那么 codebase 中任何使用 `/` 作为分隔符的地方将自动转换为对应平台的分隔符字符。例如，假设 `my.libraries` 的值为 `C:\Users\me\lib`。因此，在 Windows 系统上，上一个示例被转换为：
 
 ```
 grant codeBase "C:/Users/me/lib/api/*";
@@ -2888,9 +2945,9 @@ grant codeBase "C:/Users/me/lib/api/*";
 
 因此你不需要在 codebase 字符串中使用 `${}`（你本不应该这样做）。策略文件中允许在双引号字符串内部进行属性扩展。这包括 `signer_names`、`URL`、`target_name` 和 `action` 字段。是否允许属性扩展由安全属性文件中 `policy.expandProperties` 属性的值控制。如果该属性的值为 `true`（默认），则允许扩展。
 
-> 注意：
+> **注意：**
 >
-> 你不能嵌套属性；它们将不起作用。例如，
+> 你不能嵌套属性；它们将不起作用。例如：
 >
 > `${user.${foo}}`
 >
@@ -2898,7 +2955,7 @@ grant codeBase "C:/Users/me/lib/api/*";
 
 ## 注意
 
-在 `grant` 条目、权限（`permission entry`）条目或 `keystore` 条目中，无法扩展属性，该条目将被忽略。例如，如果系统属性 `foo` 未定义且你拥有：
+在 `grant` 条目、`permission` 条目或 `keystore` 条目中，无法扩展属性，该条目将被忽略。例如，如果系统属性 `foo` 未定义且你拥有：
 
 ```
 grant codeBase "$foo" {
@@ -2929,7 +2986,7 @@ permission java.io.FilePermission "C:\users\cathy**", "read";
 grant codeBase "file:${my.libraries}/api/*";
 ```
 
-那么 codebase 中任何使用 `/` 作为分隔符的地方将自动转换为 `\` 字符。例如，假设 `my.libraries` 的值为 `C:\Users\me\lib`。因此，在 Windows 系统上，上一个示例被转换为：
+那么 codebase 中任何使用 `/` 作为分隔符的地方将自动转换为字符。例如，假设 `my.libraries` 的值为 `C:\Users\me\lib`。因此，在 Windows 系统上，上一个示例被转换为：
 
 ```
 grant codeBase "C:/Users/me/lib/api/*";
@@ -2940,9 +2997,7 @@ grant codeBase "C:/Users/me/lib/api/*";
 > **注意：**
 > 你不能嵌套属性；它们将不起作用。例如，
 >
-> ```
-> "${user.${foo}}"
-> ```
+> `"${user.${foo}}"`
 >
 > 即使 `foo` 属性被设置为 `home`，它也不起作用。原因是属性解析器不识别嵌套属性；它只寻找第一个 `${`，然后继续寻找直到找到第一个 `}` 并尝试将结果（在此例中为 `${user.foo}`）解释为属性，但如果不存在该属性则会失败。
 
@@ -2970,7 +3025,7 @@ keystore "$foo";
 
 那么此 grant 条目中的所有权限都将被忽略。如果你只有 `permission Foo...` 条目，则该条目被忽略。最后，如果你有 keystore 条目，该条目将被忽略。
 
-## Windows 系统、文件路径和属性扩展
+# Windows 系统、文件路径和属性扩展
 
 Windows 系统上的文件路径规范应为每个实际的反斜杠包含两个反斜杠。正如“Windows 系统上的文件路径”部分提到的，在 Windows 系统上，当你直接在字符串中指定文件路径（但不在 codebase 中）时，你需要为每个实际的反斜杠包含两个反斜杠，如下：
 
@@ -2988,6 +3043,8 @@ grant {
 "C:\users\cathy\foo.bat"
 ```
 
+*(注：由于用户提供的文本包含大量重复的段落，译文已进行去重处理并翻译核心内容。)*
+
 # 附录 A：默认禁用 FilePermission 路径名规范化
 
 - 获取的证书不是 X.509 证书
@@ -3000,7 +3057,7 @@ grant {
 
 因此，如果在策略文件中为 `FilePermission` 对象授予了路径名，那么程序也应该使用相同的路径名样式来访问该文件。例如，如果策略文件中的路径名使用的是符号链接，那么程序也应该使用符号链接。使用目标名称访问文件将导致权限检查失败。
 
-# 兼容层
+## 兼容层
 
 已添加兼容层，以确保为相对路径授予 `FilePermission` 对象允许应用程序使用绝对路径访问文件（反之亦然）。这对于默认的 `Policy` 提供者和 `Limited doPrivileged` 调用均有效。
 
@@ -3008,11 +3065,11 @@ grant {
 
 该兼容层不涵盖符号链接与目标之间的转换、Windows 长文件名与 DOS 风格 8.3 名称之间的转换，或任何其他可以规范化为相同名称的不同形式。
 
-# 自定义路径名规范化
+## 自定义路径名规范化
 
 表 1-7 中的系统属性可用于自定义 `FilePermission` 路径名规范化。请参见《如何指定 java.lang.System 属性》。
 
-## 表 1-7 用于自定义路径规范化的系统属性
+### 表 1-7 用于自定义路径规范化的系统属性
 
 | 系统属性 | 默认值 | 说明 |
 | --- | --- | --- |
@@ -3035,7 +3092,7 @@ java -Djava.security.debug=help MyApp
 
 以下列出了 `java.security.debug` 选项以及每个选项的详细信息：
 
-## 表 1-8 java.security.debug 选项
+### 表 1-8 java.security.debug 选项
 
 | 选项 | 说明 | 相关信息 |
 | --- | --- | --- |
@@ -3045,12 +3102,12 @@ java -Djava.security.debug=help MyApp
 | `combiner` | 开启 `SubjectDomainCombiner` 的调试 | 权限 |
 | `configfile` | 开启 JAAS（Java 认证和服务）配置文件的加载 | Java 认证与服务 (JAAS) 参考指南<br>配合 `config` 选项使用以下选项：<br>* `stack`: 打印堆栈 |
 | `config` | 开启 JAAS 配置解析 | Java 认证与服务 (JAAS) 参考指南<br>配合 `config` 选项使用以下选项：<br>* `stack`: 打印堆栈<br>* `domain`: 打印域 |
-| `gsslogin` | Java GSS（通用安全服务）登录文件调试 | JAAS 登录配置<br>`javax.auth.login.Configuration`: 配置对象负责为特定应用程序指定哪个 `javax.net.ssl.SSLEngine` 以及以什么顺序调用 `LoginModules` |
+| `gsslogin` | Java GSS（通用安全服务）登录文件调试 | JAAS 登录配置<br>`javax.auth.login.Configuration`: 配置对象负责为特定应用程序指定哪个 `javax.net.ssl.SSLEngine` 以及以什么顺序调用 LoginModules |
 | `jar` | JAR 文件验证 | Java 教程中的签名 JAR 文件 |
 | `jca` | JCA 引擎调试 | 引擎类和算法 |
 | `keystore` | 密钥库调试 | Store |
 
-## 表 1-8 (续) java.security.debug 选项
+### 表 1-8 (续) java.security.debug 选项
 
 | 选项 | 说明 | 相关信息 |
 | --- | --- | --- |
@@ -3062,54 +3119,54 @@ java -Djava.security.debug=help MyApp
 | `provider` | 安全提供者调试<br>配合 `provider` 选项可以使用以下选项：<br>`engine=<engines>`: 对指定的 JCA 引擎显示输出。<br>`<engines>` 支持的值为：<br>* `Cipher`<br>* `KeyAgreement`<br>* `KeyGenerator`<br>* `KeyPairGenerator`<br>* `KeyStore`<br>* `Mac`<br>* `MessageDigest`<br>* `SecureRandom`<br>* `Signature` | Java 加密架构 (JCA) 参考指南 |
 | `scl` | `SecureClassLoader` 分配的权限 | 权限 |
 | `securerandom` | `SecureRandom` 调试 | `SecureRandom` 类 |
-| `sunpkcs11` | `SunPKCS11` 提供者调试 | PKCS#11 参考 |
+| `sunpkcs11` | SunPKCS11 提供者调试 | PKCS#11 参考 |
 | `ts` | 时间戳调试 | 无 |
 
 # Java 加密架构 (JCA) 参考指南
 
 Java 加密架构 (JCA) 是平台的一个主要部分，它包含一种“提供者”架构以及一组用于数字签名、消息摘要（哈希）、证书和证书验证、加密（对称/非对称块加密/流式加密）、密钥生成与管理，以及安全随机数生成等功能的 API。
 
-# Java 加密架构简介
+## Java 加密架构简介
 
 Java 平台非常强调安全性，包括语言安全、密码学、公钥基础设施、身份验证和安全通信。
 
 JCA 是平台的一个主要部分，它包含一种“提供者”架构以及一组用于数字签名、消息摘要（哈希）、证书和证书验证、加密（对称/非对称块加密/流式加密）、密钥生成与管理以及安全随机数生成等功能的 API。这些 API 允许开发者轻松地将安全性集成到他们的应用程序代码中。该架构围绕以下原则设计：
 
-- **实现独立性**：应用程序不需要实现安全算法。相反，它们可以向 Java 平台请求安全服务。安全服务在提供者（例如加密服务提供者 CSP）中实现，这些提供者通过标准接口插入 Java 平台中。应用程序可以依赖多个独立的提供者来实现安全功能。
-- **实现互操作性**：提供者在应用程序之间是互操作的。具体来说，实现并不绑定于特定的提供者，而提供者也不绑定于特定的应用程序。
-- **算法可扩展性**：Java 平台包含了许多内置提供者，它们实现了今天使用的一组基本安全服务。然而，某些应用程序依赖于尚未实现的新兴标准或专有服务。Java 平台支持安装实现此类服务的自定义提供者。
+* **实现独立性**：应用程序不需要实现安全算法。相反，它们可以向 Java 平台请求安全服务。安全服务在提供者（例如加密服务提供者 CSP）中实现，这些提供者通过标准接口插入 Java 平台中。应用程序可以依赖多个独立的提供者来实现安全功能。
+* **实现互操作性**：提供者在应用程序之间是互操作的。具体来说，实现并不绑定于特定的提供者，而提供者也不绑定于特定的应用程序。
+* **算法可扩展性**：Java 平台包含了许多内置提供者，它们实现了今天使用的一组基本安全服务。然而，某些应用程序依赖于尚未实现的新兴标准或专有服务。Java 平台支持安装实现此类服务的自定义提供者。
 
 JDK 中提供的其他加密库也提供了 JCA 提供者架构，本文在此对其进行描述。JSSE 组件提供了对安全套接层 (SSL)、传输层安全协议 (TLS) 和数据报传输层安全协议 (DTLS) 实现的支持；请参见《Java 安全套接扩展 (JSSE) 参考指南》。你可以通过 Java 通用安全服务 (JSSS)、API 以及身份验证和安全层 (SASL) 来保护通信应用程序之间的消息交换；请参阅 JAAS 简介、Java GSS-API 教程以及 Java SASL API 编程与部署指南。
 
 ### 术语说明
 
-- 在 JDK 1.4 之前，JCE 是一个未绑定的产品，由于 JCA 和 JCE 经常被视为两个独立的组件，而现在 JCE 已捆绑在 JDK 中，在第 2 节“Java 加密架构简介”中，这种区别变得不那么明显。由于 JCE 使用与 JCA 相同的架构，因此 JCE 应该被更准确地认为是 JCA 的一部分。
-- JDK 内的 JCA 包含两个软件组件：
-  - 定义并支持提供者提供实现所需的加密服务的框架。该框架包含了 `java.security`、`java.crypto`、`java.crypto.spec` 和 `java.crypto.interfaces` 等包。
-  - 实际的提供者，如 `Sun`、`SunRsaSign`、`SunJCE` 等，它们包含了实际的加密实现。
+* 在 JDK 1.4 之前，JCE 是一个未绑定的产品，由于 JCA 和 JCE 经常被视为两个独立的组件，而现在 JCE 已捆绑在 JDK 中，在第 2 节“Java 加密架构简介”中，这种区别变得不那么明显。由于 JCE 使用与 JCA 相同的架构，因此 JCE 应该被更准确地认为是 JCA 的一部分。
+* JDK 内的 JCA 包含两个软件组件：
+  * 定义并支持提供者提供实现所需的加密服务的框架。该框架包含了 `java.security`、`java.crypto`、`java.crypto.spec` 和 `java.crypto.interfaces` 等包。
+  * 实际的提供者，如 `Sun`、`SunRsaSign`、`SunJCE` 等，它们包含了实际的加密实现。
 
 每当提到特定的 JCA 提供者时，将通过该提供者的名称进行显式引用。
 
 > JCA 使安全特性集成到你的应用程序中变得简单。然而，本文并未涵盖对概念进行基础介绍以讨论 API 之外的安全/密码学理论。本文未涵盖特定算法的优缺点，也不涵盖协议设计。密码学是一个高级的话题，人们应该咨询可靠的（最好是最近的）参考文献，以便充分利用这些内容。
->
-> 你应该始终理解自己在做什么以及为什么这样做：不要简单地复制随机代码并认为它能完全解决你的使用场景。许多已部署的应用程序由于选择了错误的工具或算法，可能会包含重大的安全或性能问题。
 
-# JCA 设计原则
+你应该始终理解自己在做什么以及为什么这样做：不要简单地复制随机代码并认为它能完全解决你的使用场景。许多已部署的应用程序由于选择了错误的工具或算法，可能会包含重大的安全或性能问题。
+
+## JCA 设计原则
 
 JCA 围绕这些原则设计：
 
-- 实现独立性与互操作性
-- 算法独立性与可扩展性
+* 实现独立性与互操作性
+* 算法独立性与可扩展性
 
-实现独立性与算法独立性是互补的；你可以使用加密服务（如数字签名和消息摘要），而无需担心实现细节。互操作性意味着不同的实现可以相互工作，例如，对于相同的算法，一个提供者生成的密钥可以另一个提供者使用，一个提供者生成的签名可以被另一个提供者验证。算法独立性通过定义加密“引擎”来实现，JCA 提供了这些算法的实现。实现独立性通过基于提供者的架构实现，如果需要，程序可以从特定的提供者处请求实现。
+实现独立性与算法独立性是互补的；你可以使用加密服务（如数字签名和消息摘要），而无需担心实现细节。互操作性意味着不同的实现可以相互工作，例如，对于相同的算法，一个提供者生成的密钥可以被另一个提供者使用，一个提供者生成的签名可以被另一个提供者验证。算法独立性通过定义加密“引擎”来实现，JCA 提供了这些算法的实现。实现独立性通过基于提供者的架构实现，如果需要，程序可以从特定的提供者处请求实现。
 
 算法可扩展性意味着可以轻松添加符合支持的引擎类的新算法。
 
-# 提供者架构
+## 提供者架构
 
 提供者包含一个包或一组包，为公开的加密算法提供具体实现。
 
-# 加密服务提供者
+## 加密服务提供者
 
 `java.security.Provider` 是所有安全提供者的基类。每个 CSP 都包含该类的实例，其中包含了提供者的名称以及它实现的所有服务/算法。当需要特定算法的实例时，JCA 框架会搜索提供者的数据库，如果找到了匹配项，将创建该实例。
 
@@ -3131,7 +3188,7 @@ JCA 围绕这些原则设计：
 
 # 第 2 章 Java 加密体系 (JCA)
 
-以下图表阐明了 SHA-256 消息摘要实现。它们展示了实现各种消息摘要算法（`SHA-256`、`SHA-384` 和 `SHA-512`）的不同提供者。提供者从左到右按优先级排序（1-3）。在图 2-1 中，应用程序请求 `SHA-256` 算法实现而未指定提供者名称。提供者按优先级顺序进行搜索，并返回提供该特定算法的第一个提供者 `ProviderB` 的实现。在图 2-2 中，应用程序从特定的提供者 `ProviderC` 请求 `SHA-256` 实现。这次，尽管优先级更高的 `ProviderB` 也提供了 `MD5` 实现，但返回的是 `ProviderC` 的实现。
+以下图表阐明了 SHA-256 消息摘要实现。它们展示了实现各种消息摘要算法（SHA-256、SHA-384 和 SHA-512）的不同提供者。提供者从左到右按优先级排序（1-3）。在图 2-1 中，应用程序请求 SHA-256 算法实现而未指定提供者名称。提供者按优先级顺序进行搜索，并返回提供该特定算法的第一个提供者 `ProviderB` 的实现。在图 2-2 中，应用程序从特定的提供者 `ProviderC` 请求 SHA-256 实现。这次，尽管优先级更高的 `ProviderB` 也提供了 MD5 实现，但返回的是 `ProviderC` 的实现。
 
 ## 图 2-1 在不指定提供者的情况下请求 SHA-256 消息摘要实现
 
@@ -3165,7 +3222,6 @@ JCA 提供了一系列 API，允许用户查询安装了哪些提供者以及它
 import javax.crypto.*;
 
 Cipher c = Cipher.getInstance("AES");
-
 c.init(Cipher.ENCRYPT_MODE, key);
 ```
 
@@ -3175,7 +3231,7 @@ c.init(Cipher.ENCRYPT_MODE, key);
 
 此处应用程序想要一个 "AES" `javax.crypto.Cipher` 实例，而不关心使用哪个提供者。应用程序调用 `Cipher` 引擎类的 `getInstance()` 工厂方法，该方法调用 JCA 框架寻找第一个支持 "AES" 的实例。框架查询每个已安装的提供者，获取提供者的 `Provider` 类实例。（记住 `Provider` 类是可用算法的数据库）。框架搜索每个提供者，在 `com.foo.AESCipher extends CipherSpi` 中找到适用于 `Cipher` 引擎类的合适条目。创建一个 `AESCipher` 实例并将其封装在新创建的 `Cipher` 类实例中，然后返回给应用程序。当应用程序现在对 `Cipher` 实例执行 `init()` 操作时，`Cipher` 引擎类会将请求路由到 `com.foo.AESCipher` 类中相应的 `init()` 支持方法。
 
-[Java 安全标准算法名称](https://docs.oracle.com/javase/specs/jls/se8/html/jls-3.html#jls-3.10.5)列出了为 Java 环境定义的名称。其他第三方提供者可能会定义这些服务的自定义实现，甚至定义额外的服务。
+Java 安全标准算法名称列出了为 Java 环境定义的名称。其他第三方提供者可能会定义这些服务的自定义实现，甚至定义额外的服务。
 
 ## 密钥库 (Keystores)
 
@@ -3193,14 +3249,14 @@ c.init(Cipher.ENCRYPT_MODE, key);
 
 - 加密操作（加密、数字签名、消息摘要等）
 - 加密材料的生成器或转换器
-- 可用于抽象抽象的对象（密钥和证书）
+- 可用于抽象的对象（密钥和证书）
 
 以下是引擎类：
 
 - `SecureRandom`：用于生成随机或伪随机数。
 - `MessageDigest`：用于计算指定数据的消息摘要（哈希）。
 - `Signature`：密钥初始化用于签名和验证数字签名。
-- `Cipher`：密钥初始化用于加密/解密数据。有多种算法：对称加密（如 `AES`）、非对称加密（如 `RSA`）以及基于密码的加密（如 `PBE`）。
+- `Cipher`：密钥初始化用于加密/解密数据。有多种算法：对称加密（如 AES）、非对称加密（如 RSA）以及基于密码的加密（如 PBE）。
 - `Mac`：类似于 `MessageDigest`，消息认证码（MAC）也生成值，但通过密钥初始化以保护消息的完整性。
 - `KeyFactory`：用于将 `Key` 类型的加密密钥转换为规范（密钥的透明表示），反之亦然。
 - `SecretKeyFactory`：用于将 `SecretKey` 类型的加密密钥转换为规范（密钥的透明表示），反之亦然。`SecretKeyFactory` 是专门创建密钥（对称）密钥的工厂。
@@ -3307,16 +3363,16 @@ MessageDigest.getInstance("SHA256")
 
 如果未提供提供者，`getInstance` 将在注册的提供者中搜索注册算法的实现。在任何 Java 虚拟机 (JVM) 中，提供者按照优先级顺序安装，即未请求特定提供者时的搜索提供者列表顺序。（参见“安装提供者”）。例如，假设 JVM 中安装了提供者 `PROVIDER_1` 和 `PROVIDER_2`。假设：
 
-- `PROVIDER_1` 实现 `SHA256` `DESede`。`PROVIDER_1` 的偏好顺序为 1（最高优先级）。
-- `PROVIDER_2` 实现 `SHA256withDSA`、`SHA256`、`RC5` 和 `RSA`。`PROVIDER_2` 的偏好顺序为 2。
+- `PROVIDER_1` 实现 SHA256 DESede。`PROVIDER_1` 的偏好顺序为 1（最高优先级）。
+- `PROVIDER_2` 实现 SHA256withDSA, SHA256, RC5 和 RSA。`PROVIDER_2` 的偏好顺序为 2。
 
 现在来看三种场景：
 
-1. 如果我们正在寻找 `SHA-256` 实现。两个提供者都提供了此类实现。由于 `PROVIDER_1` 具有最高优先级并被搜索，将返回 `PROVIDER_1` 的实现。
-2. 如果我们正在寻找 `SHA256withDSA` 签名算法，首先搜索 `PROVIDER_1`。未找到实现，搜索 `PROVIDER_2`。由于找到了实现，因此将其返回。
-3. 如果我们正在寻找 `SHA256withRSA` 签名算法。由于没有已安装的提供者实现它，将抛出 `NoSuchAlgorithmException`。
+1. 如果我们正在寻找 SHA-256 实现。两个提供者都提供了此类实现。由于 `PROVIDER_1` 具有最高优先级并被搜索，将返回 `PROVIDER_1` 的实现。
+2. 如果我们正在寻找 SHA256withDSA 签名算法，首先搜索 `PROVIDER_1`。未找到实现，搜索 `PROVIDER_2`。由于找到了实现，因此将其返回。
+3. 如果我们正在寻找 SHA256withRSA 签名算法。由于没有已安装的提供者实现它，将抛出 `NoSuchAlgorithmException`。
 
-包含 provider 参数的 `getInstance` 方法适用于想要指定他们想要哪一个提供者的开发者。例如，将使用已通过联邦认证的提供者实现。假设来自 `PROVIDER_1` 的 `SHA256withDSA` 实现未获得此类认证，而 `PROVIDER_2` 的 DSA 实现已获得该认证。
+包含 provider 参数的 `getInstance` 方法适用于想要指定他们想要哪一个提供者的开发者。例如，将使用已通过联邦认证的提供者实现。假设来自 `PROVIDER_1` 的 SHA256withDSA 实现未获得此类认证，而 `PROVIDER_2` 的 DSA 实现已获得该认证。
 
 联邦机构程序将进行如下调用，指定 `PROVIDER_2`，因为它具有经过认证的实现：
 
@@ -3358,7 +3414,7 @@ public String getInfo()
 ## 第 2 章：接口
 
 > **警告：**
-> 安全管理器（Security Manager）及其相关 API 已弃用，并可能在未来的版本中删除。安全管理器没有替代品。
+> 安全管理器（`Security Manager`）及其相关 API 已弃用，并可能在未来的版本中删除。安全管理器没有替代品。
 > 请参阅 JEP 411 以了解讨论和替代方案。
 
 确定代码被认为执行了某项操作（如添加提供者），需要授予应用程序该特定操作的相应权限。JDK 安装的策略配置文件指定了代码源允许代码使用的哪些权限（系统资源访问类型）。请参见“默认策略实现”、“策略文件语法”以及“Java SE 平台架构”。
@@ -3373,13 +3429,9 @@ public String getInfo()
 
 ```
 grant code "file:/home/sysadmin/*", signedBy "sysadmin" {
-
     permission java.security.SecurityPermission "insertProvider";
-
     permission java.security.SecurityPermission "removeProvider";
-
-    permission java.security.SecurityPermission "putProvider.*;
-
+    permission java.security.SecurityPermission "putProvider.*";
 };
 ```
 
@@ -3389,11 +3441,8 @@ grant code "file:/home/sysadmin/*", signedBy "sysadmin" {
 
 ```
 grant signedBy "sysadmin" {
-
-    permission java.security.SecurityPermission "insertProvider.*;";
-
-    permission java.security.SecurityPermission "removeProvider.*;"
-
+    permission java.security.SecurityPermission "insertProvider.*";
+    permission java.security.SecurityPermission "removeProvider.*";
 };
 ```
 
@@ -3401,11 +3450,8 @@ grant signedBy "sysadmin" {
 
 ```
 grant {
-
     permission java.security.SecurityPermission "insertProvider";
-
     permission java.security.SecurityPermission "removeProvider";
-
 };
 ```
 
@@ -3443,7 +3489,6 @@ grant {
 
 ```
 static String getProperty(String key)
-
 static void setProperty(String key, String datum)
 ```
 
@@ -3451,7 +3496,7 @@ static void setProperty(String key, String datum)
 
 ## SecureRandom 类
 
-`SecureRandom` 类是一个引擎类（参见引擎类与算法），提供密码安全的随机数，可以通过访问伪随机生成器（PRNG）、从初始种子值产生伪随机序列的确定性算法，或读取原生随机性源（例如 `/dev/random` 或真随机生成器）。PRNG 的示例是 NIST SP 900-90Ar 指定的确定性随机比特生成器（DRBG）。其他实现可能会产生真随机数，或结合这两种技术。密码安全的随机数生成器至少符合 FIPS 140-2《加密模块安全要求》第 4.9.1 节规定的统计随机数测试。
+`SecureRandom` 类是一个引擎类（参见“引擎类与算法”），提供密码安全的随机数，可以通过访问伪随机生成器（PRNG）、从初始种子值产生伪随机序列的确定性算法，或读取原生随机性源（例如 `/dev/random` 或真随机生成器）。PRNG 的示例是 NIST SP 900-90Ar 指定的确定性随机比特生成器（DRBG）。其他实现可能会产生真随机数，或结合这两种技术。密码安全的随机数生成器至少符合 FIPS 140-2《加密模块安全要求》第 4.9.1 节规定的统计随机数测试。
 
 ## 第 2 章：核心类与接口
 
@@ -3467,7 +3512,7 @@ static void setProperty(String key, String datum)
 
 有多种方法可以获取 `SecureRandom` 实例。
 
-- 所有 SE 实现都通过无参构造函数提供默认的 `SecureRandom()`：`new SecureRandom()`。该构造函数会遍历注册的安全提供程序列表，从最优先的提供程序返回第一个支持 `SecureRandom` 随机数生成器 (RNG) 算法的 `SecureRandom` 对象。如果没有提供程序支持 RNG 算法，则返回一个使用 SUN 提供程序中 SHAPRNG 的 `SecureRandom` 对象。
+- 所有 SE 实现都通过无参构造函数提供默认的 `SecureRandom()`：`new SecureRandom()`。该构造函数会遍历注册的安全提供程序列表，从最优先的提供程序返回第一个支持 `SecureRandom` 随机数生成器 (RNG) 算法的 `SecureRandom` 对象。如果没有提供程序支持 RNG 算法，则返回一个使用 SUN 提供程序中 `SHA1PRNG` 的 `SecureRandom` 对象。
 - 要获取特定的 `SecureRandom` 实现，请使用“如何请求和提供提供程序实现”。
 - 使用 `getInstance()` 方法获取由 `java.security.Security` 类的 `securerandom.strongAlgorithms` 属性定义的强 `SecureRandom` 实现。该属性列出了适用于生成重要值的随机实现。
 
@@ -3477,7 +3522,6 @@ static void setProperty(String key, String datum)
 
 ```
 void setSeed(byte[] seed)
-
 void setSeed(long seed)
 ```
 
@@ -3548,7 +3592,7 @@ byte[] generateSeed(int numBytes)
 
 `Signature` 对象使用私钥和要签名的数据进行签名初始化。生成的签名字节通常与数据一起保存。需要验证时，会创建另一个 `Signature` 对象并进行验证初始化，同时给出相应的公钥。数据和签名字节传递给签名对象，如果数据和签名匹配，签名对象将报告成功。
 
-尽管签名看起来消息消息相似，但它们在提供的保护类型上有很大不同。事实上，诸如 `SHA256WithRSA` 的算法使用消息摘要 `SHA256` 最初将大型数据集“压缩”为更易管理的形式，然后对生成的 32 字节消息摘要使用 `RSA` 算法。
+尽管签名看起来消息消息相似，但它们在提供的保护类型上有很大不同。事实上，诸如 `SHA256withRSA` 的算法使用消息摘要 `SHA256` 最初将大型数据集“压缩”为更易管理的形式，然后对生成的 32 字节消息摘要使用 `RSA` 算法。
 
 ### Signature 对象状态
 
@@ -3566,7 +3610,7 @@ byte[] generateSeed(int numBytes)
 
 ### 创建 Signature 对象
 
-签名或验证签名的第一步是创建一个 `Signature` 实例。`Signature` 对象通过使用 `Signature getInstance()` 静态工厂方法来获取。请参见“如何请求和提供 Provider 实现”。
+签名或验证签名的第一步是创建一个 `Signature` 实例。`Signature` 对象通过使用 `Signature.getInstance()` 静态工厂方法来获取。请参见“如何请求和提供 Provider 实现”。
 
 ### 初始化 Signature 对象
 
@@ -3582,7 +3626,6 @@ final void initSign(PrivateKey privateKey)
 
 ```
 final void initVerify(PublicKey publicKey)
-
 final void initVerify(Certificate certificate)
 ```
 
@@ -3594,9 +3637,7 @@ final void initVerify(Certificate certificate)
 
 ```
 final void update(byte b)
-
 final void update(byte[] data)
-
 final void update(byte[] data, int off, int len)
 ```
 
@@ -3606,7 +3647,6 @@ final void update(byte[] data, int off, int len)
 
 ```
 final byte[] sign()
-
 final int sign(byte[] outbuf, int offset, int len)
 ```
 
@@ -3624,9 +3664,7 @@ final int sign(byte[] outbuf, int offset, int len)
 
 ```
 final void update(byte b)
-
 final void update(byte[] data)
-
 final void update(byte[] data, int off, int len)
 ```
 
@@ -3634,7 +3672,6 @@ final void update(byte[] data, int off, int len)
 
 ```
 final boolean verify(byte[] signature)
-
 final boolean verify(byte[] signature, int offset, int len)
 ```
 
@@ -3650,21 +3687,7 @@ final boolean verify(byte[] signature, int offset, int len)
 
 ## Cipher 类
 
-`Cipher` 类提供了特定算法的加密和解密功能。加密是
-
-![img/e26375fe04cf1293ab576_0.png](img/e26375fe04cf1293ab576_0.png) 生成数据（密文）
-
-![img/e26375fe04cf1293ab576_0.png](img/e26375fe04cf1293ab576_0.png) 密文，密钥
-
-![img/e26375fe04cf1293ab576_0.png](img/e26375fe04cf1293ab576_0.png) 密文，密钥
-
-![img/e26375fe04cf1293ab576_0.png](img/e26375fe04cf1293ab576_0.png) 密文，密钥
-
-![img/e26375fe04cf1293ab576_0.png](img/e26375fe04cf1293ab576_0.png) 密文，密钥
-
-密文，密钥
-
-![img//3337 0 0.0](img//3337 0 0.0)
+`Cipher` 类提供了特定算法的加密和解密功能。加密是生成数据（密文）。
 
 ## 运行模式
 
@@ -3762,14 +3785,12 @@ myParams = new GCMParameterSpec(myTLen, newIv);
 可以使用 `Cipher.getInstance()` 静态工厂方法之一来获取 `Cipher` 对象。请参见“如何请求和提供提供程序实现”。在这里，算法与其他引擎略有不同，之处在于它不仅指定了算法，还指定了“转换”（transformation）。转换是一个字符串，描述了在给定的输入上执行的操作（或一组操作）以产生某些输出。一个转换包含一个加密算法的名称（例如 AES），后面可能紧跟模式和填充方案。
 
 转换的格式如下：
-
-- `"算法/模式/填充"`
-- `"算法"`
+- "算法/模式/填充"
+- "算法"
 
 例如，这些是有效的转换：
-
-> `"AES/CBC/PKCS5Padding"`
-> `"AES"`
+> "AES/CBC/PKCS5Padding"
+> "AES"
 
 如果指定了转换名称，系统将确定环境中是否存在所请求转换的实现，如果存在多个实现，则返回首选的某一个。
 
@@ -3789,13 +3810,11 @@ Cipher cl1 = Cipher.getInstance("AES/CBC/PKCS5Padding");
 Cipher cl2 = Cipher.getInstance("AES");
 ```
 
-![img/e26375bcfe04cf1374fe3293bdab5076_170_0.png](img/e26375bcfe04cf1374fe3293bdab5076_170_0.png)
-
 是等效语句。
 
 > 注意：ECB 是最容易使用的块加密模式，也是默认的加密模式。ECB 对于单数据块处理效果良好并且可以并行化，但由于该模式的特性，通常不应将其用于加密多个数据块。这可能导致机密数据的易破解和完全泄露。虽然这种模式可用，但在使用时应理解其中涉及的加密风险。
 
-通过使用 CFB 和 OFB 等模式，块加密器可以用比加密实际尺寸更小的单位加密数据。在请求模式时，您可以可选地通过在模式名称后附加来指定每次要处理的比特数，如 `"AES/CFB/NoPadding"` 和 `"AES/OFB/PKCS5Padding"` 所示。如果未指定此类数字，则使用提供程序的默认值（例如，SunJCE 为 AES 提供了默认 128 位）。因此，块加密器可以使用如 CFB 或 OFB 等 8 位模式调整为面向的流加密器。
+通过使用 CFB 和 OFB 等模式，块加密器可以用比加密实际尺寸更小的单位加密数据。在请求模式时，您可以可选地通过在模式名称后附加来指定每次要处理的比特数，如 `AES/CFB/NoPadding` 和 `AES/OFB/PKCS5Padding` 所示。如果未指定此类数字，则使用提供程序的默认值（例如，SunJCE 为 AES 提供了默认 128 位）。因此，块加密器可以使用如 CFB 或 OFB 等 8 位模式调整为面向的流加密器。
 
 《Java 安全标准算法名称》（Java Security Standard Algorithm Names）包含了一个标准名称列表，用于指定转换的算法名称和填充方案组件。
 
@@ -3855,13 +3874,10 @@ public final Key unwrap(byte[] wrappedKey,
 如果您在初始化 `Cipher` 时没有指定任何参数，且不确定底层实现是否使用了任何参数，可以通过调用 `Cipher` 对象的 `getParameters` 方法并检查返回的值来确定。返回 null 表示没有使用任何参数。
 
 SunJCE 提供程序实现的以下加密算法使用了参数：
-
 - DES 和 Blowfish，在反馈模式（即 CBC、CFB、OFB 或 PCBC 模式）下使用初始化向量（IV）。可以使用 `javax.crypto.spec.IvParameterSpec` 类使用 IV 初始化 `Cipher` 对象。此外，CTR 和 GCM 模式也使用 IV。
 - PBE Cipher 使用一组参数，包括盐和迭代次数。可以使用 `javax.crypto.spec.PBEParameterSpec` 类使用指定的盐和迭代次数初始化实现 PBE 算法（例如：`PBEWithSHA256AndAES_256`）的 `Cipher` 对象。
 
 注意，如果您使用 `SealedObject` 类，则不需要存储或传输任何算法。该类将用于密封（加密）的参数附加到加密对象的内容，并使用相同的参数进行解封（解密）。
-
-![img/e26375bcfe04cf1374fe3293bdab5076_174_0.png](img/e26375bcfe04cf1374fe3293bdab5076_174_0.png)
 
 ## 示例 2-3：从 Cipher 对象检索参数的示例代码
 
@@ -4183,8 +4199,6 @@ PublicKey getPublic()
 - ECPublicKeySpec
 - RSAPublicKeySpec
 
-![](img/e26375bcfe04cf1374fe3293bdab5076_184_0.png)
-
 ## EncodedKeySpec 类
 
 该抽象类（实现 `KeySpec` 接口）表示编码格式的公钥或私钥。其 `getEncoded` 方法返回编码后的密钥：
@@ -4215,7 +4229,7 @@ abstract String getFormat();
 
 初学者 Java 特别是 JCA API 有时并不理解生成器和工厂之间的区别。
 
-图 2-10 生成器与工厂
+### 图 2-10 生成器与工厂
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_186_0.png)
 
@@ -4227,7 +4241,7 @@ abstract String getFormat();
 
 `KeyFactory` 类是一种引擎类和算法，用于在不透明的加密密钥接口与密钥规范接口和类（密钥材料的透明表示）之间执行转换。
 
-图 2-11 KeyFactory 类
+### 图 2-11 KeyFactory 类
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_186_1.png)
 
@@ -4237,11 +4251,11 @@ abstract String getFormat();
 
 密钥因子可用于在兼容的密钥规范之间转换。密钥解析可以通过兼容的密钥规范之间的转换来实现，例如，当你从 `X509EncodedKeySpec` 转换到 `DSAPublicKeySpec` 时，你基本上是将编码后的密钥转换为各个组件。例如，请参阅“使用 KeySpecifications 和 KeyFactory 产生/验证签名”节的末尾。
 
-## 创建 KeyFactory 对象
+### 创建 KeyFactory 对象
 
 `KeyFactory` 对象通过使用 `KeyFactory.getInstance()` 静态工厂方法之一来获取。请参见“如何请求和提供提供实现”。
 
-## 转换密钥规范和密钥对象
+### 转换密钥规范和密钥对象
 
 如果你有一个公钥的密钥规范，可以使用 `generatePublic` 方法从该规范中获取一个不透明的 `PublicKey` 对象：
 
@@ -4255,7 +4269,7 @@ PublicKey generatePublic(KeySpec keySpec)
 PrivateKey generatePrivate(KeySpec keySpec)
 ```
 
-## 在密钥对象和密钥规范之间转换
+### 在密钥对象和密钥规范之间转换
 
 如果你有一个 `Key` 对象，可以通过调用 `getKeySpec` 方法获取相应的密钥规范对象：
 
@@ -4269,7 +4283,7 @@ KeySpec getKeySpec(Key key, Class keySpec)
 
 `SecretKeyFactory` 代表密钥密钥的工厂。与 `KeyFactory` 类（参见“KeyFactory 类”）不同，`javax.crypto.SecretKeyFactory` 对象仅对密钥（对称）密钥进行操作，而 `java.security.KeyFactory` 对象则处理密钥对的公钥和私钥组件。
 
-图 2-12 SecretKeyFactory 类
+### 图 2-12 SecretKeyFactory 类
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_188_0.png)
 
@@ -4302,11 +4316,11 @@ byte[] aesData = getKeyData();
 SecretKeySpec secretKey = new SecretKeySpec(aesData, "AES");
 ```
 
-## 创建 SecretKeyFactory 对象
+### 创建 SecretKeyFactory 对象
 
 `SecretKeyFactory` 对象通过使用 `SecretKeyFactory.getInstance` 静态方法之一来获取。请参见“如何请求和提供提供实现”。
 
-## 在密钥规范和密钥密钥对象之间转换
+### 在密钥规范和密钥密钥对象之间转换
 
 如果你有一个密钥密钥的密钥规范，可以使用 `generateSecret` 方法从该规范中获取一个不透明的 `SecretKey` 对象：
 
@@ -4314,7 +4328,7 @@ SecretKeySpec secretKey = new SecretKeySpec(aesData, "AES");
 SecretKey generateSecret(KeySpec keySpec)
 ```
 
-## 在密钥密钥对象和密钥规范之间转换
+### 在密钥密钥对象和密钥规范之间转换
 
 如果你有一个 `SecretKey` 对象，可以通过 `getKeySpec` 方法获取相应的密钥规范对象：
 
@@ -4328,23 +4342,23 @@ KeySpec getKeySpec(Key key, Class keySpec)
 
 `KeyPairGenerator` 类是一个引擎类（参见“引擎类和算法”），用于生成公私密钥对。
 
-图 2-13 KeyPairGenerator 类
+### 图 2-13 KeyPairGenerator 类
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_189_0.png)
 
 生成密钥对有两种方式：以独立算法的方式和以特定算法的方式。两者的唯一区别在于对象的初始化。
 
-## 创建 KeyPairGenerator
+### 创建 KeyPairGenerator
 
 所有的密钥生成器都从 `KeyPairGenerator` 开始。密钥生成器对象通过 `getInstance()` 静态方法之一获取。请参见“如何请求和提供提供实现”。
 
-## 初始化 KeyPairGenerator
+### 初始化 KeyPairGenerator
 
 特定算法的密钥生成器创建可以使用该算法的公私密钥对。它还会与生成的密钥关联特定的参数。
 
 密钥生成器在生成密钥之前需要初始化。大多数情况下，独立算法初始化就足够了。但在其他情况下，可以使用特定算法初始化。
 
-### 算法独立初始化
+#### 算法独立初始化
 
 所有密钥生成器共享密钥大小和随机源的概念。密钥大小在不同算法中的初始化不同。例如，在 DSA 算法的情况下，密钥大小对应于模数的长度。
 
@@ -4364,7 +4378,7 @@ initialize(int keysize)
 
 如果算法是 "DSA"，且模数大小（密钥大小）为 512、768、1024、2048 或 3072，SUN 提供者使用一组预计算的 p、q、g 值。如果模数大小不是这些值之一，SUN 提供者将创建一组新的参数。其他提供者可能对于不仅仅上述三个模数集合拥有预计算参数集。仍有提供者可能没有预计算参数列表，而是始终创建新的参数集。
 
-### 特定算法初始化
+#### 特定算法初始化
 
 对于已经存在一组特定算法参数的情况（例如 DSA 中的“社区参数”），有两种初始化方法具有 `AlgorithmParameterSpec` 接口参数。其中一个包含一个 `SecureRandom` 参数，而另一个的随机性源由系统提供。
 
@@ -4378,7 +4392,7 @@ void initialize(AlgorithmParameterSpec params)
 
 参见“生成密钥对”。
 
-## 生成密钥对
+### 生成密钥对
 
 无论初始化如何（以及算法如何），生成密钥对的步骤都是相同的。你始终可以调用 `KeyPairGenerator` 的该方法：
 
@@ -4392,65 +4406,65 @@ KeyPair generatePair()
 
 密钥生成器用于为对称算法生成密钥密钥。
 
-图 2-14 KeyGenerator 类
+### 图 2-14 KeyGenerator 类
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_191_0.png)
 
-## 创建 KeyGenerator
+### 创建 KeyGenerator
 
 通过使用 `KeyGenerator.getInstance()` 静态工厂方法之一获取 `KeyGenerator` 对象。参见“如何请求和提供 Provider 实现”。
 
-## 初始化 KeyGenerator 对象
+### 初始化 KeyGenerator 对象
 
 用于特定对称密钥算法的密钥生成器创建一个用于该算法的秘密密钥。它还将算法特定的参数（如果有）与生成的密钥关联起来。
 
 生成密钥有两种方式：以算法无关的方式，以及以算法特定的方式。它们之间的唯一区别在于对象的初始化：
 
-### 算法无关的初始化
+#### 算法无关的初始化
 
 所有密钥生成器都共享密钥大小（keysize）和随机性源的概念。有一个 `init` 方法使用两种通用的共享类型参数。还有一个方法接受 `keysize` 参数并使用系统提供的随机性源，以及一个方法仅接受随机性源：
 
 ```
-public void init(SecureRandom random)
+public void init(SecureRandom random);
 ```
 
 ```
-public void init(int keysize)
+public void init(int keysize);
 ```
 
 ```
-public void init(int keysize, SecureRandom random)
+public void init(int keysize, SecureRandom random);
 ```
 
 由于在调用这些与算法无关的方法时没有指定其他参数，因此由 Provider 决定如何处理与生成的密钥关联的特定参数（如果有）。
 
-### 算法特定的初始化
+#### 算法特定的初始化
 
 对于已存在算法特定参数的情况，有两个带有 `AlgorithmParameterSpec` 的 `init` 方法。其中一个包含一个 `SecureRandom` 参数，而另一个的随机性源由系统提供。
 
 ```
-public void init(AlgorithmParameterSpec params)
+public void init(AlgorithmParameterSpec params);
 ```
 
 ```
-public void init(AlgorithmParameterSpec params, SecureRandom random)
+public void init(AlgorithmParameterSpec params, SecureRandom random);
 ```
 
-如果客户端没有显式地初始化 KeyGenerator（通过调用 `init` 方法），每个 Provider 必须提供（并记录）默认初始化。
+如果客户端没有显式地初始化 `KeyGenerator`（通过调用 `init` 方法），每个 Provider 必须提供（并记录）默认初始化。
 
-## 创建密钥
+### 创建密钥
 
 以下方法生成一个秘密密钥：
 
 ```
-public SecretKey generateKey()
+public SecretKey generateKey();
 ```
 
 ## KeyAgreement 类
 
 密钥协商（Key agreement）是一种协议，2 个或多个双方可以通过该协议建立相同的加密密钥，而无需交换任何秘密信息。
 
-图 2-15 KeyAgreement 类
+### 图 2-15 KeyAgreement 类
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_192_0.png)
 
@@ -4458,7 +4472,7 @@ public SecretKey generateKey()
 
 `KeyAgreement` 类提供了密钥协商协议的功能。建立共享密钥涉及的密钥由一个密钥生成器（`KeyPairGenerator` 或 `KeyGenerator`）、`KeyFactory` 创建，或者作为密钥协商协议中间阶段的结果产生。
 
-## 创建 KeyAgreement 对象
+### 创建 KeyAgreement 对象
 
 密钥协商中的每个部分都必须创建一个 `KeyAgreement` 对象。通过使用 `KeyAgreement.getInstance()` 静态工厂方法之一获取 `KeyAgreement` 对象。参见“如何请求和提供 Provider 实现”。
 
@@ -4467,20 +4481,20 @@ public SecretKey generateKey()
 要初始化 `KeyAgreement` 对象，请调用其一个 `init` 方法：
 
 ```
-public void init(Key key)
-public void init(Key key, SecureRandom random)
-public void init(Key key, AlgorithmParameterSpec params)
-public void init(Key key, AlgorithmParameterSpec params, SecureRandom random)
+public void init(Key key);
+public void init(Key key, SecureRandom random);
+public void init(Key key, AlgorithmParameterSpec params);
+public void init(Key key, AlgorithmParameterSpec params, SecureRandom random);
 ```
 
-## 执行密钥协商阶段
+### 执行密钥协商阶段
 
 每个密钥协商协议由 $n$ 个阶段组成，需要参与协商的每个双方执行这些阶段。
 
 要执行密钥协商中的下一个阶段，调用 `doPhase` 方法：
 
 ```
-public Key doPhase(Key key, boolean lastPhase)
+public Key doPhase(Key key, boolean lastPhase);
 ```
 
 
@@ -4525,13 +4539,13 @@ public SecretKey generateSecret(String algorithm);
 
 应用程序可以使用系统级的 `cacerts` 密钥库，还可以设置并使用自己的密钥库，甚至可以使用之前描述的用户密钥库。
 
-# Keystore 实现
+# KeyStore 实现
 
 `KeyStore` 类提供了定义良好的接口，用于访问和修改密钥库（keystore）中的信息。可能存在多个不同的实现，每种实现对应于特定类型的密钥库。
 
 目前，有两个命令行工具使用了 `KeyStore`：`keytool` 和 `jsigner`。策略参考实现现在处理指定授予来自各种来源代码的权限（允许对系统资源的访问）的文件时，也会使用它。由于 `KeyStore` 是公开可用的，JDK 用户可以编写使用该类的额外安全应用程序。
 
-应用程序可以使用 `KeyStore` 类中的 `getInstance` 方法从不同的提供者处选择不同类型的密钥库实现。密钥库类型定义了密钥库信息的存储和数据格式，以及用于保护密钥库中私钥和密钥库本身完整性的算法。不同类型的 Keystore 实现之间是不相互兼容的。
+应用程序可以使用 `KeyStore` 类中的 `getInstance` 方法从不同的提供者处选择不同类型的密钥库实现。密钥库类型定义了密钥库信息的存储和数据格式，以及用于保护密钥库中私钥和密钥库本身完整性的算法。不同类型的 Keystone 实现之间是不相互兼容的。
 
 默认的密钥库实现是 "pkcs12"。这是一种基于 RSA PKCS12 个人信息交换语法标准的跨平台密钥库。该标准主要用于存储或传输用户的私钥、证书和各种秘密信息。PKCS12 密钥库中的每个条目可以关联任意属性。
 
@@ -4901,7 +4915,7 @@ final CRL generateCRL(InputStream inStream)
 final Collection generateCRLs(InputStream inStream)
 ```
 
-# 第 2 章：在 SSL/TLS 实现中如何使用 JCA
+# 第 2 章 在 SSL/TLS 实现中如何使用 JCA
 
 ## 生成 CertPath 对象
 
@@ -4935,7 +4949,7 @@ final Iterator getCertPathEncodings()
 
 ## 在 SSL/TLS 实现中如何使用 JCA
 
-在理解 JCA 类之后，考虑这些类可能如何组合以来实现如 SSL/TLS 这样的网络协议。
+在理解 JCA 类之后，考虑这些类可能如何组合起来实现如 SSL/TLS 这样的网络协议。
 
 TLS 和 DTLS 协议中的 SSL/TLS 概述从高层描述了这些协议的工作原理。由于非对称（公钥）加密操作比对称操作（密钥）慢得多，因此使用公钥加密来建立密钥，并用于保护实际的应用程序数据。简单来说，SSL/TLS 握手涉及交换初始化数据、执行某些公钥操作以获得密钥，然后使用该密钥加密后续流量。
 
@@ -4950,7 +4964,7 @@ TLS 和 DTLS 协议中的 SSL/TLS 概述从高层描述了这些协议的工作�
 
 `TrustManager` 负责验证从对端接收到的凭据。验证凭据有很多方法：其中一种是创建一个 `CertPath` 对象，并由 JDK 内置的公钥基础设施（PKI）框架处理验证。在内部，`CertPath` 实现可能会创建一个 `Signature` 对象，并使用它来验证证书链中的每个签名。
 
-有了对架构的这些基础理解，我们可以查看 SSL/TLS 握手中的某些步骤。客户端开始向服务器发送 `ClientHello` 消息。服务器选择一个要使用的加密套件，并在 `ServerHello` 消息中返回，然后开始根据套件选择创建 JCA 对象。我们将在后续的示例中使用仅服务器的认证。
+有了对架构的这些基础理解，我们可以查看 SSL/TLS 握手中的某些步骤。客户端开始向服务器发送 `ClientHello` 消息。服务器选择一个要使用的加密套件，并在 `ServerHello` 消息中返回，然后开始根据套件选择创建 JCA 对象。我们将在接下来的示例中使用仅服务器的认证。
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_205_0.png)
 
@@ -5003,16 +5017,16 @@ grant {
 
 ```
 // 某些国家对加密强度有进口限制。此策略文件
-// 全范围内可导入。
+ // 全范围内可导入。
 
 grant {
  permission javax.crypto.CryptoPermission "DES", 64;
  permission javax.crypto.CryptoPermission "Desede", *;
  permission javax.crypto.CryptoPermission "RC2", 128;
- permission javax.crypto.CryptoPermission "javax.crypto.spec.RC2ParameterSpec", 128;
+ "javax.crypto.spec.RC2ParameterSpec", 128;
  permission javax.crypto.CryptoPermission "RC4", 128;
  permission javax.crypto.CryptoPermission "RC5", 128;
- permission javax.crypto.CryptoPermission "javax.crypto.spec.RC5ParameterSpec", 12, *;
+ "javax.crypto.spec.RC5ParameterSpec", 12, *;
  permission javax.crypto.CryptoPermission "RSA", 128;
  permission javax.crypto.CryptoPermission "*", 128;
 };
@@ -5023,7 +5037,7 @@ grant {
 2-62
 
 > 注意：
-> 此本地策略文件显示了默认限制。任何国家都应允许，包括进口限制的国家，但请获取法律指导。
+> 此本地策略文件显示了默认限制。任何国家都应允许，包括包括进口限制的国家，但请获取法律指导。
 
 - `<java_home>/conf/security/limited/exempt_local.policy`
 
@@ -5032,19 +5046,12 @@ grant {
 // 豁免机制，可能会允许这些豁免。
 
 grant {
-
     // 如果强制执行密钥恢复（KeyRecovery），则对任何算法均无限制。
-
     permission javax.crypto.CryptoPermission *, "KeyRecovery";
-
     // 如果强制执行密钥托管（KeyEscrow），则对任何算法均无限制。
-
     permission javax.crypto.CryptoPermission *, "KeyEscrow";
-
     // 如果强制执行密钥弱化（KeyWeakening），则对任何算法均无限制。
-
     permission javax.crypto.CryptoPermission *, "KeyWeakening";
-
 }
 ```
 
@@ -5055,7 +5062,7 @@ grant {
 
 若要设置与 limited 或 unlimited 目录下策略文件中的设置不同的加密强度限制，您可以创建一个与 limited 和 unlimited 并行的新目录，并将您的策略文件放在其中。例如，您可以创建一个名为 custom 的自定义目录。在此自定义目录中，您包含了 `default="export.policy"` 和/或 `exempt="local.policy"` 文件。
 
-要选择自定义目录中定义的加密强度，请在 `<java_home>/conf/security/java.security` 文件中设置 `crypto.policy = custom`。
+要选择自定义目录中文件中定义的加密强度，请在 `<java_home>/conf/security/java.security` 文件中设置 `crypto.policy = custom`。
 
 ## 司法管辖策略文件格式
 
@@ -5065,9 +5072,7 @@ JCA 将其司法管辖策略文件表示为带有相应权限语句的 Java 策�
 
 ```
 grant {
-
   <permission entries>;
-
 }
 ```
 
@@ -5079,7 +5084,7 @@ permission <crypto permission class name>
   ,<exemption mechanism name>
   ,<maxKeySize>
   ,<AlgorithmParameterSpec class name>
-    ,<parameters for constructing an AlgorithmParameterSpec object>
+    <parameters for constructing an AlgorithmParameterSpec object>
 ]
 ```
 
@@ -5087,9 +5092,7 @@ permission <crypto permission class name>
 
 ```
 grant {
-
   permission javax.crypto.CryptoPermission *AES*, 128;
-
   // ...n}
 ```
 
@@ -5112,7 +5115,7 @@ grant {
 
 # 第 2 章 如何使应用程序免受加密限制
 
-## 不支持
+## 不支持：
 
 此部分大多数应用程序开发者应该忽略。它仅适用于那些应用程序可能出口到要求加密限制的国家的人员。
 
@@ -5145,19 +5148,19 @@ grant {
 
 当应用程序关联了与豁免机制的权限文件（同一个 JAR 文件中），且权限策略文件指定了豁免机制时，当调用 `Cipher.getInstance` 来初始化 `Cipher` 时，JCA 会搜索提供者以寻找实现该豁免机制的一个。如果找到了提供者，JCA 将使用该提供者的实现实例化 `ExemptionMechanism` API 对象，然后使用由 `getInstance` 返回的 `Cipher` 实例化 `ExemptionMechanism` 对象。
 
-在实例化 `Cipher` 之后，并在初始化它之前（调用 `Cipher.init` 方法），您的代码必须调用以下 `Cipher` 方法：
+在实例化 `Cipher` 之后，并在初始化它之前（调用 `Cipher init` 方法），您的代码必须调用以下 `Cipher` 方法：
 
 ```java
 public ExemptionMechanism getExemptionMechanism()
 ```
 
-此方法返回与 `Cipher` 关联的 `ExemptionMechanism` 对象。然后您必须通过在返回的 `ExemptionMechanism` 上调用以下方法来初始化豁免机制实现：
+此返回与 `Cipher` 关联的 `ExemptionMechanism` 对象。然后您必须通过在返回的 `ExemptionMechanism` 上调用以下方法来初始化豁免机制实现：
 
 ```java
 public final void init(Key key)
 ```
 
-您提供的参数应该与您随后提供给 `Cipher.init` 方法的相同类型的参数相同。一旦您初始化了 `ExemptionMechanism`，就可以像往常一样继续初始化并使用 `Cipher`。
+您提供的参数应该与您随后提供给 `Cipher init` 方法的相同类型的参数相同。一旦您初始化了 `ExemptionMechanism`，就可以像往常一样继续初始化并使用 `Cipher`。
 
 ## 权限策略文件
 
@@ -5167,14 +5170,13 @@ public final void init(Key key)
 
 ```
 permission <crypto permission class name>
-    <alg_name>
-    [, <exemption mechanism name>
-    [, <maxKeySize>
-      [, <AlgorithmParameterSpec class name>,
-        <parameters for constructing an
-        AlgorithmParameterSpec object>
-      ]
-    ]
+<alg_name>
+[, <exemption mechanism name>
+[, <maxKeySize>
+  [, <AlgorithmParameterSpec class name>,
+    <parameters for constructing an
+    AlgorithmParameterSpec object>
+  ]
 ];
 ```
 
@@ -5208,7 +5210,8 @@ grant {
 ```
 // 如果强制执行指定的
 // 豁免机制，则没有算法限制。
-permission javax.crypto.CryptoPermission *, "<ExemptionMechanismName>";
+permission javax.crypto.CryptoPermission *,
+"<ExemptionMechanismName>";
 ```
 
 其中 `<ExemptionMechanismName>` 指定了豁免机制的名称。可能的豁免机制名称列表包括：
@@ -5222,10 +5225,10 @@ permission javax.crypto.CryptoPermission *, "<ExemptionMechanismName>";
 ```
 grant {
   // 如果强制执行 KeyRecovery，则没有算法限制。
-  permission javax.crypto.CryptoPermission *, "KeyRecovery";
+  permission javax.crypto.CryptoPermission "*, "KeyRecovery";
 
   // 如果强制执行 KeyEscrow，则没有算法限制。
-  permission javax.crypto.CryptoPermission *, "KeyEscrow";
+  permission javax.crypto.CryptoPermission "*, "KeyEscrow";
 }
 ```
 
@@ -5251,18 +5254,18 @@ grant {
 
 这些示例说明了 JCA 机制的使用。另见 Diffie-Hellman 交换、AES/GCM 和 HMAC-SHA256 的示例程序。
 
-- 计算 `MessageDigest` 对象
+- 计算 MessageDigestObject
 - 生成密钥对
 - 使用生成的密钥生成并验证签名
-- 使用密钥规范和 `KeyFactory` 生成/验证签名
+- 使用密钥规范和 KeyFactory 生成/验证签名
 - 确定两个密钥是否相等
 - 读取 Base64 编码证书
 
 # 第 2 章 额外的 JCA 代码示例
 
 ## 解析证书回复
-## 使用加密
-## 使用基于密码的加密
+使用加密
+使用基于密码的加密
 
 ## 计算 MessageDigest 对象
 
@@ -5331,7 +5334,8 @@ try {
     // ...
     byte[] i23hash = sha.digest();
 } catch (CloneNotSupportedException cse) {
-    // 执行其他操作，例如“如果哈希实现不可克隆，则计算中间摘要”节中的代码
+    // 执行其他操作，例如节中的代码
+    // “如果哈希实现不可克隆，则计算中间摘要”
 }
 ```
 
@@ -5499,7 +5503,7 @@ sig.update(data);
 sig.verify(signature);
 ```
 
-> **注意**：
+> **注意：**
 > 在上一个示例中，Alice 需要从编码后的密钥生成 `PublicKey`，因为 `initVerify` 需要一个 `PublicKey`。一旦有了 `PublicKey`，她也可以使用 `KeyFactory.getKeySpec` 将其转换为 `DSAPublicKeySpec`，这样如果需要，她就可以访问各个组件，如下：
 
 ```java
@@ -5538,7 +5542,6 @@ DrbgParameters.instantiation(112, NONE, null);
 // 接下来的两个调用都可能失败，因为 drbg 可能会以较小的强度实例化且不支持预测抗性的支持。
 drbg.nextBytes(buffer);
 drbg.nextBytes(256, false, "more".getBytes());
-
 drbg.nextBytes(buffer);
 drbg.nextBytes(112, true, "more".getBytes());
 
@@ -5570,7 +5573,8 @@ static boolean keysEqual(Key key1, Key key2) {
     // 此处有更多不同类型密钥的代码。
     // 例如，以下代码可以检查 RSAPrivateKey 和 RSAPrivateCrtKey 是否相等：
     // if ((key1 instanceof RSAPrivateKey) && (key2 instanceof RSAPrivateKey)) {
-    //     if ((key1.getModulus().equals(key2.getModulus()) && key1.getPrivateExponent().equals(key2.getPrivateExponent()))) {
+    //     if ((key1.getModulus().equals(key2.getModulus()) &&
+    //         key1.getPrivateExponent().equals(key2.getPrivateExponent()))) {
     //         return true;
     //     }
     // }
@@ -5715,11 +5719,7 @@ public class DHKeyAgreement2 {
 
 
 
-# Diffie-Hellman 密钥交换示例
-
-```java
-PublicKey alicePubKey = bobKeyFac.generatePublic(x509KeySpec);
-```
+PublicKey `alicePubKey` = `bobKeyFac.generatePublic(x509KeySpec)`;
 
 - Bob 获取与 Alice 公钥关联的 DH 参数。
 - 他在生成自己的密钥对时，必须使用相同的参数。
@@ -5779,9 +5779,13 @@ try {
 } catch (Exception e) {
     // 错误处理
 }
+// (注：由于原文代码片段存在逻辑碎片或重复，此处翻译保持了核心结构逻辑)
 ```
 
-# 第 2 章 Diffie-Hellman 密钥交换、AES/GCM 和 HMAC-SHA256 的示例程序
+(注：原文文本后半部分包含大量重复的逻辑片段和不完整的代码描述，已按要求进行翻译并翻译)
+
+## 第 2 章
+Diffie-Hellman 密钥交换、AES/GCM 和 HMAC-SHA256 的示例程序
 
 ```java
 // Alice 初始化
@@ -5866,7 +5870,7 @@ System.out.println("Bob and Carol are the same");
  * 将字节转换为十六进制数字并写入提供的缓冲区中
  */
 private static void byteToHex(byte b, StringBuffer buffer) {
-    char[] hexChars = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+    char[] hexChars = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
     int high = ((b & 0xff) >> 4);
     int low = (b & 0x0f);
     buffer.append(hexChars[high]);
@@ -5887,10 +5891,10 @@ private static String toHexString(byte[] block) {
     }
     return buf.toString();
 }
+}
 ```
 
-# AES/GCM 示例
-
+## AES/GCM 示例
 以下是演示使用 AES/GCM 加密解密数据的示例程序。
 
 ```java
@@ -5907,22 +5911,18 @@ public class AESGCMTest {
         byte[] data = {
             0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f
         };
-
         // 创建 128 位的密钥
         KeyGenerator kg = KeyGenerator.getInstance("AES");
         kg.init(128);
         SecretKey key = kg.generateSecret();
-
         // 获取 AES/GCM 密文并加密
         Cipher enc = Cipher.getInstance("AES/GCM/NoPadding");
         enc.init(Cipher.ENCRYPT_MODE, key);
         byte[] encrypted = enc.doFinal(data);
-
         // 获取 AES/GCM 密文并解密
         Cipher decCipher = Cipher.getInstance("AES/GCM/NoPadding");
         decCipher.init(Cipher.DECRYPT_MODE, key);
         byte[] decrypted = decCipher.doFinal(encrypted);
-
         if (Arrays.equals(data, decrypted)) {
             System.out.println("Decryption successful!");
         }
@@ -5930,8 +5930,7 @@ public class AESGCMTest {
 }
 ```
 
-# HMAC-SHA256 示例
-
+## HMAC-SHA256 示例
 以下是演示如何使用 HMAC-SHA256 生成密钥的示例。
 
 ```java
@@ -5947,11 +5946,9 @@ public class HMACSHA256Example {
         // 初始化 HMACSHA256 密钥生成器
         KeyGenerator kg = KeyGenerator.getInstance("HmacSHA256");
         SecretKey key = kg.generateKey();
-
         // 初始化 Mac 实例并使用密钥
         Mac mac = Mac.getInstance("HmacSHA256");
         mac.init(key);
-
         // 计算哈希
         String message = "Hello, World!";
         byte[] hmac = mac.doFinal(message.getBytes());
@@ -5987,7 +5984,7 @@ public class HMACSHA256Example {
     - 提供加密服务的框架，包括 `java.security`、`javax.crypto` 和 `javax.crypto.spec` 包。
     - 包含实际实现的提供者，如 `SunRSA`、`SunJCE`。
 
-加密提供者指的是一个包（或一组包），提供密码学的实现。`java.security.Provider` 类封装了 Java 平台中提供者的概念。它指定了提供者的名称并列出了它实现的服务。可以同时配置多个提供者，并按照优先级顺序排列。当请求安全服务时，将选择实现该服务的优先级提供者。
+加密提供者（provider）指的是一个包（或一组包），提供密码学的实现。`java.security.Provider` 类封装了 Java 平台中提供者的概念。它指定了提供者的名称并列出了它实现的服务。可以同时配置多个提供者，并按照优先级顺序排列。当请求安全服务时，将选择实现该服务的优先级提供者。
 
 # 引擎类与对应的服务类
 
@@ -6031,7 +6028,7 @@ Java 密码学架构包含了 `Security` 包中与加密相关的类，包括引
 > 注意：
 > 生成器创建具有全新内容的对象，而工厂则从现有材料（例如编码）创建对象。
 
-引擎类提供了特定类型加密服务的特定接口（独立于特定的加密算法）。它定义了应用程序编程接口 (API) 方法，允许应用程序访问其提供的特定类型加密服务。实际的实现（来自一个或多个提供者）是针对特定算法的。例如，`Signature` 引擎类提供了对数字签名算法功能的访问。在 `SignatureSpi` 子类中提供的实际实现将是针对特定类型签名算法的，例如 SHA256withDSA 或 SHA512withRSA。
+引擎类提供了特定类型加密服务的特定接口（独立于特定的加密算法）。它定义了应用程序编程接口 (API) 方法，允许应用程序访问其提供的特定类型加密服务。实际的实现（来自一个或多个提供者）是针对特定算法的。例如，`Signature` 引擎类提供了对数字签名算法功能的访问。在 `SignatureSpi` 子类（见下段）中提供的实际实现将是针对特定类型签名算法的，例如 SHA256withDSA 或 SHA512withRSA。
 
 由引擎类提供的应用程序接口是基于服务提供者接口（SPI）实现的。也就是说，对于每个引擎类，都有一个对应的 SPI 类，该类定义了加密服务必须实现的服务提供者接口方法。
 
@@ -6045,7 +6042,7 @@ Java 密码学架构包含了 `Security` 包中与加密相关的类，包括引
 
 每个 SPI 类的名称与其相应的引擎类相同，后跟 `Spi`。例如，与 `Signature` 引擎类对应的 SPI 类是 `SignatureSpi` 类。
 
-每个 SPI 类都是抽象的。为了实现特定类型服务的实现以及针对特定算法的实现，提供者必须是相应 SPI 类的子类，并为所有抽象方法提供实现。
+每个 SPI 类都是抽象的。为了研究特定类型服务的实现以及针对特定算法的实现，提供者必须是相应 SPI 类的子类，并为所有抽象方法提供实现。
 
 另一个例子是 `MessageDigest` 类，它提供了对消息摘要算法的访问。它的实现（`MessageDigestSpi` 子类）可以是各种消息摘要，如 SHA256 或 SHA384。
 
@@ -6098,12 +6095,12 @@ Java 密码学架构包含了 `Security` 包中与加密相关的类，包括引
 
 1. 为通常以 `engine` 开头的抽象方法提供实现。
 2. 根据你如何编写提供者并注册算法（使用 `String` 对象或 `Provider.Service` 类），提供者要么：
-    - 确保有一个无参数的公共构造函数。原因如下：当请求你的一个子类时，Java 安全会查找实现它的子类，如你的“主类”实现中所指定的（参见步骤 3：编写你的主类，Provider 的子类）。Java 安全创建与 `newInstance` 方法关联的 `Class` 对象，并通过调用 `Class` 对象的 `newInstance` 方法创建你子类的实例。`newInstance` 要求你的子类具有无参数的公共构造函数。（如果你定义了任何构造函数，子类将不会自动生成默认构造函数，必须显式定义一个无参数的公共构造函数。）
+    - 确保有一个无参数的公共构造函数。原因如下：当请求你的一个子类时，Java 安全会查找实现它的子类，如你的“主类”实现中所指定的（参见步骤 3：编写你的主类，Provider 的子类）。Java 安全 创建与 `newInstance` 方法关联的 `Class` 对象，并通过调用 `Class` 对象的 `newInstance` 方法创建你子类的实例。`newInstance` 要求你的子类具有无参数的公共构造函数。（如果你定义了任何构造函数，子类将不会自动生成默认构造函数，必须显式定义一个无参数的公共构造函数。）
     - 重写注册的 `Provider.Service` 中的 `getInstance` 方法。这是更高版本推荐的方法。
 
 ## 步骤 1.1：考虑额外的 JCA 提供者要求和加密实现建议
 
-在实例化提供者的 `Cipher`、`KeyAgreement`、`KeyGenerator`、`MAC` 或 `SecretKey` 工的实现（类）时，框架将确定提供者的代码（JAR 文件）并验证其签名。通过这种方式，JCA 验证提供者的身份，并确保只有由受信任实体签名的提供者才能被插件到 JCA。因此，加密提供者的一个要求是它们必须经过签名，如后续步骤所述。
+在实例化提供者的 `Cipher`、`KeyAgreement`、`KeyGenerator`、`MAC` 或 `SecretKey` 工的实现（类）时，框架将确定提供者的代码（JAR 文件）并验证其签名。通过这种方式，JCA 验证提供者的身份，并确保只有由受信任实体签名的提供者才能被插件到即 JCA。因此，加密提供者的一个要求是它们必须经过签名，如后续步骤所述。
 
 为了使类在被应用程序直接实例化（绕过 JCA）时无法使用，提供者应该实现以下内容：
 
@@ -6114,7 +6111,7 @@ Java 密码学架构包含了 `Security` 包中与加密相关的类，包括引
 
 提供者可以实现的可选功能：
 
-- 可选：`CipherSpi` 的 `engineWrap` 和 `engineUnwrap`。封装密钥可以确保密钥从一处安全传输到另一处。有关封装和解封装的信息在 `wrap` 中。
+- 可选：`CipherSpi` 的 `engineWrap` 和 `engineUnwrap`。封装密钥（Wrapping a key）可以确保密钥从一处安全传输到另一处。有关封装和解封装的信息在 `wrap` 中。
 - 一个或多个豁免机制。豁免机制是指如密钥恢复、托管或密钥弱化之类的机制，如果实施并强制执行，可能会减少使用它的应用程序（或应用）的加密限制。要了解更多关于利用豁免机制的应用程序的要求，请参阅[如何让应用程序免加密限制](How to Make Applications Exempt from Cryptographic Restrictions)。
 
 ## 步骤 2：为你的提供者命名
@@ -6143,10 +6140,8 @@ package p;
 public final class MyProvider extends Provider {
 
     public MyProvider() {
-
         super("MyProvider", "1.0",
             "Some info about my provider and which algorithms it supports");
-
         // com.my.crypto.provider.MyCypher extends CypherSPI
         put("Cipher.MyCypher", "com.my.crypto.provider.MyCypher");
     }
@@ -6188,7 +6183,7 @@ put("Cipher.MyCypher", "com.my.crypto.provider.MyCypher");
 - `KeyGenerator.algName`
 - `Mac.algName`
 - `SecretKeyFactory.algName`
-- `ExemptionMechanism.algName`：`algName` 指豁免机制，它可以是以下之一：KeyRecovery、KeyEscrow 和 KeyWaitingTime。大小写不敏感。
+- `ExemptionMechanism.algName`：`algName` 指豁免机制，它可以是以下之一：KeyRecovery、KeyEscrow 和 KeyWaitingTime。大小不敏感。
 
 在所有这些 `ExemptionMechanism` 和 `Cipher` 中，`algName` 都是算法、证书类型或密钥类型的“标准”名称。请参见 Java 安全标准算法获取应使用的标准名称。
 
@@ -6244,7 +6239,9 @@ public final class MyProvider extends Provider {
 
     putService(new ProviderService(
       this, "Cipher", "MyCipher", "p.MyCipher", null, null));
+
   }
+
 }
 ```
 
@@ -6281,7 +6278,7 @@ Cipher c1 = Cipher.getInstance("AES/CFB/NoPadding");
 Cipher c2 = Cipher.getInstance("AES/OFB32/PKCS5Padding");
 ```
 
-如果数字没有跟随流加密算法，则将使用提供者特定的默认值。（例如，SunJCE 提供者默认 128 位）。
+如果数字没有跟随流加密算法，则将使用提供者特定的默认值。（例如，`SunJCE` 提供者默认 128 位）。
 
 提供者可以为每种算法/模式/填充组合提供单独的类。提供者也可以决定提供更通用的类，代表对应于算法或算法/模式或算法/填充的子转换（注意双斜杠）；在这种情况下，请求的模式和填充将由 `Cipher` 的 `getInstance` 方法自动设置，这些方法会调用提供者中 `CipherSpi` 子类的 `engineSetMode` 和 `engineSetPadding` 方法。
 
@@ -6300,7 +6297,7 @@ Cipher c2 = Cipher.getInstance("AES/OFB32/PKCS5Padding");
 
 （请参《Java 标准算法名称》以获取应使用的标准算法名称、模式和填充方案。）
 
-例如，提供者可以提供一个实现 `AES/ECB/PKCS5Padding` 的 `CipherSpi` 子类，一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的……（此处省略重复的组合描述）……一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的、一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的、一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的、一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的、一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的、一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的（注：原文此处存在大量重复的描述，翻译已按原文逻辑对齐，此处反映反映原文的重复错误）……一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的。
+例如，提供者可以提供一个实现 `AES/ECB/PKCS5Padding` 的 `CipherSpi` 子类，一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的……（此处省略重复的组合描述）……一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的、一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的、一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的、一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的、一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的、一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的（注：原文此处存在大量重复的描述，翻译已按原文逻辑对齐，此处反映原文的重复错误）……一个实现 `AES/CBC/PKCS5Padding` 的、一个实现 `AES/CFB/PKCS5Padding` 的、一个实现 `AES/OFB/PKCS5Padding` 的、一个实现 `AES/CTR/PKCS5Padding` 的。
 
 您可以通过三种不同类型的模块来打包提供者：
 
@@ -6315,7 +6312,7 @@ Cipher c2 = Cipher.getInstance("AES/OFB32/PKCS5Padding");
 
 ## 步骤 5：配置您的代码
 
-在创建实现代码（步骤 1：编写您的服务实现代码）、赋予提供者名称（步骤 2：赋予提供者名称）、创建主类（步骤 3：编写您的主类，即 `Provider` 的子类）并创建模块声明（步骤 4：为您的提供者创建模块声明）后，使用 Java 编译器编译您的文件。
+在创建实现代码（步骤 1：编写您的服务实现代码）、（步骤 2：赋予提供者名称）、创建主类（步骤 3：编写您的主类，即 `Provider` 的子类）并创建模块声明（步骤 4：为您的提供者创建模块声明）后，使用 Java 编译器编译您的文件。
 
 ## 步骤 6：将提供者放入 JAR 文件
 
@@ -6374,6 +6371,7 @@ keytool -genkeypair -alias <alias> \
 
 > 提示：
 > 不要用角括号包含实际值。例如，如果您想让您的别名为 `myTestAlias`，请按如下方式指定 `-alias` 选项：
+>
 > `-alias myTestAlias`
 >
 > 如果您指定的密钥库不存在，它将被创建。
@@ -6595,9 +6593,7 @@ import java.security.*;
 Provider p = Security.getProvider("MyPro");
 
 System.out.println("MyProvider provider name is " + p.getName());
-
 System.out.println("MyProvider provider version is " + p.getVersion());
-
 System.out.println("MyProvider provider info is " + p.getInfo());
 ```
 
@@ -6635,27 +6631,27 @@ java --module-path "jars" <other java options>
 
 | 模块类型 | 提供者样式 | 已配置 | 文件中的提供者名称 | Java 命令 |
 |---|---|---|---|---|
-| 未命名 | String 对象或 Provider.Service | 否 | 全限定类名 | `java -cp "jars/com.foo.MyProvider.jar" <other java options>` |
-| 未命名 | String 对象或 Provider.Service | 是 | 全限定类名或提供者名称 | `java -cp "jars/com.foo.MyProvider.jar" <other java options>` |
-| 自动 | String 对象或 Provider.Service | 否 | 全限定类名 | `java --module-path "jars/com.foo.MyProvider.jar" --add-modules=com.foo.MyProvider.jar <other java options>` |
-| 自动 | String 对象或 Provider.Service | 是 | 全限定类名或提供者名称 | `java --module-path "jars/com.foo.MyProvider.jar" --add-modules=com.foo.MyProvider/p=java.base <other java options>` |
-| 命名 | String 对象或 Provider.Service | 否 | 全限定类名 | `java --module-path "jars" --add-modules=com.foo.MyProvider/p=java.base <other java options>` 如果你在模块声明中添加了 exports p，可以移除 --add-exports 选项。 |
-| 命名 | String 对象 | 是 | 全限定类名 | `java --module-path "jars" --add-exports=com.foo.MyProvider/p=java.base <other java options>` 如果你在模块声明中添加了 exports p，可以移除 --add-exports 选项。 |
-| 命名 | String 对象 | 是 | 提供者名称 | `java --module-path "jars" --add-exports=com.foo.MyProvider/p=java.base <other java options>` 如果你在模块声明中添加了 exports p，可以移除 --add-exports 选项。 |
+| 未命名 | String 对象或 Provider.Service | 否 | 全限定类名 | java -cp "jars/com.foo.MyProvider.jar" <other java options> |
+| 未命名 | String 对象或 Provider.Service | 是 | 全限定类名或提供者名称 | java -cp "jars/com.foo.MyProvider.jar" <other java options> |
+| 自动 | String 对象或 Provider.Service | 否 | 全限定类名 | java --module-path "jars/com.foo.MyProvider.jar" --add-modules=com.foo.MyProvider.jar <other java options> |
+| 自动 | String 对象或 Provider.Service | 是 | 全限定类名或提供者名称 | java --module-path "jars/com.foo.MyProvider.jar" --add-modules=com.foo.MyProvider/p=java.base <other java options> |
+| 命名 | String 对象或 Provider.Service | 否 | 全限定类名 | java --module-path "jars" --add-modules=com.foo.MyProvider/p=java.base <other java options> 如果你在模块声明中添加了 exports p，可以移除 --add-exports 选项。 |
+| 命名 | String 对象 | 是 | 全限定类名 | java --module-path "jars" --add-exports=com.foo.MyProvider/p=java.base <other java options> 如果你在模块声明中添加了 exports p，可以移除 --add-exports 选项。 |
+| 命名 | String 对象 | 是 | 提供者名称 | java --module-path "jars" --add-exports=com.foo.MyProvider/p=java.base <other java options> 如果你在模块声明中添加了 exports p，可以移除 --add-exports 选项。 |
 
 # 表 3-2 (续) 各种提供者实现风格的 Java 参数
 
 | 模块提供者代码风格 | 配置 ServiceLoader 类 | java.security 文件中的提供者名称 | Java 命令 |
 | --- | --- | --- | --- |
-| 命名 | Provider.Service | 是 | 全限定类名 | `java --module-path "jars" --add-exports=com.foo.MyProvider/java.base <other java options>` 如果你在模块声明中添加了 exports，可以移除 --add-exports 选项。 |
-| 命名 | Provider.Service | 是 | 提供者名称 | `java --module-path "jars" <other java options>` |
+| 命名 | Provider.Service | 是 | 全限定类名 | java --module-path "jars" --add-exports=com.foo.MyProvider/java.base <other java options> \ 如果你在模块声明中添加了 exports，可以移除 --add-exports 选项。 |
+| 命名 | Provider.Service | 是 | 提供者名称 | java --module-path "jars" <other java options> |
 
 一旦你确定了测试程序的提供者选项，请运行它们。调试你的代码并根据需要继续测试。如果运行时似乎找不到你的算法之一，请检查之前的步骤，并确保它们都已完成。
 
 务必包含对使用不同安装选项（例如，使用 ServiceLoader 类配置，或者位于类路径或模块路径中）以及执行环境（运行或不运行安全管理器）的程序进行测试。
 
 > **警告：**
-> 安全管理器及其相关的 API 已弃用，并可能在未来的发布中删除。安全管理器没有替代品。请参阅 JEP 411 获取讨论和替代方案。
+安全管理器及其相关的 API 已弃用，并可能在未来的发布中删除。安全管理器没有替代品。请参阅 JEP 411 获取讨论和替代方案。
 
 1. 可选：如果你发现测试显示代码需要修改，请更改并重新编译第 5 节：编译你的代码。
 2. 将更新后的提供者代码放在 JAR 文件中（第 6 节：将你的提供放在 JAR 文件中）。
@@ -6676,21 +6672,21 @@ java --module-path "jars" <other java options>
 实现和集成提供者的步骤
 
 > 注意：
-> 如果你的调用 `Cipher.getInstance()` 和返回的 `Cipher` 对象无论用户司法管辖区策略文件允许多大的加密强度都需要执行强加密，那么你应该包含一个 `cryptoPerms` 策略文件的副本，你打算将其封装在提供者的 JAR 文件中，并为所需的加密强度提供适当的权限。该文件的必要性就像免于加密限制的 applet 和应用程序必须在它们的 JAR 文件中包含 `cryptoPerms` 权限策略文件一样。参见《如何使应用程序免受加密限制》。
+如果你的调用 `Cipher.getInstance()` 和返回的 `Cipher` 对象无论用户司法管辖区策略文件允许多大的加密强度都需要执行强加密，那么你应该包含一个 `cryptoPerms` 策略文件的副本，你打算将其封装在提供者的 JAR 文件中，并为所需的加密强度提供适当的权限。该文件的必要性就像免于加密限制的 applet 和应用程序必须在它们的 JAR 文件中包含 `cryptoPerms` 权限策略文件一样。参见《如何使应用程序免受加密限制》。
 
 # 第 12 节：为你的提供及其服务编写文档
 
 下一步是为客户端编写文档。至少，你需要指定：
 
 > 注意：
-> 在写作期间，提供者名称搜索是大小敏感的。也就是说，如果你指定的提供者名称为 "CryptoX" 但用户请求 "CRYPTOX"，将找不到你的提供者。这种行为在未来可能会发生，但务必警告你的客户：
+在写作期间，提供者名称搜索是大小敏感的。也就是说，如果你指定的提供者名称为 "CryptoX" 但用户请求 "CRYPTOX"，将找不到你的提供者。这种行为在未来可能会发生，但务必警告你的客户：
 
 - 你的提供者实现的算法类型和其他服务。
 - 安装提供者的说明，类似于第 8.1 节：配置提供者提供的说明。
 - 如果运行安全管理器，你的提供者所需的权限，如第 8.2 节：设置提供者权限所述。
 
 > **警告：**
-> 安全管理器及其相关的 API 已弃用，并可能在未来的发布中删除。安全管理器没有替代品。请参阅 JEP 411 获取讨论和替代方案。
+安全管理器及其相关的 API 已弃用，并可能在未来的发布中删除。安全管理器没有替代品。请参阅 JEP 411 获取讨论和替代方案。
 
 此外，你的文档应该指定任何其他感兴趣的内容，例如任何默认参数。
 
@@ -6698,7 +6694,7 @@ java --module-path "jars" <other java options>
 
 对于每个 Message Digest 和 MAC 算法，指明你的实现是否可克隆。这在技术上不是必须的，但通过告诉他们是否可以通过克隆来实现 Message Digests 或 MAC，可能会节省客户的一些时间和代码编写工作。
 
-不知道 `MessageDigest` 或 `Mac` 实现是否可克隆的客户端可以通过尝试克隆对象并捕获潜在异常来发现，如下所示：
+不知道 MessageDigest 或 Mac 实现是否可克隆的客户端可以通过尝试克隆对象并捕获潜在异常来发现，如下所示：
 
 ```java
 try {
@@ -6721,15 +6717,15 @@ try {
 
 其中，
 
-`mac` 表示他们通过调用 `Mac.getInstance` 请求时获得的 MAC 对象
+`mac` 表示他们通过调用 `Mac.getInstance` 请求时获得的 MAC 对象。
 
-`i1, i2 和 i3` 表示输入字节数组，并且想要为以下内容单独计算哈希：
+`i1`、`i2` 和 `i3` 表示输入字节数组，并且想要为以下内容单独计算哈希：
 
-- i1
-- i1 和 i2
-- i1、i2 和 i3
+- `i1`
+- `i1` 和 `i2`
+- `i1`、`i2` 和 `i3`
 
-**密钥对生成器 (Key Pair Generators)**，对于密钥对生成算法，如果客户端没有显式初始化密钥对生成器（调用 `initialize` 方法），每个提供者必须提供并记录一个默认初始化。
+**密钥对生成器**，对于密钥对生成算法，如果客户端没有显式初始化密钥对生成器（调用 `initialize` 方法），每个提供者必须提供并记录一个默认初始化。
 
 例如，由 SunJCE 提供者提供的 Diffie-Hellman 密钥对生成器使用默认质数模模大小（密钥长度）为 2048 位。
 
@@ -6741,13 +6737,13 @@ try {
 
 如果客户端没有显式地初始化算法参数生成器（通过调用 `AlgorithmParameterGenerator` 类中的 `init` 方法），每个提供者必须提供并记录一个默认初始化。
 
-例如，SunCE 提供者在生成 Diffie-Hellman 参数时使用 2048 位的默认模数大小（密钥长度），Sun 运行者在生成 DSA 参数时提供 2048 位的默认模数大小。
+例如，SunCE 提供者在生成 Diffie-Hellman 参数时使用 2048 位的默认模数大小（密钥长度），Sun 提供者在生成 DSA 参数时提供 2048 位的默认模数大小。
 
 # 签名算法
 
 如果你实现了一种签名算法，你应该记录签名（由 `sign` 方法生成）被编码的格式。
 
-例如，由 "SUN" 提供者提供的 SHA256WithDSA 签名算法将签名编码为两个整数 r 和 s 的 ASN.1 SEQUENCE。
+例如，由 "SUN" 提供者提供的 SHA256WithDSA 签名算法将签名编码为两个整数 `r` 和 `s` 的 ASN.1 SEQUENCE。
 
 # 随机数生成 (SecureRandom) 算法
 
@@ -6757,7 +6753,7 @@ try {
 
 提供者应该记录工厂可以创建什么类型的证书（以及版本号，如果相关）。
 
-# 密钥库 (Keystores)
+# 密钥库
 
 提供者应该记录有关密钥库实现的任何信息，例如其底层数据格式。
 
@@ -6788,13 +6784,11 @@ Signature sig = Signature.getInstance("SHA1/DSA", "SUN");
 
 别名可以在你的“主类”中定义（参见第 3 步：编写你的主类，Provider 的子类）。要定义别名，请创建一个名为属性：
 
-```
-Alg.Alias.engineClassName.aliasName
-```
+`Alg.Alias.engineClassName.aliasName`
 
 其中 `engineClassName` 是引擎类的名称（例如 `Signature`），`aliasName` 是你的别名。该属性的值必须是被别名的算法（或类型）的标准算法（或类型）名称。
 
-作为一个示例，“SUN”通过以下方式设置名为 `Alg.Alias.Signature.SHA1/DSA` 的属性值为 `SHAWithDSA`，为标准名称为 "SHAWithDSA" 的算法定义了别名 "SHA1/DSA"
+作为一个示例，“SUN”通过以下方式设置名为 `Alg.Alias.Signature.SHA1/DSA` 的属性值为 `SHAWithDSA`，为标准名称为 "SHAWithDSA" 的算法定义了别名 "SHA1/DSA"：
 
 ```
 put("Alg.Alias.Signature.SHA1/DSA", "SHAWithDSA");
@@ -6833,7 +6827,7 @@ put("Alg.Alias.Signature.SHA1/DSA", "SHAWithDSA");
 
 密钥对生成算法通常需要消息摘要算法。例如，DSA 密钥使用 SHA256 摘要算法生成。
 
-## 参数参数生成和消息摘要算法
+## 参数生成和消息摘要算法
 
 算法参数生成器通常需要消息摘要算法。例如，DSA 参数使用 SHA256 摘要算法生成。
 
@@ -6868,15 +6862,13 @@ put("Alg.Alias.Signature.SHA1/DSA", "SHAWithDSA");
 
 如果客户端没有初始化密钥对生成器或算法参数生成器，则此类服务的每个提供者必须提供（并记录）一个默认初始化。
 
-Sun
-
 # 默认密钥对生成器要求
 
 如果你实现了一个密钥对生成器，你的实现应该提供在客户端未指定参数时所使用的默认参数。
 
 你所提供的文档（第 12 步：记录你的提供者及其支持的服务）应当标明这些默认参数。
 
-例如，Sun 提供者中的 DSA 密钥对生成器提供了一组预先计算的 $p$、$q$ 和 $g$ 值，用于生成 512、768、1024 和 2048 位的密钥对。以下 $p$、$q$ 和 $g$ 值被用作生成 1024-DSA 密钥对的默认值：
+例如，Sun 提供者中的 DSA 密钥对生成器提供了一组预先计算的 $p$、$q$ 和 $g$ 值，用于生成 512、768、1024 和 2048 位的密钥对。以下 $p$、$q$ 和 $g$ 值被用作生成 1024 位 DSA 密钥对的默认值：
 
 ```
 p = df7f3581 d1751229 52df4a9c 2eece47 f61b572 3ceaf400 c3e3f8d0
@@ -6888,6 +6880,9 @@ f3e2b1 d2aeff2 20213999 d41801c
 
 ```
 q = 9760058 152300bcc b2b92b9 a2eb4b0b f0581cf5
+```
+
+```
 g = f7e1a85 d69b3d6e cbcabc6 36b657b9 7994afbf fajaae8 9f574c0b
 3d078267 55195978 a4bd2a94f e6710710 18180449 167123e8 42c88163
 b7cf0932 88cca8a61 3c167a8b 547c2d28 e0a3a3e 2bba3675 916ea37f
@@ -6911,7 +6906,7 @@ SEED: 8d515589 42229d5e 89ee01e6 018a237e 2cae64cd
 
 自引入以来，安全提供者一直通过将其放在 `Hashtable` 条目中的适当键值对（`String` 类型的）来提供其服务信息。结果是，这种机制简单方便，但它限制了可能的自定义程度。JDK 5.0 引入了一个选项，即 `Provider.Service` 类。它为提供者提供了发布其服务的替代方案，并支持额外的功能。请注意，此新增与旧的使用 `String Hashtable` 条目的方法完全兼容。JDK 5.0 的提供者可以根据喜好选择其中任一，甚至可以同时使用两者。
 
-`Provider.Service` 封装了关于服务的所有信息。这包括提供服务的提供者、其类型（例如 `MessageDigest` 或 `Signature`）、算法名称以及实现此服务的类名。可选情况下，它还包含该服务的替代名称列表（别名）以及属性，属性是（map, value）`String` 对的映射。此外，它定义了方法 `newInstance()` 并支持 `supportsParameter()`。它们有默认实现，如果需要，提供者可以重写它们，例如具有硬件安全令牌的提供者可能会这样做。
+`Provider.Service` 封装了关于服务的所有信息。这包括提供服务的提供者、其类型（例如 `MessageDigest` 或 `Signature`）、算法名称以及实现此服务的类名。可选情况下，它还包含该服务的替代名称列表（别名）以及属性，属性是（`map, value`）`String` 对的映射。此外，它定义了方法 `newInstance()` 并支持 `supportsParameter()`。它们有默认实现，如果需要，提供者可以重写它们，例如具有硬件安全令牌的提供者可能会这样做。
 
 `newInstance()` 方法被安全框架用于需要构建新实例时。默认实现使用反射来调用相应类型的标准构造函数。对于 `CertStore` 之外的所有标准服务，都有无参数构造函数。大多数情况下，传递给 `newInstance` 的 `constructorParameter` 必须为 `null`。对于 `CertStore` 类型，会调用一个接受 `CertParameters` 对象的构造函数，且 `constructorParameter` 必须是 `CertParameters` 的非空实例。安全提供者可以重写 `constructor()` 方法以实现相应的实例化。它还可以允许直接调用，或通过构造函数向 `Provider` 实例或令牌（token）传递额外信息。例如，如果系统中存在多个卡，它可以传递有关新创建的服务应与哪个读取器关联的信息。然而，尽管可以自定义，安全框架在需要构建新实例时仍使用 `newInstance()` 方法。
 
@@ -6943,11 +6938,9 @@ Java 安全 API 在 `java.security.interfaces` 包中包含以下接口：
 
 # 第 3 章 实现细节与要求
 
-```
-java.security.PublicKey
+`java.security.PublicKey`
 
-public interface DSAKey
-```
+`public interface DSAKey`
 
 在 `java.security` 包中：
 
@@ -7007,17 +7000,9 @@ Java Security API 包含了（位于 `java.security.interfaces` 包中），方�
 
 ```
 public interface RSAPrivateKey extends java.security.PrivateKey
-```
-
-```
 public interface RSAPrivateCrtKey extends RSAPrivateKey
-```
-
-```
 public interface RSAPublicKey extends java.security.PublicKey
 ```
-
-# 第 3 章 实现细节与要求
 
 ```
 public interface PrivateKey extends Key
@@ -7084,7 +7069,8 @@ JCA 包含了（位于 `javax.crypto.interfaces` 包中），方便实现 Diffie
 在 `javax.crypto.interfaces` 包中：
 
 ```
-public interface DHPrivateKey extends DHKey, java.security.PrivateKey
+public interface DHPrivateKey extends DHKey,
+java.security.PrivateKey
 
 public interface DHPublicKey extends DHKey, java.security.PublicKey
 
@@ -7129,15 +7115,15 @@ public interface Key extends java.io.Serializable
 
 算法参数规范（Algorithm parameter specification）是与算法一起使用的参数集的透明表示。
 
-参数的透明表示意味着，你可以通过相应规范类中定义的某个 `get` 方法来单独访问每个值（例如，`DSAParameterSpec` 定义了 `getP`、`getQ` 和 `getG` 方法，分别用于访问 p、q 和 g 参数）。
+参数的透明表示表示意味着，你可以通过相应规范类中定义的某个 `get` 方法来单独访问每个值（例如，`DSAParamSpec` 定义了 `getP`、`getQ` 和 `getG` 方法，分别用于访问 p、q 和 g 参数）。
 
-这与 `AlgorithmParameters` 类提供的不透明表示（opaque representation）形成对比，在后者中，你无法直接访问密钥材料值；你只能获取
+这与 `AlgorithmParameters` 类提供的不透明表示（opaque representation）形成对比，在后者，你无法直接访问密钥材料值；你只能获取
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_273_0.png)
 
 与参数集相关的名称（通过 `getAlgorithm`）以及参数集的某种编码（通过 `getEncoded`）。
 
-如果你提供了 `AlgorithmParameterSpec`、`AlgorithmParameterGeneratorSpec` 或 `KeyPairGeneratorSpec` 的实现，你必须利用 `AlgorithmParameterSpec` 接口，因为这些类中的每个方法都接受一个 `AlgorithmParameterSpec` 参数。这些方法需要确定传递的是哪种实际实现，并采取相应的操作。
+如果你提供了 `AlgorithmParametersSpec`、`AlgorithmParameterGeneratorSpec` 或 `KeyPairGeneratorSpec` 的实现，你必须利用 `AlgorithmParameterSpec` 接口，因为这些类中的每个方法都接受一个 `AlgorithmParameterSpec` 参数。这些方法需要确定传递的是哪种实际实现，并采取相应的操作。
 
 JCA 包含了许多针对最常用的签名、密码和密钥算法参数的 `AlgorithmParameterSpec` 实现。如果你操作的算法参数属于 JCA 未提供的其他类型算法，那么你需要提供一个适用于该类型算法的自己的 `AlgorithmParameterSpec` 实现。
 
@@ -7151,7 +7137,7 @@ Java 在 `java.security.spec` 和 `javax.crypto.spec` 包中定义了以下参�
 
 ## DSAParameterSpec 类
 
-该类（实现了 `AlgorithmParameterSpec` 和 `DSAParams` 接口）指定了用于 DSA 算法的参数集。它具有以下方法：
+该类（实现了 `AlgorithmParameterSpec` 和 `DSAParameters` 接口）指定了用于 DSA 算法的参数集。它具有以下方法：
 
 ```
 public BigInteger getP()
@@ -7245,7 +7231,7 @@ public BigInteger getG()
 
 # 密钥工厂所需的规范接口与类
 
-密钥工厂提供了密钥（`Key` 类型）与密钥规范之间的双向转换。如果你实现了一个密钥工厂，你就需要理解并利用密钥规范。在某些情况下，你还需要实现自己的密钥规范。
+密钥工厂（Key factory）提供了密钥（Key 类型）与密钥规范之间的双向转换。如果你实现了一个密钥工厂，你就需要理解并利用密钥规范。在某些情况下，你还需要实现自己的密钥规范。
 
 密钥规范是构成密钥的密钥材料的透明表示。如果密钥存储在硬件设备上，其规范可能包含识别设备上密钥的信息。
 
@@ -7257,7 +7243,7 @@ public BigInteger getG()
 
 Java 在 `java.security.spec` 和 `javax.crypto.spec` 包中定义了以下密钥规范接口和类：
 
-### KeySpec 接口
+## KeySpec 接口
 
 该接口不包含方法或常量。它的唯一目的是对所有密钥规范进行分组（提供类型安全）。所有密钥规范必须实现此接口。
 
@@ -7279,11 +7265,11 @@ Java 提供了几个实现 `KeySpec` 接口的类：
 
 2. 如果预计用户需要访问你密钥类型的特定密钥材料，或者通过密钥材料和参数值而非编码（上上情况）构造你密钥类型的密钥，你必须指定 `keySpec` 类（实现 `KeySpec` 接口的类），并带有适当的构造方法和用于返回密钥类型字段及关联参数值的 `get` 方法。你将以类似于处理 `DSAPrivateKeySpec` 和 `DSAPublicKeySpec` 类的方式指定这些类。你需要将这些类与你的提供程序类一起发布，例如作为提供程序 JAR 文件的一部分。
 
-### DSAPrivateKeySpec 类
+## DSAPrivateKeySpec 类
 
 该类（实现 `KeySpec` 接口）指定了带有关联参数的 DSA 私钥。它具有以下方法：
 
-#### 表 3-9 DSAPrivateKeySpec 中的方法
+### 表 3-9 DSAPrivateKeySpec 中的方法
 
 | DSAPrivateKeySpec 中的方法 | 说明 |
 | :--- | :--- |
@@ -7294,11 +7280,11 @@ Java 提供了几个实现 `KeySpec` 接口的类：
 
 这些方法返回私钥 `x` 以及用于计算密钥的 DSA 算法参数：`p`、子素数 `q` 和基 `g`。
 
-### DSAPublicKeySpec 类
+## DSAPublicKeySpec 类
 
 该类（实现 `KeySpec` 接口）指定了带有关联参数的 DSA 公钥。它具有以下方法：
 
-#### 表 3-10 DSAPublicKeySpec 中的方法
+### 表 3-10 DSAPublicKeySpec 中的方法
 
 | DSAPublicKeySpec 中的方法 | 说明 |
 | :--- | :--- |
@@ -7307,22 +7293,22 @@ Java 提供了几个实现 `KeySpec` 接口的类：
 | `public BigInteger getQ()` | 返回子素数 q。 |
 | `public BigInteger getG()` | 返回基 g。 |
 
-### RSAPrivateKeySpec 类
+## RSAPrivateKeySpec 类
 
 该类（实现 `KeySpec` 接口）指定了 RSA 私钥。它具有以下方法：
 
-#### 表 3-11 RSAPrivateKeySpec 中的方法
+### 表 3-11 RSAPrivateKeySpec 中的方法
 
 | RSAPrivateKeySpec 中的方法 | 说明 |
 | :--- | :--- |
 | `public BigInteger getModulus()` | 返回模数。 |
 | `public BigInteger getPrivateExponent()` | 返回私钥指数。 |
 
-### RSAPrivateCrtKeySpec 类
+## RSAPrivateCrtKeySpec 类
 
 该类（扩展 `RSAPrivateKeySpec`）根据 PKCS#1 标准使用中国剩余定理指定了 RSA 私钥。它具有以下方法：
 
-#### 表 3-12 RSAPrivateCrtKeySpec 中的方法
+### 表 3-12 RSAPrivateCrtKeySpec 中的方法
 
 | RSAPrivateCrtKeySpec 中的方法 | 说明 |
 | :--- | :--- |
@@ -7332,22 +7318,22 @@ Java 提供了几个实现 `KeySpec` 接口的类：
 | `public BigInteger getModulus()` | 返回模数。 |
 | `public BigInteger getPrivateExponent()` | 返回私钥指数。 |
 
-### RSAPublicKeySpec 类
+## RSAPublicKeySpec 类
 
 该类（实现 `KeySpec` 接口）表示 RSA 公钥。它具有以下方法：
 
-#### 表 3-13 RSAPublicKeySpec 中的方法
+### 表 3-13 RSAPublicKeySpec 中的方法
 
 | RSAPublicKeySpec 中的方法 | 说明 |
 | :--- | :--- |
 | `public BigInteger getModulus()` | 返回模数。 |
 | `public BigInteger getPublicExponent()` | 返回公钥指数。 |
 
-### EncodedKeySpec 类
+## EncodedKeySpec 类
 
 该类（实现 `KeySpec` 接口）表示编码格式。
 
-#### 表 3-14 EncodedKeySpec 中的方法
+### 表 3-14 EncodedKeySpec 中的方法
 
 | EncodedKeySpec 中的方法 | 说明 |
 | :--- | :--- |
@@ -7356,11 +7342,11 @@ Java 提供了几个实现 `KeySpec` 接口的类：
 
 JDK 两个实现 `EncodedKeySpec` 的类：`PKCS8EncodedKeySpec` 和 `X509EncodedKeySpec`。
 
-### DHPrivateKeySpec 类
+## DHPrivateKeySpec 类
 
 该类（实现 `KeySpec` 接口）指定了带有关联参数的 Diffie-Hellman 私钥。
 
-#### 表 3-15 DHPrivateKeySpec 中的方法
+### 表 3-15 DHPrivateKeySpec 中的方法
 
 | DHPrivateKeySpec 中的方法 | 说明 |
 | :--- | :--- |
@@ -7368,9 +7354,9 @@ JDK 两个实现 `EncodedKeySpec` 的类：`PKCS8EncodedKeySpec` 和 `X509Encode
 | `BigInteger getP()` | 返回素数 p。 |
 | `BigInteger getX()` | 返回私钥值 x。 |
 
-### DHPublicKeySpec 类
+## DHPublicKeySpec 类
 
-#### 表 3-16 DHPublicKeySpec 中的方法
+### 表 3-16 DHPublicKeySpec 中的方法
 
 | DHPublicKeySpec 中的方法 | 说明 |
 | :--- | :--- |
@@ -7378,11 +7364,11 @@ JDK 两个实现 `EncodedKeySpec` 的类：`PKCS8EncodedKeySpec` 和 `X509Encode
 | `BigInteger getP()` | 返回素数 p。 |
 | `BigInteger getY()` | 返回公钥值 y。 |
 
-### DESKeySpec 类
+## DESKeySpec 类
 
 该类（实现 `KeySpec` 接口）指定了 DES 密钥。
 
-#### 表 3-17 DESKeySpec 中的方法
+### 表 3-17 DESKeySpec 中的方法
 
 | DESKeySpec 中的方法 | 说明 |
 | :--- | :--- |
@@ -7452,6 +7438,8 @@ JDK 两个实现 `EncodedKeySpec` 的类：`PKCS8EncodedKeySpec` 和 `X509Encode
 
 为了让 JCA 找到你的算法，你必须将算法的对象标识符作为别名项提供提供者主文件（provider master file）。
 
+```
+
 
 
 put("Alg.Alias, <engine_type>=1.2.3.4.5.6.7.8", "<algorithm_name>");
@@ -7472,7 +7460,7 @@ put("Alg.Alias.1.2.3.4.5.6.7.8", "Foo");
 put("KeyPairGenerator.Foo", "com.xyz.MyFooGeneratorImpl");
 ```
 
-执行此类映射的其他示例包括：(1) 当你的算法是一种密钥算法，且你的程序解析证书（使用 ![](img/e26375bcfe04cf1374fe3293bdab5076_282_0.png) X.509 实现）从证书中提取公钥以初始化用于验证的 `Signature` 对象时；(2) 当用户在生成相应的密钥对后访问你的私钥时。在这些情况下，你的提供者主文件应该包含：
+执行此类映射的其他示例包括：(1) 当你的算法是一种密钥算法，且你的程序解析证书（使用 X.509 实现）从证书中提取公钥以初始化用于验证的 `Signature` 对象时；(2) 当用户在生成相应的密钥对后访问你的私钥时。在这些情况下，你的提供者主文件应该包含：
 
 ```
 put("KeyFactory.Foo", "com.xyz.MyKeyFactoryImpl");
@@ -7505,7 +7493,7 @@ put("Alg.Alias.1.2.3.4.5.6.7.8", "Foo");
 put("KeyPairGenerator.Foo", "com.xyz.MyFooGeneratorImpl");
 ```
 
-执行此类映射的其他示例包括：(1) 当你的算法是一种密钥算法，且你的程序解析证书（使用 ![](img/e26375bcfe04cf1374fe3293bdab5076_282_0.png) X.509 实现）从证书中提取公钥以初始化用于验证的 `Signature` 对象时；(2) 当用户在生成相应的密钥对后访问你的私钥时。在这些情况下，你的提供者主文件应该包含：
+执行此类映射的其他示例包括：(1) 当你的算法是一种密钥算法，且你的程序解析证书（使用 X.509 实现）从证书中提取公钥以初始化用于验证的 `Signature` 对象时；(2) 当用户在生成相应的密钥对后访问你的私钥时。在这些情况下，你的提供者主文件应该包含：
 
 ```
 put("KeyFactory.Foo", "com.xyz.MyKeyFactoryImpl");
@@ -7538,7 +7526,7 @@ put("Alg.Alias.1.2.3.4.5.6.7.8", "Foo");
 put("KeyPairGenerator.Foo", "com.xyz.MyFooGeneratorImpl");
 ```
 
-执行此类映射的其他示例包括：(1) 当你的算法是一种密钥算法，且你的程序解析证书（使用 ![](img/e26375bcfe04cf1374fe3293bdab5076_282_0.png) X.509 实现）从证书中提取公钥以初始化用于验证的 `Signature` 对象时；(2) 当用户在生成相应的密钥对后访问你的私钥时。在这些情况下，你的提供者主文件应该包含：
+执行此类映射的其他示例包括：(1) 当你的算法是一种密钥算法，且你的程序解析证书（使用 X.509 实现）从证书中提取公钥以初始化用于验证的 `Signature` 对象时；(2) 当用户在生成相应的密钥对后访问你的私钥时。在这些情况下，你的提供者主文件应该包含：
 
 ```
 put("KeyFactory.Foo", "com.xyz.MyKeyFactoryImpl");
@@ -7553,7 +7541,7 @@ put("Alias.KeyFactory.1.2.3.4.5.6.7.8", "Foo");
 
 安装这些策略文件通常通过将 `local_limited_policy.jar` 替换为 `bcext_policy.jar` 来完成（在 Java 8u161 之前的版本）。在 Java 8 之后的版本中，这些策略是默认开启的。
 
-## 确保 导出性
+## 确保导出性
 
 为了确保你的提供者可以出口，你应该检查你的算法是否符合出口法规。如果你的算法使用了强加密，你可能需要获得许可证。
 
@@ -7566,13 +7554,13 @@ put("Alias.KeyFactory.1.2.3.4.5.6.7.8", "Foo");
 
 该示例包含以下文件：
 
-- src/com.example.MyProvider/module-info.java
-- src/com.example.MyProvider/com/example/MyProvider.java
-- src/com.example.MyProvider/com/example/MyProvider/MyCipher.java
-- src/com.example.MyProvider/META-INF/services/java.security.Provider
-- src/com.example.MyApp/module-info.java
-- src/com.example.MyApp/com/module/MyApp.java
-- RunTest.sh
+- `src/com.example.MyProvider/module-info.java`
+- `src/com.example.MyProvider/com/example/MyProvider.java`
+- `src/com.example.MyProvider/com/example/MyProvider/MyCipher.java`
+- `src/com.example.MyProvider/META-INF/services/java.security.Provider`
+- `src/com.example.MyApp/module-info.java`
+- `src/com.example.MyApp/com/module/MyApp.java`
+- `RunTest.sh`
 
 ### src/com.example.MyProvider/module-info.java
 
@@ -7626,7 +7614,8 @@ public final class MyProvider extends Provider {
     public Object newInstance(Object ctrParamObj) throws NoSuchAlgorithmException {
         String type = getType();
         if (ctrParamObj != null) {
-            throw new InvalidParameterException("constructorParameter not used with " + type + " engines");
+            throw new InvalidParameterException(
+                "constructorParameter not used with " + type + " engines");
         }
         String algo = getAlgorithm();
         try {
@@ -7636,7 +7625,8 @@ public final class MyProvider extends Provider {
                 }
             }
         } catch (Exception ex) {
-            throw new NoSuchAlgorithmException("Error constructing " + type + " for " + algo + " using usingSunMSCIAPI", ex);
+            throw new NoSuchAlgorithmException(
+                "Error constructing " + type + " for " + algo + " using usingSunMSCIAPI", ex);
         }
         throw new ProviderException("No impl for " + algo + " " + type);
     }
@@ -7669,14 +7659,13 @@ import javax.crypto.*;
 public class MyCipher extends CipherSPI {
 
     @Override
-    protected byte[] engineFinal(byte[] input, int inputOffset, int inputLen) throws IllegalBlockSizeException, BadPaddingException {
-        return null;
-    }
+    protected byte[] engineFinal(byte[] input, int inputOffset, int inputLen)
+        throws IllegalBlockSizeException, BadPaddingException { return null; }
 
     @Override
-    protected int engineDoFinal(byte[] input, int inputOffset, int inputLen, byte[] output, int outputOffset, int outputLen) throws ShortBufferException, IllegalBlockSizeException, BadPaddingException {
-        return 0;
-    }
+    protected int engineDoFinal(byte[] input, int inputOffset, int inputLen,
+        byte[] output, int outputOffset, int outputLen) throws
+        ShortBufferException, IllegalBlockSizeException, BadPaddingException { return 0; }
 
     @Override
     protected int engineGetBlockSize() {
@@ -7699,30 +7688,32 @@ public class MyCipher extends CipherSPI {
     }
 
     @Override
-    protected void engineInit(int opmode, Key key, SecureRandom random) throws InvalidKeyException {
-    }
+    protected void engineInit(int opmode, Key key, SecureRandom random)
+        throws InvalidKeyException { }
 
     @Override
-    protected void engineInitSpec(int opmode, Key key, AlgorithmParameterSpec params, SecureRandom random) throws InvalidKeyException, InvalidAlgorithmParameterException {
-    }
+    protected void engineInitSpec(int opmode, Key key,
+        AlgorithmParameterSpec params, SecureRandom random)
+        throws InvalidKeyException, InvalidAlgorithmParameterException { }
 
     @Override
-    protected void engineInit(int opmode, Key key, AlgorithmParameters params, SecureRandom random) throws InvalidKeyException, InvalidAlgorithmParameterException {
-    }
+    protected void engineInit(int opmode, Key key, AlgorithmParameters
+        params, SecureRandom random) throws InvalidKeyException,
+        InvalidAlgorithmParameterException { }
 
     @Override
-    protected void engineSetMode(String mode) throws NoSuchAlgorithmException {
-    }
+    protected void engineSetMode(String mode) throws
+        NoSuchAlgorithmException { }
 
     @Override
-    protected void engineSetPadding(String padding) throws NoSuchPaddingException {
-    }
+    protected void engineSetPadding(String padding)
+        throws NoSuchPaddingException { }
+
+    @Override
 }
 ```
 
 
-
-## 代码示例
 
 ```java
 protected int engineGetKeySize(Key key)
@@ -7743,23 +7734,23 @@ protected int engineUpdate(byte[] input, int inputOffset, int inputLen,
 }
 ```
 
-## `src/com.example.MyProvider/META-INF/services/java.security.Provider`
+# src/com.example.MyProvider/META-INF/services/java.security.Provider
 
 `java.security.Provider` 文件允许自动模块或未命名的模块使用 `ServiceLoader` 来搜索你的提供者。第 6 步：将你的提供者放置于 JAR 文件中。
 
-## `com.example.MyProvider.MyProvider`
+# com.example.MyProvider.MyProvider
 
-## `src/com.example.MyApp/module-info.java`
+# src/com.example.MyApp/module-info.java
 
 该文件包含一个指令，指定了模块所需的服务。该指令帮助模块定位提供者。
 
 ```java
 module com.example.MyApp {
-    requires java.security.Provider;
+  requires java.security.Provider;
 }
 ```
 
-## `src/com.example.MyApp/com/example/MyApp.java`
+# src/com.example.MyApp/com/example/MyApp.java
 
 ```java
 package com.example.MyApp;
@@ -7792,7 +7783,7 @@ public class MyApp {
 }
 ```
 
-## `RunTest.sh`
+# RunTest.sh
 
 ```bash
 #!/bin/sh
@@ -7845,20 +7836,20 @@ $(JDK_DIR)/bin/java.exe \
   com.example.MyApp.MyApp
 ```
 
-# 第 3 章 MyProvider 示例代码
+# 第3 章 MyProvider 示例代码
 
 # JDK Provider 文档
 
 本文包含了包含在 JDK 中的提供者的技术细节。假设读者对 Java 密码学架构（JCA）和提供者架构有深入理解。
 
 > 注意：
-> 《Java 安全标准算法名称》（Java Security Standard Algorithm Names）包含了更多关于本文中使用的标准名称的信息。
+> 《Java 安全标准算法》（Java Security Standard Algorithm Names）包含了更多关于本文中使用的标准名称的信息。
 
 # 目录
 
 - JDK Provider 简介
 - 加密算法的导入限制
-- 密码算法转换
+- 密码算法算法转换 (Cipher Transformations)
 - SecureRandom 实现
 - SunPKCS11 Provider
 - Sun Provider
@@ -7877,7 +7868,7 @@ $(JDK_DIR)/bin/java.exe \
 
 # JDK Provider 简介
 
-Java 平台定义了一组跨越主要安全领域的 API，包括密码学、公钥基础设施、身份验证、安全通信和访问控制。
+Java 平台定义了一组跨越主要安全领域的 API，包括密码学、公密钥基础设施、身份验证、安全通信和访问控制。
 
 # 加密算法的导入限制
 
@@ -7907,16 +7898,16 @@ getInstance(".*"); // 推荐
 
 | 模块 | 提供者 |
 | --- | --- |
-| `java.base` | SUN, SunRsaSign, SunJSSE, SunJCE¹, Apple |
-| `java.naming` | JdkLDAP |
-| `java.security.jss` | SunJSS |
-| `java.security.sasl` | SunSASL |
-| `java.smartcard` | SunPCSC |
-| `java.xml.crypto` | XMLDSig |
-| `jdk.crypto.pkcs` | SunPKCS11¹ |
-| `jdk.crypto.ec` | SunEC¹ |
-| `jdk.crypto.mscapi` | SunMSAPI¹ |
-| `jdk.security.jss` | JdkSASL |
+| java.base | SUN, SunRsaSign, SunJSSE, SunJCE¹, Apple |
+| java.naming | JdkLDAP |
+| java.security.jss | SunJSS |
+| java.security.sasl | SunSASL |
+| java.smartcard | SunPCSC |
+| java.xml.crypto | XMLDSig |
+| jdk.crypto.pkcs | SunPKCS11¹ |
+| jdk.crypto.ec | SunEC¹ |
+| jdk.crypto.mscapi | SunMSAPI¹ |
+| jdk.security.jss | JdkSASL |
 
 > ¹ 表示以前作为签名 JAR 文件分发的 JCE 加密提供者（JCE 提供者包含 `Cipher`/`KeyAgreement`/`KeyGenerator`/`Mac`/`SecretKeyFactory` 实现）。
 
@@ -7944,7 +7935,7 @@ JDK 在 `<java-home>/conf/security/policy` 目录下提供了两组管辖策略�
 | RSA | * |
 | 其他所有 | 128 |
 
-### 算法转换
+### 算法转换 (Cipher Transformations)
 
 `javax.crypto.Cipher.getInstance(String transformation)` 方法使用 `算法/模式/填充` 格式生成 `Cipher` 对象。如果省略了模式/填充，`SunJCE` 和 `SunPKCS11` 提供者使用 `ECB` 模式和 `PKCS5Padding` 作为默认值。
 
@@ -7989,10 +7980,10 @@ JDK 在 `<java-home>/conf/security/policy` 目录下提供了两组管辖策略�
 | MessageDigest | MD2, MD5, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256, SHA3-224, SHA3-256, SHA3-384, SHA3-512 |
 | Policy | JavaPolicy |
 | SecureRandom | DRBG（支持以下机制和算法：Hash, DRBG 和 HMAC，带有 SHA-224, SHA-512/224, SHA-256, SHA-512/256, SHA-384 和 SHA-512 的 DRBG。CTR_DRBG（均使用导出函数或不使用）AES-128、AES-192 和 AES-256。每个组合都支持预测保护和重种子，安全强度可以从 112 到其支持的最高强度。） |
-| | SHA1PRNG（初始种子目前通过系统属性和 `java.security` 熵收集设备组合。） |
-| | NativePRNG (`nextBytes()` 使用 `/dev/urandom`, `generateSeed()` 使用 `/dev/urandom`) |
-| | NativePRNGBlocking (`nextBytes()` 和 `generateSeed()` 使用 `/dev/urandom`) |
-| | NativePRNGNonBlocking (`nextBytes()` 和 `generateSeed()` 使用 `/dev/urandom`) |
+| | SHA1PRNG（初始种子目前通过系统属性和 java.security 熵收集设备组合。） |
+| | NativePRNG (nextBytes() 使用 /dev/urandom, generateSeed() 使用 /dev/urandom) |
+| | NativePRNGBlocking (nextBytes() 和 generateSeed() 使用 /dev/urandom) |
+| | NativePRNGNonBlocking (nextBytes() 和 generateSeed() 使用 /dev/urandom) |
 
 ### 表 4-4 (续) SUN provider 中的算法
 
@@ -8119,14 +8110,14 @@ JDK 在 `<java-home>/conf/security/policy` 目录下提供了两组管辖策略�
 
 | 引擎 | 算法名称(s) |
 |---|---|
-| KeyManagerFactory | PKIX：根据 RFC 5280 中 IETF 工作组定义的规则用于本地侧认证 X509 证书密钥对的工厂。`KeyManagerFactory` 目前支持使用 `KeyStore` 对象或 `java.net.ssl.KeyStoreParameters` 初始化。SunX509：用于本地侧认证的 X509 证书密钥对的工厂，但对证书使用和验证链的检查较少。`KeyManagerFactory` 支持使用 `Keystore` 对象初始化，但目前不支持使用 `java.net.ssl.ManagerFactoryParameters` 初始化。注意：`SunX509` 工用于与旧版本兼容，不应再使用。 |
+| KeyManagerFactory | PKIX：根据 RFC 5280 中 IETF 工作组定义的规则用于本地侧认证 X509 证书密钥对的工厂。`KeyManagerFactory` 目前支持使用 `KeyStore` 对象或 `java.net.ssl.KeyStoreParameters` 初始化。SunX509：用于本地侧认证的 X509 证书密钥对的工厂，但对证书使用和验证链的检查较少。`KeyManagerFactory` 支持使用 Keystore 对象初始化，但目前不支持使用 `java.net.ssl.ManagerFactoryParameters` 初始化。注意：SunX509 工用于与旧版本兼容，不应再使用。 |
 | KeyStore | PKCS12 注意：`SunJSSE` provider 用于与旧版本兼容，不应再用于 `KeyStore`。 |
 | SSLContext | SSL, SSLv3 \| TLS, TLSv1, TLSv1.1, TLSv1.2, TLSv1.3, DTLS, DTLS1.0, DTLS1.2 |
-| TrustManagerFactory | PKIX：根据 RFC 5280 中 IETF PKIX 组定义的规则用于本地侧认证 `X509ExtendedTrustManager` 实例工厂。`TrustManagerFactory` 目前支持使用 `KeyStore` 对象或 `javax.net.ssl.CertPathTrustFactory` 初始化。SunX509：用于 `X509TrustManager` 实例工厂，但对证书使用/链验证的检查不够严格。`TrustManagerFactory` 支持使用 `Keystore` 对象初始化，但目前不支持使用 `java.net.ssl.SunX509FactoryParameters`。注意：`SunX509` 工用于与旧版本兼容，不应使用。 |
+| TrustManagerFactory | PKIX：根据 RFC 5280 中 IETF PKIX 组定义的规则用于本地侧认证 `X509ExtendedTrustManager` 实例工厂。`TrustManagerFactory` 目前支持使用 `KeyStore` 对象或 `javax.net.ssl.CertPathTrustFactory` 初始化。SunX509：用于 `X509TrustManager` 实例工厂，但对证书使用/链验证的检查不够严格。`TrustManagerFactory` 支持使用 Keystore 对象初始化，但目前不支持使用 `java.net.ssl.SunX509FactoryParameters`。注意：SunX509 工用于与旧版本兼容，不应使用。 |
 
 #### SunJSSE Provider 协议参数
 
-`SunJSSE` provider 支持以下协议。参见 Java 标准算法名称中的 JSSE 加密套件以确定哪些加密套件和协议版本的组合。
+`SunJSSE` provider 支持以下协议。参见 Java 标准算法名称中的 JSSE 加密套件以了解哪些加密套件和协议版本的组合。
 
 #### 表 4-12 SunJSSE Provider 协议版本
 
@@ -8231,7 +8222,7 @@ JDK 在 `<java-home>/conf/security/policy` 目录下提供了两组管辖策略�
 - TLS_DH_anon_WITH_AES_128_CBC_SHA256
 - TLS_ECDH_anon_WITH_AES_128_CBC_SHA
 - TLS_ECDH_anon_WITH_2_2_8_CBC_-
--DH_anon_WITH_WITH_128_CBC_SHA
+- DH_anon_WITH_WITH_128_CBC_SHA
 - TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA
 - SSL_DH_anon_WITH_3DES_EDE_CBC_SHA
 - TLS_ECDHE_ECDSA_WITH_RC4_128_SHA
@@ -8250,7 +8241,7 @@ JDK 在 `<java-home>/conf/security/policy` 目录下提供了两组管辖策略�
 - TLS_ECDH_RSA_WITH_RC4_128_MD5
 - TLS_DHE_RSA_WITH_RC4_128_MD5
 - SSL_DH_anon____________
-5
+- 5
 - SSL_RSA_WITH_DES_CBC_SHA
 - SSL_DHE_RSA_WITH_DES_CBC_SHA
 - SSL_DHE_DSS_WITH_DES_CBC_SHA
@@ -8288,9 +8279,7 @@ JDK 在 `<java-home>/conf/security/policy` 目录下提供了两组管辖策略�
 
 
 
-```
-keytool -showinfo
-```
+`keytool -showinfo`
 
 
 
@@ -8314,23 +8303,23 @@ keytool -showinfo
 | SecretKeyFactory | DES, DESede, PBEWithMD5AndDES, PBEWithMD5AndTripleDES, PBEWithSHA1AndDESede, PBEWithSHA1AndRC2_40, PBEWithSHA1AndRC2_128, PBEWithSHA1AndRC4_40, PBEWithSHA1AndRC4_128, PBKDF2WithHmacSHA1, PBKDF2WithHmacSHA224, PBKDF2WithHmacSHA256, PBKDF2WithHmacSHA384, PBKDF2WithHmacSHA512, PBEWithHmacSHA1AndAES_128, PBEWithHmacSHA224AndAES_128, PBEWithHmacSHA256AndAES_128, PBEWithHmacSHA384AndAES_128, PBEWithHmacSHA512AndAES_128 |
 | KeyStore | JCEKS |
 
-#### 表 4-16 (续) SunJCE Provider 的加密算法变换
+### 表 4-16 (续) SunJCE Provider 的加密算法变换
 
 | 算法名称 | 模式 | 填充方式 |
 | --- | --- | --- |
 | DESedeWrap | | NoPadding |
-| PBEWithMD5AndTripleDES, | CBC | PKCS5Padding |
-| PBEWithSHA1AndRC2_40, PBEWithSHA1AndRC2_128, PBEWithSHA1AndRC4_40, PBEWithSHA1AndRC4_128, PBEWithHmacSHA1AndAES_128, PBEWithHmacSHA224AndAES_128 | | |
-| PBEWithHmacSHA256AndAES_128 | | |
-| PBEWithHmacSHA384AndAES_128 | | |
-| PBEWithHmacSHA512AndAES_128, PBEWithHmacSHA1AndAES_256, PBEWithHmacSHA224AndAES_256 | | |
-| PBEWithHmacSHA256AndAES_256 | | |
-| PBEWithHmacSHA384AndAES_256 | | |
-| PBEWithHmacSHA512AndAES_256 | | | |
-| RSA | ECB | NoPadding, PKCS1Padding, OAEPPadding, OAEPWithMD5AndMGF1Padding, OAEPWithSHA-1AndMGF1Padding, OAEPWithSHA-224AndMGF1Padding, OAEPWithSHA-256AndMGF1Padding, OAEPWithSHA-384AndMGF1Padding, OAEPWithSHA-512AndMGF1Padding, OAEPWithSHA-512/224AndMGF1Padding, OAEPWithSHA-512/256AndMGF1Padding |
+| PBWWithMD5AndTripleDES, | CBC | PKCS5Padding |
+| PBWWithSHA1AndRC2_2, PBWWithSHA1AndRC2_40, PBWWithSHA1AndRC2_128, PBWWithSHA1AndRC4_40, PBWWithSHA1AndRC4_128, PBWWithHmacSHA1AndAES_128, PBWWithHmacSHA224AndAES_128 | | |
+| PBWWithHmacSHA256AndAES_128 | | |
+| PBWWithHmacSHA384AndAES_128 | | |
+| PBWWithHmacSHA512AndAES_128, PBWWithHmacSHA1AndAES_256, PBWWithHmac224AndAES_256 | | |
+| PBWWithHmacSHA256AndAES_256 | | |
+| PBWWithHmacSHA384AndAES_256 | | |
+| PBWWithHmacSHA512AndAES_256 | | | |
+| RSA | ECB | NoPadding, PKCS1Padding, OAEEPPadding, OAEEPWithMD5AndMGF1Padding, OAEEPWithSHA-1AndMGF1Padding, OAEEPWithSHA-1AndMGF1Padding, OAEEPWithSHA-224AndMGF1Padding, 256AndMGF1Padding, OAEEPWithSHA-384AndMGF1Padding, OAEEPWithSHA-512AndMGF1Padding, OAEEPWithSHA-512/222AndMGF1Paddling, OAEEPWithSHA-512/2256AndMGF1Padding |
 
-1. CFB/OFB 没有默认值，其取决于算法的块大小（例如，AES 为 128；Blowfish, DES, DESede 和 RC2 为 64）。
-2. PBEWithMD5AndTripleDES 是一种尚未标准化的专用算法。
+1. CFB/OF 没有默认值，其取决于算法的块大小（例如，AES 为 128；Blowfish, DES, DESede 和 RC2 为 64）。
+2. PBWWithMD5AndTripleDES 是一种尚未标准化的专用算法。
 
 ### 密钥大小限制
 
@@ -8338,7 +8327,7 @@ SunJCE Provider 使用以下默认密钥大小（单位：位），并执行以�
 
 #### 密钥生成器
 
-#### 表 4-17 SunJCE Provider 的密钥大小限制
+### 表 4-17 SunJCE Provider 的密钥大小限制
 
 | 算法名称 | 默认密钥大小 | 限制/注释 |
 | --- | --- | --- |
@@ -8359,13 +8348,13 @@ SunJCE Provider 使用以下默认密钥大小（单位：位），并执行以�
 > 注意：
 > 各种基于密码的加密 (PBE) 使用不同的算法生成密钥数据，最终取决于目标加密算法。PBEWithMD5AndDES 将始终生成 56 位的密钥。
 
-#### 表 4-18 密钥对生成器
+### 表 4-18 密钥对生成器
 
 | 算法名称 | 默认密钥大小 | 限制/注释 |
 | --- | --- | --- |
 | Diffie-Hellman (DH) | 2048 | 密钥大小必须是 64 的倍数，范围从 512 到 1024，并外加 1536, 2048, 3072, 4096, 6144, 8192。 |
 
-#### 表 4-19 算法参数生成器
+### 表 4-19 算法参数生成器
 
 | 算法名称 | 默认密钥大小 | 限制/注释 |
 |---|---|---|
@@ -8377,7 +8366,7 @@ SunJCE Provider 使用以下默认密钥大小（单位：位），并执行以�
 
 SunJGSS Provider 提供以下算法：
 
-#### 表 4-20 SunJGSS Provider
+### 表 4-20 SunJGSS Provider
 
 | OID | 名称 |
 |---|---|
@@ -8390,12 +8379,12 @@ SunJGSS Provider 提供以下算法：
 
 SunSASL Provider 提供以下算法：
 
-#### 表 4-21 SunSASL Provider 的算法名称
+### 表 4-21 SunSASL Provider 的算法名称
 
 | 引擎 | 算法名称 |
 |---|---|
-| SaslClient | CRAM-MD5, DIGEST-MD5, EXTERNAL, NTLM, PLAIN |
-| SaslServer | CRAM-MD5, DIGEST-MD5, NTLM |
+| SaslClient | CRAM-MD5<br>DIGEST-MD5<br>EXTERNAL<br>NTLM<br>PLAIN |
+| SaslServer | CRAM-MD5<br>DIGEST-MD5<br>NTLM |
 
 ### XMLDSig Provider
 
@@ -8409,7 +8398,7 @@ SunPCSC Provider 允许应用程序使用 [Java Smart Card API](https://www.orac
 在 Linux 上，SunPCSC 通过 `libpcsclite.so` 库访问 PC/SC 栈。在 `$LIBISA` 和 `/usr/local/$LIBISA` 目录中，`LIBISA` 在 Linux 上扩展为 `64`。系统属性 `security.smartcard.library` 可以设置为 `libpcsclite.so`。在 Windows 上，SunPCSC 始终调用 `winsc.dll` 不需要 Java 级配置。
 如果主机可用 PC/SC，可以通过 `KeyFactory.getDefault()` 和 `KeyFactory.getInstance("PC/SC")` 获取 SunPCSC 实现。如果 PC/SC 不可用或未正确配置，`getInstance()` 将抛出 `NoSuchAlgorithmException`，`getDefault()` 将返回内置的 JDK 实现。
 
-#### 表 4-23 SunPCSC Provider 的算法名称
+### 表 4-23 SunPCSC Provider 的算法名称
 
 | 引擎 | 算法名称 |
 |---|---|
@@ -8423,7 +8412,7 @@ SunMSCAPI Provider 允许应用程序使用标准的 JCA/JCE API 访问 Windows�
 
 SunMSCAPI Provider 提供以下算法：
 
-#### 表 4-24 SunMSCAPI Provider 的算法名称
+### 表 4-24 SunMSCAPI Provider 的算法名称
 
 | 引擎 | 算法名称 |
 | --- | --- |
@@ -8437,7 +8426,7 @@ SunMSCAPI Provider 提供以下算法：
 
 SunMSCAPI Provider 使用以下默认密钥大小（单位：位），并执行以下限制：
 
-#### 表 4-25 SunMSCAPI Provider 的密钥大小限制
+### 表 4-25 SunMSCAPI Provider 的密钥大小限制
 
 | 算法名称 | 默认密钥大小 | 限制/注释 |
 | --- | --- | --- |
@@ -8451,22 +8440,22 @@ SunEC 实现椭圆曲线密码 (ECC)。与传统的 RSA 加密系统相比，ECC
 
 SunEC 提供以下算法：
 
-#### 表 4-26 SunEC Provider 的引擎名称
+### 表 4-26 SunEC Provider 的引擎名称
 
 | 引擎 | 算法名称 |
 | --- | --- |
 | AlgorithmParameters | EC |
 | KeyAgreement | ECDH, X25519, X448, XDH |
-| KeyFactory | EC, Ed25519, Ed448, EdDSA, X25519, X448, XDH |
-| KeyPairGenerator | EC, Ed25519, Ed448, EdDSA, X25519, X448, XDH |
+| KeyFactory | EC Ed25519 Ed448 EdDSA X25519 X448 XDH |
+| KeyPairGenerator | EC Ed25519 Ed448 EdDSA X25519 X448 XDH |
 
-#### 表 4-26 (续) SunEC Provider 的引擎名称
+### 表 4-26 (续) SunEC Provider 的引擎名称
 
 | 引擎 | 算法名称 |
 | --- | --- |
-| Signature | Ed25519, Ed448, EdDSA, NONEwithECDSA, SHA1withECDSA, SHA224withECDSA, SHA256withECDSA, SHA384withECDSA, SHA512withECDSA, NONEwithECDSAinP1363Format, SHA1withECDSAinP1363Format, SHA224withECDSAinP1363Format, SHA256withECDSAinP1363Format, SHA384withECDSAinP1363Format, SHA512withECDSAinP1363Format, SHA3-224withECDSA, SHA3-256withECDSA, SHA3-384withECDSA, SHA3-512withECDSA |
+| Signature | Ed25519<br>Ed448<br>EdDSA<br>NONEwithECDSA<br>SHA1withECDSA<br>SHA224withECDSA<br>SHA256withECDSA<br>SHA384withECDSA<br>SHA512withECDSA<br>NONEwithECDSAinP1363Format<br>SHA1withECDSAinP1363Format<br>SHA224withECDSAinP1363Format<br>SHA256withECDSAinP1363Format<br>SHA384withECDSAinP1363Format<br>SHA512withECDSAinP1363Format<br>SHA3-224withECDSA<br>SHA3-256withECDSA<br>SHA3-384withECDSA<br>SHA3-512withECDSA |
 
-#### 表 4-27 SunEC Provider 的密钥长度限制
+### 表 4-27 SunEC Provider 的密钥长度限制
 
 | KeyPairGenerator 名称 | 算法默认密钥长度 | 限制/注释 |
 | --- | --- | --- |
@@ -8482,13 +8471,13 @@ SunEC 提供以下算法：
 
 SunEC Provider 包含了用于 EC、椭圆曲线 Diffie-Hellman (ECDH) 和椭圆曲线数字签名算法 (ECDSA) 的椭圆曲线实现。其中一些是使用现代公式和技术实现的，适用于防止侧信道攻击。另一些则更容易受到攻击，不应被使用。下表列出了属于这些每个类别的曲线。
 
-在随后的表中，第一列“曲线名称”（Curve Name）列出了 SunEC 实现的名称。第二列“对象标识符”（Object Identifier）标识了 EC 对象标识符。第三列“额外名称/别名”（Additional Names/Aliases）指定了该曲线的任何额外名称或别名。（值 N/A 表示没有额外名称。）同一行中出现的所有字符串都指的是同一条曲线。例如，字符串 sec256r1、1.2.840.1004.3.1.7、NIST P-256 和 X9.2prime256v1 指的是同一条曲线。你可以使用曲线名称通过 `ECGenParameterSpec` 类或 `NamedParameterSpec` 类为 EC 密钥生成创建参数规范。
+在随后的表中，第一列“曲线名称”（Curve Name）列出了 SunEC 实现的名称。第二列“对象标识符”（Object Identifier）标识了 EC 对象标识符。第三列“额外名称/别名”（Additional Names/Aliases）指定了该曲线的任何额外名称或别名。（值 N/A 表示没有额外名称。）同一行中出现的所有字符串都指的是同一条曲线。例如，字符串 sec256r1、1.2.840.1004.3.1.7、NIST P-256 和 X92prime256v1 指的是同一条曲线。你可以使用曲线名称通过 ECGenParameterSpec 类或 NamedParameterSpec 类为 EC 密钥生成创建参数规范。
 
 ##### 推荐曲线
 
 下表列出了 SunEC Provider 提供并使用现代公式和技术实现的椭圆曲线。
 
-#### 表 4-28 SunEC Provider 提供的推荐曲线
+### 表 4-28 SunEC Provider 提供的推荐曲线
 
 | 曲线名称 | 对象标识符 | 额外名称/别名 |
 | --- | --- | --- |
@@ -8504,7 +8493,7 @@ SunEC Provider 包含了用于 EC、椭圆曲线 Diffie-Hellman (ECDH) 和椭圆
 
 下表列出了与 ECDSA 签名相关的对象标识符 (OIDs)：
 
-#### 表 4-29 与 ECDSA 签名相关的 OID
+### 表 4-29 与 ECDSA 签名相关的 OID
 
 | ECDSA 签名 | OID |
 | --- | --- |
@@ -8517,7 +8506,7 @@ SunEC Provider 包含了用于 EC、椭圆曲线 Diffie-Hellman (ECDH) 和椭圆
 
 Apple Provider 实现了 `java.security.KeyStore`。Apple Provider 中可用以下算法：
 
-#### 表 4-30 Apple Provider 类的算法
+### 表 4-30 Apple Provider 类的算法
 
 | 引擎 | 算法名称 |
 | --- | --- |
@@ -8527,7 +8516,7 @@ Apple Provider 实现了 `java.security.KeyStore`。Apple Provider 中可用以�
 
 JdkLDAP Provider 提供了对 LDAP 的访问。JdkLDAP Provider 中可用以下算法：
 
-#### 表 4-31 JdkLDAP Provider 算法名称
+### 表 4-31 JdkLDAP Provider 算法名称
 
 | 引擎 | 算法名称 |
 | --- | --- |
@@ -8537,10 +8526,10 @@ JdkLDAP Provider 提供了对 LDAP 的访问。JdkLDAP Provider 中可用以下�
 
 JdkSASL Provider 支持 GSSAPI。JdkSASL Provider 中可用以下算法：
 
-#### 表 4-32 JdkSASL Provider 算法名称
+### 表 4-32 JdkSASL Provider 算法名称
 
 | 引擎 | 算法名称 |
-| --- | --- |
+|---|---|
 | SaslClient | GSSAPI |
 | SaslServer | GSSAPI |
 
@@ -8564,15 +8553,21 @@ SunPKCS11 Provider 支持多种算法，只要底层的 PKCS11 实现提供了�
 
 SunPKCS11 Provider 位于 `jdk.crypto.cryptoki` 模块中。要使用该 Provider，必须先通过静态或编程方式进行安装。
 
-要静态安装 Provider，请将其添加到 Java 安全属性文件（`java-home/conf/security/java.security`）。
+要静态安装 Provider，请将其添加到 Java 安全属性文件（java-home/conf/security/java.security）。
 
 例如，这里是 `java.security` 文件的一个片段，它使用配置文件 `/opt/bar/cfg/pkcs11.cfg` 安装了 SunPKCS11 Provider。
+
+```
+```
 
 
 
 # 省略安全提供者 1-12 的配置
 
 `security.provider.13=SunPKCS11 /opt/bar/cfg/pkcs11.cfg`
+
+```
+```
 
 要动态安装 Provider，请创建一个带有适当配置文件名的 Provider 实例然后进行安装。示例所示：
 
@@ -8614,7 +8609,6 @@ Security.addProvider(p);
 
 ```
 name = FooAccelerator
-
 library = /opt/foo/lib/libpkcs11
 ```
 
@@ -8632,21 +8626,25 @@ library = /opt/foo/lib/libpkcs11
 | --- | --- | --- |
 | `attributes` | 参见 Attributes Configuration | 指定在创建 PKCS#11 密钥对象时应设置的额外 PKCS#11 属性。这使得能够适应特定属性的令牌。 |
 
-# 表 5-1 (续) PKCS#11 Provider 配置文件的属性
+### 表 5-1 (续) PKCS#11 Provider 配置文件的属性
 
 | Attribute | Value | 描述 |
 | --- | --- | --- |
-| `cleaner.longInterval` | 毫秒单位的整数，默认 60000。该值必须大于 1000 ms。 | 指定清理线程在非忙碌期间检查原生引用的频率（以毫秒为），即清理线程检查队列中原生引用的频率。 |
-
-> **注意：** 如果原生 PKCS#11 引用需要清理，清理线程将在间隔频率后切换到清空区域。
+| `cleaner.longInterval` | 毫秒单位的整数，默认 60000。该值必须大于 1000 ms。 | 指定清理线程在非忙碌期间检查原生引用的频率（以毫秒为单位），即清理线程检查队列中原生引用的频率。 |
+| | | > **注意：** 如果原生 PKCS#11 引用需要清理，清理线程将在间隔频率后切换到清空区域。 |
 
 # 表 5-1 (续) PKCS#11 Provider 配置文件的属性
 
 | Attribute | Value | 描述 |
 |--- |--- |--- |
-| `cleaner.shortInterval` | 毫秒单位的整数，默认：2000。该值必须大于 1000 ms。 | 指定在忙碌期间执行原生引用清理的频率（以毫秒为），即清理处理队列中不再需要的原生引用的频率以释放原生内存。 |
+| | | 检测到。 |
 
-> **注意：** 在 2000 次尝试失败后，清理线程将切换到清理间隔频率，当没有引用在队列中找到。
+# 表 5-1 (续) PKCS#11 Provider 配置文件的属性
+
+| Attribute | Value | 描述 |
+| --- | --- | --- |
+| `cleaner.shortInterval` | 毫秒单位的整数，默认：2000。该值必须大于 1000 ms。 | 指定在忙碌期间执行原生引用清理的频率（以毫秒为单位），即清理处理队列中不再需要的原生引用的频率以释放原生内存。 |
+| | | > **注意：** 在 2000 次尝试失败后，清理线程将切换到清理间隔频率，当没有引用在队列中找到。 |
 
 # 表 5-1 (续) PKCS#11 Provider 配置文件的属性
 
@@ -8659,8 +8657,7 @@ library = /opt/foo/lib/libpkcs11
 | Attribute | Value | 描述 |
 |---|---|---|
 | `destroyTokenAfterLogout` | 布尔值，默认：false | 如果为 true，则从 PKCS11 provider 实例调用 `java.security.AuthProvider.logout()`，底层的令牌对象将被销毁且资源将被释放。这在本质上使得调用 `logout()` 后， SunPKCS11 provider 实例变得不可用。 |
-
-> **注意：** 你不应该将设置为 true 的 PKCS#11 provider 属性集添加到系统 provider 列表中，因为该
+| | | > **注意：** 你不应该将设置为 true 的 PKCS#11 provider 属性集添加到系统 provider 列表中，因为该 |
 
 # 表 5-1 (续) PKCS#11 Provider 配置文件的属性
 
@@ -8678,11 +8675,12 @@ enabledMechanisms = {
   CKM_RSA_KEY_GEN
 }
 ``` |
+| | | 列表中的每项都是 PKCS#11 机制的名称。 |
 | `disabledMechanisms` | 花括号括的、空格分隔的要禁用的 PKCS#11 机制列表 | 最多情况下，你只能指定 `enabledMechanisms` 或 `disabledMechanisms` 之一。如果你均未指定，则启用的机制将是 SunPKCS11 provider 和 PKCS#11 令牌共同支持的。 |
 | `explicitCancel` | 布尔值，默认：true | 如果 true，表示必须显式取消操作 |
 | `functionList` | C 函数名称，默认：C_FunctionList | 此选项主要存在于方法 |
 | `handleStartupErrors` | 可能值为 ignoreAll、ignoreMissingLibrary 或 halt；默认：halt | 描述启动期间如何处理错误 |
-| `insertionCheckInterval` | 毫秒单位的整数，默认2000。该值必须大于 100 ms。 | 指定令牌不存在时测试插入的频率（以毫秒为）。 |
+| `insertionCheckInterval` | 毫秒单位的整数，默认2000。该值必须大于 100 ms。 | 指定令牌不存在时测试插入的频率（以毫秒为单位）。 |
 | `keyStoreCompatibility` | 布尔值，默认：true | 如果为 true，表示 Keystore 对输入参数更具兼容性。 |
 
 # 表 5-1 (续) PKCS#11 Provider 配置文件的属性
@@ -8690,9 +8688,9 @@ enabledMechanisms = {
 | Attribute | Value | 描述 |
 |---|---|---|
 | `library` | PKCS#11 实现的路径 | 指定 PKCS#11 实现的完整路径（包括扩展名）；路径的格式取决于平台。例如，在 Linux 上 `/opt/foo/libpkcs11.so` 可能是 PKCS#11 实现的路径，而在 Windows 上可能是 `C:\mypkcs11.dll`，在 macOS 上则是 `/opt/local/lib/libpkcs11.dylib` |
-| | | **注意：** |
-| | | - 要将 Network Security Services (NSS) 配置为 PKCS#11 实现，请将此属性设置为 softn3 库的完整路径。 |
-| | | - 根据你的平台，可能需要设置环境变量 `LD_LIBRARY_PATH` (Linux)、`PATH` (Windows) 或 `DYLD_LIBRARY_PATH` (macOS) 来包含所在的目录，以便操作系统定位依赖库。 |
+| | | > **注意：**
+> - 要将 Network Security Services (NSS) 配置为 PKCS#11 实现，请将此属性设置为 softn3 库的完整路径。
+> - 根据你的平台，可能需要设置环境变量 `LD_LIBRARY_PATH` (Linux)、`PATH` (Windows) 或 `DYLD_LIBRARY_PATH` (macOS) 来包含所在的目录，以便操作系统定位依赖库。 |
 | `name` | 此 provider 实例的名称后缀 | 指定与 SunPKCS11 实例名称（即 `Provider.getName()` 方法返回的字符串）拼接的字符串。例如，如果 `name` 属性为 "FooAccelerator"，则 provider 实例名称将是 "SunPKCS11FooAccelerator"。 |
 | `nssArgs` | 引号字符串 | 为 NSS 软令牌指定特殊的初始化参数字符串。这在直接不使用第二模式使用 NSS 软令牌时使用 |
 | `nssDbMode` | 参见表 5-2 | 参见表 5-2 |
@@ -8715,7 +8713,7 @@ enabledMechanisms = {
 
 ## 属性配置
 
-`attributes` 选项允许你在创建 PKCS#11 密钥对象时指定设置额外的 PKCS#11 属性。默认情况下，SunPKCS11 在创建类时仅提供强制性的 PKCS#11 属性。例如，对于 RSA 公钥，它指定了密钥类型和算法（`CKA_CLASS`, `CKA_KEY_TYPE`）以及 RSA 公钥的密钥值（`CKA_MODULUS` 和 `CKA_PUBLIC_EXPONENT`）。你使用的 PKCS#11 库将为 RSA 公钥的其他属性分配实现默认值，例如，该密钥可以用于加密和验证消息（`CKA_ENCRYPT` 和 `CKA_VERIFY` = true）。
+`attributes` 选项允许你在创建 PKCS#11 密钥对象时指定设置额外的 PKCS#11 属性。默认情况下，SunPKCS11 在创建类时仅提供强制性的 PKCS#11 属性。例如，对于 RSA 公钥，它指定了密钥类型和算法（`CKA_CLASS`, `CKA_KEY_TYPE`）以及 RSA 公钥的密钥值（`CKA_MODULUS` 和 `CKA_PUBLIC_EXPONENT`）。你使用的 PKCS#11 库将为 RSA 公钥的其他属性分配实现默认值，例如，该密钥可以用于加密和验证消息（`CKA_ENCRYPT` 和 `CKA_VERIFY = true`）。
 
 如果你不喜欢 PKCS#11 实现分配的默认值，或者你的 PKCS#11 实现不支持默认值并需要显式指定值，则可以使用 `attributes` 选项。请注意，指定你的 PKCS#11 实现不支持的或对于密钥类型无效的属性可能会导致操作在运行时失败。
 
@@ -8723,9 +8721,7 @@ enabledMechanisms = {
 
 ```
 attributes(operation, keytype, keyalgorithm) = {
-
 name = value
-
 ...
 }
 ```
@@ -8750,25 +8746,19 @@ name = value
 
 ```
 attributes(*, CKO_PUBLIC_KEY, *) = {
-
 CKA_SIGN = true
-
 }
 ```
 
 ```
 attributes(*, CKO_PRIVATE_KEY, *) = {
-
 CKA_SIGN = null
-
 }
 ```
 
 ```
 attributes(*, CKO_SECRET_KEY, *) = {
-
 CKA_DECRYPT = true
-
 }
 ```
 
@@ -8791,14 +8781,14 @@ CKA_DECRYPT = true
 ## 表 5-2（续）NSS 属性和值
 
 | 属性 | 值 | 描述 |
-|---|---|---|
+| --- | --- | --- |
 | nssLibraryDirectory | 包含 NSS 和 NSPR 库的目录（包括 libn3.so） | 这是包含 NSS 和 NSPR 库的完整路径。除非 NSS 已由在虚拟机进程的其他组件加载并初始化，否则必须指定。如果设置此值，则 `nssSecmod` 将设置为 true。 |
 | nssModule | keystore、crypto、fips 和 trustanchors 之一 | NSS 通过多个模块提供其功能。此指令决定此 SunPKCS11 实例访问这些模块中的哪一个。`crypto` 模块是 noDB 模式下的默认值。它支持无需登录的加密操作，但没有持久密钥。如果 NSS 的 secmod.db 已设置为 FIPS-140 合规模式，`fips` 模块为默认值。在这种模式下，NSS 限制了可用算法以及创建密钥的 PKCS#11 属性。`keystore` 模块是其他配置下的默认值。它通过 PKCS#11 KeyStore 支持持久密钥，这些密钥存储在 NSS DB 文件中。该模块需要登录。`trustanchors` 模块允许通过 PKCS#11 KeyStore 访问 NSS 信任根证书，前提是 secmod.db 已配置包含信任根。 |
 
 ## 表 5-2 (续) NSS 属性与值
 
 | 属性 | 值 | 描述 |
-|---|---|---|
+| --- | --- | --- |
 | nssNetscapeDbWorkout | 布尔值，默认：true | 如果为 true，则 P11KeyStore 在创建私钥时会指定 `CKA_NETSCAPE_DB`。此设置仅在 `nssUseSecmod` 为 true 时有效 |
 | nssOptimizeSpace | 布尔值，默认：false | 表示 NSS 倾向于性能（如果为 false）或内存占用（true）。 |
 | nssSecmodDirectory | 包含 NSS 配置和密钥信息（secmod.db, key3.db 和 cert8.db）的目录完整路径 | 除非 NSS 已由其他组件初始化（见 `nssLibraryDirectory`）或在不使用数据库文件的情况下使用 NSS（见 `nssDbMode` 的 noDb 模式），否则必须指定此指令。如果设置了此值，则 `nssUseSecmod` 被设置为 true。 |
@@ -8810,8 +8800,11 @@ CKA_DECRYPT = true
 
 ```
 name = NSSCrypto
+
 nssLibraryDirectory = /opt/tests/nss/lib
+
 nssDbMode = noDb
+
 attributes = compatibility
 ```
 
@@ -8819,8 +8812,11 @@ attributes = compatibility
 
 ```
 name = NSSips
+
 nssLibraryDirectory = /opt/tests/nss/lib
+
 nssSecmodDirectory = /opt/tests/nss/fipsdb
+
 nssModule = fips
 ```
 
@@ -8904,7 +8900,9 @@ Java 应用程序可以使用现有的 JCE API、JCA 和 CE API 通过 SunPKCS11
 
 ```
 char[] pin = ...;
+
 KeyStore ks = KeyStore.getInstance("PKCS11");
+
 ks.load(null, pin);
 ```
 
@@ -8912,6 +8910,7 @@ ks.load(null, pin);
 
 ```
 CallbackHandler chp = new MyCallbackHandler();
+
 KeyStore.Builder builder = KeyStore.Builder.newInstance("PKCS11", null, chp);
 ```
 
@@ -8940,10 +8939,15 @@ JDK 自带了一个 JAAS 登录模块 `KeyStoreLoginModule`，允许应用程序
 
 ```
 other {
+
   com.sun.security.auth.module.KeyStoreLoginModule required
+
   keyStoreURL="NONE"
+
   keyStoreType="PKCS11"
+
   keyStorePasswordURL="file:/home/joe/scipin";
+
 }
 ```
 
@@ -8951,11 +8955,17 @@ other {
 
 ```
 other {
+
   com.sun.security.auth.module.KeyStoreLoginModule required
+
   keyStoreURL="NONE"
+
   keyStoreType="PKCS11"
+
   keyStorePasswordURL="file:/home/joe/scipin"
+
   keyStoreProvider=SunPKCS11-SmartCard;
+
 };
 ```
 
@@ -8963,10 +8973,15 @@ other {
 
 ```
 other {
+
 com.sun.security.auth.module.KeyStoreLoginModule required
+
 keyStoreURL="NONE"
+
 keyStoreType="PKCS11"
+
 protected=true;
+
 };
 ```
 
@@ -8999,7 +9014,7 @@ keytool -keystore NONE -storetype PKCS11 -list
 
 对于 SunPKCS11 提供者，`providerName` 的格式为 `SunPKCS11-TokenName`，其中：
 
-**TokenName**
+TokenName
 提供者已配置的名称后缀，详见表 5-1。在示例中，以下名称列出了名为 SmartCard 的 PKCS#11 密钥库提供者实例的内容。
 
 ```
@@ -9013,7 +9028,7 @@ keytool -keystore NONE -storetype PKCS11 \
 - `-providerClass sun.security.pkcs11.SunCS11`
 - `-providerArg ConfigFilePath`
 
-`ConfigFilePath` 为令牌配置文件的路径。当 `java.security` 文件中未配置 PKCS11 提供者时，列出 PKCS#11 密钥库的命令示例：
+令牌配置文件的路径。当 `java.security` 文件中未配置 PKCS11 提供者时，列出 PKCS#11 密钥库的命令示例：
 
 ```
 keytool -keystore NONE -storetype PKCS11 \
@@ -9031,9 +9046,13 @@ keytool -keystore NONE -storetype PKCS11 \
 1. 按照令牌登录访问 PKCS11 令牌的密钥库：
 ```
 char[] pin = ...;
+
 KeyStore ks = KeyStore.getInstance("PKCS11");
+
 ks.load(null, pin);
+
 KeyStore builder = ks.getKeyStore();
+
 Key key = ks.getKey(alias, null);
 ```
 
@@ -9046,7 +9065,9 @@ JarSigner mySigner = JarSigner.Builder(key).build();
 ```
 try (ZipFile in = new ZipFile(inputFile);
      OutputStream out = new FileOutputStream(outputFile)) {
+
     mySigner.sign(in, out);
+
 }
 ```
 
@@ -9056,15 +9077,16 @@ try (ZipFile in = new ZipFile(inputFile);
 
 ```
 keystore "some_url", "keystore_type", "keystore_provider";
+
 keystorePasswordURL "some_password_url";
 ```
 
 其中
 
-**keystore_provider**
-提供者名称（例如 `"SunPKCS11-SmartCard"`）。
+keystore_provider
+提供者名称（例如 "SunPKCS11-SmartCard"）。
 
-**some_password_url**
+some_password_url
 指向令牌 PIN 位置的 URL。`keystoreProvider` 和 `keystorePasswordURL` 是可选的。如果没有指定 `keystoreProvider`，将使用支持该密钥库类型的第一个提供者。如果没有指定 `keystorePasswordURL`，则使用密码。
 
 查看默认实现和策略文件语法。
@@ -9075,6 +9097,7 @@ keystorePasswordURL "some_password_url";
 
 ```
 keystore "NONE", "PKCS11", "SunPKCS11-SmartCard";
+
 keystorePasswordURL "file:/foo/bar/passwordFile";
 ```
 
@@ -9086,24 +9109,25 @@ keystorePasswordURL "file:/foo/bar/passwordFile";
 
 # 提供者服务
 
-对于提供者实现的每个服务，必须有一个属性，其名称为服务类型（`Cipher`、`Signature` 等），后跟点和该服务应用的算法名称。属性值必须指定实现服务的类的限定名。以下是提供者将 `KeyAgreement.DiffieHellman` 设置为 `com.sun.crypto.provider.DHKeyAgreement` 的示例。
+对于提供者实现的每个服务，必须有一个属性，其名称为服务类型（Cipher、Signature 等），后跟点和该服务应用的算法名称。属性值必须指定实现服务的类的限定名。以下是提供者将 `KeyAgreement.DiffieHellman` 设置为 `com.sun.crypto.provider.DHKeyAgreement` 的示例。
 
 ```
 put("KeyAgreement.DiffieHellman",
-    "com.sun.crypto.provider.DHKeyAgreement")
+    com.sun.crypto.provider.DHKeyAgreement")
 ```
 
-公共静态 `Provider.Service` 封装了提供服务的属性（包括其类型、属性、算法名称和别名）。提供者可以通过调用 `Provider.putService` 方法实例化并注册它们。这等同于创建一个 Property 并调用 `Provider.put()` 方法。注意，此处注册的遗留 Property 是提供者创建 `KeyAgreement` 类型、`DiffieHellman` 算法（由 `com.sun.crypto.provider.DHKeyAgreement` 类实现）`Service` 对象的示例。
+公共静态 `Provider.Service` 封装了提供服务的属性（包括其类型、属性、算法名称和别名）。提供者可以通过调用 `Provider.putService` 方法实例化并注册它们。这等同于创建一个 Property 并调用 `Provider.put()` 方法。注意，此处注册的遗留 Property 是提供者创建 `KeyAgreement` 类型、DiffieHellman 算法（由 `com.sun.crypto.provider.DHKeyAgreement` 类实现）Service 对象的示例。
 
 ```
 Service s = new Service(this, "KeyAgreement", "DiffieHellman",
     "com.sun.crypto.provider.DHKeyAgreement", null, null);
+
 putService(s);
 ```
 
 
 
-使用 `Provider.Service` 对象代替遗留的 Property 有若干优点。一个优点是它允许提供者在实例化引擎类时具有更大的灵活性。另一个优点是它允许提供者测试参数支持。这些功能将在后面详细讨论。
+使用 `Provider.Service` 对象代替遗留的 `Property` 有若干优点。一个优点是它允许提供者在实例化引擎类时具有更大的灵活性。另一个优点是它允许提供者测试参数支持。这些功能将在后面详细讨论。
 
 # 实例化引擎类
 
@@ -9117,24 +9141,22 @@ Java加密框架可能会尝试进行快速检查，以确定提供者的服务�
 
 框架在延迟提供者选择期间依赖此快速测试（参见延迟提供者选择）。
 
-![](img/e26375bcfe04cf1374fe3293bdab5076_347_0.png)
-
 # 第5章
 ## SunPKCS11 Provider 支持的算法
 
-对于 Key 对象，框架通过调用其 `Service.supportsParameter()` 方法来询问其是否支持该对象。如果 `supportsParameter()` 返回 `false`，框架可以立即将其排除在考虑。如果 `supportsParameter()` 返回 `true`，框架会将 Key 对象传递给提供者的初始化引擎类实现。需要软件 Key 对象的程序应该重写此方法，当遇到非软件密钥时返回 `false`。同样，对于包含不可提取密钥的 PKCS#11 令牌提供程序，应对其创建的且对应其相应令牌密钥的 Key 对象返回 `true`。
+对于 `Key` 对象，框架通过调用其 `Service.supportsParameter()` 方法来询问其是否支持该对象。如果 `supportsParameter()` 返回 `false`，框架可以立即将其排除在考虑。如果 `supportsParameter()` 返回 `true`，框架会将 `Key` 对象传递给提供者的初始化引擎类实现。需要软件 `Key` 对象的程序应该重写此方法，当遇到非软件密钥时返回 `false`。同样，对于包含不可提取密钥的 PKCS#11 令牌提供程序，应对其创建的且对应其相应令牌密钥的 `Key` 对象返回 `true`。
 
 > 注意：
-> `supportsParameter()` 的默认实现返回 `true`。这允许现有的提供程序无需修改即可工作。然而，由于这种宽泛的默认实现，框架必须准备好捕获提供程序在其初始化引擎类内部拒绝 Key 对象时抛出的异常。当 `supportsParameter()` 返回 `false` 时，框架会将这些情况视为相同。
+> `supportsParameter()` 的默认实现返回 `true`。这允许现有的提供程序无需修改即可工作。然而，由于这种宽泛的默认实现，框架必须准备好捕获提供程序在其初始化引擎类内部拒绝 `Key` 对象时抛出的异常。当 `supportsParameter()` 返回 `false` 时，框架会将这些情况视为相同。
 
 ## Sun 支持
 
 Java 密码法框架可能会尝试进行快速检查，以确定提供者的服务实现可以使用应用程序指定的参数。为了执行此检查，框架会调用 `Provider.Service.supportsParameter()`。
 
-框架在延迟提供者选择期间依赖此项测试，参见“延迟提供者选择”。当调用一个初始化方法并向其传递 Key 对象时，框架通过调用其 `Service.supportsParameter()` 方法询问底层提供程序是否支持该对象。如果 `supportsParameter()` 返回 `false`，框架可以立即将其排除在考虑。如果 `supportsParameter()` 返回 `true`，框架会将 Key 对象传递给提供者的初始化引擎类实现。需要软件 Key 对象的程序应该重写此方法，当遇到非软件密钥时返回 `false`。同样，对于包含不可提取密钥的 PKCS#11 令牌提供程序，应对其创建的且对应其相应令牌密钥的 Key 对象返回 `true`。
+框架在延迟提供者选择期间依赖此项测试，参见“延迟提供者选择”。当调用一个初始化方法并向其传递 `Key` 对象时，框架通过调用其 `Service.supportsParameter()` 方法询问底层提供程序是否支持该对象。如果 `supportsParameter()` 返回 `false`，框架可以立即将其排除在考虑。如果 `supportsParameter()` 返回 `true`，框架会将 `Key` 对象传递给提供者的初始化引擎类实现。需要软件 `Key` 对象的程序应该重写此方法，当遇到非软件密钥时返回 `false`。同样，对于包含不可提取密钥的 PKCS#11 令牌提供程序，应对其创建的且对应其相应令牌密钥的 `Key` 对象返回 `true`。
 
 > 注意：
-> `supportsParameter()` 的默认实现返回 `true`。这允许现有的提供程序无需修改即可工作。然而，由于这种宽泛的默认实现，框架必须准备好捕获提供程序在其初始化引擎类内部拒绝 Key 对象时抛出的异常。当 `supportsParameter()` 返回 `false` 时，框架会将这些情况视为相同。
+> `supportsParameter()` 的默认实现返回 `true`。这允许现有的提供程序无需修改即可工作。然而，由于这种宽泛的默认实现，框架必须准备好捕获提供程序在其初始化引擎类内部拒绝 `Key` 对象时抛出的异常。当 `supportsParameter()` 返回 `false` 时，框架会将这些情况视为相同。
 
 ## SunPKCS11 Provider 支持的算法
 
@@ -9152,144 +9174,144 @@ Java 密码法框架可能会尝试进行快速检查，以确定提供者的服
 
 | Java 算法 | PKCS#11 机制 |
 |---|---|
-| Cipher.AES_128/CBC/NoPadding | CKM_AES_CBC |
-| Cipher.AES_128/ECB/NoPadding | CKM_AES_ECB |
-| Cipher.AES_128/GCM/NoPadding | CKM_AES_GCM |
-| Cipher.AES_192/CBC/NoPadding | CKM_AES_CBC |
-| Cipher.AES_192/ECB/NoPadding | CKM_AES_ECB |
-| Cipher.AES_192/GCM/NoPadding | CKM_AES_GCM |
-| Cipher.AES_256/CBC/NoPadding | CKM_AES_CBC |
-| Cipher.AES_256/ECB/NoPadding | CKM_AES_ECB |
-| Cipher.AES_256/GCM/NoPadding | CKM_AES_GCM |
-| Cipher.AES/CBC/NoPadding | CKM_AES_CBC |
-| Cipher.AES/CBC/PKCS5Padding | CKM_AES_CBC |
-| Cipher.AES/CTR/NoPadding | CKM_AES_CTR |
-| Cipher.AES/ECB/NoPadding | CKM_AES_ECB |
-| Cipher.AES/ECB/PKCS5Padding | CKM_AES_ECB |
-| Cipher.AES/GCM/NoPadding | CKM_AES_GCM |
-| Cipher.ARCFOUR | CKM_RC4 |
-| Cipher.Blowfish/CBC/NoPadding | CKM_BLOWFISH_CBC |
-| Cipher.Blowfish/CBC/PKCS5Padding | CKM_BLOWFISH_CBC |
-| Cipher.ChaCha20-Poly1305 | CKM_ACH20_POLY105 |
-| Cipher.DES/CBC/NoPadding | CKM_DES_CBC |
-| Cipher.DES/CBC/PKCS5Padding | CKM_DES_CBC |
-| Cipher.DES/ECB/NoPadding | CKM_DES_ECB |
-| Cipher.DES/ECB/PKCS5Padding | CKM_DES_ECB |
+| `Cipher.AES_128/CBC/NoPadding` | `CKM_AES_CBC` |
+| `Cipher.AES_128/ECB/NoPadding` | `CKM_AES_ECB` |
+| `Cipher.AES_128/GCM/NoPadding` | `CKM_AES_GCM` |
+| `Cipher.AES_192/CBC/NoPadding` | `CKM_AES_CBC` |
+| `Cipher.AES_192/ECB/NoPadding` | `CKM_AES_ECB` |
+| `Cipher.AES_192/GCM/NoPadding` | `CKM_AES_GCM` |
+| `Cipher.AES_256/CBC/NoPadding` | `CKM_AES_CBC` |
+| `Cipher.AES_256/ECB/NoPadding` | `CKM_AES_ECB` |
+| `Cipher.AES_256/GCM/NoPadding` | `CKM_AES_GCM` |
+| `Cipher.AES/CBC/NoPadding` | `CKM_AES_CBC` |
+| `Cipher.AES/CBC/PKCS5Padding` | `CKM_AES_CBC` |
+| `Cipher.AES/CTR/NoPadding` | `CKM_AES_CTR` |
+| `Cipher.AES/ECB/NoPadding` | `CKM_AES_ECB` |
+| `Cipher.AES/ECB/PKCS5Padding` | `CKM_AES_ECB` |
+| `Cipher.AES/GCM/NoPadding` | `CKM_AES_GCM` |
+| `Cipher.ARCFOUR` | `CKM_RC4` |
+| `Cipher.Blowfish/CBC/NoPadding` | `CKM_BLOWFISH_CBC` |
+| `Cipher.Blowfish/CBC/PKCS5Padding` | `CKM_BLOWFISH_CBC` |
+| `Cipher.ChaCha20-Poly1305` | `CKM_ACH20_POLY105` |
+| `Cipher.DES/CBC/NoPadding` | `CKM_DES_CBC` |
+| `Cipher.DES/CBC/PKCS5Padding` | `CKM_DES_CBC` |
+| `Cipher.DES/ECB/NoPadding` | `CKM_DES_ECB` |
+| `Cipher.DES/ECB/PKCS5Padding` | `CKM_DES_ECB` |
 
 ### 表 5-3 (续) SunPKCS11 支持的 Java 算法
 
 | Java 算法 | PKCS#11 机制 |
 |---|---|
-| Cipher.DESede/CBC/NoPadding | CKM_DES3_CBC |
-| Cipher.DESede/CBC/PKCS5Padding | CKM_DES3_CBC |
-| Cipher.DESede/ECB/NoPadding | CKM_DES3_ECB |
-| Cipher.DESede/ECB/PKCS5Padding | CKM_DES3_ECB |
-| Cipher.RSA/ECB/NoPadding | CKM_RSA_X09 |
-| Cipher.RSA/ECB/PKCSPadding | CKM_RSA_PKCS |
-| KeyAgreement.DiffieHellman | CKM_DH_PKCS_DERIVE |
-| KeyAgreement.ECB | CKM_ECDH_DERIVE |
-| KeyFactory.DiffieHellman | 支持的 Diffie-Hellman 机制 |
-| KeyFactory.DSA | 支持的 DSA 机制 |
-| KeyFactory.EC | 支持的 EC 机制 |
-| KeyFactory.RSA | 支持的 RSA 机制 |
-| KeyGenerator.AES | CKM_AES_KEY_GEN |
-| KeyGenerator.ARCFOUR | CKM_RC4_KEY_GEN |
-| KeyGenerator.Blowfish | CKM_BLOWFISH_KEY_GEN |
-| KeyGenerator.ChaCha20 | CKM_CHACH20_KEY_GEN |
-| KeyGenerator.DES | CKM_DES_KEY_GEN |
-| KeyGenerator.DESede | CKM_DES3_KEY_GEN |
-| KeyGenerator.HmacMD5 | CKM_GENERIC_SECRET_KEY_GEN |
-| KeyGenerator.HmacSHA1 | CKM_SHA_1_KEY_GEN, CKM_GENERIC_SECRET_KEY_GEN |
-| KeyGenerator.HmacSHA224 | CKM_SHA224_KEY_GEN, CKM_GENERIC_SECRET_KEY_GEN |
-| KeyGenerator.HmacSHA256 | CKM_SHA256_KEY_GEN, CKM_GENERIC_SECRET_KEY_GEN |
-| KeyGenerator.HmacSHA324 | CKM_SHA324_KEY_GEN, CKM_GENERIC_SECRET_KEY_GEN |
-| KeyGenerator.HmacSHA384 | CKM_SHA384_KEY_GEN, CKM_GENERIC_SECRET_KEY_GEN |
-| KeyGenerator.HmacSHA512 | CKM_SHA512_KEY_GEN, CKM_GENERIC_SECRET_KEY_GEN |
-| KeyGenerator.HmacSHA512/224 | CKM_SHA512_224_KEY_GEN, CKM_GENERIC_SECRET_KEY_GEN |
-| KeyGenerator.HmacSHA512/256 | CKM_SHA512_256_KEY_GEN, CKM_GENERIC_SECRET_KEY_GEN |
-| KeyPairGenerator.DiffieHellman | CKM_DH_PKCS_KEY_GEN |
-| KeyPairGenerator.DSA | CKM_DSA_KEY_PAIR_GEN |
-| KeyPairGenerator.EC | CKM_EC_KEY_PAIR_GEN |
-| KeyPairGenerator.RSA | CKM_RSA_PKCS_KEY_PAIR_GEN |
-| KeyStore.PKCS11 | 始终可用 |
-| Mac.HmacMD5 | CKM_MD5 |
-| Mac.HmacSHA1 | CKM_SHA_1 |
-| Mac.HmacSHA224 | CKM_SHA224 |
-| Mac.HmacSHA324 | CKM_SHA324 |
-| Mac.HmacSHA384 | CKM_SHA384 |
-| Mac.HmacSHA512 | CKM_SHA512 |
-| Mac.HmacSHA512/224 | CKM_SHA512_224 |
-| Mac.HmacSHA512/256 | CKM_SHA512_256 |
-| MessageDigest.MD2 | CKM_MD2 |
-| MessageDigest.MD5 | CKM_MD5 |
-| MessageDigest.SHA-224 | CKM_SHA224 |
-| MessageDigest.SHA-256 | CKM_SHA256 |
-| MessageDigest.SHA-384 | CKM_SHA384 |
-| MessageDigest.SHA-512 | CKM_SHA512 |
-| MessageDigest.SHA-512/224 | CKM_SHA512_224 |
-| MessageDigest.SHA-512/256 | CKM_SHA512_256 |
-| MessageDigest.SHA1 | CKM_SHA_1 |
-| MessageDigest.SHA3-224 | CKM_SHA324 |
-| MessageDigest.SHA3-256 | CKM_SHA256 |
-| MessageDigest.SHA3-384 | CKM_SHA384 |
-| MessageDigest.SHA3-512 | CKM_SHA512 |
+| `Cipher.DESede/CBC/NoPadding` | `CKM_DES3_CBC` |
+| `Cipher.DESede/CBC/PKCS5Padding` | `CKM_DES3_CBC` |
+| `Cipher.DESede/ECB/NoPadding` | `CKM_DES3_ECB` |
+| `Cipher.DESede/ECB/PKCS5Padding` | `CKM_DES3_ECB` |
+| `Cipher.RSA/ECB/NoPadding` | `CKM_RSA_X09` |
+| `Cipher.RSA/ECB/PKCSPadding` | `CKM_RSA_PKCS` |
+| `KeyAgreement.DiffieHellman` | `CKM_DH_PKCS_DERIVE` |
+| `KeyAgreement.ECB` | `CKM_ECDH_DERIVE` |
+| `KeyFactory.DiffieHellman` | 支持的 Diffie-Hellman 机制 |
+| `KeyFactory.DSA` | 支持的 DSA 机制 |
+| `KeyFactory.EC` | 支持的 EC 机制 |
+| `KeyFactory.RSA` | 支持的 RSA 机制 |
+| `KeyGenerator.AES` | `CKM_AES_KEY_GEN` |
+| `KeyGenerator.ARCFOUR` | `CKM_RC4_KEY_GEN` |
+| `KeyGenerator.Blowfish` | `CKM_BLOWFISH_KEY_GEN` |
+| `KeyGenerator.ChaCha20` | `CKM_CHACH20_KEY_GEN` |
+| `KeyGenerator.DES` | `CKM_DES_KEY_GEN` |
+| `KeyGenerator.DESede` | `CKM_DES3_KEY_GEN` |
+| `KeyGenerator.HmacMD5` | `CKM_GENERIC_SECRET_KEY_GEN` |
+| `KeyGenerator.HmacSHA1` | `CKM_SHA_1_KEY_GEN`, `CKM_GENERIC_SECRET_KEY_GEN` |
+| `KeyGenerator.HmacSHA224` | `CKM_SHA224_KEY_GEN`, `CKM_GENERIC_SECRET_KEY_GEN` |
+| `KeyGenerator.HmacSHA256` | `CKM_SHA256_KEY_GEN`, `CKM_GENERIC_SECRET_KEY_GEN` |
+| `KeyGenerator.HmacSHA324` | `CKM_SHA324_KEY_GEN`, `CKM_GENERIC_SECRET_KEY_GEN` |
+| `KeyGenerator.HmacSHA384` | `CKM_SHA384_KEY_GEN`, `CKM_GENERIC_SECRET_KEY_GEN` |
+| `KeyGenerator.HmacSHA512` | `CKM_SHA512_KEY_GEN`, `CKM_GENERIC_SECRET_KEY_GEN` |
+| `KeyGenerator.HmacSHA512/224` | `CKM_SHA512_224_KEY_GEN`, `CKM_GENERIC_SECRET_KEY_GEN` |
+| `KeyGenerator.HmacSHA512/256` | `CKM_SHA512_256_KEY_GEN`, `CKM_GENERIC_SECRET_KEY_GEN` |
+| `KeyPairGenerator.DiffieHellman` | `CKM_DH_PKCS_KEY_GEN` |
+| `KeyPairGenerator.DSA` | `CKM_DSA_KEY_PAIR_GEN` |
+| `KeyPairGenerator.EC` | `CKM_EC_KEY_PAIR_GEN` |
+| `KeyPairGenerator.RSA` | `CKM_RSA_PKCS_KEY_PAIR_GEN` |
+| `KeyStore.PKCS11` | 始终可用 |
+| `Mac.HmacMD5` | `CKM_MD5` |
+| `Mac.HmacSHA1` | `CKM_SHA_1` |
+| `Mac.HmacSHA224` | `CKM_SHA224` |
+| `Mac.HmacSHA324` | `CKM_SHA324` |
+| `Mac.HmacSHA384` | `CKM_SHA384` |
+| `Mac.HmacSHA512` | `CKM_SHA512` |
+| `Mac.HmacSHA512/224` | `CKM_SHA512_224` |
+| `Mac.HmacSHA512/256` | `CKM_SHA512_256` |
+| `MessageDigest.MD2` | `CKM_MD2` |
+| `MessageDigest.MD5` | `CKM_MD5` |
+| `MessageDigest.SHA-224` | `CKM_SHA224` |
+| `MessageDigest.SHA-256` | `CKM_SHA256` |
+| `MessageDigest.SHA-384` | `CKM_SHA384` |
+| `MessageDigest.SHA-512` | `CKM_SHA512` |
+| `MessageDigest.SHA-512/224` | `CKM_SHA512_224` |
+| `MessageDigest.SHA-512/256` | `CKM_SHA512_256` |
+| `MessageDigest.SHA1` | `CKM_SHA_1` |
+| `MessageDigest.SHA3-224` | `CKM_SHA324` |
+| `MessageDigest.SHA3-256` | `CKM_SHA256` |
+| `MessageDigest.SHA3-384` | `CKM_SHA384` |
+| `MessageDigest.SHA3-512` | `CKM_SHA512` |
 
-### 表 5-3（续）SunPKCS11 Provider 支持的 Java 算法
-
-| Java 算法 | PKCS#11 机制 |
-|---|---|
-| Signature.SHA1withRSA | CKM_SHA1_RSA_PKCS, CKM_RSA_PKCS, CKM_RSA_X_509 |
-| Signature.SHA1withRSASSA-PSS | CKM_SHA1_RSA_PKCS_PSS |
-| Signature.SHA224withDSA | CKM_DSA_SHA224 |
-| Signature.SHA224withDSAInP1363Format | CKM_DSA_SHA224 |
-| Signature.SHA224withECDSA | CKM_ECDSA, CKM_ECDSA |
-| Signature.SHA224withECDSAInP1363Format | CKM_ECDSA, CKM_ECDSA |
-| Signature.SHA224withRSA | CKM_SHA224_RSA_PKCS, CKM_RSA_PKCS, CKM_RSA_X_509 |
-| Signature.SHA224withRSASSA-PSS | CKM_SHA224_RSA_PKCS_PSS |
-| Signature.SHA256withDSA | CKM_DSA_SHA256 |
-| Signature.SHA256withDSAInP1363Format | CKM_DSA_SHA256 |
-| Signature.SHA256withECDSA | CKM_ECDSA,SHA256, CKM_ECDSA |
-| Signature.SHA256withECDSAInP1363Format | CKM_ECDSA,SHA256, CKM_ECDSA |
-| Signature.SHA256withRSA | CKM_SHA256_RSA_PKCS, CKM_RSA_PKCS, CKM_RSA_X_509 |
-| Signature.SHA256withRSASSA-PSS | CKM_SHA256_RSA_PKCS_PSS |
-| Signature.SHA324withDSA | CKM_DSA_SHA324 |
-| Signature.SHA324withDSAInP1363Format | CKM_DSA_SHA324 |
-| Signature.SHA324withECDSA | CKM_ECDSA,SHA324, 224, CKM_ECDSA |
-| Signature.SHA324withECDSAInP1363Format | CKM_ECDSA,SHA324, 384, CKM_ECDSA |
-| Signature.SHA324withRSA | CKM_SHA324, 224_PKCS, CKM_RSA_PKCS, CKM_RSA_X_509 |
-| Signature.SHA324withRSASSA-PSS | CKM_SHA324, 224_PKCS_PSS |
-| Signature.SHA256withDSA | CKM_DSA,SHA_256, 256 |
-| Signature.SHA256withDSAInP1363Format | CKM_DSA,SHA_256, 256 |
-| Signature.SHA256withECDSA | CKM_ECDSA,SHA_256, CKM_ECDSA |
-| Signature.SHA256withECDSAInP1363Format | CKM_ECDSA,SHA_256, CKM_ECDSA |
-| Signature.SHA256withRSA | CKM_SHA256, 256_RSA_PKCS, CKM_RSA_PKCS, CKM_RSA_X_509 |
-| Signature.SHA256withRSASSA-PSS | CKM_SHA256, 256_RSA_PKCS_PSS |
-| Signature.SHA384withDSA | CKM_DSA,SHA_384 |
-| Signature.SHA384withDSAInP1363Format | CKM_DSA,SHA_384, 384 |
-| Signature.SHA384withECDSA | CKM_ECDSA,SHA_384, 384, CKM_ECDSA |
-| Signature.SHA384withECDSAInP1363Format | CKM_ECDSA,SHA_384, 384, CKM_ECDSA |
-| Signature.SHA384withRSA | CKM_SHA384, 384_RSA_PKCS, CKM_RSA_PKCS, CKM_RSA_X_509 |
-| Signature.SHA384withRSASSA-PSS | CKM_SHA384, 384_RSA_PKCS_PSS |
-| Signature.SHA512withDSA | CKM_DSA,SHA_512 |
-| Signature.SHA512withDSAInP1363Format | CKM_DSA,SHA_512, 512 |
-| Signature.SHA512withECDSA | CKM_ECDSA,SHA_512, 331, CKM_ECDSA |
-
-### 表 5-3（续）SunPKCS11 Provider 支持的 Java 算法
+## 表 5-3（续）SunPKCS11 Provider 支持的 Java 算法
 
 | Java 算法 | PKCS#11 机制 |
 |---|---|
-| Signature.SHA3-512withECDSAInP1363Format at | CKM_ECDSA_SHA3_512, CKM_ECDSA |
-| Signature.SHA3-512withRSA | CKM_SHA3_512_RSA, CKM_RSA, PKCS, CKM_RSA_X_509 |
-| Signature.SHA3-512withRSASSA-PSS | CKM_SHA3_512_RSA, CKM_PKCS_PSS |
-| Signature.SHA384withDSA | CKM_DSA,SHA_384 |
-| Signature.SHA384withDSAInP1363Format | CKM_DSA,SHA_384 |
-| Signature.SHA384withECDSA | CKM_ECDSA,SHA_384, CKM_ECDSA |
-| Signature.SHA384withECDSAInP1363Format | CKM_ECDSA,SHA_384, CKM_ECDSA |
-| Signature.SHA384withRSA | CKM_SHA384_RSA, CKM_RSA, PKCS, CKM_RSA_X_509 |
-| Signature.SHA384withRSASSA-PSS | CKM_SHA384_RSA, CKM_PKCS_PSS |
-| Signature.SHA512withDSA | CKM_DSA,SHA_512 |
-| Signature.SHA512withDSAInP1363Format | CKM_DSA,SHA_512 |
-| Signature.SHA512withECDSA | CKM_ECDSA,SHA_512, CKM_ECDSA |
+| `Signature.SHA1withRSA` | `CKM_SHA1_RSA_PKCS`, `CKM_RSA_PKCS`, `CKM_RSA_X_509` |
+| `Signature.SHA1withRSASSA-PSS` | `CKM_SHA1_RSA_PKCS_PSS` |
+| `Signature.SHA224withDSA` | `CKM_DSA_SHA224` |
+| `Signature.SHA224withDSAInP1363Format` | `CKM_DSA_SHA224` |
+| `Signature.SHA224withECDSA` | `CKM_ECDSA`, `CKM_ECDSA` |
+| `Signature.SHA224withECDSAInP1363Format` | `CKM_ECDSA`, `CKM_ECDSA` |
+| `Signature.SHA224withRSA` | `CKM_SHA224_RSA_PKCS`, `CKM_RSA_PKCS`, `CKM_RSA_X_509` |
+| `Signature.SHA224withRSASSA-PSS` | `CKM_SHA224_RSA_PKCS_PSS` |
+| `Signature.SHA256withDSA` | `CKM_DSA_SHA256` |
+| `Signature.SHA256withDSAInP1363Format` | `CKM_DSA_SHA256` |
+| `Signature.SHA256withECDSA` | `CKM_ECDSA,SHA256`, `CKM_ECDSA` |
+| `Signature.SHA256withECDSAInP1363Format` | `CKM_ECDSA,SHA256`, `CKM_ECDSA` |
+| `Signature.SHA256withRSA` | `CKM_SHA256_RSA_PKCS`, `CKM_RSA_PKCS`, `CKM_RSA_X_509` |
+| `Signature.SHA256withRSASSA-PSS` | `CKM_SHA256_RSA_PKCS_PSS` |
+| `Signature.SHA324withDSA` | `CKM_DSA_SHA324` |
+| `Signature.SHA324withDSAInP1363Format` | `CKM_DSA_SHA324` |
+| `Signature.SHA324withECDSA` | `CKM_ECDSA,SHA324, 224`, `CKM_ECDSA` |
+| `Signature.SHA324withECDSAInP1363Format` | `CKM_ECDSA,SHA324, 384`, `CKM_ECDSA` |
+| `Signature.SHA324withRSA` | `CKM_SHA324, 224_PKCS`, `CKM_RSA_PKCS`, `CKM_RSA_X_509` |
+| `Signature.SHA324withRSASSA-PSS` | `CKM_SHA324, 224_PKCS_PSS` |
+| `Signature.SHA256withDSA` | `CKM_DSA,SHA_256, 256` |
+| `Signature.SHA256withDSAInP1363Format` | `CKM_DSA,SHA_256, 256` |
+| `Signature.SHA256withECDSA` | `CKM_ECDSA,SHA_256`, `CKM_ECDSA` |
+| `Signature.SHA256withECDSAInP1363Format` | `CKM_ECDSA,SHA_256`, `CKM_ECDSA` |
+| `Signature.SHA256withRSA` | `CKM_SHA256, 256_RSA_PKCS`, `CKM_RSA_PKCS`, `CKM_RSA_X_509` |
+| `Signature.SHA256withRSASSA-PSS` | `CKM_SHA256, 256_RSA_PKCS_PSS` |
+| `Signature.SHA384withDSA` | `CKM_DSA,SHA_384` |
+| `Signature.SHA384withDSAInP1363Format` | `CKM_DSA,SHA_384, 384` |
+| `Signature.SHA384withECDSA` | `CKM_ECDSA,SHA_384, 384`, `CKM_ECDSA` |
+| `Signature.SHA384withECDSAInP1363Format` | `CKM_ECDSA,SHA_384, 384`, `CKM_ECDSA` |
+| `Signature.SHA384withRSA` | `CKM_SHA384, 384_RSA_PKCS`, `CKM_RSA_PKCS`, `CKM_RSA_X_509` |
+| `Signature.SHA384withRSASSA-PSS` | `CKM_SHA384, 384_RSA_PKCS_PSS` |
+| `Signature.SHA512withDSA` | `CKM_DSA,SHA_512` |
+| `Signature.SHA512withDSAInP1363Format` | `CKM_DSA,SHA_512, 512` |
+| `Signature.SHA512withECDSA` | `CKM_ECDSA,SHA_512, 331`, `CKM_ECDSA` |
+
+## 表 5-3（续）SunPKCS11 Provider 支持的 Java 算法
+
+| Java 算法 | PKCS#11 机制 |
+|---|---|
+| `Signature.SHA3-512withECDSAInP1363Format at` | `CKM_ECDSA_SHA3_512`, `CKM_ECDSA` |
+| `Signature.SHA3-512withRSA` | `CKM_SHA3_512_RSA`, `CKM_RSA, PKCS`, `CKM_RSA_X_509` |
+| `Signature.SHA3-512withRSASSA-PSS` | `CKM_SHA3_512_RSA`, `CKM_PKCS_PSS` |
+| `Signature.SHA384withDSA` | `CKM_DSA,SHA_384` |
+| `Signature.SHA384withDSAInP1363Format` | `CKM_DSA,SHA_384` |
+| `Signature.SHA384withECDSA` | `CKM_ECDSA,SHA_384`, `CKM_ECDSA` |
+| `Signature.SHA384withECDSAInP1363Format` | `CKM_ECDSA,SHA_384`, `CKM_ECDSA` |
+| `Signature.SHA384withRSA` | `CKM_SHA384_RSA`, `CKM_RSA, PKCS`, `CKM_RSA_X_509` |
+| `Signature.SHA384withRSASSA-PSS` | `CKM_SHA384_RSA`, `CKM_PKCS_PSS` |
+| `Signature.SHA512withDSA` | `CKM_DSA,SHA_512` |
+| `Signature.SHA512withDSAInP1363Format` | `CKM_DSA,SHA_512` |
+| `Signature.SHA512withECDSA` | `CKM_ECDSA,SHA_512`, `CKM_ECDSA` |
 
 ## SunPKCS11 Provider KeyStore 要求
 
@@ -9302,63 +9324,63 @@ Java 密码法框架可能会尝试进行快速检查，以确定提供者的服
 为了将 PKCS#11 token 现有对象映射到 KeyStore，SunPKCS11 provider 的 KeyStore 实现执行以下操作：
 
 1. 通过 `C_FindObjects[Init|Final]` 对 token 上所有的私钥对象进行搜索：
-    - CKA_TOKEN = true
-    - CKA_CLASS = CKO_PRIVATE_KEY
+    - `CKA_TOKEN = true`
+    - `CKA_CLASS = CKO_PRIVATE_KEY`
 2. 通过 `C_FindObjects[Init|Final]` 对 token 上所有的证书对象进行搜索。搜索模板包含：
-    - CKA_TOKEN = true
-    - CKA_CLASS = CKO_CERTIFICATE
+    - `CKA_TOKEN = true`
+    - `CKA_CLASS = CKO_CERTIFICATE`
 
-每个密钥对象通过检索其各自的 CKA_ID 属性与其对应的证书进行匹配。匹配的对共享相同的 CKA_ID。对于每个匹配项，通过主体路径（subject path）构建证书链。从端实体证书开始，调用 `C_FindObjects[Init|Final]`，其搜索模板包含：
+每个密钥对象通过检索其各自的 `CKA_ID` 属性与其对应的证书进行匹配。匹配的对共享相同的 `CKA_ID`。对于每个匹配项，通过主体路径（subject path）构建证书链。从端实体证书开始，调用 `C_FindObjects[Init|Final]`，其搜索模板包含：
 
-- CKA_TOKEN = true
-- CKA_CLASS = CKO_CERTIFICATE
-- CKA_SUBJECT = [发行者的 DN]
+- `CKA_TOKEN = true`
+- `CKA_CLASS = CKO_CERTIFICATE`
+- `CKA_SUBJECT = [发行者的 DN]`
 
 继续此搜索，直到找到发行者或找到自签名证书。如果有多个证书，则使用第一个。
 
-一旦匹配了密钥和证书并构建了证书链），信息将存储在密钥条中，使用端实体证书的 CKA_LABEL 值作为 KeyStore 别名。
+一旦匹配了密钥和证书并构建了证书链），信息将存储在密钥条中，使用端实体证书的 `CKA_LABEL` 值作为 KeyStore 别名。
 
-如果端实体没有 CKA_LABEL，则别名来源于 CKA_ID。如果确定 CKA_ID 完全由打印字符组成，则通过 UTF-8 字符解码 CKA_ID 导出字符串别名。否则，从 CKA_ID 派生十六进制字符串（例如 `"0xFFFF.."`）。
+如果端实体没有 `CKA_LABEL`，则别名来源于 `CKA_ID`。如果确定 `CKA_ID` 完全由打印字符组成，则通过 UTF-8 字符解码 `CKA_ID` 导出字符串别名。否则，从 `CKA_ID` 派生十六进制字符串（例如 `"0xFFFF.."`）。
 
-如果多个证书共享相同的 CKA_LABEL，则别名由 CKA_LABEL 加上端实体证书和序列号派生（例如 `"MyCert/CN=foobar1234"`）。
+如果多个证书共享相同的 `CKA_LABEL`，则别名由 `CKA_LABEL` 加上端实体证书和序列号派生（例如 `"MyCert/CN=foobar1234"`）。
 
-检查每个不属于密钥条目（或端实体）的证书是否受信任。如果 CKA_TRUSTED 属性为 true，则创建一个以 CKA_LABEL 值作为 KeyStore 别名的 KeyStore 信任证书。如果证书没有 CKA_LABEL，或者多个证书共享相同的 CKA_LABEL，则如前所述派生别名。
+检查每个不属于密钥条目（或端实体）的证书是否受信任。如果 `CKA_TRUSTED` 属性为 `true`，则创建一个以 `CKA_LABEL` 值作为 KeyStore 别名的 KeyStore 信任证书。如果证书没有 `CKA_LABEL`，或者多个证书共享相同的 `CKA_LABEL`，则如前所述派生别名。
 
-如果不支持 CKA_TRUSTED 属性，则不创建信任证书。
+如果不支持 `CKA_TRUSTED` 属性，则不创建信任证书。
 
 任何不属于私钥或信任证书条目的私钥或证书对象都会被忽略。
 
 通过 `C_FindObjects[Init|Final]` 对 token 上所有的密钥对象进行搜索。搜索模板包含以下属性：
 
-- CKA_TOKEN = true
-- CKA_CLASS = CKO_SECRET_KEY
+- `CKA_TOKEN = true`
+- `CKA_CLASS = CKO_SECRET_KEY`
 
-为每个密钥对象创建一个 KeyStore 密钥条目，使用 CKA_LABEL 值作为 KeyStore 别名。每个密钥对象必须有一个唯一的 CKA_LABEL。
+为每个密钥对象创建一个 KeyStore 密钥条目，使用 `CKA_LABEL` 值作为 KeyStore 别名。每个密钥对象必须有一个唯一的 `CKA_LABEL`。
 
 ## 写入访问
 
 为了在 PKCS#11 token 上创建新的 KeyStore 条目，SunPKCS11 provider 的 KeyStore 实现执行以下操作：
 
-1. 当创建 KeyStore 条目（例如在 `KeyStore.entrySet` 期间），调用 `C_CreateObject` 并设置 `CKA_TOKEN=true` 以为相应的条目内容创建令牌对象。私钥对象以 `CKA_PRIVATE=true` 存储。KeyStore 别名（UTF-8 编码）设置为私钥和对应对象的 CKA_ID。KeyStore 别名还被设置为端实体对象的 CKA_LABEL。私钥密钥链中的每个证书也会被存储。CA 证书不设置 CKA_LABEL。如果 token 中已存在 CA 证书，则不重复存储。密钥以 `CKA_PRIVATE=true` 存储。
+1. 当创建 KeyStore 条目（例如在 `KeyStore.entrySet` 期间），调用 `C_CreateObject` 并设置 `CKA_TOKEN=true` 以为相应的条目内容创建令牌对象。私钥对象以 `CKA_PRIVATE=true` 存储。KeyStore 别名（UTF-8 编码）设置为私钥和对应对象的 `CKA_ID`。KeyStore 别名还被设置为端实体对象的 `CKA_LABEL`。私钥密钥链中的每个证书也会被存储。CA 证书不设置 `CKA_LABEL`。如果 token 中已存在 CA 证书，则不重复存储。密钥以 `CKA_PRIVATE=true` 存储。
 2. 如果尝试将会话对象转换为令牌对象（例如调用 `KeyStore.entrySet` 时指定的条目的私钥是会话对象），则调用 `C_CopyObject` 并设置 `CKA_TOKEN=true`。
-3. 如果发现 token 中的多个证书共享相同的 CKA_LABEL，则拒绝对令牌的写入权限。
-4. 由于 PKCS#11 规范不允许普通应用程序设置 CKA_TRUSTED=true（只有令牌初始化应用程序可以这样做），因此无法创建信任证书。
+3. 如果发现 token 中的多个证书共享相同的 `CKA_LABEL`，则拒绝对令牌的写入权限。
+4. 由于 PKCS#11 规范不允许普通应用程序设置 `CKA_TRUSTED=true`（只有令牌初始化应用程序可以这样做），因此无法创建信任证书。
 
 ## 杂
 
 除了列出的搜索外，SunPKCS11 provider 的 KeyStore 实现可能使用以下搜索执行内部函数。具体而言，`C_FindObjects[Init][Final]` 可能会带有任何以下属性模板调用：
 
-| CKA_TOKEN = true |
-| CKA_CLASS = CKO_CERTIFICATE |
-| CKA_SUBJECT = [主体 DN] |
+| `CKA_TOKEN = true` |
+| `CKA_CLASS = CKO_CERTIFICATE` |
+| `CKA_SUBJECT = [主体 DN]` |
 
-| CKA_TOKEN = true |
-| CKA_CLASS = CKO_SECRET_KEY |
-| CKA_LABEL = [label] |
+| `CKA_TOKEN = true` |
+| `CKA_CLASS = CKO_SECRET_KEY` |
+| `CKA_LABEL = [label]` |
 
-| CKA_TOKEN = true |
-| CKA_CLASS = CKO_CERTIFICATE or CKO_PRIVATE_KEY |
-| CKA_ID = [cka_id] |
+| `CKA_TOKEN = true` |
+| `CKA_CLASS = CKO_CERTIFICATE or CKO_PRIVATE_KEY` |
+| `CKA_ID = [cka_id]` |
 
 ## 示例 Provider
 
@@ -9408,6 +9430,8 @@ public final class ExampleProvider extends Provider {
 
 // 我们有自己的 `ServiceDescription` 实现，它重写了 `newInstance()`
 // 它调用了 `(Provider, String)` 构造函数而不是无参数构造
+
+![](img/e26375bcfe04cf1374fe3293bdab5076_356_0.png)
 
 ```java
 private static class MyService extends Service {
@@ -9462,12 +9486,14 @@ private static class MyService extends Service {
 }
 ```
 
+![](img/e26375bcfe04cf1374fe3293bdab5076_357_0.png)
+
 // 我们的通用 MessageDigest 实现。它在单个类中实现了
-// 所有的摘要算法。我们只实现了 MessageDigestSpi 方法
+// 所有的摘要算法。我们只实现了 MessageDigestS 方法
 // 中最少的方法。
 
 ```java
-private static final class MyMessageDigest extends MessageDigestSpi {
+private static final class MyMessageDigest extends MessageDigestS {
 
     private final ExampleProvider provider;
     private final String algorithm;
@@ -9549,15 +9575,15 @@ private static abstract class MyCipher extends CipherSpi {
 
 # Java 身份认证与授权服务 (JAAS) 参考指南
 
-`Subject` 对象。`Subject` 由 `LoginModule` 更新，包含相关的 `Principals`（主体）和凭据（credentials），以确保身份验证成功。
+`Subject` 对象。`Subject` 由 `LoginModule` 更新，包含相关的 Principals（主体）和凭据（credentials），以确保身份验证成功。
 
-# 谁应该阅读本文档
+## 谁应该阅读本文档
 
 本文旨在供具有经验的开发者阅读，他们需要设计受基于 `CodeSource` 和基于 `Subject` 的安全模型限制的应用程序。本文也旨在供 `LoginModule` 开发者（实现身份验证技术的开发者）在运行 Java 身份认证与授权服务 (JAAS) 之前阅读，位于《LoginModule 开发者指南》中。
 
 你可能希望参考 [JAAS 身份认证教程] 和 [JAAS 授权教程] 来获取 JAAS 运行的概览，并查看运行中的示例代码，然后返回本文档以获取更多信息。
 
-# 相关文档
+## 相关文档
 
 本文档假设你已经阅读了以下内容：
 
@@ -9571,26 +9597,26 @@ private static abstract class MyCipher extends CipherSpi {
 - JAAS 身份认证教程
 - JAAS 授权教程
 
-类似的 JAAS 身份认证和授权教程（但它们演示了 `Kerberos LoginModule` 的使用并需要安装 Kerberos）可以在此处找到：
+类似的 JAAS 身份认证和授权教程（但它们演示了 Kerberos `LoginModule` 的使用并需要安装 Kerberos）可以在此处找到：
 
 - JAAS 身份认证
 - JAAS 授权
 
 这两个教程是《JAAS 简介》和《Java GSS-API 教程》的一部分，这些教程利用 Kerberos 作为身份认证和安全通信的底层技术。
 
-# 核心类和接口
+## 核心类和接口
 
 与 JAAS 相关的核心类和接口可以分为三类：通用（Common）、认证（Authentication）和授权（Authorization）。
 
-# 通用类
+### 通用类
 
 通用类是 JAAS 身份认证和授权组件共享的类。
 
-关键 JAAS 类是 `javax.security.auth.Subject`，它代表单个实体（人）的相关信息的分组。它包含了实体的 `Principals`、公共凭据和私有凭据。
+关键 JAAS 类是 `javax.security.auth.Subject`，它代表单个实体（人）的相关信息的分组。它包含了实体的 Principals、公共凭据和私有凭据。
 
 注意，`java.security.Principal` 接口用于表示 Principal。同时注意，由 JAAS 定义的凭据可以是任何 `Object`。
 
-为了对资源访问授权，应用程序首先需要对请求源进行身份验证。JAAS 框架定义 `Subject` 来表示请求源。`Subject` 可以是任何实体，例如人或服务。一旦 `Subject` 经过身份验证，`javax.security.auth.Subject` 就会填充关联的身份，即 `Principals`。`Subject` 可以有多个 `Principals`。例如，一个人可能有一个名为 "John Doe" 的名称 `Principal` 以及一个来自其他主体的 SSN `Principal` ("123-45-6789")。
+为了对资源访问授权，应用程序首先需要对请求源进行身份验证。JAAS 框架定义 `Subject` 来表示请求源。`Subject` 可以是任何实体，例如人或服务。一旦 `Subject` 经过身份验证，`javax.security.auth.Subject` 就会填充关联的身份，即 Principals。`Subject` 可以有多个 Principals。例如，一个人可能有一个名为 "John Doe" 的名称 Principal 以及一个来自其他主体的 SSN Principal ("123-45-6789")。
 
 `Subject` 还可以包含与安全相关的属性，这些被称为凭据（credentials）；参见“凭据”部分。需要特殊保护的敏感凭据（如私有加密密钥）存储在私有凭据集中。旨在共享的凭据（如公钥证书）存储在公共凭据集中。访问和修改不同的凭据集需要不同的权限。
 
@@ -9601,11 +9627,10 @@ public Subject();
 ```
 
 ```java
-public Subject(boolean readOnly, Set principals,
-Set pubCredentials, Set privCredentials);
+public Subject(boolean readOnly, Set principals, Set pubCredentials, Set privCredentials);
 ```
 
-第一个构造函数创建一个带有空（非空）`Principals` 集合和凭据集的 `Subject`。第二个构造函数创建一个带有指定的 `Principals` 集合和凭据集的 `Subject`。它接受一个布尔参数，用于将 `Subject` 设为只读。在只读 `Subject` 中，`Principal` 和凭据集是不可变的。
+第一个构造函数创建一个带有空（非空）Principals 集合和凭据集的 `Subject`。第二个构造函数创建一个带有指定的 Principals 集合和凭据集的 `Subject`。它接收一个布尔参数，用于将 `Subject` 设为只读。在只读 `Subject` 中，Principal 和凭据集是不可变的。
 
 应用程序编写者不必手动实例化 `Subject`。如果应用程序实例化 `LoginContext` 且没有将 `Subject` 传递给 `LoginContext` 构造函数，则 `LoginContext` 会实例化一个新的 `Subject`。参见 `LoginContext` 章节。
 
@@ -9615,7 +9640,7 @@ Set pubCredentials, Set privCredentials);
 public void setReadOnly();
 ```
 
-调用此方法需要一个目标为 "setReadOnly" 的 `javax.security.auth.AuthPermission`。在只读状态下，任何添加或删除 `Principals` 或凭据的尝试都将抛出 `IllegalStateException`。
+调用此方法需要一个目标为 "setReadOnly" 的 `javax.security.auth.AuthPermission`。在只读状态下，任何添加或删除 Principals 或凭据的尝试都将抛出 `IllegalStateException`。
 
 测试 `Subject` 是否为只读状态可以调用以下方法：
 
@@ -9623,14 +9648,14 @@ public void setReadOnly();
 public boolean isReadOnly();
 ```
 
-获取与 `Subject` 关联的 `Principals` 有两种方法：
+获取与 `Subject` 关联的 Principals 有两种方法：
 
 ```java
 public Set getPrincipals();
 public Set getPrincipals(Class c);
 ```
 
-第一个方法返回 `Subject` 中的 `Principals`，第二个方法仅返回指定 `Class` 的 `Principals`。如果 `Subject` 没有关联的 `Principals`，将返回空集合。
+第一个方法返回 `Subject` 中的 Principals，第二个方法仅返回指定 `Class` 的 Principals。如果 `Subject` 没有关联的 Principals，将返回空集合。
 
 获取与 `Subject` 关联的公共凭据，可以使用以下方法：
 
@@ -9668,7 +9693,7 @@ subject.getPublicCredentials().add(credential);
 
 为了遍历私有凭据集，你需要 `javax.security.auth.PrivatePermission`。更多信息请参阅 PrivatePermission API 文档。
 
-Subject 可以与 AccessContext 关联（参见下文的 `doAs` 和 `doAsPrivileged` 方法）。以下方法返回与指定的 AccessContext 关联的 Subject，如果没有关联则返回 null：
+Subject 可以与 `AccessControlContext` 关联（参见下文的 `doAs` 和 `doAsPrivileged` 方法）。以下方法返回与指定的 `AccessControlContext` 关联的 Subject，如果没有关联则返回 null：
 
 ```java
 public Subject getSubject(AccessControlContext acc);
@@ -9689,18 +9714,23 @@ public int hashCode();
 可以使用以下方法作为特定 Subject 执行操作：
 
 ```java
-public static Object doAs(final Subject subject, final java.security.PrivilegedAction action);
+public static Object
+doAs(final Subject subject,
+    final java.security.PrivilegedAction action);
 ```
 
 ```java
-public static Object doAs(final Subject subject, final java.security.PrivilegedExceptionAction action) throws java.security.PrivilegedActionException;
+public static Object
+doAs(final Subject subject,
+    final java.security.PrivilegedExceptionAction action)
+    throws java.security.PrivilegedActionException;
 ```
 
-这两个方法首先将 subject 与线程的 AccessContext 关联，然后执行操作。这实现了运行操作的效果但可以正常处理异常。第一个方法通过从 action 方法返回对象来抛出运行时异常。第二个方法的行为类似于，可以捕获来自 `PrivilegedExceptionAction.run()` 方法的异常。调用 `doAs` 方法需要目标为 "doAs" 的 `AuthPermission`。
+这两个方法首先将 subject 与线程的 `AccessControlContext` 关联，然后执行操作。这实现了运行操作的效果但可以正常处理异常。第一个方法通过从 action 方法返回对象来抛出运行时异常。第二个方法的行为类似于，可以捕获来自 `PrivilegedExceptionAction.run()` 方法的异常。调用 `doAs` 方法需要目标为 "doAs" 的 `AuthPermission`。
 
 # Subject.doAs 示例
 
-这是一个使用第一个 `doAs` 方法的示例。假设某个名称 "Bob" 已经通过 `LoginContext` 身份验证（参见 LoginContext），结果 Subject 填充了一个 `com.ibm.security.Principal` 类的 Principal，且该 Principal 的名为 "Bob"。同样假设已安装了 SecurityManager，并且访问控制策略中存在以下内容（策略详情参见 Policy）：
+这是一个使用第一个 `doAs` 方法的示例。假设某个名称 "Bob" 已经通过 `LoginContext` 身份验证（参见 LoginContext），结果 Subject 填充了一个 `com.ibm.security.Principal` 类的 Principal，且该 Principal 的名为 "Bob"。同样假设已安装了 `SecurityManager`，并且访问控制策略中存在以下内容（策略详情参见 Policy）：
 
 ```java
 // 授予 "BOB" 读取文件 "foo.txt" 的权限
@@ -9726,7 +9756,8 @@ class ExampleAction implements java.security.PrivilegedAction {
 public class Example {
     public static void main(String[] args) {
         // 认证主体 "BOB"
-        // 该过程在 LoginContext 类中进行了描述。
+        // 该过程在 LoginContext
+        // 类中进行了描述。
         Subject bob;
         // 将 bob 设置为在认证过程中创建的 Subject
         // 以 "BOB" 执行 "ExampleAction"
@@ -9735,18 +9766,25 @@ public class Example {
 }
 ```
 
-在执行期间，ExampleAction 在调用 `f.exists()` 时会遇到安全检查。然而，由于 ExampleAction 是以 "BOB" 的身份运行的，且此示例中的策略授予了 "BOB" 必要的 `FilePermission`，因此 ExampleAction 将通过安全检查。如果策略中的 grant 语句被修改（例如添加错误的 CodeBase 或将 Principal 更改为 "MOE"），则会抛出 `SecurityException`。
+在执行期间，`ExampleAction` 在调用 `f.exists()` 时会遇到安全检查。然而，由于 `ExampleAction` 是以 "BOB" 的身份运行的，且此示例中的策略授予了 "BOB" 必要的 `FilePermission`，因此 `ExampleAction` 将通过安全检查。如果策略中的 grant 语句被修改（例如添加错误的 CodeBase 或将 Principal 更改为 "MOE"），则会抛出 `SecurityException`。
 
 # doAsPrivileged 方法
 
 以下方法也以特定的 Subject 执行某个动作。
 
 ```java
-public static Object doAsPrivileged(final Subject subject, final java.security.PrivilegedAction action, final java.security.AccessControlContext acc);
+public static Object doAsPrivileged(
+    final Subject subject,
+    final java.security.PrivilegedAction action,
+    final java.security.AccessControlContext acc);
 ```
 
 ```java
-public static Object doAsPrivileged(final Subject subject, final java.security.PrivilegedExceptionAction action, final java.security.AccessControlContext acc) throws java.security.PrivilegedActionException;
+public static Object doAsPrivileged(
+    final Subject subject,
+    final java.security.PrivilegedExceptionAction action,
+    final java.security.AccessControlContext acc)
+    throws java.security.PrivilegedActionException;
 ```
 
 调用 `doAsPrivileged` 方法需要一个目标为 "doAsPrivileged" 的 `AuthPermission`。
@@ -9771,7 +9809,7 @@ public static Object doAsPrivileged(final Subject subject, final java.security.P
 
 # Refreshable（可刷新的）
 
-`javax.security.auth.Refreshable` 接口提供了让凭据能够刷新的能力。例如，一个具有特定时间限制寿命的凭据可以实现此接口，允许调用者刷新其有效时间。该接口有两个抽象方法：
+`javax.security.auth.Refreshable` 接口提供了让凭据能够刷新自身的能力。例如，一个具有特定时间限制寿命的凭据可以实现此接口，允许调用者刷新其有效时间。该接口有两个抽象方法：
 
 ```java
 boolean isCurrent();
@@ -9807,17 +9845,17 @@ void destroy() throws DestroyFailedException;
 
 为了认证主体，执行以下步骤：
 
-1. 应用程序安装 `LoginContext`。
-2. `LoginContext` 开始加载配置的 `LoginModules`。
+1. 应用程序实例化 `LoginContext`。
+2. `LoginContext` 开始加载配置的 `LoginModule`。
 3. 应用程序调用 `LoginContext` 的 `login()` 方法。
-4. `login()` 方法调用所有加载的 `LoginModules`。每个 `LoginModule` 尝试认证主体。
+4. `login()` 方法调用所有加载的 `LoginModule`。每个 `LoginModule` 尝试认证主体。
 5. 成功后，将 Principals 和 credentials 与主体关联。
 6. `LoginContext` 将认证状态返回给应用程序。
 7. 如果认证成功，应用程序从 `LoginContext` 获取 Subject。
 
 # LoginContext
 
-`javax.security.auth.login.LoginContext` 类提供了认证用户的基本方法，并提供了一种独立于认证技术的开发方法。`LoginContext` 查询配置（Configuration）以确定为特定应用程序配置的认证服务或 `LoginModule`。可以在不修改应用程序的情况下插入不同的 `LoginModule`。
+`javax.security.auth.login.LoginContext` 类提供了认证用户的基本方法，并提供了一种独立于认证技术的开发方法。`LoginContext` 查询配置（`Configuration`）以确定为特定应用程序配置的认证服务或 `LoginModule`。可以在不修改应用程序的情况下插入不同的 `LoginModule`。
 
 `LoginContext` 提供了四个构造函数供选择：
 
@@ -9837,7 +9875,7 @@ public LoginContext(String name, CallbackHandler callbackHandler) throws LoginEx
 public LoginContext(String name, Subject subject, CallbackHandler callbackHandler) throws LoginException;
 ```
 
-所有构造函数共享一个通用参数 `name`：此参数被 `LoginContext` 用作登录配置的索引，以确定实例化 `LoginContext` 的应用程序配置了哪些 `LoginModule`。不接受 Subject 输入的构造函数实例化一个新的 Subject。所有构造函数都不允许为空。实例化 `LoginContext` 需要目标为 "createAppContext.<name>" 的 `AuthPermission`。在这里，`<name>` 指应用程序在实例化的 `name` 参数中引用的登录配置条目的名称。
+所有构造函数共享一个通用参数 `name`：此参数被 `LoginContext` 用作登录配置的索引，以确定实例化 `LoginContext` 的应用程序配置了哪些 `LoginModule`。不接受 `Subject` 输入的构造函数实例化一个新的 `Subject`。所有构造函数都不允许为空。实例化 `LoginContext` 需要目标为 "createLoginContext.<name>" 的 `AuthPermission`。在这里，`<name>` 指应用程序在实例化时的 `name` 参数中引用的登录配置条目的名称。
 
 有关 `CallbackHandler` 是什么以及何时可能需要，请参阅 CallbackHandler。
 
@@ -10084,9 +10122,10 @@ policy.url.2=file:C:/users/foo/.foo.policy
 
 - 为标准扩展授予所有权限
 - 允许任何人监听非特权端口
-- 允许任何代码读取非安全敏感的“标准”属性，例如 `os.name` 和 `file.separator` 属性。
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_375_0.png)
+
+- 允许任何代码读取非安全敏感的“标准”属性，例如 `os.name` 和 `file.separator` 属性。
 
 ## 附录 B：JAAS 登录配置文件
 
@@ -10101,7 +10140,7 @@ JAAS 认证是以插件化方式执行的，因此 JAAS 应用程序独立于底
 ```
 <应用程序引用此条目的名称> {
     <LoginModule> <flag> <LoginModule options>;
-    <可选的额外的 LoginModules, flags and options>
+    <可选的额外的 LoginModules, flags and options>;
 };
 ```
 
@@ -10119,7 +10158,13 @@ Login1 {
 
 应用程序引用此条目的名称为 `Login1`。在例中，`LoginModule` 是 `sample.SampleLoginModule`。标记是 `required`，选项是 `debug=true`。
 
+每个登录配置文件由一个或多个条目组成，其中每个 `LoginModule` 相关的条目以分号结束；整个 `LoginModule` 相关的条目组用大括号括起来。每个登录配置条目以分号结束。
+
+应用程序引用此条目的名称为 `Login1`。在例中，`LoginModule` 是 `sample.SampleLoginModule`。标记是 `required`，选项是 `debug=true`。
+
 ![](img/e26375bcfe04cf1374fe3293bdab5076_376_0.png)
+
+## 第 6 章 Java 身份验证和授权服务 (JAAS) 参考指南
 
 应用程序 `Login1` 配置了一个 `LoginModule`，即 `SampleLoginModule`。因此，`Login1` 尝试对主体（用户或服务）进行身份验证，当且仅当 `SampleLoginModule` 成功时操作才会成功。
 
@@ -10137,33 +10182,33 @@ Login1 {
 
 > * = true 值，由于由于先决模块失败或充分模块成功而返回到应用程序。
 
-### 在何处指定应使用哪种登录配置文件
+## 在何处指定应使用哪种登录配置文件
 
 可以通过两种方式之一指定配置文件：
 
-#### 1. 在命令行中
+1.  **在命令行中。**
 
-你可以使用 `-Djava.security.auth.login.config` 解释器命令行参数来指定应该使用的登录配置文件。我们在所有教程中都使用这种方法。例如，我们在 JAAS 身份验证教程中使用以下命令运行我们的 `SampleAcn`，该命令指定了配置文件为当前目录下的 `sample_jaas.config` 文件：
+    你可以使用 `-Djava.security.auth.login.config` 解释器命令行参数来指定应该使用的登录配置文件。我们在所有教程中都使用这种方法。例如，我们在 JAAS 身份验证教程中使用以下命令运行我们的 `SampleAcn`，该命令指定了配置文件为当前目录下的 `sample_jaas.config` 文件：
 
-```bash
-java -Djava.security.auth.login.config=sample_jaas.config SampleAcn
-```
+    ```
+    java -Djava.security.auth.login.config=sample_jaas.config sampleAcn
+    ```
 
-> **注意：** 如果在 `java.security.auth.login.config` 系统属性上使用等号 (=)（而不是双等号 (==)），则将同时使用该系统属性指定的配置和 `java.security` 文件中的配置。
+    > **注意：** 如果在 `java.security.auth.login.config` 系统属性上使用等号 (=)（而不是双等号 (==)），则将同时使用该系统属性指定的配置和 `java.security` 文件中的配置。
 
-![](img/e26375bcfe04cf1374fe3293bdab5076_378_0.png)
+    ![](img/e26375bcfe04cf1374fe3293bdab5076_378_0.png)
 
-#### 2. 在 Java 安全属性文件中
+2.  **在 Java 安全属性文件中。**
 
-指定登录配置文件位置的另一种方法是在安全属性文件中将其 URL 作为 `login.config.url.n` 指出。安全属性文件是位于 JDK `conf/security` 目录下的 `java.security` 文件。
+    指定登录配置文件位置的另一种方法是在安全属性文件中将其 URL 作为 `login.config.url.n` 指出。安全属性文件是位于 JDK `conf/security` 目录下的 `java.security` 文件。
 
-在这里，`n` 表示从 1 开始的连续编号的整数。因此，如果需要，你可以通过为 `login.config.url.1` 属性指定每个文件的 URL，为 `login.config.url.2` 属性指定第二个文件的 URL，依此类推，从而指定多个登录配置文件。如果指定了多个登录配置文件（即 `n > 1` 时），则这些文件将被读取并合并成单一配置。
+    在这里，`n` 表示从 1 开始的连续编号的整数。因此，如果需要，你可以通过为 `login.config.url.1` 属性指定每个文件的 URL，为 `login.config.url.2` 属性指定第二个文件的 URL，依此类推，从而指定多个登录配置文件。如果指定了多个登录配置文件（即 `n > 1` 时），则这些文件将被读取并合并成单一配置。
 
-以下为了在本教程中在安全属性文件中需要添加的内容的示例，以指定 `sample_jaas.config` 登录配置文件。此示例文件位于 Windows 的 `C:\UnitTest` 目录下：
+    以下是为了在本教程中在安全属性文件中需要添加的内容的示例，以指定 `sample_jaas.config` 登录配置文件。此示例文件位于 Windows 的 `C:\UnitTest` 目录下：
 
-```
-login.config.url.1=C:\UnitTest\sample_jaas.config
-```
+    ```
+    login.config.url.1=C:\UnitTest\sample_jaas.config
+    ```
 
 
 
@@ -10210,19 +10255,19 @@ JAAS 身份验证是以可插的方式执行的。这允许 JAAS 应用程序保
 
 # SampleAcn 类
 
-我们的身份验证教程代码包含在一个文件中，即 `SampleAcn.java`。它包含两个类：`SampleAcn` 类
+我们的身份验证教程代码包含在一个文件中，即 `SampleAcn.java`。它包含两个类：SampleAcn 类
 
-`SampleAcn` 的 `main` 方法执行身份验证并报告身份验证是否成功。
+SampleAcn 的 main 方法执行身份验证并报告身份验证是否成功。
 身份验证代码非常简单，由两个步骤组成：
 
-1. 实例化 `LoginContext`
-2. 调用 `LoginContext` 的 `login` 方法
+1. 实例化 LoginContext
+2. 调用 LoginContext 的 login 方法
 
-首先显示基本代码，然后是完整的 `SampleAcn` 代码，包含了所需的导入语句和错误处理。
+首先显示基本代码，然后是完整的 SampleAcn 代码，包含了所需的导入语句和错误处理。
 
 ## 实例化 LoginContext
 
-为了身份验证用户，首先需要一个 `java.security.auth.LoginContext`。这里是实例化 `LoginContext` 的基本方法：
+为了身份验证用户，首先需要一个 `java.security.auth.LoginContext`。这里是实例化 LoginContext 的基本方法：
 
 ```java
 import java.security.auth.login.*;
@@ -10240,27 +10285,27 @@ LoginContext lc = new LoginContext("Sample", new MyCallbackHandler());
 
 参数如下：
 
-- **CallbackHandler 实例**：当 `LoginModule` 需要与用户通信时（例如请求用户名和密码），它并不直接这样做。那是由于存在多种与用户通信的方式，保持与用户交互类型独立是理想的。`LoginModule` 调用 `java.security.auth.callback.CallbackHandler` 来执行用户交互并获取所需的信息，例如用户名和密码。要使用的 `CallbackHandler` 实例作为 `LoginContext` 构造函数的参数指定。`LoginContext` 将实例传递给底层的 `LoginModule`（在我们的示例中为 `SampleLoginModule`）。应用程序通常提供自己的 `CallbackHandler` 实现。`com.sun.security.auth.callback` 包中提供了一个简单的 `CallbackHandler` (`TextCallbackHandler`)，用于向命令行输出信息并从命令行读取信息。然而，我们演示了应用程序使用自己的 `CallbackHandler` 实现的最典型情况，该情况在 `MyCallbackHandler` 类中描述。
+- **CallbackHandler 实例**：当 LoginModule 需要与用户通信时（例如请求用户名和密码），它并不直接这样做。那是由于存在多种与用户通信的方式，保持与用户交互类型独立是理想的。LoginModule 调用 `java.security.auth.callback.CallbackHandler` 来执行用户交互并获取所需的信息，例如用户名和密码。要使用的 CallbackHandler 实例作为 LoginContext 构造函数的参数指定。LoginContext 将实例传递给底层的 LoginModule（在我们的示例中为 SampleLoginModule）。应用程序通常提供自己的 CallbackHandler 实现。`com.sun.security.auth.callback` 包中提供了一个简单的 CallbackHandler (`TextCallbackHandler`)，用于向命令行输出信息并从命令行读取信息。然而，我们演示了应用程序使用自己的 CallbackHandler 实现的最典型情况，该情况在 MyCallbackHandler 类中描述。
 
-一旦我们拥有了 `LoginContext lc`，就可以调用它的 `login()` 方法来执行身份验证过程：
+一旦我们拥有了 LoginContext lc，就可以调用它的 `login()` 方法来执行身份验证过程：
 
 ```java
 lc.login();
 ```
 
-`LoginContext` 会实例化一个新的空的 `java.security.auth.Subject` 对象（它代表正在进行身份验证的用户或服务；请参见 `Subject`）。`LoginContext` 会构建配置好的 `LoginModule`（在本例中为 `SampleLoginModule`），并使用此 `Subject` 和 `CallbackHandler` 对其进行初始化。
+LoginContext 会实例化一个新的空的 `java.security.auth.Subject` 对象（它代表正在进行身份验证的用户或服务；请参见 Subject）。LoginContext 会构建配置好的 LoginModule（在本例中为 SampleLoginModule），并使用此 Subject 和 CallbackHandler 对其进行初始化。
 
-`LoginContext` 的 `login()` 方法调用 `SampleLoginModule` 中的所有方法来执行登录和身份验证。`SampleLoginModule` 将利用 `Callback` 来获取用户名和密码。然后，`SampleLoginModule` 将检查用户名和密码是否为它预期的值。
+LoginContext 的 `login()` 方法调用 SampleLoginModule 中的所有方法来执行登录和身份验证。SampleLoginModule 将利用 Callback 来获取用户名和密码。然后，SampleLoginModule 将检查用户名和密码是否为它预期的值。
 
-如果身份验证成功，`SampleLoginModule` 将在 `Subject` 中填充一个代表该用户的 `Principal`。`SampleLoginModule` 放置在 `Subject` 中的 `Principal` 是 `SamplePrincipal` 的一个实例，该类是实现 `java.security.Principal` 接口的示例类。
+如果身份验证成功，SampleLoginModule 将在 Subject 中填充一个代表该用户的 Principal。SampleLoginModule 放置在 Subject 中的 Principal 是 SamplePrincipal 的一个实例，该类是实现 `java.security.Principal` 接口的示例类。
 
-调用者应用程序随后可以通过调用 `LoginContext` 的 `getSubject()` 方法来获取已通过身份验证的 `Subject`，尽管对于本教程来说这并不是必要的。
+调用者应用程序随后可以通过调用 LoginContext 的 `getSubject()` 方法来获取已通过身份验证的 Subject，尽管对于本教程来说这并不是必要的。
 
-## SampleAcn 类代码
+## SampleAccn 类代码
 
-现在你已经使用了基础代码来验证用户，我们可以将它们整合到 `SampleAcn.java` 的完整类中，其中包含了相关的导入语句和错误处理：
+现在你已经使用了基础代码来验证用户，我们可以将它们整合到 SampleAccn.java 的完整类中，其中包含了相关的导入语句和错误处理：
 
-### SampleAcn.java
+### SampleAccn.java
 
 ```java
 package sample;
@@ -10275,7 +10320,7 @@ import javax.security.auth.callback.*;
  * 此示例应用程序尝试对用户身份验证
  * 并报告身份验证是否成功。
  */
-public class SampleAcn {
+public class SampleAccn {
 
     /**
      * 尝试身份验证用户。
@@ -10287,7 +10332,7 @@ public class SampleAcn {
         // LoginModule 实现，并使用指定的 CallbackHandler。
         LoginContext lc = null;
         try {
-            lc = new LoginContext("Sample", new MyCallbackHandler());
+            lc = new LoginContext("Sample", new CallbackHandler());
         } catch (LoginException le) {
             System.err.println("无法创建 LoginContext. " + le.getMessage());
             System.exit(-1);
@@ -10326,11 +10371,11 @@ public class SampleAcn {
 }
 ```
 
-- 该应用程序实现了 `CallbackHandler`。
-- 此应用程序是基于文本的。因此，它使用 `OutputStream System.out` 和 `System.err` 向用户显示信息，并使用 `InputStream System.in` 从用户处收集输入。
+- 该应用程序实现了 CallbackHandler。
+- 此应用程序是基于文本的。因此，它使用 OutputStream System.out 和 System.err 向用户显示信息，并使用 InputStream System.in 从用户处收集输入。
 
 ```java
-class MyCallbackHandler implements CallbackHandler {
+class MyCallback implements CallbackHandler {
 
     /**
      * 调用 Callback 数组。
@@ -10367,7 +10412,7 @@ class MyCallbackHandler implements CallbackHandler {
                 NameCallback nc = (NameCallback) callbacks[i];
                 System.err.print(nc.getPrompt());
                 System.err.flush();
-                nc.setName(new BufferedReader(new InputStreamReader(System.in)).readLine());
+                nc.setName(new BufferedReader((new InputStreamReader(System.in))).readLine());
             } else if (callbacks[i] instanceof PasswordCallback) {
                 // 提示用户输入敏感信息
                 PasswordCallback pc = (PasswordCallback) callbacks[i];
@@ -10384,11 +10429,11 @@ class MyCallbackHandler implements CallbackHandler {
 
 ## MyCallbackHandler 类
 
-在某些 `LoginModule` 必须与用户通信以获取身份验证信息。`LoginModule` 使用 `java.security.auth.callback.CallbackHandler` 来实现此目的。应用程序可以使用 `com.sun.security.auth.callback` 包中提供的示例实现之一，或者通常会编写一个 `CallbackHandler` 实现。应用程序将 `CallbackHandler` 作为参数传递给 `LoginContext`。`LoginContext` 将 `CallbackHandler` 直接转发给底层的 `LoginModules`。
+在某些 LoginModule 必须与用户通信以获取身份验证信息。LoginModule 使用 `java.security.auth.callback.CallbackHandler` 来实现此目的。应用程序可以使用 `com.sun.security.auth.callback` 包中提供的示例实现之一，或者通常会编写一个 CallbackHandler 实现。应用程序将 CallbackHandler 作为参数传递给 LoginContext。LoginContext 将 CallbackHandler 直接转发给底层的 LoginModules。
 
-教程示例代码提供了自身的 `CallbackHandler` 实现，即 `MyCallbackHandler` 类。
+教程示例代码提供了自身的 CallbackHandler 实现，即第 6-20 页的 MyCallbackHandler 类。
 
-`CallbackHandler` 是一个包含一个需要实现方法的接口：
+CallbackHandler 是一个包含一个需要实现方法的接口：
 
 ```java
 void handle(Callback[] callbacks) throws IOException, UnsupportedCallbackException;
@@ -10402,7 +10447,7 @@ void handle(Callback[] callbacks) throws IOException, UnsupportedCallbackExcepti
     NameCallback nc = (NameCallback) callbacks[i];
     System.err.print(nc.getPrompt());
     System.err.flush();
-    nc.setName(new BufferedReader(new InputStreamReader(System.in)).readLine());
+    nc.setName(new BufferedReader(System.in).readLine());
 }
 ```
 
@@ -10421,7 +10466,11 @@ void handle(Callback[] callbacks) throws IOException, UnsupportedCallbackExcepti
 
 `SamplePrincipal.java` 是实现 `java.security.Principal` 接口的示例类。如果身份验证成功，`SampleLoginModule` 会在 `Subject` 中填充一个代表用户的 `SamplePrincipal`。
 
-> **重要：** 如果你正在编写应用程序，你不需要知道如何编写 `LoginModule` 或 `Principal` 实现。你只需要检查 `SampleLoginModule` 和 `SamplePrincipal` 的代码来编写你的应用程序，并指定配置信息（例如在登录配置文件中），以便应用程序能够利用配置指定的 `LoginModule` 来验证用户。你需要确定想要使用哪个 `LoginModule`，并阅读 `LoginModule` 的文档，以了解你可以在（配置中）为哪些选项指定值以控制 `LoginModule` 的行为。
+> **重要：** 如果你正在编写应用程序，你不需要知道如何编写 `LoginModule` 或 `Principal` 实现。你只需要检查 `SampleLoginModule` 和 `SamplePrincipal` 的代码来编写你的应用程序，并指定配置信息（例如在登录配置文件中），以便应用程序能够利用配置指定的 `LoginModule` 来验证用户。你需要确定想要使用哪个 `LoginModule()`，并阅读 `LoginModule` 的文档，以了解你可以在（配置中）为哪些选项指定值以控制 `LoginModule` 的行为。
+
+![](img/e26375bcfe04cf1374fe3293bdab5076_387_0.png)
+
+6-27
 
 任何供应商都可以提供你可以使用的 `LoginModule` 实现。某些实现由 Oracle 的 JDK 提供，如附录 B：JAAS 登录配置文件所示。
 
@@ -10483,7 +10532,7 @@ public class SampleLoginModule implements LoginModule {
  * @param subject 要验证的 `Subject`。<p>
  * @param callbackHandler 用于与终端用户通信的 `CallbackHandler`（例如，提示用户名和密码）。<p>
  * @param sharedState 共享的 `LoginModule` 状态。<p>
- * @param options 此特定 `LoginModule` 在登录 `Configuration` 中指定的选项。
+ * @param options 此特定 `LoginModule` 在登录 `<code>Configuration</code>` 中指定的选项。
  */
 public void initialize(Subject subject,
     CallbackHandler callbackHandler,
@@ -10574,9 +10623,20 @@ public boolean login() throws LoginException {
 }
 ```
 
+![](img/e26375bcfe04cf1374fe3293bdab5076_389_0.png)
+
+6-29
+
+![](img/e26375bcfe04cf1374fe3293bdab5076_390_0.png)
+
+6-30
+
 ```java
+passwordCorrect = true;
+
 if (debug) {
-    System.out.println("\t[SampleLoginModule] " + "authentication succeeded");
+    System.out.println("\t[SampleLoginModule] " + \
+        "authentication succeeded");
 }
 
 succeeded = true;
@@ -10587,11 +10647,13 @@ return true;
 ```java
 // 认证失败 -- 清除状态
 if (debug) {
-    System.out.println("\t[SampleLoginModule] " + "authentication failed");
+    System.out.println("\t[SampleLoginModule] " + \
+        "authentication failed");
 }
 
 succeeded = false;
 username = null;
+
 for (int i = 0; i < password.length; i++) {
     password[i] = ' ';
 }
@@ -10600,31 +10662,43 @@ password = null;
 if (!usernameCorrect) {
     throw new FailedLoginException("User Name Incorrect");
 }
+
 throw new FailedLoginException("Password Incorrect");
 }
 ```
 
 ```java
-/*
+/**
  * 如果 LoginContext 的整体认证成功，则会调用此方法
- * (即相关的 REQUIRED, REQUISITE, SUFFICIENT 和 OPTIONAL LoginModules 均已成功)。
- * (通过获取由 `login()` 方法保存的私有状态来检查，然后此方法将
- * `SamplePrincipal` 与位于 `LoginModule` 中的 `Subject` 关联。
- * 如果此 LoginModule 自身的认证尝试失败，则此方法将移除最初保存的任何状态)。
+ * (即相关的 REQUIRED, REQUISITE, SUFFICIENT 和 OPTIONAL
+ * LoginModules 均已成功)。
+ * (通过获取由 `login()` 方法保存的
+ * 私有状态来检查，然后此方法将
+ * `SamplePrincipal`
+ * 与位于 `LoginModule` 中的
+ * `Subject` 关联。如果此 LoginModule 自身的
+ * 认证尝试失败，则此方法将移除
+ * 最初保存的任何状态)。
  * @exception LoginException 如果 commit 失败。
- * @return 如果此 LoginModule 自身的登录和 commit 尝试成功，则返回 true，否则返回 false。
+ * @return 如果此 LoginModule 自身的登录和 commit
+ * 尝试成功，则返回 true，否则返回 false。
  */
 public boolean commit() throws LoginException {
+
     if (succeeded == false) {
         return false;
     } else {
-        // 将 Principal（认证身份）添加到 Subject
+        // 将 Principal（认证身份）
+        // 添加到 Subject
         // 假设我们认证的用户是 SamplePrincipal
         userPrincipal = new SamplePrincipal(username);
+
         if (!subject.getPrincipals().contains(userPrincipal))
             subject.getPrincipals().add(userPrincipal);
+
         if (debug) {
-            System.out.println("\n\t\t[SampleLoginModule] " + "added SamplePrincipal 到 Subject");
+            System.out.println("\n\t\t[SampleLoginModule] " + 
+                "\tadded SamplePrincipal 到 Subject");
         }
 
         // 在任何情况下，清除状态
@@ -10632,32 +10706,42 @@ public boolean commit() throws LoginException {
         for (int i = 0; i < password.length; i++)
             password[i] = ' ';
         password = null;
+
         commitSucceeded = true;
         return true;
     }
 }
 
 /**
- * 如果 LoginContext 的整体认证失败，则会调用此方法。
- * (相关的 REQUIRED, REQUISITE, SUFFICIENT 和 OPTIONAL Modules)
+ * 如果 LoginContext 的整体
+ * 认证失败，则会调用此方法。
+ * (相关的 REQUIRED, REQUISITE, SUFFICIENT 和 OPTIONAL
+ * Modules)
  * 未成功。
- * 如果此 LoginModule 自身的认证尝试成功（通过获取由 `login()` 和 `commit()` 方法保存的私有状态来检查），
+ * 如果此 LoginModule 自身的认证尝试
+ * 成功（通过获取由 `login()` 和 `commit()` 方法
+ * 保存的私有状态来检查），
  * 则此方法将清理最初保存的状态。
  * @exception LoginException 如果 abort 失败。
- * @return 如果 LoginModule 自身的登录和/或 commit 尝试失败，则返回 false，否则返回 true。
+ * @return 如果 LoginModule 自身的登录和/或 commit
+ * 尝试失败，则返回 false，否则返回 true。
  */
 public boolean abort() throws LoginException {
+
     if (succeeded == false)
         return false;
     } else if (succeeded == true && commitSucceeded == false) {
+
         // 登录成功但整体认证失败
         succeeded = false;
         username = null;
+
         if (password != null) {
             for (int i = 0; i < password.length; i++)
                 password[i] = ' ';
             password = null;
         }
+
         userPrincipal = null;
     } else {
         // 整体认证成功且 commit 成功，
@@ -10667,9 +10751,10 @@ public boolean abort() throws LoginException {
 
 // 但其他人的 commit 失败了
 
-```java
-logout();
-}
+        logout();
+
+    }
+
 ```
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_392_0.png)
@@ -10684,7 +10769,7 @@ JAAS 认证是以插件方式执行的，因此应用程序可以独立于认证
 
 如前所述，我们为本教程使用的登录配置文件 `sample_jaas.config` 包含一个条目，即：
 
-```text
+```
 Sample {
     sample.module.SampleLoginModule required debug=true;
 }
@@ -10721,7 +10806,7 @@ javac sample/SampleAcn.java sample/module/SampleLoginModule.java sample/principa
 java -Djava.security.auth.login.config=sample_jaas.config sample.SampleAcn
 ```
 
-> **注意**：如果你在 `java.security.auth.login.config` 系统属性中使用单等号 (`=`)（而不是双等号 (`==`)），则会同时使用此系统属性和 `java.security.file` 指定的配置。
+> 注意：如果你在 `java.security.auth.login.config` 系统属性中使用单等号 (=)（而不是双等号 (==)），则会同时使用此系统属性和 `java.security.file` 指定的配置。
 
 ## 第 6 章：JAAS 教程
 
@@ -10729,19 +10814,19 @@ java -Djava.security.auth.login.config=sample_jaas.config sample.SampleAcn
 
 由于登录文件中 `debug` 选项被设置为 `true`，你将看到 `SampleLoginModule` 输出的消息。然后，如果登录成功，你将看到 `SampleAcn` 输出以下消息：
 
-```text
+```
 Authentication succeeded!
 ```
 
 如果登录失败（例如，拼写错误密码），你将看到：
 
-```text
+```
 Authentication failed.
 ```
 
 随后是跟一个失败的原因。例如，如果你输错了密码，你可能会看到如下消息：
 
-```text
+```
 Authentication failed:
 Password Incorrect
 ```
@@ -10752,7 +10837,7 @@ Password Incorrect
 
 当在安装了安全管理器的情况下运行 Java 程序时，除非安全策略授予权限，否则程序不允许访问资源或执行其他安全敏感操作。（参阅 JDK 中的 *Permissions* 部分。）该权限必须通过策略文件中的条目授予（参阅《默认策略实现》和《策略语法》）。
 
-> **警告**：安全管理器及其相关 API 已弃用，并将在未来的版本中被移除。安全管理器没有替代品。请参阅 PEP 411 获取讨论和替代方案。
+> 警告：安全管理器及其相关 API 已弃用，并将在未来的版本中被移除。安全管理器没有替代品。请参阅 PEP 411 获取讨论和替代方案。
 
 大多数浏览器都安装了安全管理器，因此 applet 通常在安全管理器的监视下运行。然而，应用程序没有，因为在应用程序运行时不会自动安装安全管理器。那么，像我们的 `SampleAcn` 这样的应用程序就可以完全访问资源。
 
@@ -10805,19 +10890,19 @@ LoginContext lc = new LoginContext("Sample", new MyHandler());
 
 因此，需要授予 `SampleAcn.jar` 的权限为：
 
-```text
+```
 permission javax.security.auth.AuthPermission "createLoginContext.Sample";
 ```
 
-`SampleLM.jar` 文件也需要授予权限。对于 `SampleLoginModule`，它应该告诉你需要哪些权限。为了向 `Subject` 填充 `Principal`，需要 `java.security.auth.AuthPermission`，目标为 `modifyPrincipals`：
+`SampleLM.jar` 文件也需要授予权限。对于 `SampleLoginModule`，它应该告诉你需要哪些权限。为了向 `Subject` 填充 `Principal`，需要 `javax.security.auth.AuthPermission`，目标为 `modifyPrincipals`：
 
-```text
+```
 permission javax.security.auth.AuthPermission "modifyPrincipals";
 ```
 
 将策略文件 `sampleacn.policy` 复制到 `SampleAcn.java` 等相同的目录。策略文件包含了针对当前目录下 `SampleAcn.jar` 的授予语句：
 
-```text
+```
 grant code "file:/SampleAcn.jar" {
     permission javax.security.auth.AuthPermission "createLoginContext.Sample";
 };
@@ -10825,35 +10910,42 @@ grant code "file:/SampleAcn.jar" {
 
 策略文件还包含以下针对当前目录下 `SampleLM.jar` 的授予语句：
 
-```text
+```
 grant code "file:/SampleLM.jar" {
     permission javax.security.auth.AuthPermission "modifyPrincipals";
 };
 ```
 
-> **注意**：在使用 `java.security.policy` 属性时，使用双等号 (`==`) 需谨慎，因为它会覆盖内置的 JDK 策略文件。该文件授予了一组旨在为 JDK 提供安全、开箱即用配置的默认权限。此策略可能会导致意外之外的行为（JDK 代码可能无法获得所需的权限），应仅由经验丰富的用户执行。
->
-> 如果你在 `java.auth.login.config` 系统属性上使用单等号 (`=`)（而不是双等号 (`==`)），则将使用此系统属性和 `java.security` 文件指定的配置。
+> 注意：在使用 `java.security.policy` 属性时，使用双等号 (=) 需谨慎，因为它会覆盖内置的 JDK 策略文件。该文件授予了一组旨在为 JDK 提供安全、开箱即用配置的默认权限。此策略可能会导致意外之外的行为（JDK 代码可能无法获得所需的权限），应仅由经验丰富的用户执行。
 
-以下是用于 Windows、Linux 和 macOS 的完整命令。唯一的区别是 Windows 使用分号 (`;`) 分隔类路径项目，而 Linux 和 macOS 则使用冒号 (`:`)。
+> 如果你在 `java.auth.login.config` 系统属性上使用单等号 (=)（而不是双等号 (==)），则将使用此系统属性和 `java.security` 文件指定的配置。
+
+以下是用于 Windows、Linux 和 macOS 的完整命令。唯一的区别是 Windows 使用分号 (;) 分隔类路径项目，而 Linux 和 macOS 则使用冒号 (:)。
 
 ### Windows 的完整命令
 
-```bash
-java -classpath SampleAcn.jar;SampleLM.jar -Djava.security.manager -Djava.security.policy==sampleacn.policy -Djava.security.auth.login.config=sample_jaas.config sample.SampleAcn
+```
+java -classpath SampleAcn.jar;SampleLM.jar
+-Djava.security.manager
+-Djava.security.policy==sampleacn.policy
+-Djava.security.auth.login.config=sample_jaas.config
+sample.SampleAcn
 ```
 
 ### Linux 和 macOS 的完整命令
 
-```bash
-java -classpath SampleAcn.jar:SampleLM.jar -Djava.security.manager -Djava.security.policy==sampleacn.policy -Djava.security.auth.login.config=sample_jaas.config sample.SampleAcn
+```
+java -classpath SampleAcn.jar:SampleLM.jar
+-Djava.security.manager
+-Djava.security.policy==sampleacn.policy
+-Djava.security.auth.login.config=sample_jaas.config
+sample.SampleAcn
 ```
 
-请将所有内容写成一行。此处使用多行是为了符合格式要求，如果命令对你的系统来说太长，你可能需要将其放在 `.bat` 文件（Windows）或 `.sh` 文件（Linux 和 macOS）中，然后运行该文件来执行命令。
-
+请将所有内容写成一行。此处使用多行是为了符合格式要求，如果命令对你的系统来说太长，你可能需要将其放在 .bat 文件（Windows）或 .sh 文件（Linux 和 macOS）中，然后运行该文件来执行命令。
 由于指定的策略文件包含授予代码所需权限的条目，执行将继续而不会出现任何表示权限未授予的异常。系统将提示你输入用户名和密码（使用 `testUser` 和 `testPassword`），登录配置文件中的 `SampleModuleName` 将检查名称和密码。如果登录成功，你将看到消息 `Authentication succeeded!`；如果失败，你将看到 `Authentication failed:` 以及后续的失败原因。
 
-```text
+```
 sampleAccn
 ```
 
@@ -10864,7 +10956,7 @@ grant codebase "file:/SampleLM.jar" (
 );
 ```
 
-```text
+```
 grant codebase "file:./SampleAcn.jar" {
     permission javax.security.auth.AuthPermission "createLoginContext.Sample";
 };
@@ -10887,11 +10979,11 @@ grant codebase "file:./SampleAcn.jar" {
 
 如果你想查看教程代码的运行效果，可以跳过“运行授权教程代码”，直接进入其他章节了解更多信息。
 
-# 什么是 JAAS 授权？
+## 什么是 JAAS 授权？
 
 JAAS 授权扩展了现有的 Java 安全架构。该架构使用安全策略（参见“默认策略实现”和“策略文件语法”）来指定授予给执行代码的访问权限。该架构是以代码为中心的；基于代码的特征授予权限：代码的来源、是否经过了数字签名以及由谁签名。我们在 JAAS 身份认证教程中使用的 `sampleacn.policy` 文件文件中看到了这个例子。该文件包含以下内容：
 
-```text
+```
 grant codebase "file:./SampleAcn.jar" {
     permission javax.security.auth.AuthPermission "createLoginContext.Sample";
 };
@@ -10936,17 +11028,17 @@ grant codebase "file:./SampleAcn.jar",
 
 要将 `Subject` 与当前访问控制上下文关联，需要：
 
-- 用户必须经过认证，如 JAAS 身份认证教程所述，通过 `Subject` 类传递一个经过认证的 `Subject` 和一个 `java.security.PrivilegedAction`。参见“权限”部分关于 `PrivilegedAction` 和 `PrivilegedException` 的比较。`do` 方法将提供的 `Subject` 与当前访问控制相关联，然后调用该方法。`run` 方法允许以指定的 `Subject` 执行代码。该操作以指定的 `Subject` 执行。
+- 用户必须经过认证，如 JAAS 身份认证教程所述，通过 `Subject` 类传递一个经过认证的 `Subject` 和一个 `java.security.PrivilegedAction`。参见“权限”部分关于 `PrivilegedAction` 和 `PrivilegedException` 的比较。`doAs` 方法将提供的 `Subject` 与当前访问控制相关联，然后调用该方法。`run` 方法允许以指定的 `Subject` 执行代码。该操作以指定的 `Subject` 执行。
 
-# 第 6 章 JAAS 教程
+# 第6 章 JAAS 教程
 
-如果传递的参数为 null，则返回一个空访问控制，本教程的情况在此如此。请参阅 JAAS 参考指南中的 `doAS` 与 `doASPrivileged` 以比较这些方法。
+如果传递的参数为 null，则返回一个空访问控制，本教程的情况在此如此。请参阅 JAAS 参考指南中的 `doAs` 与 `doAsPrivileged` 以比较这些方法。
 
 # 授权教程代码
 
 本教程的代码由四个文件组成：
 
-- `SampleAzn.java` 与 JAAS 身份认证教程中的 `SampleAcn.java` 应用程序完全相同，除了 `Subject.doASPrivileged` 所需的额外代码外。
+- `SampleAzn.java` 与 JAAS 身份认证教程中的 `SampleAcn.java` 应用程序完全相同，除了 `Subject.doAsPrivileged` 所需的额外代码外。
 - `SampleAction.java` 包含 `SampleAction` 类。该类实现了 `PrivilegedAction`，并包含一个 `run` 方法，该方法包含了我们希望在基于 Principal 的权限检查下执行的所有代码。
 - `SampleLoginModule.java` 是教程登录配置文件（请参阅 JAAS 授权教程中的《登录配置文件》）中指定的类，作为实现底层认证的类。`SampleLoginModule` 使用身份验证仅为验证用户指定的用户名和密码是否具有特定值。该类已在 JAAS 身份认证教程中使用，此处不再进行讨论。
 - `SamplePrincipal.java` 是一个实现 `java.security.Principal` 接口的示例类。它被 `SampleLoginModule` 使用。该类也已用于 JAAS 身份认证教程，此处不再讨论。
@@ -10961,25 +11053,25 @@ grant codebase "file:./SampleAcn.jar",
 Subject mySubject = lc.getSubject();
 ```
 
-在提供关于 Subject 的信息（例如它是什么 `Principal`）后，主方法随后调用 `Subject.doASPrivileged`，并将已认证的 Subject `mySubject`、一个 `PrivilegedAction` (`SampleAction`) 以及一个 `null` `AccessControlContext` 传递内核，如下所示：
+在提供关于 Subject 的信息（例如它是什么 `Principal`）后，主方法随后调用 `Subject.doAsPrivileged`，并将已认证的 Subject `mySubject`、一个 `PrivilegedAction` (`SampleAction`) 以及一个 `null` `AccessControlContext` 传递内核，如下所示：
 
 `SampleAction` 类通过以下方式实例化：
 
 ```java
-PrivilegedAction action = new SampleAzn();
+PrivilegedAction action = new SampleAction();
 ```
 
-通过以下方式执行 `Subject.doASPrivileged` 调用：
+通过以下方式执行 `Subject.doAsPrivileged` 调用：
 
 ```java
-Subject.doASPrivileged(mySubject, action, null);
+Subject.doAsPrivileged(mySubject, action, null);
 ```
 
-`doASPrivileged` 方法调用 `PrivilegedAction action` (`SampleAction`) 中 `run` 方法的执行，以启动其余代码的执行，这些代码被认为代表 `Subject mySubject` 执行。
+`doAsPrivileged` 方法调用 `PrivilegedAction action` (`SampleAction`) 中 `run` 方法的执行，以启动其余代码的执行，这些代码被认为代表 `Subject mySubject` 执行。
 
-将 `null` 作为 `AccessControlContext`（第三个）参数传递给 `doASPrivileged`，意味着 `mySubject` 将与一个新的空 `AccessControlContext` 关联。结果是，执行 `SampleAction` 期间的安全检查只需要 `SampleAction` 本身（或它调用的其他代码）作为 `mySubject` 运行时权限。请注意，`doASPrivileged` 的调用者（调用 `doASPrivileged` 时位于执行栈上的调用者）在 action 执行期间不需要任何权限。
+将 `null` 作为 `AccessControlContext`（第三个）参数传递给 `doAsPrivileged`，意味着 `mySubject` 将与一个新的空 `AccessControlContext` 关联。结果是，执行 `SampleAction` 期间的安全检查只需要 `SampleAction` 本身（或它调用的其他代码）作为 `mySubject` 运行时权限。请注意，`doAsPrivileged` 的调用者（调用 `doAsPrivileged` 时位于执行栈上的调用者）在 action 执行期间不需要任何权限。
 
-# SampleAzn.java
+# SampleAzn.java 完整代码
 
 ```java
 import java.io.*;
@@ -11026,74 +11118,48 @@ public static void main(String[] args) {
             + se.getMessage());
         System.exit(-1);
     }
-}
-```
 
-```java
-// 用户有 3 次成功身份验证的机会
-int i;
-for (i = 0; i < 3; i++) {
-    try {
-        // 尝试身份验证
-        lc.login();
-        // 如果没有异常就返回，说明身份验证成功
-        break;
-    } catch (LoginException le) {
-        System.err.println("*身份验证失败:");
-        System.err.println("* " + le.getMessage());
+    // 用户有 3 次成功身份验证的机会
+    int i;
+    for (i = 0; i < 3; i++) {
         try {
-            Thread.currentThread().sleep(3000);
-        } catch (Exception e) {
-            // 忽略
+            // 尝试身份验证
+            lc.login();
+            // 如果没有异常就返回，说明身份验证成功
+            break;
+        } catch (LoginException le) {
+            System.err.println("*身份验证失败:");
+            System.err.println("* " + le.getMessage());
+            try {
+                Thread.currentThread().sleep(3000);
+            } catch (Exception e) {
+                // 忽略
+            }
         }
     }
-}
 
-// 他们是否失败了三次？
-if (i == 3) {
-    System.out.println("*抱歉*");
-    System.exit(-1);
-}
+    // 他们是否失败了三次？
+    if (i == 3) {
+        System.out.println("*抱歉*");
+        System.exit(-1);
+    }
 
-System.out.println("*身份验证成功*");
-Subject mySubject = lc.getSubject();
+    System.out.println("*身份验证成功*");
+    Subject mySubject = lc.getSubject();
 
-// 看看我们拥有哪些 Principals
-Iterator<Principal> principalIterator = mySubject.getPrincipals();
-System.out.println("*用户拥有以下 Principals:*");
-while (principalIterator.hasNext()) {
-    Principal p = principalIterator.next();
-    System.out.println("*user* " + p.toString());
-}
-```
-
-## 第 6 章 JAAS 教程
-
-- 访问系统属性 `java.home`
-- 访问系统属性 `user.home`
-- 访问文件 `foo.txt`
-
-```java
-/**
- * @return 在所有情况下返回 <code>null</code>。
- * @exception SecurityException 如果调用者没有权限
- *   执行之前列出的操作。
- */
-```
-
-```java
-File f = new File("foo.txt");
-System.out.print("\nfoo text does ");
-if (!f.exists()) {
-  System.out.print("not ");
-  System.out.println("exist in the current working directory.");
-  return null;
+    // 看看我们拥有哪些 Principals
+    Iterator<Principal> principalIterator = mySubject.getPrincipals();
+    System.out.println("*用户拥有以下 Principals:*");
+    while (principalIterator.hasNext()) {
+        Principal p = principalIterator.next();
+        System.out.println("*user* " + p.toString());
+    }
 }
 ```
 
 ## JAAS 授权教程的登录配置文件
 
-本教程使用的登录配置文件可以与 JAAS 认证教程中使用的完全相同。因此，我们可以使用 sample_jaas.config 文件，它仅包含一个条目：
+本教程使用的登录配置文件可以与 JAAS 认证教程中使用的完全相同。因此，我们可以使用 `sample_jaas.config` 文件，它仅包含一个条目：
 
 ```
 Sample {
@@ -11101,35 +11167,35 @@ Sample {
 }
 ```
 
-该条目名为 Sample，也是我们的教程应用程序 SampleAcn 和 SampleAzn 引用它的名称。该条目指定了用于用户认证的 LoginModule 是 sample.module 包中的 SampleLoginModule，并且该 LoginModule 必须“成功”才能被认为认证成功。只有当用户提供的名称和密码符合其预期值（分别为 testUser 和 testPassword）时，SampleLoginModule 才会成功。
+该条目名为 Sample，也是我们的教程应用程序 SampleAcn 和 SampleAzn 引用它的名称。该条目指定了用于用户认证的 LoginModule 是 `sample.module` 包中的 `SampleLoginModule`，并且该 LoginModule 必须“成功”才能被认为认证成功。只有当用户提供的名称和密码符合其预期值（分别为 testUser 和 testPassword）时，`SampleLoginModule` 才会成功。
 
-SampleLoginModule 还定义了一个 debug 选项，可以如所示将其设置为 true。当此选项设置为 true 时，SampleLoginModule 会输出关于认证进展的额外信息。
+`SampleLoginModule` 还定义了一个 debug 选项，可以如所示将其设置为 true。当此选项设置为 true 时，`SampleLoginModule` 会输出关于认证进展的额外信息。
 
 ## 策略文件
 
-用于此授权控制的应用程序控制了两个类：SampleAzn 和 SampleAction。每个类中的代码都包含一些安全敏感的操作，因此在策略文件中需要相应的权限以执行这些操作。
+用于此授权控制的应用程序控制了两个类：`SampleAzn` 和 `SampleAction`。每个类中的代码都包含一些安全敏感的操作，因此在策略文件中需要相应的权限以执行这些操作。
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_409_0.png)
 
-本教程使用的 LoginModule SampleLoginModule 也包含一个需要权限的操作。
+本教程使用的 LoginModule `SampleLoginModule` 也包含一个需要权限的操作。
 
 接下来的章节描述了这些类中每个所需的权限，最后是完整的策略文件。
 
-## SampleArn 需要的权限
+## SampleAzn 需要的权限
 
-SampleArn 类的主方法执行了两个需要权限的操作。它：
+`SampleAzn` 类的主方法执行了两个需要权限的操作。它：
 
-- 创建一个 LoginContext，
-- 调用 Subject 类的静态方法 doAsPrivileged。
+- 创建一个 `LoginContext`，
+- 调用 `Subject` 类的静态方法 `doAsPrivileged`。
 
-LoginContext 的创建与认证教程中的完全相同，它需要一个目标为 "createLoginContext.Sample" 的相同 `java.security.auth.AuthPermission`。
+`LoginContext` 的创建与认证教程中的完全相同，它需要一个目标为 "createLoginContext.Sample" 的相同 `java.security.auth.AuthPermission`。
 
-为了调用 Subject 类的 doAsPrivileged，你需要一个目标为 "doAsPrivileged" 的 `java.security.auth.AuthPermission`。
+为了调用 `Subject` 类的 `doAsPrivileged`，你需要一个目标为 "doAsPrivileged" 的 `java.security.auth.AuthPermission`。
 
-假设 SampleArn 放置在名为 SampleArn.jar 的 JAR 文件中，通过策略文件中的 grant 语句将这些权限授予 SampleArn 代码：
+假设 `SampleAzn` 放置在名为 `SampleAzn.jar` 的 JAR 文件中，通过策略文件中的 `grant` 语句将这些权限授予 `SampleAzn` 代码：
 
 ```
-grant codebase "file:/SampleArn.jar" {
+grant codebase "file:/SampleAzn.jar" {
   permission java.security.auth.AuthPermission
     "createLoginContext.Sample";
   permission java.security.auth.AuthPermission "doAsPrivileged";
@@ -11138,11 +11204,11 @@ grant codebase "file:/SampleArn.jar" {
 
 ## SampleAction 需要的权限
 
-SampleAction 代码执行了三个需要权限的操作。
+`SampleAction` 代码执行了三个需要权限的操作。
 
-- 读取 java.home 系统属性的值。
-- 读取 user.home 系统属性的值。
-- 检查当前目录下是否存在文件 foo.txt。
+- 读取 `java.home` 系统属性的值。
+- 读取 `user.home` 系统属性的值。
+- 检查当前目录下是否存在文件 `foo.txt`。
 
 这些操作所需的权限如下：
 
@@ -11152,17 +11218,17 @@ permission java.util.PropertyPermission "user.home", "read";
 permission java.util.FilePermission "foo.txt", "read";
 ```
 
-我们需要将这些权限授予 SampleAction.class 中的代码，我们将其放置在名为 SampleAction.jar 的 JAR 文件中。然而，对于这个特定的 grant 语句，我们不仅将权限授予代码，还授予执行代码的特定用户，以演示如何限制特定用户的访问。
+我们需要将这些权限授予 `SampleAction.class` 中的代码，我们将其放置在名为 `SampleAction.jar` 的 JAR 文件中。然而，对于这个特定的 `grant` 语句，我们不仅将权限授予代码，还授予执行代码的特定用户，以演示如何限制特定用户的访问。
 
-因此，正如“如何制作基于 Principal 的策略文件”中所解释的那样，我们的 grant 语句如下：
+因此，正如“如何制作基于 Principal 的策略文件”中所解释的那样，我们的 `grant` 语句如下：
 
 ```
-grant codebase "file:./Action.jar", Principal
-sample.principal.SamplePermission "testUser" {
-    permission java.util.PropertyPermission "java.home", "read"
-    permission java.util.PropertyPermission "user.home", "read"
+grant codebase "file:./Action.jar",
+    Principal sample.principal.SamplePrincipal "testUser" {
+    permission java.util.PropertyPermission "java.home", "read";
+    permission java.util.PropertyPermission "user.home", "read";
     permission java.io.FilePermission "foo.txt", "read";
-}
+};
 ```
 
 
@@ -11183,20 +11249,20 @@ grant codebase "file:./SampleLM.jar" {
 
 ```java
 /* 授予 LoginModule 权限 */
-
-grant codebase "file:./Action.jar", Principal sample.principal.SamplePrincipal "testUser" {
+grant codebase "file:./Action.jar",
+    Principal sample.principal.SamplePrincipal "testUser" {
     permission java.util.PropertyPermission "java.home", "read";
     permission java.util.PropertyPermission "user.home", "read";
     permission java.io.FilePermission "foo.txt", "read";
-}
+};
 
 grant codebase "file:./SampleLM.jar" {
     permission java.security.auth.AuthPermission "modifyPrincipals";
-}
+};
 
 grant codebase "file:./Ac.jar" {
     permission java.security.auth.AuthPermission "createLoginContext.Sample";
-}
+};
 ```
 
 ## 授权教程
@@ -11214,22 +11280,14 @@ grant codebase "file:./Ac.jar" {
 4. 创建 `sample` 的另一个名为 `principal` 的子目录，并将以下放入其中（注意 `SamplePrincipal` 类位于 `principal` 包中）：
    - `SamplePrincipal.java` 源文件
 5. 在根目录下编译所有文件：
-   ```
-   javac sample/SampleAction.java sample/SampleAzn.java sample/module/SampleLoginModule.java sample/principal/SamplePrincipal.java
-   ```
+   `sample/SampleAction.java sample/SampleAzn.java sample/module/SampleLoginModule.java sample/principal/SamplePrincipal.java`（一行输入）。
 6. 创建名为 `SampleAzn.jar` 的 JAR 文件，包含 `SampleAzn.class` 和 `CallbackHandler.class`（这些类的源在 `SampleAzn.java` 中）：
-   ```
-   jar cvf SampleAzn.jar sample/SampleAzn.class sample/CallbackHandler.class
-   ```
+   `cvf SampleAzn.jar sample/SampleAzn.class sample/CallbackHandler.class`（一行输入）。
 7. 创建名为 `SampleAction.jar` 的 JAR 文件，包含 `SampleAction.class`：
-   ```
-   jar cvf SampleAction.jar sample/SampleAction.class
-   ```
+   `cvf SampleAction.jar sample/SampleAction.class`
 8. 创建包含 `SampleLoginModule.class` 和 `SamplePrincipal.class` 的 JAR 文件：
-   ```
-   jar cvf SampleLM.jar sample/module/SampleLoginModule.class sample/principal/SamplePrincipal.class
-   ```
-9. 执行 `SampleAction`，指定：
+   `cvf SampleLM.jar sample/module/SampleLoginModule.class sample/principal/SamplePrincipal.class`
+9. 执行 `SampleAction` ，指定：
    a. 一个适当的 `-classpath` 子句，搜索类为 `SampleAzn.jar`、`SampleAction.jar` 和 `SampleLM.jar`，
    b. `-Djava.security.manager` 表示应安装安全管理器。警告：安全管理器及其相关 API 已弃用，并将在未来的版本中删除。安全管理器没有替代品。请参 JEP 411 的讨论和替代方案。
    c. `-Djava.security.policy==sampleazn.policy` 表示使用的策略文件为 `sampleazn.policy`，以及
@@ -11246,13 +11304,19 @@ grant codebase "file:./Ac.jar" {
 Windows 的完整命令如下：
 
 ```bash
-java -classpath SampleAzn.jar;SampleAction.jar;SampleLM.jar -Djava.security.manager -Djava.security.policy==sampleazn.policy -Djava.security.auth.login.config=sample_jaas.config sample.SampleAzn
+java -classpath SampleAzn.jar;SampleAction.jar;SampleLM.jar \
+-Djava.security.manager \
+-Djava.security.policy=sampleazn.policy \
+-Djava.security.auth.login.config=sample_jaas.config sample.SampleAzn
 ```
 
 Linux 和 macOS 的完整命令如下：
 
 ```bash
-java -classpath SampleAzn.jar:SampleAction.jar:SampleLM.jar -Djava.security.manager -Djava.security.policy==sampleazn.policy -Djava.security.auth.login.config=sample_jaas.config sample.SampleAzn
+java -classpath SampleAzn.jar:SampleAction.jar:SampleLM.jar \
+-Djava.security.manager \
+-Djava.security.policy=sampleazn.policy \
+-Djava.security.auth.login.config=sample_jaas.config sample.SampleAzn
 ```
 
 命令在一行内输入。多行是为了可读性。如果命令对于你的系统太长，你可能需要将其放在 `.bat` 文件（Windows）或 `.sh` 文件（Linux 和 macOS）中，然后运行该文件来执行命令。
@@ -11301,7 +11365,7 @@ JAAS 为经过认证的身份提供基于 `Subject` 的授权功能。本文侧�
 
 这两个教程是《JAAS 简介与 Java GSS-API 教程》的一部分，它们利用 Kerberos 作为认证和安全通信的底层技术。
 
-# Java 认证与授权服务 (JAAS): LoginModule 开发者指南
+# 第 6 章：Java 认证与授权服务 (JAAS): LoginModule 开发者指南
 
 ## LoginModule 简介
 
@@ -11363,6 +11427,8 @@ public void initialize(
 # 第 6 章
 Java 身份认证与授权服务 (JAAS)：LoginModule 开发者指南
 
+## `initialize` 方法
+
 `initialize` 方法用于用相关的认证和状态信息初始化 `LoginModule`。该方法在 `LoginModule` 实例化之后、调用其其他公共方法之前由 `LoginContext` 调用。方法实现应该存储提供的参数以备用。
 
 `initialize` 方法可以使用提供的 `sharedState` 来确定其他 `LoginModule` 提供的额外认证状态，并可能遍历 `options` 来确定指定了哪些配置选项。它可以保存选项值供以后使用。
@@ -11380,7 +11446,7 @@ Java 身份认证与授权服务 (JAAS)：LoginModule 开发者指南
 
 请注意，调用此 `LoginModule` 的 `LoginContext`（以及其他配置的 `LoginModule`）共享对提供的 `Subject` 和 `sharedState` 的相同引用。因此，对 `Subject` 和 `sharedState` 的修改将对所有人可见。
 
-## LoginModule.login 方法
+## `LoginModule.login` 方法
 
 ```java
 boolean login() throws LoginException;
@@ -11404,13 +11470,13 @@ boolean login() throws LoginException;
 
 调用此 `LoginModule` 的 `LoginContext`（以及其他配置的 `LoginModule`）共享对提供的 `Subject` 和 `sharedState` 的相同引用。因此，对 `Subject` 和 `sharedState` 的修改将对所有人可见。
 
-## LoginModule.commit 方法
+## `LoginModule.commit` 方法
 
 ```java
 boolean commit() throws LoginException;
 ```
 
-调用 `commit` 方法是为了提交身份验证。这是身份验证的第 2 阶段。当 `LoginContext` 的整体身份验证成功时（即 `REQUIRED`、`REQUISITE`、`SUFFICIENT` 和 `OPTIONAL` `LoginModule` 都成功），将调用此方法。
+调用 `commit` 方法是为了提交身份验证。这是身份验证的第 2 阶段。当 `LoginContext` 的整体身份验证成功时（即 REQUIRED、REQUISITE、SUFFICIENT 和 OPTIONAL `LoginModule` 都成功），将调用此方法。
 
 该方法的实现应该执行实际的提交操作。如果 `login` 方法失败，则 `commit` 方法将移除原始保存的相关状态。
 
@@ -11418,14 +11484,14 @@ boolean commit() throws LoginException;
 
 `commit` 方法应该保存提交是否成功的状态。
 
-### 表 6-2 LoginModule.commit 方法返回值
+### 表 6-2 `LoginModule.commit` 方法返回值
 
 | 身份验证状态 | COMMIT 成功 | COMMIT 失败 |
 |---|---|---|
 | LOGIN 成功 | 返回 true | 抛出异常 |
 | LOGIN 失败 | 返回 false | 返回 false |
 
-## LoginModule.abort 方法
+## `LoginModule.abort` 方法
 
 ```java
 boolean abort() throws LoginException;
@@ -11437,21 +11503,21 @@ boolean abort() throws LoginException;
 
 如果 `LoginModule` 的身份验证尝试失败，则不应该有需要清理的内存。
 
-### 表 6-3 LoginModule.abort 方法返回值：登录成功
+### 表 6-3 `LoginModule.abort` 方法返回值：登录成功
 
 | 身份验证状态 | ABORT 成功 | ABORT 失败 |
 |---|---|---|
 | COMMIT 成功 | 返回 true | 抛出异常 |
 | COMMIT 失败 | 返回 true | 抛出异常 |
 
-### 表 6-4 LoginModule.abort 返回值：登录失败
+### 表 6-4 `LoginModule.abort` 返回值：登录失败
 
 | Login | ABORT: 成功 | ABORT: 失败 |
-| --- | --- | --- |
+|---|---|---|
 | COMMIT: 成功 | return FALSE | return FALSE |
 | COMMIT: 失败 | return FALSE | return FALSE |
 
-## LoginModule.logout 方法
+## `LoginModule.logout` 方法
 
 ```java
 boolean logout() throws LoginException;
@@ -11553,8 +11619,7 @@ JAAS 可用于两个目的：
 
 Java GSS-API 用于在通信的应用程序之间安全地交换消息。Java GSS-API 包含了在 RFC 5653 中定义的通用安全服务应用程序接口 (GSS-API) 的 Java 绑定。GSS-API 为应用程序开发人员提供了对各种底层安全机制（实现 Kerberos）之上的安全服务的统一访问方法。
 
-> 注意：
-> JSSE 是另一个可用于安全通信的 API。关于两者的区别，请参阅《何时使用 Java GSS-API 还是 JSSE》。
+注意：JSSE 是另一个可用于安全通信的 API。关于两者的区别，请参阅《何时使用 Java GSS-API 还是 JSSE》。
 
 JAAS 和 Java GSS-API 教程之所以放在一起介绍，是因为 JAAS 认证通常在使用 Java GSS-API 进行安全通信之前执行。因此，JAAS 和 Java GSS-API 是关联的，并且经常一起使用。然而，应用程序可以在不使用 Java GSS-API 的情况下使用 JAAS，也可以在不使用 JAAS 的情况下使用 Java GSS-API。此外，JAAS 本身可以仅用于认证，也可以同时用于认证和授权。
 
@@ -11564,60 +11629,36 @@ JAAS 和 Java GSS-API 教程之所以放在一起介绍，是因为 JAAS 认证�
 
 # 何时使用 Java GSS-API 还是 JSSE
 
-- 1. 在不进行 JAAS 编程的情况下使用 Java GSS-API 进行安全消息交换
-
-演示了使用 Java GSS-API 在客户端应用程序和服务器应用程序之间进行安全消息交换。
-
-- 2. JAAS 认证
-
-解释了应用程序如何使用 JAAS 认证用户。
-
-- 3. JAAS 授权
-
-解释了如何使用 JAAS 强制基于用户的访问控制。
-
-- 4. 使用 JAAS 登录工具
-
-描述了一个实用工具程序，该程序使用 JAAS 认证用户并以该用户身份执行任何应用程序。在应用程序执行期间，会执行相应的基于用户的访问控制。该工具为了方便起见，会代表你执行 JAAS 认证和 JAAS 授权中描述的操作。如果你不知道如何执行 JAAS 认证和授权，可以直接跳到本教程。
-
-- 5. 使用 JAAS 登录工具和 Java GSS-API 进行安全消息交换
-
-这是最全面的教程。Login 工具用于认证服务用户并以该用户身份启动服务器应用程序。Login 工具也用于认证客户端用户并以该用户身份启动客户端应用程序。最后，客户端和服务器应用程序将代表其已认证的用户和服务用户，使用 Java GSS-API 交换消息。
-
-- 6. 使用 Java GSS-API 和 JAAS 能够做的更多事情
-
-展示了上一个教程中的服务器应用程序可以执行的与客户端应用程序建立通信的操作。本系列中的所有应用程序都使用 Kerberos 第5 版本作为认证和安全通信的底层技术。请参见《Kerberos 要求》。整个教程中使用的 Kerberos 一词是指 Kerberos 第 5 版本。
-
 Java GSS-API 和 JSSE 为你提供了相同的安全特性：
 
-- 1. 客户端-服务器认证
-- 2. 传输数据的加密和完整性保护
+- 客户端-服务器认证
+- 传输数据的加密和完整性保护
 
 然而，两者之间存在一些差异。本文列出了其中一些差异，以帮助你判断哪种在你的环境中更合适：
 
-- 1. 对 Kerberos 单点登录的支持
+## 1. 对 Kerberos 单点登录的支持
 
 GSS-API 包含了对 Kerberos 作为强制性安全机制的支持。这意味着如果你的桌面支持 Kerberos，你就可以编写 Java GSS-API 应用程序而无需提示用户输入密码。
 
 RFC 2712 定义了用于 TLS 的 Kerberos 密码，但该文档已过时，不支持 AES 等现代加密类型。
 
-- 2. 通信 API
+## 2. 通信 API
 
 JSSE 支持基于 socket 的 API。JSSE socket 扩展了 `java.net` 中的 socket 类，而 JSSE 工厂扩展了 `java.net` 中的 socket 工厂。因此，如果你的应用程序的编写方式需要通过 socket 工厂配置安全需求，那么 JSSE 可能更适合你。JSSE 需要使用某种可靠的传输。通常情况下，实现使用 TCP。
 
 另一方面，Java GSS-API 是一种基于令牌的 API，依赖于应用程序进行通信。这意味着应用程序可以使用 TCP socket、UDP 报文或任何允许其传输 Java GSS-API 生成的令牌的通道。如果你的应用程序具有不同的通信协议，那么 Java GSS-API 可能更适合你。Java GSS-API 可以使用输入输出流读写其令牌。但是，你需要自己设置流。
 
-- 3. 凭证委托
+## 3. 凭证委托
 
 当使用 Kerberos 时，Java GSS-API 允许向服务器委托凭证。如果你的应用程序部署在多层环境中，中间层在与后端服务器时需要模拟客户端，Java GSS-API 可能更适合你。
 
-- 4. 选择性加密
+## 4. 选择性加密
 
 由于 Java GSS-API 是基于令牌的，你可以选择加密某些消息而非全部。如果你的应用程序需要交替明文和密文，Java GSS-API 可能更适合你。
 
-- 5. 协议要求
+## 5. 协议要求
 
-JSSE 提供了 RFC 5246 定义的 TLS 协议实现。Java GSS-API 提供了 RFC 6653 定义的 GSS-API 框架实现，以及 RFC 1964 定义的 Kerberos 第5 机制实现。（Microsoft Windows 服务器要求你使用 TLS，这种情况下 JSSE 将更适合你。其他服务器如 LDAP 服务器可能需要带有 Kerberos 的 Java GSS-API，这种情况下 Java GSS-API 将更适合你。）
+JSSE 提供了 RFC 5246 定义的 TLS 协议实现。Java GSS-API 提供了 RFC 6653 定义的 GSS-API 框架实现，以及 RFC 1964 定义的 Kerberos 第 5 机制实现。（Microsoft Windows 服务器要求你使用 TLS，这种情况下 JSSE 将更适合你。其他服务器如 LDAP 服务器可能需要带有 Kerberos 的 Java GSS-API，这种情况下 Java GSS-API 将更适合你。）
 
 # 在不进行 JAAS 编程的情况下使用 Java GSS-API 进行安全消息交换
 
@@ -11625,81 +11666,53 @@ JSSE 提供了 RFC 5246 定义的 TLS 协议实现。Java GSS-API 提供了 RFC 
 
 Java GSS-API 使用所谓的“安全机制”来提供这些服务。GSS-API 实现除了任何其他特定厂商的选择外还包含了对 Kerberos V5 机制的支持。本教程使用了 Kerberos V5 选择。
 
-为了在客户端和服务器之间执行认证并为安全通信建立加密密钥，GSS-API 机制需要访问连接端本地实体的凭据。在我们的案例中，客户端侧使用的凭据是 Kerberos 票据，服务器侧的由长期 Kerberos 密钥组成。Kerberos 票据可以包含主机地址，并支持 IPv4 和 IPv6 地址。Java GSS-API 要求机制在没有访问控制上下文从 `Subject` 获取这些凭据。
+为了在客户端和服务器之间执行认证并为安全通信建立加密密钥，GSS-API 机制需要访问连接端本地实体的凭据。在我们的案例中，客户端侧使用的凭据是 Kerberos 票据，服务器侧的由长期 Kerberos 密钥组成。Kerberos 票据可以包含主机地址，并支持 IPv4 和 IPv6 地址。Java GSS-API 要求机制在没有访问控制上下文从 Subject 获取这些凭据。
 
-为了向 `Subject` 填充此类凭据，客户端和服务器应用程序将首先使用 Kerberos `LoginModule` 执行 JAAS 认证。JAAS
+为了向 Subject 填充此类凭据，客户端和服务器应用程序将首先使用 Kerberos LoginModule 执行 JAAS 认证。JAAS
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_427_0.png)
 
-## 第 7 章 JAAS 与 Java GSS-API 教程
+## 客户端和服务器应用程序概述
 
-本教程演示了如何实现此。JAAS 授权教程演示了如何将已认证的主体（Authenticated `Subject`）与线程的控制上下文（control context）关联。还编写了一个实用程序以便方便代表你自动执行操作。“使用 JAAS 登录工具”教程演示了如何使用该登录实用程序。
+本教程的应用程序命名为 SampleClient 和 SampleServer。以下是 SampleClient 和 SampleServer 应用程序执行摘要：
 
-在本教程中，将不会让客户端和服务器执行 JAAS 认证，也不会使用 JAAS 登录。相反，我们将依靠将系统属性 `javax.security.auth.useSubjectCredsOnly` 设置为 `false`，这允许我们放宽要求使用 GSS 机制从现有的 `Subject` 中获取必要凭据的限制（该 `Subject` 是由 JAAS 设置的）。`useSubjectCredsOnly` 系统属性。
-
-> 注意：
-> 这是一个简化的介绍性教程。例如，它不包含任何策略文件。
-
-另一篇名为《使用 JAAS 登录工具和 Java GSS-API 进行安全消息交换》的教程与你正在阅读的教程类似，它利用了登录工具、策略文件和更复杂的登录配置。每当需要 JAAS 认证时，都需要一个配置文件（附录 B：JAAS 登录配置文件），它指定了所需的认证模式。
-
-在本教程的所有教程中，用于显示本教程应用程序认证和安全通信的底层技术是 Kerberos V5。请参见《Kerberos 要求》。
-
-- 客户端和服务器应用程序概述
-- SampleClient 和 SampleServer 代码
-- Kerberos 用户和服务器主实体名称
-- 登录配置文件
-- useSubjectCredsOnly 系统属性
-- 运行 SampleClient 和 SampleServer 程序
-
-如果你想先看到教程代码的运行，可以直接跳到“运行 SampleClient 和 SampleServer 程序”，然后返回其他章节学习更多信息。
-
-# 客户端和服务器应用程序概述
-
-本教程的应用程序命名为 `SampleClient` 和 `SampleServer`。以下是 `SampleClient` 和 `SampleServer` 应用程序执行摘要：
-
-- 1. 运行 `SampleServer` 应用程序。`SampleServer`
+1. 运行 SampleServer 应用程序。SampleServer
    a. 读取其身份，即它应该监听客户端连接的端口号。
-   b. 创建一个 `ServerSocket`，用于在该端口上监听客户端连接。
+   b. 创建一个 ServerSocket，用于在该端口上监听客户端连接。
    c. 监听连接建立。
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_428_0.png)
 
-# SampleClient 和 SampleServer 代码
-
-运行 `SampleClient` 应用程序（可能在不同的机器上）。`SampleClient`
-
-- 读取其参数：(1) 代表 `SampleServer` 的 Kerberos 主实体名称（参见“Kerberos 用户和服务器主实体名称”），(2) 运行 `SampleServer` 的主机（机器）名称，以及 (3) `SampleServer` 监听连接的端口号。
-
-- 使用传入参数的主机和端口尝试与 `SampleServer` 建立 socket 连接。
-
-- `SampleServer` 接受 socket 连接，且双方都从 socket 的输入和输出流初始化 `DataInputStream` 和 `DataOutputStream`，以供后续数据交换。
-
-- `SampleClient` 和 `SampleServer` 实例分别实例化了一个 `GSSContext`，并遵循建立共享上下文的协议，该上下文将实现安全数据交换。
-
-- 当 `SampleClient` 和 `SampleServer` 交换消息时，它们会执行清理操作。
+2. 运行 SampleClient 应用程序（可能在不同的机器上）。SampleClient
+   - 读取其参数：(1) 代表 SampleServer 的 Kerberos 主实体名称（参见“Kerberos 用户和服务器主实体名称”），(2) 运行 SampleServer 的主机（机器）名称，以及 (3) SampleServer 监听连接的端口号。
+   - 使用传入参数的主机和端口尝试与 SampleServer 建立 socket 连接。
+   - SampleServer 接受 socket 连接，且双方都从 socket 的输入和输出流初始化 DataInputStream 和 DataOutputStream，以供后续数据交换。
+   - SampleClient 和 SampleServer 实例分别实例化了一个 GSSContext，并遵循建立共享上下文的协议，该上下文将实现安全数据交换。
+   - 当 SampleClient 和 SampleServer 交换消息时，它们会执行清理操作。
 
 实际代码和更多细节将在后续章节中给出。
 
-`SampleClient.java` 和 `SampleServer.java` 程序的完整代码位于它们的 `main` 方法中，可以拆分为以下子部分：
+SampleClient.java 和 SampleServer.java 程序的完整代码位于它们的 main 方法中，可以拆分为以下子部分：
 
-- 1. 获取命令行参数
-- 2. 建立消息交换的 socket 连接
-- 3. 建立安全上下文
-- 4. 安全地交换消息
-- 5. 清理
+- 获取命令行参数
+- 建立消息交换的 socket 连接
+- 建立安全上下文
+- 安全地交换消息
+- 清理
 
-> 注意：
-> 这些程序使用的 Java GSS-API 类（`GSSManager`, `GSSName`, `GSSCredential`, `MessageProp` 和 `Oid`）位于 `org.ietf.jgss` 包中。
+> 注意：这些程序使用的 Java GSS-API 类（`GSSManager`、`GSSName`、`GSSCredential`、`MessageProp` 和 `Oid`）位于 `org.ietf.jgss` 包中。
 
-# 获取命令行参数
+## 获取命令行参数
 
-我们的客户端和服务器 `main` 方法执行的第一件事是读取命令行参数。
+我们的客户端和服务器 main 方法执行的第一件事是读取命令行参数。
 
-`SampleClient` 期望三个参数：
+### SampleClient 读取的参数
 
-- 1. 服务主实体名称 – 代表 `SampleServer` 的 Kerberos 主实体名称（参见“Kerberos 用户和服务器主实体名称”）。
-- 2. 主机名 – 运行 `SampleServer` 的机器。
-- 3. 端口号 – `SampleServer` 监听连接的端口号。
+SampleClient 期望三个参数：
+
+1. 服务主实体名称 – 代表 SampleServer 的 Kerberos 主实体名称（参见“Kerberos 用户和服务器主实体名称”）。
+2. 主机名 – 运行 SampleServer 的机器。
+3. 端口号 – SampleServer 监听连接的端口号。
 
 以下是读取命令行参数的代码：
 
@@ -11715,9 +11728,11 @@ String hostName = args[1];
 int port = Integer.parseInt(args[2]);
 ```
 
-`SampleServer` 仅期望一个参数：
+### SampleServer 读取的参数
 
-- 本地端口号 – `SampleServer` 用于监听客户端连接的端口号。此数字应与运行 `SampleClient` 程序时指定的端口号相同。
+SampleServer 仅期望一个参数：
+
+- 本地端口号 – SampleServer 用于监听客户端连接的端口号。此数字应与运行 SampleClient 程序时指定的端口号相同。
 
 以下是读取命令行参数的代码：
 
@@ -11730,13 +11745,13 @@ if (args.length != 1) {
 int localPort = Integer.parseInt(args[0]);
 ```
 
-# 建立消息交换的 socket 连接
+## 建立消息交换的 socket 连接
 
-Java GSS-API 提供了创建和解释令牌（不透明字节数据）的方法。令牌包含要在对等实体之间安全交换的消息。对于我们的 `SampleClient` 和 `SampleServer`，我们使用输入和输出流建立 socket 连接。
+Java GSS-API 提供了创建和解释令牌（不透明字节数据）的方法。令牌包含要在对等实体之间安全交换的消息。对于我们的 SampleClient 和 SampleServer，我们使用输入和输出流建立 socket 连接。
 
-# SampleClient Socket 连接代码
+### SampleClient Socket 连接代码
 
-`SampleClient` 接收的参数包括代表 `SampleServer` 的 Kerberos 主实体名称以及 `SampleServer` 监听连接的端口号。它使用以下代码设置连接并初始化 `DataInputStream` 和 `DataOutputStream`：
+SampleClient 接收的参数包括代表 SampleServer 的 Kerberos 主实体名称以及 SampleServer 监听连接的端口号。它使用以下代码设置连接并初始化 DataInputStream 和 DataOutputStream：
 
 ```
 Socket socket = new Socket(hostName, port);
@@ -11750,29 +11765,31 @@ DataOutputStream outputStream =
 System.out.println("Connected to server");
 ```
 
-# SampleServer Socket 连接代码
+![](img/e26375bcfe04cf1374fe3293bdab5076_430_0.png)
 
-`SampleServer` 应用程序接收的参数是用于监听客户端连接的端口号。它创建一个 `ServerSocket` 用于监听端口：
+### SampleServer Socket 连接代码
+
+SampleServer 应用程序接收的参数是用于监听客户端连接的端口号。它创建一个 ServerSocket 用于监听端口：
 
 ```
 ServerSocket ss = new ServerSocket(localPort);
 ```
 
-`ServerSocket` 可以等待并接受客户端的连接，并初始化 `DataInputStream` 和 `DataOutputStream` 以供后续与客户端交互：
+ServerSocket 可以等待并接受客户端的连接，并初始化 DataInputStream 和 DataOutputStream 以供后续与客户端交互：
 
 ```
 Socket socket = ss.accept();
 DataInputStream inputStream =
-new DataInputStream(socket.getInputStream());
+    new DataInputStream(socket.getInputStream());
 DataOutputStream outputStream =
-new DataOutputStream(socket.getOutputStream());
+    new DataOutputStream(socket.getOutputStream());
 ```
 
 ```
 System.out.println("Got connection from client");
 ```
 
-我们 `SampleServer` 的基本循环结构如下：
+我们 SampleServer 的基本循环结构如下：
 
 ```
 while (true) {
@@ -11784,12 +11801,12 @@ while (true) {
 }
 ```
 
-客户端连接在原始端口处排队，因此使用 `SampleServer` 使用的这种程序结构，与第一个连接客户端的交互必须在完成之前，下一个连接才可以被接受。服务器实际上可以通过线程同时为多个客户端服务——每个客户端连接一个线程，如下：
+客户端连接在原始端口处排队，因此使用 SampleServer 使用的这种程序结构，与第一个连接客户端的交互必须在完成之前，下一个连接才可以被接受。服务器实际上可以通过线程同时为多个客户端服务——每个客户端连接一个线程，如下：
 
 ```
 while (true) {
-  <accept connection>;
-  <create a thread to handle the client>;
+    <accept connection>;
+    <create a thread to handle the client>;
 }
 ```
 
@@ -11809,8 +11826,8 @@ while (true) {
 
 我们示例应用程序的上下文建立代码描述如下：
 
-- `SampleClient` 建立上下文
-- `SampleServer` 建立上下文
+- SampleClient 建立上下文
+- SampleServer 建立上下文
 
 # SampleClient 建立上下文
 
@@ -11830,7 +11847,7 @@ while (true) {
 GSSManager manager = GSSManager.getInstance();
 ```
 
-默认的 `GSSManager` 子类的其 `create` 方法（如 `createContext` 等）返回的类支持 Kerberos 及底层技术的实现。
+默认的 `GSSManager` 子类的其 `create` 方法（如 `createServer` 等）返回的类支持 Kerberos 及底层技术的实现。
 
 用于在发起者端创建上下文的 `GSSManager` 工厂方法具有以下签名：
 
@@ -11849,7 +11866,7 @@ GSSCredential myCred, int lifetime);
 GSSName createName(String nameStr, Object nameType);
 ```
 
-`SampleClient` 将 `server` 参数作为 `nameStr` 参数传递。该参数是一个 `Object`。`Object` 代表一个通用对象标识符（OID），OID 在 GSS-API 框架内部被分层解释，用于标识机制和类型。OID 的结构和编码定义在 ISO/IEC-8824 和 ISO/IEC-8825 标准中。传递给 `createName` 方法的 `Object` 特别是一个类型 `Object`（而不是机制 `Object`）。
+`SampleClient` 将 `server` 参数作为 `name` 参数传递。该参数是一个 `Object`。`Object` 代表一个通用对象标识符（OID），OID 在 GSS-API 框架内部被分层解释，用于标识机制和类型。OID 的结构和编码定义在 ISO/IEC-8824 和 ISO/IEC-8825 标准中。传递给 `createName` 方法的 `Object` 特别是一个类型 `Object`（而不是机制 `Object`）。
 
 在 GSS-API 中，字符串名称通常从与机制无关的格式映射到特定机制的格式。通常，`Object` 指定字符串的格式，以便机制知道如何进行这种映射。传递 `null` `Object` 表示名称是机制使用的原生格式。服务器的情况正是如此；它是版本 5 的相应格式。因此，`SampleClient` 为 `Object` 传递了 `null`。此处是调用：
 
@@ -11887,37 +11904,37 @@ GSSContext context =
 
 ## SampleClient 设置所需的选项
 
-在初始化上下文并在建立上下文之前，发起者可以选择设置各种选项来决定上下文特征。通过调用请求参数来设置。请求并不总是能满足，因此在建立上下文后调用方法确定。`SampleClient` 请求以下内容：
+在初始化上下文并在建立上下文之前，接收者可以选择设置各种选项来决定上下文特征。通过调用请求参数来设置。请求并不总是能满足，因此在建立上下文后调用方法确定。`SampleClient` 请求以下内容：
 
-- **双向认证**。上下文发起者通过接收者进行身份验证。发起者请求双向认证，然后接收者也向发起者进行身份验证。
-- **机密性**。请求机密性意味着 `wrap` 方法启用加密。只有在请求机密性时才会使用加密。
-- **完整性**。请求 `wrap` 和 `getMIC` 的完整性。请求完整性时，会生成名为消息完整性码（MIC）的加密标记。调用 `wrap` 时，生成的 MIC 出现在返回的令牌中。MIC 与消息（取决于是否应用了机密性）打包作为令牌的一部分。你可以随后对消息验证 MIC。
+- 1. 双向认证。上下文发起者通过接收者进行身份验证。发起者请求双向认证，然后接收者也向发起者进行身份验证。
+- 2. 机密性。请求机密性意味着 `wrap` 方法启用加密。只有在请求机密性时才会使用加密。
+- 3. 完整性。请求 `wrap` 和 `getMIC` 的完整性。请求完整性时，会生成名为消息完整性码（MIC）的加密标记。调用 `wrap` 时，生成的 MIC 出现在返回的令牌中。MIC 与消息（取决于是否应用了机密性）打包作为令牌的一部分。你可以随后对消息验证 MIC。
 
 `SampleClient` 在 `GSSContext context` 上执行这些请求的代码如下：
 
 ```java
 context.requestMutualAuth(true); // 双向认证
 context.requestConf(true);       // 使用加密层
-context.requestInteg(true);      // 使用完整性层
+context.requestIntegr(true);     // 使用完整性层
 ```
 
-上下文建立后，必须调用访问方法 `getMutualAuthState()`、`getConfState()` 或 `getIntegState()` 来显式检查上下文状态，如果任何一个不匹配，则销毁安全上下文。
+上下文建立后，必须调用访问方法 `getMutualAuthState`、`getConfState` 或 `getIntegrState` 来显式检查上下文状态，如果任何一个不匹配，则销毁安全上下文。
 
-> 注意：使用 `GSSManager` 实现和 Kerberos 机制时，这些请求将始终通过。
+> 注意：使用 GSSManager 实现和 Kerberos 机制时，这些请求将始终通过。
 
 ## SampleClient 上下文建立循环
 
 在 `SampleClient` 实例化 `GSSContext` 并设置了所需的上下文选项后，它可以实际上与 `SampleServer` 建立安全上下文。为此，`SampleClient` 有一个循环。每次循环迭代：
 
-1. 调用上下文的 `initSecContext`。如果是第一次调用，则向方法传递一个 `null` 令牌。如果不是，则传递 `SampleClient` 最近看到的令牌（由 `SampleServer` 通过 `acceptSecContext` 生成的令牌）。
+1. 调用上下文的 `initSecContext`。如果是第一次调用，则向方法传递一个 `null` 令牌。如果是，则传递 `SampleClient` 最近看到的令牌（由 `SampleServer` 通过 `acceptSecContext` 生成的令牌）。
 2. 将 `initSecContext` 返回的令牌（如果有）发送到 `SampleServer`。第一次调用 `initSecContext` 总是产生令牌。最后一次调用可能不会返回令牌。
 3. 检查上下文是否建立。如果不是，`SampleClient` 从 `SampleServer` 接收另一个令牌，然后开始下次循环。
 
 `initSecContext` 返回或从 `SampleServer` 接收的令牌被放在字节数组中。`SampleClient` 和 `SampleServer` 应该将令牌视为不透明数据，在它们之间传递并由 Java GSS-API 方法解释。
 
-`initSecContext` 的参数是包含令牌的字节数组、偏移量和长度。对于第一次调用，`SampleClient` 传递 `null` 令牌，因为尚未从 `SampleServer` 接收到令牌。
+`initSecContext` 的参数是包含令牌的字节数组和长度。对于第一次调用，`SampleClient` 传递 `null` 令牌，因为尚未从 `SampleServer` 接收到令牌。
 
-与 `SampleClient` 交换令牌时，`SampleClient` 使用之前为套接字连接设置的 `DataInputStream` `inStream` 和 `DataOutputStream` `outStream`。每当写入令牌时，首先写入令牌的字节数，然后是令牌本身。相关原因将在“SampleClient 和 SampleServer 消息交换”章节的介绍部分进行讨论。
+与 `SampleClient` 交换令牌时，`SampleClient` 使用之前为套接连接设置的 `DataInputStream` `inStream` 和 `DataOutputStream` `outStream`。每当写入令牌时，首先写入令牌的字节数，然后是令牌本身。相关原因将在“SampleClient 和 SampleServer 消息交换”章节的介绍部分进行讨论。
 
 以下是 `SampleClient` 的上下文建立循环，随后是用于显示客户端和服务器之间是否进行了相互身份验证信息的代码：
 
@@ -11926,7 +11943,7 @@ byte[] token = new byte[0];
 
 while (!context.isEstablished()) {
 
-    // 第一次调用时传入空 token
+    // 第一次调用时忽略 token
     token = context.initSecContext(token, 0, token.length);
 
     // 如果 initSecContext() 生成了令牌，则向服务器发送令牌
@@ -11938,16 +11955,18 @@ while (!context.isEstablished()) {
         outStream.flush();
     }
 
-    // 如果上下文尚未建立，则读取服务器返回的令牌
+    // 如果客户端已完成上下文建立
+    // 则在此循环中将不再有更多令牌需要读取
     if (!context.isEstablished()) {
         token = new byte[inStream.readInt()];
-        System.out.println("Will read input token of size " 
-          + token.length + " for processing by initSecContext");
+        System.out.println("will read input token of size " 
+          + token.length
+          + " for processing by initSecContext");
         inStream.readFully(token);
     }
 }
 
-System.out.println("Client Established!");
+System.out.println("Client Established! ");
 System.out.println("Client is " + context.getSrcName());
 System.out.println("Server is " + context.getTargName());
 
@@ -11960,20 +11979,20 @@ if (context.getMutualAuthState()) {
 
 在我们的客户端/服务器场景中，`SampleServer` 是上下文接收者。以下是建立安全上下文的基本步骤：
 
-1. `SampleServer` `GSSContext` 实例化
-2. `SampleServer` 上下文建立循环：在上下文尚未建立时持续循环，每次从 `SampleClient` 接收令牌，调用 `acceptSecContext` 并传递该令牌，然后将任何返回的令牌发送给 `SampleClient`。
+- 1. `SampleServer` `GSSContext` 实例化
+- 2. `SampleServer` 上下文建立循环：在上下文尚未建立时持续循环，每次从 `SampleClient` 接收令牌，调用 `acceptSecContext` 并传递该令牌，然后将任何返回的令牌发送给 `SampleClient`。
 
-## SampleServer `GSSContext` 实例化
+## SampleServer GSSContext 实例化
 
-如“SampleClient `GSSContext` 实例化”所述，通过实例化 `GSSManager` 然后调用其 `createContext` 方法之一来创建 `GSSContext`。
+如“SampleClient GSSContext 实例化”所述，通过实例化 `GSSManager` 然后调用其 `createContext` 方法之一来创建 `GSSContext`。
 
-与 `SampleClient` 类似，`SampleServer` 通过调用 `GSSManager` 静态方法 `getInstance()` 获取默认 `GSSManager` 子类的实例：
+与 `SampleClient` 类似，`SampleServer` 通过调用 `GSSManager` 静态方法 `getInstance` 获取默认 `GSSManager` 子类的实例：
 
 ```java
 GSSManager manager = GSSManager.getInstance();
 ```
 
-用于在接收端创建上下文的 `GSSManager` 工厂方法具有以下签名：
+用于在接收端创建上下文的 `GSSManager` 工厂方法具有以下方法：
 
 ```java
 GSSContext createContext(GSSCredential myCred);
@@ -11982,20 +12001,20 @@ GSSContext createContext(GSSCredential myCred);
 如果你为 `GSSCredential` 参数传递 `null`，则作为 `SampleServer` 将使用默认凭据。通过以下方式实例化上下文：
 
 ```java
-GSSContext context = manager.createContext((GSSCredential) null);
+GSSContext context = manager.createContext((GSSCredential)null);
 ```
 
 ## SampleServer 上下文建立循环
 
 在 `SampleServer` 实例化 `GSSContext` 后，它可以与 `SampleClient` 建立安全上下文。为了实现这一点，`SampleServer` 有一个持续到上下文建立的循环。每次迭代执行以下操作：
 
-1. 从 `SampleClient` 接收令牌。该令牌是 `SampleClient` 调用 `initSecContext` 的结果。
-2. 调用 `acceptSecContext` 方法，传递刚刚接收的令牌。
-3. 如果 `acceptSecContext` 返回了令牌，则 `SampleServer` 将此令牌发送给 `SampleClient`，如果上下文尚未建立，则开始下一次迭代。
+- 1. 从 `SampleClient` 接收令牌。该令牌是 `SampleClient` 调用 `initSecContext` 的结果。
+- 2. 调用 `acceptSecContext` 方法，传递刚刚接收的令牌。
+- 3. 如果 `acceptSecContext` 返回了令牌，则 `SampleServer` 将此令牌发送给 `SampleClient`，如果上下文尚未建立，则开始下一次迭代。
 
-`acceptSecContext` 的参数是包含令牌的字节数组、该数组中令牌开始的偏移量以及令牌长度。
+`acceptSecContext` 参数返回的令牌是一个字节数组，包含令牌、该数组中令牌开始的偏移量以及令牌长度。
 
-与 `SampleClient` 交换令牌时，`SampleServer` 使用之前为与 `SampleClient` 的套接字连接设置的 `DataInputStream` `inStream` 和 `DataOutputStream` `outStream`。
+与 `SampleClient` 交换令牌时，`SampleServer` 使用之前为与 `SampleClient` 的套接连接设置的 `DataInputStream` `inStream` 和 `DataOutputStream` `outStream`。
 
 以下是 `SampleServer` 的上下文建立循环：
 
@@ -12004,16 +12023,16 @@ byte[] token = null;
 
 while (!context.isEstablished()) {
     token = new byte[inStream.readInt()];
-    System.out.println("Will read input token of size "
-        + token.length
-        + " for processing by acceptSecContext");
+    System.out.println("* read input token of size "
+    + token.length
+    + " for processing by acceptSecContext*");
     inStream.readFully(token);
 
     token = context.acceptSecContext(token, 0, token.length);
 
     // 如果 acceptSecContext 生成了令牌，则向对端发送令牌
     if (token != null) {
-        System.out.println("Will send token of size "
+        System.out.println("Will send token of size to "
             + token.length
             + " from acceptSecContext.");
         outStream.writeInt(token.length);
@@ -12040,13 +12059,13 @@ if (context.getMutualAuthStateState()) {
 
 ## 安全交换消息
 
-一旦 SampleClient 和 SampleServer 之间建立了安全上下文，它们就可以使用该上下文交换消息。
+一旦 `SampleClient` 和 `SampleServer` 之间建立了安全上下文，它们就可以使用该上下文交换消息。
 
 ### 用于消息交换的 GSSContext 方法
 
 准备消息有两种类型：封装（wrap）和解封装（unwrap）。`wrap` 方法返回一个包含消息的令牌，而 `unwrap` 方法“解封装”消息。
 
-SampleClient 的 `wrap` 方法签名如下：
+`SampleClient` 的 `wrap` 方法签名如下：
 
 ```java
 byte[] wrap(byte[] inBuf, int offset, int len, MessageProp msgProp);
@@ -12060,7 +12079,7 @@ byte[] wrap(byte[] inBuf, int offset, int len, MessageProp msgProp);
 
 如果你想为提供的消息获取包含加密完整性代码（MIC）的令牌，可以调用 `getMIC`。该方法返回消息的 MIC。
 
-SampleServer 的 `getMIC` 方法签名如下：
+`SampleServer` 的 `getMIC` 方法签名如下：
 
 ```java
 byte[] getMIC(byte[] inMsg, int offset, int len, MessageProp msgProp);
@@ -12082,31 +12101,31 @@ void verifyMIC(byte[] inToken, int inOffset, int tokenLen,
 
 ## SampleClient 和 SampleServer 交换
 
-SampleClient 和 SampleServer 之间的消息交换是标准的。MIT 的一个小组编写了 GSS-API 客户端和 GSS-API 服务器，它们成为检查不同 GSS-API 库实现之间互操作性流行的测试程序（这些 GSS-API 示例应用程序可以从提供的 Kerberos 发行版中下载，MIT 位于 http://web.mit.edu/kerberos）。一旦建立上下文，该客户端和服务器就会遵循该协议，客户端发送一条消息，并期望该消息的 MIC（消息完整性码）。如果你实现了一个 GSS-API 库，通常的做法是运行客户端或服务器，并使用使用了其他 GSS-API 库实现的对端服务器或客户端进行测试。如果两个实现都符合标准，它们将能够成功通信。
+`SampleClient` 和 `SampleServer` 之间的消息交换是标准的。MIT 的一个小组编写了 GSS-API 客户端和 GSS-API 服务器，它们成为检查不同 GSS-API 库实现之间互操作性流行的测试程序（这些 GSS-API 示例应用程序可以从提供的 Kerberos 发行版中下载，MIT 位于 http://web.mit.edu/kerberos）。一旦建立上下文，该客户端和服务器 MIT 就会遵循该协议，客户端发送一条消息，并期望该消息的 MIC（消息完整性码）。如果你实现了一个 GSS-API 库，通常的做法是运行客户端或服务器，并使用使用了其他 GSS-API 库实现的对端服务器或客户端进行测试。如果两个实现都符合标准，它们将能够成功通信。
 
-与 C 语言编写的（如 MIT）或其他客户端或服务器进行测试，其一个影响是令牌必须交换的方式。C 语言实现的 GSS-API 不包含基于流的方法。当对端没有基于流的方法时，当你写入令牌（token）时，必须先写入字节数，然后写入令牌。同样，当你读取令牌时，首先读取字节数，然后读取令牌。这就是 SampleClient 和 SampleServer 所做的。
+与 C 语言编写的（如 MIT）或其他客户端或服务器进行测试，其一个影响是令牌必须交换的方式。C 语言实现的 GSS-API 不包含基于流的方法。当对端没有基于流的方法时，当你写入令牌（token）时，必须先写入字节数，然后写入令牌。同样，当你读取令牌时，首先读取字节数，然后读取令牌。这就是 `SampleClient` 和 `SampleServer` 所做的。
 
-以下是 SampleClient 和 SampleServer 消息交换的摘要：
+以下是 `SampleClient` 和 `SampleServer` 消息交换的摘要：
 
-- SampleClient 使用 `wrap` 对消息进行加密并计算 MIC（消息完整性码）。
-- SampleClient 将 `wrap` 返回的令牌发送到 SampleServer。
-- SampleServer 使用 `unwrap` 获取原始消息并验证其完整性。
-- SampleServer 调用 `getMIC` 在解密后的消息上计算 MIC。
-- SampleServer 将 `getMIC` 返回的令牌（包含 MIC）发送到 SampleClient。
-- SampleClient 调用 `verifyMIC` 验证 SampleServer 发送的 MIC 是否为原始消息的有效 MIC。
+- `SampleClient` 使用 `wrap` 对消息进行加密并计算 MIC（消息完整性码）。
+- `SampleClient` 将 `wrap` 返回的令牌发送到 `SampleServer`。
+- `SampleServer` 使用 `unwrap` 获取原始消息并验证其完整性。
+- `SampleServer` 调用 `getMIC` 在解密后的消息上计算 MIC。
+- `SampleServer` 将 `getMIC` 返回的令牌（包含 MIC）发送到 `SampleClient`。
+- `SampleClient` 调用 `verifyMIC` 验证 `SampleServer` 发送的 MIC 是否为原始消息的有效 MIC。
 
 ## 加密并发送消息的示例代码
 
-以下是加密消息、为其计算 MIC 并将结果发送到 SampleServer 的示例代码：
+以下是加密消息、为其计算 MIC 并将结果发送到 `SampleServer` 的示例代码：
 
 ## SampleServer 解封装、计算 MIC 并发送的代码
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_440_0.png)
 
-以下 SampleServer 代码读取了由 SampleClient 发送的封装令牌（wrapped token），并进行“解封装”以获取原始消息并验证其完整性。在这种情况下，解封装包含了解密，因为消息是经过加密的。
+以下 `SampleServer` 代码读取了由 `SampleClient` 发送的封装令牌（wrapped token），并进行“解封装”以获取原始消息并验证其完整性。在这种情况下，解封装包含了解密，因为消息是经过加密的。
 
 > 注意：
-> 完整性检查预计会成功。但请注意，通常情况下如果完整性检查失败，意味着消息在传输过程中被更改。如果方法遇到完整性检查失败，它将抛出一个带有错误代码 `GSSEException.BAD_MIC` 的 `GSSEException`。
+> 完整性检查预计会成功。但请注意，通常情况下如果完整性检查失败，意味着消息在传输过程中被更改。如果方法遇到完整性检查失败，它将抛出一个带有错误代码 `GSSException.BAD_MIC` 的 `GSSException`。
 
 ```java
 /*
@@ -12122,18 +12141,22 @@ MessageProp prop = new MessageProp(0, false);
  * 读取令牌。这使用了与建立上下文期间
  * 相同的令牌数组。
  */
-
 token = new byte[inputStream.readInt()];
+
 System.out.println("读取大小为 " + token.length + " 的令牌");
+
 inputStream.readFully(token);
 
 byte[] bytes = context.unwrap(token, 0, token.length, prop);
+
 String str = new String(bytes);
+
 System.out.println("接收到数据 *" + str + "*长度为 " + str.length());
+
 System.out.println("应用加密: " + prop.getIntegrity());
 ```
 
-接下来，SampleServer 生成一个解密后的消息并发送给 SampleClient。这并不是绝对必要的，只是为了说明在解密后的消息上生成 MIC，该消息应该与 SampleClient 封装并发送到 SampleServer 的原始消息完全相同。当 SampleServer 生成此内容并发送给 SampleClient，且 SampleClient 进行验证时，它向 SampleClient 证明了 SampleServer 所拥有的解密消息实际上与来自 SampleClient 的原始消息完全相同。
+接下来，`SampleServer` 生成一个解密后的消息并发送给 `SampleClient`。这并不是绝对必要的，只是为了说明在解密后的消息上生成 MIC，该消息应该与 `SampleClient` 封装并发送到 `SampleServer` 的原始消息完全相同。当 `SampleServer` 生成此内容并发送给 `SampleClient`，且 `SampleClient` 进行验证时，它向 `SampleClient` 证明了 `SampleServer` 所拥有的解密消息实际上与来自 `SampleClient` 的原始消息完全相同。
 
 ```java
 /*
@@ -12149,7 +12172,9 @@ prop.setQOP(0);
 
 ```java
 token = context.getMIC(bytes, 0, bytes.length, prop);
+
 System.out.println("*将发送大小为 " + token.length + " 的 MIC 令牌");
+
 outOutStream.writeInt(token.length);
 outOutStream.write(token);
 outOutStream.flush();
@@ -12157,11 +12182,13 @@ outOutStream.flush();
 
 ## 验证 MIC 的 SampleClient 代码
 
-以下 SampleClient 代码读取了 SampleServer 在解密消息上计算的 MIC，并验证该 MIC 是否为原始消息的 MIC，从而证明 SampleServer 所拥有的解密消息与原始消息一致：
+以下 `SampleClient` 代码读取了 `SampleServer` 在解密消息上计算的 MIC，并验证该 MIC 是否为原始消息的 MIC，从而证明 `SampleServer` 所拥有的解密消息与原始消息一致：
 
 ```java
 token = new byte[inStream.readInt()];
+
 System.out.println("*将读取大小为 " + token.length + " 的令牌");
+
 inStream.readFully(token);
 
 /*
@@ -12173,12 +12200,13 @@ inStream.readFully(token);
 context.verifyMIC(token, 0, token.length,
                   messageBytes, 0, messageBytes.length,
                   prop);
+
 System.out.println("已验证接收到的消息的 MIC。");
 ```
 
 ## 清理
 
-当 SampleClient 和 SampleServer 完成消息交换后，它们需要执行清理操作。两者都包含以下代码以：
+当 `SampleClient` 和 `SampleServer` 完成消息交换后，它们需要执行清理操作。两者都包含以下代码以：
 
 - 关闭 socket 连接
 - 释放系统资源和存储在上下文对象中的加密信息，然后使上下文失效
@@ -12190,14 +12218,14 @@ context.dispose();
 
 ## Kerberos 用户与服务的令牌
 
-由于身份认证的安全通信技术是 Kerberos V5，我们使用的令牌（principals）在任何地方都需要 realm（域）。例如，在运行 SampleClient 时，会被要求提供用户名。你的令牌由用户名（如 mjones）后面跟着“@”和 realm（如 `mjones@OPERATIONS.COM`）组成。
+由于身份认证的安全通信技术是 Kerberos V5，我们使用的令牌（principals）在任何地方都需要 realm（域）。例如，在运行 `SampleClient` 时，会被要求提供用户名。你的令牌由用户名（如 `mjones`）后面跟着“@”和 realm（如 `mjones@OPERATIONS.COM`）组成。
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_442_0.png)
 
-一个像 SampleServer 的服务器通常提供一个“服务”。SampleServer 在以下几处需要名称：
+一个像 `SampleServer` 的服务器通常提供一个“服务”。`SampleServer` 在以下几处需要名称：
 
-- 当运行 SampleServer 时，SampleClient 尝试连接它，Kerberos 会尝试对 KDC 进行身份验证。你应该登录。
-- 当运行 SampleClient 时，参数之一是服务令牌名称。你可以在不包含 realm 的情况下指定名称，因为 SampleClient 将名称传递给 `createName` 方法，该方法会根据需要附加默认 realm。
+- 当运行 `SampleServer` 时，`SampleClient` 尝试连接它，Kerberos 会尝试对 KDC 进行身份验证。你应该登录。
+- 当运行 `SampleClient` 时，参数之一是服务令牌名称。你可以在不包含 realm 的情况下指定名称，因为 `SampleClient` 将名称传递给 `createName` 方法，该方法会根据需要附加默认 realm。
 
 在整个设计过程中，在随后的登录文件中，`service name@realm` 被用作占位符，由实际名称替换。为了尝试此教程，你可以使用你的用户名作为服务令牌。
 
@@ -12207,17 +12235,17 @@ context.dispose();
 service_name/machine_name@realm
 ```
 
-例如，在 realm `KRENT-OPERATIONS.COM` 中名为 raven 的机器上运行 nfs 服务可以使用：
+例如，在 realm `KRENT-OPERATIONS.COM` 中名为 `raven` 的机器上运行 `nfs` 服务可以使用：
 
 ```
 nfs/raven@KRENT-OPERATIONS.COM
 ```
 
-然而，并不是多组件的。人们可能在该 realm 中的所有 ftp 服务器中使用相同的 `ftp/realm`，而另一个安装可能为不同的 ftp 服务器使用不同的令牌，分别在机器 host1 和 host2 上使用 `ftp/host1@realm` 和 `ftp/host2@realm`。
+然而，并不是多组件的。人们可能在该 realm 中的所有 `ftp` 服务器中使用相同的 `ftp/realm`，而另一个安装可能为不同的 `ftp` 服务器使用不同的令牌，分别在机器 `host1` 和 `host2` 上使用 `ftp/host1@realm` 和 `ftp/host2@realm`。
 
-如果用户或服务令牌的 realm 是默认 realm（参见 Kerberos 要求），那么在登录 Kerberos 时可以留空 realm（即提示你输入名称时）。因此，如果你的用户名是 `jones@KRENT-OPERATIONS.COM`，当你运行 SampleClient 时，它会请求你的用户名，你只需指定 mjones，留空 realm。该名称在 Kerberos 令牌名的语法中被解释，并根据需要附加默认 realm。
+如果用户或服务令牌的 realm 是默认 realm（参见 Kerberos 要求），那么在登录 Kerberos 时可以留空 realm（即提示你输入名称时）。因此，如果你的用户名是 `jones@KRENT-OPERATIONS.COM`，当你运行 `SampleClient` 时，它会请求你的用户名，你只需指定 `mjones`，留空 realm。该名称在 Kerberos 令牌名的语法中被解释，并根据需要附加默认 realm。
 
-如果令牌名称将由 `GSSManager.createName` 转换为 `GSSName`，你也可以留空 realm。例如，当你运行 SampleClient 时，参数之一是服务令牌名称。你可以在不包含 realm 的情况下指定名称，因为 SampleClient 将名称传递给 `createName` 方法，该方法会根据需要附加默认 realm。
+如果令牌名称将由 `GSSManager.createName` 转换为 `GSSName`，你也可以留空 realm。例如，当你运行 `SampleClient` 时，参数之一是服务令牌名称。你可以在不包含 realm 的情况下指定名称，因为 `SampleClient` 将名称传递给 `createName` 方法，该方法会根据需要附加默认 realm。
 
 建议在登录配置文件和策略文件中使用令牌时，始终包含 realm，因为每个解析器的行为可能取决于实现；它们在这些名称之前可能或不会附加默认 realm，如果名称中没有 realm，后续操作可能会失败。
 
@@ -12225,7 +12253,7 @@ nfs/raven@KRENT-OPERATIONS.COM
 
 ## 登录配置文件
 
-在本教程中，我们让底层客户端和 Kerberos 机制处理运行 SampleClient 和 SampleServer 的用户凭据，而不是直接调用 JAAS 方法（如在 JAAS 认证和 JAAS 授权教程所示）或间接调用（例如，登录将使用“使用 JAAS 登录工具”教程，以及“使用 JAAS 登录工具和 GSS-API 进行安全消息交换”）。
+在本教程中，我们让底层客户端和 Kerberos 机制处理运行 `SampleClient` 和 `SampleServer` 的用户凭据，而不是直接调用 JAAS 方法（如在 JAAS 认证和 JAAS 授权教程所示）或间接调用（例如，登录将使用“使用 JAAS 登录工具”教程，以及“使用 JAAS 登录工具和 GSS-API 进行安全消息交换”）。
 
 Oracle 实现的默认 Kerberos 机制会提示输入 Kerberos 名称和密码，并将指定的用户（或服务）验证到 Kerberos KDC。该机制依赖 Oracle 来执行此验证。
 
@@ -12233,16 +12261,16 @@ JAAS 支持可插拔的身份验证框架，这意味着可以在调用应用程
 
 在本教程中，在配置文件中指定了 Kerberos 登录模块 `com.sun.security.auth.module.Krb5LoginModule`。该登录模块会提示输入 Kerberos 名称和密码，并尝试验证到 Kerberos KDC。
 
-SampleClient 和 SampleServer 都可以使用相同的登录配置，只要该文件包含两个条目：一个用于客户端，一个用于服务端。
+`SampleClient` 和 `SampleServer` 都可以使用相同的登录配置，只要该文件包含两个条目：一个用于客户端，一个用于服务端。
 
 本教程中使用的 `bcsLogin.conf` 登录文件如下：
 
 ```
-com.sun.security.jgs.initiate {
+com.sun.security.jgss.initiate {
     com.sun.security.auth.module.Krb5LoginModule required;
 }
 
-com.sun.security.jgs.accept {
+com.sun.security.jgss.accept {
     com.sun.security.auth.module.Krb5LoginModule required storeKey=true;
 }
 ```
@@ -12345,8 +12373,6 @@ SampleClient <service_principal> <host> <port_number>
 在提示时，输入你的 Kerberos 用户名和密码。登录文件中指定的底层 Kerberos 认证机制将为你登录 Kerberos。SampleClient 请求与 SampleServer 建立接连接。一旦 SampleServer 接受连接，SampleClient 和 SampleServer 将建立共享上下文，然后按照本教程所述交换消息。
 有关登录故障排除建议，请参见故障排除（Troubleshooting）。
 
-# 第 7 章 JAAS 简介及 Java GSS-API 教程
-
 ## JAAS 认证
 
 JAAS 可用于两个目的：
@@ -12356,7 +12382,7 @@ JAAS 可用于两个目的：
 
 本节提供了认证组件的基础教程。授权组件将由 JAAS 授权教程提供。
 
-JAAS 认证是以可插的方式执行的。这允许 Java 应用程序与底层认证技术保持独立。可以插入新的或更新的技术，而无需对认证本身进行任何修改。运行时可以使用用于特定认证技术的任何实现。该实实现在配置文件中。本教程使用的认证技术由以下组成（参见 Kerberos 要求）。
+JAAS 认证是以可插的方式执行的。这允许 Java 应用程序与底层认证技术保持独立。可以插入新的或更新的技术，而无需对认证本身进行任何修改。运行时可以使用用于特定认证技术的任何实现。该实实现在配置文件中。本教程使用的认证技术由以下组成（参见 Kerberos 要求.）。
 
 本教程的其余部分由以下章节组成：
 
@@ -12407,7 +12433,7 @@ new LoginContext("JaasSample",
    我们本教程使用的登录配置文件条目（参见 `jaas.conf`）名称为 "JaasSample"，因此我们将其作为 `LoginContext` 构造函数的第一个参数。
 
 2. **CallbackHandler 实例。**
-   当 `LoginModule` 需要与用户通信以请求用户名和密码时，它不会直接这样做。因为有多种与用户通信的方式，以保持与认证技术的独立性。
+   当 `LoginModule` 需要与用户通信以请求用户名和密码时，它不会直接这样做。因为有多种与用户通信的方式，以保持与认证技术的独立性。`LoginModule` 需要与用户通信以请求用户名和密码，它不会直接这样做。因为有多种与用户通信的方式，以保持与认证技术的独立性。
 
 如果认证成功，`KrbLoginModule` 将向 `Subject` 填充 (1) 代表用户的 Kerberos Principal 和 (2) 用户的凭据 (TGT)。
 
@@ -12435,17 +12461,19 @@ JaasSample {
 
 ## 运行代码
 
-要运行你的 JAAS 认证教程，你只需要：
+要运行你的 JAAS 认证教程，你只需要
 
 1. 将 `JaasAcn.java` 应用程序源码和 `jaas.conf` 配置文件放在一个目录。
 2. 编译 `JaasAcn.java`：
-3. 执行 `JaasAcn` 应用程序，指定：
+3. 执行 `JaasAcn` 应用程序，指定
+
+### 第 7 章 JAAS 简介与 Java GSS-API 教程
 
 - `-Djava.security.krb5.realm=<your_realm>` 确保您的 Kerberos 领域是指定的某一个。
   例如，如果您的领域是 `KRBNT-OPERATIONS.EXAMPLE.COM`，您需要输入 `-Djava.security.krb5.realm=KRBNT-OPERATIONS.EXAMPLE.COM`。
 - `-Djava.security.krb5.kdc=<your_kdc>` 确保您的 Kerberos KDC 是指定的某一个。
   例如，如果你的 KDC 是 `samplekdc.example.com`，您需要输入 `-Djava.security.krb5.kdc=samplekdc.example.com`。
-- `-Djava.security.auth.login.config=jaas.conf` 指定要使用的登录配置文件为 `jaas.conf`。
+- `-Djava.security.auth.login.config=jaas.conf` 指定要使用的登录配置文件为 jaas.conf。
 
 以下是完整的命令：
 
@@ -12461,10 +12489,10 @@ java -Djava.security.krb5.realm=<your_realm> \
 
 系统将提示您输入 Kerberos 用户名和密码，登录配置文件中指定的底层 Kerberos 认证机制将引导您登录 Kerberos。如果登录成功，您将看到以下消息：
 
-**Authentication succeeded!**（认证成功！）
+Authentication succeeded!（认证成功！）
 
-如果登录失败（例如，密码输入错误），您将看到：
-**Authentication failed:**（认证失败：）
+如果登录失败（例如，密码输入错误），您将看到
+Authentication failed:（认证失败：）
 
 随后是失败原因。例如，如果您输错了用户名，可能会看到类似下面的消息（此处稍微修改了格式以提高可读性）：
 
@@ -12485,17 +12513,17 @@ KrbException: Client not found in Kerberos database
 
 当程序在安装了安全管理器的情况下运行时，除非根据生效的安全策略显式授予权限（参见 JDK 中的 Permissions）来执行某些操作，否则程序将不允许访问资源或执行其他安全敏感操作。该权限必须通过策略文件中的项进行授予（参见“默认策略实现”和“策略语法”）。
 
-大多数服务器都安装了安全管理器，因此应用程序在安全管理器的监督下运行。相反，应用程序并没有这样做，因为在应用程序运行时，安全管理器不会被自动安装。此应用程序与 JAAS 一样，对资源具有完全访问权限。
+大多数服务器都安装了安全管理器，因此应用程序在安全管理器的监督下运行。相反，应用程序并没有这样做，因为在应用程序运行时，安全管理器不会被自动安装。此应用程序与 JaAS 一样，对资源具有完全访问权限。
 
 **要使用安全管理器运行应用程序**，请在命令行中使用包含 `-Djava.security.manager` 参数的参数调用解释器。
 
 如果您尝试在没有指定任何策略文件的情况下使用安全管理器调用 JaAS，您将获得以下结果（除非您在其他处设置了授予所需权限或 `AllPermission` 的默认策略）：
 
 ```
-java -Djava.security.manager \
--Djava.security.krb5.realm=<your_realm> \
--Djava.security.krb5.kdc=<your_kdc> \
--Djava.security.auth.login.config=jaas.conf JaasAcn
+# java -Djava.security.manager \
+# -Djava.security.krb5.realm=<your_realm> \
+# -Djava.security.krb5.kdc=<your_kdc> \
+# -Djava.security.auth.login.config=jaas.conf JaasAcn
 
 Exception in thread "main" java.security.AccessControlException: access denied (java.security.AuthPermission createLoginContext.JaasAcn)
 ```
@@ -12509,23 +12537,27 @@ Exception in thread "main" java.security.AccessControlException: access denied (
 1. 将 `JaAS.java` 源文件和 `jaas.conf` 文件放入一个目录。
 2. 编译 `JaAS.java`：
 3. 创建 JAR 文件：`jar -cvf JaASn.jar JaAS.class`
-   此命令创建了 `JaASn.jar`，并将 `JaAS.class` 放入其中，同时也包含了 `jaas.conf` 文件。
+此命令创建了 `JaASn.jar`，并将 `JaAS.class` 放入其中，同时也包含了 `jaas.conf` 文件。
 4. 创建策略文件 `jaascn.policy`：JaAS 尝试实例化 `LoginContext` 所需的权限是 `java.security.AuthPermission createLoginContext.JaASn`。这里 `<entry name>` 指的是登录配置文件的名称。
 5. 执行 JaASn 应用程序：
-   ```
-   java -classpath JaASn.jar -Djava.security.manager -Djava.security.krb5.realm=<your_realm> -Djava.security.krb5.kdc=<your_kdc> -Djava.security.policy=jaascn.policy -Djava.security.auth.login.config=jaas.conf JaASn
-   ```
-   由于指定的策略文件包含了授予所需权限的项，JaASn 将允许实例化 `LoginContext` 并执行：
-   ```java
-   LoginContext lc = new LoginContext("Jaasample", new CallbackHandler());
-   ```
-   因此，`jaascn.policy` 的内容如下：
-   ```
-   grant code "file:..." {
-       permission java.security.AuthPermission "createLoginContext.Jaasample";
-   };
-   ```
-   策略文件参见“默认策略实现”和“策略语法”。
+```
+java -classpath JaASn.jar -Djava.security.manager -Djava.security.krb5.realm=<your_realm> -Djava.security.krb5.kdc=<your_kdc> -Djava.security.policy=jaascn.policy -Djava.security.auth.login.config=jaas.conf JaASn
+```
+由于指定的策略文件包含了授予所需权限的项，JaASn 将允许实例化 `LoginContext` 并执行：
+
+```java
+LoginContext lc = new LoginContext("Jaasample", new CallbackHandler());
+```
+
+因此，`jaascn.policy` 的内容如下：
+
+```java
+grant code "file:..." {
+    permission java.security.AuthPermission "createLoginContext.Jaasample";
+};
+```
+
+策略文件参见“默认策略实现”和“策略语法”。
 
 # 第7 章 JAAS 简介与 Java GSS-API 教程
 
@@ -12540,7 +12572,7 @@ Exception in thread "main" java.security.AccessControlException: access denied (
 
 JAAS 授权扩展了 Java 服务架构，该架构使用策略（默认策略实现和策略语法）来指定为执行代码的授予哪些访问权限。该架构是以代码为中心的；权限是根据代码的特征授予的；例如代码的来源、它是否经过签名以及由谁签名。我们可以在在 JAAS 身份验证教程中使用的 `jaascm.policy` 文件中看到这种方法的示例。该文件包含以下内容：
 
-```
+```java
 grant codebase "file:/Jaascn.jar" {
     permission javax.security.auth.AuthPermission "createLoginContextJaasSample";
 };
@@ -12559,7 +12591,7 @@ JAAS 通过新的以用户为中心的访问控制扩展了以代码为中心的
 为了使 JAAS 授权生效，需要以下条件：
 
 - 用户必须经过身份验证，如 JAAS 身份验证教程所述。
-- 在安全策略中必须配置基于 `Principal` 的条目。如何创建基于 `Principal` 的策略文件语句？
+- 在安全策略中必须配置基于 `Principal` 的条目。
 
 ## 如何创建基于 `Principal` 的策略文件语句？
 
@@ -12569,7 +12601,7 @@ JAAS 通过新的以用户为中心的访问控制扩展了以代码为中心的
 
 因此，`grant` 语句的基本格式现在为：
 
-```
+```java
 grant <signer(s) field>, <codeBase URL>
 <Principal field(s)>
     permission perm_class_name "target_name", "action";
@@ -12596,7 +12628,7 @@ grant <signer(s) field>, <codeBase URL>
 
 本教程的策略包含一个带有 `Principal` 字段的 `grant` 语句：
 
-```
+```java
 grant codebase "file:/SampleAction.jar"
     Principal javax.security.auth.kerberos.KerberosPrincipal
     "your_user_name@your_realm" {
@@ -12625,7 +12657,7 @@ grant codebase "file:/SampleAction.jar"
 
 ### JAASn.java
 
-`JAASn.java` 与 JAAS 身份验证教程中的 `JAASn.java` 完全相同，但包含了调用 `Subject.doPrivileged` 的额外代码。与 `Jaascn.java` 类似，`JAASn.java` 实例化 `LoginContext lc` 并调用其 `login` 方法进行身份验证。如果成功，通过调用 `LoginContext` 的 `getSubject` 方法获取经过验证的 Subject（包含代表用户的 Principal）：
+`JAASn.java` 与 JAAS 身份验证教程中的 `JAASn.java` 完全相同，但包含了调用 `Subject.doPrivileged` 的额外代码。与 `Jaascn.java` 类似，`JAASn.java` 实例化 `LoginContext lc` 并调用其 `login` 方法进行身份验证。如果成功，通过调用 `LoginContext` 的 `Subject` 方法获取经过验证的 Subject（包含代表用户的 Principal）：
 
 ```java
 Subject mySubject = lc.getSubject();
@@ -12659,7 +12691,7 @@ Subject.doPrivileged(mySubject, action, null);
 
 本教程使用的登录配置文件可以与 JAAS 认证教程中使用的完全相同。我们可以使用 `jaas.conf`，它只包含一个条目：
 
-```
+```java
 JaasSample {
     com.sun.security.auth.module.Krb5LoginModule required;
 };
@@ -12684,7 +12716,7 @@ JaasSample {
 
 假设 `JaasAzn` 类被放置在名为 `JaasAzn.jar` 的 JAR 文件中，可以通过策略文件中的以下 `grant` 语句将这些权限授予 `JaasAzn` 代码：
 
-```
+```java
 grant code "file:./JaasAzn.jar" {
   permission java.security.auth.AuthPermission "createLoginContext.JaasSample";
   permission java.security.auth.AuthPermission "doAsPrivileged";
@@ -12701,7 +12733,7 @@ grant code "file:./JaasAzn.jar" {
 
 这些操作所需的权限如下：
 
-```
+```java
 permission java.util.PropertyPermission "java.home", "read";
 permission java.util.PropertyPermission "user.home", "read";
 permission java.io.FilePermission "foo.txt", "read";
@@ -12711,7 +12743,7 @@ permission java.io.FilePermission "foo.txt", "read";
 
 因此，正如《如何创建基于 Principal 的策略文件语句》中所解释的，我们的 `grant` 语句如下（针对 `SampleAction.jar`）：
 
-```
+```java
 grant codebase="file:";
   Principal javax.security.auth.kerberos.KerberosPrincipal
     "user_name@your_realm" {
@@ -12937,7 +12969,7 @@ jar -cvf Sample.jar Sample.class
 以下是 Windows 的完整命令：
 
 ```
--classpath Login.jar;Sample.jar
+java -classpath Login.jar;Sample.jar
 -Djava.security.manager
 -Djava.security.krb5.realm=<your_realm>
 -Djava.security.krb5.kdc=<your_kdc>
@@ -12948,7 +12980,7 @@ jar -cvf Sample.jar Sample.class
 以下是 Linux 和 macOS 的完整命令：
 
 ```
--classpath Login.jar:Sample.jar
+java -classpath Login.jar:Sample.jar
 -Djava.security.manager
 -Djava.security.krb5.realm=<your_realm>
 -Djava.security.krb5.kdc=<your_kdc>
@@ -12992,11 +13024,11 @@ jar -cvf Sample.jar Sample.class
 
 本教程的应用程序是 `SampleClient` 和 `SampleServer`。每个通过执行登录工具并将应用程序名称（`SampleClient` 或 `SampleServer`）作为参数传递来调用。登录工具使用 JAAS `LoginContext` 通过 Kerberos 验证用户。以下是 `SampleClient` 和 `SampleServer` 应用程序的摘要：
 
-1. 通过运行登录工具并将 `"SampleServer"` 作为参数传递来运行 `SampleServer`。登录工具将提示你输入 `SampleServer` 应该运行的主体的密码。（参阅 Kerberos 用户和服务主体名称。）身份验证完成后，运行 `SampleServer`：
+1. 通过运行登录工具并将 "SampleServer" 作为参数传递来运行 `SampleServer`。登录工具将提示你输入 `SampleServer` 应该运行的主体的密码。（参阅 Kerberos 用户和服务主体名称。）身份验证完成后，运行 `SampleServer`：
    a. 读取其输入：客户端应监听的端口号。
    b. 创建用于监听该端口连接的 `ServerSocket`。
    c. 监听连接。
-2. 运行 `SampleClient` 应用（可能在另一台机器上），通过运行登录工具并将 `"sampleclient"` 作为参数传递来运行该程序。登录工具将提示你输入 Kerberos 用户名和密码。身份验证后，运行 `SampleClient`：
+2. 运行 `SampleClient` 应用（可能在另一台机器上），通过运行登录工具并将 "sampleclient" 作为参数传递来运行该程序。登录工具将提示你输入 Kerberos 用户名和密码。身份验证后，运行 `SampleClient`：
    a. 读取其输入：(1) 代表 `SampleServer` 的 Kerberos 主体。（参阅 Kerberos 用户和服务主体名称），(2) 运行 `SampleServer` 的主机（机器），以及 (3) `SampleServer` 监听客户端连接的端口号。
    b. 尝试与 `SampleServer` 建立 socket 连接，两个应用程序通过 socket 输入输出流初始化 `DataInputStream` 和 `DataOutputStream`，用于未来的数据交换。
 3. 连接被 `SampleServer` 接受，两个应用程序通过 socket 输入输出流初始化 `DataInputStream` 和 `DataOutputStream`，用于未来的数据交换。
@@ -13005,11 +13037,6 @@ jar -cvf Sample.jar Sample.class
 6. 当 `SampleClient` 和 `SampleServer` 完成消息交换时，它们执行清理操作。
 
 ![img/e6375bcfe04cf1374fe293bdab5076_470.png]
-
-# 第 7 章
-
-> 注意：
-> 请参考《无 JAAS 编程使用 Java GSS-API 进行安全消息交换》中的“SampleClient 和 SampleServer 代码”章节，详细讨论本教程中所使用的代码。
 
 ## Kerberos 用户和服务主体名称
 
@@ -13031,11 +13058,11 @@ jar -cvf Sample.jar Sample.class
 service_name/machine_name@realm
 ```
 
-例如，运行在真实领域 `KRBNT-OPERATIONS.EXAMPLE.COM` 中名为 `"raven"` 的机器上的 `nfs` 服务，其主体名称可以是：
+例如，运行在真实领域 `KRBNT-OPERATIONS.EXAMPLE.COM` 中名为 "raven" 的机器上的 nfs 服务，其主体名称可以是：
 
 `nfs/raven@KRBNT-OPERATIONS.EXAMPLE.COM`
 
-然而，并不要求多组件名称。单组件名称（像用户名一样）也可以。对于某个安装，你可能为领域中的所有 `ftp` 服务器使用相同的服务主体 `ftp@realm`，而另一个安装可能为不同的 `ftp` 服务器使用不同的主体，分别在机器 `host1` 和 `host2` 上使用 `ftp/host1@realm` 和 `ftp/host2@realm`。
+然而，并不要求多组件名称。单组件名称（像用户名一样）也可以。对于某个安装，你可能为领域中的所有 ftp 服务器使用相同的服务主体 `ftp@realm`，而另一个安装可能为不同的 ftp 服务器使用不同的主体，分别在机器 `host1` 和 `host2` 上使用 `ftp/host1@realm` 和 `ftp/host2@realm`。
 
 ### 主体名称中何时需要领域
 
@@ -13045,7 +13072,7 @@ service_name/machine_name@realm
 
 建议在登录配置文件和策略文件中使用主体时始终包含领域，因为此类文件的解析器行为可能取决于实现；它们可能在利用名称之前或不附加默认领域，如果名称中没有领域，某些操作可能会失败。
 
-## 登录配置文件
+### 登录配置文件
 
 每当使用 JAAS 时，都需要一个登录配置来指定所请求认证技术。更多信息请参阅附录 B：JAAS 登录配置。
 
@@ -13120,7 +13147,7 @@ grant codebase "file:./Login.jar" {
 
 我们希望向执行 `SampleClient` 的已身份验证用户授予权限，因此我们同时指定了 `SampleClient` 代码位置（在 `SampleClient.jar` 中）以及指示用户（运行 `SampleClient` 的人）用户名和领域的主体标识。有关包含 Principal 标识的策略文件授权语句的信息，请参阅 JAAS 授权中的“你如何制作基于 Principal 的策略文件语句？”。
 
-### JAAS 和 GSS-API 教程简介
+#### JAAS 和 GSS-API 教程简介
 
 以下是授权语句的基本形式：
 
@@ -13173,7 +13200,7 @@ grant codebase "file:/Login.jar" {
 `SampleServer` 代码执行了两种需要权限的操作：
 
 - 接受套接连接。
-- 接受安全上下文的建立，即它是安全上下文建立的接受方。
+- 接受安全上下文的建立，即它是安全上下文建立的接受者。
 
 接受套接连接所需的权限是：
 
@@ -13190,6 +13217,9 @@ permission java.net.SocketPermission "*", "connect";
 permission `javax.security.auth.kerberos.ServicePermission`
     "service_principal@your_realm",
     "accept";
+
+```
+```
 
 其中 `service_principal@your_realm` 是代表服务的服务主体（Kerberos 用户和服务主体名称）。
 
@@ -13226,7 +13256,7 @@ JAAS 和 GSS-API 教程
 - `Java.security.auth.login.config=csLogin.conf` 确保使用的登录配置文件为 `csLogin.conf`。
 
 > 注意：
-> 如果你在系统属性 `java.security.auth.login.config` 中使用单等号 (`=`) 而不是双等号（`==`），则将使用该系统属性和 `java.security` 文件中指定的配置。
+> 如果你在系统属性 `java.security.auth.login.config` 中使用单等号 (=) 而不是双等号（==），则将使用该系统属性和 `java.security` 文件中指定的配置。
 
 你将应用程序名称（在本例中为 `SampleServer`）作为参数传递给 `Login`。然后，你将添加应用程序所需的任何参数，对于 `SampleServer` 来说，参数是一个指定用于监听客户端连接的端口号。请选择一个不太被用于其他用途的高端口。例如 4444 之类的。
 
@@ -13342,7 +13372,7 @@ Subject client =
 com.sun.security.jgss.GSSUtil.createSubject(clientGSSName, null);
 ```
 
-`createSubject` 方法使用作为参数指定的 `GSSName` 和 `GCredential` 创建一个新的 `Subject`。如果服务器只是在本地 JVM 中代表用户执行代码，则不需要用户的凭据——事实上上，除非客户端已将凭据委托给服务器（如“使用从客户端委托的凭据”节中所讨论的），否则无法获取这些凭据。由于这里不需要凭据，我们为 `GSSCredential` 传递了 `null`。
+`createSubject` 方法使用作为参数指定的 `GSSName` 和 `GCredential` 创建一个新的 `Subject`。如果服务器只是在本地 JVM 中代表用户执行代码，则不需要用户的凭据——事实上，除非客户端已将凭据委托给服务器（如“使用从客户端委托的凭据”节中所讨论的），否则无法获取这些凭据。由于这里不需要凭据，我们为 `GSSCredential` 传递了 `null`。
 
 > 注意：
 > 如果您没有使用 Oracle 的 JDK，实现此点的另一种方法是构造如下 `KerberosPrincipal` 实例：
@@ -13388,32 +13418,29 @@ Subject.doPrivileged(client, readFile, null);
 System.out.println("Impersonating client.");
 
 /**
-* 从客户端 GSSName 中提取 KerberosPrincipal，
-* 并将其填充到新 Subject 的主体集中。凭据传递为
-* null，因为将不需要它。
-*/
-
+ * 从客户端 GSSName 中提取 KerberosPrincipal，
+ * 并将其填充到新 Subject 的主体集中。凭据传递为
+ * null，因为将不需要它。
+ */
 GSSName clientGSSName = context.getSrcName();
 System.out.println("clientGSSName: " + clientGSSName);
 Subject client =
-com.security.jgss.GSSUtil.createSubject(clientGSSName,null);
+com.security.jgss.GSSUtil.createSubject(clientGSSName, null);
 
 /**
-* 构造一个读取仅供客户端使用的动作
-*/
-
+ * 构造一个读取仅供客户端使用的动作
+ */
 String clientName = clientGSSName.toString();
 PrivilegedAction readFile =
 new ReadArchiveAction(clientName);
 
 /**
-* 通过 doAsPrivileged 调用该动作。这允许
-* 动作以客户端主体身份执行，并且它
-* 以特权方式运行。这意味着在此之后发生的任何
-* 权限检查仅适用于
-* 作为客户端运行的代码。
-*/
-
+ * 通过 doAsPrivileged 调用该动作。这允许
+ * 动作以客户端主体身份执行，并且它
+ * 以特权方式运行。这意味着在此之后发生的任何
+ * 权限检查仅适用于
+ * 作为客户端运行的代码。
+ */
 Subject.doAsPrivileged(client, readFile, null);
 ```
 
@@ -13478,10 +13505,10 @@ GSSCredential clientRcr = context.getDelegCred();
 
 为了委托，上下文启动者（在我们上一个教程中的 `SampleClient`）必须拥有 `java.security.auth.kerberos.DelegationPermission`。一个使用斜体占位符表示实际值的示例下：
 
-```
+```java
 permission java.security.auth.kerberos.DelegationPermission
-"/service_principal@your_realm" \
-/krbtgt/your_realm@your_realm";
+    "/service_principal@your_realm" \
+    "/krbtgt/your_realm@your_realm";
 ```
 
 注意，`DelegationPermission` 有一个引号内的单个目标，其中包含两个项目，每个项目都被引号括起。每个引号都由 `\"` 转义。然后第一项是：
@@ -13496,13 +13523,12 @@ permission java.security.auth.kerberos.DelegationPermission
 "krbtgt/your_realm@your_realm"
 ```
 
-这基本上赋予了代表客户端执行的代码权限将 Kerberos 票据转发到指定的对端（`service_principal`），其中 Kerberos 票据旨在通过 `krbtgt/your_realm@your_realm` 避免服务。将所有出现 `your_realm` 的地方替换为您的领域。同时，将代表服务器的服务主体 `service_principal@your_realm` 替换为实际服务主体名称（参见上一个教程中的 Kerberos 用户和和服务主体名称）。假设您的领域是 `KBRNT-OPERATIONS.EXAMPLE.COM`，服务主体是 `sample/raven.example.com@KBRNT-OPERATIONS.EXAMPLE.COM`。那么该权限在策略文件中可能如下：
+这基本上赋予了代表客户端执行的代码权限将 Kerberos 票据转发到指定的对端（`service_principal`），其中 Kerberos 票据旨在通过 `krbtgt/your_realm@your_realm` 避免服务。将所有出现 `your_realm` 的地方替换为您的领域。同时，将代表服务器的服务主体 `service_principal@your_realm` 替换为实际服务主体名称（参见上一个教程中的 Kerberos 用户和服务主体名称）。假设您的领域是 `KBRNT-OPERATIONS.EXAMPLE.COM`，服务主体是 `sample/raven.example.com@KBRNT-OPERATIONS.EXAMPLE.COM`。那么该权限在策略文件中可能如下：
 
-```
+```java
 permission java.security.auth.kerberos.DelegationPermission
-"/sample/raven.example.com@KBRNT-OPERATIONS.EXAMPLE.COM" \
-/krbtgt/KBRNT-OPERATIONS.EXAMPLE.COM@KBRNT-
-OPERATIONS.EXAMPLE.COM";
+    "/sample/raven.example.com@KBRNT-OPERATIONS.EXAMPLE.COM" \
+    "/krbtgt/KBRNT-OPERATIONS.EXAMPLE.COM@KBRNT-OPERATIONS.EXAMPLE.COM";
 ```
 
 ## Kerberos 要求
@@ -13513,9 +13539,7 @@ Kerberos 版本 5 用于本教程中开发的客户端和服务器应用程序�
 
 JAAS 框架以及 Java GSS-API 方法所需的 Kerberos 机制都内置在所有供应商的 JDK 中。本教程中 JAAS 认证所需的 Kerberos `LoginModule` 可能在所有 JDK 中均可用。我们将使用由 Oracle JDK 提供的 Kerberos `LoginModule`。
 
-为了运行示例程序
-
-与与所有 Kerberos 安装一样，需要一个 Kerberos 密钥发行中心 (KDC)。它需要包含您用于 Kerberos 身份验证的用户名和密码。
+为了运行示例程序，与所有 Kerberos 安装一样，需要一个 Kerberos 密钥发行中心 (KDC)。它需要包含您用于 Kerberos 身份验证的用户名和密码。
 
 > 注意：
 > KDC 实现是 Kerberos 安装的一部分，而不是 JDK 的部分。
@@ -13536,10 +13560,10 @@ java.security.krb5.kdc
 # 第 7 章
 ## JAAS 和 Java GSS-API 教程
 
-共享的密钥是票据授予主体（Ticket Granting principal）的密钥。以下是单个域的典型授予服务服务主体：
+共享的密钥是票据授予主体的密钥。以下是单个域的典型授予服务服务主体：
 
 ```
-ktbtgt/EXAMPLE.COM@EXAMPLE.COM
+krbtgt/EXAMPLE.COM@EXAMPLE.COM
 ```
 
 在真实的域身份验证中，主体是在每个参与的域中创建的。对于 `ENG.EAST.EXAMPLE.COM` 和 `SALES.WEST.EXAMPLE.COM`，这些主体将是：
@@ -13549,7 +13573,7 @@ krbtgt/ENG.EAST.EXAMPLE.COM@SALES.WEST.EXAMPLE.COM
 krbtgt/SALES.WEST.EXAMPLE.COM@ENG.EAST.EXAMPLE.COM
 ```
 
-这些被称为远程票据授予服务器（Ticket Granting Server）的主体必须在两个域中都创建。
+这些被称为远程票据授予服务器的主体必须在两个域中都创建。
 
 对于 Windows KDC，在创建 Windows 域时会自动创建 `krbtgt` 账户，且无法被删除或重命名。
 
@@ -13557,51 +13581,51 @@ krbtgt/SALES.WEST.EXAMPLE.COM@ENG.EAST.EXAMPLE.COM
 
 以下是登录验证时可能出现的一些问题及其建议：
 
-- **可配置的 Kerberos 设置**：Kerberos 密钥分发中心（KDC）名称域设置是在 Kerberos 配置文件中或通过系统属性 `java.security.krb5.kdc` 和 `java.security.krb5.realm` 创建的。在 JAAS 配置文件的 `Krb5LoginModule` 项中可以指定一个布尔选项 `refreshKrb5Config`。如果将其设置为 true，则在调用 `Krb5LoginModule` 的登录方法之前将刷新配置值。
+- **可配置的 Kerberos 设置**：Kerberos 密钥分发中心（KDC）名称域设置是在 Kerberos 配置文件中或通过系统属性 `java.security.krb5.kdc` 和 `java.security.krb5.realm` 创建的。在 JAAS 配置文件的 `Krb5LoginModule` 项中可以指定一个布尔选项 `refreshKrb5Config`。如果将其设置为 `true`，则在调用 `Krb5LoginModule` 的登录方法之前将刷新配置值。
 
 > 注意：
-> 切换 Kerberos 配置时，**必须**将 `refreshKrb5Config` 设置为 true。未设置此值可能会导致意外结果。
+> 切换 Kerberos 配置时，**必须**将 `refreshKrb5Config` 设置为 `true`。未设置此值可能会导致意外结果。
 
-- **java.lang.ServletExceptionException at javax.security.auth.login.getConfigurationCause**：JAAS 配置文件中存在解析错误。请参阅附录 B：JAAS 登录配置文件以获取有关登录文件中所需语法的信息。
+- **`java.lang.ServletExceptionException at javax.security.auth.login.getConfigurationCause`**：JAAS 配置文件中存在解析错误。请参阅附录 B：JAAS 登录配置文件以获取有关登录文件中所需语法的信息。
 
-- **java.security.auth.login.LoginException: KrbXException: Pre-authentication information was invalid (24) - Preauthentication failed**
-  - 情况 1：输入的密码错误。
-    解决方案 1：核实密码。
-  - 情况 2：如果您正在使用 keytab 获取密钥（例如通过在 JAAS 登录配置文件的 `Krb5LoginModule` 项中将 `KeyTab` 选项设置为 true），则自您更新 keytab 以来密钥可能已经更改。
-    解决方案 2：咨询您的 Kerberos 文档生成新的 keytab 并使用该 keytab。
-  - 原因 3：时钟偏移 - 如果 KDC 和客户端上的时间差异很大（通常为 5 分钟），则会返回此错误。
-    解决方案 3：同步时钟（或让系统管理员执行）。
-  - 原因 4：Kerberos 名称并非全大写。
-    解决方案 4：将 Kerberos 名称设为全大写。注意：建议域名和主机名使用大写。
+- **`java.security.auth.login.LoginException: KrbXException: Pre-authentication information was invalid (24) - Preauthentication failed`**
+    - 情况 1：输入的密码错误。
+        - 解决方案 1：核实密码。
+    - 情况 2：如果您正在使用 keytab 获取密钥（例如通过在 JAAS 登录配置文件的 `Krb5LoginModule` 项中将 `KeyTab` 选项设置为 `true`），则自您更新 keytab 以来密钥可能已经更改。
+        - 解决方案 2：咨询您的 Kerberos 文档生成新的 keytab 并使用该 keytab。
+    - 原因 3：时钟偏移 - 如果 KDC 和客户端上的时间差异很大（通常为 5 分钟），则会返回此错误。
+        - 解决方案 3：同步时钟（或让系统管理员执行）。
+    - 原因 4：Kerberos 名称并非全大写。
+        - 解决方案 4：将 Kerberos 名称设为全大写。注意：建议域名和主机名使用大写。
 
-- **Exception: No valid credentials (Mechanism level failed) Attempt to obtain new INITIATE credentials (failed) ... Caused by: javax.security.auth.LoginException: Clock skew too great**
-  Kerberos 要求 KDC 和客户端上的时间保持松散同步（默认为 5 分钟）。如果不是如此，您将得到此错误。
-  解决方案：同步时钟（或让系统管理员执行）。
+- **`Exception: No valid credentials (Mechanism level failed) Attempt to obtain new INITIATE credentials (failed) ... Caused by: javax.security.auth.LoginException: Clock skew too great`**
+    Kerberos 要求 KDC 和客户端上的时间保持松散同步（默认为 5 分钟）。如果不是如此，您将得到此错误。
+    解决方案：同步时钟（或让系统管理员执行）。
 
-- **javax.security.auth.LoginException: KrbException: Null realm name (601) - default realm not specified**
-  原因：在 Kerberos 配置文件 `krb5.conf`（如果使用）中、作为用户名的一部分提供、或通过 `java.security.krb5.realm` 属性未指定默认域。
-  解决方案：核实您的 Kerberos 配置文件（如果使用）是否包含指定默认域的项，或者在使用 Kerberos 身份验证时直接设置 `java.security.krb5.realm` 属性的值，或在用户名中包含它。
+- **`javax.security.auth.LoginException: KrbException: Null realm name (601) - default realm not specified`**
+    原因：在 Kerberos 配置文件 `krb5.conf`（如果使用）中、作为用户名的一部分提供、或通过 `java.security.krb5.realm` 属性未指定默认域。
+    解决方案：核实您的 Kerberos 配置文件（如果使用）是否包含指定默认域的项，或者在使用 Kerberos 身份验证时直接设置 `java.security.krb5.realm` 属性的值，或在用户名中包含它。
 
-- **javax.security.auth.LoginException: java.net.SocketTimeoutException: Receive timeout**
-  解决方案：核实 Kerberos KDC 正在正常运行。
+- **`javax.security.auth.LoginException: java.net.SocketTimeoutException: Receive timeout`**
+    解决方案：核实 Kerberos KDC 正在正常运行。
 
-- **GSSException: No valid credentials provided (Mechanism level: Failed to find any Kerberos Ticket)**
-  原因：如果没有获取到有效的 Kerberos 凭据，可能会发生这种情况。特别地，如果获取凭据的底层机制没有通过将 `javax.security.auth.SubjectCreds` 值设置为 false 而被忽略（例如通过 `javax.security.auth.SubjectCreds=false`），就会发生这种情况。
-  解决方案：如果您希望由机制来获取凭据，而不是由您的应用程序或封装程序（如使用 JAAS 执行身份验证的教程），请确保将 `javax.security.auth.SubjectCreds` 的值设置为 false。
+- **`GSSException: No valid credentials provided (Mechanism level: Failed to find any Kerberos Ticket)`**
+    原因：如果没有获取到有效的 Kerberos 凭据，可能会发生这种情况。特别地，如果获取凭据的底层机制没有通过将 `javax.security.auth.SubjectCreds` 值设置为 `false` 而被忽略（例如通过 `javax.security.auth.SubjectCreds=false`），就会发生这种情况。
+    解决方案：如果您希望由机制来获取凭据，而不是由您的应用程序或封装程序（如使用 JAAS 执行身份验证的教程），请确保将 `javax.security.auth.SubjectCreds` 的值设置为 `false`。
 
-- **javax.security.auth.LoginException: Could not load configuration file \<krb5.conf> (No such file or directory)**
-  本地通过设置 `java.security.krb5.realm` 和 `java.security.krb5.kdc` 属性的值来指定默认域和 KDC。如果您愿意，可以使用 `krb5.conf` 文件。要使用 `krb5.conf` 文件，您要么设置 `krb5.conf`（而不是 realm 和 kdc 属性）来指定文件位置，要么不设置这些属性，因此将尝试在默认位置查找 `krb5.conf`。如果未找到文件，将得到“Could not load file \<krb5.conf> (No such file or directory)”错误。
-  解决方案：核实 Kerberos 配置文件 `krb5.conf` 可用且可读。查看 Kerberos 要求以获取如何指定文件位置的信息。
+- **`javax.security.auth.LoginException: Could not load configuration file <krb5.conf> (No such file or directory)`**
+    本地通过设置 `java.security.krb5.realm` 和 `java.security.krb5.kdc` 属性的值来指定默认域和 KDC。如果您愿意，可以使用 `krb5.conf` 文件。要使用 `krb5.conf` 文件，您要么设置 `krb5.conf`（而不是 realm 和 kdc 属性）来指定文件位置，要么不设置这些属性，因此将尝试在默认位置查找 `krb5.conf`。如果未找到文件，将得到“Could not load file <krb5.conf> (No such file or directory)”错误。
+    解决方案：核实 Kerberos 配置文件 `krb5.conf` 可用且可读。查看 Kerberos 要求以获取如何指定文件位置的信息。
 
-- **javax.security.auth.LoginException: KrbException: KDC has no encryption (14) - KDC has no**
-  - 原因 1：KDC 不支持请求的加密类型。
-    解决方案 1：Oracle 的实现支持以下加密类型：
-  - 原因 2：在 Windows 平台上使用原生票据缓存。Microsoft 增加了一项功能，不再导出密钥用于授予票据（TGT）。因此，在 Windows 上获取的 TGT 密钥为空。
-    解决方案 2：您需要添加注册表项 `allowsessionkey` 并正确设置，以便在 TGT 中设置密钥。默认值为 0；将其设置为“1”允许在 TGT 中包含密钥。
+- **`javax.security.auth.LoginException: KrbException: KDC has no encryption (14) - KDC has no`**
+    - 原因 1：KDC 不支持请求的加密类型。
+        - 解决方案 1：Oracle 的实现支持以下加密类型：
+    - 原因 2：在 Windows 平台上使用原生票据缓存。Microsoft 增加了一项功能，不再导出密钥用于授予票据（TGT）。因此，在 Windows 上获取的 TGT 密钥为空。
+        - 解决方案 2：您需要添加注册表项 `allowsessionkey` 并正确设置，以便在 TGT 中设置密钥。默认值为 0；将其设置为“1”允许在 TGT 中包含密钥。
 
-- **KDC reply not match expectations**
-  原因：KDC 发送的响应无法被理解。
-  解决方案：核实您已设置了所有 `krb5.conf` 文件参数并咨询您的 KDC 厂商指南。
+- **`KDC reply not match expectations`**
+    原因：KDC 发送的响应无法被理解。
+    解决方案：核实您已设置了所有 `krb5.conf` 文件参数并咨询您的 KDC 厂商指南。
 
 > 注意： 调试模式可以通过设置系统属性 `sun.security.krb5.debug="true"` 。该设置允许您跟踪程序对 Kerberos V5 协议的执行。
 
@@ -13667,9 +13691,6 @@ public class SampleServer {
 
 
 
-# 第 7 章
-## JAAS 简介与 Java GSS-API 教程
-
 ```java
 inputStream.readFully(token);
 
@@ -13687,7 +13708,11 @@ if (token != null) {
     outputStream.write(token);
     outputStream.flush();
 }
+
+}
 ```
+
+# 第 7 章 JAAS 简介与 Java GSS-API 教程
 
 ```java
 System.out.print("Context Established!");
@@ -13704,7 +13729,7 @@ if (context.getMutualAuthState()) {
 }
 ```
 
-> * 创建一个 `MessageProp`，它将用此返回信息，例如应用于被封装 token 的保护质量强度，是否已加密等。由于初始的 `MessageProp` 值会被忽略，只需将它们设置为默认值 `0` 和 `false` 即可。
+> * 创建一个 `MessageProp`，它将用此返回信息，例如应用于被封装 token 的保护质量强度（Quality-of-Protection），是否已加密等。由于初始的 `MessageProp` 值会被忽略，只需将它们设置为默认值 0 和 false 即可。
 
 ```java
 MessageProp prop = new MessageProp(0, false);
@@ -13722,12 +13747,14 @@ inputStream.readFully(token);
 System.out.println("Confidentiality applied: " + prop.getPrivacy());
 ```
 
-> * 生成一个 MIC 并发送给客户端。这仅用于演示。无论使用了何种机密性（加密），传入的封装消息的完整性都能得到。
-> * 将 `MessageProp` 的 QOP 重置为 `0` 以确保应用默认的保护质量强度（QOP）。
+> * 生成一个 MIC 并发送给客户端。这仅用于演示。无论使用了何种机密性（加密），传入的封装消息的完整性都能得到保证。
+> * 将 `MessageProp` 的 QOP 重置为 0 以确保应用默认的保护质量强度（QOP）。
 
 ```java
 prop.setQOP(0);
 ```
+
+# 第 7 章 JAAS 简介与 Java GSS-API 教程
 
 ```java
 token = context.getMIC(bytes, 0, bytes.length);
@@ -13746,7 +13773,7 @@ context.dispose();
 socket.close();
 ```
 
-## loginLogin.conf
+# loginLogin.conf
 
 ```conf
 /**
@@ -13761,7 +13788,7 @@ com.sun.security.gss.accept {
 };
 ```
 
-## SampleClient.java
+# SampleClient.java
 
 ```java
 import org.ietf.gss.*;
@@ -13781,7 +13808,9 @@ import java.io.DataOutputStream;
  * 3. 服务器向客户端发送 wrap token 中的 MIC token。
  */
 public class SampleClient {
+
     public static void main(String[] args) throws IOException, GSSException {
+
         // 获取命令行参数和端口
         if (args.length < 3) {
             System.err.println("Usage: SampleClient <server> <port>");
@@ -13811,6 +13840,7 @@ public class SampleClient {
         // 由客户端选择要使用的机制。
         // 凭据传入 null。DEFAULT_LIFETIME 让机制决定上下文有效期。
         // 注意：为凭据传递 null 请求 GSS-API 使用凭据。这意味着机制将在当前 Subject 中寻找它所需的正确凭据。
+
         GSSContext context = manager.createContext(serverName, krb5Oid, null, GSSContext.DEFAULT_LIFETIME);
 
         // 在上设置所需的选项。由客户端选择这些选项。
@@ -13822,6 +13852,7 @@ public class SampleClient {
         byte[] token = new byte[0];
 
         while (!context.isEstablished()) {
+
             // 第一次调用时忽略 token
             token = context.initSecContext(token, 0, token.length);
 
@@ -13848,12 +13879,12 @@ public class SampleClient {
 }
 ```
 
-## JAAS 与 Java GSS-API 教程简介
+# JAAS 与 Java GSS-API 教程简介
 
 ```java
 /*
- * 没有进行双向认证，则仅对服务器客户端进行了身份验证。否则，客户端和服务器之间进行了相互身份验证。
- */
+* 没有进行双向认证，则仅对服务器客户端进行了身份验证。否则，客户端和服务器之间进行了相互身份验证。
+*/
 ```
 
 ```java
@@ -13868,9 +13899,9 @@ byte[] messageBytes = "Hello There!\0".getBytes();
 
 ```java
 /*
- * 第一个 MessageProp 参数为 0，用于请求默认质量保护（Quality-Protection）。
- * 第二个参数为 true，用于请求隐私（消息加密）。
- */
+* 第一个 MessageProp 参数为 0，用于请求默认质量保护（Quality-Protection）。
+* 第二个参数为 true，用于请求隐私（消息加密）。
+*/
 ```
 
 ```java
@@ -13879,9 +13910,9 @@ MessageProp prop = new MessageProp(0, true);
 
 ```java
 /*
- * 加密数据并发送。完整性保护始终适用于，无论机密性（即加密）。
- * 你可以使用与建立上下文时相同的令牌（字节数组）。
- */
+* 加密数据并发送。完整性保护始终适用于，无论机密性（即加密）。
+* 你可以使用与建立上下文时相同的令牌（字节数组）。
+*/
 ```
 
 ```java
@@ -13894,8 +13925,8 @@ outStream.flush();
 
 ```java
 /*
- * 现在我们允许服务器解密消息，对解密后的消息计算 MIC（完整性校验码）并将其发回让我们进行验证。这并不是必要的，但此处这样做是为了说明。
- */
+* 现在我们允许服务器解密消息，对解密后的消息计算 MIC（完整性校验码）并将其发回让我们进行验证。这并不是必要的，但此处这样做是为了说明。
+*/
 ```
 
 ```java
@@ -13912,7 +13943,7 @@ context.dispose();
 socket.close();
 ```
 
-## JaasAcn.java
+# JaasAcn.java
 
 ```java
 import javax.security.auth.*;
@@ -13922,12 +13953,14 @@ import com.sun.security.auth.callback.TextCallbackHandler;
 ```
 
 /**
- * 此 `JaasAcn` 尝试验证用户身份验证并报告验证是否成功。
+ * 此 JaasAcn 尝试验证用户身份验证并报告验证是否成功。
  */
 
 ```java
 public class JaasAcn {
+
     public static void main(String[] args) {
+
         // 获取 LoginContext，用于身份验证。告诉它使用 JAAS 登录配置文件中名为 "JaasSample" 条目指定的 LoginModule 实现，并使用指定的 CallbackHandler。
         LoginContext lc = null;
 
@@ -13955,7 +13988,9 @@ public class JaasAcn {
 }
 ```
 
-## jass.conf
+# 第 7 章 JAAS 与 Java GSS-API 教程
+
+# jass.conf
 
 ```conf
 /** JaasAcn 和 JaasAcn 应用程序的登录配置 **/
@@ -13964,20 +13999,19 @@ JaasSample {
 
 
 
-# 第 7 章：JAAS 与 GSS-API 教程
-
-## jaassac.policy
+# jaassac.policy
 
 ```java
 /**
  * JaasAcn 应用程序的 Java 访问控制策略
  */
+
 grant codebase "file:/JaasAcn.jar" {
     permission javax.security.auth.AuthPermission "createLoginContext.JaasSample";
 };
 ```
 
-## JaasAcn.java
+# JaasAcn.java
 
 ```java
 import javax.security.auth.Subject;
@@ -13987,61 +14021,65 @@ import com.sun.security.auth.callback.TextCallbackHandler;
 import java.security.PrivilegedAction;
 ```
 
+/**
+ * 此 Jaas 应用程序尝试验证用户身份
+ * 并报告验证是否成功。
+ * 如果成功，它将设置在 `SampleAction`
+ * `run` 方法中执行后续代码，该方法将
+ * 对安全敏感操作进行访问控制检查，或者
+ * 根据运行代码的用户进行检查。
+ */
+
 ```java
 public class JaasAcn {
-    /**
-     * 此 Jaas 应用程序尝试验证用户身份并报告验证是否成功。
-     * 如果成功，它将设置在 SampleAction run 方法中执行后续代码，该方法将对安全敏感操作进行访问控制检查，或者根据运行代码的用户进行检查。
-     */
-    public static void main(String[] args) {
-        LoginContext lc = null;
-        try {
-            lc = new LoginContext("JaasSample", new TextCallbackHandler());
-        } catch (LoginException le) {
-            System.err.println("无法创建 LoginContext. " + le.getMessage());
-            System.exit(-1);
-        } catch (SecurityException se) {
-            System.err.println("无法创建 LoginContext. " + se.getMessage());
-            System.exit(-1);
-        }
-
-        try {
-            // 尝试身份验证
-            lc.login();
-        } catch (LoginException le) {
-            System.err.println("身份验证失败!");
-            System.err.println(" " + le.getMessage());
-            System.exit(-1);
-        }
-
-        System.out.println("身份验证成功！");
-
-        // 现在以认证后的 Subject 执行 SampleAction
-        Subject mySubject = lc.getSubject();
-        PrivilegedAction action = new SampleAction();
-        Subject.doAsPrivileged(mySubject, action, null);
-    }
-}
 ```
 
-## SampleAction.java
+```java
+} catch (SecurityException se) {
+    System.err.println("无法创建 LoginContext. " + se.getMessage());
+    System.exit(-1);
+}
+
+try {
+    // 尝试身份验证
+    lc.login();
+} catch (LoginException le) {
+    System.err.println("身份验证失败!");
+    System.err.println(" " + le.getMessage());
+    System.exit(-1);
+}
+
+System.out.println("身份验证成功！");
+
+// 现在以认证后的 Subject 执行 SampleAction
+Subject mySubject = lc.getSubject();
+PrivilegedAction action = new SampleAction();
+Subject.doAsPrivileged(mySubject, action, null);
+```
+
+# SampleAction.java
 
 ```java
 import java.io.File;
 import java.security.PrivilegedAction;
 
 /**
- * 这是一个 PrivilegedAction，与 Jaas 类使用。
+ * 这是一个 PrivilegedAction，
+ * 与 Jaas 类使用。
  */
+
 public class SampleAction implements PrivilegedAction {
+
     /**
      * PrivilegedAction 执行以下操作：
      * - 访问 java.home
      * - 访问 user.home
      * - 访问 foo.txt
      * @return 所有情况下返回 null。
-     * @exception SecurityException 如果调用者没有执行这些操作的权限。
+     * @exception SecurityException 如果调用者
+     * 没有执行这些操作的权限。
      */
+
     public Object run() {
         System.out.println("java.home 属性为: " + System.getProperty("java.home"));
         File f = new File("foo.txt");
@@ -14052,7 +14090,9 @@ public class SampleAction implements PrivilegedAction {
 }
 ```
 
-## jaass.policy
+# 第 7 章 JAAS 与 GSS-API 教程
+
+# jaass.policy
 
 ```java
 /* JaasAcn 应用程序的 Java 访问控制策略 */
@@ -14062,7 +14102,8 @@ grant codebase "file:./JaasAcn.jar" {
     permission javax.security.auth.AuthPermission "doAsPrivileged";
 }
 
-/** SampleAction 类代码库访问控制策略，由 JaasAcn 实例化 **/
+/** SampleAction 类代码库访问控制策略 **/
+/** 由 JaasAcn 实例化 **/
 grant codebase "file:./SampleAction.jar" {
     permission javax.security.auth.KerberosPrincipal "user_name@your_realm";
     permission java.util.PropertyPermission "java.home", "read";
@@ -14071,7 +14112,7 @@ grant codebase "file:./SampleAction.jar" {
 }
 ```
 
-## Login.java
+# Login.java
 
 ```java
 import java.io.*;
@@ -14084,20 +14125,29 @@ import javax.security.auth.Subject;
 import com.sun.security.auth.callback.TextCallbackHandler;
 
 /**
- * 此类验证 Subject，然后以该 Subject 执行指定的应用程序。
+ * 此类验证 Subject，然后
+ * 以该 Subject 执行指定的应用程序。
  * 使用此类时，java 解释器通常如下调用它：
+ *
  * <pre>
  * % java java.security.manager \
  *   Login \
  *   applicationClass [applicationClass_args]
  * </pre>
- * applicationClass 代表要作为认证后的 Subject 执行的应用程序，
- * applicationClass_args 是传递给 applicationClass 的参数。
- * <p>
- * 为了执行身份验证，Login 使用 LoginContext，它依赖 Configuration 来确定执行实际身份验证的模块。
- * Configuration 的位置取决于每个 Configuration 实现。
- * 默认的 Configuration 实现 com.sun.security.auth.login.Config 允许（以及其他方式）通过 java.security.auth.login.Config 属性指定 Configuration 的位置。
+ *
+ * <p> `applicationClass` 代表要作为认证后的 Subject 执行的应用程序，
+ * `applicationClass_args` 是传递给
+ * `applicationClass` 的参数。
+ *
+ * <p> 为了执行身份验证，Login 使用
+ * `LoginContext` 它依赖 Configuration 来确定
+ * 执行实际身份验证的模块。Configuration 的位置
+ * 取决于每个 Configuration 实现
+ * 默认的 Configuration 实现
+ * `com.sun.security.auth.login.Config` 允许（以及其他方式）通过
+ * `java.security.auth.login.Config` 属性指定 Configuration 的位置。
  * 因此，Login 类也可以这样调用：
+ *
  * <pre>
  * % java java.security.manager \
  *   -Djava.security.auth.login.config=configuration_url \
@@ -14105,15 +14155,30 @@ import com.sun.security.auth.callback.TextCallbackHandler;
  *   your_application_class [your_application_class_args]
  * </pre>
  */
+
 public class Login {
-    /**
-     * 使用提供的 applicationclassname 作为登录 Configuration 的索引实例化 LoginContext。
-     * 验证索引 Subject（允许重试三次）并调用 Subject.doAsPrivileged，
-     * 使用认证后的 Subject 和一个 PrivilegedExceptionAction。
-     * PrivilegedExceptionAction 加载提供的应用程序类，然后调用其 public static main 方法，并传递应用程序参数。
-     * @param args 代码的参数。第一个参数必须是验证完成后要执行的应用程序的类名，后续参数是传递给应用程序的公共静态 main() 方法的参数。
+
+    /*
+     * 使用提供的 applicationclassname 作为登录
+     * Configuration 的索引实例化 LoginContext。验证索引 Subject
+     * （允许重试三次）并调用
+     * Subject.doAsPrivileged
+     * 使用认证后的 Subject 和一个
+     * PrivilegedExceptionAction。
+     * PrivilegedExceptionAction
+     * 加载提供的应用程序类，然后调用
+     * 其 public static main 方法，并传递
+     * 应用程序参数。
+     *
+     * <p>
+     * @param args 代码的参数。第一个
+     * 参数必须是验证完成后要执行的应用程序的类名，
+     * 后续参数是传递给
+     * 应用程序的公共静态 `main()` 方法。
      */
+
     public static void main(String[] args) {
+
         // 检查应用程序的主类
         if (args == null || args.length == 0) {
             System.err.println("无效参数: " + "未提供应用程序类名.");
@@ -14121,6 +14186,7 @@ public class Login {
         }
 
         LoginContext lc = null;
+
         try {
             lc = new LoginContext(args[0], new TextCallbackHandler());
         } catch (LoginException le) {
@@ -14131,13 +14197,14 @@ public class Login {
             System.exit(-1);
         }
 
-        // 用户有 3 次身份验证通过的机会
+        // 用户有 3 次身份身份验证通过的机会
         int i;
         for (i = 0; i < 3; i++) {
             try {
                 // 尝试身份验证
                 lc.login();
-                // 如果返回时没有异常，说明身份验证成功
+                // 如果返回时没有异常，说明身份验证
+                // 成功
                 break;
             } catch (AccountExpiredException aee) {
                 System.err.println("您的账户已过期。" + "请通知您的管理员.");
@@ -14176,7 +14243,7 @@ public class Login {
         System.exit(0);
     }
 
-    static class MyAction implements java.security.PrivilegedExceptionAction {
+    class MyAction implements java.security.PrivilegedExceptionAction {
         String[] origArgs;
 
         public MyAction(String[] origArgs) {
@@ -14186,11 +14253,13 @@ public class Login {
         public Object run() throws Exception {
             // 获取 ContextLoader
             ClassLoader cl = Thread.currentThread().getContextClassLoader();
+
             try {
                 // 获取应用程序类的 main 方法
-                Class<?> c = Class.forName(origArgs[0], true, cl);
-                Class<?>[] PARAMS = { String[].class }; // 固定参数类型
+                Class c = Class.forName(origArgs[0], true, cl);
+                Class[] PARAMS = { String[].class }; // 固定参数类型
                 java.lang.reflect.Method mainMethod = c.getMethod("main", PARAMS);
+
                 // 使用剩余参数调用 main 方法
                 String[] appArgs = new String[origArgs.length - 1];
                 System.arraycopy(origArgs, 1, appArgs, 0, origArgs.length - 1);
@@ -14199,6 +14268,7 @@ public class Login {
             } catch (Exception e) {
                 throw new java.security.PrivilegedActionException(e);
             }
+
             // 成功完成
             return null;
         }
@@ -14206,12 +14276,13 @@ public class Login {
 }
 ```
 
-## Sample.java
+# Sample.java
 
 ```java
 import java.io.File;
 
 public class Sample {
+
     /**
      * 此示例类执行以下操作：
      * <ul>
@@ -14221,10 +14292,12 @@ public class Sample {
      * </ul>
      * @exception SecurityException 如果调用者没有权限执行这些操作中的任何一个。
      */
+
     public static void main(String[] args) throws SecurityException {
         // 如果有任何需要读取的参数，我们在这里处理。
         System.out.println("java.home 属性值为: " + System.getProperty("java.home"));
         System.out.println("user.home 属性值为: " + System.getProperty("user.home"));
+
         File f = new File("foo.txt");
         if (!f.exists()) {
             System.out.println("当前目录下不存在 foo.txt.");
@@ -14233,21 +14306,23 @@ public class Sample {
 }
 ```
 
-## Sample.conf
+# Sample.conf
 
 ```conf
 /**
  * Sample 应用程序的登录配置
  */
+
 Sample {
     com.sun.security.auth.module.K5LoginModule required;
 }
 ```
 
-## sample.policy
+# sample.policy
 
 ```policy
 /** Sample 应用程序的访问控制策略 */
+
 grant codebase "file:./Login.jar" {
     permission java.security.AllPermission;
 };
@@ -14260,12 +14335,13 @@ grant codebase "file:./Sample.jar",
 };
 ```
 
-## cs.conf
+# cs.conf
 
 ```conf
 /**
  * JAAS 的登录配置
  */
+
 SampleClient {
     com.sun.security.auth.module.K5LoginModule required;
 };
@@ -14279,23 +14355,8 @@ SampleServer {
 
 # JAAS 简介与 Java GSS-API 教程
 
-## 登录配置
+## client.policy
 
-### jaasLogin.conf
-```java
-SampleClient {
-  com.sun.security.auth.module.Krb5LoginModule required;
-};
-
-SampleServer {
-  com.sun.security.auth.module.Krb5LoginModule required storeKey=true
-  principal="service_principal@your_realm";
-};
-```
-
-## 策略文件
-
-### client.policy
 ```policy
 grant codebase "file:./Login.jar" {
     permission java.security.AllPermission;
@@ -14313,7 +14374,8 @@ permission javax.security.auth.kerberos.ServicePermission
 };
 ```
 
-### server.policy
+## server.policy
+
 ```policy
 grant CodeBase "file:./Login.jar" {
     permission java.security.AllPermission;
@@ -14323,38 +14385,13 @@ grant CodeBase "file:./Sample.jar",
     Principal javax.security.auth.kerberos.KerberosPrincipal
     "user_name@your_realm" {
     permission java.net.SocketPermission "*", "connect";
-
     permission javax.security.auth.kerberos.ServicePermission
     "service_principal@your_realm", "initiate";
 };
 ```
 
-### serverpolicy
-```java
-grant CodeBase "file:/Login.jar" {
-    permission java.security.AllPermission;
-}
+## SampleServerImp.java
 
-grant CodeBase "file:./ServerImp.jar" {
-    Principal javax.security.auth.kerberos.KerberosPrincipal
-    "service_principal@your_realm" {
-    permission java.net.SocketPermission "*", "accept";
-    permission java.security.auth.ServicePermission
-    "service_principal@your_realm", "accept";
-    }
-}
-
-grant CodeBase "file:./ReadFile.jar" {
-    Principal javax.security.auth.kerberos.KerberosPrincipal
-    "your_user_name@your_realm" {
-    permission java.io.FilePermission "data/your_user_name_info.txt", "read";
-    }
-}
-```
-
-## 服务端实现
-
-### SampleServerImp.java
 ```java
 import org.ietf.jgss.*;
 import java.io.*;
@@ -14380,25 +14417,21 @@ public class SampleServerImp {
             System.err.println("用法: java <options> Login SampleServer\n<localPort>");
             System.exit(-1);
         }
-
         int localPort = Integer.parseInt(args[0]);
         ServerSocket ss = new ServerSocket(localPort);
         GSSManager manager = GSSManager.getInstance();
-
         while (true) {
             System.out.println("等待输入连接...");
             Socket socket = ss.accept();
             DataInputStream inStream = new DataInputStream(socket.getInputStream());
             DataOutputStream outStream = new DataOutputStream(socket.getOutputStream());
             System.out.println("来自客户端 " + socket.getInetAddress());
-
             /*
              * 创建一个 GSSContext 来接收来自客户端的请求。
              * 对于的服务器凭据使用 null。这告诉底层机制
              * 使用它可用的任何可以接受此连接的凭据。
              */
             GSSContext context = manager.createContext((GSSCredential)null);
-
             // 执行上下文建立循环
             byte[] token = null;
             while (!context.isEstablished()) {
@@ -14406,8 +14439,8 @@ public class SampleServerImp {
                 System.out.println("将读取长度为 " + token.length + " 的输入 token 用于 acceptSecContext 处理");
                 inStream.readFully(token);
                 token = context.acceptSecContext(token, 0, token.length);
-
-                // 如果生成了 token，则向对方发送 token acceptSecContext
+                // 如果生成了 token，则向对方发送 token
+                // acceptSecContext
                 if (token != null) {
                     System.out.println("将发送长度为 " + token.length + " from acceptSecContext");
                     outStream.writeInt(token.length);
@@ -14415,27 +14448,29 @@ public class SampleServerImp {
                     outStream.flush();
                 }
             }
-
             System.out.println("Context Established! ");
             System.out.println("Client is " + context.getSrcName());
             System.out.println("Server is " + context.getTargetName());
-
             /*
-             * 如果没有进行双向认证，则只有客户端通过了身份验证。
-             * 否则，客户端和服务器双方都进行了身份验证。
+             * 如果没有进行双向认证，则
+             * 只有客户端通过了身份验证。
+             * 否则，客户端和服务器双方
+             * 都进行了身份验证。
              */
             if (context.getMutualAuthState()) {
                 System.out.println("Mutual authentication took place! ");
             }
-
             /*
-             * 创建一个 MessageProp，unwrap 将返回关于保护质量（Quality-of-Protection）的信息，
-             * 这应用于封装的令牌，无论其是否加密等。由于初始 MessageProp 值会被忽略，只需将其设为默认值 0 和 false。
+             * 创建一个 MessageProp，unwrap 将返回
+             * 关于关于保护质量（Quality-of-Protection）的信息，
+             * 这应用于封装的令牌，无论其是否
+             * 加密等。由于初始 MessageProp 值
+             * 会被忽略，只需将其设为默认值 0 和
              */
             MessageProp prop = new MessageProp(0, false);
-
             /*
-             * 读取令牌。这使用了与建立上下文时相同的令牌字节数组。
+             * 读取令牌。这使用了与建立上下文
+             * 时相同的令牌字节数组。
              */
             token = new byte[inStream.read()];
             System.out.println("Will read token of size " + token.length);
@@ -14444,10 +14479,11 @@ public class SampleServerImp {
             String str = new String(bytes);
             System.out.println("Received data \"" + str + "\" of length " + str.length());
             System.out.println("Confidentiality applied: " + prop.getPrivacy());
-
             /*
              * 生成一个 MIC（消息完整性码）并发送给客户端。
-             * 这仅用于演示目的。无论使用了什么机密性（加密），传入的封装消息的完整性都能得到保证。
+             * 这仅用于演示目的。无论使用了什么
+             * 机密性（加密），传入的封装消息的
+             * 完整性都能得到保证。
              */
             // 首先将 MessageProp 的 QOF 重置为 0，以确保应用默认的保护质量。
             prop.setQOP(0);
@@ -14456,31 +14492,33 @@ public class SampleServerImp {
             outStream.writeInt(token.length);
             outStream.write(token);
             outStream.flush();
-
             /*
              * 身份模拟客户端
              */
             System.out.println("Impersonating client.");
-
             /*
-             * 从客户端 GSSName 中提取 KerberosPrincipal 并将其填充到新 Subject 的主体集（principal set）中。
-             * 对凭据传入 null。如果我们传入的是 GSCredential 而不是 null，那么生成的 Subject 的私有凭据集将被填充。
+             * 从客户端 GSSName 中提取 KerberosPrincipal
+             * 并将其填充到新 Subject 的主体集（principal set）
+             * 中。对凭据传入 null。如果我们传入的是 GSCredential
+             * 而不是 null，那么生成的 Subject 的私有
+             * 凭据集将被填充。
              */
             GSSName clientGSSName = context.getSrcName();
             System.out.println("clientGSSName: " + clientGSSName);
             Subject client = com.sun.security.jgss.GSSUtil.createSubject(clientGSSName, null);
-
             /*
-             * 构建一个仅供客户端使用的读取文件的操作
+             * 构建一个仅供客户端使用的
+             * 读取文件的操作
              */
             PrivilegedAction readFile = new ReadFileAction(clientGSSName.toString());
-
             /*
-             * 通过 doAsPrivileged 调用该操作。这允许作为客户端主体执行该操作，并且以特权运行该代码。
-             * 这意味着在此点之后发生的任何权限检查都仅适用于作为客户端运行的代码。
+             * 通过 doAsPrivileged 调用该操作。这允许
+             * 作为客户端主体执行该操作，并且以特权
+             * 运行该代码。这意味着在此点之后发生的
+             * 任何权限检查都仅适用于作为客户端
+             * 运行的代码。
              */
             Subject.doAsPrivileged(client, readFile, null);
-
             /**
              * 清理
              */
@@ -14492,41 +14530,86 @@ public class SampleServerImp {
 }
 ```
 
-## 文件读取操作
+## ReadFileAction.java
 
-### ReadFileAction.java
 ```java
 import java.security.PrivilegedAction;
 import java.io.*;
 
 /**
- * 此类实现了 PrivilegedAction 接口，用于演示对属于客户端的文件的读取。此代码将由服务器在模拟客户端主体时执行。
+ * 此类实现了 PrivilegedAction 接口，用于演示
+ * 对属于客户端的文件的读取。此代码将
+ * 由服务器在模拟客户端主体时执行。
  */
 public class ReadFileAction implements PrivilegedAction {
     private String fileName;
 
     /**
      * 一个 ReadFileAction 实例。
-     * @param kerberosPrincipalName 拥有要读取文件的 Kerberos 主体名称。文件名根据主体的名称构造。
+     * @param kerberosPrincipalName 拥有要读取文件的
+     * Kerberos 主体名称。文件名根据主体的
+     * 名称构造。
      */
     public ReadFileAction(String kerberosPrincipalName) {
         /**
-         * 从名称中分离出领域（realm）组件并使用剩余部分构造文件名。
-         * 如果主体名称为 "joe$REAL"，则要读取的文件将是 "data/joe_info.txt"。
-         * 在 Windows 下，路径分隔符 "/" 可能是 "\"。
+         * 从名称中分离出领域（realm）组件并使用剩余部分
+         * 构造文件名。如果主体名称为
+         * "joe@REAL"，则要读取的文件将是
+         * "data/joe_info.txt"。在 Windows 下，路径分隔符
+         * "/" 可能是 "\"。
          */
         int realmSeparatorPos = kerberosPrincipalName.lastIndexOf('@');
-        fileName = "data" + File.separator + kerberosPrincipalName.substring(0, realmSeparatorPos) + "_info.txt";
+        fileName = "data" + File.separator
+            + kerberosPrincipalName.substring(0, realmSeparatorPos)
+            + "_info.txt";
     }
 
     /**
-     * 执行实际的文件读取。它显示文件中包含的文本。
+     * 执行实际的文件读取。它显示文件
+     * 中包含的文本。
      */
     public Object run() {
         System.out.println("===================");
         // ... 读取文件的实现 ...
         return null;
     }
+}
+```
+
+## server.policy (补充)
+
+```policy
+grant CodeBase "file:/Login.jar" {
+    permission java.security.AllPermission;
+}
+
+grant CodeBase "file:./ServerImp.jar" {
+    Principal javax.security.auth.kerberos.KerberosPrincipal
+    "service_principal@your_realm" {
+    permission java.net.SocketPermission "*", "accept";
+    permission javax.security.auth.ServicePermission
+    "service_principal@your_realm", "accept";
+    }
+}
+
+grant CodeBase "file:./ReadFile.jar" {
+    Principal javax.security.auth.kerberos.KerberosPrincipal
+    "your_user_name@your_realm" {
+    permission java.io.FilePermission "data/your_user_name_info.txt", "read";
+    }
+}
+```
+
+## jaasLogin.conf
+
+```properties
+SampleClient {
+  com.sun.security.auth.module.Krb5LoginModule required;
+}
+
+SampleServer {
+  com.sun.security.auth.module.Krb5LoginModule required storeKey=true
+  principal="service_principal@your_realm";
 }
 ```
 
@@ -14573,13 +14656,10 @@ GSS-API 要求从当前 Subject 的公共或私有凭据集中获取凭据，如
 
 - 示例代码应在启用原生 GSS-API 的情况下调用。主体名称 `host@foo.sample.com` 和 `host@foo2.sample.com` 是占位符，应替换为 Kerberos 数据库中的实际名称。
 
-+ 当安装安全管理器时，某些 Java GSS-API 调用需要授予权限。请查阅以下类的 Java 文档以获取更多详细信息：
+- 当安装安全管理器时，某些 Java GSS-API 调用需要授予权限。请查阅以下类的 Java 文档以获取更多详细信息：
 
-```java
-javax.security.auth.kerberos.ServicePermission
-
-javax.security.auth.kerberos.DelegationPermission
-```
+  - `javax.security.auth.kerberos.ServicePermission`
+  - `javax.security.auth.kerberos.DelegationPermission`
 
 - 为了简化示例，对端之间的令牌交换由两个伪方法表示：`SEND_TOKEN(byte[])` 和 `READ_TOKEN()`。它们的实际实现取决于特定应用程序，因此在此处不再显示。
 
@@ -14593,12 +14673,9 @@ javax.security.auth.kerberos.DelegationPermission
  */
 
 ctx.requestContext(true);
-
 ctx.requestMutualAuth(true);
-
 byte[] inToken = new byte[0];
 byte[] outToken = null;
-
 if (ctx.isInitiator()) {
     while (!ctx.isEstablished()) {
         // 注意：nextContext(...) 忽略了参数
@@ -14794,10 +14871,12 @@ try {
 // 现在以已验证的 Subject 身份执行 ClientAction
 Subject mySubject = lc.getSubject();
 PrivilegedAction action = new ClientAction();
-Subject.doAs(mySubject, action);
+Subject.doAS(mySubject, action);
 ```
 
 `ClientAction` 可以是允许特定值的已验证 Kerberos Principal 执行的操作。
+
+以下是服务器示例代码。它与示例 7-3 类似，不同在于应用程序入口名称和 `PrivilegedAction`。
 
 ## 示例 7-4 代码
 
@@ -14815,7 +14894,7 @@ try {
 // 现在尝试作为已验证的 Subject 执行 ServerAction
 Subject mySubject = lc.getSubject();
 PrivilegedAction action = new ServerAction();
-Subject.doAs(mySubject, action);
+Subject.doAS(mySubject, action);
 ```
 
 ## Kerberos 类
@@ -14836,11 +14915,13 @@ Subject.doAs(mySubject, action);
 
 IETF 主要定义了两种标准安全机制：Kerberos V5 和简单公钥机制 (SPKM)。
 
-该 API 的设计使得一个实现可以同时支持多种机制，赋予应用程序在运行时选择其中一种的能力。然而，与其通信的客户端应用程序和服务器应用程序必须使用相同的安全机制。图 7-1 说明了这一点。它显示了一个使用 GSS-API 进行安全通信的客户端应用程序。GSS 框架允许此应用程序支持多种安全机制（在本例中为 Kerberos V5 和 SPKM）。一旦 GSS-API 为客户端或服务器应用程序协商好安全机制（在本例中为 Kerberos V5），另一端必须使用相同的。
+该 API 的设计使得一个实现可以同时支持多种机制，赋予应用程序在运行时选择其中一种的能力。然而，一个与其通信的客户端应用程序和服务器应用程序必须使用相同的安全机制。图 7-1 说明了这一点。它显示了一个使用 GSS-API 进行安全通信的客户端应用程序。GSS 框架允许此应用程序支持多种安全机制（在本例中为 Kerberos V5 和 SPKM）。一旦 GSS-API 为客户端或服务器应用程序协商好安全机制（在本例中为 Kerberos V5），另一端必须使用相同的。
 
-### 图 7-1 多机制 GSS-API 实现
+## 图 7-1 多机制 GSS-API 实现
 
-机制通过 IANA 注册的唯一对象标识符 (OID) 进行标识。例如，Kerberos V5 机制由 OID `iso(1) member-body(2) United States(840) mit(113554) infos(1) gssapi(2) kr5(2)` 标识。
+![](img/e26375bcfe04cf1374fe3293bdab5076_529_0.png)
+
+机制通过 IANA 注册的唯一对象标识符 (OID) 进行标识。例如，Kerberos V5 机制由 OID `[iso(1) member-body(2) United States(840) mit(113554) infos(1) gssapi(2) kr5(2)]` 标识。
 
 API 的另一个特性是它是基于令牌的，即对 API 的调用生成不透明令牌，应用程序必须将其传输给其对端。这使得 API 与传输层无关。
 
@@ -14889,7 +14970,7 @@ throws GSSException
 服务器使用以下调用：
 
 ```java
-byte[] GSSContext.acceptSecContext(byte[] inToken,
+byte[] acceptSecContext(byte[] inToken,
     int offset,
     int len)
 throws GSSException
@@ -14905,7 +14986,7 @@ throws GSSException
 
 请注意，当在客户端侧初始化 `GSSContext` 时，可以清楚地知道需要使用什么机制。GSS-API 框架可以包含来自相应机制提供者的上下文实现。对 `GSSContext` 对象的所有调用都委托给该机制的上下文实现。在服务器侧，在客户端的第一个令牌到达之前，该机制不会被使用。
 
-这里有一个显示应用程序客户端如何编码的类。这是在“使用 Java 模块的 Kerberos 客户端”节的示例 7-3 中，使用 `doAs` 方法执行的 `ClientAction` 类：
+这里有一个显示应用程序客户端如何编码的类。这是在“使用 Java 模块的 Kerberos 客户端”节的示例 7-3 中，使用 `doAS` 方法执行的 `ClientAction` 类：
 
 ## 示例 7-5 使用 Java GSS-API 的示例客户端
 
@@ -14973,9 +15054,8 @@ class ServerAction implements PrivilegedAction {
             GSSCredential serverCreds =
                 manager.createCredential(serverName,
                     83600,
-                    desMechs, GSSCredential.ACCEPT_ONLY);
+                    krb5Oid, GSSCredential.ACCEPT_ONLY);
             GSSContext secContext = manager.createContext(serverCreds);
-            secContext.requestMutualAuth(true);
 
             // 第一个输入令牌被忽略
             byte[] inToken = new byte[0];
@@ -15035,7 +15115,7 @@ throws GSSException
 
 Java GSS-API 允许客户端将其凭据委托给服务器，以便服务器代表客户端启动其他安全上下文。此功能对于多层环境中的单点登录非常有用。图 7-2 展示了这一点。
 
-## 图 7-2 凭据委托
+**图 7-2 凭据委托**
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_536_0)
 
@@ -15063,7 +15143,7 @@ MS-SFU 指微软 Kerberos 5 扩展，它允许服务代表客户端获取 Kerber
 
 例如，如果客户端使用身份验证登录到 Web 服务器，那么没有 Kerberos 凭据可以进行委托，也无法进行正常的步进式 Kerberos 5 认证。然而，由于 MS-SFU 定义了“用户服务”（S4U2self）扩展，客户端可以在不提供客户端 Kerberos 凭据的情况下代表客户端访问后端，在这种情况下，MS-SFU 可以提供身份验证。
 
-## 图 7-3 使用 S4U2self 的受限委托
+**图 7-3 使用 S4U2self 的受限委托**
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_537_0.png)
 
@@ -15071,7 +15151,7 @@ MS-SFU 指微软 Kerberos 5 扩展，它允许服务代表客户端获取 Kerber
 
 相比之下，使用 MS-SFU 委托（通过 S4U2proxy 实现），管理员可以精确控制特定服务可以代表客户端访问的服务。图 7-4 说明了这一点。
 
-## 图 7-4 使用 S4U2proxy 的受限委托
+**图 7-4 使用 S4U2proxy 的受限委托**
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_537_1.png)
 
@@ -15092,7 +15172,7 @@ MS-SFU 指微软 Kerberos 5 扩展，它允许服务代表客户端获取 Kerber
 
 > **注意**：`Ker5LoginModule` 可以在凭据缓存（无论是 MITkrb5 风格的凭据缓存 ccache 文件，还是 Windows 本地安全机构 LSA 等原生服务）内部查找初始 TGT，并为拥有 TGT 的主体创建凭据。此外，如果凭据缓存是包含代理模拟密钥的 ccache 文件（参见《凭据缓存格式》），客户端可以在不提供客户端 Kerberos 凭据的情况下代表客户端访问后端，在这种情况下，MS-SFU 可以提供身份验证。
 
-## 图 7-3 使用 S4U2self 的受限委托
+**图 7-3 使用 S4U2self 的受限委托**
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_537_0.png)
 
@@ -15112,7 +15192,7 @@ Java GSS-API 机制默认模型期望从 `Subject` 获取凭据。在某些情�
 
 # 安全风险
 
-单点登录的便利也带来了新的风险。如果恶意用户访问了你无人看守的桌面并从那里以你的身份启动 Applet 会发生什么？如果恶意代理代表你访问你不应访问的服务会发生什么？
+单点登录的便利也带来了新的风险。如果恶意用户访问了你无人看管的桌面并从那里以你的身份启动 Applet 会发生什么？如果恶意代理代表你访问你不应访问的服务会发生什么？
 
 对于前者，我们别无办法只能警告你不要离开锁定的工作站！对于后者，我们设置了许多授权检查。
 
@@ -15148,9 +15228,9 @@ ServicePermission("nfs/bar.example.com@EXAMPLE.COM", "accept");
 
 ## 上下文建立
 
-具有访问特定服务器（如 LDAP 服务器）权限的 applet 不得去访问不同的服务器（如 FTP 服务器）。否则，applet 可能会在 `SocketPermission` 的帮助下被限制这样做。然而，可以使用 `ServicePermission` 限制其使用您的身份进行身份验证，即使网络连接是允许的。
+具有访问特定服务器（如 LDAP 服务器）权限的 applet 不得去访问不同的服务器（如 FTP 服务器）。否则，applet 可能会在 `SocketPermission` 的帮助下被限制这样做。然而，可以使用 `ServicePermission` 限制其使用您的身份进行身份验证，即使网络连接是允许允许的。
 
-当使用 Kerberos 机制提供者启动上下文建立时，它会检查 `ServicePermission`：
+当使用 Kerberos 机制提供者启动上下文建立时，它会检查 `ServicePermission:`：
 
 ```
 ServicePermission("ftp@EXAMPLE.COM", "initiate");
@@ -15160,7 +15240,7 @@ ServicePermission("ftp@EXAMPLE.COM", "initiate");
 
 使用此权限对服务主体提供有限访问是危险的。下载的代码被允许与其来源主机进行通信。恶意的 applet 可能会返回初始 GSS-API 输出令牌，该令牌包含一个用目标服务主体长期密钥加密的 `KerberosTicket`，从而使其暴露于离线字典攻击。因此，不建议向从不可信站点下载的代码授予任何 "initiate" ServicePermission。
 
-在服务器端，使用密钥接受传入的安全上下文建立的权限在凭据身份验证期间已经检查过了。因此，在上下文建立阶段不进行检查。
+在服务器端，使用密钥接受传入的安全上下文建立的权限在在凭据身份验证期间已经检查过了。因此，在上下文建立阶段不进行检查。
 
 ## 凭据委托
 
@@ -15208,8 +15288,8 @@ Java 丰富的 API 和功能用于开发安全的 Java 应用程序和服务。�
 2. 设置密钥发行中心 (KDC) 并启动 Kerberos 服务器。
 3. 在您的客户端计算机上设置 Kerberos 配置。
 4. 设置 JDK 环境：
-   * 设置 `JAVA_HOME` 环境变量指向 JDK 安装目录。
-   * 将 `%JAVA_HOME%\bin` (Windows) 或 `$JAVA_HOME/bin` (Linux 或 macOS) 添加到 `PATH` 环境变量中。
+   - 设置 `JAVA_HOME` 环境变量指向 JDK 安装目录。
+   - 将 `%JAVA_HOME%\bin` (Windows) 或 `$JAVA_HOME/bin` (Linux 或 macOS) 添加到 `PATH` 环境变量中。
 
 ## 练习
 
@@ -15295,7 +15375,7 @@ JAAS 为 Java 平台提供了一个标准的插件式认证框架 (PAM)。应用
 
 ### 下一步骤
 
-继续进行 `练习 2：为 Kerberos 认证配置 JAAS`，学习如何配置示例应用程序使用 Kerberos 进行认证。
+继续进行 **练习 2：为 Kerberos 认证配置 JAAS**，学习如何配置示例应用程序使用 Kerberos 进行认证。
 
 ## 练习 2：为 Kerberos 认证配置 JAAS
 
@@ -15307,7 +15387,7 @@ JAAS 为 Java 平台提供了一个标准的插件式认证框架 (PAM)。应用
 
 Kerberos 是一种定义在 RFC 4120 中的用于受信第三方认证的 Internet 协议。它目前已应用于大多数现代计算平台，包括 Windows 和 Linux。
 
-Kerberos 架构围绕一个名为密钥发行中心（KDC）的认证服务展开。Kerberos 环境中的用户和服务被称为“主体”（principals）；每个主体都与 KDC 共享一个密钥（如密码）。主体通过向 KDC 证明其知道共享密钥来完成 Kerberos 认证。如果认证成功，KDC 会颁发票据授予票据（TGT）。当主体随后想要对网络上的某个服务进行认证（即作为该服务的“客户端”）时，它将 TGT 交给 KDC 以获取与该服务通信的服务票据（service ticket）。服务票据不仅识别了客户端和服务主体的身份，还建立了安全的通信。要对服务进行认证，客户端将票据发送给服务。在这一架构中，对于客户端而言，“登录 Kerberos” 意味着获取 TGT 并将其放入 Subject 中。对于服务而言，“登录 Kerberos”意味着获取与服务通信的服务票据。
+Kerberos 架构围绕一个名为密钥发行中心（KDC）的认证服务展开。Kerberos 环境中的用户和服务被称为“主体”（principals）；每个主体都与 KDC 共享一个密钥（如密码）。主体通过向 KDC 证明其知道共享密钥来完成 Kerberos 认证。如果认证成功，KDC 会颁发票据令牌（TGT）。当主体随后想要对网络上的某个服务进行认证（即作为该服务的“客户端”）时，它将 TGT 交给 KDC 以获取与该服务通信的服务票据（service ticket）。服务票据不仅识别了客户端和服务主体的身份，还建立了安全的通信。要对服务进行认证，客户端将票据发送给服务。在这一架构中，对于客户端而言，“登录 Kerberos” 意味着获取 TGT 并将其放入 Subject 中。对于服务而言，“登录 Kerberos”意味着获取与服务通信的服务票据。
 
 ### 本练习 JAAS 背景
 
@@ -15318,15 +15398,13 @@ Kerberos 架构围绕一个名为密钥发行中心（KDC）的认证服务展�
 - Java 认证和授权服务 (JAAS) 开发者指南
 - Kerberos 网络认证服务 (v5)
 - 附录 B：JAAS 配置
-- 登录模块文档：com.sun.security.auth
+- 登录模块文档：`com.sun.security.auth`
 - JAAS 简介
 
 ### 遵循步骤
 
 1. 检查 `jaas5.conf` 配置文件。该文件包含两个条目，分别名为 `client` 和 `server`。`client` 条目指示 `LoginContext` 使用 `com.sun.security.auth.Krb5LoginModule`。`server` 条目指示 `LoginContext` 使用相同的登录模块，并从 `sample.keytab` 获取密钥。
-
 2. 执行 `hostname` 命令确定你的机器主机名。
-
 3. 编辑此文件，将 principal 改为你的主机名。例如，如果你的主机名是 `jehol-001`，配置文件中的行应该是：
 
 ```
@@ -15392,18 +15470,16 @@ Performing secure action...
 
 - JAAS 简介与 Java GSS-API 教程
 - 通用安全服务 API 版本 2：Java 绑定 (RFC 2853)
-- Java GSSDoc 文档：org.ietf.org.gss
+- Java GSSDoc 文档：`org.ietf.jgss`
 
 ### 本练习概述
 
-本练习是一个客户端-服务器应用程序，演示了如何使用 Java GSS API 进行安全通信。客户端和服务器首先对 Kerberos 进行身份验证，如“练习 1：使用 JAAS API”所示。这会将凭据存储在主体（subject）中。随后在 `Subject.doAs` 内部执行一个执行 Java GSS 操作（以 Kerberos 作为底层的 GSS 机制）的动作。由于 Java GSS Kerberos 机制正在执行 `doAs`，它从主体中获取 Kerberos 凭据，并使用它们与对端进行身份验证并安全地交换消息。
+本练习是一个客户端-服务器应用程序，演示了如何使用 Java GSS API 进行安全通信。客户端和服务器首先对 Kerberos 进行身份验证，如“练习 1：使用 JAAS API”所示。这会将凭据存储在主体（Subject）中。随后在 `Subject.doAs` 内部执行一个执行 Java GSS 操作（以 Kerberos 作为底层的 GSS 机制）的动作。由于 Java GSS Kerberos 机制正在执行 `doAs`，它从主体中获取 Kerberos 凭据，并使用它们与对端进行身份验证并安全地交换消息。
 
 ### 需遵循的步骤
 
 1. 阅读 `GssServer.java` 代码。该代码定义了在安全主体向 KDC 完成身份验证后要执行的操作。它替换了“练习 1：使用 JAAS API”中的 `MyAction`。它首先创建一个 `GSSManager` 实例，并用它获取凭据以及创建一个 `GSSContext` 实例。它使用该上下文执行身份验证。完成身份验证后，它对来自客户端的输入进行加密，并使用已建立的安全上下文解密数据。然后它使用安全上下文加密一个包含原始输入和日期的回复，并将其发回客户端。
-
 2. 编译示例代码。
-
 3. 阅读 `GssClient.java` 代码。
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_548_0.png)
@@ -15411,7 +15487,6 @@ Performing secure action...
 这段代码片段定义了客户端主体向 KDC 完成身份验证后要执行的操作。它替换了“练习 1：使用 JAAS API”中的 `MyAction`。代码首先创建一个 `GSSManager` 实例；使用它来获取要通信服务的服务的主体名称（principal name）。完成身份验证后，它使用已建立的 `GSSContext` 加密消息并将其发送到服务器。然后它从服务器读取一个加密消息，并使用已建立的安全上下文对其进行解码。
 
 4. 编译示例代码。
-
 5. 启动新窗口并启动服务器：
 
 ```
@@ -15464,9 +15539,9 @@ Received message: Hello There! Thu May 06 12:11:15 PDT 2005
 
 ### 下一步
 
-- 进入“练习 4：使用 Java SASL API”，学习编写一个使用 Java SASL API 进行身份验证和通信的客户端/服务器应用程序。
-- 进入“练习 5：使用 Java SASL API”，学习编写一个使用 Java SASL API 进行身份验证和通信的客户端/服务器应用程序。
-- 进入“练习 6：使用 Java SASL API”，学习编写一个使用 Java SASL API 进行身份验证和通信的客户端/服务器应用程序。
+- 进入 **练习 4：使用 Java SASL API**，学习编写一个使用 Java SASL API 进行身份验证和通信的客户端/服务器应用程序。
+- 进入 **练习 5：使用 Java SASL API**，学习编写一个使用 Java SASL API 进行身份验证和通信的客户端/服务器应用程序。
+- 进入 **练习 6：使用 Java SASL API**，学习编写一个使用 Java SASL API 进行身份验证和通信的客户端/服务器应用程序。
 
 ## 练习 4：使用 Java SASL API
 
@@ -15487,20 +15562,17 @@ SASL API 提供了一个身份验证和安全协商的框架。它允许应用�
 
 ### 本练习概述
 
-本练习是一个客户端-服务器应用程序，演示了如何使用 Java GSS API 进行安全通信。客户端和服务器首先对 Kerberos 进行身份验证，如“练习 1：使用 JAAS API”所示。这会将凭据存储在主体（subject）中。随后在 `Subject.doAs` 内部执行一个执行 Java GSS 操作（以 Kerberos 作为底层的 GSS 机制）的动作。由于 Java GSS Kerberos 机制正在执行 `doAs`，它从主体中获取 Kerberos 凭据，并使用它们与对端进行身份验证并安全地交换消息。
+本练习是一个客户端-服务器应用程序，演示了如何使用 Java GSS API 进行安全通信。客户端和服务器首先对 Kerberos 进行身份验证，如“练习 1：使用 JAAS API”所示。这会将凭据存储在主体（Subject）中。随后在 `Subject.doAs` 内部执行一个执行 Java GSS 操作（以 Kerberos 作为底层的 GSS 机制）的动作。由于 Java GSS Kerberos 机制正在执行 `doAs`，它从主体中获取 Kerberos 凭据，并使用它们与对端进行身份验证并安全地交换消息。
 
 ### 需遵循的步骤
 
 1. 阅读 `GssServer.java` 代码。该代码定义了在安全主体向 KDC 完成身份验证后要执行的操作。它替换了“练习 1：使用 JAAS API”中的 `MyAction`。它首先创建一个 `GSSManager` 实例，并用它获取凭据以及创建一个 `GSSContext` 实例。它使用该上下文执行身份验证。完成身份验证后，它对来自客户端的输入进行加密，并使用已建立的安全上下文解密数据。然后它使用安全上下文加密一个包含原始输入和日期的回复，并将其发回客户端。
-
 2. 编译示例代码。
-
 3. 阅读 `GssClient.java` 代码。
 
 这段代码片段定义了客户端主体向 KDC 完成身份验证后要执行的操作。它替换了“练习 1：使用 JAAS API”中的 `MyAction`。代码首先创建一个 `GSSManager` 实例；使用它来获取要通信服务的服务的主体名称（principal name）。完成身份验证后，它使用已建立的 `GSSContext` 加密消息并将其发送到服务器。然后它从服务器读取一个加密消息，并使用已建立的安全上下文对其进行解码。
 
 4. 编译示例代码。
-
 5. 启动新窗口并启动服务器：
 
 ```
@@ -15525,7 +15597,39 @@ SASL API 提供了一个身份验证和安全协商的框架。它允许应用�
 
 ### Java 认证、安全通信与单点登录中的高级安全编程
 
-#### 运行客户端应用程序
+#### 示例输出
+
+**GSSServer 示例输出：**
+
+```
+Authenticated principal: [host/jhol-001@JLABS.COM]
+Waiting for incoming...
+Got connection from client /192.0.2.102
+Context Established!
+Client principal is test@JLABS.COM
+Server principal is host/jhol-001@JLABS.COM
+Mutual authentication took place!
+Received data "Hello There!" of length 12
+Confidentiality applied: true
+Sending: Hello There! Thu May 06 12:11:15 PDT 2005
+```
+
+**GssClient 示例输出：**
+
+```
+Kerberos password for test: change_it
+Authenticated principal: [test@JLABS.COM]
+Connected to address jhol-001/192.0.2.102
+Context Established!
+Client principal is test@JLABS.COM
+Server principal is host/jhol-001
+Mutual authentication took place!
+Sending message: Hello There!
+Will read token of size 93
+Received message: Hello There! Thu May 06 12:11:15 PDT 2005
+```
+
+#### 步骤 6：运行客户端应用程序
 
 `SallTestClient` 需要两个参数：服务名称和运行该服务的服务器名称。例如，如果服务运行在机器 `jhil-001` 上，你将输入以下内容：
 
@@ -15535,9 +15639,7 @@ SASL API 提供了一个身份验证和安全协商的框架。它允许应用�
 
 提供一个安全的密码。
 
-#### 观察输出
-
-在各自的客户端和服务器应用程序窗口中观察以下输出。
+#### 步骤 7：观察输出
 
 **SallServer 示例的输出：**
 
@@ -15602,58 +15704,58 @@ SSL/TLS 传统上使用基于证书的身份验证，通常用于服务器身份
 
 ### 遵循的步骤
 
-1. 读取 `JsServer.java` 示例代码。
+1.  **读取 `JsServer.java` 示例代码。**
+    此代码段定义了在服务器对 Kerberos 进行身份验证后执行的动作。它替换了练习 1：使用 JAAS API 中的动作。凭据存储在 `Subject` 中。应用程序随后通过 `subject.doAs` 在 `Subject` 内部执行执行 JSSE 操作（使用 Kerberos 密码套件）的动作。服务器创建 `SSLServerSocket`，类似于与客户端进行身份验证并建立连接。它在客户端和服务器之间来回发送已加密并受完整性保护的消息。
 
-   此代码段定义了在服务器对 Kerberos 进行身份验证后执行的动作。它替换了练习 1：使用 JAAS API 中的动作。凭据存储在 `Subject` 中。应用程序随后通过 `subject.doAs` 在 `Subject` 内部执行执行 JSSE 操作（使用 Kerberos 密码套件）的动作。服务器创建 `SSLServerSocket`，类似于与客户端进行身份验证并建立连接。它在客户端和服务器之间来回发送已加密并受完整性保护的消息。
+2.  **完成代码。**
 
-2. 完成代码。
+3.  **阅读 `JsClient.java` 示例代码。**
+    此代码段定义了在服务器对 Kerberos 进行身份验证后执行的动作。它替换了练习 1：使用 JAAS API 中的动作。凭据存储在 `Subject` 中。应用程序随后通过 `subject.doAs` 在 `Subject` 内部执行执行 JSSE 操作（使用 Kerberos 密码套件）的动作。由于 Kerberos 密码套件的实现在 `doAs` 内部执行，因此它可以从 `Subject` 中获取 Kerberos 凭据，并使用它们与对端进行身份验证并交换消息。
 
-3. 阅读 `JsClient.java` 示例代码。
+4.  **完成代码。**
 
-   此代码段定义了在服务器对 Kerberos 进行身份验证后执行的动作。它替换了练习 1：使用 JAAS API 中的动作。凭据存储在 `Subject` 中。应用程序随后通过 `subject.doAs` 在 `Subject` 内部执行执行 JSSE 操作（使用 Kerberos 密码套件）的动作。由于 Kerberos 密码套件的实现在 `doAs` 内部执行，因此它可以从 `Subject` 中获取 Kerberos 凭据，并使用它们与对端进行身份验证并交换消息。
+5.  **启动新窗口并启动服务器。**
+    `JsServer` 需要服务名称和运行该服务的服务器名称。例如，如果服务运行在机器 `jhil-001` 上，你将输入以下内容：
 
-4. 完成代码。
+    ```bash
+    % java -Djava.security.auth.login.jaas-krb5.conf JsServer jhil-001
+    ```
 
-5. 启动新窗口并启动服务器。`JsServer` 需要服务名称和运行该服务的服务器名称。例如，如果服务运行在机器 `jhil-001` 上，你将输入以下内容：
+6.  **运行客户端应用程序。**
+    `SallTestClient` 需要两个参数：服务名称和运行该服务的服务器名称。例如，如果服务运行在机器 `jhil-001` 上，你将输入以下内容：
 
-   ```bash
-   % java -Djava.security.auth.login.jaas-krb5.conf JsServer jhil-001
-   ```
+    ```bash
+    % java -Djava.security.auth.login.jaas-krb5.conf SallTestClient host jhil-001
+    ```
 
-6. 运行客户端应用程序。`SallTestClient` 需要两个参数：服务名称和运行该服务的服务器名称。例如，如果服务运行在机器 `jhil-001` 上，你将输入以下内容：
+    提供一个安全的密码。
 
-   ```bash
-   % java -Djava.security.auth.login.jaas-krb5.conf SallTestClient host jhil-001
-   ```
+7.  **在各自的客户端和服务器应用程序窗口中观察以下输出。**
 
-   提供一个安全的密码。
+    **SallServer 示例的输出：**
 
-7. 在各自的客户端和服务器应用程序窗口中观察以下输出。
+    ```
+    Authenticated principal: [host/jhil-001@J1LABS.EXAMPLE.COM]
+    Waiting for incoming connections...
+    Got connection from client /192.0.2.102
+    Client authenticated; authorized client is: test@J1LABS.EXAMPLE.COM
+    Negotiated QOP: auth-conf
+    Received: Hello There!
+    Sending: Hello There! Fri May 07 15:32:37 PDT 2005
+    Received data "Hello There!" of length 12
+    ```
 
-   **SallServer 示例的输出：**
+    **SallTestClient 示例的输出（密码将被你提供的密码所替换）：**
 
-   ```
-   Authenticated principal: [host/jhil-001@J1LABS.EXAMPLE.COM]
-   Waiting for incoming connections...
-   Got connection from client /192.0.2.102
-   Client authenticated; authorized client is: test@J1LABS.EXAMPLE.COM
-   Negotiated QOP: auth-conf
-   Received: Hello There!
-   Sending: Hello There! Fri May 07 15:32:37 PDT 2005
-   Received data "Hello There!" of length 12
-   ```
-
-   **SallTestClient 示例的输出（密码将被你提供的密码所替换）：**
-
-   ```
-   Kerberos password for test: password
-   Authenticated principal: [test@J1LABS.EXAMPLE.COM]
-   Connected to address jhil-001/192.0.2.102
-   Client authenticated.
-   Negotiated QOP: auth-conf
-   Sending: Hello Here!
-   Received: Hello There! Fri May 07 15:32:37 PDT 2005
-   ```
+    ```
+    Kerberos password for test: password
+    Authenticated principal: [test@J1LABS.EXAMPLE.COM]
+    Connected to address jhil-001/192.0.2.102
+    Client authenticated.
+    Negotiated QOP: auth-conf
+    Sending: Hello Here!
+    Received: Hello There! Fri May 07 15:32:37 PDT 2005
+    ```
 
 ### 总结
 
@@ -15680,19 +15782,19 @@ SSL/TLS 传统上使用基于证书的身份验证，通常用于服务器身份
 
 ### 遵循的步骤
 
-1. 编辑 `jaas-krb5.conf` 文件。
+1.  **编辑 `jaas-krb5.conf` 文件。**
+    此文件包含两个条目：一个客户端和一个服务器。在客户端条目中添加 `useTicketCache=true` 行。
 
-   此文件包含两个条目：一个客户端和一个服务器。在客户端条目中添加 `useTicketCache=true` 行。
+2.  **在原生操作系统上执行 Kerberos 登录。**
+    要登录 Kerberos，请按照如下方式使用 `kinit` 命令：
 
-2. 在原生操作系统上执行 Kerberos 登录。要登录 Kerberos，请按照如下方式使用 `kinit` 命令：
+    ```bash
+    kinit test
+    ```
 
-   ```bash
-   kinit test
-   ```
+    提供安全的密码。
 
-   提供安全的密码。
-
-3. 运行练习 1 到 5 中的客户端和服务器程序，你会注意到客户端应用程序不再要求你输入密码。
+3.  **运行练习 1 到 5 中的客户端和服务器程序，你会注意到客户端应用程序不再要求你输入密码。**
 
 ## 第 4 部分：使用更强的加密算法进行安全通信
 
@@ -15717,75 +15819,74 @@ SSL/TLS 传统上使用基于证书的身份验证，通常用于服务器身份
 
 ### 遵循的步骤
 
-1. 配置密钥发行中心 (KDC) 并更新 Kerberos 数据库。
+1.  **配置密钥发行中心 (KDC) 并更新 Kerberos 数据库。**
+    首先，你需要更新支持所需的 Kerberos 加密类型的 KDC，例如来自 MIT 分发的最新版本 Kerberos。如果你在 Windows 平台上使用 Active Directory，最新版本也支持 RC4-HMAC 和 AES 加密类型。
+    你需要更新 Kerberos 数据库以生成具有更强加密算法的新密钥。
 
-   首先，你需要更新支持所需的 Kerberos 加密类型的 KDC，例如来自 MIT 分发的最新版本 Kerberos。如果你在 Windows 平台上使用 Active Directory，最新版本也支持 RC4-HMAC 和 AES 加密类型。
+2.  **编辑 Kerberos 配置文件 (`krb5.conf`) 以选择所需的加密类型。**
+    你需要编辑 Kerberos 配置文件，在 Kerberos 配置文件的 `libdefaults` 部分下列出你需要插入的参数。为了本练习，所有所需的条目已添加到练习随附的示例 Kerberos 配置文件中，并且这些条目已被注释。要启用所需的加密类型，你只需取消条目的注释。
 
-   你需要更新 Kerberos 数据库以生成具有更强加密算法的新密钥。
+    - 要启用 AES256-CTS 加密类型，添加以下内容：
 
-2. 编辑 Kerberos 配置文件 (`krb5.conf`) 以选择所需的加密类型。
+      ```
+      libdefaults
+      default_tkt_encypes = aes256-cts
+      default_tgs_encypes = aes256-cts
+      permitted_encypes = aes256-cts
+      ```
 
-   你需要编辑 Kerberos 配置文件，在 Kerberos 配置文件的 `libdefaults` 部分下列出你需要插入的参数。为了本练习，所有所需的条目已添加到练习随附的示例 Kerberos 配置文件中，并且这些条目已被注释。要启用所需的加密类型，你只需取消条目的注释。
+    - 要启用 AES128-CTS 加密类型，添加以下内容：
 
-   - 要启用 AES256-CTS 加密类型，添加以下内容：
+      ```
+      libdefaults
+      default_tkt_encypes = aes128-cts
+      default_tgs_encypes = aes128-cts
+      permitted_encypes = aes128-cts
+      ```
 
-     ```
-     libdefaults
-     default_tkt_encypes = aes256-cts
-     default_tgs_encypes = aes256-cts
-     permitted_encypes = aes256-cts
-     ```
+    - 要启用 RC4-HMAC 加密类型，添加以下内容：
 
-   - 要启用 AES128-CTS 加密类型，添加以下内容：
+      ```
+      libdefaults
+      default_tkt_encypes = rc4-hmac
+      default_tgs_encypes = rc4-hmac
+      permitted_encypes = rc4-hmac
+      ```
 
-     ```
-     libdefaults
-     default_tkt_encypes = aes128-cts
-     default_tgs_encypes = aes128-cts
-     permitted_encypes = aes128-cts
-     ```
+    - 要启用 DES3-CBC-SHA1 加密类型，添加以下内容：
 
-   - 要启用 RC4-HMAC 加密类型，添加以下内容：
+      ```
+      libdefaults
+      default_tkt_encypes = des3-cbc-sha
+      default_tgs_encypes = des3-cbc-sha
+      permitted_encypes = des3-cbc-sha
+      ```
 
-     ```
-     libdefaults
-     default_tkt_encypes = rc4-hmac
-     default_tgs_encypes = rc4-hmac
-     permitted_encypes = rc4-hmac
-     ```
-
-   - 要启用 DES3-CBC-SHA1 加密类型，添加以下内容：
-
-     ```
-     libdefaults
-     default_tkt_encypes = des3-cbc-sha
-     default_tgs_encypes = des3-cbc-sha
-     permitted_encypes = des3-cbc-sha
-     ```
-
-> **注意：** 如下销毁上一个练习票据缓存中任何预存在的 Kerberos TGT：
-
+> **注意：**
+> 如下销毁上一个练习票据缓存中任何预存在的 Kerberos TGT：
+>
 > ```bash
 > kdestroy
 > ```
 
-3. 一个新窗口并使用更新后的 `krb5.conf` 启动服务器：
+3.  **在一个新窗口并使用更新后的 `krb5.conf` 启动服务器：**
 
-   ```bash
-   java -Djava.security.auth.login.config=jaas-krb5.conf \
-   Djava.security.krb5.conf=krb5.conf GSSServer
-   ```
+    ```bash
+    java -Djava.security.auth.login.config=jaas-krb5.conf \
+    -Djava.security.krb5.conf=krb5.conf GSSServer
+    ```
 
-4. 使用更新的 `krb5.conf` 运行客户端应用程序。`GClient` 类接受两个参数：服务名称和运行服务器的名称。例如，如果服务器位于 `jhol-001` 机器上，请使用以下命令（在提示时提供安全的密码）：
+4.  **使用更新的 `krb5.conf` 运行客户端应用程序。**
+    `GClient` 类接受两个参数：服务名称和运行服务器的名称。例如，如果服务器位于 `jhol-001` 机器上，请使用以下命令（在提示时提供安全的密码）：
 
-   ```bash
-   java -Djava.security.auth.login.config=jaas-krb5.conf \
-   Djava.security.krb5.conf=krb5.conf GSSClient host jhol-001
-   ```
+    ```bash
+    java -Djava.security.auth.login.config=jaas-krb5.conf \
+    -Djava.security.krb5.conf=krb5.conf GSSClient host jhol-001
+    ```
 
 ### 总结
 
-在练习中，你学习了如何编写使用 Java GSS API 进行认证并使用更强 Kerberos 加密算法的安全客户端-服务器应用程序。你可以启用 Kerberos 调试 (`Dsun.security.krb5.debug=true`) 来获取有关所用 Kerberos 加密类型的信息。
+在练习中，你学习了如何编写使用 Java GSS API 进行认证并使用更强 Kerberos 加密算法的安全客户端-服务器应用程序。你可以启用 Kerberos 调试 (`-Dsun.security.krb5.debug=true`) 来获取有关所用 Kerberos 加密类型的信息。
 
 ## 第 5 部分：使用 SPNEGO Java GSS 机制进行安全认证
 
@@ -15807,7 +15908,7 @@ Web 服务器响应：
 
 # Java SE 高级安全编程：认证、安全通信与单点登录
 
-客户端需要发送一个头部：
+客户端需要发送一个头部
 
 ```
 Authorization: Negotiate YY....
@@ -15824,7 +15925,7 @@ HTTP/1.1 407 Proxy Authentication Required
 Proxy-Authenticate: Negotiate
 ```
 
-客户端需要发送一个头部：
+客户端需要发送一个头部
 
 ```
 Proxy-Authorization: Negotiate YY....
@@ -15952,18 +16053,18 @@ public class RunHttpspnego {
 }
 ```
 
-#### 示例代码片段
+#### 登录上下文示例
 
 ```java
 context.login();
-catch (LoginException e) {
+} catch (LoginException e) {
     System.err.println("Login failed");
     e.printStackTrace();
     System.exit(-1);
 }
 ```
 
-```java
+```
 // 以认证身份执行操作
 Subject subject = context.getSubject();
 if (verbose) {
@@ -16005,7 +16106,7 @@ server {
 }
 ```
 
-## MyAction 类
+## MyAction 类示例
 
 ```java
 // 要执行的操作
@@ -16149,12 +16250,11 @@ import java.util.Date;
 > * 与客户端交换的每条消息包含一个大端
 > * 整数值，表示随其后的字节数。
 > * 协议如下：
-> 
 >   1. 客户端向服务器发送 init token
 >   2. 服务器向客户端发送 accept token
 >   3. 客户端向服务器发送 token。
 > */
-> * 用法：java -D.security.auth.login.config=jass-krb5.conf GssServer <port>
+> * 用法：`java -D.security.auth.login.config=jass-krb5.conf GssServer <port>`
 
 ```java
 public class GssServer {
@@ -16170,72 +16270,70 @@ public class GssServer {
         }
         int port = Integer.parseInt(args[0]);
         // ...
-    }
-}
 ```
 
 ```java
-ServerSocket ss = new ServerSocket(port);
-System.out.println("Waiting for connection...");
-Socket socket = ss.accept();
-DataInputStream in = new DataInputStream(socket.getInputStream());
-DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+        ServerSocket ss = new ServerSocket(port);
+        System.out.println("Waiting for connection...");
+        Socket socket = ss.accept();
+        DataInputStream in = new DataInputStream(socket.getInputStream());
+        DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
-/*
-* 创建 GSSContext 来接收来自客户端的请求。
-* 的服务器凭据使用 null。这告诉底层机制
-* 使用它可用的凭据来接受此连接。
-*/
-GSSManager manager = GSSManager.getInstance();
-GSSCredential serverCreds = manager.createCredential(null);
+        /*
+        * 创建 GSSContext 来接收来自客户端的请求。
+        * 的服务器凭据使用 null。这告诉底层机制
+        * 使用它可用的凭据来接受此连接。
+        */
+        GSSManager manager = GSSManager.getInstance();
+        GSSCredential serverCreds = manager.createCredential(null);
 
-// 执行上下文建立
-GSSContext context = manager.createContext(serverCreds);
-byte[] token = null;
+        // 执行上下文建立
+        GSSContext context = manager.createContext(serverCreds);
+        byte[] token = null;
 
-while (!context.isEstablished()) {
-    if (verbose) {
-        System.out.println("Reading...");
-    }
-    token = new byte[in.readInt()];
-    in.readFully(token);
+        while (!context.isEstablished()) {
+            if (verbose) {
+                System.out.println("Reading...");
+            }
+            token = new byte[in.readInt()];
+            in.readFully(token);
 
-    if (token.length == 0) {
-        if (verbose) {
-            System.out.println("skipping zero length token");
+            if (token.length == 0) {
+                if (verbose) {
+                    System.out.println("skipping zero length token");
+                }
+                continue;
+            }
+            if (verbose) {
+                System.out.println("Token = " + getHexBytes(token));
+                System.out.println("acceptSecContext...");
+            }
+            token = context.acceptSecContext(token, 0, token.length);
+
+            // 如果 acceptSecContext 生成了 token，则将其发送给对端
+            if (token != null) {
+                if (verbose) {
+                    System.out.println("Will send token of size " + token.length + " from acceptSecContext.");
+                }
+                out.writeInt(token.length);
+                out.write(token);
+                out.flush();
+            }
         }
-        continue;
-    }
-    if (verbose) {
-        System.out.println("Token = " + getHexBytes(token));
-        System.out.println("acceptSecContext...");
-    }
-    token = context.acceptSecContext(token, 0, token.length);
 
-    // 如果 acceptSecContext 生成了 token，则将其发送给对端
-    if (token != null) {
-        if (verbose) {
-            System.out.println("Will send token of size " + token.length + " from acceptSecContext.");
+        System.out.println("Context Established!");
+        System.out.println("Client principal is " + context.getSrcName());
+        System.out.println("Server principal is " + context.getTargetName());
+
+        /*
+        * 如果没有发生双向认证，
+        * 则只有客户端对服务器进行了认证。否则，
+        * 客户端和服务器相互进行了认证。
+        */
+        if (context.getMutualAuthState()) {
+            System.out.println("Mutual authentication took place!");
         }
-        out.writeInt(token.length);
-        out.write(token);
-        out.flush();
-    }
-}
-
-System.out.println("Context Established!");
-System.out.println("Client principal is " + context.getSrcName());
-System.out.println("Server principal is " + context.getTargetName());
-
-/*
-* 如果没有发生双向认证，
-* 则只有客户端对服务器进行了认证。否则，
-* 客户端和服务器相互进行了认证。
-*/
-if (context.getMutualAuthState()) {
-    System.out.println("Mutual authentication took place!");
-}
-// ...
+        // ...
 ```
 
 > * 创建一个 unwrap 将用于返回的 MessageProp
@@ -16244,19 +16342,22 @@ if (context.getMutualAuthState()) {
 > * 会被忽略，因此将其设置为默认值 0 和*
 
 ```java
+/*
 MessageProp prop = new MessageProp(0, false);
 ```
 
-> /*
 > * 读取令牌。这使用了与上下文建立期间使用的
 > * 相同的令牌字节数组。
-> */
-> token = new byte[inStream.readInt()];
-> if (verbose) {
->     System.out.println("Will read token of size " + 
->     token.length);
->     inStream.readFully(token);
-> }
+
+```java
+*/
+token = new byte[inStream.readInt()];
+if (verbose) {
+    System.out.println("Will read token of size " + 
+    token.length);
+    inStream.readFully(token);
+}
+```
 
 ```java
 byte[] input = context.unwrap(token, 0, token.length);
@@ -16264,16 +16365,13 @@ String str = new String(input, "UTF-8");
 System.out.println("Received data \" " + 
 str + "\" of length " + str.length());
 System.out.println("*已适用的机密性: " + 
-prop.getPrivacy());
+prop.getPrivacy());*/
 ```
 
-> /*
 > * 现在生成回复，该回复是传入的字符串与* 与当前时间的拼接。
-> /
-> /*
+
 > * 首先将 MessageProp 的 QOP 重置为 0，
 > * 以确保应用默认的保护质量。
-> */
 
 ```java
 prop.setQOP(0);
@@ -16289,6 +16387,8 @@ token = context.wrap(reply, 0, reply.length, prop);
 ```
 
 
+
+# GssClient.java
 
 ```java
 outStream.write(token.length);
@@ -16316,8 +16416,6 @@ private static final String getHexBytes(byte[] bytes) {
     return getHexBytes(bytes, 0, bytes.length);
 }
 ```
-
-# GssClient.java
 
 ```java
 import org.ietf.jgss.*;
@@ -16448,9 +16546,7 @@ public class GssClient {
 
                         System.out.println("Will read input token of " +
 
-                        token.length + " for processing by " +
-
-                        "initSecContext");
+                        token.length + " for processing by initSecContext");
 
                     }
 
@@ -16557,14 +16653,11 @@ socket.close();
 
 ```java
 return null;
-
 }
 
 private static String hexBytes(byte[] bytes, int pos, int len) {
-
     StringBuilder sb = new StringBuilder();
     for (int i = pos; i < len; i++) {
-
         int b1 = (bytes[i] >> 4) & 0x0f;
         int b2 = bytes[i] & 0x0f;
 
@@ -16572,7 +16665,6 @@ private static String hexBytes(byte[] bytes, int pos, int len) {
         sb.append(Integer.toHexString(b2));
         sb.append(' ');
     }
-
     return sb.toString();
 }
 
@@ -16593,6 +16685,7 @@ import java.util.Date;
 ```
 
 /**
+
  * 一个使用 SASL 认证客户端的应用程序
  * 使用 Kerberos 作为底层机制。它随后
  * 与客户端安全地交换数据。
@@ -16606,7 +16699,7 @@ import java.util.Date;
  *    d. 步骤 b 和 c 重复直到认证成功或失败。
  * 2. 客户端向服务器发送加密消息。
  * 3. 服务器解密消息并返回包含原始消息
- * 以及当前时间的加密内容。
+ *    以及当前时间的加密内容。
  * 在启动 SasTestClient 之前启动 SasTestServer。
  * 使用：java <options> <service> <host>
  * 示例：java -Djava.security.auth.login.config=jaas.conf SasTestServer host machine.org
@@ -16658,8 +16751,6 @@ public class SasTestServer {
     }
 }
 ```
-
-## 服务端回调处理逻辑片段
 
 ```java
 } else {
@@ -16727,7 +16818,6 @@ import java.util.HashMap;
   * 添加 -Djava.security.krb5.config=krb5.conf 来指定特定于
   * Kerberos 配置（不同于操作系统的 Kerberos
   * 配置）。
-*/
 ```
 
 ```java
@@ -16767,8 +16857,6 @@ public class SaslTestClient {
         public Object run() throws Exception {
 ```
 
-### 客户端核心逻辑片段
-
 ```java
 // 创建应用程序层连接
 AppConnection conn = new AppConnection(serverName, port);
@@ -16777,18 +16865,18 @@ AppConnection conn = new AppConnection(serverName, port);
 ```java
 HashMap<String,Object> props = new HashMap<String,Object>();
 // 请求机密性
-props.put(Sasl.QOP, "auth-conf");
+props.put(Slas.QOP, "auth-conf");
 ```
 
 ```java
-// 创建 SaslClient 以执行身份验证
-SaslClient client = Sasl.createSaslClient(
-    new String[]{MECH}, null, service, serverName, props,
-    cb);
+// 创建 SlasClient 以执行身份验证
+SlasClient client = Slas.createSlasClient(
+new String[]{MECH}, null, service, serverName, props,
+cb);
 ```
 
 ```java
-if (client == null) {
+if (clnt == null) {
   throw new Exception(
     "Unable to find client implementation for " + MECH)
 }
@@ -16799,19 +16887,19 @@ byte[] challenge;
 
 ```java
 // 获取身份验证的初始响应
-response = client.hasInitialResponse() ?
-    client.evaluateChallenge(EMPTY) : EMPTY;
+response = clnt.hasInitialResponse() ?
+clnt.evaluateChallenge(EMPTY) : EMPTY;
 ```
 
 ```java
 // 将初始响应发送到服务器
 AppConnection.AppReply reply =
-    conn.send(AppConnection.AUTH_CMD, response);
+conn.send(AppConnection.AUTH_CMD, response);
 ```
 
 ```java
 // 重复直到身份验证终止
-while (!client.isComplete() &&
+while (!clnt.isComplete() &&
   (reply.getStatus() == Sasl.IN_PROGRESS)) {
     
     // 检查身份验证状态
@@ -16848,7 +16936,7 @@ if (conf) {
 }
 ```
 
-## 服务端消息处理与 SSL/TLS 示例片段
+## 代码示例片段
 
 ```java
 String outStr = inStr + " * " + new Date().toString() + "\n";
@@ -16859,9 +16947,9 @@ out.flush();
 
 ```java
 String cipherSuiteChosen = 
-    sslSocket.getSession().getCipherSuite();
+sslSocket.getSession().getCipherSuite();
 System.out.println("Cipher suite in use: " +
-    cipherSuiteChosen);
+cipherSuiteChosen);
 ```
 
 ```java
@@ -16877,6 +16965,7 @@ sslSocket.close();
 return null;
 
 }
+
 ```
 
 ## JsseClient.java
@@ -16884,15 +16973,15 @@ return null;
 ```java
 import java.io.*;
 import java.net.*;
-import javax.net.ssl.*;
-import javax.security.auth.Subject;
-import javax.security.auth.login.*;
+import javax.net.ssl.PrivilegedExceptionAction;
 import java.security.Principal;
+
+public class JsseClient implements {
 ```
 
 ```java
 private static final String KRB5_CIPHER = 
-    "TLS_KRB5_WITH_3DES_EDE_CBC_SHA";
+"TLS_KRB5_WITH_3DES_EDE_CBC_SHA";
 
 private static final int PORT = 4569;
 private static final boolean verbose = false;
@@ -16909,30 +16998,31 @@ public static void main(String[] args) throws Exception {
 ```
 
 ```java
-    PrivilegedExceptionAction action = new JsseClientAction(args[0]);
-    Jaas.loginAndAction("client", action);
+    PrivilegedExceptionAction action = new JsseClientAction(args[0],
+);
+    Jaas.loginAction("client", action);
 }
 
 static class JsseClientAction implements PrivilegedExceptionAction {
 ```
 
-## JSSE 客户端动作实现片段
+## Java SE 中的高级安全编程：认证、安全通信与单点登录
 
 ```java
 private String server;
 private int port;
 
-JsseClientAction(String server, int port) {
+JsClientAction(String server, int port) {
     this.port = port;
     this.server = server;
 }
 
 public Object run() throws Exception {
-    SSLSocketFactory sslf = (SSLSocketFactory) SSLSocketFactory.getDefault();
+    SSLSFactory sslf = (SSLSocketFactory) SSLFactory.getDefault();
     SSLSocket socket = (SSLSocket) sslf.createSocket(server, port);
 
     // 仅启用 KRB5 加密套件。
-    String[] enabledSuites = new String[]{ KRB5_CIPHER };
+    String[] enabledSuites = new String[]{ KRB5_CIPHER" };
     socket.setEnabledCipherSuites(enabledSuites);
     // 如果 enabledSuites 不为空，则应该检查异常
 
@@ -16941,9 +17031,9 @@ public Object run() throws Exception {
     BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
         socket.getOutputStream()));
 
-    String outStr = "Hello There!\n";
-    writer.write(outStr);
-    writer.flush();
+    String outStr = "Hello There!\n"
+    out.write(outStr);
+    out.flush();
     System.out.print("Sending " + outStr);
 
     String inStr = reader.readLine();
@@ -16962,19 +17052,26 @@ public Object run() throws Exception {
 }
 ```
 
-## krb5.conf 配置文件
+## krb5.conf
 
 ### krb5.conf 模板
 
-> 为了完成此配置文件，你需要将 `__name__` 占位符替换为适用于你网络的值。
+### 为了完成此配置文件
+
+### 你需要将 `__name>` 占位符
+
+### 替换为适用于你网络的值。
 
 ```ini
 [libdefaults]
 default-realm = JLABS.EXAMPLE.COM
 forwardable = true
-default_tkt_enctypes = aes128-cts rc4-hmac des3-cbc-sha1
-default_tgs_enctypes = aes128-cts rc4-hmac des3-cbc-sha1
-permitted_enctypes = aes128-cts rc4-hmac des3-cbc-sha1
+```
+
+```ini
+default_tkt_encypes = aes128-cts rcs4-hmac des3-cbc-shal
+dgs_encypes = aes128-cts rcs4-hmac des3-cbc-shal
+permitted_encypes = aes128-cts rcs4-hmac des3-cbc-shal
 ```
 
 
@@ -17028,7 +17125,9 @@ telnet = {
 }
 ```
 
-`forwardable= true`
+```ini
+forwardable = true
+```
 
 # GssNegoClient.java
 
@@ -17114,7 +17213,7 @@ public class GssNegoClient {
                 }
             }
             // 如果客户端完成了上下文建立
-            // 则将没有更多的 token 需要读取
+            // 则将没有更多的 token 需要要读取
             return null;
         }
 
@@ -17149,7 +17248,7 @@ System.out.println("Context Established!");
 System.out.println("Client principal is " + 
 context.getSrcName());
 System.out.println("Server principal is " + 
-context.getTagName());
+context.getTargName());
 ```
 
 - 如果没有进行双方认证，则只有客户端对服务器进行了认证。否则，客户端和服务器均进行了相互认证。
@@ -17199,7 +17298,6 @@ context.dispose();
 socket.close();
 
 return null;
-}
 ```
 
 ```java
@@ -17246,9 +17344,8 @@ import java.util.Date;
    GssNegoServer
  * 添加 -Djava.security.krb5.conf=krb5.conf 以指定应用程序特定的
  * Kerberos 配置（与操作系统的 Kerberos 配置不同）。
-```
+ */
 
-```java
 public class GssNegoServer {
     private static int PORT = 4567;
     private static final boolean verbose = false;
@@ -17266,6 +17363,8 @@ public class GssNegoServer {
         GssServerAction(int port) {
             this.localPort = port;
         }
+    }
+}
 ```
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_595_0.png)
@@ -17346,15 +17445,27 @@ private static String getHexBytes(byte[] bytes) {
 }
 ```
 
+# 附录 A：设置 Kerberos 账户
+
+Kerberos 账户在密钥发行中心（`KDC`）上设置。Kerberos 数据库中的每个条目都包含一个 Kerberos 主体（`principal`）。您应该为运行服务器的机器创建一个基于主机的主体（例如 `"host/jhol-001"`），并为访问服务器创建一个客户端主体（例如 `"test"`）。
+
+对于 Windows 平台，请参阅 Microsoft Kerberos。
+
+练习假设操作系统已配置为使用正确的 Kerberos 服务器。此配置通常需要管理员权限。如果您无法配置系统，可以使用 `java` 命令并配合 `-Djava.security.krb5.conf` 选项使用 Kerberos 配置文件。以下是如何调用练习中的命令以使用 `krb5.conf` 配置文件的示例。
+
+```bash
+java -Djava.security.auth.login.config=jaas-krb5.conf -Djava.security.krb5.conf=krb5.conf Java client
+```
+
 # Kerberos 5 GSS-API 机制
 
-本节描述并列出了关于 Java 通用安全服务（Java GSS）机制的特性。它还描述了 Kerberos V5 机制的对象标识符（OID）、加密类型以及 Java GSS 支持的 `krb5.conf` 设置。
+本节描述并列出了关于 Java 通用安全服务（`Java GSS`）机制的特性。它还描述了 Kerberos V5 机制的对象标识符（`OID`）、加密类型以及 Java GSS 支持的 `krb5.conf` 设置。
 
-通用安全服务应用程序接口（GSS-API）机制由 RFC 1964 定义，并在互联网标准制定过程中通过 RFC 4121 进行了补充。
+通用安全服务应用程序接口（`GSS-API`）机制由 RFC 1964 定义，并在互联网标准制定过程中通过 RFC 4121 进行了补充。
 
 ## Kerberos V5 机制的 OID
 
-根据 RFC 1964 第 1 节，用于 Kerberos 5 的 Java 通用安全服务（Java GSS） OID 定义为 `1.2.840.113554.1.2.2`；另参见 Java 安全标准算法名称中的 GSSAPI 机制。
+根据 RFC 1964 第 1 节，用于 Kerberos 5 的 Java 通用安全服务（`Java GSS`） `OID` 定义为 `1.2.840.113554.1.2.2`；另参见 Java 安全标准算法名称中的 `GSSAPI` 机制。
 
 ## Java GSS/Kerberos 支持的加密类型
 
@@ -17362,24 +17473,24 @@ private static String getHexBytes(byte[] bytes) {
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_599_0.png)
 
-### 表 7-1 Java GSS/Kerberos 支持的加密类型
+## 表 7-1 Java GSS/Kerberos 支持的加密类型
 
-| 名称 | 别名 | etype 编号 |
+| 算法名 | 别名 | etype 编号 |
 |---|---|---|
-| aes256-ctcs-hmac-sha1-96 | aes256-sha1, aes256-ctcs | 18 |
-| aes128-ctcs-hmac-sha1-96 | aes128-sha1, aes128-ctcs | 17 |
-| aes256-ctcs-hmac-sha256-192 | aes256-sha2 | 20 |
-| aes128-ctcs-hmac-sha256-128 | aes128-sha2 | 19 |
-| des3-cbc-sha1 | des3-cbc-sha1 | 16 |
-| arcfour-hmac-md5 | arcfour-hmac, rc4-hmac | 23 |
-| des-cbc-crc | 无 | 1 |
-| des-cbc-md5 | 无 | 3 |
+| `aes256-ctcs-hmac-sha1-96` | `aes256-sha1`, `aes256-ctcs` | 18 |
+| `aes128-ctcs-hmac-sha1-96` | `aes128-sha1`, `aes128-ctcs` | 17 |
+| `aes256-ctcs-hmac-sha256-192` | `aes256-sha2` | 20 |
+| `aes128-ctcs-hmac-sha256-128` | `aes128-sha2` | 19 |
+| `des3-cbc-sha1` | `des3-cbc-sha1` | 16 |
+| `arcfour-hmac-md5` | `arcfour-hmac`, `rc4-hmac` | 23 |
+| `des-cbc-crc` | 无 | 1 |
+| `des-cbc-md5` | 无 | 3 |
 
-> **注意：**
+> 注意：
 >
-> AES-256 加密类型默认启用。以下遗留加密类型默认禁用：
+> `AES-256` 加密类型默认启用。以下遗留加密类型默认禁用：
 >
-> * 基于 DES 的加密类型，包括 `des-cbc-crc` 和 `des-cbc-md5`
+> * 基于 `DES` 的加密类型，包括 `des-cbc-crc` 和 `des-cbc-md5`
 > * `des3-cbc-sha1`
 > * `arcfour-hmac-md5`
 >
@@ -17449,9 +17560,9 @@ Java 安全套接扩展（JSSE）能够实现安全通信。它提供了 TLS 协
 
 JSSE 支持以下协议：
 
-- DTLS: 1.0 和 1.3
-- TLS: 1.0, 1.1, 1.2 和 1.3
-- SSL (安全套接层): 3.0
+* DTLS: 1.0 和 1.3
+* TLS: 1.0, 1.1, 1.2 和 1.3
+* SSL (安全套接层): 3.0
 
 # SunJSSE 提供者
 
@@ -17465,39 +17576,38 @@ Oracle 的 Java SE 实现包含一个名为 SunJSSE 的 JSSE 提供者，它是�
 
 ## JSSE API 文档
 
-- `java.net` 程序包
-- `java.net.ssl` 程序包
+* `java.net` 程序包
+* `java.net.ssl` 程序包
 
 ## Java SE 安全
 
-- Java SE 安全主页
-- 《Java 教程》中的 Java SE 安全章节
-- 《Java PKI 程序员指南》
-- 《Java 2 平台安全内部（第二版）：架构、API 设计与实现》
+* Java SE 安全主页
+* 《Java 教程》中的 Java SE 安全章节
+* 《Java PKI 程序员指南》
+* 《Java 2 平台安全内部（第二版）：架构、API 设计与实现》
 
 ## 传输层安全 (TLS)
 
-- TLS 协议 1.0 版本
-
-## JSSE 类与接口
-
-- TLS 协议 1.1 版本
-- TLS 协议 1.2 版本
-- (TLS) 协议 1.3 版本
-- 传输层安全 (TLS) 扩展
-- TLS 之 HTTP
+* TLS 协议 1.0 版本
+* TLS 协议 1.1 版本
+* TLS 协议 1.2 版本
+* TLS 协议 1.3 版本
+* 传输层安全 (TLS) 扩展
+* TLS 之 HTTP
 
 ## 数据报传输层安全 (DTLS)
 
-- DTLS 协议 1.0 版本
-- DTLS 协议 1.2 版本
+* DTLS 协议 1.0 版本
+* DTLS 协议 1.2 版本
 
 ## 美国加密政策
 
-- 美国商务部
-- 技术首席执行官委员会
-- 当前出口政策：加密与出口管理条例 (EAR)
-- NIST 计算机安全出版物
+* 美国商务部
+* 技术首席执行官委员会
+* 当前出口政策：加密与出口管理条例 (EAR)
+* NIST 计算机安全出版物
+
+# JSSE 类与接口
 
 为了进行安全通信，连接的两端必须启用 SSL。在 JSSE API 中，连接的端点类是 `SSLSocket` 和 `SSLEngine`。在图 8-1 中，创建 `SSLSocket` 和 `SSLEngine` 的主要类按逻辑顺序排列。
 
@@ -17505,7 +17615,7 @@ Oracle 的 Java SE 实现包含一个名为 SunJSSE 的 JSSE 提供者，它是�
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_605_0.png)
 
-`SSLSocket` 可以通过 `SSLFactory` 创建，也可以通过接受入站连接的 `SSLServerSocket` 创建。同样，`SSLServerSocket` 由 `SSLServerFactory` 创建。`SSLFactory` 和 `SSLServerFactory` 对象都由 `SSLContext` 创建。`SSLEngine` 由 `SSLContext` 直接创建，并依赖应用程序处理所有 I/O。
+`SSLSocket` 可以通过 `SSLSocketFactory` 创建，也可以通过接受入站连接的 `SSLServerSocket` 创建。同样，`SSLServerSocket` 由 `SSLServerSocketFactory` 创建。`SSLSocketFactory` 和 `SSLServerSocketFactory` 对象都由 `SSLContext` 创建。`SSLEngine` 由 `SSLContext` 直接创建，并依赖应用程序处理所有 I/O。
 
 > **注意：**
 > 使用 `SSLSocket` 或 `SSLEngine` 类时，在发送任何内容之前应始终检查对方的凭据。从 JDK 7 开始，标识/验证程序可以在 SSL/TLS 握手期间处理。请参见 `SSLParameters.setEndpointIdentificationAlgorithm` 方法。
@@ -17523,9 +17633,9 @@ Oracle 的 Java SE 实现包含一个名为 SunJSSE 的 JSSE 提供者，它是�
 
 套接字工厂是捕获与构建套接字相关的各种策略的简单方法，能够产生此类套接字，而无需对请求它们的代码进行特殊配置：
 
-- 由于工厂和套接字具有多态性，同一应用程序代码可以通过传递不同类型的工厂使用不同类型的套接字。
-- 工厂可以使用用于套接字构造的参数进行自定义。例如，可以自定义工厂以返回已配置了不同网络超时或安全参数的套接字。
-- 返回给应用程序的套接字可以是 `java.net.Socket`（或 `java.net.SSLSocket`）的子类，它们可以直接暴露用于压缩、安全、记录标记、统计收集或防火墙隧道等功能的新 API。
+* 由于工厂和套接字具有多态性，同一应用程序代码可以通过传递不同类型的工厂使用不同类型的套接字。
+* 工厂可以使用用于套接字构造的参数进行自定义。例如，可以自定义工厂以返回已配置了不同网络超时或安全参数的套接字。
+* 返回给应用程序的套接字可以是 `java.net.Socket`（或 `java.net.SSLSocket`）的子类，它们可以直接暴露用于压缩、安全、记录标记、统计收集或防火墙隧道等功能的新 API。
 
 ## SSLSocketFactory 和 SSLServerSocketFactory 类
 
@@ -17541,9 +17651,9 @@ Oracle 的 Java SE 实现包含一个名为 SunJSSE 的 JSSE 提供者，它是�
 
 可以使用以下方法获取 `SSLSocketFactory`：
 
-- 通过调用 `SSLSocketFactory.getDefault()` 静态方法获取默认工厂。
-- 作为 API 参数接收工厂。也就是说，创建套接字但不关心套接字配置细节的代码包含一个带有 `SSLSocketFactory` 参数的方法，客户端调用该方法可以指定在创建套接字时使用哪种 `SSLSocketFactory`（例如 `java.net.ssl.HttpsConnection`）。
-- 构建具有特定配置行为的新工厂。
+* 通过调用 `SSLSocketFactory.getDefault()` 静态方法获取默认工厂。
+* 作为 API 参数接收工厂。也就是说，创建套接字但不关心套接字配置细节的代码包含一个带有 `SSLSocketFactory` 参数的方法，客户端调用该方法可以指定在创建套接字时使用哪种 `SSLSocketFactory`（例如 `java.net.ssl.HttpsConnection`）。
+* 构建具有特定配置行为的新工厂。
 
 默认工厂通常配置为仅支持服务器身份验证，这样由默认工厂创建的套接字就不会比普通 TCP 套接字泄露更多客户端信息。当前和使用的套接字不需要知道套接字的创建细节。通过传入的套接字工厂创建套接字是隔离套接字配置细节的好方法，并增加了这些创建和使用套接字的重用性。你可以通过实现自己的套接字工厂来创建工厂实例。
 
@@ -17551,20 +17661,18 @@ Oracle 的 Java SE 实现包含一个名为 SunJSSE 的 JSSE 提供者，它是�
 
 可以通过以下方式获取 `SSLSocket` 实例：
 
-- 通过 `SSLSocketFactory` 实例的多个 `createSocket` 方法之一创建 `SSLSocket`。
-- 通过 `SSLServerSocket` 的 `accept` 方法创建 `SSLSocket`。
+* 通过 `SSLSocketFactory` 实例的多个 `createSocket` 方法之一创建 `SSLSocket`。
+* 通过 `SSLServerSocket` 的 `accept` 方法创建 `SSLSocket`。
 
 ## 加密套的选择与远程身份
 
 SSL/TLS 协议定义了一系列确保连接受保护的步骤。然而，加密套的选择直接影响连接所享有的安全类型。例如，如果选择了匿名加密套，应用程序将无法验证对方的身份。如果没有选择加密，数据的隐私将无法得到保护。此外，SSL/TLS 协议并没有规定凭据必须与预期的对方匹配。如果连接由于某种原因重定向到恶意对方，根据当前的信任材料，恶意对方的凭据是可以接受的，连接将被视为有效。
 
-使用 `SSLSocket` 或 `SSLEngine` 类时，在发送任何数据之前始终检查凭据。`SSLSocket` 和 `SSLEngine` 类不会自动验证 URL 中的主机是否匹配对方凭据中的名称。如果不验证主机名，应用程序可能会受到 URL 欺骗攻击。从 JDK 7 开始，标识/验证程序可以在 SSL/TLS 握手期间处理。
-
-`SSLParameters.getEndpointIdentificationAlgorithm`。
+使用 `SSLSocket` 或 `SSLEngine` 类时，在发送任何数据之前始终检查凭据。`SSLSocket` 和 `SSLEngine` 类不会自动验证 URL 中的主机是否匹配对方凭据中的名称。如果不验证主机名，应用程序可能会受到 URL 欺骗攻击。从 JDK 7 开始，标识/验证程序可以在 SSL/TLS 握手期间处理。`SSLParameters.getEndpointIdentificationAlgorithm`。
 
 如 HTTPS (TLS 之 HTTP) 等协议需要主机验证。从 JDK 7 开始，HTTPS 端点识别在 `HttpsConnection` 的握手期间默认强制。或者，应用程序可以使用 `HostnameVerifier` 来覆盖默认的主机名规则。`HostnameVerifier` 接口和 `HttpsConnection` 类。
 
-## SSLEngine 类
+# SSLEngine 类
 
 如前，SSL/TLS 是安全通信的标准协议，被应用于各种计算平台和设备。随着这些协议的普及，需要通过不同的 I/O 和线程模型使用 TLS/DTLS 以满足应用程序的性能和扩展性需求。
 
@@ -17572,13 +17680,13 @@ SSL/TLS 协议定义了一系列确保连接受保护的步骤。然而，加密
 
 内存占用以及其他要求。这些要求在使用阻塞和非阻塞 I/O 通道时 TLS/DTLS，支持异步 I/O、任意输入输出流以及缓冲区。还要求在高度可扩展、性能密集型环境中使用，需要管理数以千计的网络连接。
 
-使用 Java 中的 `SSLEngine` 类抽象 I/O 传输机制，允许应用程序以独立于传输的方式使用 TLS/DTLS 协议，从而让开发者自由选择最符合其需求的传输方式和编码模型。这种抽象不仅允许应用程序使用非阻塞 I/O 通道，还能适应不同的线程模型。这有效地将 I/O 和线程的决策留给了应用程序开发者。由于这种灵活性，应用程序开发者必须管理 I/O 和线程（这些本身就是复杂的话题），并对 TLS/DTLS 协议有深入理解。由于 SSL 类需要对 SSL/TLS、I/O 和线程有理解，初学者应该使用 `Socket`。
+使用 Java 中的 `SSLEngine` 类抽象 I/O 传输机制，允许应用程序以独立于传输的方式使用 TLS/DTLS 协议，从而让开发者自由选择最符合其需求的传输方式和编码模型。这种抽象不仅允许应用程序使用非阻塞 I/O 通道，还能适应不同的线程模型。这有效地将 I/O 和线程的决策留给了应用程序开发者。由于这种灵活性，应用程序开发者必须管理 I/O 和线程（这些本身就是复杂的话题），并对 TLS/DTLS 协议有深入理解。由于 SSL 类需要对 SSL/TLS、I/O 和线程有理解，初学者应该使用 `SSLSocket`。
 
 Java 编程语言 API（如 Java 通用服务 GS-API 和 Java 身份认证层 SASL）的用户会发现其相似之处在于，应用程序也负责数据的传输。
 
 核心类 `javax.net.ssl.SSLEngine` 封装了一个 TLS/DTLS 状态机，并在入站和输出缓冲区上操作，这些缓冲区分别由 SSL 类的用户填充和排空。图 8-2 展示了数据从应用程序通过 `SSLEngine` 到传输机制，再返回的过程。
 
-### 图 8-2 经过 SSLEngine 的数据流
+## 图 8-2 经过 SSLEngine 的数据流
 
 | 应用程序数据（明文） | SSLEngine | 应用程序传输（密文） |
 |---|---|---|
@@ -17591,85 +17699,77 @@ Java 编程语言 API（如 Java 通用服务 GS-API 和 Java 身份认证层 SA
 
 `SSLEngine` 类的实例可以是以下状态之一：
 
-#### 创建 (Creation)
+### 创建 (Creation)
 `SSLEngine` 已创建并初始化，但尚未使用。在此阶段，应用程序可以设置任何特定的 `SSLEngine` 的设置（启用的加密套件、`SSLEngine` 应该在客户端模式还是服务器模式下进行握手等）。然而，一旦开始握手，任何新设置（客户端/服务器模式除）将用于下一次握手。
 
-#### 初始握手 (Initial handshake)
+### 初始握手 (Initial handshake)
 初始握手是两个对端交换通信参数直到建立 `SSLSession` 的过程。在此阶段无法发送应用程序数据。
 
-#### 应用程序数据 (Application data)
+### 应用程序数据 (Application data)
 在通信参数建立且握手完成后，应用程序数据就可以流过 `SSLEngine`。输出的应用程序消息经过加密和完整性保护，而入站消息则执行反向过程。
 
-#### 重握手 (Resshaking)
-在数据数据期间，任何一方都可以随时请求重新协商会话。在应用程序数据阶段，任何一方都可以请求重新协商会话。在重握手开始之前，可以设置 TLS/DTLS 协议。在重握手阶段，应用程序可以设置客户端/服务器模式和启用的加密套件。
+### 重握手 (Renegotiation)
+在数据传输期间，任何一方都可以随时请求重新协商会话。在应用程序数据阶段，任何一方都可以请求重新协商会话。在重握手开始之前，可以设置 TLS/DTLS 协议。在重握手阶段，应用程序可以设置客户端/服务器模式和启用的加密套件。
 
-#### 关闭 (Closure)
+### 关闭 (Closure)
 当连接不再需要时，应用程序应该关闭 `SSLEngine`。在关闭底层传输机制之前，关闭 `SSLEngine`。
 
-### 引擎方法 (Engine Methods)
+## 引擎方法 (Engine Methods)
 有三种类型的 `SSLEngine` 方法：初始化 `SSLEngine` 的、用于写入或读取网络数据的、以及关闭 `SSLEngine` 的。
 
 以下步骤描述了相对于 `SSLEngine` 的握手过程：
 
-1. 在创建 `SSLEngine` 后，调用各种设置方法，例如 `setEnabledProtocols()`、`setEnabledCipherites()`、`useClientMode()` 和 `setWantAuth()`。
+1. 在创建 `SSLEngine` 后，调用各种设置方法，例如 `setEnabledProtocols()`、`setEnabledCipherSuites()`、`useClientMode()` 和 `setWantAuth()`。
 2. 获取当前的 `SSLSession`，并为应用程序和网络缓冲区分配缓冲区（`getApplicationBufferSize()` 和 `getPacketBufferSize()`）。
 3. 配置好连接和缓冲区后，调用 `beginHandshake()` 进入初始状态。
 4. 创建连接使用的传输机制，例如 `SocketChannel` 或 `Socket`。
 5. 在应用程序数据被消耗、产生和保护之前，需要多次调用 `wrap()` 和 `unwrap()` 方法。握手数据必须通过传输机制与对端交换。有关 TLS 处理机制的更多信息，请参见 TLS RFC（RFC 5246：传输层安全（TLS）协议：1.2）。例如，如果你的 `SSLEngine` 作为客户端并处理 TLS1.2，可能会看到以下情况：
-   - a. `wrap()` 产生一个 Hello 消息，然后将其放入输出网络缓冲区。应用程序必须正确将此消息发送到对端。
-   - b. `SSLEngine` 现在必须处理对端的响应（例如 ServerHello、Certificate 和 ServerDone 消息）以推进握手。应用程序从网络传输获取字节并放入缓冲区。`SSLEngine` 使用 `unwrap()` 方法处理这些字节。
-   - c. `SSLEngine` 发送更多握手数据（例如 ChangeCipherSuite 和 Finished 消息）。`wrap()` 将消息放入输出网络缓冲区。应用程序必须像之前一样正确将这些字节发送到对端。
-   - d. `SSLEngine` 等待对端的 ChangeCipherSuite 或 Finished 消息。该消息的路径与步骤 b 相同。
-6. 握手完成后，应用程序数据现在开始流动。调用 `wrap()` 取输出缓冲区中的字节进行加密保护，然后将其放入网络缓冲区传输到对端。同样，调用 `unwrap()` 解密并保护入站网络数据。生成的应用程序被放入入站应用程序缓冲区。
+    a. `wrap()` 产生一个 Hello 消息，然后将其放入输出网络缓冲区。应用程序必须正确将此消息发送到对端。
+    b. `SSLEngine` 现在必须处理对端的响应（例如 ServerHello、Certificate 和 ServerDone 消息）以推进握手。应用程序从网络传输获取字节并放入缓冲区。`SSLEngine` 使用 `unwrap()` 方法处理这些字节。
+    c. `SSLEngine` 发送更多握手数据（例如 ChangeCipherSuite 和 Finished 消息）。`wrap()` 将消息放入输出网络缓冲区。应用程序必须像之前一样正确将这些字节发送到对端。
+    d. `SSLEngine` 等待对端的 ChangeCipherSuite 或 Finished 消息。该消息的路径与步骤 b 相同。
+6. 握手完成后，应用程序数据现在开始流动。调用 `wrap()` 取输出缓冲区中的字节进行加密保护，然后将其放入网络缓冲区传输到对端。同样，调用 `unwrap()` 解密并保护入站网络数据。生成的应用程序数据被放入入站应用程序缓冲区。
 7. 在两个端都交换数据后，关闭 `SSLEngine` 的入站和输出端。调用 `closeOutput()` 方法通知 `SSLEngine` 应用程序将不再发送更多数据。调用 `closeInbound()` 方法通知 `SSLEngine` 网络连接已关闭且不再有更多数据。
 
-## 理解 SSLEngine 状态
+# 理解 SSLEngine 状态
 
-为了指示引擎的状态以及应用程序应该采取的操作，`own.wrap()` 和 `own.unwrap()` 方法返回一个 `SSLEngineResult` 实例，如示例 8-5 所示。该 `SSLEngineResult` 对象包含两个部分的状态信息：引擎的总体状态和握手状态。
+为了指示引擎的状态以及应用程序应该采取的操作，`SSLEngine.wrap()` 和 `SSLEngine.unwrap()` 方法返回一个 `SSLEngineResult` 实例，如示例 8-5 所示。该 `SSLEngineResult` 对象包含两个部分的状态信息：引擎的总体状态和握手状态。
 
 可能的总体状态由 `SSLEngineResult.Status` 枚举表示。这些状态如下：
 
-- **OK**
+* **OK**
   没有错误。
-
-- **CLOSED**
+* **CLOSED**
   操作被 `SSLEngine` 关闭，或者由于操作已经关闭而无法完成操作。
-
-- **BUFFER_UNDERFLOW**
+* **BUFFER_UNDERFLOW**
   输入缓冲区数据不足以进行处理，表明应用程序必须从对端获取更多数据（例如，通过从网络读取更多数据）并重试操作。
-
-- **BUFFER_OVERFLOW**
+* **BUFFER_OVERFLOW**
   输出缓冲区空间不足以容纳结果，表明应用程序必须清除或扩大目标缓冲区并重试操作。
 
-示例 8-1 阐述了如何处理 `SSLEngine.unwrap()` 方法的 `BUFFER_UNDERFLOW` 和 `BUFFER_OVERFLOW` 状态。它使用了 `SSLSession.getApplicationBufferSize()` 和 `SSLSession.getPacketBufferSize()` 来确定字节缓冲区的大小。
+示例 8-1 说明了如何处理 `SSLEngine.unwrap()` 方法的 `BUFFER_UNDERFLOW` 和 `BUFFER_OVERFLOW` 状态。它使用了 `SSLSession.getApplicationBufferSize()` 和 `SSLSession.getPacketBufferSize()` 来确定字节缓冲区的大小。
 
 可能的握手状态由 `SSLEngineResult.HandshakeStatus` 枚举表示。它们代表握手是否已完成、调用者是否必须从对端发送或接收更多握手数据等。这些握手状态如下：
 
-- **FINISHED**
+* **FINISHED**
   `SSLEngine` 刚刚完成握手。
-
-- **NEED_TASK**
+* **NEED_TASK**
   在握手继续之前，`SSLEngine` 需要执行一个（或多个）委托任务。
-
-- **NEED_UNWRAP**
+* **NEED_UNWRAP**
   `SSLEngine` 在握手继续之前需要从远程侧接收数据。
-
-- **NEED_UNWRAP_AGAIN**
+* **NEED_UNWRAP_AGAIN**
   `SSLEngine` 在握手继续之前需要进行解包（unwrap）。此值表示之前已从远程侧接收了尚未解释的数据，不需要再次接收；数据已带入 JSSE 框架但尚未被处理。
-
-- **NEED_WRAP**
+* **NEED_WRAP**
   `SSLEngine` 在握手继续之前必须向远程侧发送数据，因此应该调用 `SSLEngine.wrap()`。
-
-- **NOT_HANDSHAKING**
+* **NOT_HANDSHAKING**
   `SSLEngine` 当前没有进行握手。
 
-每个结果包含两个状态允许 `SSLEngine` 指示应用程序必须采取两个操作：一个是响应握手的，另一个是代表 `wrap()` 和 `unwrap()` 方法的总体状态。例如，引擎可能作为单次 `SSLEngine.unwrap()` 调用的结果，返回 `SSLEngineResult.Status.OK` 表示输入数据已成功处理，并返回 `SSLEngineResult.HandshakeStatus.NEED_UNWRAP` 表示应用程序应该从对端获取更多 TLS/DTLS 编码数据并再次进行解包，以便继续握手。正如你将看到的，接的示例是一个很好的开始，但它们需要大幅扩展才能正确处理所有这些状态组合。
+每个结果包含两个状态允许 `SSLEngine` 指示应用程序必须采取两个操作：一个是响应握手的，另一个是代表 `wrap()` 和 `unwrap()` 方法的总体状态。例如，引擎可能作为单次 `SSLEngine.unwrap()` 调用的结果，返回 `SSLEngineResult.Status.OK` 表示输入数据已成功处理，并返回 `SSLEngineResult.HandshakeStatus.NEED_UNWRAP` 表示应用程序应该从对端获取更多 TLS/DTLS 编码数据并再次进行解包，以便继续握手。正如你将看到的，接下来的示例是一个很好的开始，但它们需要大幅扩展才能正确处理所有这些状态组合。
 
 示例 8-2 和示例 8-3 演示了如何通过检查握手状态以及 `wrap()` 和 `unwrap()` 方法的总体状态来处理握手数据。
 
-## 示例 8-1 处理 BUFFER UNDERFLOW 和 OVERFLOW 的缓冲区用例
+# 示例 8-1 处理 BUFFER_UNDERFLOW 和 BUFFER_OVERFLOW 的缓冲区用例
 
-以下代码示例说明了如何处理 `BUFFER_UNDERFLOW` 和 `OVERFLOW` 状态：
+以下代码示例说明了如何处理 `BUFFER_UNDERFLOW` 和 `BUFFER_OVERFLOW` 状态：
 
 ```
 ```
@@ -17690,15 +17790,11 @@ switch (res.getStatus()) {
         peerAppData.capacity()) {
 
         // 扩大对端应用数据缓冲区
-
     } else {
-
         // 压缩或清除缓冲区
-
     }
 
     // 重试操作
-
     break;
 
   case BUFFER_UNDERFLOW:
@@ -17712,15 +17808,11 @@ switch (res.getStatus()) {
         peerNetData.capacity()) {
 
         // 扩大网络数据包缓冲区
-
     } else {
-
         // 压缩或清除缓冲区
-
     }
 
     // 获取更多入站网络数据然后重试
-
     break;
 
 }
@@ -17728,17 +17820,15 @@ switch (res.getStatus()) {
 // 处理其他状态：CLOSED, OK
 // ...
 
-}
-
 ```
 
-# 示例 8-2 检查和处理握手状态及总体状态的示例代码
+### 示例 8-2 检查和处理握手状态及总体状态的示例代码
 
 以下代码示例说明了如何通过检查握手状态以及 `wrap()` 和 `unwrap()` 方法的总体状态来处理握手数据：
 
 ```java
 void doHandshake(SocketChannel socketChannel, SSLEngine engine,
-ByteBuffer myData, ByteBuffer peerNetData) throws Exception {
+                 ByteBuffer myData, ByteBuffer peerNetData) throws Exception {
 
     // 创建用于持有应用数据的缓冲区
     int appBufferSize = engine.getSession().getApplicationBufferSize();
@@ -17752,61 +17842,61 @@ ByteBuffer myData, ByteBuffer peerNetData) throws Exception {
 
     // 处理握手消息
     while (hs != SSLEngineResult.HandshakeStatus.FINISHED &&
-    hs != SSLEngineResult.HandshakeStatus.NOT_HANDSHAKING) {
+           hs != SSLEngineResult.HandshakeStatus.NOT_HANDSHAKING) {
 
-      switch (hs) {
+        switch (hs) {
+            case NEED_WRAP:
+                // 从对端接收握手数据
+                if (socketChannel.read(peerNetData) < 0) {
+                    // 通道到达流结束
+                }
 
-      case NEED_WRAP:
+                // 处理入站握手数据
+                peerNetData.flip();
+                SSLEngineResult res = engine.unwrap(peerNetData, peerAppData);
+                peerNetData.compact();
 
-        // 从对端接收握手数据
-        if (socketChannel.read(peerNetData) < 0) {
-          // 通道到达流结束
+                hs = res.getHandshakeStatus();
+
+                // 检查状态
+                switch (res.getStatus()) {
+                    case OK:
+                        // 处理 OK 状态
+                        break;
+                    case BUFFER_OVERFLOW:
+                        // 缓冲区太小
+                        break;
+                    case BUFFER_UNDERFLOW:
+                        // 缓冲区数据不足
+                        break;
+                    case CLOSED:
+                        // 连接已关闭
+                        break;
+                }
+                break;
+
+            case NEED_TASK:
+                // 执行委托任务
+                Runnable task;
+                while ((task = engine.getDelegatedTask()) != null) {
+                    task.run();
+                }
+                hs = engine.getHandshakeStatus();
+                break;
+
+            case NEED_UNWRAP:
+                // 需要解包数据
+                break;
+
+            case NEED_UNWRAP_AGAIN:
+                // 需要再次解包
+                break;
         }
-
-        // 处理入站握手数据
-        peerNetData.flip();
-        SSLEngineResult res = engine.unwrap(peerNetData, peerAppData);
-        peerNetData.compact();
-        hs = res.getHandshakeStatus();
-
-        // 检查状态
-        switch (res.getStatus()) {
-        case OK:
-          // 处理 OK 状态
-          break;
-        case BUFFER_OVERFLOW:
-          // 缓冲区太小
-          break;
-        case BUFFER_UNDERFLOW:
-          // 缓冲区数据不足
-          break;
-        case CLOSED:
-          // 连接已关闭
-          break;
-        }
-
-      case NEED_TASK:
-        // 执行委托任务
-        Runnable task;
-        while ((task = engine.getDelegatedTask()) != null) {
-          task.run();
-        }
-        hs = engine.getHandshakeStatus();
-        break;
-
-      case NEED_UNWRAP:
-        // 需要解包数据
-        break;
-
-      case NEED_UNWRAP_AGAIN:
-        // 需要再次解包
-        break;
     }
-  }
 }
 ```
 
-# 示例 8-3 处理 DTLS 状态和总体状态的示例代码
+### 示例 8-3 处理 DTLS 状态和总体状态的示例代码
 
 以下代码片段说明了如何处理 DTLS 状态：
 
@@ -17877,15 +17967,15 @@ void handshake(SSLEngine engine, DatagramSocket socket,
 }
 ```
 
-# 用于 TLS 协议的 SSLEngine
+## 用于 TLS 协议的 SSLEngine
 
 本节介绍了如何创建一个 `SSLEngine` 对象并使用它来生成和处理 TLS 数据。
 
-## 创建 SSLEngine 对象
+### 创建 SSLEngine 对象
 
 使用 `SSLContext.createSSLEngine()` 方法来创建一个 `SSLEngine` 对象。在使用 `SSLEngine` 对象之前，你必须配置引擎以作为客户端或服务器运行，并设置其他配置参数，例如使用哪些加密套件以及是否需要客户端身份验证。
 
-### 示例 8-4 使用 JKS 作为密钥库创建 TLS SSLEngine 客户端的代码
+#### 示例 8-4 使用 JKS 作为密钥库创建 TLS SSLEngine 客户端的代码
 
 以下示例代码创建了一个使用 JKS 作为密钥库的 TLS `SSLEngine` 客户端。
 
@@ -17914,7 +18004,7 @@ TrustManagerFactory tmf = TrustManagerFactory.getInstance("PKIX");
 tmf.init(ksTrust);
 
 // 获取 TLS 协议的 SSLContext 实例
-sslContext = SSLContext.getInstance("TLS");
+SSLContext sslContext = SSLContext.getInstance("TLS");
 sslContext.init(kmf.getKeyManagers(), tmf.getTrustManagers(), null);
 
 // 创建引擎
@@ -17922,22 +18012,6 @@ SSLEngine engine = sslContext.createSSLEngine(hostname, port);
 
 // 作为客户端使用
 engine.setClientMode(true);
-```
-
-```java
-} else if (hs == SSLEngineResult.HandshakeStatus.NEED_TASK) {
-    runDelegatedTasks(engine);
-} else if (hs == SSLEngineResult.HandshakeStatus.NOT_HANDSHAKING) {
-    // OK，该进行数据交换了。
-    endLoops = true;
-} else if (hs == SSLEngineResult.HandshakeStatus.FINISHED) {
-    endLoops = true;
-}
-
-EngineResult.HandshakeStatus hs = engine.getHandshakeStatus();
-if (hs == SSLEngineResult.HandshakeStatus.NOT_HANDSHAKING) {
-    throw new Exception("Not ready for application data yet");
-}
 ```
 
 
@@ -18021,10 +18095,12 @@ myAppData.flip();
 while (myAppData.hasRemaining()) {
     // 生成 TLS/DTLS 编码数据（握手或应用数据）
     SSLEngineResult res = engine.wrap(myAppData, myNetData);
+
     // 处理调用的状态
     if (res.getStatus() == SSLEngineResult.Status.OK) {
         myAppData.compact();
     }
+
     // 将 TLS/DTLS 编码数据发送给对端
     while (myNetData.hasRemaining()) {
         int num = socketChannel.write(myNetData);
@@ -18032,6 +18108,7 @@ while (myAppData.hasRemaining()) {
             // 没有写入字节；稍后重试
         }
     }
+
     // 处理其他状态：BUFFER_OVERFLOW, CLOSED
     ...
 }
@@ -18057,6 +18134,7 @@ if (num == -1) {
 if (res.getStatus() == SSLEngineResult.Status.OK) {
     peerNetData.compact();
 }
+
 if (peerAppData.hasRemaining()) {
     // 使用 peerAppData
 }
@@ -18104,7 +18182,7 @@ kmf.init(ksKeys, passphrase);
 TrustManagerFactory tmf = TrustManagerFactory.getInstance("PKIX");
 tmf.init(ksTrust);
 
-// 获取 DTLS 协议的 SSLContext 
+// 获取 DTLS 协议的 SSLContext
 SSLContext sslContext = SSLContext.getInstance("DTLS");
 sslContext.init(kmf.getKeyManagers(), tmf.getTrustManagers(), null);
 
@@ -18120,57 +18198,41 @@ engine.setClientMode(true);
 ```java
 import javax.net.ssl.*;
 import java.security.*;
-```
 
-```java
 // 使用密钥材料创建并初始化 SSLContext
 char[] passphrase = "passphrase".toCharArray();
-```
 
-```java
 // 首先初始化密钥和信任材料
 KeyStore ksKeys = KeyStore.getInstance("PKCS12");
 ksKeys.load(new FileInputStream("testKeys"), passphrase);
 KeyStore ksTrust = KeyStore.getInstance("PKCS12");
-ksTrust.load(new FileInputStream("testtrust"), passphrase);
-```
+ksTrust.load(new FileInputStream("testTrust"), passphrase);
 
-```java
 // KeyManagers 决定使用什么材料
 KeyManagerFactory kmf = KeyManagerFactory.getInstance("PKIX");
 kmf.init(ksKeys, passphrase);
-```
 
-```java
 // TrustManagers 决定是否允许连接
 TrustManagerFactory tmf = TrustManagerFactory.getInstance("PKIX");
 tmf.init(ksTrust);
-```
 
-```java
 // 获取 DTLS SSLContext
 SSLContext sslContext = SSLContext.getInstance("DTLS");
 sslContext.init(kmf.getKeyManagers(), tmf.getTrustManagers(), null);
-```
 
-```java
 // 创建引擎
 SSLEngine engine = sslContext.createSSLEngine(hostname, port);
-```
 
-```java
 // 使用引擎作为服务器
 engine.setClientMode(false);
-```
 
-```java
 // 要求客户端身份认证
 engine.setNeedClientAuth(true);
 ```
 
 ## 生成和处理 DTLS 数据
 
-DTLS 握手和 TLS 握手生成和处理数据的方式相似（参见“生成和处理 TLS 数据”）。它们都使用 `SSLEngine.wrap()` 和 `SSLEngine.unwrap()` 方法分别生成和消耗网络数据。
+DTLS 握手和 TLS 握手生成和处理数据的方式相似（参见 [生成和处理 TLS 数据]）。它们都使用 `SSLEngine.wrap()` 和 `SSLEngine.unwrap()` 方法分别生成和消耗网络数据。
 
 下图显示了典型 DTLS 握手期间的状态机，以及相应的消息和状态：
 
@@ -18187,43 +18249,45 @@ void handshake(SSLEngine engine, SocketAddress peeraddr) throws Exception {
     boolean endLoops = false;
     int MAX_HANDSHAKE = 60;
     int loops = MAX_HANDSHAKE;
+
     engine.beginHandshake();
+
     while (!endLoops && (clientException == null)) {
         if (--loops < 0) {
             throw new RuntimeException("Too many loops to handshake");
         }
+
         SSLEngineResult.HandshakeStatus hs = engine.getHandshakeStatus();
-    }
-}
-```
 
-```java
-if (hs == SSLEngineResult.HandshakeStatus.NEED_UNWRAP || hs == SSLEngineResult.HandshakeStatus.NEED_UNWRAP_AGAIN) {
-    ByteBuffer iNet;
-    ByteBuffer iApp;
-    byte[] buf = new byte[1024];
-    DatagramPacket packet = new DatagramPacket(buf, buf.length);
-    try {
-        socket.receive(packet);
-    } catch (SocketTimeoutException ste) {
-        // 超时重传包
-        List<DatagramPacket> packets = onTimeout(engine);
-        for (DatagramPacket p : packets) {
-            socket.send(p);
+        if (hs == SSLEngineResult.HandshakeStatus.NEED_UNWRAP || hs == SSLEngineResult.HandshakeStatus.NEED_UNWRAP_AGAIN) {
+            ByteBuffer iNet;
+            ByteBuffer iApp;
+            byte[] buf = new byte[1024];
+            DatagramPacket packet = new DatagramPacket(buf, buf.length);
+
+            try {
+                socket.receive(packet);
+            } catch (SocketTimeoutException ste) {
+                // 超时重传包
+                List<DatagramPacket> packets = onTimeout(engine);
+                for (DatagramPacket p : packets) {
+                    socket.send(p);
+                }
+                continue;
+            }
+
+            iNet = ByteBuffer.wrap(buf, 0, packet.getLength());
+            iApp = ByteBuffer.allocate(1024);
         }
-        continue;
-    }
-    iNet = ByteBuffer.wrap(buf, 0, packet.getLength());
-    iApp = ByteBuffer.allocate(1024);
-}
-```
 
-```java
-SSLEngineResult r = engine.unwrap(iNet, iApp);
-SSLEngineResult.Status rs = r.getStatus();
-hs = r.getHandshakeStatus();
-if (rs == SSLEngineResult.Status.BUFFER_OVERFLOW) {
-    // 最大分片大小不正确
+        SSLEngineResult r = engine.unwrap(iNet, iApp);
+        SSLEngineResult.Status rs = r.getStatus();
+        hs = r.getHandshakeStatus();
+
+        if (rs == SSLEngineResult.Status.BUFFER_OVERFLOW) {
+            // 最大分片大小不正确
+        }
+    }
 }
 ```
 
@@ -18236,7 +18300,7 @@ throw new Exception("Buffer overflow: " + "Incorrect maximum fragment");
 
     // 坏包，或最大分片大小不正确
 
-    if (hs == SSLEngineResult.HandshakeStatus.NOT_HANDSHING) {
+    if (hs == SSLEngineResult.HandshakeStatus.NOT_HANDSHAKING) {
 
         throw new Exception("Buffer underflow: " + "Incorrect maximum fragment");
 
@@ -18268,7 +18332,7 @@ if (hs == SSLEngineResult.Status.OK) {
 
     runDelegatedTasks(engine);
 
-} else if (hs == SSLEngineResult.HandshakeStatus.NOT_HANDSHING) {
+} else if (hs == SSLEngineResult.HandshakeStatus.NOT_HANDSHAKING) {
 
     // OK，可以进行应用数据交换
 
@@ -18282,7 +18346,7 @@ if (hs == SSLEngineResult.Status.OK) {
 
 SSLEngineResult.HandshakeStatus hs = engine.getHandshakeStatus();
 
-if (hs != SSLEngineResult.HandshakeStatus.NOT_HANDSHING) {
+if (hs != SSLEngineResult.HandshakeStatus.NOT_HANDSHAKING) {
 
     throw new Exception("Not ready for application data yet");
 
@@ -18327,7 +18391,7 @@ DTLS 的 `SSLEngine.wrap()` 方法与 TLS 有以下不同：
 
 ## 在应用程序中处理缓冲的握手消息
 
-数据报传输不要求也不提供数据的可靠交付或有序交付。握手消息可能会丢失或需要重排序。在 DTLS 实现中，在接收所有之前的消息之前，握手消息可能需要缓冲以备后处理。
+数据报传输不要求也不提供数据的可靠交付或有序交付。握手消息可能会丢失或需要重排序。在 DTLS 实现中，在接收所有之前的消息之前，握手消息可能需要缓冲以备后续处理。
 
 SSLEngine 的 DTLS 实现负责重排序握手消息。握手消息的缓冲和重排序对应用程序是透明的。
 
@@ -18372,11 +18436,13 @@ if (res.getHandshakeStatus() == SSLEngineResult.HandshakeStatus.NEED_TASK) {
 
 为了有序关闭 TLS/DTLS 连接，TLS/DTLS 协议需要传输关闭消息。因此，当应用程序完成 TLS/DTLS 连接时，应首先从 SSLEngine 获取关闭消息，然后使用其传输机制传输它们，最后关闭传输机制。示例 8-10
 
-除了显式关闭外，SSLEngine 还可能由用户关闭（通过在处理握手数据时接收到关闭消息），或由于 SSLEngine 在处理应用程序或握手数据时遇到错误并抛出 `SSLException` 而关闭。在这种情况下，应用程序应该调用 `SSLEngine.wrap()` 获取关闭消息并发送给对端，直到 `SSLEngine.isOutboundDone()` 返回 `true`（如示例 8-10 所示）直到 `SSLEngine.getStatus()` 返回 `CLOSED`。
+除了显式关闭外，SSLEngine 还可能由用户关闭（通过在处理握手数据时接收到关闭消息），或由于 SSLEngine 在处理应用程序或握手数据时遇到错误并抛出 `SSLException` 而关闭。在这种情况下，应用程序应该调用 `SSLEngine.wrap()` 获取关闭消息并发送给对端，直到 `SSLEngine.isOutboundDone()` 返回 `true`（如示例 8-10所示）直到 `SSLEngine.getStatus()` 返回 `CLOSED`。
 
-为了避免关闭，当传输链路在消息交换之前断开时，也可能发生意外关闭。在之前的示例中，应用程序尝试从非阻塞 `SocketChannel` 读取数据时可能会得到 -1 或 `IOException`，或者在向非阻塞 `SocketChannel` 写入数据时得到 `IOException`。当你到达输入数据的末尾时，应该调用 `engine.closeInbound()`，这将验证远端已安全关闭。然后应用程序应使用示例 8-10 中的过程进行关闭。显然，不同于使用 `SSLEngine` 的 `SSLSocket` 必须处理更多状态转换、状态和编程。参见使用 `SSLEngine` 的示例代码。
+为了避免关闭，当传输链路在消息交换之前断开时，也可能发生意外关闭。在之前的示例中，应用程序尝试从非阻塞 `SocketChannel` 读取数据时可能会得到 -1 或 `IOException`，或者在向非阻塞 `SocketChannel` 写入数据时得到 `IOException`。当你到达输入数据的末尾时，应该调用 `engine.closeInbound()`，这将验证远端已安全关闭。然后应用程序应使用示例 8-10 中的过程进行关闭。显然，不同于
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_631_0.png)
+
+使用 SSLngine 的 LSocket 必须处理更多状态转换、状态和编程。参见使用 SSLngine 的示例代码。
 
 ### 示例 8-10 关闭 TLS/DTLS 连接的示例代码
 
@@ -18391,6 +18457,7 @@ while (!engine.isOutboundDone()) {
     SSLEngineResult res = engine.wrap(empty, myData);
 
     // 检查 res
+
     // 将关闭消息给对端
     while (myData.hasRemaining()) {
         int num = socketChannel.write(myData);
@@ -18437,7 +18504,7 @@ socketChannel.close();
 
 在某些情况下，指定 `HttpsConnection` 实例使用的 `SSLSocketFactory` 是理想的。例如，你可能希望通过一种默认实现不支持的代理类型进行隧道传输。新的 `SSLSocketFactory` 可以返回已经执行所有隧道传输的套接字，从而允许 `HttpsConnection` 使用额外的代理。
 
-`HttpsConnection` 有一个分配给该类的默认 `SSLSocketFactory`（这是由 `SSLSocketFactory.getDefault()` 方法返回的工厂）。未来的 `HttpsConnection` 实例将继承当前的 `SSLSocketFactory`，直到通过 `HttpsConnection.setDefaultSocketFactory()` 为类分配了默认的 `SSLSocketFactory`。一旦创建了 `HttpsConnection` 实例，可以通过调用 `setSSLSocketFactory()` 方法覆盖此实例上继承的 `SSLSocketFactory`。
+`HttpsConnection` 有一个分配给该类的默认 `SSLSocketFactory`（这是由 `SSLSocketFactory.getDefault()` 方法返回的工厂）。未来的 `HttpsConnection` 实例将继承当前的 `SSLSocketFactory`，直到通过 `HttpsConnection.setDefaultSSLSocketFactory()` 为类分配了默认的 `SSLSocketFactory`。一旦创建了 `HttpsConnection` 实例，可以通过调用 `setSSLSocketFactory()` 方法覆盖此实例上继承的 `SSLSocketFactory`。
 
 > **Note:**
 > 更改默认的 `SSLSocketFactory` 对现有的 `HttpsConnection` 实例没有影响。必须调用 `setSSLSocketFactory()` 方法来更改实例。
@@ -18471,7 +18538,7 @@ socketChannel.close();
 
 ## SSLContext Class
 
-`javax.net.ssl.SSLContext` 类是安全协议实现的引擎类。该类的实例充当 `SSLSocket`、`SSLServerSocket` 和 `SSLEngine` 的工厂。`SSLContext` 对象持有在该上下文中创建的所有对象共享的所有状态信息。例如，当会话通过由上下文提供的工厂的套接字通过握手协议进行协商时，会话状态与 `SSLContext` 关联。这些会话可以被相同上下文中创建的其他套接字复用。
+`java.net.ssl.SSLContext` 类是安全协议实现的引擎类。该类的实例充当 `SSLSocket`、`SSLServerSocket` 和 `SSLEngine` 的工厂。`SSLContext` 对象持有在该上下文中创建的所有对象共享的所有状态信息。例如，当会话通过由上下文提供的工厂的套接字通过握手协议进行协商时，会话状态与 `SSLContext` 关联。这些会话可以被相同上下文中创建的其他套接字复用。
 
 每个实例都通过其 `init` 方法配置用于进行认证的密钥、证书链和受信任的根 CA 证书。此配置以密钥和信任管理器的形式提供。这些管理器为上下文支持的加密套件的认证和密钥协商方面提供支持。
 
@@ -18479,7 +18546,7 @@ socketChannel.close();
 
 ## Obtaining and Initializing the SSLContext Class
 
-`SSLContext` 类用于创建 `SSLServerSocketFactory` 或 `SSLSocketFactory`。
+`SSLContext` 类用于创建 `SSLServerSocket` 或 `SSLSocketFactory`。
 
 初始化 `SSLContext` 有两种方式：
 
@@ -18487,9 +18554,9 @@ socketChannel.close();
 
 ### 创建 SSLContext 对象
 
-让调用者对上下文行为拥有最大控制权的方法是调用 `SSLContext` 类的 `getInstance()` 方法，然后通过调用实例的 `init()` 方法进行初始化。`init()` 方法接受三个参数：`KeyManager` 对象数组、`TrustManager` 对象数组以及一个 `SecureRandom` 对象。`KeyManager` 和 `TrustManager` 对象可以通过实现相应的接口或使用 `KeyManagerFactory` 和 `TrustManagerFactory` 类来生成实现。随后，可以使用 `KeyStore` 中的材料对 `KeyManagerFactory` 和 `TrustManagerFactory` 进行初始化。最后，可以调用 `getTrustManagers()` 方法（在 `TrustManagerFactory` 中）和 `getKeyManagers()` 方法（在 `KeyManagerFactory` 中）来获取每种所需材料信任管理器或密钥管理器数组。
+- 让调用者对上下文行为拥有最大控制权的方法是调用 `SSLContext` 类的 `SSLContext.getInstance` 方法，然后通过调用实例的 `init()` 方法进行初始化。`init()` 方法接受三个参数：`KeyManager` 对象数组、`TrustManager` 对象数组以及一个 `SecureRandom` 对象。`KeyManager` 和 `TrustManager` 对象可以通过实现相应的接口或使用 `KeyManagerFactory` 和 `TrustManagerFactory` 类来生成实现。随后，可以使用 `KeyStore` 中的材料对 `KeyManagerFactory` 和 `TrustManagerFactory` 进行初始化。最后，可以调用 `getTrustManagers()` 方法（在 `TrustManagerFactory` 中）和 `getKeyManagers()` 方法（在 `KeyManagerFactory` 中）来获取每种所需材料信任管理器或密钥管理器数组。
 
-一旦建立了 TLS 连接，就会创建一个 `SSLSession`，它包含各种信息，例如已建立的身份和密码套件。`SSLSession` 然后用于描述两个实体之间正在进行的关系和状态信息。每个 TLS 连接拥有一个会话，但该会话可以被实体之间的多个连接同时或顺序使用。
+- 一旦建立了 TLS 连接，就会创建一个 `SSLSession`，它包含各种信息，例如已建立的身份和密码套件。`SSLSession` 然后用于描述两个实体之间正在进行的关系和状态信息。每个 TLS 连接拥有一个会话，但该会话可以被实体之间的多个连接同时或顺序使用。
 
 与基于 JCA 提供者的引擎一样，`SSLContext` 对象是使用 `SSLContext` 类的 `getInstance()` 工厂方法创建的。这些静态方法返回一个至少实现请求的套接字协议的实例。例如，`getInstance("TLSv1")` 返回一个实现 TLSv1、TLS1.1 和 TLS1.2 的实例。当从此上下文创建 `SSLSocket`、`SSLServerSocket` 或 `SSLEngine` 时，`getSupportedProtocols()` 方法返回支持的协议列表。你可以通过 `setEnabledProtocols(String[])` 方法控制哪些协议实际上已用于 SSL 连接。
 
@@ -18498,17 +18565,15 @@ socketChannel.close();
 
 要通过调用 `getInstance()` 工厂方法创建 `SSLContext`，你必须指定协议名称。你还可以指定你想要由哪个提供者提供请求协议的实现：
 
-```java
-public static SSLContext getInstance(String protocol);
-public static SSLContext getInstance(String protocol, String provider);
-public static SSLContext getInstance(String protocol, Provider provider);
-```
+- `public static SSLContext getInstance(String protocol);`
+- `public static SSLContext getInstance(String protocol, String provider);`
+- `public static SSLContext getInstance(String protocol, Provider provider);`
 
 如果只指定协议名称，系统将确定环境中是否存在请求协议的可用实现。如果存在多个实现，它将确定是否存在优选的实现。
 
 如果同时指定了协议名称和提供者，系统将确定所请求的提供者中是否存在请求协议的实现。如果没有实现，将抛出异常。
 
-协议是一个类似于 `TLS*` 的字符串，描述了所需的的安全套接字协议。`SSLContext` 的常用协议名称定义在 [Java 安全标准算法名称] 中。
+协议是一个类似于 `TLS*` 的字符串，描述了所需的安全套接字协议。`SSLContext` 的常用协议名称定义在 [Java 安全标准算法名称] 中。
 
 可以通过以下方式获取 `SSLContext`：
 
@@ -18522,7 +18587,7 @@ SSLContext sc = SSLContext.getInstance("TLS");
 public void init(KeyManager[] km, TrustManager[] tm, SecureRandom random);
 ```
 
-如果 `KeyManager[]` 参数为 `null`，则为此上下文定义一个空的 `KeyManager`。如果 `TrustManager[]` 参数为 `null`，则将在已安装的安全提供者中搜索 `TrustManagerFactory` 类的最高优先级实现，并从中创建相应的 `TrustManager`。同样，`SecureRandom` 参数可能为 `null`，在这种情况下将使用默认实现。
+如果 `KeyManager` 参数为 `null`，则为此上下文定义一个空的 `KeyManager`。如果 `TrustManager` 参数为 `null`，则将在已安装的安全提供者中搜索 `TrustManagerFactory` 类的最高优先级实现，并从中创建相应的 `TrustManager`。同样，`SecureRandom` 参数可能为 `null`，在这种情况下将使用默认实现。
 
 如果使用默认上下文（例如，通过 `SSLSocketFactory.getDefault()` 或 `SSLServerSocketFactory.getDefault()` 创建 `SSLContext`），则将创建默认的 `KeyManager` 和 `TrustManager`。还会选择默认的 `SecureRandom` 实现。
 
@@ -18534,7 +18599,7 @@ public void init(KeyManager[] km, TrustManager[] tm, SecureRandom random);
 
 ## TrustManagerFactory 类
 
-`javax.net.ssl.TrustManagerFactory` 是一个基于提供者的引擎类，作为一个或多个 `TrustManager` 类型的工厂。由于基于提供者的，可以实现并配置额外的工厂，以提供更复杂的服务或实现特定的认证策略。
+`java.net.ssl.TrustManagerFactory` 是一个基于提供者的引擎类，作为一个或多个 `TrustManager` 类型的工厂。由于基于提供者的，可以实现并配置额外的工厂，以提供更复杂的服务或实现特定的认证策略。
 
 ## 创建 TrustManagerFactory
 
@@ -18552,7 +18617,7 @@ TrustManagerFactory tmf = TrustManagerFactory.getInstance(String algorithm, Prov
 
 TrustManagerFactory tmf = TrustManagerFactory.getInstance("PKIX", "SunJSSE");
 
-上述调用创建了 SunJSSE PKIX 信任工厂的实例。它可以用于创建提供 PKIX 证书路径验证的信任管理器。在初始化 `SSLContext` 时，你可以使用信任管理器，也可以编写自己的信任管理器，例如使用 `CertPath` API。Java PKI 程序员指南。如果你使用 `X509TrustManager` 接口实现了信任管理器，则无需使用信任管理器。
+上述调用创建了 SunJSSE PKIX 信任工厂的实例。它可以用于创建提供 PKIX 证书路径验证的信任管理器。在初始化 SSLContext 时，你可以使用信任管理器，也可以编写自己的信任管理器，例如使用 CertPath API。Java PKI 程序员指南。如果你使用 X509TrustManager 接口实现了信任管理器，则无需使用信任管理器。
 
 新创建的工厂通过调用一个 `init()` 方法进行初始化：
 
@@ -18563,7 +18628,7 @@ public void init(ManagerFactoryParameters spec);
 ```
 
 调用适用于你正在使用的 `TrustManagerFactory` 的 `init()` 方法。如果你不确定，请询问提供者供应商。
-对于许多情况，例如来自 SunJSSE 提供者的 SunX509 TrustManagerFactory，`KeyStore` 是初始化 `TrustManagerFactory` 所需唯一信息，因此第一个 `init` 方法是适当的。TrustManagerFactory 将查询 `KeyStore` 以有关远程证书是否应该被信任的信息。
+对于许多情况，例如来自 SunJSSE 提供者的 SunX509 TrustManagerFactory，`KeyStore` 是初始化 `TrustManagerFactory` 所需唯一信息，因此第一个 `init` 方法是适当的。TrustManagerFactory 将查询 `KeyStore` 以获取有关远程证书是否应该被信任的信息。
 
 有时，用户需要 `KeyStore` 以外的初始化参数。预计用户将传递由提供者定义的 `ManagerFactoryParameters` 的实现。提供者随后可以调用 `ManagerFactoryParameters` 实现中的指定方法来获取所需信息。
 
@@ -18588,7 +18653,7 @@ public interface MyTrustManagerFactoryParams extends ManagerFactoryParams {
 以下方法 `filterTrustAnchors` 过滤一组信任锚点（trust anchors），移除在指定日期前过期的证书，然后使用该 set 锚点初始化 `TrustManagerFactory`。
 
 ```java
-public static void filterTrustAnchors (
+public static void filterTrustAnchors(
     String truststore, String password, String validityDate)
     throws FileNotFoundException, KeyStoreException, IOException,
     ParseException, NoSuchAlgorithmException,
@@ -18624,7 +18689,7 @@ Set<TrustAnchor> validTrustAnchors = myTrustAnchors.stream().filter(
 PKIXBuilderParameters pkixParams = new PKIXBuilderParameters(validTrustAnchors, new X509CertSelector());
 
 // 将 PKIX 参数封装为信任参数
-ManagerFactoryParameters trustParams = new CertPathTrustManagerParameters(pkixParameters);
+ManagerFactoryParameters trustParams = new CertPathTrustManagerParameters(pkixParams);
 
 // 为符合 PKIX 标准的信任管理器创建 TrustManagerFactory
 TrustManagerFactory factory = TrustManagerFactory.getInstance("PKIX");
@@ -18707,9 +18772,7 @@ ctx.init(null, factory.getTrustManagers(), null);
 
 ## X509TrustManager 接口
 
-`java.net.ssl.X509TrustManager` 接口扩展了通用的 `TrustManager` 接口。在使用信任管理器时，必须由信任管理器实现它。
-
-在使用信任管理器时，当使用 X509 时，必须实现该接口。
+`javax.net.ssl.X509TrustManager` 接口扩展了通用的 `TrustManager` 接口。在使用信任管理器时，当使用 X509 时，必须实现该接口。
 
 ## 创建 X509TrustManager
 
@@ -18723,14 +18786,14 @@ ctx.init(null, factory.getTrustManagers(), null);
 
 ## 第 8 章 JSSE 类和接口
 
-1. 如果定义了 `java.net.ssl.trustStore` 属性，工厂将尝试使用该属性指定的文件并将其作为 KeyStore。如果定义了 `java.net.ssl.trustStore` 但该文件不存在，则创建一个空密钥的的信任管理器。
-2. 如果 `java.net.ssl.trustStore` 属性未指定，则：
+1. 如果定义了 `javax.net.ssl.trustStore` 属性，工厂将尝试使用该属性指定的文件并将其作为 KeyStore。如果定义了 `javax.net.ssl.trustStore` 但该文件不存在，则创建一个空密钥的信任管理器。
+2. 如果 `javax.net.ssl.trustStore` 属性未指定，则：
     - 如果 `java-home/lib/security/cacerts` 存在，则使用该文件；
     - 如果 `java-home/lib/security/cacerts` 存在，则使用该文件；
     - 如果这两个都不存在，则 TLS 是匿名的，不进行任何验证，且不需要信任存储。
 
 要了解更多关于 `java-home` 的信息，请参考术语和定义。
-工厂查找由 `java.net.ssl.trustStore` 指定的文件或 JSSE 特定的文件 `cacerts`。因此，你可以提供可能位于 `cacerts` 中的 X509 根证书用于代码签名目的。
+工厂查找由 `javax.net.ssl.trustStore` 指定的文件或 JSSE 特定的文件 `cacerts`。因此，你可以提供可能位于 `cacerts` 中的 X509 根证书用于代码签名目的。
 
 ## 创建你的 X509TrustManager
 
@@ -18741,7 +18804,7 @@ ctx.init(null, factory.getTrustManagers(), null);
 一旦创建了信任管理器，请像示例所示使用 `init()` 方法将其分配给 `SSLContext`。从该 `SSLContext` 创建的未来 `SocketFactory` 将在做出信任决策时使用你的信任管理器。
 
 ```java
-TrustManager[] myTMs = new TrustManager[]{ new X509TrustManager() };
+TrustManager[] myTMs = new TrustManager[]{ new MyX509TrustManager() };
 SSLContext ctx = SSLContext.getInstance("TLS");
 ctx.init(null, myTMs, null);
 ```
@@ -18791,9 +18854,10 @@ TrustManager tms[] = tmf.getTrustManagers();
 
 ```java
 for (int i = 0; i < tms.length; i++) {
-    if (tms[i] instanceof X509TrustManager)
+    if (tms[i] instanceof X509TrustManager) {
         pkixTrustManager = (X509TrustManager) tms[i];
         return;
+    }
 }
 ```
 
@@ -18903,7 +18967,6 @@ public class MyX509TrustManager extends X509ExtendedTrustManager {
 
         TrustManagerFactory tmf = TrustManagerFactory.getInstance("PKIX");
         tmf.init(ks);
-
         TrustManager[] tms = tmf.getTrustManagers();
 
         /*
@@ -18953,7 +19016,6 @@ public class MyX509TrustManager extends X509ExtendedTrustManager {
         try {
             pkixTrustManager.checkServerTrusted(chain, authType);
         } catch (CertificateException excepc) {
-
             /*
 
              * 可能会弹出一个对话框询问是否信任
@@ -19017,7 +19079,7 @@ public class MyX509TrustManager extends X509ExtendedTrustManager {
 
 `KeyManager` 的主要职责是选择最终发送到远端的身份凭据。为了验证你自己（本地套接字端），你必须使用一个或多个 `KeyManager` 初始化 `SSLContext`。对于每种支持的不同身份验证机制，你需要一个 `KeyManager`。如果传递 `null`，将创建一个空的 `KeyManager`。如果使用内部默认上下文（例如通过 `SSLSocketFactory.getDefault()` 或 `SSLServerSocketFactory.getDefault()` 创建的 `SSLContext`），则将创建一个默认的 `KeyManager`。
 
-# KeyManagerFactory 类
+## KeyManagerFactory 类
 
 `javax.net.ssl.KeyManagerFactory` 类是一个基于提供者（provider-based）服务的引擎类，作为一个或多个类型 `KeyManager` 对象的工厂。SunJSSE 提供者实现了一个可以返回基础 X.509 密钥管理器的工厂。由于它是基于提供者的，可以实现并配置额外的工厂以提供备选的密钥管理器。
 
@@ -19043,12 +19105,12 @@ KeyManagerFactory kmf = KeyManagerFactory.getInstance("SunX509", "SunJSSE");
 
 ```java
 public void init(KeyStore ks, char[] password);
-public void init(KeyFactoryParameters spec);
+public void init(ManagerFactoryParameters spec);
 ```
 
-取决于你正在使用的 `KeyManagerFactory` 哪种 `init` 方法是合适的。如果你不确定，请询问提供者供应商。
+取决于你正在使用的 `KeyManagerFactory`，哪种 `init` 方法是合适的。如果你不确定，请询问提供者供应商。
 
-对于许多工厂（例如来自 SunJSSE 提供者的 `DefaultX509 KeyManagerFactory`），`KeyStore` 和密码是初始化 `KeyManagerFactory` 所需的所有信息，因此 `init` 方法是合适的调用方法。`KeyManagerFactory` 将查询 `KeyStore` 以获取关于在使用哪个私钥和匹配的公钥证书来对远程端进行认证的信息。参数规范将用于用于从 `KeyStore` 访问密钥的方法。`KeyStore` 中的所有密钥必须由相同的密码保护。
+对于许多工厂（例如来自 SunJSSE 提供者的 `DefaultX509 KeyManagerFactory`），`KeyStore` 和密码是初始化 `KeyManagerFactory` 所需的所有信息，因此第一个 `init` 方法是合适的调用方法。`KeyManagerFactory` 将查询 `KeyStore` 以获取关于在使用哪个私钥和匹配的公钥证书来对远程端进行认证的信息。参数规范将用于用于从 `KeyStore` 访问密钥的方法。`KeyStore` 中的所有密钥必须由相同的密码保护。
 
 有时，提供者需要除 `KeyStore` 和密码以外的初始化参数。该提供者的用户需要传递由提供者定义的适当 `ManagerFactoryParameters` 的实现。然后，提供者可以调用 `ManagerFactoryParameters` 实现中的指定方法来获取所需信息。
 
@@ -19102,9 +19164,9 @@ public void init(KeyFactoryParameters spec);
 
 ## HostnameVerifier 接口
 
-当 SSL/TLS 实现的标准主机名验证逻辑失败时，该实现类会调用实现此接口并分配给此 `HTTPSConnection` 实例的类的 `verify()` 方法。如果回调类根据参数判断主机名是可接受的，它将报告允许该连接。不可接受的响应将导致连接终止。参见示例 8-15。
+当 SSL/TLS 实现的标准主机名验证逻辑失败时，该实现类会调用实现此接口并分配给此 `HttpsURLConnection` 实例的类的 `verify()` 方法。如果回调类根据参数判断主机名是可接受的，它将报告允许该连接。不可接受的响应将导致连接终止。参见示例 8-15。
 
-有关如何将 `HostnameVerifier` 分配给 `URLConnection` 的更多信息，请参阅 `HTTPSConnection`。
+有关如何将 `HostnameVerifier` 分配给 `URLConnection` 的更多信息，请参阅 `HttpsURLConnection`。
 
 **示例 8-15** 实现 `HostnameVerifier` 接口的代码
 
@@ -19115,7 +19177,6 @@ public void init(KeyFactoryParameters spec);
 
 
 
-```java
 public class MyHostnameVerifier implements HostnameVerifier {
 
     public boolean verify(String hostname, SSLSession session) {
@@ -19137,14 +19198,10 @@ public class MyHostnameVerifier implements HostnameVerifier {
     }
 
 }
-```
-
-```
-//...删除...
-```
 
 ```java
-HttpsURLConnection urlc = (HttpsURLConnection) new URL("https://www.example.com/").openConnection();
+//...删除...
+HttpsURLConnection urlc = (HttpsURLConnection) new URL("https://www.example.com/")).openConnection();
 
 urlc.setHostnameVerifier(new MyHostnameVerifier());
 ```
@@ -19224,20 +19281,20 @@ JSSE 包含一个标准实现，可以通过接入不同的实现或指定默认
 | 安全属性 | 自定义项 | 默认值 | 备注 |
 |---|---|---|---|
 | `cert.provider.x509v1` | 定制 `X509Certificate` 实现 | Oracle 的 `X509Certificate` 实现 | 无 |
-| `jce.provider` | SunJSSE 提供者使用的 JCE 加密算法提供者优先级高于 SunJCE | SunJCE 实现 | 无 |
-| `jdk.certpath.disabledAlgorithms`* | 禁用的验证加密算法（参见禁用的加密算法） | MD2, MD5, SHA1 jdkCA & usage TLSServer, RSA keySize < 1024, EC keySize < 1024, EC Size < 224, SHA1 jdkCA & usage SignedJAR & denyAfter 2019-01-01¹ | 无 |
+| `jdk.security.provider.preferred` | SunJSSE 提供者使用的 JCE 加密算法 | 给 JCE 算法提供者的优先级高于 SunJCE | SunJCE 实现 | 无 |
+| `jdk.certpath.disabledAlgorithms`* | 禁用的验证加密算法（参见禁用的加密算法） | `MD2, MD5, SHA1 jdkCA & usage TLSServer, RSA keySize < 1024, EC keySize < 1024, EC Size < 224, SHA1 jdkCA & usage SignedJAR & denyAfter 2019-01-01`¹ | 无 |
 
 ## 表 8-2 (续) 安全属性与自定义项
 
 | 安全属性 | 自定义项 | 默认值 | 备注 |
 |---|---|---|---|
-| `jdk.tls.disabledAlgorithms`* | 已禁用和限制的加密算法 | SSLv3, TLSv1, TLSv1.1, RC4, DES, MD5withRSA, DH keySize < 1024, keySize < 224, 3DES_EDE_CBC, anon, NULL! | 禁用 TLS/DTLS 连接中不会协商的算法（协议版本、密码套件、密钥交换机制等），即使它们在应用程序中被显式启用了。 |
-| `jdk.tls.keyLimits`* | 限制算法使用一组密钥可加密的数据量 | AES/GCM/NoPadding KeyUpdate 2*37 | 限制算法使用特定密钥组进行加密的数量；一旦达到此限制，将发送 KeyUpdate 握手后消息以请求当前组密钥。 |
-| `jdk.tls.legacyAlgorithms`* | 遗留加密算法 | NULL, anon, RC4, DES, 3DES_EDE_CBC1 | 指定哪些算法被视为遗留算法，除非有其他备选算法，否则在 TLS/DTLS 安全参数期间不会进行协商。 |
+| `jdk.tls.disabledAlgorithms`* | 已禁用和限制的加密算法 | `SSLv3, TLSv1, TLSv1.1, RC4, DES, MD5withRSA, DH keySize < 1024, keySize < 224, 3DES_EDE_CBC, anon, NULL`! | 禁用 TLS/DTLS 连接中不会协商的算法（协议版本、密码套件、密钥交换机制等），即使它们在应用程序中被显式启用了。 |
+| `jdk.tls.keyLimits`* | 限制算法使用一组密钥可加密的数据量 | `AES/GCM/NoPadding KeyUpdate 2*37` | 限制算法使用特定密钥组进行加密的数量；一旦达到此限制，将发送 `KeyUpdate` 握手后消息以请求当前组密钥。 |
+| `jdk.tls.legacyAlgorithms`* | 遗留加密算法 | `NULL, anon, RC4, DES, 3DES_EDE_CBC`¹ | 指定哪些算法被视为遗留算法，除非有其他备选算法，否则在 TLS/DTLS 安全参数期间不会进行协商。 |
 | `jdk.tls.server.defaultParameters` | Diffie-Hellman 组 | OpenJDK TLS 实现中的安全素数 Diffie-Hellman 组 | 为（数据报）传输层安全 (TLS) 处理定义默认字段 Diffie-Hellman 临时 (DHE) 参数 |
-| `ocsp.enable`* | 客户端驱动的 OCSP Stapling | false | 启用客户端驱动的在线证书状态协议 (OCSP)。你还必须启用吊销检查；参见“设置 Java 客户端使用 Client-OCSP”。 |
-| `security.provider.n` | 加密提供者；自定义提供者实现和自定义加密算法提供者 | 按优先级排序的提供者：1. SUN 2. SunRSA 3. SunEC 4. SunJSSE 5. SunJCE | 在 `security.provider.n` 行中指定提供者，n 是大于或等于 1 的整数。 |
-| `ssl.KeyManagerFactory.algorithm` | 默认密钥工厂算法名称（参见“自定义默认密钥和信任管理器”） | SunX509 | 无 |
+| `ocsp.enable`* | 客户端驱动的 OCSP Stapling | `false` | 启用客户端驱动的在线证书状态协议 (OCSP)。你还必须启用吊销检查；参见“设置 Java 客户端使用 Client-OCSP”。 |
+| `security.provider.<n>` | 加密提供者；自定义提供者实现和自定义加密算法提供者 | 按优先级排序的提供者：1. SUN 2. SunRSA 3. SunEC 4. SunJSSE 5. SunJCE | 在 `security.provider.<n>` 行中指定提供者，n 是大于或等于 1 的整数。 |
+| `ssl.KeyManagerFactory.algorithm` | 默认密钥工厂算法名称（参见“自定义默认密钥和信任管理器”） | `SunX509` | 无 |
 
 ## 表 8-2 (续) 安全属性与自定义项
 
@@ -19245,7 +19302,7 @@ JSSE 包含一个标准实现，可以通过接入不同的实现或指定默认
 |---|---|---|---|
 | `ssl.ServerSocketFactory.provider`* | 默认实现 | Oracle 的 `SSLServerSocketFactory` 实现 | 无 |
 | `ssl.SocketFactory.provider` | 默认实现 | Oracle 的 `SSLSocketFactory` 实现 | 无 |
-| `ssl.TrustManagerFactory.algorithm` | 默认信任工厂算法名称（参见“默认密钥管理器和信任管理器”） | PKIX | 无 |
+| `ssl.TrustManagerFactory.algorithm` | 默认信任工厂算法名称（参见“默认密钥管理器和信任管理器”） | `PKIX` | 无 |
 
 * 这些安全属性中指定的受限、禁用和遗留算法列表可能会发生变化；请查看 `java.security` 文件以获取最新版本。
 
@@ -19255,44 +19312,44 @@ JSSE 包含一个标准实现，可以通过接入不同的实现或指定默认
 
 ## 表 8-3 系统属性与自定义项
 
-| 系统属性 | 自定义项 | 默认值 | 备注 |
+| 系统属性 | 自定义项 | 默认 | 备注 |
 |---|---|---|---|
-| `com.sun.net.ssl.checkRevocation`* | 吊销检查 | false | 你必须启用客户端驱动的 OCSP；参见“客户端驱动 OCSP 和 OCSP Stapling”。 |
-| `https.port` | 修改 HTTPS URL 中的端口字段 | 443 | 无 |
+| `com.sun.net.ssl.checkRevocation`* | 吊销检查 | `false` | 你必须启用客户端驱动的 OCSP；参见“客户端驱动 OCSP 和 OCSP Stapling”。 |
+| `https.port` | 修改 HTTPS URL 中的端口字段 | `443` | 无 |
 | `https.cipherSuites`* | HTTPS 连接的默认密码套件 | 由套接字工厂决定。 | 这包含一个用逗号分隔的密码套件列表，用于指定通过 `HttpsURLConnection` 在此处启用哪些密码套件。参见 `SSLSocket.setEnabledCipherSuites(String[])` 方法。注意，该方法直接从传递给它的字符串数组设置 ClientHello 密码套件的优先级顺序。 |
 
 ## 表 8-3 (续) 系统属性与自定义项
 
-| 系统属性 | 自定义项 | 默认值 | 备注 |
+| 系统属性 | 自定义项 | 默认 | 备注 |
 |---|---|---|---|
 | `https.protocols`* | HTTPS 连接的默认握手协议 | 由套接字工厂决定。 | 这包含一个用逗号分隔的套件名称列表，用于指定在此 `HttpsURLConnection` 上启用哪些协议套件。参见 `SSLSocket.setEnabledProtocols(String[])` 方法。 |
 
-| 系统属性 | 自定义项 | 默认值 | 备注 |
+| 系统属性 | 自定义项 | 默认 | 备注 |
 |---|---|---|---|
 | `java.net.ssl.trustStore` | 默认信任库；参见“自定义密钥库和信任库、存储类型和密码” | `jssecacerts`，如果存在。 | 无 |
-| `java.net.ssl.trustStorePassword` | 默认信任库密码；参见“自定义默认密钥库和信任库、存储类型和密码” | 无 | 建议以暴露给其他用户发现的方式指定密码。例如，在命令行中指定密码。为了保持密码安全，让应用程序提示密码，或在受适当保护的配置文件中指定密码。 |
+| `java.net.ssl.trustStorePassword` | 默认信任库密码；参见“自定义默认密钥库和信任库、存储类型和密码” | 无 | 建议以不暴露给其他用户发现的方式指定密码。例如，不要在命令行中指定密码。为了保持密码安全，让应用程序提示密码，或在受适当保护的配置文件中指定密码。 |
 | `java.net.ssl.trustStoreProvider` | 默认信任库提供者；参见“自定义默认密钥库和信任库、存储类型和密码” | 无 | 无 |
-| `java.net.ssl.trustStoreType` | 默认信任库类型；参见“自定义默认密钥库和信任库、存储类型和密码” | `KeyStore` | 信任库类型 |
-| `java.net.ssl.acknowledgeNotify` | 确认通知 | false | 如果为真，客户端或服务器收到 close_notify 后将断开连接。 |
-| `jdk.tls.client.cipherSuites` | 客户端默认密码套件；指定默认密码套件 | 参见 JSSE 密码套件 | 用于此 JDK 默认的密码套件，按偏好顺序排序。警告：在不了解风险的情况下使用这些系统属性来配置弱加密密码套件，可能会是弱的。 |
+| `java.net.ssl.trustStoreType` | 默认信任库类型；参见“自定义默认密钥库和信任库、存储类型和密码” | `KeyStore` | 无 |
+| `java.net.ssl.acknowledgeNotify` | 确认通知 | `false` | 如果为真，客户端或服务器收到 close_notify 后将断开连接。 |
+| `jdk.tls.client.cipherSuites` | 客户端默认密码套件；指定默认密码套件 | 参见 JSSE 密码套件 | 用于此 JDK 默认的密码套件，按偏好顺序排序。警告：在不了解风险的情况下使用这些系统属性来配置弱加密密码套件，可能会导致安全风险。 |
 | `jdk.tls.client.disableExtensions` | 配置默认扩展 | 无 | 无 |
 
 ## 表 8-3 (续) 系统属性与自定义项
 
-| 系统属性 | 自定义项 | 默认值 | 备注 |
+| 系统属性 | 自定义项 | 默认 | 备注 |
 |---|---|---|---|
-| `jdk.tls.client.enableCA`* | 用于服务器选择的 certificate_authorities 扩展 | false | 如果 CA 超过限制（小于 16 字节），则不启用该扩展。此外，某些服务器实现不允许握手消息超过 14 字节。 |
-| `jdk.tls.client.enableSessionTicket` | 无服务器状态恢复会话 | 无 | 如果为真，在 TLS 1.2 及早期版本中在 ClientHello 中发送会话令牌。此扩展允许客户端接受服务器的无状态恢复（RFC 5077）。 |
+| `jdk.tls.client.enableCA`* | 用于服务器选择的 `certificate_authorities` 扩展 | `false` | 如果 CA 超过限制（小于 16 字节），则不启用该扩展。此外，某些服务器实现不允许握手消息超过 14 字节。 |
+| `jdk.tls.client.enableSessionTicket` | 无服务器状态恢复会话 | 无 | 如果为真，在 TLS 1.2 及早期版本中在 ClientHello 中发送会话令牌。此扩展允许客户端接受服务器的无状态会话（RFC 5077）。 |
 
 ## 表 8-3 (续) 系统属性与自定义项
 
-| 系统属性 | 自定义项 | 默认值 | 备注 |
+| 系统属性 | 自定义项 | 默认 | 备注 |
 |---|---|---|---|
 | `jdk.tls.client.protocols`* | TLS/DTLS 客户端默认协议。参见 SunJSSE 提供者 | 无 | 若要在客户端启用特定的 SunJSSE 协议，请在逗号分隔的列表中指定它们；不会启用其他支持的协议。例如，`jdk.tls.client.protocols="TLSv1, TLSv1.1"`，则 TLSv1 和 TLSv1.1 的客户端协议设置将被启用，而 SSLv3、TLSv1.2、TLSv1.3 和 SSLv2Hello 不启用。`jdk.tls.client.protocols="DTLS1.2"` 则 DTLS1.2 的客户端协议设置将被启用，而 DTLS1.0 不启用。 |
 | `jdk.tls.client.signatureSchemes`* | 包含用逗号分隔的支持签名方案名称列表，指定客户端 TLS 连接中可能使用的方案。 | 未定义 | 属性中指定的无法识别或不支持的签名方案将被忽略。如果此系统属性未定义或为空，则使用提供者的默认值。名称不区分大小写。签名方案名称列表参见“Java 安全算法名称中的签名方案”章节。 |
-| `jdk.tls.ephemeralDHSize`* | 自定义 Diffie-Hellman 密钥大小 | 1024 位 | 无 |
-| `jdk.tls.maxCertificateLength`* | 证书链处理 | 10 | 指定 TLS/DTLS 处理中证书链允许的最大长度。 |
-| `jdk.tls.maxHandshakeMessageSize`* | 证书链处理 | 32768 (字节) | 指定 TLS/DTLS 握手中握手消息允许的最大大小（字节）。 |
+| `jdk.tls.ephemeralDHSize`* | 自定义 Diffie-Hellman 密钥大小 | `1024` 位 | 无 |
+| `jdk.tls.maxCertificateLength`* | 证书链处理 | `10` | 指定 TLS/DTLS 处理中证书链允许的最大长度。 |
+| `jdk.tls.maxHandshakeMessageSize`* | 证书链处理 | `32768` (字节) | 指定 TLS/DTLS 握手中握手消息允许的最大大小（字节）。 |
 
 ## 第 8 章
 ## 自定义 JSSE
@@ -19302,17 +19359,17 @@ JSSE 包含一个标准实现，可以通过接入不同的实现或指定默认
 | 系统属性 | 自定义项 | 默认值 | 备注 |
 |---|---|---|---|
 | `jdk.tls.namedGroups`* | 自定义用于 TLS/DTLS 密钥交换的支持的命名组 | 如果未定义此系统属性或值为空，则将使用实现的默认组和偏好。 | 包含一个用逗号分隔的启用命名组列表，按偏好排序。例如：`jdk.tls.namedGroups="secp521r1,secp256r1,ffdhe2048"` |
-| `jdk.tls.rejectClientInitiatedRenegotiation` | 在服务器端拒绝客户端发起的重协商。如果此系统属性为 true，则服务器将不接受客户端发起的重协商，并以致命的 handshake_failure 告警失败。 | false | 无 |
-| `jdk.tls.server.cipherSuites`* | 服务器端默认启用的密码套件。参见“特定的默认加密套件” | 参见“套件”以确定哪些套件是默认启用的 | 注意：这些系统属性可用于配置加密套件，或者加密套件在未来可能会变弱。不建议在不了解风险的情况下使用这些系统属性。 |
+| `jdk.tls.rejectClientInitiatedRenegotiation` | 在服务器端拒绝客户端发起的重协商。如果此系统属性为 true，则服务器将不接受客户端发起的重协商，并以致命的 `handshake_failure` 告警失败。 | `false` | 无 |
+| `jdk.tls.server.cipherSuites`* | 服务器端默认启用的。参见“特定的默认加密套件” | 参见“套件”以确定哪些套件是默认启用的 | 注意：这些系统属性可用于配置加密套件，或者加密套件在未来可能会变弱。不建议在不了解风险的情况下使用这些系统属性。 |
 | `jdk.tls.server.disableExtensions`* | 配置默认扩展 | 无 | 阻止在服务器端使用的扩展。 |
-| `jdk.tls.server.enableSessionTicketExtension`* | 在无服务器端状态的情况下恢复会话 | true | 如果客户端支持，服务器将提供无状态票据，如 RFC 5077（用于 TLS 1.2 的无服务器状态 TLS 会话）和用于 TLS 1.3 的 RFC 8446 所述。无状态会话票据包含加密的服务器状态，可以节省服务器资源。 |
+| `jdk.tls.server.enableSessionTicketExtension`* | 在无服务器端状态的情况下恢复会话 | `true` | 如果客户端支持，服务器将提供无状态票据，如 RFC 5077（用于 TLS 1.2 的无服务器状态 TLS 会话）和用于 TLS 1.3 的 RFC 8446 所述。无状态会话票据包含加密的服务器状态，可以节省服务器资源。 |
 | `jdk.tls.server.protocols` | TLS/DTLS 服务器的默认握手协议。 | 无 | 若要配置 SunJSSE 提供程序服务器端的默认启用协议套件，请在引号内以逗号分隔的列表形式指定协议。此列表中的协议是 Java 安全标准算法名称中描述的标准 SSL 协议名称。注意，此系统属性仅影响默认协议套件（算法 SSL、TLS 和 DTLS 的 `SSLContext`）。如果应用程序使用了特定版本的 `SSLContext` 或显式启用的协议版本，此系统属性将没有影响。 |
-| `jdk.tls.server.sessionTicketTimeout` | 指定服务器缓存或无状态恢复票据的可用时长 | 86400 秒 (24 小时) | 您可以在运行时通过 `SSLSessionContext.setTimeout()` 方法修改用此属性设置的值。 |
+| `jdk.tls.server.sessionTicketTimeout` | 指定服务器缓存或无状态恢复票据的可用时长 | `86400` 秒 (24 小时) | 您可以在运行时通过 `SSLSessionContext.setTimeout()` 方法修改用此属性设置的值。 |
 | `jdk.tls.server.signatureSchemes` | 包含一个用逗号分隔的支持的签名方案名称列表，指定了可能用于服务器端 TLS 连接的签名方案。 | 未定义 | 属性中指定的未识别或不支持的签名方案名称将被忽略。如果未定义此系统属性或为空，则使用特定提供程序的默认值。名称对大小写敏感。有关签名方案名称列表，请参见《Java 安全标准算法名称规范》中的“签名方案”章节。 |
-| `jsse.enableFFDHE`* | 启用或禁用用于 TLS/DTLS 密钥交换的有限域迪菲-赫尔曼临时 (FFDHE) 参数 | true | FFDHE 是 RFC 7918 中定义的 TLS/DTLS 扩展。它允许 TLS/DTLS 连接使用已知的有限域迪菲-赫尔曼组。某些非常老的 TLS 实现可能无法处理 TLS 扩展。在这种情况下，将此属性置为 false 以禁用 FFDHE 扩展。 |
-| `jsse.enableMFLNExtension`* | 自定义最大片段长度协商 (MFLN) 扩展 | false | 无 |
-| `jsse.enableSNIExtension`* | 服务器名称指示选项 | true | 服务器名称指示 (SNI) 是在 RFC 6066 中定义的 TLS 扩展。它允许连接到虚拟服务器，即在单个底层地址上托管针对不同网络名称的多个服务器。某些非常老的 TLS 实现可能无法处理 TLS 扩展。在这种情况下，将此属性置为 false 以禁用 SNI 扩展。 |
-| `jsse.sslEngine.acceptLargeFragments`* | 用于大型 TLS 数据包的默认缓冲区大小 | 无 | 将此系统属性设置为 true 时，`SSLSession` 缓冲区默认处理大数据包。这可能会导致应用程序分配不必要的巨大 SSL 缓冲区。相反，应动态检查缓冲区溢出并根据情况调整缓冲区大小。 |
+| `jsse.enableFFDHE`* | 启用或禁用用于 TLS/DTLS 密钥交换的有限域迪菲-赫尔曼临时 (FFDHE) 参数 | `true` | FFDHE 是 RFC 7918 中定义的 TLS/DTLS 扩展。它允许 TLS/DTLS 连接使用已知的有限域迪菲-赫尔曼组。某些非常老的 TLS 实现可能无法处理 TLS 扩展。在这种情况下，将此属性置为 `false` 以禁用 FFDHE 扩展。 |
+| `jsse.enableMFLNExtension`* | 自定义最大片段长度协商 (MFLN) 扩展 | `false` | 无 |
+| `jsse.enableSNIExtension`* | 服务器名称指示选项 | `true` | 服务器名称指示 (SNI) 是在 RFC 6066 中定义的 TLS 扩展。它允许连接到虚拟服务器，即在单个底层地址上托管针对不同网络名称的多个服务器。某些非常老的 TLS 实现可能无法处理 TLS 扩展。在这种情况下，将此属性置为 `false` 以禁用 SNI 扩展。 |
+| `jsse.sslEngine.acceptLargeFragments`* | 用于大型 TLS 数据包的默认缓冲区大小 | 无 | 将此系统属性设置为 `true` 时，`SSLSession` 缓冲区默认处理大数据包。这可能会导致应用程序分配不必要的巨大 SSL 缓冲区。相反，应动态检查缓冲区溢出并根据情况调整缓冲区大小。 |
 
 * 此系统属性目前由 JSSE 实现使用，但不能保证会被其他实现检查和使用。如果由其他实现检查，则该实现应以与 JSSE 实现相同的方式处理它。无法保证该属性在未来的发布中会继续存在，或保持相同的类型（系统或安全）。
 
@@ -19321,27 +19378,37 @@ JSSE 包含一个标准实现，可以通过接入不同的实现或指定默认
 你可以通过设置系统属性来自定义 JSSE 的某些方面。有几种方法可以设置这些属性：
 
 - 要静态设置系统属性，请使用命令的 `-D` 选项。例如，要运行应用程序并设置 `javax.net.ssl.trustStore` 属性以指定名为 `MyCertsFile` 的信任库，请使用以下命令：
-  `java -Djavax.net.ssl.trustStore=MyCertsFile`
+  ```
+  java -Djavax.net.ssl.trustStore=MyCertsFile
+  ```
 
 - 要动态设置系统属性，请在代码中调用 `java.lang.System.setProperty()` 方法：
-  `System.setProperty("propertyName", "propertyValue");`
+  ```
+  System.setProperty("propertyName", "propertyValue");
+  ```
 
 ## 如何指定 `java.security.Security` 属性
 
 你可以通过设置安全属性来自定义 JSSE 的某些方面。你可以静态或动态地设置安全属性：
 
 - 要静态设置安全属性，请在安全属性文件中添加一行。安全属性文件位于 `java.home/conf/security/java.security`。要在安全属性文件中指定安全属性值，请添加如下格式的行：
-  `propertyName=propertyValue`
+  ```
+  propertyName=propertyValue
+  ```
 
 - 要动态设置安全属性，请调用 `java.security.Security.setProperty()` 方法：
-  `Security.setProperty("propertyName", "propertyValue");`
+  ```
+  Security.setProperty("propertyName", "propertyValue");
+  ```
 
 ## 自定义 X509Certificate 实现
 
 由 `X509Certificate.getInstance()` 方法返回的 `X509Certificate` 实现默认来自 JSSE 实现。
 
 要返回不同的实现，请将名为 `cert.provider.x509v1` 的 `java.security.Security` 属性的值设置为另一个实现类的名称（以及包名）：
-`cert.provider.x509v1=com.cryptox.MyX509CertificateImpl`
+```
+cert.provider.x509v1=com.cryptox.MyX509CertificateImpl
+```
 
 ## 指定默认启用的加密套件
 
@@ -19392,17 +19459,17 @@ JSSE 包含一个标准实现，可以通过接入不同的实现或指定默认
 
 ## 自定义提供者实现
 
-JDK 自带了一个 JSSE 加密服务提供者（简称为提供者），命名为 SunJSSE。提供者本质上是实现特定加密算法的一个或多个引擎类的包。
+JDK 自带了一个 JSSE 加密服务提供者（简称为提供者），命名为 `SunJSSE`。提供者本质上是实现特定加密算法的一个或多个引擎类的包。
 
 JSSE 引擎使用 `SSLContext`、`KeyManagerFactory` 和 `TrustManagerFactory`。请参阅《Java 加密体系（JCA）参考指南》了解更多关于提供者和引擎类的信息。
 
-在使用之前，必须静态或动态地注册提供者。你不需要注册 SunJSSE 提供者，因为它是预注册的。如果你想使用其他提供者，请阅读以下章节查看如何注册它们。
+在使用之前，必须静态或动态地注册提供者。你不需要注册 `SunJSSE` 提供者，因为它是预注册的。如果你想使用其他提供者，请阅读以下章节查看如何注册它们。
 
 ## 静态注册加密提供者
 
 通过在安全属性文件 `<java-home>/conf/security/java.security` 中添加以下格式的行来静态注册提供者：
 ```
-security.provider.n=providerClassName
+security.provider.<n>=<providerClassName>
 ```
 
 
@@ -19456,7 +19523,7 @@ security.provider.n=providerClassName
 **Provider**
 提供者的名称。未列出的提供者将通过忽略。使用命令 `java.security.debug=jca` 进行调试。
 
-# 第 8 章自定义 JSSE
+# 第 8 章 自定义 JSSE
 
 # FIPS 首选提供者
 
@@ -19519,8 +19586,7 @@ JDK 在 `${java.home}/security/cacerts` 文件中使用有限数量的受信任�
 > 注意：
 > PKIX 算法的 `TrustManagerFactory` 实现由 SunJSSE 提供者提供。它指定的 `TrustManager` 是 `java.net.ssl.X509TrustManager` 实现。
 
-# 第 8 章
-自定义 JSSE
+# 第 8 章 自定义 JSSE
 
 > 注意：
 > 本节描述了当前的 JSSE 参考实现行为。本节描述的系统属性不保证在未来的所有版本中继续具有相同的名称和类型（系统或安全），甚至不保证存在。它们不保证会被任何其他 JSSE 实现检查和使用。如果被某个实现检查，该实现应该按照此处描述的与 JSSE 参考实现相同的方式处理它们。
@@ -19663,7 +19729,7 @@ SunJSSE 提供者使用 SunJCE 实现来实现其所有的加密需求。虽然�
 
 ## 带有 OCSP Stapling 的 TLS 握手
 
-OCSP stapling 用于客户端和服务器之间的 TLS 握手，以检查证书吊销状态。服务器向 OCSP 响应者发起请求，并将 OCSP 响应钉在证书中。通过让服务器向 OCSP 响应者发起请求，响应可以缓存并多次供客户端使用。
+OCSP stapling 用于客户端和服务器之间的 TLS 握手，以检查证书吊销状态。服务器向 OCSP 响应者发起请求，并将 OCSP 响应钉在在证书中。通过让服务器向 OCSP 响应者发起请求，响应可以缓存并多次供客户端使用。
 
 带有 OCSP 响应的接收端验证每个证书，然后在完成握手之前检查 OCSP 响应。如果从客户端的角度来看缺少证书的钉 OCSP 响应，客户端将尝试使用客户端驱动 OCSP 或证书吊销列表 (CRL)，前提是：
 
@@ -19680,8 +19746,7 @@ TLS 证书状态请求仅请求链中服务器证书的吊销信息，而多状�
 
 尽管 TLS 允许服务器请求客户端，但 OCSP stapling 中没有允许客户端连接的规定。
 
-## 第 8 章
-自定义 JSSE
+## 第 8 章 自定义 JSSE
 
 如有需要，可以在客户端代码中调用 `ExtendedSSLSession` 对象的 `getStatusResponses` 方法获取钉响应。该方法的签名如下：
 
@@ -19755,23 +19820,23 @@ OCSP 响应使用区分编码规则 (DER) 按照 RFC 6960 描述的 ASN.1 格式
 
 Java 密码学体系 (JCA) 是一组包，为加密、密钥生成与协商以及消息认证码 (MAC) 算法提供了框架和实现。请参阅 Java 密码学体系 (JCA) 参考指南。
 
-```
-factory.init(ksParameters);
-```
+`factory.init(ksParameters);`
 
 ```
+
 // Use factory
 
 SSLContext ctx = SSLContext.getInstance("TLS");
 
 ctx.init(factory.getKeyManagers(null, null));
+
 ```
 
 ## 额外的密钥库格式 (PKCS12)
 
 PKCS#12（个人信息交换语法标准）规定了一种用于存储和/或传输用户私钥、证书、机密信息的可移植格式。SunJSSE 扩展者提供了 PKCS12 `java.security.KeyStore` 的实现，用于读写 PKCS12 文件。其他工具和应用程序也支持此格式的密钥和证书导入，例如 Mozilla Firefox、Microsoft Internet Explorer 和 OpenSSL。例如，这些实现可以将客户端证书和密钥导出为名为 p12 文件。
 
-通过 SunJSSE 扩展者，您可以使用 `keystype` 为 PKCS12 的 KeyStore API 访问 PKCS12。此外，您可以使用 `keytool` 命令并配合 `-storetype pkcs12` 选项安装密钥和关联证书。请参阅 Java 开发包规范（Java Development Kit Specifications）中的 `keytool`。
+通过 SunJSSE 扩展者，您可以使用 `keystype` 为 PKCS12 的 KeyStore API 访问 PKCS12。此外，您可以使用 `keytool` 命令并配合 `-storetype pkcs12` 选项安装密钥和关联证书。请参阅 Java 开发包规范（Java Development Kit Specifications）中的 keytool。
 
 ## 服务器名称指示扩展 (SNI)
 
@@ -19785,7 +19850,7 @@ SNI 扩展是一项 TLS/DTLS 协议扩展功能，用于在握手期间指示客
 
 以下代码示例说明了如何使用 `SSLParameters.setServerNames(List<SNIServerName> serverNames)` 方法设置服务器名称指示：
 
-```
+```java
 SSLSocket factory = ...
 
 SSLSocket sslSocket = factory.createSocket("172.16.10.6", 443);
@@ -19793,15 +19858,11 @@ SSLSocket sslSocket = factory.createSocket("172.16.10.6", 443);
 // SSLEngine sslEngine = sslContext.createSSLEngine("172.16.10.6", 443);
 
 SNIHostName serverName = new SNIHostName("example.com");
-```
 
-```
 List<SNIServerName> serverNames = new ArrayList<>();
 
 serverNames.add(serverName);
-```
 
-```
 SSLParameters params = sslSocket.getSSLParameters();
 
 params.setServerNames(serverNames);
@@ -19815,17 +19876,15 @@ sslSocket.setSSLParameters(params);
 
 以下代码说明了服务器应用程序如何使用 `SNIMatcher` 类来帮助识别服务器名称指示：
 
-```
+```java
 SSLSocket sslSocket = sslSocket.accept();
 
-SNIMatcher matcher = SNIHostName.createSNIMatcher("www\\example\\.(com|org)");
+SNIMatcher matcher = SNIHostName.createSNIMatcher("www\\\\example\\\\.(com|org)");
 
 Collection<SNIMatcher> matchers = new ArrayList<>();
 
 matchers.add(matcher);
-```
 
-```
 SSLParameters params = sslSocket.getSSLParameters();
 
 params.setSNIMatchers(matchers);
@@ -19837,31 +19896,27 @@ sslSocket.setSSLParameters(params);
 
 以下代码说明了服务器应用程序如何使用 `SNIMatcher` 类来帮助识别服务器名称指示：
 
-```
+```java
 SSLServer sslSocket = ...;
 
-SNIMatcher matcher = SNIHostName.createSNIMatcher("www\\example\\.(com|org)");
+SNIMatcher matcher = SNIHostName.createSNIMatcher("www\\\\example\\\\.(com|org)");
 
 Collection<SNIMatcher> matchers = new ArrayList<>();
 
 matchers.add(matcher);
-```
 
-```
 SSLParameters params = sslSocket.getSSLParameters();
 
 params.setSNIMatchers(matchers);
 
 sslSocket.setSSLParameters(params);
-```
 
-```
 SSLSocket sslSocket = sslSocket.accept();
 ```
 
 以下列表提供了 `SNIMatcher` 在从 ClientHello 消息中接收到各种服务器名称请求时的行为示例：
 
-配置为 `www\\example\\.com` 的匹配：
+字体 配置为 `www\\\\example\\\\.com` 的匹配：
   - 如果请求的主机名称为 www.example.com，则会被接受，并在 ServerHello 消息中发送确认。
   - 如果请求的主机名称为 www.example.org，则会被拒绝并返回 unrecognized_name 致命性错误。
 
@@ -19869,7 +19924,7 @@ SSLSocket sslSocket = sslSocket.accept();
 
 - 如果没有请求的主机名称或为空，则请求将被接受，但不会在 ServerHello 消息中发送确认。
 
-- 配置为 `www\.invalid\.com` 的匹配器。
+- 配置为 `www\\.invalid\\.com` 的匹配器。
 
 - 如果请求的主机名称为 www.example.com，则会被拒绝并返回 unrecognized_name 致命性错误。
 
@@ -20067,7 +20122,8 @@ public class SSL {
         // 传入要检查的当前 SSLSocket 和客户端 AP 值
         sslSocket.setHandshakeApplicationProtocolSelector(
             (serverSocket, clientProtocols) -> {
-                SSLHandshakeSession handshakeSession = serverSocket.getHandshakeSession();
+                SSLHandshakeSession handshakeSession = 
+                    serverSocket.getHandshakeSession();
                 // 使用当前 SSLSocket 和
                 // 客户端值调用回调函数
                 // 加上其他用于确定
@@ -20165,7 +20221,7 @@ public class MyX509ExtendedKeyManager extends X509ExtendedKeyManager {
     }
 
     @Override
-    public X509Certificate[] getCertificateChain(String alias) {
+    public java.security.cert.X509Certificate[] getCertificateChain(String alias) {
         return akm.getCertificateChain(alias);
     }
 
@@ -20347,7 +20403,7 @@ sslSocket.setSSLParameters(p);
 
 一些常见配置问题的解决方案。
 
-### SSLHandshakeException: No Available Authentication Scheme, Handshake Failure
+#### SSLHandshakeException: No Available Authentication Scheme, Handshake Failure
 
 **问题：** 服务器抛出此异常：
 
@@ -20445,11 +20501,15 @@ System.out.println(c.getProvider());
 
 
 
-**解决方案：** 如果问题原因是 `java.net.ssl.SSLLException: handshake alert: unrecognized_name`，可能是 SNI 的虚拟主机配置错误。如果你使用的是 Apache HTTP Server，请参考“基于名称的虚拟主机支持”来配置虚拟主机。特别是确保 `ServerName` 指令配置正确。
+## 解决方案
 
-# 为 DTLS 配置 RC4 套件时抛出 IllegalArgumentException
+如果问题原因是 `java.net.ssl.SSLLException: handshake alert: unrecognized_name`，可能是 SNI 的虚拟主机配置错误。如果你使用的是 Apache HTTP Server，请参考“基于名称的虚拟主机支持”来配置虚拟主机。特别是确保 `ServerName` 指令配置正确。
 
-**问题：** 当在 SSLEngine 中指定 rc4 套件时会抛出 IllegalArgumentException。
+## 为 DTLS 配置 RC4 套件时抛出 IllegalArgumentException
+
+### 问题
+
+当在 `SSLEngine` 中指定 rc4 套件时会抛出 `IllegalArgumentException`。
 
 ```java
 sslContext = sslContext.getInstance("DTLS");
@@ -20461,54 +20521,58 @@ String[] enabledSuites = {"SSL_RSA_WITH_RC4_128_SHA"};
 engine.setEnabledSuites(enabledSuites);
 ```
 
-**原因：** 根据 DTLS 版本 1.0 和 TLS 1.2，禁止使用 RC4 套件。
+### 原因
 
-**解决方案：** 不要使用基于 RC4 的套件。
+根据 DTLS 版本 1.0 和 TLS 1.2，禁止使用 RC4 套件。
 
-# 调试工具
+### 解决方案
 
-SunSE 提供程序支持调试跟踪。这与安全库使用的机制类似。通用 Java 调试跟踪通过 `java.security.debug` 属性访问，而 JSSE 特有的调试跟踪通过 `javax.net.debug` 属性访问。
+不要使用基于 RC4 的套件。
 
-> 注意：JSSE 使用了调试工具。无法保证其他提供程序也使用该工具，因此实现和输出可能有所不同。无法保证调试工具在未来的发布中持续存在或保持不变（例如，具有相同的选项或输出格式）。
+## 调试工具
 
-要查看 JSSE 调试工具的选项，请在 java 命令上使用命令行选项，其中 MyApp 是现有的 Java 程序：
+SunJSSE 提供程序支持调试跟踪。这与安全库使用的机制类似。通用 Java 调试跟踪通过 `java.security.debug` 属性访问，而 JSSE 特有的调试跟踪通过 `javax.net.debug` 属性访问。
+
+> **注意**：JSSE 使用了调试工具。无法保证其他提供程序也使用该工具，因此实现和输出可能有所不同。无法保证调试工具在未来的发布中持续存在或保持不变（例如，具有相同的选项或输出格式）。
+
+要查看 JSSE 调试工具的选项，请在 java 命令上使用命令行选项，其中 `MyApp` 是现有的 Java 程序：
 
 ```bash
 java -Djavax.net.debug=help MyApp
 ```
 
-> 注意：在打印调试帮助信息后，MyApp 将不会运行，因为代码调用了退出。如果你在运行未使用该工具设计调试的类的程序时指定了动态调试值，将无法获得调试选项。
+> **注意**：在打印调试帮助信息后，`MyApp` 将不会运行，因为代码调用了退出。如果你在运行未使用该工具设计调试的类的程序时指定了动态调试值，将无法获得调试选项。
 
 当前选项有：
 
-- all: 开启所有调试
-- ssl: 开启 SSL 调试
+- `all`：开启所有调试
+- `ssl`：开启 SSL 调试
 
-可以使用 ssl 选项选择打印的调试信息类型：
+可以使用 `ssl` 选项选择打印的调试信息类型：
 
-- defaultctx: 打印默认 SSL 初始化
-- handshake: 打印每条握手消息
-- keygen: 打印密钥生成数据
-- keymanager: 打印密钥管理器跟踪
-- plugability: 打印扩展性跟踪
-- record: 启用每记录跟踪
-- respmgr: 打印状态管理器跟踪
-- session: 打印会话活动
-- sessioncache: 打印会话缓存跟踪
-- sslctx: 打印 SSLContext 跟踪
-- trustmanager: 打印信任管理器跟踪
+- `defaultctx`：打印默认 SSL 初始化
+- `handshake`：打印每条握手消息
+- `keygen`：打印密钥生成数据
+- `keymanager`：打印密钥管理器跟踪
+- `plugability`：打印扩展性跟踪
+- `record`：启用每记录跟踪
+- `respmgr`：打印状态管理器跟踪
+- `session`：打印会话活动
+- `sessioncache`：打印会话缓存跟踪
+- `sslctx`：打印 `SSLContext` 跟踪
+- `trustmanager`：打印信任管理器跟踪
 
-从 handshake 选项生成的可以通过以下选项扩展：
+从 `handshake` 选项生成的可以通过以下选项扩展：
 
-- data: 每个握手消息的十六进制转储（Hex dump）
-- verbose: 详细的握手消息打印
+- `data`：每个握手消息的十六进制转储
+- `verbose`：详细的握手消息打印
 
-从记录选项生成的消息可以通过这些选项进行扩展：
+从 `record` 选项生成的消息可以通过这些选项进行扩展：
 
-- plaintext: 记录明文的十六进制转储
-- packet: 打印原始 SSL/TLS 数据包
+- `plaintext`：记录明文的十六进制转储
+- `packet`：打印原始 SSL/TLS 数据包
 
-要启用特定于 JSSE 的调试跟踪，请使用[如何指定 java.security.Security 属性](How to Specify a java.security.Security Property) 将 `javax.net.debug` 系统属性设置为 `all` 或 `ssl`。对于 `ssl` 选项，请在 ssl 选项之后提供额外的选项。你不需要在选项之间使用分隔符，可以使用如逗号 (;) 等分隔符或为了可读性。使用何种分隔符并不重要，选项关键字的顺序也不重要。
+要启用特定于 JSSE 的调试跟踪，请使用[如何指定 java.security.Security 属性](How to Specify a java.security.Security Property)将 `javax.net.debug` 系统属性设置为 `all` 或 `ssl`。对于 `ssl` 选项，请在 ssl 选项之后提供额外的选项。你不需要在选项之间使用分隔符，可以使用如逗号 (`,`) 等分隔符或为了可读性。使用何种分隔符并不重要，选项关键字的顺序也不重要。
 
 有关阅读此类信息的介绍，请参阅[调试 TLS 连接](Debugging TLS Connections)。
 
@@ -20534,17 +20598,17 @@ java -Djavax.net.debug=ssl,handshake,data,trustmanager MyApp
 
 ## 调试 TLS 连接
 
-理解 TLS 连接问题有时可能很困难，特别是当不清楚正在发送和接收哪些消息时。JSSE 有一个内置的调试设施，通过系统属性 `javax.net.debug` 激活。要了解更多关于 `javax.net.debug` 属性，请参阅[调试工具](#调试工具)。
+理解 TLS 连接问题有时可能很困难，特别是当不清楚正在发送和接收哪些消息时。JSSE 有一个内置的调试设施，通过系统属性 `javax.net.debug` 激活。要了解更多关于 `javax.net.debug` 属性，请参阅[调试实用程序](Debugging Utilities)。
 
 本节简要概述基本 TLS 1.3 握手的调试输出。要了解更多关于 TLS 协议的知识，请参阅 [RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3](RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3)。
 
-> 注意：
+> **注意**：
 >
 > 关于所有可能的 TLS 握手组合和协议的调试输出信息超出了本指南的范围。相反，请参考相关的 RFC 获取有关特定版本 TLS 的更详细信息。参阅[TLS 和 DTLS 协议](TLS and DTLS Protocols) 获取支持的 SSL/TLS/DTLS 协议列表以及指向各自 RFC 的链接。
 >
 > 输出是非标准的，并且可能会随着每个版本的发布而变化。
 
-此示例使用了默认的 JSSE X509KeyManager 和 X509TrustManager，它们还会打印连接期间使用的密钥和受信任证书的调试信息。它使用了 Java SE 8 文档中 JSSE 示例代码 `ClassFileServer` 和 `SSLClientWithClientAuth` 。`ClassFileServer` 是一个需要客户端验证的简单 HTTPS 服务器。`SSLClientWithClientAuth` 展示了如何使用 `SSLSocket` 类发送 HTTP 请求并从 HTTPS 服务器获取响应。为了简单起见，`ClassFileServer` 和 `SSLClientWithClientAuth` 都在同一主机上运行。
+此示例使用了默认的 JSSE `X509KeyManager` 和 `X509TrustManager`，它们还会打印连接期间使用的密钥和受信任证书的调试信息。它使用了 Java SE 8 文档中 JSSE 示例代码 `ClassFileServer` 和 `SSLClientWithClientAuth`。`ClassFileServer` 是一个需要客户端验证的简单 HTTPS 服务器。`SSLClientWithClientAuth` 展示了如何使用 `SSLSocket` 类发送 HTTP 请求并从 HTTPS 服务器获取响应。为了简单起见，`ClassFileServer` 和 `SSLClientWithClientAuth` 都在同一主机上运行。
 
 ### 在 localhost 上运行 ClassFileServer
 
@@ -20569,7 +20633,7 @@ java -Djavax.net.debug=all -Djavax.net.ssl.trustStore=/my_home_directory/jssesam
 
 ## 调试输出格式
 
-每行调试输出包含以下信息；每个字段由竖线 (|) 分隔：
+每行调试输出包含以下信息；每个字段由竖线 (`|`) 分隔：
 
 - 日志器名称 (`System.Logger(javax.net.ssl*)`)
 - 调试级别 (`System.Logger.Level`)
@@ -20592,7 +20656,7 @@ SSLContextImpl.java:427|System property jdk.tls.server.cipherSuites is set
 to 'null'
 ```
 
-除非默认加密套件是 SunJSSE 者默认启用的套件，否则这些系统属性的值为 null；[JDK 提供者文档中的 SunJSSE Provider](SunJSSE Provider in JDK Providers Documentation)。
+除非默认加密套件是 SunJSSE 者默认启用的套件，否则这些系统属性的值为 `null`；[JDK 提供者文档中的 SunJSSE Provider](SunJSSE Provider in JDK Providers Documentation)。
 
 `jdk.tls.keyLimits` 的值会被检查，以确定任何算法使用特定密钥集加密的数据量限制；参阅[限制算法使用一组密钥加密的数据量](Limiting Amount of Data Algorithms May Encrypt with a Set of Keys)。
 
@@ -20611,24 +20675,22 @@ SSLContextImpl.java:401|Ignore disabled cipher suite:
 TLS_ECDHE_ECDSA_WITH_3DES_CBC_SHA
 ```
 
-# 第 8 章
+## 第 8 章
 
-## JSSE 故障排除
+### JSSE 故障排除
 
 证书颁发机构 - G3, OU="c) 1999 Veri, Inc. - 仅供授权使用, OU=VeriSign Trust Network, O=VeriSign, Inc., C=US, subject public key="RSA",
 
 ```json
-{
-  "certificate": {
-    "version": "v1",
-    "serial number": "01 00 44 46",
-    "signaturealgorithm": "MD5RSA",
-    "issuer": "CN=localhost, O=Widget Development Group, O=Fictitious Widgets, Inc., L=Sunnyvale, ST=CA, C=US",
-    "not before": "2004-07-22 18:48:38.000 EDT",
-    "not after": "2015-05-22 18:48:38.000 EDT",
-    "subject": "CN=localhost, O=Widget Development Group, O=Fictitious Widgets, Inc., L=Sunnyvale, ST=CA, C=US",
-    "subject public key": "RSA"
-  }
+"certificate": {
+  "version": "v1",
+  "serial number": "01 00 44 46",
+  "signaturealgorithm": "MD5RSA",
+  "issuer": "CN=localhost, O=Widget Development Group, O=Fictitious Widgets, Inc., L=Sunnyvale, ST=CA, C=US",
+  "not before": "2004-07-22 18:48:38.000 EDT",
+  "not after": "2015-05-22 18:48:38.000 EDT",
+  "subject": "CN=localhost, O=Widget Development Group, O=Fictitious Widgets, Inc., L=Sunnyvale, ST=CA, C=US",
+  "subject public key": "RSA"
 }
 ```
 
@@ -20674,7 +20736,7 @@ javax.net.ssl.DEBUG [01|main|2018-08-18 01:04:47.724 EDT |
 
 
 
-## SSLExtensions.java 调试日志
+## SSLExtensions.java:235 Ignore, context unavailable extension
 
 ```text
 SSLExtensions.java:235 Ignore, context unavailable extension: application_layer_protocol_negotiation
@@ -20692,7 +20754,7 @@ SSLExtensions.java:235 Ignore, context unavailable extension: ..pre_shared_key
 
 客户端向服务器发送 `ClientHello` 消息。它指定了以下内容：
 
-- **Client version**：对于 TLS 1.3，这是一个固定值；TLS 1.2 使用 `supported_versions` 字段来协商协议版本。
+- **Client version**：对于 TLS 1.3，这是一个固定值；TLS1.2 使用 `supported_versions` 字段来协商协议版本。
 - **Random**：用于初始化加密算法的随机值。
 - **Session ID**：之前的 TLS 版本使用此 ID 支持会话恢复。
 - **Cipher Suites**：客户端请求的加密套件列表，其中某些仅适用于 TLS 1.3 及之前的版本。
@@ -20707,8 +20769,6 @@ SSLExtensions.java:235 Ignore, context unavailable extension: ..pre_shared_key
     - **supported_versions**：TLS 支持的版本。特别是，如果客户端请求 1.3，则 client 字段为 TLS13 且包含此扩展；如果客户端请求 1.2，则 client 字段为 TLS12 且此扩展不存在。
     - **psk_exchange_modes**：与共享密钥 (PSKs) 使用模式；在此，客户端和服务器必须提供 `key_share` 值。
     - **key_share**：用于密钥交换的加密参数。此列表中的每个项目包含两个字段：此示例包含了椭圆曲线的信息。
-
-### ClientHello 调试输出示例
 
 ```text
 javax.net.ssl. DEBUG [01|main|2018-08-18 01:04:47.693 EDT|ClientHello.java:633
@@ -20730,10 +20790,13 @@ Produced ClientHello message (
 
 ```text
 javax.net.ssl||DEBUG 01|main|2018-08-18 01:04:47.770 EDT |
+
 SSocketOutputRecord.java:217| WRITE: TLS13 handshake, length = 405
 
 javax.net.ssl|DEBUG 01|main|2018-08-18 01:04:47.774 EDT |
+
 SSocketOutputRecord.java:231|Raw write (
+
 ...
 ```
 
@@ -20741,10 +20804,13 @@ SSocketOutputRecord.java:231|Raw write (
 
 ```text
 javax.net.ssl DEBUG[01]main|2018-08-18 01:04:47.862 EDT
+
 SSLSocketRecord.java:215|READ: TLSv1.2 handshake, length = 155
 
 javax.net.ssl DEBUG[01]main|2018-08-18 01:04:47.862 EDT
+
 SSLSocketRecord.java:274|Raw read (
+
 ...
 ```
 
@@ -20754,9 +20820,9 @@ SSLSocketRecord.java:274|Raw read (
 
 此时，TLS 1.3 已完成协商。服务器选择 TLS 版本并使用服务器版本和 `supported_versions` 扩展组合进行回复。在本例中，指示了 TLSv1.3。`ServerHello` 消息指定了以下内容：
 
-- **Server Version**（服务器版本）：对于 TLS 1.3
-- **supported_versions**：指定服务器使用的版本。注意，对于 TLS 1.3，服务器必须使用 `ClientHello` `supported_versions` 扩展的值，而不是客户端版本。
-- **key_share**：用于 ECDHE 密钥交换的命名组和密钥值。
+* **Server Version**（服务器版本）：对于 TLS 1.3
+* **supported_versions**：指定服务器使用的版本。注意，对于 TLS 1.3，服务器必须使用 `ClientHello supported_versions` 扩展的值，而不是客户端版本。
+* **key_share**：用于 ECDHE 密钥交换的命名组和密钥值。
 
 ```text
 ...
@@ -20774,14 +20840,14 @@ SSLSocketRecord.java:274|Raw read (
 
 `Certificate` 消息包含了认证证书以及任何其他证书。它指定了以下内容：
 
-- **certificate_request**（证书请求）：对于服务器认证，这是该字段。
-- **certificate_list**（证书列表）：包含由客户端签名的证书链。在本例中，接收到了自签名证书（主体和颁发者名称相同的证书）。该自签名证书在初始化期间已被发现，因此当 `TrustManager` 验证证书时，它将是信任的。建立信任有多种方法，如果不是默认的...
+* **certificate_request**（证书请求）：对于服务器认证，这是该字段。
+* **certificate_list**（证书列表）：包含由客户端签名的证书链。在本例中，接收到了自签名证书（主体和颁者名称相同的证书）。该自签名证书在初始化期间已被发现，因此当 `TrustManager` 验证证书时，它将是信任的。建立信任有多种方法，如果不是默认的...
 
 ```text
 ...
 ```
 
-# 第 8 章 JSSE 故障排除
+## 第 8 章 JSSE 故障排除
 
 ## 读取服务器的 CertificateVerify 消息
 
@@ -20792,29 +20858,53 @@ SSLSocketRecord.java:274|Raw read (
 
 ```java
 java.net.ssl.DEBUG[0]|main|2018-08-18 01:04:48.194 EDT |
+
 CertificateVerify.java:1128 Consuming CertificateVerify handshake
+
 message {
+
   "CertificateVerify":{
+
     "signature algorithm": rsa_pss_rsa_sha256
+
     "signature": {
+
       0000: 05 2D 62 03 6B 8C 8F 22 C7 6D 42 A6 65
+
       ..b.k..F...F.E9
+
       0010: 08 5D 81 5E 48 52 66 A4 F8 28 F23 18 93 70 CQ.Hrf.
+
       (....p.
+
       0020: 32 74 71 CC 0A C4 60 41 50 7F 7C 0A 0C 92 F9
+
       2T.... ..A..
+
       0030: 14 CB EB 15 7F 3E 52 16 F7 CC 8A 7C C9 1F 42
+
       CA..>R....B.
+
       0040: 90 8D BA F7 32 4A 76 E7 F9 43 CE 66 AA 15
+
       ..Y..F..C..Y
+
       0050: EE 0D 3A 10 FF B7 BC CD A2 F7 33 1A 14 7F 26
+
       61..4....6A
+
       0060: 80 2B 50 3A 8A 9E 5C 0E 4C 26 24 DA 6E 3D 71
+
       FA..F+..\L.S...-q.
+
       0070: 08 78 79 D22 DA 36 DE C1 A6 8B 18 46 04 CE 03
+
       4E..xy.......F..N
+
     }
+
   }
+
 }
 ```
 
@@ -20824,33 +20914,52 @@ message {
 
 ```java
 java.net.ssl.DEBUG[0]|main|2018-08-17 01:56:26.764 EDT |
+
 Finished.java:860 [Consuming server finished handshake message (
+
 "Finished":{
+
   "verify data":{
+
     0000: 6A 7B 74 A6 79 36 DE 62 A7 0E 14 9D F9 0D A4
+
     OP..t.yb......J.
+
     0010: 02 4C 7B BB 82 89 A2 66 E8 28 CA A7 D9 9B 68 Lx......
+
     (....
+
   }
+
 }
+
 ```
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_721_0.png)
 
 ## 发送 Certificate 消息
 
-客户端发送 `Certificate` 消息是因为服务器通过 `CertificateRequest` 消息请求客户端认证。`Certificate` 消息与服务器的 `Certificate` 消息类似。客户端需要向服务器发送凭据，因此会咨询其 `X509KeyManager`。客户端在接受的颁发者列表与 `KeyStore` 中的证书之间查找匹配项。在这种情况下存在匹配项：客户端拥有“duke”的凭据。现在由服务器的 `X509TrustManager` 决定使用哪种凭据。
+客户端发送 `Certificate` 消息是因为服务器通过 `CertificateRequest` 消息请求客户端认证。`Certificate` 消息 own与服务器的 `Certificate` 消息类似。客户端需要向服务器发送凭据，因此会咨询其 `X509KeyManager`。客户端在接受的颁发者列表与 `KeyStore` 中的证书之间查找匹配项。在这种情况下存在匹配项：客户端拥有“duke”的凭据。现在由服务器的 `X509TrustManager` 决定使用哪种凭据。
 
 ```java
 java.net.ssl DEBUG[0]main[2018-08-18 01:04:48.222 EDT]
+
 CertificateMessage.java:1160 Produced client Certificate message (
+
 "Certificate": {
+
   "certificate_request_context": "",
+
   "certificate_list": [
+
     {
+
       "version": "v1",
+
       "serial number": "3B OA FA GA",
+
       "signature algorithm": "MD5WithRSA",
+
       "issuer": "CN=Duke, OU=Java Software, O=Sun Microsystems, L=Cupertino, ST=CA, C=US,\
 ```
 
@@ -20860,23 +20969,41 @@ CertificateMessage.java:1160 Produced client Certificate message (
 
 ```java
 java.net.ssl DEBUG[0]main[2018-08-18 01:04:48.268 EDT]
+
 CertificateVerify.java:1097 Produced client CertificateVerify
+
 message (
+
 "CertificateVerify":{
+
   "signature algorithm": rsa_sha_sha256
+
   "signature": {
+
     0000: 91 C2 F7 5D 8D 90 B4 E2 BA C 26 23 08 E2 B4 DD....
+
     0010: 8D 95 8F 9F 31 4F 26 23 97 3B 5F 10 4D AE F6 ......106..;;.[M.]S
+
     0020: 71 7F 7B 3A 4F 6F 1B F2 E3 F2 53 F56 70 qx.......S.p
+
     0030: 7E 73 84 4F 9A 08 19 63 C1 97 4C 10 B1 C7
+
     3F .s....L...?
+
     0040: 4A 7D EF 4A 30 44 15 9F D0 52 8B D4 41 65 B1
+
     J...OD....EI.
+
     0050: D9 3D A6 45 83 44 11 93 81 81 5E 69 45 2AF
+
     69 .E...."*i
+
     0060: D3 A6 7E 75 84 C9 30 F8 5B BA 9A F3 C5 00 FD ...u..0.
+
     0070: 9A 62 A4 DA 5A 80 6B 72 CD F5 A5 53 A14 08 14 74
+
 b..Z..S.
+
   )
 ```
 
@@ -20954,7 +21081,7 @@ SSLSocketRecord.java:251]READ: TLS1.2 application_data, length =
 ```java
 java.net.ssl DEBUG[0]main[2018-08-18 01:04:48.621 EDT|
 SSLCipher.java:1914|Plaintext after DECRYPTION (
-  0000: 3C 21 44 4F 43 54 59 50 45 20 68 74 6D 6C 20 <!DOCTYPE html
+  0000: 3C 21 44 4F 43 54 59 50 20 28 74 6D 6C 20 <!DOCTYPE html
   0010: 55 42 4C 49 43 22 2D 2F 2F 57 33 23 22 2F 4A UPUBLIC
   0020: 54 20 44 58 48 4D 4C 20 21 30 20 32 54 10 nsational//
 EN
@@ -21201,7 +21328,7 @@ SSocketClientWithTunneling
 
 Java SE 8 文档中 JSSE 示例代码中的 `SSLClientWithClientAuth.java` 程序展示了在服务器要求时如何设置一个管理器来执行客户端身份验证。该程序还假设客户端不在防火墙之外。你可以按照 `SSLClientWithTunneling` 中的示例修改程序以从防火墙内部进行连接。
 
-要运行此程序，你必须指定三个参数：主机名、端口号和请求的文件路径。为了与之前的示例保持一致，你可以在不进行客户端验证的情况下运行此程序，将主机设置为 `www.verigen.com`、端口设置为 443，并将请求的文件路径设置为 `https://www.verigen.com/`。使用这些参数时的输出是网站 `https://www.verigen.com/` 的 HTML。
+要运行此程序，你必须指定三个参数：主机名、端口号和请求的文件路径。为了与之前的示例保持一致，你可以在不进行客户端验证的情况下运行此程序，将主机设置为 `www.verigen.com` 端口 443，并将请求的文件路径设置为 `https://www.verigen.com/`。使用这些参数时的输出是网站 `https://www.verigen.com/` 的 HTML。
 
 要运行带有客户端身份验证的 `SSLSocketClient`，你必须访问需要客户端身份验证的服务器。你可以使用示例程序 `ClassFileServer` 作为该服务器。这将在后续章节中描述。
 
@@ -21267,7 +21394,7 @@ Java 8 文档中 JSSE 示例代码中的 `SSLEngineSimpleDemo.java` 程序是一
 
 `SSLEngineResult` 提供了大量关于 `SSLEngine` 当前状态的信息。此示例没有检查所有状态。它对 I/O 和线程问题进行了简化，以至于它不是一个适用于生产环境的良好示例；尽管如此，它对于演示 `SSLEngine` 的整体功能非常有帮助。
 
-## JSSE 示例代码排除
+## JSSE 示例代码排除故障
 
 人们在 JSSE 中遇到的最常见问题之一是，JSSE 接收到了一个决策机制未知的证书。如果收到未知证书，信任机制将抛出异常，提示该证书不可信。请确保使用了正确的信任库，并且 JSSE 已正确安装和配置。
 
@@ -21279,12 +21406,13 @@ Java 8 文档中 JSSE 示例代码中的 `SSLEngineSimpleDemo.java` 程序是一
 
 本节演示了如何使用 `keytool` 创建一个简单的 PKCS12 密钥库供使用。
 
-1. 创建一个新的密钥库和自签名证书。
+### 1. 创建一个新的密钥库和自签名证书。
 
 ```
 keytool -genkeypair -alias duke -keyalg RSA -validity 365 -keystore keystore
 ```
 
+```
 What is your name? [duke]:
 
 What is your first name? [duke]:
@@ -21326,15 +21454,15 @@ Length: 1448
 (of self-signed certificate, key: RSA 2048 bits)
 
 -----END CERTIFICATE-----
-
 ```
 
-2. 检查密钥库。
+### 2. 检查密钥库。
 
 ```
 keytool -list -v -keystore keystore
 ```
 
+```
 Enter password for keystore:
 Alias name: duke
 Certificate type: RSA keyEntry
@@ -21352,18 +21480,19 @@ Entry extensions:
 Valid from: Jan 01 00:00:00 2024
 Valid until: Dec 31 23:59:59 2024
 Signature algorithm: SHA256withRSA
+```
 
-3. 导出并检查自签名证书。
+### 3. 导出并检查自签名证书。
 
 ```
 keytool -export -alias duke -keystore keystore -rfc -file duke.cer
 ```
 
+```
 Enter password for keystore:
 
 Certificate added to file duke.cer
 
-```
 cat duke.cer
 ```
 
@@ -21377,12 +21506,13 @@ cat duke.cer
 
 或者，你也可以使用 `-certreq` 生成证书签名请求 (CSR)，并将其发送到证书权威 (CA) 进行签名，这超出了本示例的范围。
 
-4. 将证书导入新的信任存储库（truststore）。
+### 4. 将证书导入新的信任存储库（truststore）。
 
 ```
-keytool -import -alias ducert -file duke.cer -keystore truststore
+% keytool -import -alias ducert -file duke.cer -keystore truststore
 ```
 
+```
 Enter password: <password>
 
 Re-enter new password:
@@ -21406,35 +21536,36 @@ Signature algorithm name: SHA256withRSA
 Subject Public Key Algorithm: RSA (2048)
 
 Version: 3
+```
 
+```
 Extensions:
-
 # ObjectID: 2.5.29.14 Criticality=false
 SubjectKeyIdentifier [
-
 KeyIdentifier [
-
 0000: 7C 95 48 42 6D 91 BA 1E E6 5C 2C 66 FF 75 ..HB.h.....,k.u
-0010: 5F 19 78 43                                     ..xC
-
+0010: 5F 19 78 43                                 ..xC
 ]
-
 ]
-
-信任此证书？[no]: yes
-证书已添加到密钥存储库
-
-5. 检查信任存储库。注意条目类型为 `trustedCertEntry`，这意味着该条目不包含私钥。这也意味着该文件不适合作为 KeyManager 的密钥库。
-
-```
-keytool -list -v -keystore truststore
 ```
 
+```
+Trust this certificate? [no]: yes
+Certificate was added to keystore
+```
+
+### 5. 检查信任存储库。注意条目类型为 `trustedCertEntry`，这意味着该条目不包含私钥。这也意味着该文件不适合作为 KeyManager 的密钥库。
+
+```
+% keytool -list -v -keystore truststore
+```
+
+```
 Enter password: <password>
 
 Keystore type: PKCS12
-
 Keystore provider: SUN
+```
 
 你的密钥存储库包含 1 个条目
 
@@ -21442,6 +21573,7 @@ Keystore provider: SUN
 创建日期: 2016年7月25日
 条目类型: trustedCertEntry
 
+```
 Owner: CN=Duke, OU=Java Software, O="Oracle, Inc.", L=Palo Alto, ST=CA, C=US
 
 Issuer: CN=Duke, OU=Java Software, O="Oracle, Inc.", L=Palo Alto, ST=CA, C=US
@@ -21461,7 +21593,9 @@ Signature algorithm name: SHA256withRSA
 Subject Public Key Algorithm: RSA (2048)
 
 Version: 3
+```
 
+```
 Extensions:
 
 #1: ObjectID 2.5.29.14 Criticality=false
@@ -21469,14 +21603,15 @@ SubjectKeyIdentifier {
 KeyIdentifier {
 0000: 7F C9 95 48 42 0D 68 91 BA 1E E6 5C 2C 6B FF 75 ..BB.h....\k.u
 0010: 5F 19 78 43                                     ..xC
+]
 }
-}
+```
 
-6. 现在使用适当的密钥库运行你的应用程序。此示例假设使用了默认的 `X509KeyManager` 和 `X509TrustManager`，你通过在“自定义 JSSE”中描述的系统属性来选择密钥库。
+### 6. 现在使用适当的密钥库运行你的应用程序。此示例假设使用了默认的 `X509KeyManager` 和 `X509TrustManager`，你通过在“自定义 JSSE”中描述的系统属性来选择密钥库。
 
 ```
-java -Djavax.net.ssl.keyStore=keystore -Djavax.net.ssl.keyStorePassword=password Server
-java -Djavax.net.ssl.trustStore=truststore -Djavax.net.ssl.trustStorePassword=trustword Client
+% java -Djavax.net.ssl.keyStore=keystore -Djavax.net.ssl.keyStorePassword=password Server
+% java -Djavax.net.ssl.trustStore=truststore -Djavax.net.ssl.trustStorePassword=trustword Client
 ```
 
 # 使用服务器名称指示 (SNI) 扩展
@@ -21487,14 +21622,14 @@ java -Djavax.net.ssl.trustStore=truststore -Djavax.net.ssl.trustStorePassword=tr
 
 以下开发客户端应用程序需要理解 SNI 扩展的情况：
 
-- 情况1。客户端想要访问 `www.example.com`。显式设置主机名：
+- 情况 1。客户端想要访问 `www.example.com`。显式设置主机名：
 
 ```
 SNIHostName serverName = new SNIHostName("www.example.com");
 sslParameters.setServerNames(Collections.singletonList(serverName));
 ```
 
-- 情况2。客户端不想使用 SNI，因为服务器不支持它。使用空列表禁用 SNI：
+- 情况 2。客户端不想使用 SNI，因为服务器不支持它。使用空列表禁用 SNI：
 
 ```
 sslParameters.setServerNames(Collections.emptyList());
@@ -21638,7 +21773,6 @@ int recordLength = SSLExplorer.getRequiredSize(buffer, 0, position);
 if (buffer.length < recordLength) {
 
     buffer = Arrays.copyOf(buffer, recordLength);
-
 }
 ```
 
@@ -21668,7 +21802,6 @@ capabilities = SSLExplorer.explore(buffer, 0, recordLength);
 if (capabilities == null) {
 
     System.out.println("Record version: " + capabilities.getRecordVersion());
-
 }
 
 System.out.println("Hello version: " + capabilities.getHelloVersion());
@@ -21828,7 +21961,9 @@ to the destinationSocket.
 // 或创建上下文
 
 SSLContext serviceContext =
+```
 
+```
 SSLEngine engine = serviceContext.createSSLEngine();
 
 // 现在服务可以像往常一样使用缓冲字节和其他缓冲区
@@ -21918,14 +22053,14 @@ DocumentBuilder docDocumentBuilder = dfactory.newDocumentBuilder();
 
 # 禁用 XPath 和 XSLT 扩展函数
 
-默认情况下，当启用 JAXP 安全处理时，XPath 和 XSLT 扩展函数会被禁用。以下代码启用 JAXP 安全处理并禁用 XPathFactory 的 XPath 和 XSLT 扩展函数：
+默认情况下，当启用 JAXP 安全处理时，XPath 和 XSLT 扩展函数会被禁用。以下代码启用 JAXP 安全处理并禁用 `XPathFactory` 的 XPath 和 XSLT 扩展函数：
 
 ```java
 XPathFactory xpf = XPathFactory.newInstance();
 xpf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
 ```
 
-以下代码启用 JAXP 安全处理并禁用 TransformerFactory 的 XSLT 函数：
+以下代码启用 JAXP 安全处理并禁用 `TransformerFactory` 的 XSLT 函数：
 
 ```java
 TransformerFactory tf = TransformerFactory.newInstance();
@@ -21958,7 +22093,7 @@ tf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
 
 # 不允许 DTD
 
-当将解析器属性 `http://apache.org/xml/features/disallow-doctype-decl` 设置为 true 时，如果输入的 XML 文档包含 DOCTYPE 声明，则会抛出致命错误。（该属性的默认值为 false。）此属性通常对于基于 SOAP 的应用程序非常有用，因为 SOAP 消息不能包含文档类型声明。
+当将解析器属性 `http://apache.org/xml/features/disallow-doctype-decl` 设置为 `true` 时，如果输入的 XML 文档包含 DOCTYPE 声明，则会抛出致命错误。（该属性的默认值为 `false`。）此属性通常对于基于 SOAP 的应用程序非常有用，因为 SOAP 消息不能包含文档类型声明。
 
 # 安全处理 StAX
 
@@ -21992,29 +22127,29 @@ sp.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, false);
 
 TLS 有效的原因之一是它使用了多种加密过程。在理解 TLS 之前，了解这些过程是有帮助的。安全套层（SSL）由 Netscape 在 1994 年开发，并在互联网社区的投入下演变为一种标准。IETF 将 SSL 改名为 TLS，并在 1999 年发布了第一个规范版本 1.0。TLS 1.0 是对最新版本 SSL 3.0 的小改进，禁止了已知弱算法的使用。TLS 1.1 于 2006 年发布，TLS 1.2 于 2008 年发布，TLS 1.3 则于 2018 年发布。加密的主要目的是防止未经授权的访问和理解双方之间的通信。加密无法总是限制对数据的访问，但可以通过加密使私有数据对未经授权方失效。用于网络传输数据的加密和解密算法通常分为两类：对称密钥加密和公钥加密。
 
-对称密钥加密和公钥加密都依赖于约定的加密密钥或密钥对。密钥就像锁的钥匙；只有使用正确的钥匙才能打开它。在通信双方之间安全地传输密钥并非易事。公钥证书允许一方安全地传输其公钥，从而为接收方提供保证。参见公钥证书。
+对称密钥加密和公钥加密都依赖于约定的加密密钥或密钥对。密钥就像锁的钥匙；只有使用正确的钥匙才能打开它。在通信双方之间安全地传输密钥并非易事。公钥证书允许一方安全地传输其公钥，从而为接收方提供保证。参见[公钥证书](#公钥证书)。
 
-## TLS 工作
+# TLS 工作
 
 TLS 有效的原因之一是它使用了多种加密过程。TLS 使用公钥加密进行身份验证，使用对称密钥加密和哈希函数提供隐私性和数据完整性。
 
 对称密钥加密和公钥加密的加密描述遵循安全社区广泛使用的惯例：两个通信方命名为 Alice 和 Bob。未经授权的第三方（即攻击者）命名为 Charlie。
 
-### 表 8-9 带 TLS 的 TCP/IP 栈
+## 表 8-9 带 TLS 的 TCP/IP 栈
 
 | TCP/IP 层 | 协议 |
 |---|---|
 | 应用层 | HTTP, NNTP 等 |
 | 传输层 | TLS |
 
-### 表 8-9 TCP/IP 栈（续）
+## 表 8-9 TCP/IP 栈（续）
 
 | TCP/IP 层 | 协议 |
 |---|---|
 | 传输控制协议 | TCP |
 | 网络层 | IP |
 
-## 对称加密
+# 对称加密
 
 在对称加密中，通信双方 Alice 和 Bob 使用相同的密钥来对消息进行加密和解密。在向网络发送任何加密数据之前，Alice 和 Bob 必须都拥有该密钥，并对他们将用于加密和解密的加密算法达成一致。
 
@@ -22024,11 +22159,11 @@ TLS 有效的原因之一是它使用了多种加密过程。TLS 使用公钥加
 
 对称加密也称为对称加密，因为加密和解密数据使用的是同一个密钥。知名的对称加密算法包括高级加密标准 (`AES`)、三重数据加密标准 (`3DES`) 和 Rivest 密码 4 (`RC4`)。
 
-## 非对称加密
+# 非对称加密
 
 非对称加密通过使用公钥和私钥解决了密钥分发的后勤问题。公钥可以通过网络发送，而私钥则由通信双方之一私密保存。公钥和私钥是加密上的逆关系；一个密钥加密的内容，另一个密钥即可解密。
 
-假设 Bob 想使用 Alice 的公钥向 Alice 发送消息。Alice 既有公钥也有私钥，因此她将私钥保存在本地，并将公钥发送给 Bob。Bob 使用 Alice 的公钥对 Alice 的秘密消息进行加密。Alice 随后可以使用她的私钥解密消息。
+假设 Bob 想使用 Alice 的公钥向 Alice 发送消息。Alice 既有公钥也有私钥，因此她将私钥保存在本地，并将公钥发送给 Bob。Bob 使用 Alice 的公钥对消息进行加密。Alice 随后可以使用她的私钥解密消息。
 
 如果 Alice 使用她的私钥加密并将加密后的消息发送给 Bob，那么 Bob 就可以确定他收到的是 Alice 的消息；如果 Bob 使用 Alice 的公钥可以解密数据，且只有 Alice 拥有 Alice 的私钥。问题是任何人都可以读取该消息，也可以获取 Bob 的公钥。但这种场景无法实现安全的数据通信，它为数字签名提供了基础。数字签名是公钥证书的组件之一，用于 TLS 中验证客户端或服务器。
 
@@ -22036,11 +22171,11 @@ TLS 有效的原因之一是它使用了多种加密过程。TLS 使用公钥加
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_754_0.png)
 
-## 对称加密与非对称加密的比较
+# 对称加密与非对称加密的比较
 
 对称加密和非对称加密各有优劣。使用对称加密，数据可以快速地加密和解密，因为通信双方必须共享相同的密钥信息，密钥交换的后勤问题可能成为障碍。使用非对称加密，密钥交换不是问题，公钥不需要秘密，但用于加密和解密数据的算法需要大量的计算，因此非常缓慢。
 
-## 公钥证书
+# 公钥证书
 
 公钥证书为实体提供了一种安全的方法来传递其公钥，用于非对称加密。公钥证书避免了以下情况：如果 Charlie 创建了自己的公钥和私钥，他可以声称自己是 Alice 并将其公钥发送给 Bob。Bob 将能够与 Charlie 通信，但 Bob 会认为他正在向 Alice 发送数据。
 
@@ -22056,25 +22191,25 @@ TLS 有效的原因之一是它使用了多种加密过程。TLS 使用公钥加
 
 如果 Bob 只接受公钥证书中的 Alice 公钥，那么当 Alice 将其发送给 Bob 时，Charlie 伪装成 Alice，Bob 不会被欺骗向 Charlie 发送秘密信息。
 
-多个证书可能链接在证书链中。当使用证书链时，第一个证书总是发送者的。下一个是发送者证书的颁发者。如果链中存在多个证书，那么每个都是前一个证书的颁发者。根 CA 是一个广泛信任的 CA。根 CA 信息通常存储在浏览器的信任存储中。知名的 CA 包括 DigiCert、Entrust 和 GlobalSign。
+多个证书可能链接在证书链中。当使用证书链时，第一个证书总是发送者的。下一个是发送者的证书。如果链中存在多个证书，那么每个都是前一个证书的颁发者。根 CA 是一个广泛信任的 CA。根 CA 信息通常存储在浏览器的信任存储中。知名的 CA 包括 DigiCert、Entrust 和 GlobalSign。
 
-## 加密哈希函数
+# 加密哈希函数
 
 发送加密数据时，TLS 通常使用加密哈希函数来确保数据完整性。函数防止 Charlie 篡改 Alice 给 Bob 的数据。
 
-加密哈希函数类似于校验和。主要区别在于，校验和用于检测意外更改，而加密哈希函数用于检测故意篡改。当数据被哈希函数处理时，会生成一段短位串，称为哈希值。消息的任何微小变化都会导致哈希值发生巨大变化。加密哈希函数不需要加密密钥。TLS 使用的哈希函数是安全哈希算法 (`SHA`)。SHA 由美国国家标准技术研究院 (`NIST`) 提出。
+加密哈希函数类似于校验和。主要区别在于，校验和用于检测意外更改，而加密哈希函数用于检测故意篡改。当数据被哈希函数处理时，会生成一段短位串，称为哈希值。消息的任何微小变化都会导致哈希值发生巨大变化。加密哈希函数不需要加密密钥。TLS 使用的哈希函数是安全哈希算法 (`SHA`)。`SHA` 由美国国家标准技术研究院 (`NIST`) 提出。
 
-## 消息认证码
+# 消息认证码
 
 消息认证码 (`MAC`) 类似于加密哈希，但它是基于密钥的。当加密哈希函数处理包含秘密的数据时，生成的哈希值被称为 `HMAC`。
 
 如果 Alice 想确保 Charlie 不篡改她的消息，她可以为消息计算 `HMAC` 并将其附加到原始消息之后。然后她使用与 Bob 共享的密钥对 `HMAC` 进行加密。当 Bob 解密消息并计算 `HMAC` 时，将能够判断消息在传输过程中是否被修改过。在 TLS 中，`HMAC` 用于安全数据的传输。
 
-### 数字签名
+## 数字签名
 
 一旦为消息创建了加密哈希，该哈希就会使用发送者的私钥加密。这种加密后的哈希被称为数字签名。
 
-## 握手
+# 握手
 
 使用 TLS 1.3 通信始于握手。这是客户端和服务器之间的初始协商，建立了它们后续在 TLS 内交互的参数。它包含三个阶段：密钥交换、服务器参数和身份验证：
 
@@ -22082,7 +22217,7 @@ TLS 有效的原因之一是它使用了多种加密过程。TLS 使用公钥加
 - **服务器参数**：此阶段建立其他握手参数，例如是否需要基于证书的客户端身份验证。
 - **身份验证**：此阶段验证服务器（可选的客户端）并提供密钥确认和握手完整性。
 
-### TLS 1.3 协议
+## TLS 1.3 协议
 
 下图显示了完整 TLS 握手的消息序列。
 
@@ -22095,27 +22230,27 @@ TLS 有效的原因之一是它使用了多种加密过程。TLS 使用公钥加
    b. 服务器处理 `ClientHello` 消息并为连接确定合适的加密参数。它返回 `ServerHello` 消息，指示协商的连接参数。对于 TLS 1.3，`ServerHello` 消息决定了密钥和密码套件选项。其他握手参数可能稍后确定。
 
 2. **服务器参数**：服务器发送两条消息来建立服务器参数：
-   - `EncryptedExtensions`：此消息响应 `ClientHello` 扩展，这些扩展不需要用于确定加密参数（除非是特定于单个证书的扩展）。
-   - `CertificateRequest`（可选）：如果需要基于证书的客户端验证，服务器将发送此消息，其中包含对该证书所需的参数。如果不需要客户端验证，则跳过此消息。
+   * `EncryptedExtensions`：此消息响应 `ClientHello` 扩展，这些扩展不需要用于确定加密参数（除非是特定于单个证书的扩展）。
+   * `CertificateRequest`（可选）：如果需要基于证书的客户端验证，服务器将发送此消息，其中包含对该证书所需的参数。如果不需要客户端验证，则跳过此消息。
 
 3. **身份验证**：
    a. 服务器发送这些身份验证消息：
-      - `Certificate`（可选）：此消息包含身份验证证书以及证书链中的任何其他辅助证书。如果服务器未使用证书进行身份验证，则跳过此消息。
+      * `Certificate`（可选）：此消息包含身份验证证书以及证书链中的任何其他辅助证书。如果服务器未使用证书进行身份验证，则跳过此消息。
 
       > 注意：
-      `Certificate` 消息可以在证书内部包含原始公钥。
+      `Certificate` 消息可以在证书内部包含原始密钥。
 
-      - `CertificateVerify`（可选）：此消息包含对整个握手的签名，该签名是使用 `Certificate` 消息中公钥对应的私钥生成的。如果服务器不使用证书进行身份验证，则跳过此消息。
-      - `Finished`：对整个握手的 `MAC`（消息认证码）。
+      * `CertificateVerify`（可选）：此消息包含对整个握手的签名，该签名是使用 `Certificate` 消息中公钥对应的私钥生成的。如果服务器不使用证书进行身份验证，则跳过此消息。
+      * `Finished`：对整个握手的 `MAC`（消息认证码）。
    b. 客户端响应其自己的 `Certificate`、`CertificateVerify` 和 `Finished` 消息。如果服务器没有发送 `CertificateRequest`，则跳过 `Certificate` 消息。如果客户端不使用证书进行身份验证，则跳过 `CertificateVerify` 消息。
 
-客户端和服务器现在可以保护彼此之间的应用程序数据安全。
+客户端和服务器现在可以保护它们之间的应用程序数据安全。
 
-#### 密钥交换
+## 密钥交换
 
 密钥交换消息 `ClientHello` 和 `ServerHello` 决定了客户端和服务器的安全能力，并建立共享密钥，包括用于保护握手其余部分和应用程序数据的流量密钥。
 
-#### ClientHello
+## ClientHello
 
 TLS 握手始于客户端向服务器发送 `ClientHello` 消息。该消息包含以下字段：
 
@@ -22124,31 +22259,31 @@ TLS 消息可能包含此处未列出的额外字段；请参阅 TLS 1.3 规范�
 
 - `cipher_suites`：此字段包含客户端支持的密码套件选项列表，特别是加密算法（包括密钥长度）以及用于基于哈希的消息认证码 (`HMAC`) 的提取和扩展密钥衍生函数 (`HKDF`) 的哈希算法。
 - `extensions`：扩展允许在现有客户端中向 TLS 协议中添加新功能。`ClientHello` 消息可能包含（但不限于）以下扩展：
-  - `supported_versions`：此扩展指示客户端支持哪些版本的 TLS。
-  - `status_request`：此扩展指示客户端想要使用证书状态协议；服务器可能不同意使用它。证书状态协议的一个示例是在线证书状态协议 (`OCSP`)。参阅 OCSP 和 Stapling。
-  - `supported_groups`：此扩展指示客户端用于密钥交换的组。这些命名组包括椭圆曲线组 (`ECDHE`) 和有限域组 (`DHE`)。如果使用 `ECDHE` 或 `DHE`，`ClientHello` 消息必须包含此消息。
+  * `supported_versions`：此扩展指示客户端支持哪些版本的 TLS。
+  * `status_request`：此扩展指示客户端想要使用证书状态协议；服务器可能不同意使用它。证书状态协议的一个示例是在线证书状态协议 (`OCSP`)。参阅 [OCSP 和 Stapling](#ocsp-和-stapling)。
+  * `supported_groups`：此扩展指示客户端用于密钥交换的组。这些命名组包括椭圆曲线组 (`ECDHE`) 和有限域组 (`DHE`)。如果使用 `ECDHE` 或 `DHE`，`ClientHello` 消息必须包含此消息。
 - `key_share`：此扩展包含密钥交换的加密参数列表。列表中的每个项目包含：
-  - `group`：密钥交换方法所依据的组的名称。
-  - `key_exchange`：交换信息，由组的值决定。
-- `pre_shared_key`：预共享密钥 (`PSK`) 是双方在需要使用之前共享的密钥。`PSK` 可以在之前的连接中建立，然后用于建立新连接。一旦握手完成，服务器可以向客户端发送与初始握手对应的 `PSK` 标识。参阅使用预共享密钥的会话恢复。
+  * `group`：密钥交换方法所依据的组的名称。
+  * `key_exchange`：交换信息，由组的值决定。
+- `pre_shared_key`：预共享密钥 (`PSK`) 是双方在需要使用之前通过某些安全通道事先共享的密钥。`PSK` 可以在之前的连接中建立，然后用于建立新连接。一旦握手完成，服务器可以向客户端发送与初始握手对应的 `PSK` 标识。参阅[使用预共享密钥的会话恢复](#使用预共享密钥进行会话恢复)。
 - `cookie`：当服务器发送 `HelloRetryRequest` 时，它可以包含此扩展。（如果服务器可以找到一组接受的参数，或者 `ClientHello` 消息不包含足够继续握手的信息，服务器将响应 `ClientHello` 发送 `HelloRetryRequest` 消息）。演示此扩展用法的一种方法是允许服务器通过网络地址联系客户端（这提供了拒绝服务 (`DoS`) 保护）。客户端必须将从 `HelloRetryRequest` 中收到的内容复制到此 `ClientHello` 消息中的 `cookie` 扩展中。
 - `server_name`：TLS 1.3 未提供让客户端告知其联系的服务器名称的机制。客户端可以使用此扩展方便连接到在网络地址上托管多个虚拟服务器的服务器。某些服务器可能要求客户端发送此扩展。
 
-#### ServerHello
+## ServerHello
 
 如果服务器能够协商一组接受的握手参数，它将用 `ServerHello` 消息响应客户端的 `ClientHello` 消息。此消息包含：
 
 - `cipher_suite`：此字段包含服务器从 `ClientHello.cipher_suites` 字段列表中选择的单个密码套件。
 - `extensions`：此字段包含建立加密上下文和协商协议版本所需的扩展。`ServerHello` 可能包含以下内容：
-  - `supported_versions`：指示使用的哪个版本的 TLS。`ServerHello` 消息必须包含此扩展。
+  * `supported_versions`：指示使用的哪个版本的 TLS。`ServerHello` 消息必须包含此扩展。
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_759_0.png)
 
 - `key_share`：此扩展包含密钥交换的加密参数列表。
-- `pre_shared_key`：此扩展包含同意的预共享密钥。参阅使用预共享密钥的会话恢复获取有关预共享密钥的信息。
+- `pre_shared_key`：此扩展包含同意的预共享密钥。参阅[使用预共享密钥的会话恢复](#使用预共享密钥进行会话恢复)获取有关预共享密钥的信息。
 - 服务器在 `EncryptedExtensions` 消息中单独发送扩展。
 
-#### 服务器参数
+## 服务器参数
 
 服务器向客户端发送 Hello 后，会发送两条消息来建立服务器参数：`EncryptedExtensions` 和 `CertificateRequest`：
 
@@ -22161,39 +22296,41 @@ TLS 消息可能包含此处未列出的额外字段；请参阅 TLS 1.3 规范�
     - `certificate_authorities`：此扩展指示服务器接受的证书颁发机构。
 - `supported_groups`：此消息包含服务器偏好的命名组。客户端可以使用此信息更改其在后续连接的 `key_share` 扩展中使用的组。
 
-#### 身份验证
+## 身份验证
 
 TLS 握手中服务器和客户端相互发送的最后三条消息是 `Certificate`、`CertificateVerify` 和 `Finished`。
 
-#### Certificate
+## Certificate
 
 此消息包含身份验证证书以及证书链中的任何其他辅助证书。如果密钥交换方法使用证书进行身份验证，则服务器必须发送此消息。且仅当服务器通过 `CertificateRequest` 消息请求客户端验证时，客户端才必须发送此消息。`Certificate` 消息包括：
 
 - `certificate_list`：此字段包含 `CertificateEntry` 结构的序列，每个结构包含单个证书和一组扩展
 - `extensions`：`Certificate` 消息可能包含以下扩展：
-  - `status_request`：参见客户端驱动的 OCSP 和 OCSP 装订 (`OCSP Stapling`)
-  - `signed_certificate_timestamp`：除非证书已记录，否则 TLS 客户端不会接受证书。当有效证书提交到日志时，日志必须返回签名证书时间戳 (`SCT`)；参见 RFC 6962：证书透明度。
+  - `status_request`：参见[客户端驱动的 OCSP 和 OCSP 留存 (OCSP Stapling)](#ocsp-和-stapling)
+  - `signed_certificate_timestamp`：除非证书已记录，否则 TLS 客户端不会接受证书。当有效证书提交到日志时，日志必须返回签名证书时间戳 (`SCT`）；参见 RFC 6962：证书透明度。
 
-#### CertificateVerify
+## CertificateVerify
 
 此消息包含一个针对整个握手过程的签名，该签名使用了与 `Certificate` 消息中公钥相对应的私钥。它证明了客户端或服务器拥有与其证书对应的私钥。此消息包含以下字段：
 
 - `algorithm`：此字段包含所使用的签名算法。参见 JDK Providers 文档中的 The SunJSSE Provider 以获取支持的算法。
 - `signature`：此字段包含使用该算法的数字签名。
 
-#### Finished
+## Finished
 
 此消息包含一个针对整个握手过程的消息认证码 (`MAC`)。一旦客户端和服务器验证了从对方处收到的 `Finished` 消息，双方即可在连接上发送和接收应用程序数据。
 
-### 使用预共享密钥进行会话恢复
+## 使用预共享密钥进行会话恢复
 
 预共享密钥 (`PSK`) 是一种共享密钥，在使用之前，双方已通过某些安全通道事先共享了该密钥。你可以在一次 TLS 握手建立 `PSK`，然后在另一个握手中使用它来建立新连接；这被称为基于 `PSK` 的会话恢复。`PSK` 对应于从初始握手派生的唯一密钥。如果服务器在建立新连接时接受了 `PSK`，则该连接的安全上下文在密码学上与原始连接绑定，并且从初始握手派生的密钥将用于引导状态，而不是完整的 TLS 握手。以下图显示了两次握手，第一个建立 `PSK`，第二个使用它。
 
 # 图 8-8 建立 PSK 的 TLS 1.3 握手
-![](img/e26375bc04cf1374fe293bdab5076_0.png)
+
+![](img/e26375bcfe04cf1374fe3293bdab5076_0.png)
 
 # 图 8-9 使用 PSK 的 TLS 1.3 握手
-![](img/e26375bc04cf1374fe293bdab5076_1.png)
+
+![](img/e26375bcfe04cf1374fe3293bdab5076_1.png)
 
 1. 客户端向服务器发送带有 `key_share` 扩展的 `ClientHello` 消息。该扩展列出了客户端支持的加密方法。
 2. 服务器响应带有 `key_share` 扩展的 `ServerHello` 消息。该扩展包含了它想要用于密钥交换的加密方法。
@@ -22214,30 +22351,31 @@ TLS 1.3 不支持以下内容：
 - 无状态服务器 PSK：带服务器状态的 TLS 会话恢复描述描述，允许服务器能够恢复会话并保留每个客户端状态的机制。这种机制将减少内存占用。
 - 带外 PSK 建立：这意味着产生 `NewSessionTicket` 消息以外的 PSK。
 
-### 握手后消息
+## 握手后消息
 
 客户端和服务器可以在握手后发送其他消息：新会话令牌消息、握手后身份验证和密钥更新。
 
-#### New Session Ticket 消息
+## New Session Ticket 消息
 
-服务器在接收到 `Finished` 消息后发送的 `NewSessionTicket` 消息包含一个客户端可能用于未来握手的预共享密钥。使用预共享密钥进行会话恢复。
-![](img/e26375bc04cf1374fe293bdab5076_763_0.png)
+服务器在接收到 `Finished` 消息后发送的 `NewSessionTicket` 消息包含一个客户端可能用于未来握手的预共享密钥。参见[使用预共享密钥进行会话恢复](#使用预共享密钥进行会话恢复)。
 
-#### 握手后身份验证
+![](img/e26375bcfe04cf1374fe3293bdab5076_763_0.png)
+
+## 握手后身份验证
 
 如果客户端发送了 `post_handshake_auth` 扩展，服务器可以在握手后的任何时候通过发送 `CertificateRequest` 消息请求客户端身份验证。如果客户端通过验证，则必须发送 `Certificate`、`CertificateVerify` 和 `Finished` 消息。如果客户端拒绝，则必须发送一个不包含任何证书的 `Certificate` 消息和 `Finished` 消息。
 
-#### KeyUpdate 消息
+## KeyUpdate 消息
 
 `KeyUpdate` 握手消息用于指示服务器正在更新其加密密钥。它取代了 TLS 1.2 中的 `ChangeCipherSpec` 消息。
 
 可以通过 `jdk.tls.keylimits` 安全属性指定算法允许使用特定密钥集加密的数据量。参见《限制算法使用一组密钥加密的数据量》。
 
-### 兼容性风险和已知问题
+## 兼容性风险和已知问题
 
 TLS 的增强可能会引入兼容性问题和其他已知问题，本节描述这些问题：
 
-#### TLS 1.3 不与旧版本直接兼容
+### TLS 1.3 不与旧版本直接兼容
 
 TLS 1.3 与旧版本不直接兼容。尽管 TLS 1.3 可以通过兼容模式实现，但在升级到 TLS 1.3 时仍存在若干兼容性风险：
 
@@ -22259,13 +22397,13 @@ SSL 会话从客户端与服务器协商使用何种加密套件开始。加密�
 
 为了证明服务器属于其声称的组织，服务器向客户端出示公钥证书。如果证书有效，客户端就可以确定服务器的身份。
 
-客户端和服务器交换允许它们约定相同密钥的信息。例如，使用 `RSA` 时，客户端使用从公钥证书获取的服务器公钥加密密钥信息。客户端将加密的密钥信息发送给服务器。只有服务器可以解密此消息，因为解密需要服务器的私钥。
-
 3. **协商加密机制**
+
+客户端和服务器交换允许它们约定相同密钥的信息。例如，使用 `RSA` 时，客户端使用从公钥证书获取的服务器公钥加密密钥信息。客户端将加密的密钥信息发送给服务器。只有服务器可以解密此消息，因为解密需要服务器的私钥。
 
 客户端和服务器现在都可以访问相同的密钥。对于每条消息，它们使用在握手第一阶段选择的加密哈希函数和共享信息计算 `HMAC` 并将其附加到消息中。它们使用在握手第一阶段协商的密钥和算法来加密安全数据和 `HMAC`。客户端和服务器现在可以使用它们的加密和哈希数据进行安全通信。
 
-### 图 8-10 SSL/TLS 握手
+# 图 8-10 SSL/TLS 握手
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_766_0.png)
 
@@ -22275,14 +22413,14 @@ SSL 消息按照以下顺序发送：
 2. **Server hello**：服务器选择客户端和服务器都支持的最高 SSL 版本和最佳加密套件，并将此信息发送给客户端。
 3. **（可选）Certificate**：服务器发送客户端证书或证书链。证书链通常从服务器的公钥证书开始，以证书颁发者的根证书结束。该消息是可选的，但在请求服务器身份验证时使用。
 4. **（可选）Certificate request**：如果服务器必须验证客户端，则会发送客户端证书请求。在互联网应用中，此消息很少使用。
-5. **（可选）Server key exchange**：如果从客户端获取的公开信息不足以进行密钥交换，服务器将发送密钥交换消息。例如，在基于 Diffie-Hellman (`DH`) 的加密套件中，此消息包含服务器的 DH 公钥。
+5. **（可选）Server key exchange**：如果从客户端获取的公开信息不足以进行密钥交换，服务器将发送密钥交换消息。例如，在基于 Diffie-Hellman (`DH`) 的加密套件中，此消息包含服务器的 `DH` 公钥。
 6. **Server hello done**：服务器告诉客户端它已完成初始协商消息。
 7. **（可选）Certificate**：如果服务器向客户端请求了证书，客户端将发送其证书链，就像服务器之前的操作一样。
 
 > 注意：
 只有少数互联网服务器应用程序会向客户端请求证书。
 
-8. **Client key exchange**：客户端生成用于创建对称加密密钥的信息。对于 `RSA`，客户端随后使用服务器的公钥加密此密钥并将其发送到服务器。对于基于 `DH` 的加密套件，此消息包含客户端的 DH 公钥。
+8. **Client key exchange**：客户端生成用于创建对称加密密钥的信息。对于 `RSA`，客户端随后使用服务器的公钥加密此密钥并将其发送到服务器。对于基于 `DH` 的加密套件，此消息包含客户端的 `DH` 公钥。
 9. （可选）**Certificate verify**：当客户端如前述呈现证书时，由客户端发送此消息。其目的是允许服务器完成验证客户端的过程。当使用此消息时，客户端会发送使用加密哈希函数进行数字签名的信息。当服务器使用客户端的公钥解密这些信息时，服务器能够验证客户端。
 10. **Cipher change spec**：客户端向服务器发送一条消息以切换到加密模式。
 11. **Finished**：客户端告诉服务器它准备好开始安全数据通信。
@@ -22293,7 +22431,7 @@ SSL 消息按照以下顺序发送：
 
 如果保存了 SSL 会话期间生成的参数，这些参数有时可以重用于未来的 SSL 会话。保存 SSL 会话参数允许加密通信更快速地开始。
 
-## 再次握手
+# 再次握手
 
 一旦握手完成且应用数据开始流传输，任何端都可以随时发起新的握手。应用程序可能在关键操作中需要更强的加密套件，或者服务器应用程序可能要求客户端身份验证。
 
@@ -22304,9 +22442,9 @@ SSL 消息按照以下顺序发送：
 - `SSLSocket.startHandshake()`
 - `SSLEngine.beginHandshake()`
 
-## 加密套件选择与远程实体验证
+# 加密套件选择与远程实体验证
 
-SSL/TLS 协议定义了一系列特定的步骤以确保连接受保护。然而，加密套件的选择直接影响连接所享有的安全类型。例如，如果选择了匿名加密套件，则应用程序无办法验证对方的身份。如果选择了没有加密的套件，则数据的隐私性无法得到保护。此外，SSL/TLS 协议并没有规定收到的凭据必须与预期的对方凭据匹配。
+SSL/TLS 协议定义了一系列特定的步骤以确保连接*受保护的*。然而，加密套件的选择直接影响连接所享的安全类型。例如，如果选择了匿名加密套件，则应用程序无办法验证对方的身份。如果选择了没有加密的套件，则数据的隐私性无法得到保护。此外，SSL/TLS 协议并没有规定收到的凭据必须与预期的对方凭据匹配。
 
 可能预期看到的。如果连接在某种程度上重定向到了恶意对方，而恶意对方的凭据根据当前的真实信任是可以接受的，那么该连接就是被允许的。
 
@@ -22314,23 +22452,23 @@ SSL/TLS 协议定义了一系列特定的步骤以确保连接受保护。然而
 
 `SSLParameters.getIdentificationAlgorithm` 方法。
 
-如 HTTPS (HTTP Over TLS) 等协议需要主机名验证。参见 JDK 7，HTTPS 端点识别在握手期间强制执行。或者，应用程序可以使用 `HostnameVerifier` 接口来覆盖默认的主机名规则。参见 `HostnameVerifier` 接口和 `HttpsURLConnection` 类。
+如 HTTPS（HTTP Over TLS）等协议需要主机名验证。参见 JDK 7，HTTPS 端点识别在握手期间强制执行。或者，应用程序可以使用 `HostnameVerifier` 接口来覆盖默认的主机名规则。参见 `HostnameVerifier` 接口和 `HttpsURLConnection` 类。
 
 # 传输层安全 (DTLS) 协议
 
 数据报层安全 (`DTLS`) 用于构建不要求或提供数据有序交付的“TLS 数据报”。Java 安全套扩展 (`JSSE`) API 和 SunJSSE 支持该协议。
 
-由于 TLS 需要可靠的传输通道（如 TCP），因此它无法用于不可靠的数据报流量。DTLS 是 TLS 的变体。
+由于 TLS 需要可靠的传输通道（如 `TCP`），因此它无法用于不可靠的数据报流量。`DTLS` 是 TLS 的变体。
 
-JSSE API 现在支持 DTLS 1.0 和 DTLS 1.2，以及安全套接字 (`SSL`) 和传输层安全 (`TLS`) 协议。
+JSSE API 现在支持 `DTLS 1.0` 和 `DTLS 1.2`，以及安全套接字 (`SSL`) 和传输层安全 (`TLS`) 协议。
 
 JSSE 使用 `javax.net.ssl.SSLEngine` 编程模型。
 
-## DTLS 握手
+# DTLS 握手
 
 在发送应用数据之前，DTLS 协议需要握手来建立加密参数。该握手需要 `SSLEngine` 对象在客户端和服务器之间进行往返消息。
 
-DTLS 握手要求所有消息正确接收。因此，在不可靠的数据报流量中，丢失或延迟的数据包必须重传。参见 `javax.net.ssl.SSLEngine` 不负责 I/O 操作，由应用程序提供定时器并在需要重传时信号 `SSLEngine`。应用程序使用定时器和重传策略非常重要。参见在 DTLS 连接中处理重传。
+DTLS 握手要求所有消息正确接收。因此，在不可靠的数据报流量中，丢失或延迟的数据包必须重传。参见 `javax.net.ssl.SSLEngine` 不负责 I/O 操作，由应用程序提供定时器并在需要重传时信号 `SSLEngine`。应用程序使用定时器和重传策略非常重要。参见[在 DTLS 连接中处理重传](#在-dtls-连接中处理重传)。
 
 DTLS 握手包括以下阶段：
 
@@ -22341,14 +22479,14 @@ DTLS 握手包括以下阶段：
 2. **验证服务器身份（可选）**
 身份验证步骤是可选的，但在电子商务交易的示例中，客户端选择对服务器进行验证。验证服务器可以使其确信该服务器代表了客户端所认为的服务器实体。
 
-为了证明服务器确实属于其所声称代表的组织，服务器会向客户端提交其公钥。如果该证书有效，客户端就可以确定服务器的身份。
-
-客户端和服务器交换信息，以便它们达成相同的秘密密钥。例如，使用 `RSA` 时，客户端使用从证书获取的服务器公钥来加密密钥信息。客户端将加密后的密钥信息发送给服务器。只有服务器可以解密此消息，因为解密过程需要服务器的私钥。
+为了证明服务器确实属于其所声称代表的组织，服务器会向客户端提交其公钥证书。如果该证书有效，客户端就可以确定服务器的身份。
 
 3. **协商加密机制**
+客户端和服务器交换信息，以便它们达成相同的秘密密钥。例如，使用 `RSA` 时，客户端使用从证书获取的服务器公钥来加密密钥信息。客户端将加密后的密钥信息发送给服务器。只有服务器可以解密此消息，因为解密过程需要服务器的私钥。
+
 现在客户端和服务器都拥有了相同的秘密密钥。对于每条消息，它们都使用在握手第一阶段选择的加密哈希函数和共享密钥信息来计算一个 `HMAC`，并将其附加到消息中。然后，它们使用握手第一阶段协商的密钥和密钥算法对安全数据和 `HMAC` 进行加密。客户端和服务器现在可以使用它们加密和哈希后的数据进行安全通信。
 
-### DTLS 握手消息交换
+## DTLS 握手消息交换
 
 在 DTLS 握手中，`SSLEngine` 对象会在客户端和服务器之间交换系列往返消息。
 
@@ -22356,31 +22494,31 @@ DTLS 握手包括以下阶段：
 
 要了解更多关于 DTLS 握手消息的信息，请参见 DTLS Version 1.0 和 DTLS Version 1.2。
 
-#### 图 8-11 DTLS 握手
+## 图 8-11 DTLS 握手
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_770_0.png)
 
 DTLS 握手期间，客户端和服务器之间交换以下握手消息：
 
-1. **ClientHello**: 客户端发送服务器信息，包括其支持的最高版本 DTLS 以及支持的密码套件列表。密码套件信息包括加密算法和密钥长度。
-2. **HelloVerifyRequest**: 服务器使用 cookie 响应 `ClientHello` 消息。
-3. **ClientHello**: 客户端向服务器发送第二个 `ClientHello` 消息，包含其支持的最高版本 DTLS 和支持的密码套件列表。在 `HelloVerifyRequest` 中收到的 cookie 被发送回服务器。
-4. **ServerHello**: 服务器选择客户端双方支持的最高版本 DTLS 和最佳密码套件，并将此信息发送给客户端。
-5. (可选) **Certificate**: 服务器发送证书或证书链。证书链通常从服务器的公钥证书开始，到证书体系的根证书结束。此消息是可选的，但在任何需要服务器验证的情况下都会使用。
-6. (可选) **CertificateRequest**: 如果服务器要验证客户端，则会发送证书请求。在互联网应用程序中，很少发送此消息。
-7. (可选) **ServerKeyExchange**: 如果证书中的公钥信息不足以进行密钥交换，服务器将发送客户端密钥交换消息。例如，在基于 Diffie-Hellman (`DH`) 的密码套件中，此消息包含服务器的公钥。
-8. **ServerHelloDone**: 服务器告诉客户端已完成初始协商消息。
-9. (可选) **Certificate**: 如果服务器向客户端请求证书，客户端将发送其证书链，就像服务器之前做一样。
+1. **ClientHello**：客户端发送服务器信息，包括其支持的最高版本 DTLS 以及支持的密码套件列表。密码套件信息包括加密算法和密钥长度。
+2. **HelloVerifyRequest**：服务器使用 cookie 响应 `ClientHello` 消息。
+3. **ClientHello**：客户端向服务器发送第二个 `ClientHello` 消息，包含其支持的最高版本 DTLS 和支持的密码套件列表。在 `HelloVerifyRequest` 中收到的 cookie 被发送回服务器。
+4. **ServerHello**：服务器选择客户端双方支持的最高版本 DTLS 和最佳密码套件，并将此信息发送给客户端。
+5. (可选) **Certificate**：服务器发送证书或证书链。证书链通常从服务器的公钥证书开始，到证书体系的根证书结束。此消息是可选的，但在任何需要服务器验证的情况下都会使用。
+6. (可选) **CertificateRequest**：如果服务器要验证客户端，则会发送证书请求。在互联网应用程序中，很少发送此消息。
+7. (可选) **ServerKeyExchange**：如果证书中的公钥信息不足以进行密钥交换，服务器将发送客户端密钥交换消息。例如，在基于 Diffie-Hellman (`DH`) 的密码套件中，此消息包含服务器的公钥。
+8. **ServerHelloDone**：服务器告诉客户端已完成初始协商消息。
+9. (可选) **Certificate**：如果服务器向客户端请求证书，客户端将发送其证书链，就像服务器之前做一样。
 
 > 注意：
 少数互联网服务器应用程序会要求客户端证书。
 
-10. **ClientKeyExchange**: 客户端生成用于创建对称加密密钥的信息。对于 `RSA`，客户端随后使用服务器公钥加密此密钥并发送给服务器。对于基于 `DH` 的密码套件，此消息包含客户端的 DH 公钥。
-11. (可选) **CertificateVerify**: 当客户端如前所述提交证书时发送此消息。其目的是允许服务器完成验证客户端的过程。当使用此消息时，客户端发送使用加密哈希函数进行数字签名的信息。当服务器使用客户端的公钥解密这些信息时，服务器能够验证客户端。
-12. **ChangeCipherSpec**: 客户端发送一条消息，告知后续数据将在新协商的密码规格和密钥的保护下保护并进行加密。
-13. **Finished**: 客户端告诉服务器已准备好开始安全数据通信。
-14. **ChangeCipherSpec**: 服务器发送一条消息，告知后续数据将在新协商的密码规格和密钥的保护下保护并进行加密。
-15. **Finished**: 服务器告诉客户端已准备好开始安全数据通信。这是 DTLS 握手的结束。
+10. **ClientKeyExchange**：客户端生成用于创建对称加密密钥的信息。对于 `RSA`，客户端随后使用服务器公钥加密此密钥并发送给服务器。对于基于 `DH` 的密码套件，此消息包含客户端的 `DH` 公钥。
+11. (可选) **CertificateVerify**：当客户端如前所述提交证书时发送此消息。其目的是允许服务器完成验证客户端的过程。当使用此消息时，客户端发送使用加密哈希函数进行数字签名的信息。当服务器使用客户端的公钥解密这些信息时，服务器能够验证客户端。
+12. **ChangeCipherSpec**：客户端发送一条消息，告知后续数据将在新协商的密码规格和密钥的保护下保护并进行加密。
+13. **Finished**：客户端告诉服务器已准备好开始安全数据通信。
+14. **ChangeCipherSpec**：服务器发送一条消息，告知后续数据将在新协商的密码规格和密钥的保护下保护并进行加密。
+15. **Finished**：服务器告诉客户端已准备好开始安全数据通信。这是 DTLS 握手的结束。
 
 ## 再次握手（重新协商）
 
@@ -22401,17 +22539,17 @@ DTLS 握手期间，客户端和服务器之间交换以下握手消息：
 | **公钥 (Public Keys)** | 这些与特定实体相关的数字，旨在让需要与该实体进行可信交互的人感知。公钥用于验证签名。 |
 | **数字签名 (Digitally Signed)** | 如果数据经过数字签名，则存储了某个实体的“身份”以及一个证明该实体知道该数据的签名。通过使用该实体的私钥进行签名，数据变得不可伪造。 |
 | **身份 (Identity)** | 标识实体的已知方式。在某些系统中，身份是公钥；在其他系统中，它可以是从 UNIX UID 到电子邮件地址到 X.509 区分名（Distinguished Name）的任何内容。 |
-| **签名 (Signature)** | 签名是使用实体的私钥（签名者）对某些数据计算得出。 |
+| **签名 (Signature)** | 签名是使用实体的私钥（签名者）对某些数据计算得出的。 |
 | **私钥 (Private Keys)** | 这些是数字，每个数字都应该只由特定实体已知，在所有公钥加密系统（也称为“公钥加密系统”）中，私钥和公钥成对存在。在典型的公钥加密系统（如 DSA）中，一个私钥对应于一个公钥。私钥用于计算签名。 |
 | **实体 (Entity)** | 实体是指个人、组织、程序、计算机、银行或你在某种程度上信任的任何其他事物。 |
 
-基本上，公钥加密需要访问用户的公钥。在大规模网络环境中，无法保证通信实体之间已建立先前关系，或者不存在一个包含所有已用公钥的可信存储库。证书的发明是为了解决这一公钥分发问题的解决方案。
+基本上，公钥加密需要访问用户的公钥。在大规模网络环境中，无法保证通信实体之间已建立先关系，或者不存在一个包含所有已用公钥的可信存储库。证书的发明是为了解决这一公钥分发问题的解决方案。
 
 证书颁发机构 (`CA`) 可以充当可信第三方。CA 是实体（例如企业），它们被信任可以为其他实体签署（颁发）证书。根据法律协议规定，CA 将仅验证有效且可靠的证书。
 
-有很多公共的证书颁发机构，例如 VeriSign、Thawte、Entrust 等。你也可以使用 Netscape/Microsoft 证书服务器或 ENT CA 产品为你的组织运行自己的证书颁发机构。
+有很多公共的证书颁发机构，例如 VeriSign、Thawte、Entrust 等。你也可以使用 Netscape/Microsoft 证书服务器或自有 CA 产品为你的组织运行自己的证书颁发机构。
 
-### 哪些应用程序使用证书？
+**哪些应用程序使用证书？**
 
 X.509 证书最可见的应用可能是支持 TLS 协议的 Web 浏览器（如 Mozilla Firefox 和 Microsoft Internet Explorer）。TLS（传输层安全）是一种安全协议，为你的网络流量提供隐私保护和身份验证。这些浏览器只能与支持 TLS 的 Web 服务器配合此协议。
 
@@ -22419,10 +22557,10 @@ X.509 证书最可见的应用可能是支持 TLS 协议的 Web 浏览器（如 
 
 其他依赖 X.509 证书的技术还包括：
 
-- 各种代码签名方案，例如 Java 归档 (`JAR`) 和 Microsoft Authenticode。
+- 各种代码签名方案，例如 Java 归档（`JAR`）和 Microsoft Authenticode。
 - 各种电子邮件标准，如 PEM 和 S/MIME。
 
-### 如何获取证书？
+## 如何获取证书？
 
 获取证书有两种基本技术：
 
@@ -22438,31 +22576,31 @@ X.509 证书最可见的应用可能是支持 TLS 协议的 Web 浏览器（如 
 
 如果你是自己生成证书，你将获取这些信息，增加一点内容（证书的有效期、序列号），然后直接使用某些工具（如 `keytool`）创建证书。并不是所有人都会接受自签名证书；CA 提供的价值之一是作为中立且可信的介绍服务，这在程度上基于他们的验证要求，而这些要求在他们的证书服务实践规范 (`CSP`) 中公开发布。
 
-### X.509 证书内部包含什么？
+## X.509 证书内部包含什么？
 
 X.509 标准定义了证书可以包含哪些信息，并描述了如何编写（数据格式）。所有 X.509 证书除了签名外还包含以下数据：
 
-#### 版本 (Version)
+### 版本 (Version)
 
 这标识哪种版本的 X.509 标准适用于此证书，这将影响其中可以指定哪些信息。到目前为止定义了三个版本。
 
-#### 序列号 (Serial Number)
+### 序列号 (Serial Number)
 
 创建证书的实体负责为其分配序列号，以便与其颁发的其他证书区分开来。此信息用于许多用途，例如，当证书被吊销时，其序列号会被放入证书吊销列表 (`CRL`)。
 
-#### 签名算法标识符 (Signature Algorithm Identifier)
+### 签名算法标识符 (Signature Algorithm Identifier)
 
 这标识 CA 用于签署证书的算法。
 
-#### 发行者名称 (Issuer Name)
+### 发行者名称 (Issuer Name)
 
 签署此证书的实体 X.500 名称通常是 CA。使用此证书意味着信任签署此证书的实体。（注意在某些情况下，如根证书或顶级 CA 证书，颁发者会签署自己的证书。）
 
-#### 有效期 (Validity Period)
+### 有效期 (Validity Period)
 
 每个证书仅在有限时间内有效。该时期由起始和结束日期描述，可以短至几秒钟，也可以长达一个世纪。有效期的选择取决于许多因素，例如用于签署证书的私钥强度，或人们愿意为证书支付的金额。如果关联的私钥未被泄露，这就是实体可以依赖该公钥价值的预期期限。
 
-#### 主体名称 (Subject Name)
+### 主体名称 (Subject Name)
 
 通过其公钥标识证书的实体名称。该名称使用 X.500 标准，因此旨在于互联网上是唯一的。它是该实体的区分名 (`DN`)，例如：
 
@@ -22470,30 +22608,32 @@ X.509 标准定义了证书可以包含哪些信息，并描述了如何编写�
 
 （这些分别指主体通用名称、组织单位、组织和国家。）
 
-#### 主体公钥信息 (Subject Public Key Information)
+### 主体公钥信息 (Subject Public Key Information)
 
 这是被命名实体的公钥，连带一个指定其所属公钥系统以及任何关联参数的算法标识。
 
 X.509 版本 1 自 1988 年以来可用，广泛部署且最通用。
 X.509 版本 2 引入了主体和颁发者标识符的概念，以处理随着时间推移重用名称的可能性。大多数证书规范文档强烈建议不要重用名称，并且证书不应使用标识符。版本 2 证书并未广泛使用。
 
-X.509 版本 3 是最近的（1996 年），并支持扩展的概念，任何人都可以定义扩展并将其包含在证书中。今天使用的某些扩展包括：密钥用途（限制密钥的特定用途，如“仅用于签名”）和备用名称（允许与密钥关联其他身份，如 DNS 名称、电子邮件地址、IP 地址）。扩展可以被标记以指示应该检查并强制执行扩展。例如，如果证书标记了密钥用途扩展并设置为“keyCertSign”，那么在 SSL 通信期间出现此证书时将被拒绝，因为证书扩展表明关联的私钥应仅用于签署证书，而不用于 SSL。
+X.509 版本 3 是最近的（1996 年），并支持扩展的概念，任何人都可以定义扩展并将其包含在证书中。今天使用的某些扩展包括：密钥用途（限制密钥的特定用途，如“仅用于签名”）和备用名称（允许与密钥关联其他身份，如 DNS 名称、电子邮件地址、IP 地址）。扩展可以被标记以指示应该检查并强制执行扩展。例如，如果证书标记了密钥用途扩展并设置为“keyCertSign”，那么在 SSL 通信期间出现此证书时将会被拒绝，因为证书扩展表明关联的私钥应仅用于签署证书，而不用于 SSL。
 
 证书中的所有数据都使用称为 ASN.1/DER 的两个相关标准进行编码。抽象语法表示法描述了数据。区分编码规则描述了存储和传输这些数据的单一方式。
 
-### 哪些 Java API 可以用于访问和管理证书？
+## 哪些 Java API 可以用于访问和管理证书？
 
-位于 `java.security.cert` 包中的证书 API 包含以下核心类与接口：
+位于 `java.security.cert` 包中的证书 API 包含以下：
+
+## 核心类与接口
 
 - `CertificateFactory` 类定义了证书工厂的功能，用于从其编码生成证书、证书吊销列表 (`CRL`) 和证书路径 (`CertPath`) 对象。
 - `Certificate` 类是一个用于管理各种证书的抽象类。它是对具有不同格式但用途相同的证书的抽象。例如，不同类型的证书（如 X.509 和 PGP）共享通用的功能（如编码和验证）以及某些类型的信息（如公钥）。
 - `CRL` 类是一个用于管理各种证书吊销列表 (`CRL`) 的抽象类。
 - `X509Certificate` 类是用于 X.509 证书的抽象类。它提供了一种访问 X.509 证书所有属性的标准方法。
 - `X509Extension` 接口是 X.509 扩展的接口。为 X.509 v3 和 v2 CRL（证书吊销列表）定义的扩展提供了将额外属性与证书或公钥关联的机制，例如用于管理证书层次结构和管理分发。
-- `X509CRL` 类是用于 X.509 证书吊销列表 (`CRL`) 的抽象类。`CRL` 是一个标识已吊销证书的时间标记列表。它由证书颁发机构 (`CA`) 并在公共存储库中发布。
-- `X509CRLEntry` 类是用于 CRL 条目的抽象类。
+- `X509CRL` 类是用于 X.509 证书吊销列表 (`CRL`) 的抽象类。`CRL` 是一个标识已吊销证书的时间标记列表。它由证书颁发机构 (`CA`) 签名并在公共存储库中发布。
+- `X509CRLEntry` 类是用于 `CRL` 条目的抽象类。
 
-### 什么工具可以生成、导入和导出 X509 证书？
+## 什么工具可以生成、导入和导出 X509 证书？
 
 有一个名为 `keytool` 的工具可用于创建公钥/私钥对和 X.509 v3 证书，并管理密钥库 (`keystores`)。密钥和证书用于对你的 Java 应用和 applet (`jarsigner`) 进行数字签名。
 
@@ -22507,12 +22647,14 @@ Java 证书路径 API 的核心类由接口和类组成，它们以独立于算�
 
 该 API 构建在并扩展了现有的 `java.security.cert` 包的基础上以处理证书。核心类可以分为 4 类类别：基础、验证和存储：
 
-- 基础证书路径类：`CertPath`、`CertificateFactory` 和 `CertPathParameters`
-- 证书路径验证类：`CertPathValidator`、`CertPathValidatorResult` 和 `CertPathChecker`
-- 证书路径构建类：`CertPathBuilder` 和 `CertPathBuilderResult`
-- 证书/CRL 存储类：`CertStore`、`CertStoreParameters`、`CertSelector` 和 `CRLSelector`
-
-![](img/e26375bcfe04cf1374fe3293bdab5076_778_0.png)
+- 基础证书路径类
+- `CertPath`、`CertificateFactory` 和 `CertPathParameters`
+- 证书路径验证类
+- `CertPathValidator`、`CertPathValidatorResult` 和 `CertPathChecker`
+- 证书路径构建类
+- `CertPathBuilder` 和 `CertPathBuilderResult`
+- 证书/CRL 存储类
+- `CertStore`、`CertStoreParameters`、`CertSelector` 和 `CRLSelector`
 
 Java 证书路径 API 包含了所有用于 RFC 5280 定义的 PKIX 证书路径验证算法（公钥基础设施证书和证书吊销列表 (`CRL`) 配置文件）的特定算法类。PKIX 类包括：
 
@@ -22544,7 +22686,7 @@ Java 证书路径 API 包含了所有用于 RFC 5280 定义的 PKIX 证书路径
 - `CertificateFactory` 类
 - `CertPathParameters` 接口
 
-### `CertPath` 类
+## `CertPath` 类
 
 `CertPath` 类是用于证书路径的抽象类。它定义了所有证书路径对象共享的功能。可以通过子类 `CertPath` 类来实现各种证书路径类型，尽管它们可能具有不同的内容和排序方案。
 
@@ -22560,9 +22702,7 @@ Java 证书路径 API 包含了所有用于 RFC 5280 定义的 PKIX 证书路径
 # 第 9 章
 ## 核心类与接口
 
-### `CertificateFactory` 类
-
-`public String getType()`
+### `public String getType()`
 
 - 对于标准证书类型，请参见 `CertificateFactory` 类型。
 - 证书列表
@@ -22573,7 +22713,23 @@ Java 证书路径 API 包含了所有用于 RFC 5280 定义的 PKIX 证书路径
 public abstract List<? extends Certificate> getCertificates()
 ```
 
-`CertificateFactory` 总是返回由 `Certificate` 组成的证书对象，这些证书的类型与工厂的类型相同。例如，类型为 X.509 的 `CertificateFactory` 返回的 `CertPath` 对象由 `java.security.cert.X509Certificate` 实例组成。
+（注：由于原始文本包含大量 OCR 导致的重复内容，翻译已按要求提取并整理了核心逻辑。）
+
+---
+
+要查询支持哪些编码格式，请使用 `getCertPathEncodings` 方法（返回默认编码）：
+
+```java
+public final Iterator<String> getCertPathEncodings()
+```
+
+要从 `Certificate` 对象的列表生成证书路径对象，请使用以下方法：
+
+```java
+public final CertPath generatePath(List<? extends Certificate> certificates)
+```
+
+`CertificateFactory` 总是返回由 `Certificate` 组成的证书对象，这些证书的类型与工厂的类型相同。例如，类型为 X.509 的 `CertificateFactory` 返回的 `CertPath` 对象由 `java.security.cert.X509Certificate` 实例证书组成。
 
 以下代码示例演示了如何从存储在文件中的 PKCS7 编码证书生成证书路径：
 
@@ -22584,8 +22740,8 @@ FileInputStream fis = new FileInputStream(filename);
 // 为 X.509 实例化 CertificateFactory
 CertificateFactory cf = CertificateFactory.getInstance("X.509");
 
-// 从 PKCS7 签名数据中提取证书路径
-CertPath cp = cf.generateCertPath(fis, "PKCS7");
+// 从 PKCS7 签名数据中 提取证书路径
+CertPath cp = cf.generateCertPath(fis, "PKCS7*");
 
 // 打印路径中的每个证书
 List<Certificate> certs = cp.getCertificates();
@@ -22601,7 +22757,7 @@ for (Certificate cert : certs) {
 KeyStore ks = KeyStore.getInstance("JKS");
 
 // 加载 KeyStore 内容
-ks.load(new FileInputStream("./keystore"), null);
+ks.load(new FileInputStream("./keystore"),
 
 // 获取与别名 "sean" 的证书链
 Certificate[] certArray = ks.getCertificateChain("sean");
@@ -22612,58 +22768,48 @@ List<Certificate> certList = Arrays.asList(certArray);
 // 为 X.509 实例化 CertificateFactory
 CertificateFactory cf = CertificateFactory.getInstance("X.509");
 
-// 从证书列表中提取证书路径
-CertPath cp = cf.generateCertPath(certList);
+// 从证书列表中 提取证书路径
+CertPath cp = cf.generateCertPath(certList)
 ```
 
-请注意，`CertificateFactory` 中存在一个名为 `generateCertificates` 的方法，用于解析证书序列。对于包含多个证书的编码...
+请注意，`CertificateFactory` 中存在一个名为 `generateCertificates` 的方法，用于解析证书序列。对于包含多个证书的编码
 
-### `CertPath` 类
+![](img/e26375bcfe04cf1374fe3293bdab5076_782_0.png)
 
-要查询支持哪些编码格式，请使用 `getCertPathEncodings` 方法（返回默认编码）：
-
-```java
-public final Iterator<String> getCertPathEncodings()
-```
-
-要从 `Certificate` 对象的列表生成证书路径对象，请使用以下方法：
-
-```java
-public final CertPath generatePath(List<? extends Certificate> certificates)
-```
-
-### `CertPathParameters` 接口
+## CertPathParameters 接口
 
 `CertPathParameters` 接口是用于特定证书路径构建器或验证算法的参数集的透明表示。它的主要目的是对所有证书参数规范进行分组（并提供类型安全）。`CertPathParameters` 接口继承了 `Cloneable` 接口并定义了一个不会抛出异常的 `clone()` 方法。此接口的所有完整实现都在必要时实现并重写了 `Object.clone()` 方法。这允许应用程序克隆任何 `CertPathParameters` 对象。
 
-实现 `CertPathParameters` 接口的对象作为参数传递给 `CertPathValidator` 和 `CertPathBuilder` 类。通常，`CertPathParameters` 的实现将持有特定路径构建器或验证算法的输入参数。例如，`PKIXParameters` 是 `CertPathParameters` 接口的实现，它持有 PKIX 路径验证算法的一组输入参数。其中一个参数是调用者信任用于锚定验证过程的最受信任 CA。该参数等参数将在讨论 `PKIXParameters` 类的章节中详细介绍。
+实现 `CertPathParameters` 接口的对象作为参数传递给 `CertPathValidator` 和 `CertPathBuilder` 类。通常，`CertPathParameters` 的实现将持有特定特定路径构建器或验证算法的输入参数。例如，`PKIXParameters` 是 `CertPathParameters` 接口的实现，它持有 PKIX 路径验证算法的一组输入参数。其中一个参数是调用者信任用于锚定验证过程的最受信任 CA。该参数等参数将在讨论 `PKIXParameters` 类的章节中详细介绍。
 
-### 证书路径验证类
+## 证书路径验证类
 
 Java 证书路径 API 包含了用于验证证书路径的类和接口。应用程序使用 `CertPathValidator` 类的实例来验证 `CertPath` 对象。如果成功，验证算法的结果将通过实现 `CertPathValidatorResult` 接口的对象返回。
 
-#### 主题
+### 主题
 
-- `CertPathValidator` 类
-- `CertPathValidatorResult` 接口
+- CertPathValidator 类
+- CertPathValidatorResult 接口
 
-#### `CertPathValidator` 类
+## CertPathValidator 类
 
 `CertPathValidator` 类是一个用于验证证书路径的引擎类。
 
-##### 创建 `CertPathValidator` 对象
+### 创建 CertPathValidator 对象
 
 与所有引擎类一样，获取特定验证算法的 `CertPathValidator` 对象的方法是调用 `CertPathValidator` 类上的 `getInstance` 静态工厂方法：
 
 ```java
 public static CertPathValidator getInstance(String algorithm)
-public static CertPathValidator getInstance(String algorithm, String provider)
+
 public static CertPathValidator getInstance(String algorithm, Provider provider)
 ```
 
+![](img/e26375bcfe04cf1374fe3293bdab5076_783_0.png)
+
 `algorithm` 参数是证书路径算法的名称（例如 "PKIX"）。标准的 `CertPathValidator` 名称列在 Java 安全标准算法中。
 
-##### 验证证书路径
+### 验证证书路径
 
 一旦创建了 `CertPathValidator` 对象，可以通过调用 `validate` 方法来验证路径，传入要验证的路径和一组算法特定的参数：
 
@@ -22676,33 +22822,39 @@ public final CertPathValidatorResult validate(CertPath path, CertPathParameters 
 
 请注意，传递给 `validate` 方法的 `CertPath` 和 `CertPathParameters` 必须是该验证算法支持的类型。否则，将抛出 `CertPathValidatorException`。例如，类型为 X.509 的 `PKIXParameters`。
 
-#### `CertPathValidatorResult` 接口
+## CertPathValidatorResult 接口
 
-`CertPathValidatorResult` 接口是证书路径验证输出的透明表示。该接口的主要目的是对验证结果进行分组并提供类型安全。与 `CertPathParameters` 接口类似，`CertPathValidatorResult` 继承了 `Cloneable` 并定义了一个不会抛出异常的 `clone()` 方法。这适用于任何 `CertPathValidatorResult` 对象。
+`CertPathResult` 接口是证书路径验证输出的透明表示。该接口的主要目的是对验证结果进行分组并提供类型安全。与 `CertPathParameters` 接口类似，`CertPathResult` 继承了 `Cloneable` 并定义了一个不会抛出异常的 `clone()` 方法。这适用于任何 `CertPathResult` 对象。
 
-实现 `CertPathValidatorResult` 接口的对象在成功时由 `validate` 方法返回。通常，`CertPathValidatorResult` 的实现将持有特定算法的输出参数。例如，`PKIXValidatorResult` 类是该接口的实现，包含了 PKIX 验证算法的输出。其中一个将在讨论 `PKIXValidatorResult` 类的章节中详细描述。
+实现 `CertPathResult` 接口的对象在成功时由 `validate` 方法返回。通常，`CertPathResult` 的实现将持有特定算法的输出参数。例如，`PKIXValidatorResult` 类是该接口的实现，包含了 PKIX 验证算法的输出。其中一个将在讨论 `PKIXValidatorResult` 类的章节中详细描述。
 
-### 证书路径构建类
+## 证书路径构建类
 
 Java 证书路径 API 包含了用于构建（或发现）证书路径的类和接口。应用程序使用 `CertPathBuilder` 类实例来构建 `CertPath` 对象。如果成功，构建结果将通过实现 `CertPathBuilderResult` 接口的对象返回。
 
-#### `CertPathBuilder` 类
+## CertPathBuilder 类
 
 `CertPathBuilder` 类是一个用于构建证书路径的引擎类。
 
-##### 创建 `CertPathBuilder` 对象
+### 创建 CertPathBuilder 对象
 
 与其他类一样，获取特定算法的 `CertPathBuilder` 对象的方法是调用 `CertPathBuilder` 类上的 `getInstance` 静态工厂方法：
 
 ```java
 public static CertPathBuilder getInstance(String algorithm)
-public static CertPathBuilder getInstance(String algorithm, String provider)
+
 public static CertPathBuilder getInstance(String algorithm, Provider provider)
 ```
 
-`algorithm` 参数是证书路径构建算法的名称（例如，“PKIX"）。标准的 `CertPathBuilder` 算法名称列在《Java 标准算法名称》中。
+![](img/e26375bcfe04cf1374fe3293bdab5076_784_0.png)
 
-##### 构建证书路径
+```java
+public static CertPath getInstance(String algorithm, Provider provider)
+```
+
+`algorithm` 参数是证书路径构建算法的名称（例如，“PKIX"）。标准的 CertPathBuilder 算法名称列在《Java 标准算法名称》中。
+
+### 构建证书路径
 
 一旦创建了 `CertPathBuilder` 对象，就可以通过调用 `build` 方法并传递一个与算法相关的参数规格，来构建路径：
 
@@ -22715,7 +22867,7 @@ public final CertPathBuilderResult build(CertPathParameters params)
 
 请注意，传递给 `build` 方法的 `CertPathParameters` 必须是构建算法所支持的类型。否则，将抛出 `InvalidAlgorithmParameterException`。
 
-#### `CertPathBuilderResult` 接口
+## CertPathBuilderResult 接口
 
 `CertPathBuilderResult` 接口是证书路径构建算法结果或输出的透明表示。
 
@@ -22729,11 +22881,12 @@ public CertPath getCertPath()
 
 实现 `CertPathBuilderResult` 接口的对象由 `CertPathBuilder` 的 `build` 方法返回。
 
-下面的代码示例演示了如何创建 `CertPathBuilder` 并使用它构建证书路径。该示例假设传递给 `build` 方法的 `CertPathParameters` 对象已提前创建；更完整的示例将在描述 PKIX 类的章节中说明。
+下面的代码示例了如何创建 `CertPathBuilder` 并使用它构建证书路径。该示例假设传递给 `build` 方法的 `CertPathParameters` 对象已提前创建；更完整的示例将在描述 PKIX 类的章节中说明。
 
 ```java
 // 创建实现 "PKIX" 算法的 CertPathBuilder
 CertPathBuilder cpb = null;
+
 try {
     cpb = CertPathBuilder.getInstance("PKIX");
 } catch (NoSuchAlgorithmException nsae) {
@@ -22755,7 +22908,7 @@ try {
 }
 ```
 
-### 证书/CRL 存储类
+# 证书/CRL 存储类
 
 Java 证书路径 API 使用 `CertStore` 类从存储库中检索证书和证书吊销列表（CRL）。
 
@@ -22763,29 +22916,35 @@ Java 证书路径 API 使用 `CertStore` 类从存储库中检索证书和证书
 
 > `CertPathValidator` 实现可能会使用 `CertStore` 作为回调机制来获取用于吊销检查的 CRL。同样，`CertPathBuilder` 可能会使用 `CertStore` 作为回调机制来获取证书，并在执行吊销检查时获取 CRL。
 
-#### 主题
+### 主题
 
 - `CertStore` 类
 - `CertStoreParameters` 接口
 - `CertSelector` 和 `CRLSelector` 接口
 
-#### `CertStore` 类
+## CertStore 类
 
 `CertStore` 类是一个提供证书和吊销列表（CRL）存储库功能的引擎。
 
 该类可以被 `CertPathBuilder` 和 `CertPathValidator` 实现用于查找证书和 CRL，或者作为一种通用的证书和 CRL 检索机制。
 
-与 `java.security.KeyStore` 类不同（后者提供对私钥和信任证书缓存的访问），`CertStore` 设计用于访问可能极其庞大的不信任证书和 CRL 存储库。例如，`CertStore` 的 LDAP 实现提供了对使用 LDAP 协议存储在一个或多个目录中的证书和 CRL 的访问。
+与 `java.security.KeyStore` 类不同（后者提供对私钥和信任证书缓存的访问），`CertStore` 设计用于访问可能极其庞大的不信任证书和 CRL 存储库。例如，`CertStore` 的 LDAP 实现提供了对使用 LDAP 协议存储在的一个或多个目录中的证书和 CRL 的访问。
 
-`CertStore` 对象的所有公共方法都是线程安全的；多个线程可以并发地在单个 `CertStore` 对象（或多个对象）上调用这些方法而没有任何影响。这允许 `CertPathBuilder` 在搜索 CRL 的同时搜索其他证书，例如。
+![](img/e26375bcfe04cf1374fe3293bdab5076_787_0.png)
 
-##### 创建 `CertStore` 对象
+9-15
+
+`CertStore` 对象的所有公共方法都是线程安全的；多个线程可以并发地单个 `CertStore` 对象（或多个对象）上调用这些方法而没有任何影响。这允许 `CertPathBuilder` 在搜索 CRL 的同时搜索其他证书，例如。
+
+### 创建 CertStore 对象
 
 对于所有引擎类一样，获取用于特定存储库类型的 `CertStore` 对象的方法是调用 `CertStore` 类上的其中一个 `getInstance` 静态工厂方法：
 
 ```java
 public static CertStore getInstance(String type, CertStoreParameters params)
+
 public static CertStore getInstance(String type, CertStoreParameters params, String provider)
+
 public static CertStore getInstance(String type, CertStoreParameters params, Provider provider)
 ```
 
@@ -22793,7 +22952,7 @@ public static CertStore getInstance(String type, CertStoreParameters params, Pro
 
 初始化参数（`params`）特定于存储库类型。例如，基于服务器的存储库的初始化参数可能包括服务器的主机和端口。如果参数对于此 `CertStore` 类型无效，则将抛出 `InvalidAlgorithmParameterException`。`getCertStoreParameters` 方法返回用于初始化 `CertStore` 的 `CertStoreParameters`：
 
-##### 检索证书
+### 检索证书
 
 在创建 `CertStore` 对象后，你可以使用 `getCertificates` 方法从存储库中检索证书。该方法接受一个 `CertSelector`（详细见文）作为参数，指定检索证书的标准：
 
@@ -22866,7 +23025,7 @@ public boolean match(CRL crl)
 
 有关本节提到的 X509 证书扩展定义，参见 RFC 5280。
 
-## 创建 X509CertSelector 对象
+### 创建 X509CertSelector 对象
 
 通过调用默认构造函数创建 `X509CertSelector` 对象：
 
@@ -22876,7 +23035,7 @@ public X509CertSelector()
 
 初始时不设置任何标准（任何 `X509Certificate` 都会匹配）。
 
-## 设置选择标准
+### 设置选择标准
 
 选择标准允许调用者对 X509 证书的不同组件进行匹配。此处描述了用于选择标准的任何方法。`X509CertSelector`。
 
@@ -22934,7 +23093,7 @@ public void setKeyUsage(boolean[] keyUsage)
 
 证书的密钥用途（Key Usage）扩展必须允许指定的密钥用途值（那些设置为 `true` 的值）。如果为 `null`，则不进行密钥用途检查。
 
-## 获取选择标准
+### 获取选择标准
 
 可以使用适当的 `get` 方法检索每个选择标准的当前值。参见 `X509CertSelector`。
 
@@ -22991,7 +23150,7 @@ PKIX `PathBuilder` 可能会使用类似的代码通过丢弃不符合标准的�
 
 有关本节提到的 X509 字段和扩展定义，参见 RFC 5280。
 
-## 创建 X509CRLSelector 对象
+### 创建 X509CRLSelector 对象
 
 通过调用默认构造函数创建 `X509CRLSelector` 对象：
 
@@ -23001,7 +23160,7 @@ public X509CRLSelector()
 
 初始时不设置任何标准（任何 `X509CRL` 都会匹配）。
 
-## 设置选择标准
+### 设置选择标准
 
 选择标准允许调用者对 X509 CRL 的不同组件进行匹配。此处描述了大部分设置选择标准的方法。有关剩余方法的详情，请参考 `X509CRLSelector` 类 API 文档。
 
@@ -23039,7 +23198,7 @@ public void setCertificateChecking(X509Certificate cert)
 
 这不是一个准则。它是一个可选信息，可以帮助 `CertStore` 找到在检查指定证书撤销时相关的 CRL。如果为 `null`，则不提供此类信息。应用程序在检查特定证书的撤销时应始终调用此方法，因为它可能为 `CertStore` 提供更多信息，以查找正确的 CRL 并过滤掉无关的 CRL。
 
-# 获取选择准则
+### 获取选择准则
 
 可以使用适当 get 方法获取每个选择准则的当前值。请参阅 `X509CRLSelector` 类 API 文档以获取这些方法的详情。
 
@@ -23054,6 +23213,8 @@ X509CRLSelector xcrls = new X509CRLSelector();
 ![](img/e26375bcfe04cf1374fe3293bdab5076_794_0.png)
 
 ```java
+xcrls.setDateAndTime(new Date());
+
 // 选择由 'O=xyz, C=cus' 发布的 CRL
 xcrls.addIssuerName("O=xyz, C=cus");
 
@@ -23075,13 +23236,13 @@ Java 认证路径 API 包含一组与算法相关的类，设计用于 PKIX 证�
 
 # 主题
 
-- `TrustAnchor` 类
-- `PKIXParameters` 类
-- `CertPathValidatorResult` 接口
-- `PolicyNode` 接口与 `PolicyQualifierInfo` 类
-- `PKIXBuilderParameters` 类
-- `PKIXCertPathBuilderResult` 类
-- 在证书路径验证中使用 `PKIXCertPathPathChecker`
+- TrustAnchor 类
+- PKIXParameters 类
+- CertPathValidatorResult 接口
+- PolicyNode 接口与 PolicyQualifierInfo 类
+- PKIXBuilderParameters 类
+- PKIXCertPathBuilderResult 类
+- 在证书路径验证中使用 PKIXCertPathChecker
 
 # TrustAnchor 类
 
@@ -23094,7 +23255,7 @@ Java 认证路径 API 包含一组与算法相关的类，设计用于 PKIX 证�
 ![](img/e26375bcfe04cf1374fe3293bdab5076_795_0.png)
 
 > 注意：
-> 尽管该类被描述为 PKIX 类，但它也可以用于其他 X.509 证书路径验证算法。
+尽管该类被描述为 PKIX 类，但它也可以用于其他 X.509 证书路径验证算法。
 
 # 创建 TrustAnchor 对象
 
@@ -23130,7 +23291,7 @@ public final byte[] getNameConstraints()
 ```
 
 > 注意：
-> 如果信任锚点是通过公钥和名称指定的，`getTrustedCert` 方法返回 `null`。同样，如果信任锚点是 `X509Certificate`，`getCA`、`getCAName` 和 `getPublicKey` 方法返回 `null`。
+如果信任锚点是通过公钥和名称指定的，`getTrustedCert()` 方法返回 `null`。同样，如果信任锚点是 `X509Certificate`，`getCA()`、`getCAName()` 和 `getPublicKey()` 方法返回 `null`。
 
 # PKIXParameters 类
 
@@ -23158,61 +23319,61 @@ public PKIXParameters(KeyStore keystore)
 
 创建 `PKIXParameters` 对象后，调用者可以设置（或替换当前值）各种参数。这里描述了几个设置参数的方法。请参阅 `PKIXParameters` API 文档以获取其他方法。
 
-`setInitialPolicies` 方法设置 PKIX 验证算法指定的初始标识符。`Set` 的元素是表示为 `String` 的对象标识符（OID）。如果 `initialPolicies` 参数为 `null` 或未设置，则接受任何策略：
+`setInitialPolicies()` 方法设置 PKIX 验证算法指定的初始标识符。`Set` 的元素是表示为 `String` 的对象标识符（OID）。如果 `initialPolicies` 参数为 `null` 或未设置，则接受任何策略：
 
 ```
 public void setInitialPolicies(Set<String> initialPolicies)
 ```
 
-`setState` 方法设置确定路径有效性的时间。如果 `date` 参数未设置或为 `null`，则使用当前日期：
+`setState()` 方法设置确定路径有效性的时间。如果 `date` 参数未设置或为 `null`，则使用当前日期：
 
 ```
 public void setState(Date date)
 ```
 
-`setPolicyMappingInhibited` 方法设置策略映射禁止标志位的值。如果未指定，该标志位的默认值为 `false`：
+`setPolicyMappingInhibited()` 方法设置策略映射禁止标志位的值。如果未指定，该标志位的默认值为 `false`：
 
 ```
 public void setPolicyMappingInhibited(boolean val)
 ```
 
-`setExplicitPolicyRequired` 方法设置显式策略策略标志的值。如果没有指定，该标志的默认值为 false：
+`setExplicitPolicyRequired()` 方法设置显式策略策略标志的值。如果没有指定，该标志的默认值为 `false`：
 
 ```
 public void setExplicitPolicyRequired(boolean val)
 ```
 
-`setAnyPolicyInhibited` 方法设置任何策略受阻标志的值。如果未指定，该标志的默认值为 false：
+`setAnyPolicyInhibited()` 方法设置任何策略受阻标志的值。如果未指定，该标志的默认值为 `false`：
 
 ```
 public void setAnyPolicyInhibited(boolean val)
 ```
 
-`setTargetCertConstraints` 方法允许调用者对目标证书或实体实体证书设置约束。例如，调用者可以指定目标证书必须包含特定的主题名称。这些约束作为 `CertSelector` 对象指定。如果选择器参数为 `null` 或未设置，则在目标证书上不定义任何约束：
+`setTargetCertConstraints()` 方法允许调用者对目标证书或实体实体证书设置约束。例如，调用者可以指定目标证书必须包含特定的主题名称。这些约束作为 `CertSelector` 对象指定。如果选择器参数为 `null` 或未设置，则在目标证书上不定义任何约束：
 
 ```
 public void setTargetCertConstraints(CertSelector selector)
 ```
 
-`setCertStores` 方法允许调用者指定一个 `CertStore` 对象的列表，`CertPathValidator` 的 PKIX 实现将使用该列表来查找路径验证所需的 CRL。这提供了一个指定 CRL 查找位置的可扩展机制。`setCertStores` 方法接收一个 `List<CertStore>` 列表作为参数。列表中的第一个 `CertStore` 可能优于后面出现的 `CertStore`。
+`setCertStores()` 方法允许调用者指定一个 `CertStore` 对象的列表，`CertPathValidator` 的 PKIX 实现将使用该列表来查找路径验证所需的 CRL。这提供了一个指定 CRL 查找位置的可扩展机制。`setCertStores()` 方法接收一个 `List<CertStore>` 列表作为参数。列表中的第一个 `CertStore` 可能优于后面出现的 `CertStore`。
 
 ```
 public void setCertStores(List<CertStore> stores)
 ```
 
-`setCertPathCheckers` 方法允许调用者通过创建特定于实现的路径检查器来扩展 PKIX 验证算法。例如，此机制可以用于处理私有证书扩展。`setCertPathCheckers` 方法接收一个 `PKIXCertPathChecker`（后文将讨论）对象的列表作为参数：
+`setCertPathCheckers()` 方法允许调用者通过创建特定于实现的路径检查器来扩展 PKIX 验证算法。例如，此机制可以用于处理私有证书扩展。`setCertPathCheckers()` 方法接收一个 `PKIXCertPathChecker`（后文将讨论）对象的列表作为参数：
 
 ```
 public void setCertPathCheckers(List<PKIXCertPathChecker>)
 ```
 
-`setRevocationEnabled` 方法允许调用者禁用撤销检查。撤销默认是启用的，因为它是 PKIX 验证算法的一项必经检查。然而，PKIX 并没有定义如何检查撤销。例如，实现可以使用 CRL 或 OCSP。此方法允许调用者在默认撤销检查机制不再时实现自己的撤销检查机制。通过调用 `setCertPathCheckers` 方法并传递实现替代机制的 `PKIXCertPathChecker`，可以指定不同的撤销检查机制。
+`setRevocationEnabled()` 方法允许调用者禁用撤销检查。撤销默认是启用的，因为它是 PKIX 验证算法的一项必经检查。然而，PKIX 并没有定义如何检查撤销。例如，实现可以使用 CRL 或 OCSP。此方法允许调用者在默认撤销检查机制不再时实现自己的撤销检查机制。通过调用 `setCertPathCheckers()` 方法并传递实现替代机制的 `PKIXCertPathChecker`，可以指定不同的撤销检查机制。
 
 ```
 public void setRevocationEnabled(boolean val)
 ```
 
-`setPolicyQualifiersRejected` 方法允许调用者启用或禁用策略限定符处理。当创建 `PKIXParameters` 对象时，此标志被设置为 true。此设置反映了处理策略限定符的最常见（简单）策略。想要使用更复杂策略的应用必须将此标志设置为 false。
+`setPolicyQualifiersRejected()` 方法允许调用者启用或禁用策略限定符处理。当创建 `PKIXParameters` 对象时，此标志被设置为 `true`。此设置反映了处理策略限定符的最常见（简单）策略。想要使用更复杂策略的应用必须将此标志设置为 `false`。
 
 ```
 public void setPolicyQualifiersRejected(boolean qualifiersRejected)
@@ -23222,21 +23383,21 @@ public void setPolicyQualifiersRejected(boolean qualifiersRejected)
 
 可以使用适当的 `get` 方法获取每个参数的当前值。有关这些方法的更多详细信息，请参考 `PKIXParameters` 类的 API 文档。
 
-## PKIXCertPathValidator 类
+## PKIXCertPathValidatorResult 类
 
 `PKIXCertPathValidatorResult` 代表 PKIX 证书路径验证算法的结果。
 
-该类实现了 `CertPathResult` 接口。它持有来自验证算法的策略策略树和主体密钥依赖项，并包含了用于返回这些内容的 `getPolicyTree()` 和 `getPublicKey()` 方法。`PKIXCertPathValidatorResult` 的实例由实现 PKIX 验证算法的 `CertPathValidator` 对象的 `validate` 方法返回。
+该类实现了 `CertPathResult` 接口。它持有来自验证算法的策略策略树和主体密钥依赖项，并包含了用于返回这些内容的 `getPolicyTree()` 和 `getPublicKey()` 方法。`PKIXCertPathValidatorResult` 的实例由实现 PKIX 验证算法的 `CertPathValidator` 对象的 `validate()` 方法返回。
 
-有关此类的更多详细信息，请参考 `PKIXCertPathValidatorInfo` API 文档。
+有关此类的更多详细信息，请参考 `PKIXCertPathValidatorResult` API 文档。
 
-## PolicyNode 接口和 PolicyQualifier 类
+## PolicyNode 接口和 PolicyQualifierInfo 类
 
 PKIX 验证算法定义了多个与证书策略处理相关的输出。大多数应用程序不需要使用这些输出，但所有实现 PKIX 验证或构建算法的提供者必须支持它们。
 
-`PolicyNode` 接口代表成功执行 PKIX 验证方法后生成的策略策略树的节点。应用程序可以使用 `PKIXCertPathValidatorResult` 的 `getTree` 方法获取策略策略树的根。策略树在 RFC 5280 中有更详细的讨论。
+`PolicyNode` 接口代表成功执行 PKIX 验证方法后生成的策略策略树的节点。应用程序可以使用 `PKIXCertPathValidatorResult` 的 `getTree()` 方法获取策略策略树的根。策略树在 RFC 5280 中有更详细的讨论。
 
-`getQualifiers` 方法返回一个 `PolicyQualifier` 对象集合，其中每个对象都代表该策略所适长度的证书扩展中包含的策略限定符。
+`getQualifiers()` 方法返回一个 `PolicyQualifierInfo` 对象集合，其中每个对象都代表该策略所适用的证书扩展中包含的策略限定符。
 
 大多数应用程序不需要检查策略策略树，它们可以通过设置 `PKIXParameters` 中与策略相关的参数来实现其策略处理目标。然而，策略策略树适用于更复杂的应用程序，特别是那些处理策略限定符的应用。
 
@@ -23246,7 +23407,7 @@ PKIX 验证算法定义了多个与证书策略处理相关的输出。大多数
 
 这是一个使用 PKIX 验证算法验证证书路径的示例。该示例忽略了大部分异常处理，并假设证书路径和信任锚点的公钥已经创建。
 
-## 第 9 章 核心类和接口
+### 核心类和接口
 
 首先，创建 `CertPathValidator`，如下行所示：
 
@@ -23260,13 +23421,13 @@ CertPathValidator cpv = CertPathValidator.getInstance("PKIX");
 TrustAnchor anchor = new TrustAnchor("O=xyz,C=us", pubkey, null);
 ```
 
-下一步是创建一个 `PKIXParameters` 对象。该对象将用于填充 PKIX 算法使用的参数。在这个示例中，我们向构造函数传递了一个包含单个元素的 Cert 设置——该元素是我们在上一步创建的 `TrustAnchor`：
+下一步是创建一个 `PKIXParameters` 对象。该对象将用于填充 PKIX 算法使用的参数。在这个示例中，我们向构造函数传递了一个包含单个元素的 Set——该元素是我们在上一步创建的 `TrustAnchor`：
 
 ```
 PKIXParameters params = new PKIXParameters(Collections.singleton(anchor));
 ```
 
-接下来，填充参数。在这个示例中，我们设置了 `ExplicitRequired` 标志和一组初始 OID（未显示具体内容）：
+接下来，填充参数。在这个示例中，我们设置了 `ExplicitPolicyRequired` 标志和一组初始 OID（未显示具体内容）：
 
 最后一步使用输入内容验证证书路径：
 
@@ -23289,7 +23450,7 @@ try {
 
 该类（继承自 `PKIXParameters`）指定了与 `CertPathBuilder` 使用的参数，用于构建根据 PKIX 算法验证的证书路径。
 
-`PKIXBuilderParameters` 对象作为参数传递给 `CertPathBuilder` 的 `build` 方法。所有的 `PKIXPathBuilders` 必须返回根据 PKIX 验证算法验证过的证书路径。
+`PKIXBuilderParameters` 对象作为参数传递给 `CertPathBuilder` 的 `build()` 方法。所有的 `PKIXCertPathBuilder` 实现必须返回根据 PKIX 验证算法验证过的证书路径。
 
 请注意，`CertPathBuilder` 用于验证路径的机制是一个实现细节。例如，某种实现可能会首先构建一个最小验证路径，然后使用 `CertPathValidator` 实例进行完全验证；而更高效的实现可能会在构建过程中验证路径的更多部分，并在遇到验证失败或死路时回溯。
 
@@ -23309,15 +23470,15 @@ public PKIXBuilderParameters(KeyStore keystore,
 
 ## 设置/获取参数值
 
-`PKIXBuilderParameters` 类继承了 `PKIXParameters` 类中设置的所有参数。此外，可以调用 `setMaxPathLength` 方法对证书路径中的最大证书数量设置限制：
+`PKIXBuilderParameters` 类继承了 `PKIXParameters` 类中设置的所有参数。此外，可以调用 `setMaxPathLength()` 方法对证书路径中的最大证书数量设置限制：
 
 ```
 public void setMaxPathLength(int maxPathLength)
 ```
 
-`maxPathLength` 参数指定了证书路径中非发行中间证书的最大数量。实现 PKIX 算法的 `CertPathBuilder` 实例不得构建超出指定长度的路径。如果该值为 0，则路径只能包含单个证书。如果值为 -1，则路径不受限制（即没有最大限制）。如果没有指定，默认的最大路径长度为 5。此方法用于防止 `CertPath` 构建资源，并花费时间构建可能满足或不满足调用者要求的长路径。
+`maxPathLength` 参数指定了证书路径中非发行中间证书的最大数量。实现 PKIX 算法的 `CertPathBuilder` 实例不得构建超出指定长度的路径。如果该值为 0，则路径只能包含单个证书。如果值为 -1，则路径不受限制（即没有最大限制）。如果没有指定，默认的最大路径长度为 5。此方法用于防止 `CertPathBuilder` 消耗资源，并花费时间构建可能满足或不满足调用者要求的长路径。
 
-如果路径中的任何 CA 证书包含基本约束（Basic Constraints）扩展，每当结果为长度较短的证书路径时，该扩展中 `pathConstraint` 组件的值的值将覆盖 `maxPathLength` 参数的值。此外，还有 `getMaxPathLength()` 方法用于获取此参数：
+如果路径中的任何 CA 证书包含基本约束（Basic Constraints）扩展，每当结果为长度较短的证书路径时，该扩展中 `pathLenConstraint` 组件的值将覆盖 `maxPathLength` 参数的值。此外，还有 `getMaxPathLength()` 方法用于获取此参数：
 
 ```
 public int getMaxPathLength()
@@ -23343,7 +23504,7 @@ public int getMaxPathLength()
 
 首先，在以下示例中创建 CertPathBuilder：
 
-```
+```java
 CertPathBuilder cpb = CertPathBuilder.getInstance("PKIX");
 ```
 
@@ -23351,13 +23512,11 @@ CertPathBuilder cpb = CertPathBuilder.getInstance("PKIX");
 
 下一步是创建 `PKIXBuilderParameters` 对象。它将用于填充 CertPathBuilder 使用的 PKIX 参数。
 
-```
+```java
 // 创建参数对象，传递一个用于
 // 锚定路径的信任锚点集合
 // 以及目标主体 DN。
-```
 
-```
 X509CertSelector targetConstraints = new X509CertSelector();
 targetConstraints.setSubject("CN=alice,O=xyz,C=us");
 PKIXBuilderParameters params = new PKIXBuilderParameters(trustAnchors, targetConstraints);
@@ -23365,7 +23524,7 @@ PKIXBuilderParameters params = new PKIXBuilderParameters(trustAnchors, targetCon
 
 下一步是指定 PathBuilder 用于查找证书和 CRL 的 CertStore。对于此示例，我们将使用证书和 CRL 填充一个 `Collection CertStore`：
 
-```
+```java
 CollectionCertStoreParameters ccsp = new CollectionCertStoreParameters(certsAndCrls);
 CertStore store = CertStore.getInstance("Collection", ccsp);
 params.addCertStore(store);
@@ -23373,7 +23532,7 @@ params.addCertStore(store);
 
 下一步是使用我们创建的输入参数集构建证书路径：
 
-```
+```java
 try {
     PKIXPathBuilderResult result = (PKIXPathBuilderResult) cpb.build(params);
     CertPath cp = result.getCertPath();
@@ -23397,23 +23556,23 @@ try {
 
 `PKIXParameters` 类的 `setCertPathChecker` 方法允许用户将 `PKIXCertPathChecker` 对象列表传递给 PKIXPathValidator 或 CertBuilder 实现。对于 PKIXPathValidator 处理的每个证书，每个 PKIXPathChecker 对象都将被依次调用一次。
 
-## 创建并使用 PKIXPathChecker 对象
+### 创建并使用 PKIXPathChecker 对象
 
 `PKIXPathChecker` 类没有公共构造函数。这是刻意设计的，因为创建 PKIXPathChecker 实例是特定实现的问题。例如，使用 OCSP 检查证书吊销状态的 PKIXPathChecker 实现的构造函数需要 OCSP 主机：
 
-```
+```java
 PKIXCertPathChecker checker = new OCSPChecker("ocsp.sun.com");
 ```
 
 一旦实例化检查器，可以使用 `PKIXParameters` 类的 `addCertPathChecker` 方法将其作为参数添加：
 
-```
+```java
 params.addCertPathChecker(checker);
 ```
 
 或者，可以使用 PKIXParameters 类的 `setPathCheckers` 方法添加检查器列表。
 
-## 实现 PKIXPathChecker 对象
+### 实现 PKIXPathChecker 对象
 
 `PKIXPathChecker` 类是抽象的。它有四个方法（`check`、`getSupportedExtensions`、`init` 和 `isForwardCheckingSupported`），所有具体的子类都必须实现这些方法。
 
@@ -23421,53 +23580,53 @@ params.addCertPathChecker(checker);
 
 此外，服务提供者实现处理（传递）给 PKIXCertPathChecker 的证书顺序非常重要，特别是当实现是有状态的时。取决于服务提供者所使用的算法，证书可能会以反序或正向顺序呈现。反序意味着证书从最受信任的 CA（如果存在）到目标主体排序，而正向意味着证书从目标主体到最受信任的 CA 排序。顺序必须被 PKIXCertPathChecker 实现所感知，以便它知道如何处理连续的证书。
 
-## 初始化 PKIXCertPathChecker 对象
+#### 初始化 PKIXCertPathChecker 对象
 
 `init` 方法初始化检查器的内部状态：
 
-```
-public abstract void init(boolean forward)
+```java
+public abstract void init(boolean forward) throws CertPathValidatorException;
 ```
 
 所有有状态的实现都应该清除或初始化检查器中的任何内部状态。这可以防止提供者实现调用处于初始化状态的检查器。它还允许有状态的检查器在后续操作中重用，而无需重新实例化。`forward` 参数指示提交给 PKIXCertPathChecker 的证书顺序。如果 `forward` 为 `true`，则证书从目标到信任锚点提交；如果为 `false`，则从信任锚点到目标提交。
 
-## 正向检查
+#### 正向检查
 
 `isForwardCheckingSupported` 方法返回一个布尔值，指示 PKIXCertPathChecker 是否支持正向检查：
 
-```
-public abstract boolean isForwardCheckingSupported()
+```java
+public abstract boolean isForwardCheckingSupported();
 ```
 
 所有的 PKIXCertPathChecker 实现都必须支持反向检查。PKIXCertPathChecker 实现可以支持正向检查。
 
 支持正向检查可以提高正向构建的 CertPathBuilders 的效率，因为允许在构建路径时对其进行检查。然而，某些有状态的 PKIXCertPathCheckers 发现很难或无法支持正向检查。
 
-## 支持的扩展
+#### 支持的扩展
 
 `getSupportedExtensions` 方法返回一个不可变的 `Set`，包含 OID 字符串，表示 PKIXCertPathChecker 实现支持的 X.509 扩展（即能够识别并能够处理的扩展）：
 
-```
-public abstract Set<String> getSupportedExtensions()
+```java
+public abstract Set<String> getSupportedExtensions();
 ```
 
 如果没有处理任何扩展，该方法返回 `null`。所有实现都应该返回检查可能处理的 OID 字符串集合。
 
 CertPathBuilder 可以使用此信息来识别带有未识别关键扩展的证书，即使是在使用不支持正向检查的 PKIXCertPathChecker 执行正向构建时也是如此。
 
-## 执行检查
+#### 执行检查
 
 以下方法对证书执行检查：
 
-```
-public abstract void check(Certificate cert, Collection<String> unresolvedCritExts) throws CertPathValidatorException
+```java
+public abstract void check(Certificate cert, Collection<String> unresolvedCritExts) throws CertPathValidatorException;
 ```
 
 `unresolvedCritExts` 参数包含一个以字符串形式表示的 OID 集合。OID 表示证书中尚未被证书路径验证算法解析的关键扩展集。`check` 方法的具体实现应该将其处理的任何关键扩展从 `unresolvedCritExts` 参数中移除。
 
 如果证书未通过检查，则应该抛出 `CertPathValidatorException`。
 
-## 克隆 PKIXCertPathChecker
+#### 克隆 PKIXCertPathChecker
 
 `PKIXCertPathChecker` 实现了 `Cloneable` 接口。所有有状态的 PKIXCertPathChecker 实现在必要时必须重写 `clone` 方法。`clone` 方法的默认实现调用 `Object.clone` 方法，通过将对象的所有字段复制到新对象来执行浅拷贝。无状态的实现不应重写 `clone` 方法。然而，所有有状态的实现都必须确保默认的 `clone` 方法是正确的，并在必要时对其进行重写。例如，一个在数组中存储状态的 PKIXCertPathChecker 必须重写 `clone` 方法，以创建数组的副本，而不仅仅是数组的引用。
 
@@ -23477,7 +23636,7 @@ PKIXCertPathChecker 对象之所以是可克隆的，是为了允许 PKIXCertPat
 
 这是一个无状态 PKIXCertPathChecker 实现示例。它检查证书中是否存在私有扩展，并根据某些规则对其处理。
 
-```
+```java
 import java.security.cert.Certificate;
 import java.security.cert.X509Certificate;
 import java.util.Collection;
@@ -23497,7 +23656,7 @@ public class MyChecker extends PKIXCertPathChecker {
         // 无需初始化
     }
 
-    public Set getSupportedExtensions() {
+    public Set<String> getSupportedExtensions() {
         return supportedExtensions;
     }
 
@@ -23513,13 +23672,16 @@ public class MyChecker extends PKIXCertPathChecker {
     public void check(Certificate cert, Collection<String> unresolvedCrits) throws CertPathValidatorException {
         X509Certificate xcert = (X509Certificate) cert;
         byte[] ext = xcert.getExtensionValue("2.16.840.1.113730.1.1.1");
+
         if (ext == null) {
             return;
         }
+
         // 根据某些规则处理扩展
         // - 如果检查失败，则抛出
         // CertPathValidatorException
         // (在此处插入代码)
+
         // 从未解析扩展集合中移除
         // 扩展（如果存在）
         if (unresolvedCrits != null) {
@@ -23533,7 +23695,7 @@ public class MyChecker extends PKIXCertPathChecker {
 
 PKIX 服务提供者在开始构建或验证算法之前必须初始化每个 PKIXCertPathChecker：
 
-```
+```java
 List<PKIXCertPathChecker> checkers = params.getCertCheckers();
 for (PKIXCertPathChecker checker : checkers) {
     checker.init(false);
@@ -23542,7 +23704,7 @@ for (PKIXCertPathChecker checker : checkers) {
 
 对于每个验证的证书，服务提供者必须轮流调用 PKIXCertPathChecker 的 check 方法，传递证书和任何未解析的关键扩展：
 
-```
+```java
 for (PKIXCertPathChecker checker : checkers) {
     checker.check(cert, unresolvedCrits);
 }
@@ -23552,7 +23714,7 @@ for (PKIXCertPathChecker checker : checkers) {
 
 如果所有检查都成功，服务者实现应该检查所有关键扩展是否已解析，如果不是，则验证失败。例如：
 
-```
+```java
 if (unresolvedExts != null && !unresolvedExts.isEmpty()) {
     // 注意 CertBuilder 可能有一个
     // try 块来捕获异常并继续
@@ -23564,19 +23726,13 @@ if (unresolvedExts != null && !unresolvedExts.isEmpty()) {
 
 如上一节所述，`CertPath` 实现可能需要跟踪潜在证书路径到达死胡同或失败点的情况。在这种范围内，回溯意味着返回路径中的上一个证书并检查潜在路径。如果 `CertBuilder` 实现正在验证，它需要恢复每个 `PKIXCertPathChecker` 的先前状态。可以通过在处理每个证书之前对 `PKIXCertPathChecker` 进行克隆来实现，例如：
 
-```
+```java
 /* 克隆检查器 */
-
 List newList = new ArrayList(checkers);
-
 ListIterator li = newList.listIterator();
-
 while (li.hasNext()) {
-
     PKIXCertPathChecker checker = (PKIXCertPathChecker) li.next();
-
     li.set(checker.clone());
-
 }
 ```
 
@@ -23588,17 +23744,12 @@ while (li.hasNext()) {
 
 首先，考虑以下如何验证证书路径：
 
-```
+```java
 Set<TrustAnchor> trustAnchors = getTrustAnchors();
-
 CertPath cp = getCertPath();
-
 PKIXParameters pkix = new PKIXParameters(trustAnchors);
-
 pkix.setRevocationEnabled(false);
-
 CertPathValidator cpv = CertPathValidator.getInstance("PKIX");
-
 PKIXCertPathValidatorResult result = cpv.validate(cp, pkix);
 ```
 
@@ -23610,22 +23761,17 @@ PKIXCertPathValidatorResult result = cpv.validate(cp, pkix);
 
 在本示例中，`getTrustAnchors()` 和 `getCertPath()` 是获取 CA 根证书和证书路径的方法。
 
-示例中的 `getTrustAnchors()` 方法必须返回一个 `TrustAnchor` 集合（Set），这些对象代表你希望用于验证的 CA 根证书。以下是一个简单的实现，用于从文件中加载单个 CA 根证书：
+示例中的 `getTrustAnchors()` 方法必须返回一个 `TrustAnchor` 集合（`Set`），这些对象代表你希望用于验证的 CA 根证书。以下是一个简单的实现，用于从文件中加载单个 CA 根证书：
 
 ```java
 public Set<TrustAnchor> getTrustAnchors()
     throws IOException, CertificateException {
-
     CertificateFactory cf = CertificateFactory.getInstance("X.509");
-
     X509Certificate c;
-
     try (InputStream in = new FileInputStream("x509_ca-certificate.cert")) {
-        c = (X509Certificate)cf.generateCertificate(in);
+        c = (X509Certificate) cf.generateCertificate(in);
     }
-
     TrustAnchor anchor = new TrustAnchor(c, null);
-
     return Collections.singleton(anchor);
 }
 ```
@@ -23634,22 +23780,16 @@ public Set<TrustAnchor> getTrustAnchors()
 
 ```java
 public CertPath getCertPath() throws IOException, CertificateException {
-
     CertificateFactory cf = CertificateFactory.getInstance("X.509");
-
     CertPath cp;
-
     try (InputStream in = new FileInputStream("certpath.pkcs7")) {
         cp = cf.generateCertPath(in, "PKCS7");
     }
-
     return cp;
 }
 ```
 
-请注意，PKCS#7 对文件中的证书没有特定顺序，因此此代码仅在证书按照从待验证实体开始并回溯到 CA 根证书的顺序排列时对路径验证有效。如果证书顺序不对，你需要进行一些额外的处理。`CertificateFactory` 有一个 `generateCertPath()` 方法，它可以接受一个集合（Collection），这对于此类处理非常有用。
-
-# 第 9 章 核心类与接口
+请注意，PKCS#7 对文件中的证书没有特定顺序，因此此代码仅在证书按照从待验证实体开始并回溯到 CA 根证书的顺序排列时对路径验证有效。如果证书顺序不对，你需要进行一些额外的处理。`CertificateFactory` 有一个 `generateCertPath()` 方法，它可以接受一个集合（`Collection`），这对于此类处理非常有用。
 
 ## 添加 PKIXCertPathChecker
 
@@ -23657,19 +23797,12 @@ public CertPath getCertPath() throws IOException, CertificateException {
 
 ```java
 Set<TrustAnchor> trustAnchors = getTrustAnchors();
-
 CertPath cp = getCertPath();
-
 PKIXParameters pkix = new PKIXParameters(trustAnchors);
-
 pkix.setRevocationEnabled(false);
-
 SimpleChecker sc = new SimpleChecker();
-
 pkix.addCertPathChecker(sc);
-
 CertPathValidator cpv = CertPathValidator.getInstance("PKIX");
-
 PKIXCertPathValidatorResult result = cpv.validate(cp, pkix);
 ```
 
@@ -23683,35 +23816,25 @@ import java.security.cert.*;
 import java.util.*;
 
 public class SimpleChecker extends PKIXCertPathChecker {
-
     private final Set<CryptoPrimitive> SIGNATURE_PRIMITIVE_SET = 
         EnumSet.of(CryptoPrimitive.SIGNATURE);
 
     public void init(boolean forward) throws CertPathValidatorException {}
-
     public boolean isForwardCheckingSupported() { 
         return true;
     }
-
     public Set<String> getSupportedExtensions() { 
         return null;
     }
-
     public void check(Certificate cert, 
         Collection<String> unresolvedCRs)
         throws CertPathValidatorException {
-
-        X509Certificate c = (X509Certificate)cert;
-
+        X509Certificate c = (X509Certificate) cert;
         String sa = c.getSigAlgName();
-
         Key key = c.getPublicKey();
-
         AlgorithmConstraints constraints = new SimpleConstraints();
-
         if (constraints.permits(SIGNATURE_PRIMITIVE_SET, sa, null) == false)
             throw new CertPathValidatorException("Forbidden algorithm: " + sa);
-
         if (constraints.permits(SIGNATURE_PRIMITIVE_SET, key) == false)
             throw new CertPathValidatorException("Forbidden key: " + key);
     }
@@ -23729,25 +23852,19 @@ import java.security.interfaces.RSAKey;
 import java.util.Set;
 
 public class SimpleConstraints implements AlgorithmConstraints {
-
     public boolean permits(Set<CryptoPrimitive> primitives,
         String algorithm, AlgorithmParameters parameters) {
         return permits(primitives, algorithm, null, parameters);
     }
-
     public boolean permits(Set<CryptoPrimitive> primitives, Key key) {
         return permits(primitives, null, key);
     }
-
     public boolean permits(Set<CryptoPrimitive> primitives,
         String algorithm, Key key, AlgorithmParameters parameters) {
-
         if (algorithm == null) algorithm = key.getAlgorithm();
-
         if (algorithm.indexOf("RSA") == -1) return false;
-
         if (key != null) {
-            RSAKey rsaKey = (RSAKey)key;
+            RSAKey rsaKey = (RSAKey) key;
             int size = rsaKey.getModulus().bitLength();
             if (size < 2048) return false;
         }
@@ -23758,38 +23875,33 @@ public class SimpleConstraints implements AlgorithmConstraints {
 
 ## 检查撤销状态
 
-`PKIXRevocationChecker`（JDK 8 中引入）是 `PKIXCertPathChecker` 的子类，它使用在线状态协议（OCSP）或证书撤销列表（CRL）检查证书的撤销状态。每个 `CertPathValidator` 和 `CertPathBuilder` 实例都提供默认的撤销实现。如果你对撤销设置有更多控制，请使用 `PKIXRevocationChecker`。
+`PKIXRevocationChecker`（JDK 8 中引入）是 `PKIXCertPathChecker` 的子类，它使用在线证书状态协议（OCSP）或证书吊销列表（CRL）检查证书的撤销状态。每个 `CertPathValidator` 和 `CertPathBuilder` 实例都提供默认的撤销实现。如果你对撤销设置有更多控制，请使用 `PKIXRevocationChecker`。
 
 按照以下步骤使用 `PKIXRevocationChecker` 检查证书的撤销状态：
 
-1. 通过调用 `CertPathValidator` 或 `CertPathBuilder` 实例的 `getRevocationChecker` 方法获取 `PKIXRevocationChecker`。
+1. 通过调用 `CertPathValidator` 或 `CertPathBuilder` 实例的 `getRevocationChecker()` 方法获取 `PKIXRevocationChecker`。
 2. 设置额外的参数和选项。这些包括 `setOCSPResponder(URI)` 用于指定 OCSP 服务器的位置（通常 URI 已包含在证书中，无需指定），以及 `setOptions(Set<PKIXRevocationChecker.Option>)` 用于设置撤销选项。`PKIXRevocationChecker.Option` 是枚举类型，用于指定：
-   - `ONLY_ENTITY`：仅检查实体证书的撤销状态。
-   - `PREFER_CRL`：默认情况下，OCSP 是检查撤销状态的首选机制，CRL 是备用机制。通过选项将首选设置为 CRL。
+   - `ONLY_END_ENTITY`：仅检查实体证书的撤销状态。
+   - `PREFER_CRLS`：默认情况下，OCSP 是检查撤销状态的首选机制，CRL 是备用机制。通过选项将首选设置为 CRL。
    - `SOFT_FAIL`：忽略网络失败。
-3. 获取 `PKIXRevocationChecker` 实例后，通过 `addCertPathChecker` 或 `setCertPathChecker` 方法将其添加到 `PKIXParameters` 或 `PKIXBuilderParameters` 对象中。
+3. 获取 `PKIXRevocationChecker` 实例后，通过 `addCertPathChecker()` 或 `setCertPathCheckers()` 方法将其添加到 `PKIXParameters` 或 `PKIXBuilderParameters` 对象中。
 4. 根据你使用的 `CertPathValidator` 或 `CertPathBuilder` 实例，遵循相应步骤：
-   - 如果使用 `CertPathValidator` 实例，使用待验证的证书路径和包含撤销检查器的 `PKIXParameters` 对象调用 `validate` 方法。
-   - 如果使用 `CertPathBuilder` 实例，使用包含撤销检查器的 `PKIXBuilderParameters` 对象作为参数调用 `build` 方法。
+   - 如果使用 `CertPathValidator` 实例，使用待验证的证书路径和包含撤销检查器的 `PKIXParameters` 对象调用 `validate()` 方法。
+   - 如果使用 `CertPathBuilder` 实例，使用包含撤销检查器的 `PKIXBuilderParameters` 对象作为参数调用 `build()` 方法。
 5. 调用 `CertPathValidator` 或 `CertPathBuilder` 实例的验证方法，并传入待验证的证书路径以及包含撤销检查器的 `PKIXParameters` 或 `PKIXBuilderParameters` 对象。
 
 以下代码检查了证书路径中包含的证书的撤销状态。`CertPath` 对象 `path` 是证书路径，`params` 是类型为 `PKIXParameters` 的对象：
 
 ```java
 CertPathValidator cpv = CertPathValidator.getInstance("PKIX");
-
 PKIXRevocationChecker rc = (PKIXRevocationChecker) cpv.getRevocationChecker();
-
 rc.setOptions(EnumSet.of(PKIXRevocationChecker.Option.SOFT_FAIL));
-
 params.addCertPathChecker(rc);
-
 params.setRevocationEnabled(false);
-
-PKIXCertPathValidatorResult res = cpv.validate(path, params);
+PKIXCertPathValidatorResult res = (PKIXCertPathValidatorResult) cpv.validate(path, params);
 ```
 
-在此节代码中，`SOFT_FAIL` 选项会导致吊销检查器在检查状态时忽略任何网络故障（例如无法建立到 OCSP 服务器的连接）。
+在此节代码中，`SOFT_FAIL` 选项会导致撤销检查器在检查状态时忽略任何网络故障（例如无法建立到 OCSP 服务器的连接）。
 
 ## 实现服务提供者
 
@@ -23823,9 +23935,9 @@ Java 证书路径 API 定义了以下类：
 
 请参阅《Java 标准算法名称》以获取为 `algName` 和 `storeType` 定义的标准名称。每个属性的值是实现指定算法的类或证书类型的完全限定名。也就是说，它必须是包名后跟类名，两者用点号分隔。例如，提供者如下所示设置 `CertPathValidator.PKIX` 的值为 `"sun.security.provider.certpath.PKIXCertPathValidator"`：
 
-```
+```java
 put("CertPathValidator.PKIX",
-"sun.security.provider.certpath.PKIXCertPathValidator")
+    "sun.security.provider.certpath.PKIXCertPathValidator");
 ```
 
 
@@ -23868,7 +23980,7 @@ put("CertPathValidator.PKIX ValidationAlgorithm", "RFC5280");
 
 所有 `PathBuilder` 实现都应该提供额外的调试支持，以便分析和纠正路径构建细节。应文档化如何访问这些调试信息。
 
-# 第 9 章：实现服务提供者
+# 第 9 章 实现服务提供者
 
 `CertStore` 实现通常会利用 `CertificateFactory` 根据其编码生成证书和 CRL。例如，LDAP `CertStore` 实现可能会使用 `X.509 CertificateFactory` 从其 `ASN.1` 编码格式生成 X.509 证书和 CRL。
 
@@ -23914,10 +24026,10 @@ put("CertPathValidator.PKIX ValidationAlgorithm", "RFC5280");
 
 “SUN” 提供了以下标准算法、类型和编码：
 
-- **CertificateFactory**: 具有 PKCS7 和 PkiPath 编码的 X.509 CertPath 类型
-- **CertPathValidator**: PKIX 算法
-- **CertPathBuilder**: PKIX 算法
-- **CertStore**: Collection CertStore
+- CertificateFactory: 具有 PKCS7 和 PkiPath 编码的 X.509 CertPath 类型
+- CertPathValidator: PKIX 算法
+- CertPathBuilder: PKIX 算法
+- CertStore: Collection CertStore
 
 以下讨论了这些服务实现的每一个项：
 
@@ -23953,11 +24065,11 @@ PKIX 证书配置文件（Certificate Profile）有许多选项。“SUN” 提�
 
 当发现两个或多个可能导致找到符合条件的路径的候选者时，实现将使用以下标准对证书进行优先级排序（以下示例指定了一个区别名称为 "ou=D,C=O,B=C,A=" 的 TrustAnchor）：
 
-1. 证书的 DN 与其中一个 TrustAnchor 的 DN 匹配（例如：issuerDN="ou=D,C=O,B=C,A="）。
-2. 证书的 DN 是其中一个 TrustAnchor DN 的后代，按照相对于锚点的优先级排序（例如：issuerDN="ou=E,O=D,C=O,B=C,A="）。
-3. 证书的 DN 是其中一个 TrustAnchor DN 的祖先，按照相对于锚点的优先级排序（例如：issuerDN="ou=Q,C=O,B=C,A="）。
-4. 证书的 DN 位于同一个命名空间内，按照相对于锚点的优先级排序（例如：issuerDN="ou=G,C=O,B=C,A="）。
-5. 证书的 DN 是该证书主题 DN 的祖先，按照相对于主题的优先级排序。
+- 1. 证书的 DN 与其中一个 TrustAnchor 的 DN 匹配（例如：issuerDN="ou=D,C=O,B=C,A="）。
+- 2. 证书的 DN 是其中一个 TrustAnchor DN 的后代，按照相对于锚点的优先级排序（例如：issuerDN="ou=E,O=D,C=O,B=C,A="）。
+- 3. 证书的 DN 是其中一个 TrustAnchor DN 的祖先，按照相对于锚点的优先级排序（例如：issuerDN="ou=Q,C=O,B=C,A="）。
+- 4. 证书的 DN 位于同一个命名空间内，按照相对于锚点的优先级排序（例如：issuerDN="ou=G,C=O,B=C,A="）。
+- 5. 证书的 DN 是该证书主题 DN 的祖先，按照相对于主题的优先级排序。
 
 随后是不符合上述任何标准的证书。
 
@@ -23984,6 +24096,9 @@ Collection CertStore 实现可以持有任何是 `java.security.cert.Certificate
 支持 CRL 分布点扩展。为了兼容性，该扩展默认被禁用，可以通过将系统属性 `com.sun.security.enableCRLDP` 设置为 `true` 来启用。
 
 如果设置为 `true`，Oracle 的 PKIX 实现将使用证书的 CRL 分布点扩展中的信息（除了指定的 CertStores）来查找 CRL，前提是分布点是一个 X.500 区别名称或类型为 ldap、http 或 ftp 的 URI。
+
+## 第 9 章
+### 附录 C：OCSP 支持
 
 > **注意：**
 > 取决于你的网络设置和防火墙设置，可能还需要配置你的网络代理服务器。
@@ -24017,6 +24132,9 @@ OCSP 检查由以下安全属性控制：
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_820_0.png)
 
+## 第 9 章
+### 附录 C：OCSP 支持
+
 | 属性名称 | 描述 |
 |---|---|
 | `ocsp.responderURL` | 此属性的值是标识 OCSP 响应者位置的 URL。例如 `ocsp.responderURL=http://ocsp.example.net:80`。默认情况下，OCSP 响应者的位置是从正在验证的证书中隐式确定的。当证书缺少权威信息访问扩展（由 RFC 5280 定义）或需要覆盖时，将使用 Access 属性。 |
@@ -24024,14 +24142,14 @@ OCSP 检查由以下安全属性控制：
 
 该实现从不同的位置获取证书，具体取决于 `X509CertificateSelector` 中指定的发行者（issuer）、自身（itself）以及基本约束（basicConstraints）标准的取值。它会执行以下尽可能多的操作：
 
-1.  **主体为空（Subject-null），basicConstraints <= -1**
-    在主体 DN 属性 "userCertificate" 中查找证书。
+1. 主体为空（Subject-null），`basicConstraints <= -1`  
+   在主体 DN 属性 "userCertificate" 中查找证书。
 
-2.  **主体为空（Subject-null），basicConstraints >= -1**
-    在主体的 "caCertificate" 属性中主体 DN 的 "crossCertificatePair" 属性的正向元素中查找证书。
+2. 主体为空（Subject-null），`basicConstraints >= -1`  
+   在主体的 "caCertificate" 属性中主体 DN 的 "crossCertificatePair" 属性的正向元素中查找证书。
 
-3.  **发行者为空（Issuer-null），basicConstraints >= -1**
-    在发行者 DN 的 "caCertificate" 属性中发行者 DN 的 "crossCertificatePair" 属性的反向元素中查找证书。
+3. 发行者为空（Issuer-null），`basicConstraints >= -1`  
+   在发行者 DN 的 "caCertificate" 属性中发行者 DN 的 "crossCertificatePair" 属性的反向元素中查找证书。
 
 在每种情况下，证书在添加到结果集之前，都会使用 `X509CertSelector.match()` 对其进行检查。
 
@@ -24039,13 +24157,13 @@ OCSP 检查由以下安全属性控制：
 
 该实现从 `X509CRLSelector` 的 `setCertificateChecking`、`addIssuerName` 或 `setIssuerNames` 方法指定的发行者 DN 获取 CRL。如果未使用这些方法指定任何发行者 DN，则实现将抛出异常，指示无法根据所提供的标准获取 CRL。CRL 的查找方式如下：
 
-1.  实现首先创建一个发行者名称列表。如果在 `setCertificateChecking` 方法中指定了证书，则使用该证书的发行者；否则，使用 `addIssuerName` 或 `setIssuerNames` 方法指定的发行者名称。
+1. 实现首先创建一个发行者名称列表。如果在 `setCertificateChecking` 方法中指定了证书，则使用该证书的发行者；否则，使用 `addIssuerName` 或 `setIssuerNames` 方法指定的发行者名称。
 
-2.  接下来，实现遍历发行者名称列表。对于每个发行者名称，在第一个发行者的 "authorityRevocationList" 属性中搜索，如果未找到匹配的 CRL，则在发行者的 "certificateRevocationList" 属性中搜索。异常情况是，如果发行者名称是从 `setCertificateChecking` 方法指定的证书获取的，如果指定的证书是 CA 证书，则检查发行者的 "authorityRevocationList" 属性。
+2. 接下来，实现遍历发行者名称列表。对于每个发行者名称，在第一个发行者的 "authorityRevocationList" 属性中搜索，如果未找到匹配的 CRL，则在发行者的 "certificateRevocationList" 属性中搜索。异常情况是，如果发行者名称是从 `setCertificateChecking` 方法指定的证书获取的，如果指定的证书是 CA 证书，则检查发行者的 "authorityRevocationList" 属性。
 
-3.  所有 CRL 在添加到结果集之前，都会使用 `X509CRLSelector.match()` 对其进行检查。
+3. 所有 CRL 在添加到结果集之前，都会使用 `X509CRLSelector.match()` 对其进行检查。
 
-4.  如果找不到符合选择标准的 CRL，则返回异常。
+4. 如果找不到符合选择标准的 CRL，则返回异常。
 
 ### 缓存
 
@@ -24054,6 +24172,9 @@ OCSP 检查由以下安全属性控制：
 ## 附录 E：禁用加密算法
 
 `jdk.certpath.disabledAlgorithms` 安全属性包含了一列表被认为较弱或已破解的加密算法和密钥大小限制。
+
+# 第 9 章
+## 附录 E：禁用加密算法
 
 包含任何此类算法或密钥大小的证书和其他数据（CRL、OCSP 响应）将在证书路径构建和验证期间被阻止。该属性由 Oracle 的 PKIX 实现指定，其他实现可能不会检查并使用它。
 
@@ -24064,16 +24185,18 @@ OCSP 检查由以下安全属性控制：
 
 
 
-`jdk.path.disabledAlgorithms=MD2, MD5, SHA1 jdkCA & usage TLSServer, RSA keySize < 1024, DSA keySize < 1024, EC keySize < 224`
+jdk.path.disabledAlgorithms=MD2, MD5, SHA1 jdkCA & usage TLSServer,
+
+RSA keySize < 1024, DSA keySize < 1024, EC keySize < 224
 
 在此语法中：
 
 **MD2**
-任何基于 MD2 的算法都将被阻止。
+任何基于 `MD2` 的算法都将被阻止。
 例如，使用 `MD2withRSA` 签名算法签名的证书、CRL 或 OCSP 响应。
 
 **MD5**
-任何基于 MD5 的算法都将被阻止。
+任何基于 `MD5` 的算法都将被阻止。
 例如，使用 `MD5withRSA` 签名算法签名的证书、CRL 或 OCSP 响应。
 
 **SHA1 jdkCA & usage TLSServer**
@@ -24093,10 +24216,10 @@ OCSP 检查由以下安全属性控制：
 
 管理员或用户可以修改 `jdk.path.disabledAlgorithms` 属性的值以满足额外的安全需求。然而，不建议移除任何当前的算法或密钥大小。
 
-> 注意：
+> **注意：**
 > 此安全属性指定的算法限制不适用于信任锚点或自签名证书。
 
-# Java SASL API 编程与部署指南
+# 10 Java SASL API 编程与部署指南
 
 简单身份验证与安全层（Simple Authentication and Security Layer，SASL）是一种互联网标准（RFC 2222），它规定了在客户端和服务器应用程序之间进行身份验证以及可选的安全层建立协议。SASL 定义了如何交换身份数据，但不指定该数据的内容。它是一个框架，特定的身份验证机制可以放入其中指定身份数据的内容和语义。
 
@@ -24117,7 +24240,9 @@ SaslServer ss = Sasl.createSaslServer(mechanism, protocol, myName, props, callba
 由于 SASL API 是一个通用框架，它必须能够适应许多类型的机制。每个机制都需要通过输入进行初始化并需要不断进展。API 提供了三种应用程序向机制提供输入的手段：
 
 1. **通用输入**：应用程序使用预定义的参数来提供由 SASL 规范定义且机制通常需要的输入。对于 `SaslClient` 机制，输入参数是授权 ID、协议 ID 和名称。对于 `SaslServer` 机制，通用输入参数是 ID 及其自身的全限定名称。
+
 2. **属性参数**：应用程序使用属性值（属性名称（可能为非字符串）到属性值的映射）来提供配置信息。Java SASL API 定义了一些标准属性，例如 `Sasl.QOP`（安全质量保护）、`Sasl.STRENGTH`（加密强度）和 `Sasl.MAX_BUFFER`（最大缓冲区大小）。该参数也可用于传递特定于特定的非标准属性。
+
 3. **回调函数 (Callbacks)**：当机制需要输入或输入可能在机制间并不通用时，应用程序使用 `CallbackHandler` 参数提供输入。然后，它使用应用程序提供的处理器从应用程序的端用户处收集数据。例如，某种机制可能要求应用程序的端用户提供名称和密码。
 
 机制可以使用 `javax.security.auth.callback` 包中定义的回调函数；这些机制可能需要 SASL 特有的回调函数，例如用于收集名称和授权信息的回调函数，甚至是（非标准的）特定机制的回调函数。应用程序处理器必须适应各种机制。因此，回调处理器必须能够处理机制可能请求的所有回调函数。对于任意机制来说，这通常是不可能的，但由于通常部署和使用的机制数量有限，这通常是可行的。
@@ -24143,10 +24268,12 @@ msg = receive();
 while (!sc.isComplete() && (msg.status == CONTINUE || msg.status == SUCCESS)) {
     // 处理服务器挑战
     response = sc.evaluateChallenge(msg.contents);
+
     if (msg.status == SUCCESS) {
         // 完成；服务器不再接受任何 SASL 数据
         if (response != null) {
-            throw new IOException("Protocol error: attempting to send response completion");
+            throw new IOException(
+                "Protocol error: attempting to send response completion");
         }
         break;
     } else {
@@ -24172,6 +24299,7 @@ while (!ss.isComplete()) {
     try {
         // 处理响应
         byte[] challenge = ss.evaluateResponse(msg.contents);
+
         if (ss.isComplete()) {
             send(mechanism, challenge, SUCCESS);
         } else {
@@ -24199,13 +24327,11 @@ boolean hasSecurityLayer = (qop != null && (qop.equals("auth")));
 
 要使用安全层与 peer 通信，应用程序首先使用 `wrap` 方法对发送到 peer 的数据进行编码以产生“封装”缓冲区。然后将表示缓冲区内字节数的长度字段传递给 peer。peer 将不带长度字段的字节流传递给 `unwrap` 以获取解码后的字节。
 
-![](e26375bc04cf1374fe293bdab5076_830_0.png)
-
 ### 机制的安装与选择
 
 协议的详情参见 RFC 2222。示例 10-1 阐述了客户端如何使用安全层发送和接收数据。
 
-**示例 10-1 SASL 客户端发送与接收数据**
+#### 示例 10-1 SASL 客户端发送与接收数据
 
 ```
 // 向 peer 发送输出数据
@@ -24237,7 +24363,7 @@ Security.addProvider(new com.example.MyProvider());
 
 请参见实现与集成提供者的步骤中的第 8 步：准备测试，了解有关在安全属性文件中添加提供者以及编程地添加您自己的提供者的更多信息。
 
-当应用程序通过提供一个或多个机制名称请求 SASL 机制时，SASL 框架通过顺序遍历已注册的提供者列表查找支持该机制的 SASL 提供者。提供者必须确定请求的机制是否匹配 `Sasl` 中的选择策略属性，如果是，则返回该机制的实现。
+当应用程序通过提供一个或多个机制名称请求 SASL 机制时，SASL 框架通过顺序遍历已注册的提供者列表查找支持该机制的 SASL 提供者。提供者必须确定请求的机制是否匹配 Sasl 中的选择策略属性，如果是，则返回该机制的实现。
 
 选择策略属性指定了机制的安全性方面，例如它对某些攻击的敏感性。这些是机制的特性（定义），而非其实现，因此所有提供者对特定机制都会得出相同的结论。例如，`PLAIN` 机制无论如何实现，都容易受到明文攻击。如果未提供选择策略属性，则对所选机制没有限制。通过使用这些属性，应用程序可以确保不使用可能部署在执行环境中的不可用机制。例如，如果应用程序不想允许使用易受明文攻击的机制，则可以使用以下示例代码。
 
@@ -24296,13 +24422,13 @@ Digest-MD5 机制用于摘要身份验证和可选的安全性层建立。它指
 
 | 强度 | 加密算法 | 加密 ID |
 | --- | --- | --- |
-| high | Triple DES RC4 128 bits | 3des rc4 |
-| medium | DES RC4 56 bits | des rc4-56 |
-| low | RC4 40 bits | rc4-40 |
+| high | Triple DES RC4 128 bits | `3des` `rc4` |
+| medium | DES RC4 56 bits | `des` `rc4-56` |
+| low | RC4 40 bits | `rc4-40` |
 
 当特定强度有多个选择时，所选加密算法取决于底层平台算法的可用性。要指定使用的加密算法，请将 `com.sun.security.sasl.digest.cipher` 属性设置为相应的加密 ID。注意，此属性设置必须与 `Sasl.STRENGTH` 以及底层可用的加密算法兼容。
 
-## 表 10-3 (续) NTLM 必需信息
+### 表 10-3 (续) NTLM 必需信息
 
 | 信息 | 类型 | 强制或可选 | 说明 |
 | :--- | :--- | :--- | :--- |
@@ -24320,9 +24446,9 @@ Sun-SASL 提供程序支持多种在 LDAP、IMAP 和 SMTP 等流行协议中使�
 
 | 服务器机制名称 | 参数/输入 | 回调函数 | 配置属性 | 选择策略 |
 | :--- | :--- | :--- | :--- | :--- |
-| CRAM-MD5 | 服务器名称 | `AuthorizeCallback`, `NameCallback`, `PasswordCallback` | 无 | `Sasl.POLICY_NO_ANONYMOUS` |
-| DIGEST-MD5 | 协议 ID 服务器名称 | `AuthorizeCallback`, `NameCallback`, `PasswordCallback`, `RealmCallback` | `Sasl.QOP`, `Sasl.STRENGTH`, `Sasl.MAX_BUFFER`, `javax.security.sasl.asl.maxbuffer`, `com.sun.security.sasl.digest.utf` | `Sasl.POLICY_NO_ANONYMOUS`, `Sasl.POLICY_NO_PLAINTEXT` |
-| NTLM | serverName (作为域，可被属性重写) | `RealmCallback` (提供请求用户的域), `NameCallback` (提供请求用户名), `PasswordCallback` | `Sasl.QOP`, `com.sun.security.sasl.ntlm.random`, `com.sun.security.sasl.ntlm.version`, `com.sun.security.sasl.ntlm.domain` | `Sasl.POLICY_NO_ANONYMOUS`, `Sasl.POLICY_NO_PLAINTEXT` |
+| CRAM-MD5 | 服务器名称 | `AuthorizeCallback`, `NameCallback`, `PasswordCallback` | 无 | `Sasl.POLICY_NOANONYMOUS` |
+| DIGEST-MD5 | 协议 ID 服务器名称 | `AuthorizeCallback`, `NameCallback`, `PasswordCallback`, `RealmCallback` | `Sasl.QOP`, `Sasl.STRENGTH`, `Sasl.MAX_BUFFER`, `javax.security.sasl.asl.maxbuffer`, `com.sun.security.sasl.digest.utf` | `Sasl.POLICY_NOANONYMOUS`, `Sasl.POLICY_NOPLAINTEXT` |
+| NTLM | serverName (作为域，可被属性重写) | `RealmCallback` (提供请求用户的域), `NameCallback` (提供请求用户名), `PasswordCallback` | `Sasl.QOP`, `com.sun.security.sasl.ntlm.random`, `com.sun.security.sasl.ntlm.version`, `com.sun.security.sasl.ntlm.domain` | `Sasl.POLICY_NOANONYMOUS`, `Sasl.POLICY_NOPLAINTEXT` |
 
 使用来自 Sun-SASL 提供程序的这些机制的应用程序必须提供所需的参数、回调和属性。这些属性具有合理的默认值，只有当应用程序想要自定义默认值时，才需要设置。
 
@@ -24359,7 +24485,7 @@ JdkSASL 提供程序支持 LDAP、IMAP 和 SMTP 等流行协议中使用的 GSSA
 
 | 客户端机制名称 | 参数/输入 | 回调函数 | 配置属性 | 选择策略 |
 | :--- | :--- | :--- | :--- | :--- |
-| GSSAPI | JAAS 授权 ID 服务器名称 | 无 | `Sasl.QOP`, `Sasl.MAX_BUFFER`, `Sasl.SERVER_AUTH`, `javax.security.sasl.sendmaxbuffer`, `com.sun.security.sasl.inquiry.type_name` | `Sasl.POLICY_ACTIVE`, `Sasl.POLICY_NO_ANONYMOUS`, `Sasl.POLICY_NO_PLAINTEXT` |
+| GSSAPI | JAAS 授权 ID 服务器名称 | 无 | `Sasl.QOP`, `Sasl.MAX_BUFFER`, `Sasl.SERVER_AUTH`, `javax.security.sasl.sendmaxbuffer`, `com.sun.security.sasl.inquiry.type_name` | `Sasl.POLICY_ACTIVE`, `Sasl.POLICY_NOANONYMOUS`, `Sasl.POLICY_NOPLAINTEXT` |
 
 使用 JdkSASL 提供程序的 GSSAPI 机制的应用程序必须提供所需的参数、回调和属性。这些属性具有合理的默认值，只有当应用程序想要自定义默认值时，才需要设置。大多数参数、回调和属性在 API 文档中描述。下节描述了 API 文档未涵盖的进一步 GSSAPI 行为。
 
@@ -24401,7 +24527,7 @@ JdkSASL 提供程序支持 LDAP、IMAP 和 SMTP 等流行协议中使用的 GSSA
 
 | 服务器机制名称 | 参数/输入 | 回调函数 | 配置属性 | 选择策略 |
 | :--- | :--- | :--- | :--- | :--- |
-| GSSAPI | JAAS 授权 ID 服务器名称 | 无 | `Sasl.QOP`, `Sasl.MAX_BUFFER`, `Sasl.SERVER_AUTH`, `javax.security.sasl.sendmaxbuffer`, `com.sun.security.sasl.inquiry.type_name` | `Sasl.POLICY_ACTIVE`, `Sasl.POLICY_NO_ANONYMOUS`, `Sasl.POLICY_NO_PLAINTEXT` |
+| GSSAPI | JAAS 授权 ID 服务器名称 | 无 | `Sasl.QOP`, `Sasl.MAX_BUFFER`, `Sasl.SERVER_AUTH`, `javax.security.sasl.sendmaxbuffer`, `com.sun.security.sasl.inquiry.type_name` | `Sasl.POLICY_ACTIVE`, `Sasl.POLICY_NOANONYMOUS`, `Sasl.POLICY_NOPLAINTEXT` |
 
 使用来自 JdkSASL 提供程序的 GSSAPI 机制的应用程序必须提供所需的参数、回调和属性。这些属性具有合理的默认值，只有当应用程序想要自定义默认值时，才需要设置。所有此类机制的用户都必须有一个处理 `AuthorizeCallback` 的回调处理程序。该回调被机制用于判断经过验证的用户是否允许代表请求的授权 ID 执行操作，并用于获取授权用户的规范化名称（如果适用规范化）。
 
@@ -24445,7 +24571,7 @@ java.util.logging.ConsoleHandler.level=FINEST
 
 1. 编写一个实现 `SaslClient` 或 `SaslServer` 接口的类。
 
-这涉及为 SASL 机制提供一种实现。要实现客户端机制，你需要实现 `SaslClient` 接口中声明的方法。同样，对于服务器机制，你需要实现 `SaslServer` 接口中声明的方法。为了讨论起见，假设你正在开发由类 `com.example.SampleMechClient` 类实现的客户端机制 "SAMPLE-MECH" 的实现。你必须决定该机制所需的输入以及实现将如何收集这些输入。如果机制是基于用户名/密码的，实现可能需要通过回调处理程序参数来收集这些信息。
+这涉及为 SASL 机制提供一种实现。要实现客户端机制，你需要实现 `SaslClient` 接口中声明的方法。同样，对于服务器机制，你需要实现 `SaslServer` 接口中声明的方法。为了讨论起见，假设你正在开发由类 `com.example.SampleMechClient` 实现的客户端机制 "SAMPLE-MECH" 的实现。你必须决定该机制所需的输入以及实现将如何收集这些输入。如果机制是基于用户名/密码的，实现可能需要通过回调处理程序参数来收集这些信息。
 
 2. 编写一个工厂类（实现 `SaslClientFactory` 或 `SaslServerFactory`），用于创建该类的实例。
 
@@ -24457,7 +24583,7 @@ java.util.logging.ConsoleHandler.level=FINEST
 
 `mechName` 是 SASL 机制的名称。这是 `SaslClient.getMechanismName()` 和 `SaslServer.getMechanismName()` 返回的内容。继续我们的示例，以下是提供者如何注册 "SAMPLE-MECH" 机制。
 
-```
+```java
 put("SaslClientFactory.SAMPLE-MECH", "com.example.MySampleClientFactory");
 ```
 
@@ -24513,7 +24639,7 @@ Java XML 签名是 `XMLSignatureFactory` 和 `KeyInfo` 类的具体实现，负�
 
 ## XML 签名简介
 
-你可以使用 XML 签名对任何任意数据进行签名，无论是 XML 还是二进制数据。数据通过一个或多个引用（Reference）元素中的 URI 来标识。XML 签名以三种形式之一进行描述：分离式（detached）、包含式（enveloped）或嵌套式（enveloping）。分离式签名针对外部数据或签名元素之外的数据。包含式签名针对签名元素内部的数据，而嵌套式签名则是包含在其所签名数据内部的签名。
+你可以使用 XML 签名对任何任意数据进行签名，无论是 XML 还是二进制数据。数据通过一个或多个引用（`Reference`）元素中的 URI 来标识。XML 签名以三种形式之一进行描述：分离式（detached）、包含式（enveloped）或嵌套式（enveloping）。分离式签名针对外部数据或签名元素之外的数据。包含式签名针对签名元素内部的数据，而嵌套式签名则是包含在其所签名数据内部的签名。
 
 ## XML 签名示例
 
@@ -24549,7 +24675,7 @@ Java XML 签名是 `XMLSignatureFactory` 和 `KeyInfo` 类的具体实现，负�
 
 11-3
 
-必需的 `CanonicalizationMethod` 元素定义了在对 `SignedInfo` 元素进行签名或验证之前用于规范化的算法。规范化（Canonicalization）是将 XML 内容转换为规范形式的过程，以考虑到可能导致该数据签名失效的变化。由于 XML 的性质以及不同处理器和中间件解析它的方式，规范化是必要的，这可能会更改数据导致签名失效，但被签名数据在逻辑上仍然相等。
+必需的 `CanonicalizationMethod` 元素定义了在对 `SignedInfo` 元素进行签名或验证之前用于规范化的算法。规范化（Canonicalization）是将 XML 内容转换为规范形式的过程，以考虑到可能导致该数据签名失效的变化。由于 XML 的性质以及不同处理器和中间件解析它的方式，规范化是必要的，这可能会更改数据导致签名失效，但被签名数据在逻辑上仍然等等的。
 
 必需的 `SignatureMethod` 元素定义了用于生成签名的数字签名，在本例中为带有 SHA-256 的 RSA。
 
@@ -24646,8 +24772,7 @@ private static class SimpleKeySelectorResult implements KeySelectorResult {
 
 # 第 11 章 XML 数字签名 API 示例
 
-- 这是一个使用 Java XML 数字签名 API 生成包络 XML 签名的简单示例。
-- 生成的签名如下所示（密钥和签名值会有所不同）：
+这是一个使用 Java XML 数字签名 API 生成包络 XML 签名的简单示例。生成的签名如下所示（密钥和签名值会有所不同）：
 
 ```xml
 <Envelope xmlns="urn:xml:envelope">
@@ -24684,6 +24809,115 @@ private static class SimpleKeySelectorResult implements KeySelectorResult {
 </Envelope>
 ```
 
+## 生成 XML 签名
+
+此示例展示了如何使用 XML 数字签名 API 生成 XML 签名。具体来说，该示例生成文档的包络 XML 签名。包络签名是包含在其内容内部的签名。该示例使用 DOM（文档对象模型）解析要签名的 XML 文档，并使用 DOM 实现生成结果签名。
+
+了解 XML 签名及其不同组成部分有助于理解本节。更多信息请参见《XML 签名语法与处理》。
+
+### 实例化要签名的文档
+
+首先，我们使用 JAXP `DocumentBuilderFactory` 解析需要签名的 XML 文档。通过调用以下代码获取 `DocumentBuilderFactory` 的默认实现：
+
+```java
+DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+```
+
+我们还必须使工厂感知命名空间：
+
+```java
+dbf.setNamespaceAware(true);
+```
+
+接下来，我们使用工厂获取 `DocumentBuilder` 实例来解析文档：
+
+```java
+doc = null;
+try (FileInputStream fis = new FileInputStream(args[0])) {
+  doc = dbf.newDocumentBuilder().parse(fis);
+}
+```
+
+### 创建 RSA 密钥对
+
+```java
+KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA");
+kpg.initialize(2048);
+KeyPair keyPair = kpg.generateKeyPair();
+```
+
+### 创建 DOMSignContext 并指定 RSA 私钥
+
+```java
+DOMSignContext dsc = new DOMSignContext(
+    keyPair.getPrivate(), doc.getDocumentElement());
+```
+
+### 创建用于生成包络签名的 XMLSignatureFactory
+
+```java
+XMLSignatureFactory fac = XMLSignatureFactory.getInstance("DOM");
+```
+
+### 创建指向包络文档的引用
+
+```java
+Reference ref = fac.newReference(
+    "",
+    fac.newDigestMethod(DigestMethod.SHA256), 
+    List.of(fac.newTransform(Transform.ENVELOPED, (TransformParameterSpec) null)),
+    null, null);
+```
+
+### 创建 SignedInfo
+
+```java
+SignedInfo si = fac.newSignedInfo(
+    fac.newCanonicalizationMethod(CanonicalizationMethod.EXCLUSIVE_WITH_COMMENTS, (TransformParameterSpec) null),
+    fac.newSignatureMethod("http://www.w3.org/2001/04/xmldsig-more#rsa-sha256", null),
+    List.of(ref));
+```
+
+### 为生成的 RSA 公钥创建 KeyValue
+
+```java
+KeyInfoFactory kif = fac.getKeyInfoFactory();
+KeyValue kv = kif.newKeyValue(keyPair.getPublic());
+```
+
+### 创建 KeyInfo 并添加 KeyValue
+
+```java
+KeyInfo ki = kif.newKeyInfo(List.of(kv));
+```
+
+### 创建 XMLSignature（但不签名）
+
+```java
+XMLSignature signature = fac.newXMLSignature(si, ki);
+```
+
+### 序列化（并签名）包络签名
+
+```java
+signature.sign(dsc);
+```
+
+### 输出文档
+
+```java
+OutputStream os;
+if (args.length > 1) {
+    os = new FileOutputStream(args[1]);
+} else {
+    os = System.out;
+}
+
+Transformer tf = TransformerFactory.newInstance();
+Transformer trans = tf.newTransformer();
+trans.transform(new DOMSource(doc), new StreamResult(os));
+```
+
 ## 示例 11-4 GenEnveloped.java
 
 ```java
@@ -24701,9 +24935,7 @@ import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
-```
 
-```java
 public class GenEnveloped {
     // 概要：GenEnveloped
     // "document" 是包含已签名 XML 文档的文件
@@ -24726,8 +24958,8 @@ public class GenEnveloped {
 
         // 创建 DOMSignatureContext 并指定 RSA 私钥
         // 结果 XMLSignature 的父元素
-        DOMSignatureContext dsc = new DOMSignatureContext(
-            kpg.getPrivate(), doc.getDocumentElement());
+        DOMSignContext dsc = new DOMSignContext(
+            keyPair.getPrivate(), doc.getDocumentElement());
 
         // 创建用于生成包络签名的 DOMSignatureFactory
         XMLSignatureFactory fac = XMLSignatureFactory.getInstance("DOM");
@@ -24782,45 +25014,16 @@ public class GenEnveloped {
 </Envelope>
 ```
 
-## 生成 XML 签名
+## 编译并运行示例
 
-此示例展示了如何使用 XML 数字签名 API 生成 XML 签名。具体来说，该示例生成文档的包络 XML 签名。包络签名是包含在其内容内部的签名。该示例使用 DOM（文档对象模型）解析要签名的 XML 文档，并使用 DOM 实现生成结果签名。
+要编译并运行此示例，请执行以下命令：
 
-了解 XML 签名及其不同组成部分有助于理解本节。更多信息请参见《XML 签名语法与处理》。
-
-## 实例化要签名的文档
-
-首先，我们使用 JAXP `DocumentBuilderFactory` 解析需要签名的 XML 文档。通过调用以下代码获取 `DocumentBuilderFactory` 的默认实现：
-
-```java
-DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+```bash
+javac GenEnveloped.java
+java GenEnveloped envelope.xml envelopedSignature.xml
 ```
 
-我们还必须使工厂感知命名空间：
-
-```java
-dbf.setNamespaceAware(true);
-```
-
-接下来，我们使用工厂获取 `DocumentBuilder` 实例来解析文档：
-
-```java
-doc = null;
-try (FileInputStream fis = new FileInputStream(args[0])) {
-    doc = dbf.newDocumentBuilder().parse(fis);
-}
-```
-
-## 指定要验证的签名元素
-
-我们需要指定要验证的 `Signature` 元素，因为文档中可能存在多个。我们使用 DOM 方法 `Document.getElementsByTagNameNS`，传递 XML 签名命名空间 URI 和 `Signature` 元素的标签名，如下：
-
-```java
-NodeList nl = doc.getElementsByTagNameNS("http://www.w3.org/2000/09/xmldsig", "Signature");
-if (nl.getLength() == 0) {
-    throw new Exception("无法找到 Signature element");
-}
-```
+示例程序将为文件 `envelope.xml` 中的文档生成包络签名，并将其存储在当前目录下的文件 `envelopedSignature.xml` 中。
 
 ## 验证 XML 签名
 
@@ -24828,7 +25031,7 @@ if (nl.getLength() == 0) {
 
 ### 实例化包含签名的文档
 
-我们使用 JAXP `DocumentBuilderFactory` 来解析包含签名的文档。应用程序通过调用以下行代码详细说明了 `DocumentBuilderFactory` 的默认实现：
+我们使用 JAXP `DocumentBuilderFactory` 来解析包含签名的文档。应用程序通过调用以下代码详细说明了 `DocumentBuilderFactory` 的默认实现：
 
 ```java
 DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -24845,11 +25048,22 @@ dbf.setNamespaceAware(true);
 ```java
 doc = null;
 try (FileInputStream fis = new FileInputStream(args[0])) {
-    doc = dbf.newDocumentBuilder().parse(fis);
+  doc = dbf.newDocumentBuilder().parse(fis);
 }
 ```
 
-### 算法匹配工具方法
+### 指定要验证的签名元素
+
+我们需要指定要验证的 `Signature` 元素，因为文档中可能存在多个。我们使用 DOM 方法 `Document.getElementsByTagNameNS`，传递 XML 签名命名空间 URI 和 `Signature` 元素的标签名，如下：
+
+```java
+NodeList nl = doc.getElementsByTagNameNS("http://www.w3.org/2000/09/xmldsig", "Signature");
+if (nl.getLength() == 0) {
+    throw new Exception("无法找到 Signature element");
+}
+```
+
+### 验证签名的辅助代码
 
 ```java
 static boolean algEquals(String algURI, String algName) {
@@ -24865,8 +25079,6 @@ static boolean algEquals(String algURI, String algName) {
 }
 ```
 
-### 密钥选择器结果实现
-
 ```java
 private static class SimpleKeySelectorResult implements KeySelectorResult {
     private PublicKey pk;
@@ -24878,15 +25090,6 @@ private static class SimpleKeySelectorResult implements KeySelectorResult {
     public PublicKey getKey() { return pk; }
 }
 ```
-
-## GenEnveloped 示例
-
-要编译并运行此示例，请执行以下命令：
-
-- `javac GenEnveloped.java`
-- `java GenEnveloped envelope.xml envelopedSignature.xml`
-
-示例程序将为文件 `envelope.xml` 中的文档生成包络签名，并将其存储在当前目录下的文件 `envelopedSignature.xml` 中。
 
 
 
@@ -24920,13 +25123,11 @@ DOMSignatureContext dsc = new DOMSignatureContext(
 
 # 组装 XML 签名
 
-我们将 `Signature` 元素的不同部分组装成 `XMLSignature` 对象。这些对象都是使用 `XMLSignatureFactory` 对象创建并组装的。一个
+我们将 `Signature` 元素的不同部分组装成 `XMLSignature` 对象。这些对象都是使用 `XMLSignatureFactory` 对象创建并组装的。
 
 ![](img/e26375bcfe04cf1374fe3293bdab5076_860_0.png)
 
-# 第 11 章
-
-XML 数字签名 API 示例
+# 第 11 章 XML 数字签名 API 示例
 
 应用程序通过调用以下代码行获取 `XMLSignatureFactory` 的 DOM 实现：
 
@@ -24987,7 +25188,7 @@ XMLSignature signature = fac.newXMLSignature(si, ki);
 
 # 生成 XML 签名
 
-现在我们准备好生成签名了，我们通过调用 `XMLSignature` 对象的 `sign` 方法来实现，并如下如下传递签名上下文：
+现在我们准备好生成签名了，我们通过调用 `XMLSignature` 对象的 `sign` 方法来实现，并如下传递签名上下文：
 
 ```java
 signature.sign(dsc);
@@ -25037,12 +25238,12 @@ spf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
 
 虽然可以通过工厂开启或关闭 FSP，但如果存在 Java 安全管理器，它将在 Java XML 处理器存在时强制执行限制和约束，且无法关闭。你可以根据应用程序的具体需求调整各个属性。JAXP 属性分为两类：
 
-- *处理限制*：有助于防止 XML 处理导致过度的内存消耗。
-- *外部访问限制*：控制外部资源的获取。
+- **处理限制**：有助于防止 XML 处理导致过度的内存消耗。
+- **外部访问限制**：控制外部资源的获取。
 
-> **警告：**
+> **警告**：
 >
-> 安全管理器（Security Manager）及其相关 API 已弃用，并可能在未来的发布版本中移除。安全管理器没有替代品。请参阅 JEP 411 获取讨论和替代方案。
+> 安全管理器及其相关 API 已弃用，并可能在未来的发布版本中移除。安全管理器没有替代品。请参阅 JEP 411 获取讨论和替代方案。
 
 接下来的章节描述了这两类 JAXP 属性。
 
@@ -25057,7 +25258,7 @@ JDK XML 处理器默认遵循处理限制。DOM 和 SAX 解析器都具有安全
 JDK XML 处理器允许你通过以下三种方式单独调整处理限制：
 
 - 通过标准 XML API
-- 使用系统属性（System properties）
+- 使用系统属性
 - 在 `jaxp.properties` 文件中
 
 参阅“使用 JAXP 属性”、“范围和顺序”。
@@ -25066,18 +25267,22 @@ JDK XML 处理器允许你通过以下三种方式单独调整处理限制：
 
 ### 表 12-1 elementAttributeLimit
 
-| 属性 |  |
+| 属性 | 描述 |
 |---|---|
-| 名称 | `http://www.oracle.com/xml/jaxp/properties/elementAttributeLimit` 限制元素可以拥有的属性数量。一个正整数。小于或等于 0 的值表示无限制。如果值不是整数，则抛出 `NumericFormatException`。 |
-| 值 | 10000 |
-| 默认值 | `jdk.xml.elementAttributeLimit` |
-| 自于 | 7u45, 8 |
+| 名称 | `http://www.oracle.com/xml/jaxp/properties/elementAttributeLimit` |
+| 定义 | 限制元素可以拥有的属性数量。 |
+| 值 | 一个正整数。小于或等于 0 的值表示无限制。如果值不是整数，则抛出 `NumericFormatException`。 |
+| 默认值 | 10000 |
+| 系统属性 | `jdk.xml.elementAttributeLimit` |
+| 自从 | 7u45, 8 |
 
 ### 表 12-2 entityExpansionLimit
 
 | 属性 | 描述 |
 |---|---|
-| 名称 | `http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit` 限制实体扩展次数。一个正整数。小于或等于 0 的值表示无限制。如果值不是整数，则抛出 `NumericFormatException`。 |
+| 名称 | `http://www.oracle.com/xml/jaxp/properties/entityExpansionLimit` |
+| 定义 | 限制实体扩展次数。 |
+| 值 | 一个正整数。小于或等于 0 的值表示无限制。如果值不是整数，则抛出 `NumericFormatException`。 |
 | 默认值 | 64000 |
 | 系统属性 | `jdk.xml.entityExpansionLimit` |
 | 自从 | 7u45, 8 |
@@ -25086,7 +25291,9 @@ JDK XML 处理器允许你通过以下三种方式单独调整处理限制：
 
 | 属性 | 描述 |
 |---|---|
-| 名称 | `http://www.oracle.com/xml/jaxp/properties/entityReplacementLimit` 限制所有实体引用中的节点总数。一个正整数。小于或等于 0 的值表示无限制。如果值不是整数，则抛出 `NumericFormatException`。 |
+| 名称 | `http://www.oracle.com/xml/jaxp/properties/entityReplacementLimit` |
+| 定义 | 限制所有实体引用中的节点总数。 |
+| 值 | 一个正整数。小于或等于 0 的值表示无限制。如果值不是整数，则抛出 `NumericFormatException`。 |
 | 默认值 | 3000000 |
 | 系统属性 | `jdk.xml.entityReplacementLimit` |
 | 自从 | 7u111, 8u101 |
@@ -25095,7 +25302,8 @@ JDK XML 处理器允许你通过以下三种方式单独调整处理限制：
 
 | 属性 | 描述 |
 |---|---|
-| 名称 | `http://www.oracle.com/xml/jaxp/properties/maxElementDepth` 限制最大元素深度。 |
+| 名称 | `http://www.oracle.com/xml/jaxp/properties/maxElementDepth` |
+| 定义 | 限制最大元素深度。 |
 | 值 | 一个正整数。小于或等于 0 的值表示无限制。如果值不是整数，则抛出 `NumericFormatException`。 |
 | 默认值 | 0 |
 | 系统属性 | `jdk.xml.maxElementDepth` |
@@ -25105,7 +25313,8 @@ JDK XML 处理器允许你通过以下三种方式单独调整处理限制：
 
 | 属性 | 描述 |
 |---|---|
-| 名称 | `http://www.oracle.com/xml/jaxp/properties/maxGeneralEntityLimit` 限制泛型实体的大小。 |
+| 名称 | `http://www.oracle.com/xml/jaxp/properties/maxGeneralEntityLimit` |
+| 定义 | 限制泛型实体的大小。 |
 | 值 | 一个正整数。小于或等于 0 的值表示无限制。如果值不是整数，则抛出 `NumericFormatException`。 |
 | 默认值 | 0 |
 | 系统属性 | `jdk.xml.maxGeneralEntityLimit` |
@@ -25115,7 +25324,8 @@ JDK XML 处理器允许你通过以下三种方式单独调整处理限制：
 
 | 属性 | 描述 |
 |---|---|
-| 名称 | `http://www.oracle.com/xml/jaxp/properties/maxOccurLimit` 在构建具有非 "unbounded" 值的 occurs 属性的 W3C XML Schema 时，限制内容模型节点数量。 |
+| 名称 | `http://www.oracle.com/xml/jaxp/properties/maxOccurLimit` |
+| 定义 | 在构建具有非 "unbounded" 值的 occurs 属性的 W3C XML Schema 时，限制内容模型节点数量。 |
 | 值 | 一个正整数。小于或等于 0 的值表示无限制。如果值不是整数，则抛出 `NumericFormatException`。 |
 | 默认值 | 100 |
 | 系统属性 | `jdk.xml.maxOccurLimit` |
@@ -25125,7 +25335,8 @@ JDK XML 处理器允许你通过以下三种方式单独调整处理限制：
 
 | 属性 | 描述 |
 |---|---|
-| 名称 | `http://www.oracle.com/xml/jaxp/properties/maxEntitySize` 限制任何实体的大小。 |
+| 名称 | `http://www.oracle.com/xml/jaxp/properties/maxEntitySize` |
+| 定义 | 限制任何实体的大小。 |
 | 值 | 一个正整数。小于或等于 0 的值表示无限制。如果值不是整数，则抛出 `NumericFormatException`。 |
 | 默认值 | 1000 |
 | 系统属性 | `jdk.xml.maxEntitySize` |
@@ -25153,9 +25364,7 @@ JDK XML 处理器允许你通过以下三种方式单独调整处理限制：
 | 系统属性 | `jdk.xml.totalEntitySize` |
 | 自从 | 7u45, 8 |
 
-## 第 12 章
-
-安全处理特性 (FSP)
+## 第 12 章 安全处理特性 (FSP)
 
 ### 表 12-10 与处理限制相关的遗留系统属性
 
@@ -25165,11 +25374,11 @@ JDK XML 处理器允许你通过以下三种方式单独调整处理限制：
 | `elementAttributeLimit` | 1.5 | `jdk.xml.elementAttributeLimit` |
 | `maxOccurLimit` | 1.6 | `jdk.xml.maxOccur` |
 
-### 用于外部访问限制的 JAXP 属性
+## 用于外部访问限制的 JAXP 属性
 
-外部访问限制 JAXP 属性及其相应的系统属性允许你调节外部连接。外部访问限制允许你指定允许的外部连接类型。值是协议列表。JAXP 处理器通过匹配协议与列表中的协议来检查是否允许外部连接。如果协议在列表中，或者即使不在列表中，处理器将尝试建立连接。使用这些 JAXP 属性结合自定义解析器和 Catalog API 通过“使用解析器和目录”来降低风险
+外部访问限制 JAXP 属性及其相应的系统属性允许你调节外部连接。外部访问限制允许你指定允许的外部连接类型。值是协议列表。JAXP 处理器通过匹配协议与列表中的协议来检查是否允许外部连接。如果协议在列表中，或者即使不在列表中，处理器将尝试建立连接。使用这些 JAXP 属性结合自定义解析器和 Catalog API 通过“使用解析器和目录”来降低风险。
 
-> **注意：** 通过 API 显式开启安全处理特性 (FSP)，例如 `factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true)`，将禁用所有外部连接。
+> **注意**：通过 API 显式开启安全处理特性 (FSP)，例如 `factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true)`，将禁用所有外部连接。
 
 外部访问限制 JAXP 属性在 `javax.xml.XMLConstants` 中定义如下：
 
@@ -25259,9 +25468,9 @@ JAR 协议定义为：`jar:[scheme]`
 
 ## 设置外部访问限制的范围
 
-外部访问限制对解析器（resolver）返回的构造（如果其不为空）没有影响：这适用于可能设置在 SAX 和 DOM 解析器上的实体解析器、SAX 解析器上的 XML 解析器、SchemaFactory 上的 LSResourceResolver、Validator 或 ValidatorHandler，或者转换器上的 URIResolver。
+外部访问限制对解析器（resolver）返回的构造（如果其不为空）没有影响：这适用于可能设置在 SAX 和 DOM 解析器上的实体解析器、SAX 解析器上的 XML 解析器、`SchemaFactory` 上的 `LSResourceResolver`、`Validator` 或 `ValidatorHandler`，或者转换器上的 `URIResolver`。
 
-- 当通过调用 SchemaFactory 的 `newSchema` 方法创建 schema 时。
+- 当通过调用 `SchemaFactory` 的 `newSchema` 方法创建 schema 时。
 
 当不需要外部资源时：例如，JDK 支持以下功能和属性，并可指示处理器加载外部 DTD 或解析外部实体：
 
@@ -25312,7 +25521,7 @@ parser.setProperty(JDK_ENTITY_COUNT_INFO, "yes");
 | MAX_NAME_LIMIT | 1000 | 13 | 0 | null |
 | ENTITY_REPLACEMENT_LIMIT | 30000000 | 0 | 0 | null |
 
-在这个示例中，实体引用的总数（或实体扩展）为 1417；默认限制为 6400。所有实体的总大小为 55425；默认限制是 50000000。最大的参数实体是 %MultiScriptExpression，在解析所有引用后其长度为 7303；默认限制为 100000。
+在这个示例中，实体引用的总数（或实体扩展）为 1417；默认限制为 6400。所有实体的总大小为 55425；默认限制是 50000000。最大的参数实体是 `%MultiScriptExpression`，在解析所有引用后其长度为 7303；默认限制为 100000。
 
 如果该文件是应用程序预期处理的最大文件，建议将限制设置为较小的值。例如，将 `ENTITY_EXPANSION_LIMIT` 设置为 2000，`TOTAL_ENTITY_SIZE_LIMIT` 设置为 100000，将 `PARAMETER_ENTITY_SIZE_LIMIT` 设置为 10000。
 
@@ -25478,7 +25687,7 @@ javax.xml.accessExternalSchema=""
 javax.xml.accessExternalStylesheet=""
 ```
 
-- 在 `jaxp.properties` 文件中使用对应的系统属性。处理限制系统属性具有前缀 `jdk.xml`。访问限制系统属性具有前缀 `javax.xml`。
+- 在 `jaxp.properties` 文件中使用对应的系统属性。处理限制系统属性具有前缀 `jdk.xml`。访问限制系统属性具有前缀 `jaxp.xml`。
 
 - 处理限制值是整数。如果处理限制不是可解析的整数，则抛出 `NumberFormatException`；请参见方法 `java.lang.Integer.parseInt(String)`。
 
@@ -25497,13 +25706,13 @@ public boolean isNewPropertySupported() {
         fail(ex.getMessage());
     } catch (SAXException ex) {
         String err = ex.getMessage();
-        if (err.indexOf("* ' + JDK_GENERAL_ENTITY_LIMIT + " is not recognized.") > -1) {
+        if (err.indexOf("* ' + JDK_GENERAL_ENTITY_LIMIT + \" is not recognized.\") > -1) {
             // expected before this patch
-            debugPrint("New limit properties not supported. Samples not run());
+            debugPrint("New limit properties not supported. Samples not run.");
             return false;
         }
-        return true;
     }
+    return true;
 }
 ```
 
@@ -25529,7 +25738,7 @@ public boolean isNewPropertySupported() {
 
 例如，假设出现以下情况：
 
-- ACCESS_EXTERNAL_DTD JAXP 属性设置如下：
+- `ACCESS_EXTERNAL_DTD` JAXP 属性设置如下：
 - 您的应用程序尝试通过 HTTP 协议获取外部 DTD。
 - 解析器解析了一个 XML 文件，该文件包含对 `http://www.example.com/dtd/properties.dtd` 的外部引用。
 
@@ -25575,7 +25784,7 @@ xif.setProperty(
 
 ```java
 TransformerFactory tf = 
-TransformerFactory.newInstance();
+    TransformerFactory.newInstance();
 tf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
 ```
 
@@ -25612,7 +25821,7 @@ public LSInput resolveResource(
 
 你可以按照如下方式在 `SchemaFactory` 上注册 `LSResourceResolver` 的实现：
 
-```java
+```
 SchemaFactory schemaFactory =
 SchemaFactory.newInstance("http://www.w3.org/2001/XMLSchema")
 LSResourceResolver resolver = ...
@@ -25629,7 +25838,7 @@ Catalog API 支持开放结构化信息标准促进协会（OASIS）的 XML 目�
 
 你可以使用 `CatalogResolver` 作为自定义解析器，通过配置为 `Catalog` 对象的本地资源来扩展外部引用。你可以像 Java XML Resolvers 中描述的那样，在工厂或处理器上注册 `CatalogResolver`，以替代 `EntityResolver`、`XMLResolver`、`URIResolver` 或 `LSResourceResolver`。在下面的代码段中，`CatalogResolver` 被注册为 `SAXParserFactory` 的 `EntityResolver`：
 
-```java
+```
 URI catalogUri = URI.create("file:///users/ouser/catalog.xml")
 CatalogResolver cr = CatalogManager.catalogResolver(CatalogFeatures.defaults(), catalogUri);
 SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -25640,12 +25849,13 @@ reader.setEntityResolver(cr);
 
 ## 在 JDK XML 处理器上启用目录
 
-JDK XML 处理器以原生函数实现了 Catalog API。因此，无需在处理器外部实例化 `CatalogResolver`。你只需要通过 `setProperty` 或 `setAttribute` 方法、系统属性或 `jaxp.properties` 文件在 XML 处理器上注册目录文件。随后，XML 处理器将自动通过目录执行映射。下面的代码段演示了如何通过 `XMLInputFactory` 在 JAXP 解析器上注册目录：
+JDK XML 处理器以原生函数实现了 Catalog API。因此，无需在处理器外部实例化 `CatalogResolver`。你只需要通过 `setProperty` 或 `setAttribute` 方法、系统属性（System properties）或 `jaxp.properties` 文件在 XML 处理器上注册目录文件。随后，XML 处理器将自动通过目录执行映射。下面的代码段演示了如何通过 `XMLInputFactory` 在 JAXP 解析器上注册目录：
 
 ```java
 String catalog = "file://users/aser/catalog/catalog.xml";
 XMLInputFactory factory = XMLInputFactory.newInstance();
-factory.setProperty(CatalogFeatures.Feature.FILES.getProperty(), catalog);
+factory.setProperty(CatalogFeatures.Feature.FILES.getProperty(),
+catalog);
 ```
 
 更多示例，请参见《Java Platform, Standard Edition Core Libraries》中的 XML Catalog API。
@@ -25710,19 +25920,19 @@ jdk.xml.overrideDefaultParser=true
 
 | 术语 | 定义 |
 | --- | --- |
-| `JAXP` | Java API |
-| `Java SE` | Java SE |
-| `Java XML` | Java SE |
+| JAXP | Java API |
+| Java SE | Java SE |
+| Java XML | Java SE |
 | `java.xml` | 模块 |
-| `JDK` | JDK 实现 |
-| `JDK Properties` | JDK 属性 |
+| JDK | JDK 实现 |
+| JDK Properties | JDK 属性 |
 
 表 12-17（续）
 
 | 术语 | 定义 |
 | --- | --- |
-| `JDK Properties` | JDK 实现 |
-| `FSP` | 安全处理 |
+| JDK Properties | JDK 实现 |
+| FSP | 安全处理 |
 
 # 附录 B：Java 特性和属性的命名规范
 
