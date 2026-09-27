@@ -19,7 +19,7 @@ codeMantra
 
 ## 关于作者
 
-**Christian Ullenboom** 在十岁时就开启了他的编程之旅，在台 C64 上输入了他的第一行代码。在精通了汇编编程和早期的 BASIC 扩展后，他在学习计算机科学和心理学之后，在 Java 之岛上找到了自己的使命。尽管他沉浸于 Python、JavaScript、TypeScript 和 Kotlin 的假期中，但他仍然是 Java 的遗老。
+**Christian Ullenboom** 在十岁时就开启了他的编程之旅，在台 C64 上输入了他的第一行代码。在精通了汇编编程和早期的 `BASIC` 扩展后，他在学习计算机科学和心理学之后，在 Java 之岛上找到了自己的使命。尽管他沉浸于 `Python`、`JavaScript`、`TypeScript` 和 `Kotlin` 的假期中，但他仍然是 Java 的遗老。
 
 20 年来，Ullenboom 一直是一个热情的软件架构师、Java 培训师（访问 `http://www.tutego.com`）和 IT 专家导师。他的专业知识产出了许多在线视频课程和参考书：
 
@@ -43,7 +43,7 @@ Christian Ullenboom 多年来一直通过他的书籍传播 Java，早在 2005 �
 
 学习编程语言的书籍和网络研讨会随处可见，但阅读、学习、练习和重复只是成为成功开发者的一个方面。要创建有效的软件解决方案，你需要创造性地结合你的知识，就像音乐家经常练习手指操并维护他们的曲目库一样。你的练习越有效，就越快成为大师。这本书旨在帮助你进步并获得更多的实践经验。
 
-Java 拥有超过 2300 个类、约 1400 个接口、接近 140 个枚举、50 个异常，并且包含了记录（records）。然而，这些类型中只有一小部分在实践中是相关的。本书挑选了任务中最最重要的类型和方法，使其具有激励性并遵循 Java 规范。书中还反复介绍了替代方案和方法。目标是让非功能性需求变得，因为程序的质量不仅仅在于“做它应该做的事”。正确的缩进、遵循命名规范、适当使用修饰符、最佳实践和设计模式等问题至关重要。提出的解决方案旨在演示这些原则，关键词是“整洁代码”。
+Java 拥有超过 2300 个类、约 1400 个接口、接近 140 个枚举、50 个异常，并且包含了记录（`record`）。然而，这些类型中只有一小部分在实践中是相关的。本书挑选了任务中最重要的类型和方法，使其具有激励性并遵循 Java 规范。书中还反复介绍了替代方案和方法。目标是让非功能性需求变得，因为程序的质量不仅仅在于“做它应该做的事”。正确的缩进、遵循命名规范、适当使用修饰符、最佳实践和设计模式等问题至关重要。提出的解决方案旨在演示这些原则，关键词是“整洁代码”。
 
 ## 基础知识与目标读者
 
@@ -121,7 +121,7 @@ $ java Application
 - 是否可以将 `Application.class` 文件从 Windows 操作系统复制到 Linux 操作系统并让 `java` 运行该程序？
 - 计算机上必须安装哪些软件？
 
-开发环境的选择通常取决于个人喜味，并且它们都能很好地处理核心任务：
+开发环境的选择通常取决于个人喜好，并且它们都能很好地处理核心任务：
 
 - `IntelliJ`
 - `Eclipse`
@@ -150,7 +150,7 @@ public class Application {
 - 将 `Application.java` 导入 `IDE` 中。
 - 故意在程序代码中引入错误，并观察错误信息。一些建议：
   - 修改文件名。
-  - 修改大小写，例如将类写为 `Class`，该类有一个特殊方法 `public static void main(String[] args)`。如果方法调名不是 `main` 而是其他的，例如 `Main` 或 `run`，会发生什么？
+  - 修改大小写，例如将 `class` 写为 `Class`，该类有一个特殊方法 `public static void main(String[] args)`。如果方法名不是 `main` 而是其他的，例如 `Main` 或 `run`，会发生什么？
   - 在类启动之前，主程序不会启动
   - 尝试输出希腊字母或心形，你可以做到吗？
   - 经常使用空白，空格（除非制表符）和换行出现在语句之后。像这种格式是有效的吗？
@@ -170,7 +170,7 @@ public class Application{public static void main(String[] args){System.out.print
 - 每一个大括号都需要一个闭合括号。如果你省略了花括号，会导致编译器错误。
 - 字符串字面量在不同的编程语言中使用不同的符号包。某些编程语言使用双引号（`"`），其他编程语言使用单引号（`'`），而某些编程语言使用反引号（`` ` ``）。Java 仅接受双引号中的字符串。对于字符则使用数据类型 `char`。
 
-在核心，虚拟机负责评估表达式并执行语句。（注：原文 OCR 文本包含重复内容，已保留以供参考）。
+在核心，虚拟机负责评估表达式并执行语句。
 
 图 2.1 显示 输出
 
@@ -201,6 +201,42 @@ Java 有内置数据类型：`boolean`、`byte`、`char`、`short`、`int`、`lo
 CaptainCiao 想要为新手、高级选手和专业人士制作射击目标。目标的大小各相同。
 
 
+
+我们的初始程序将通过设置中心坐标和半径来画一个圆，但我们现在的目标是通过引入参数创建一个可修改的输出。
+
+从上一个任务添加 `main(...)` 方法。
+
+- 在 `main(...)` 方法中声明两个 `int` 变量 `x`, `y` 和一个 `double` 变量 `r`。
+- 给变量赋值。
+- 将变量的赋值构建到输出中。
+
+示例：
+
+- 例如，如果 x=100，y=110 且 r=20.5，那么控制台输出应该是：
+
+```xml
+<svg height="100" width="1000">
+  <circle cx="100" cy="110" r="20.5" />
+</svg>
+```
+
+- 手动赋值 x=10, y=10 且 r=2.686：
+
+```xml
+<svg height="100" width="1000">
+  <circle cx="10" cy="10" r="2.686" />
+</svg>
+```
+
+在白色背景上创建了一个黑圆。
+
+表达式 `1000000 * 1000000` 的结果是什么？有什么特别的之处吗？为什么会出现这个结果？
+
+如果你计算 `0.1+0.1+0.1+0.1+0.1+0.1+0.1+0.1 - 1.0` 并用 `System.out.println(...)` 输出结果，输出会让你惊讶吗？
+
+# 2 · 过程式编程 13
+
+![](img/1772db956b1b6830f9a15683dc55dea0_29_0.png)
 
 # 生成随机圆 ★
 
@@ -236,6 +272,8 @@ double rnd1 = java.util.concurrent.ThreadLocalRandom.current().nextDouble();
 double rnd2 = java.util.concurrent.ThreadLocalRandom.current().nextDouble(0 to max);
 double rnd3 = java.util.concurrent.ThreadLocalRandom.current().nextDouble(min, max);
 ```
+
+# 14 Java 编程练习
 
 ```java
 int rnd4 = java.util.concurrent.ThreadLocalRandom.current().nextInt();
@@ -328,6 +366,8 @@ Ray 在玩多骨牌，多骨牌包含两个格子。她想是否可以将两个�
 
 在欧元货币中，有面值为 2 欧元、1 欧元、50 分、20 分、10 分、5 分、2 分和 1 分的欧元硬币。100 分等于 1 欧元。
 
+![](img/1772db956b1b6830f9a15683dc55dea0_32_0.png)
+
 任务：
 
 1. 创建一个新的类 `CoinMachine`。
@@ -349,11 +389,15 @@ Please enter the amount of money:
 1 x 1 cent
 ```
 
-输出格式并不重要。`Scanner` 是本地化的，因此在输入数字时使用相应语言的小数分隔符。
+输出格式并不重要。Scanner 是本地化的，因此在输入数字时使用相应语言的小数分隔符。
 
 # 一瓶朗姆，十瓶朗姆 ★
 
 Brain 是错误语言的猎手，她总是确保标签在语法上正确。许多语言对复数有特定的规则。通常情况下是“1 bottle”或“99 bottles”，但有“0 bottles”。像“1 bottle(s)”这样的简化处理通常出现在用户界面中。
+
+## 过程式编程
+
+![](img/1772db956b1b6830f9a15683dc55dea0_33_0.png)
 
 任务：
 
@@ -362,9 +406,9 @@ Brain 是错误语言的猎手，她总是确保标签在语法上正确。许�
 
 示例：
 
-- "0 bottles of rum"
-- "1 bottle of rum"
-- "99 bottles of rum"
+- "0 bottles of rum".
+- "1 bottle of rum".
+- "99 bottles of rum".
 
 条件运算符（`?:` 运算符）使代码紧凑。
 
@@ -391,6 +435,8 @@ class Application {
 # 发薪日 ★
 
 Tort Ellini 从 Bonny Brain 处花 1,000 里拉买了一块古董口袋表，现在他负责支付费用。
+
+![](img/1772db956b1b6830f9a15683dc55dea0_34_0.png)
 
 任务：
 
@@ -457,8 +503,13 @@ if (x > y) {
 
 - 运行三次程序，可能会有以下输出：
   `<circle cx="20" cy="20" r="5" fill="green" />`
-  `<circle cx="20" cy="20" r="5" fill="blue" />`
-  `<circle cx="20" cy="20" r="5" fill="blue" />`
+
+## Java 编程练习
+
+```xml
+<circle cx="20" cy="20" r="5" fill="blue" />
+<circle cx="20" cy="20" r="5" fill="blue" />
+```
 
 # 测验：else 属于哪个块 ★★
 
@@ -507,20 +558,21 @@ Bonny Brain 期望为新项目评估字符串，且代码可以不同。
 
 - 从命令行获取一个字符串。我们假设输入始终是小写的。
 - 如果输入是 "ay", "aye", "ja", "joo"，则在屏幕上打印 "Keep it up!"，其他输入显示 "Don't you dare!"。
-- 使用 `switch` 语句或 `switch` 表达式解决此题。
+- 使用 switch 语句或 switch 表达式解决此题。
 
 # 将 switch 语句重写为 switch 表达式 ★
 
-Java 14 引入了 `switch` 语句的扩展语法，使得代码更简洁。
+Java 14 引入了 switch 语句的扩展语法，使得代码更简洁。
 
 任务：
 
-- 给定以下经典的 `switch` 语句代码：
+- 给定以下经典的 switch 语句代码：
 
 ```java
 int month = new java.util.Scanner(System.in).nextInt();
 int year = new java.util.Scanner(System.in).nextInt();
-boolean isLeapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+boolean isLeapYear = ((year % 4 == 0) && (year % 100 != 0))
+    || (year % 400 == 0);
 
 int days;
 switch (month) {
@@ -538,20 +590,20 @@ switch (month) {
 }
 ```
 
-- 使用 `switch` 表达式简化程序。
+- 使用 switch 表达式简化程序。
 
 ## 循环
 
-除了 `if` 语句，重复是另一个重要的命令属性。Java 提供了不同的循环结构：
+除了 if 语句，重复是另一个重要的命令属性。Java 提供了不同的循环结构：
 
-- `while` 循环
-- `do-while` 循环
-- `for` 循环
-- 扩展 `for` 循环
+- while 循环
+- do-while 循环
+- for 循环
+- 扩展 for 循环
 
 # 创建旋转的 SVG 矩形 ★
 
-袭击结束后，CiaoCiao 长感到压力。为了放松，他喜欢几何图形，但 Bonny Brain 不喜欢这样做；程序应该处理以下围绕中心 (100) 旋转 60 度：
+袭击结束后，CiaoCiao 长感到压力。为了放松，他喜欢几何图形，但 Bonny Brain 不喜欢这样做；程序应该处理 ![](img/1772db956b1b6830f9a15683dc55dea0_38_0.png) 以下围绕中心 (100) 旋转 60 度：
 
 ```xml
 <svg height="200">
@@ -575,7 +627,7 @@ switch (month) {
 
 # 创建 SVG 链 ★
 
-CiaoCiao 长官想要送上一条由不同宝石组成的珍珠项：蓝宝石（蓝色）、祖母绿（绿色）、火石榴石（橙色）。他喜欢颜色随机排列的设计。以下是带有三个圆形的 SVG：
+CiaoCiao 长官想要送上一条由不同宝石组成的珍珠项：蓝宝石（蓝色）、祖母绿（绿色）、火石榴石（橙色）。他喜欢颜色随机排列的设计 ![](img/1772db956b1b6830f9a15683dc55dea0_39_0.png) 以下是带有三个圆形的 SVG：
 
 ```xml
 <svg height="100">
@@ -591,7 +643,7 @@ CiaoCiao 长官想要送上一条由不同宝石组成的珍珠项：蓝宝石�
 
 # CiaoCiao 长官需要一个程序来输入从单独袭击中获取的数量
 
-这应该从命令行输入并进行累加。
+这应该从命令行输入并进行累加
 
 ## 任务
 
@@ -615,7 +667,7 @@ Sum: 14
 
 ## 任务
 
-- 使用以下行声明一个 0（包含）到 10（不包含）之间的变量 `t`：
+- 使用以下行声明一个 0（包含）到 10（不包含）之间的变量 t：
 
 ```java
 double t = Math.random() * 10;
@@ -673,7 +725,7 @@ for (int stars = 10; stars < 0; stars++) {
 n! = 1 × 2 × 3 × ... × (n-1) × n
 ```
 
-0! = 1。
+`0! = 1`。
 
 ## 任务
 
@@ -705,19 +757,31 @@ Jar Dumas 受 Bonny Brain 指令写出给定人数的所有可能排列方式。
 
 ## 示例
 
-- 数字是阶乘：
+### 数字是阶乘
+
+输入数字：
 
 ```
-输入数字：
 362880
+```
+
+输出：
+
+```
 362880=9!
 ```
 
-- 数字不是阶乘：
+### 数字不是阶乘
+
+输入数字：
 
 ```
-输入数字：
 1000
+```
+
+输出：
+
+```
 1000 不是阶乘
 ```
 
@@ -762,9 +826,9 @@ class Summe {
 
 将错误归入以下类型：
 
-1. 语法错误。
-2. 语义错误。
-3. 风格指南违规。
+- 1. 语法错误。
+- 2. 语义错误。
+- 3. 风格指南违规。
 
 # 嵌套循环中的风中旗 ★
 
@@ -856,12 +920,13 @@ Bonny Brain 喜欢海洋并想要一个带有图案的围巾。缝纫机可以�
 
 Ciao 翻阅《日报》发现了一个脑筋急转弯：
 
-| X | O | L |
-|---|---|---|
-| + | L | X |
-| = | T | T |
+| X O L |
+| + L X |
+| = T T |
 
 他必须为每个字母找到一个数字以使计算正确。奖品是一个旧指南针，Ciao 极其渴望赢得。
+
+## 任务
 
 - 开发一个程序通过尝试所有可能性来找到解决方案。
 - 输出所有解决方案，并指示哪些 `X`、`O`、`L`、`T` 都是不同的。
@@ -910,7 +975,7 @@ Bonny Brain 想要右对齐数字。为了实现这一点，需要在数字前�
 
 在过去，笨拙的水手们会以错误的角度升起桅杆。海盗可以有点歪斜，但桅杆最好像箭头一样直！
 
-如果你取一个三角形，它可以有各种形状。有锐角三角形、钝角三角形、等边三角形和直角三角形等。提醒一下，如果 $c^2 = a^2 + b^2$，则三角形为直角。
+提醒一下，如果 $c^2 = a^2 + b^2$，则三角形为直角。
 
 ## 任务
 
@@ -969,7 +1034,7 @@ Bonny Bari 为魔法公司（Magical Company）增添了活力。她现在销售
 
 # 罗马数字 ★
 
-数字系统是一种用于表示数字的符号系统。不同的文化和时期使用过不同的数字系统。例如罗马数字系统（MCMLXXIII 为 1973）和广为人知的阿拉伯数字系统（0, 1, 2, 3, 4, 5, 6, 7, 8, 9），后者在世界上大部分地区使用。
+数字系统是一种用于表示数字的符号系统。不同的文化和时期使用过不同的数字系统。例如罗马数字系统（`MCMLXXIII` 为 1973）和广为人知的阿拉伯数字系统（0, 1, 2, 3, 4, 5, 6, 7, 8, 9），后者在世界上大部分地区使用。
 
 罗马数字系统规定 1 到 999 的数字可以用单个符号表示。其构造如下：
 
@@ -981,7 +1046,7 @@ Bonny Bari 为魔法公司（Magical Company）增添了活力。她现在销售
 
 ## 示例
 
-- 对于 9394 可以生成以下 SVG：
+- 对于 `9394` 可以生成以下 SVG：
 
 ```svg
 <svg height="1400" width="1400">
@@ -1045,7 +1110,7 @@ Lothar Collat 在 1937 年定义了一个数字序列，现在被称为 Collat �
 7 -> 22 -> 11 -> 34 -> 17 -> 52 -> 26 -> 13 -> 40 -> 20 -> 10 -> 5 -> 8 -> 4 -> 2 -> 1
 ```
 
-每个序列都以 4, 2, 1 结束，但其是数学上的一个未解决问题。
+每个序列都以 `4, 2, 1` 结束，但其是数学上的一个未解决问题。
 
 ## 任务
 
@@ -1088,7 +1153,7 @@ Lothar Collat 在 1937 年定义了一个数字序列，现在被称为 Collat �
 
 # 罗马数字 ★
 
-数字系统是一种用于表示数字的符号系统。不同的文化和时期使用过不同的数字系统。例如罗马数字系统（MCMLXXIII 为1973）和广为人知的阿拉伯数字系统（0, 1, 2, 3, 4, 5, 6, 7, 8, 9），后者在世界上大部分地区使用。
+数字系统是一种用于表示数字的符号系统。不同的文化和时期使用过不同的数字系统。例如罗马数字系统（`MCMLXXIII` 为 1973）和广为人知的阿拉伯数字系统（0, 1, 2, 3, 4, 5, 6, 7, 8, 9），后者在世界上大部分地区使用。
 
 罗马数字系统规定 1 到 999 的数字可以用单个符号表示。其构造如下：
 
@@ -1157,17 +1222,18 @@ static boolean isRepdigit( long n ) {
 任务：
 
 - 该方法是如何工作的？
-- if 语句中的布尔表达式 `if ( ( n % 100 ) / 10 != n % 10 )` 可以重写为 `if ( n % 100 % 11 != 0 )`。为什么？
+- `if` 语句中的布尔表达式 `if ( ( n % 100 ) / 10 != n % 10 )` 可以重写为 `if ( n % 100 % 11 != 0 )`。
+- 为什么？
 
 # 计算 Collat 序列（递归） ★
 
-Lothar Collat 在 1937 年定义了一个数字序列，现在被称为 Collat 序列。它被定义为一种遵循数字 n 的映射：
+Lothar Collat 在 1937 年定义了一个数字序列，现在被称为 Collat 序列。它被定义为一种遵循数字 `n` 的映射：
 
-- 如果 n 是偶数，n -> n/2
-- 如果 n 是奇数，n -> 3n+1
+- 如果 `n` 是偶数，`n -> n/2`
+- 如果 `n` 是奇数，`n -> 3n+1`
 - 当达到 1 时，序列结束。
 
-如果我们从 n=7 开始，算法运行以下数字：
+如果我们从 `n=7` 开始，算法运行以下数字：
 
 - 7 -> 22 -> 11 -> 34 -> 17 -> 52 -> 26 -> 13 -> 40 -> 20 -> 10 -> 5 -> 8 -> 4 -> 2 -> 1
 
@@ -1215,7 +1281,7 @@ System.out.println( "<svg height='400' width='1000'>\n"
 
 练习的最后部分也是用转义序列解决的。除了 `\n`，转义序列 `\"` 在字符串中放入一个双引号。
 
-从 Java 15 开始，有了用于多行文本块（text blocks）。这允许另一种解决方案：
+从 Java 15 开始，有了用于多行文本块。这允许另一种解决方案：
 
 ```
 com/tutego/exercise/lang/SvgCircle4.java
@@ -1244,7 +1310,7 @@ System.out.print( "' cy='" );
 System.out.print( y );
 System.out.print( "' r='" );
 System.out.print( r );
-System.out.println( "' />\n</svg>" );
+System.out.println( "' />" );
 ```
 
 第一种解决方案简单地将常量和变量部分分为不同的 `System.out.println(...)` 和 `System.out.print(...)` 调用。
@@ -1271,11 +1337,11 @@ double r=20.5;
 
 System.out.printf("<svg height=\"100\" width=\"1000\">\n"
 +"<circle cx=\"%d\" cy=\"%d\" r=\"%s\" />\n"
-+"</svg>\"\n%n"
++"</svg>\"\n%n",
 x, y, r );
 ```
 
-此外，第三种解决方案产生了相同的范围，我们只使用了一个字符串方法和 `printf()` 方法。对于整数有两个 `%d`，我们使用 `%s` 格式化浮点数。这个占位符非常通用，可以用于所有数据类型。然后我们得到了英文表示形式，其中小数点由句点分隔，这是 SVG 规范中带小数点的浮点数的正确表示法。`%n`产生平台特定的行结束符，是它的替代方案。
+此外，第三种解决方案产生了相同的范围，我们只使用了一个字符串方法和 `printf()` 方法。对于整数有两个 `%d`，我们使用 `%s` 格式化浮点数。这个占位符非常通用，可以用于所有数据类型。然后我们得到了英文表示形式，其中小数点由句点分隔，这是 SVG 规范中带小数点的浮点数的正确表示法。`%n` 产生平台特定的行结束符，是它的替代方案。
 
 ## 测验：值范围
 
@@ -1385,8 +1451,10 @@ System.out.print( "' cy='" );
 System.out.print( y );
 System.out.print( "' r='" );
 System.out.print( r );
-System.out.println( "' />\n</svg>" );
+System.out.println( "' />" );
 ```
+
+## 42 Java 编程练习
 
 第一种解决方案简单地将常量和变量部分分为不同的 `System.out.println(...)` 和 `System.out.print(...)` 调用。
 
@@ -1412,13 +1480,13 @@ double r=20.5;
 
 System.out.printf("<svg height=\"100\" width=\"1000\">\n"
 +"<circle cx=\"%d\" cy=\"%d\" r=\"%s\" />\n"
-+"</svg>\"\n%n"
++"</svg>\"\n%n",
 x, y, r );
 ```
 
 
 
-# 过程式编程
+# 2 • 过程式编程
 
 ## 变量并输出它们的赋值
 
@@ -1506,8 +1574,6 @@ boolean hasCommonDigits = (number11 == number21) || (number12 == number22);
 System.out.println(hasCommonDigits);
 ```
 
-## Java 练习
-
 首先，我们读取两个数字，通过 `% 100` 确保数字不超过 100，而是按照规范要求正确地截断到 0 到 99 的范围。为了理解解决方案，让我们回到示例定义。我们有数字 12 和 31。我们如何处理？最终，我们必须测试 1 是否出现在 31 中，或者 2 是否出现在 31 中。在我们的情况下，我们需要测试 1 是否等于 3 或 2 是否等于 1。结果是 `true`。要将整个逻辑翻译成 Java 程序，我们需要提取第一位和第二位。这需要一些数学知识。如果我们将一个整数除以 10，它会切掉最后一位。如果我们将 12 除以 10，就得到 1。相反，我们使用取余运算符 `%` 来获取最后一位。因此，`12 % 10` 等于 2。我们可以创建四个变量，并测试是否在第二个数字中找到了第一个数字的数字。
 
 ## 将货币转换为硬币
@@ -1576,7 +1642,7 @@ if (tortsPayment >= minPayment && tortsPayment <= maxPayment) {
 }
 ```
 
-## 单位换算
+## 单位换算示例
 
 ```java
 else if ( value >= 0.1 )                // 1 l=100 ml
@@ -1667,7 +1733,7 @@ if (false)
 
 下一个条件用 `if(false)` 检查，意味着该块没有执行。这也意味着内部的 `else` 语句没有执行。因此，输出保持不变。
 
-## 练习：识别负数和小时（小时）
+## 练习：识别负数和小时
 
 为了回答这个问题，我们需要回顾两个 Java 特性。第一个是位或运算符 `|`，它执行 OR 运算。作为提醒，整数可以在脑中处理为位模式，如果其中一个位被设置，结果中的位也是 1。一个字节的示例：
 
@@ -1748,9 +1814,9 @@ switch (input) {
 
 ## 过程式编程
 
-在第二部分，循环通过角度增量完全推进了旋转变量。变量旋转从 0 度开始，当角度等于或超过 360 度时结束。循环条件并不测试迭代次数，而是测试是否在圆圈中“绕了一了一圈并再次回来”。在循环体内，构建并输出一个带有旋转值的 SVG 矩形。一个文本块很有帮助。否则，字符串将包含许多双引号。末尾的反斜杠使行继续。
+在第二部分，循环通过角度增量完全推进了旋转变量。变量旋转从 0 度开始，当角度等于或超过 360 度时结束。循环条件并不测试迭代次数，而是测试是否在圆圈中“绕了一圈并再次回来”。在循环体内，构建并输出一个带有旋转值的 SVG 矩形。一个文本块很有帮助。否则，字符串将包含许多双引号。末尾的反斜杠使行继续。
 
-## 创建 SVG 链（链）
+## 创建 SVG 链
 
 `com/tutego/exercise/lang/BonnyPears.java`
 
@@ -1764,7 +1830,7 @@ System.out.println(
 
 ## 从命令行计算数字和
 
-让我们两个解决方案。
+让我们看两个解决方案。
 
 `com/tutego/exercise/lang/SummingCalculator.java`
 
@@ -1801,16 +1867,15 @@ System.out.printf("Sum: %d\n", sum);
 
 这种变量的作用范围比需要的大并不理想。这是编程中人们想要避免的：局部变量的有效范围不应超出其使用它的范围。你希望仅在循环中使用的变量是有效的。一种解决方案当然是人为创建一个 `{ }` 块，但还有另一种变体。下面的表示法是否比双倍更好，取决于其复杂度也更高。
 
-`com/tutego/exercise/lang/SummingCalculator.java`
-
 ```java
 double t = Math.random() * 10;
 while (t > 0) {
   System.out.printf("%6s\n", Long.toBinaryString((long) t));
   if (t < 1) {
     t *= 2;
-  } else
+  } else {
     t--;
+  }
 }
 ```
 
@@ -1862,7 +1927,7 @@ if (n < 0) {
 | Long.MAX_VALUE | 9,223,372,036,854,775,807 |
 | 21! | 51,090,942,171,709,440,000 |
 
-...当数字无法继续相乘，因为它们已经超出了 `long` 的范围时，会抛出一个异常。
+...当数字无法继续相乘，因为它们已经超出了 long 的范围时，会抛出一个异常。
 
 ## 判断一个数字是否由阶乘组成
 
@@ -1900,7 +1965,7 @@ else {
 | 2 | 3 | 3 | 3 / 3 = 1 | 3 % 3 = 0 |
 | 3 | 1 | irrelevant | 1 % 4 ≠ 0 | |
 
-在第三步中，余数为 0，循环结束。
+在第三步中，余数不为 0，循环结束。
 
 变量 `number` 初始化为阶乘值，即最大值。我们重复地用该变量除以 `divisor`。我们这样做是为了在整数除法后没有余数。一个数字是否能被除除且没有余数，可以通过取模运算符来回答。如果 `% divisor` 等于 0，则除法结果没有余数。
 
@@ -1923,32 +1988,34 @@ for (long value = Math.abs(n); value != 0; value /= 10) {
 
 
 
-给定一个数字，可以是正数也可以负数。通过重复除法和计算余数的操作，我们逐位提取数字并更新局部变量：`largest` 之后应包含最大的数字值，`smallest` 包含最小的数字值。我们将 `largest` 初始化为 0，如果测试数字不等于 0，它在后续可能会变大。对于变量 `smallest` 中的最小数字，我们可以从 9 开始，如果 n 不为 0 则寻找一个更小的值。条件运算符恰好检查了这种情况：如果 n 为 0，则最小和最大的数字值也为 0。后面的循环也不会执行。
+给定一个数字，可以是正数也可以是负数。通过重复除法和计算余数的操作，我们逐位提取数字并更新局部变量：`largest` 之后应包含最大的数字值，`smallest` 包含最小的数字值。我们将 `largest` 初始化为 0，如果测试数字不等于 0，它在后续可能会变大。对于变量 `smallest` 中的最小数字，我们可以从 9 开始，如果 n 不为 0 则寻找一个更小的值。条件运算符恰好检查了这种情况：如果 n 为 0，则最小和最大的数字值也为 0。后面的循环也不会执行。
 
 正数和负数的处理方式相同，`Math.abs(...)` 将数字转换为正数。
 
 `abs(Integer.MIN_VALUE)` 等于 `Integer.MIN_VALUE` 是真的，所以结果仍然为负。程序没有检查这个特殊情况。
 
-由于我们不想在 for 循环中更改 `n` 的赋值（如果它是 `final`），我们引入一个新变量 `value`，其值为绝对值 `n`（不为0），然后执行方法体，其中取模运算符提取数字，然后根据需要调整变量 `largest` 和 `smallest`。循环结束后，`value` 被除以 10。如果结果不等于 0，则回到循环。如果结果为 0，则没有更多数字可以查看，循环终止，并在屏幕上输出最小和最大值。
+由于我们不想在 for 循环中更改 `n` 的赋值（如果它是 `final`），我们引入一个新变量 `value`，其值为绝对值 `n`（不为 0），然后执行方法体，其中取模运算符提取数字，然后根据需要调整变量 `largest` 和 `smallest`。循环结束后，`value` 被除以 10。如果结果不等于 0，则回到循环。如果结果为 0，则没有更多数字可以查看，循环终止，并在屏幕上输出最小和最大值。
 
 ## 测验：不是从 100 开始
 
 ```java
 class Sum { // 'Q' - 违反风格指南，应该使用英文
     private static int getSum() { // 前缀不利 - 倾向于违反风格指南
-    int j =0; // 代替 i
-    for (i=0; i<100; j++) { // 必须声明 - 语法错误
-        // 写了两次，而不是 ; - 语法错误
-        // 100 - 语法错误
-        // j 的 i - 语义错误
-        // 行尾的 ';' 是错误的 - 语义错误
-        j+=i // 应该放在前一行 - 风格指南
-        // return - 语义错误
-    }
+        int j = 0; // 代替 i
+        for (i = 0; i < 100; j++) { // 必须声明 - 语法错误
+            // 写了两次，而不是 ; - 语法错误
+            // 100 - 语法错误
+            // j 的 i - 语义错误
+            // 行尾的 ';' 是错误的 - 语义错误
+            j += i // 应该放在前一行 - 风格指南
+            // return - 语义错误
+        }
 
-public static void Main( String a ) { // 不能以此特定的方法开始启动 - 语义错误
-    // 必须包含数组 - 如果程序应该执行，则有语义错误
-    System.out.println( getSum() ); // 'S' 代替 's' - 语法错误
+        public static void Main(String a) { // 不能以此特定的方法开始启动 - 语义错误
+            // 必须包含数组 - 如果程序应该执行，则有语义错误
+            System.out.println(getSum()); // 'S' 代替 's' - 语法错误
+        }
+    }
 }
 ```
 
@@ -1957,23 +2024,23 @@ public static void Main( String a ) { // 不能以此特定的方法开始启动
 `com/tutego/exercise/lang/NestedLoops.java`
 
 ```java
-final int MAX=5;
+final int MAX = 5;
 
 // 正常输出
-for (int i=1; i<= MAX; i++) {
-    for (int j=1; j<=i; j++) {
-        System.out.print( i );
+for (int i = 1; i <= MAX; i++) {
+    for (int j = 1; j <= i; j++) {
+        System.out.print(i);
     }
     System.out.println();
 }
 
 // 居中输出
-for (int i=1; i<= MAX; i++) {
-    for (int indent=0; indent<(MAX - i); indent++) {
-        System.out.print( " ");
+for (int i = 1; i <= MAX; i++) {
+    for (int indent = 0; indent < (MAX - i); indent++) {
+        System.out.print(" ");
     }
-    for (int j=1; j<=i; j++) {
-        System.out.print( i );
+    for (int j = 1; j <= i; j++) {
+        System.out.print(i);
     }
     System.out.println();
 }
@@ -1987,16 +2054,16 @@ for (int i=1; i<= MAX; i++) {
 
 ```java
 System.out.print("Checkerboard width: ");
-int width=new java.util.Scanner(System.in).nextInt();
+int width = new java.util.Scanner(System.in).nextInt();
 
 System.out.print("Checkerboard height: ");
-int height=new java.util.Scanner(System.in).nextInt();
+int height = new java.util.Scanner(System.in).nextInt();
 
-for (int y=0; y<height; y++) {
-  for (int x=0; x<width; x++) {
-    System.out.print((x+y) % 2 == 1 ? '#' : '_');
-  }
-  System.out.println();
+for (int y = 0; y < height; y++) {
+    for (int x = 0; x < width; x++) {
+        System.out.print((x + y) % 2 == 1 ? '#' : '_');
+    }
+    System.out.println();
 }
 ```
 
@@ -2028,40 +2095,40 @@ for (int y=0; y<height; y++) {
 ```java
 com/tutego/exercise/lang/XmasTree.java
 
-int width=7;
+int width = 7;
 
-for ( int stars=1, indentation=(width - 1) / 2;
-     stars<=width;
-     stars+= 2, indentation-- ) {
+for (int stars = 1, indentation = (width - 1) / 2;
+     stars <= width;
+     stars += 2, indentation--) {
 
-  for ( int i=0; i<indentation; i++)
-    System.out.print(' ');
+    for (int i = 0; i < indentation; i++)
+        System.out.print(' ');
 
-  for ( int col=0; col<stars; col++)
-    System.out.print( Math.random()<0.9 ? '*' : ' ');
+    for (int col = 0; col < stars; col++)
+        System.out.print(Math.random() < 0.9 ? '*' : ' ');
 
-  System.out.println();
+    System.out.println();
 }
 ```
 
-变量 `width` 存储树的宽度，我们在示例中将其初始化为 7。循环声明了变量 `stars` 和 `indentation`，其中 `indentation` 是根据宽度的一半计算出的。我们将宽度 减去 1，这样如果宽度是奇数，我们就不会在前面多加一个空格。在主循环体内，还有两个循环用于创建行。在第一步，我们写入缩进；第二步，我们输出树的星号。有 90% 的概率输出星号，10% 的概率输出一个小写的 `o`。在行末尾，我们设置新行，循环继续。
+变量 `width` 存储树的宽度，我们在示例中将其初始化为 7。循环声明了变量 `stars` 和 `indentation`，其中 `indentation` 是根据宽度的一半计算出的。我们将宽度减去 1，这样如果宽度是奇数，我们就不会在前面多加一个空格。在主循环体内，还有两个循环用于创建行。在第一步，我们写入缩进；第二步，我们输出树的星号。有 90% 的概率输出星号，10% 的概率输出一个小写的 `o`。在行末尾，我们设置新行，循环继续。
 
 ## 绘制鱼形图案
 
 ```java
 com/tutego/exercise/lang/FishPattern.java
 
-int repetitions=3;
+int repetitions = 3;
 
-final String RIGHT_FISH="<";
-final String LEFT_FISH="<";
-final String SPACER=" ";
-for ( int row=0; row<repetitions; row++){
-  for ( int col=0; col<repetitions; col++)
-    System.out.print( RIGHT_FISH+SPACER);
-  for ( int col=0; col<repetitions; col++)
-    System.out.print( LEFT_FISH+SPACER);
-  System.out.println();
+final String RIGHT_FISH = "<";
+final String LEFT_FISH = "<";
+final String SPACER = " ";
+for (int row = 0; row < repetitions; row++) {
+    for (int col = 0; col < repetitions; col++)
+        System.out.print(RIGHT_FISH + SPACER);
+    for (int col = 0; col < repetitions; col++)
+        System.out.print(LEFT_FISH + SPACER);
+    System.out.println();
 }
 ```
 
@@ -2075,11 +2142,11 @@ for ( int row=0; row<repetitions; row++){
 
 ```java
 com/tutego/exercise/lang/FishPattern.java
-for ( int row=0; row<repetitions; row++)
-for ( int col=0; col<repetitions * 2; col++) {
-  System.out.print(col < repetitions ? RIGHT_FISH : LEFT_FISH);
-  System.out.print(col == repetitions * 2 - 1 ? SPACER : "\n");
-}
+for (int row = 0; row < repetitions; row++)
+    for (int col = 0; col < repetitions * 2; col++) {
+        System.out.print(col < repetitions ? RIGHT_FISH : LEFT_FISH);
+        System.out.print(col == repetitions * 2 - 1 ? SPACER : "\n");
+    }
 ```
 
 与其运行两个 `repetitions` 次循环，一个循环也可以运行 `2 * repetitions` 次；这样只需要在循环体中决定打印右鱼还是左鱼即可。这个信息由循环计数器本身提供：如果它小于一半，鱼就向右游，在后半部分切换到向左。这里第二次使用了条件运算符。通过测试检查循环计数器是否为最后一个元素：如果不是，则输出空格，否则换行。第一种变在阅读时会更容易理解。
@@ -2088,26 +2155,26 @@ for ( int col=0; col<repetitions * 2; col++) {
 
 ```java
 com/tutego/exercise/lang/XXLLOZlt.java
-for ( int l=0; l<10; l++) {
-  for ( int o=0; o<10; o++) {
-    for ( int x=0; x<10; x++) {
-      for ( int t=0; t<10; t++) {
-        int xxl1=100 * x*10 + o*1;
-        int lxx1=100 * l*10 + x*x;
-        int ttl1=100 * t*10 + l*t;
+for (int l = 0; l < 10; l++) {
+    for (int o = 0; o < 10; o++) {
+        for (int x = 0; x < 10; x++) {
+            for (int t = 0; t < 10; t++) {
+                int xxl1 = 100 * x * 10 + o * 1;
+                int lxx1 = 100 * l * 10 + x * x;
+                int ttl1 = 100 * t * 10 + l * t;
 
-        if ( col1+lxx1 == ttl1 ) {
-          if ( (l != o) && (l != t) &&
-              (o != x) && (o != t) && (x != t) ) {
-            System.out.printf("All variables are different: ");
-          }
+                if (col1 + lxx1 == ttl1) {
+                    if ((l != o) && (l != t) &&
+                        (o != x) && (o != t) && (x != t)) {
+                        System.out.printf("All variables are different: ");
+                    }
 
-          System.out.printf("%l=%d, o=%d, x=%d, t=%d\n", l, o, x, t);
-        }
-      }
-    } // end for t
-  } // end for x
-  } // end for o
+                    System.out.printf("%l=%d, o=%d, x=%d, t=%d\n", l, o, x, t);
+                }
+            }
+        } // end for t
+    } // end for x
+    } // end for o
 } // end for l
 ```
 
@@ -2128,85 +2195,84 @@ System.out.println(12); // 2
 
 ```java
 com/tutego/exercise/lang/NumberOfDigits.java
-int digits=1;
-for ( int number=10; number!=0; number /= 10 )
-digits++;
+int digits = 1;
+for (int number = 10; number != 0; number /= 10)
+    digits++;
 ```
 
 `int` 类型最多有 10 位。所以我们也可以通过 10 来循环：
 
 ```java
 com/tutego/exercise/lang/NumberOfDigits.java
-int digits=1;
-for ( int powersOfTen=10; powersOfTen<=n; powersOfTen *= 10 )
-digits++;
+int digits = 1;
+for (int powersOfTen = 10; powersOfTen <= n; powersOfTen *= 10)
+    digits++;
 ```
 
 如果 `int` 乘以 10 可能会溢出。方案 4 也是了 10：
 
 ```java
 com/tutego/exercise/lang/NumberOfDigits.java
-int digits=1;
-for ( int powersOfTen=10; powersOfTen<=n; powersOfTen *= 10 )
-digits++;
+int digits = 1;
+for (int powersOfTen = 10; powersOfTen <= n; powersOfTen *= 10)
+    digits++;
 ```
 
 方案 5 使用了除法，这在性能上是可接受的。
 
 ```java
 com/tutego/exercise/lang/NumberOfDigits.java
-int digits=1;
-for ( int powersOfTen=10; powersOfTen<=n; powersOfTen *= 10 )
-digits++;
+int digits = 1;
+for (int powersOfTen = 10; powersOfTen <= n; powersOfTen *= 10)
+    digits++;
 ```
 
 方案 6 使用了二分查找的思想：
 
 ```java
 com/tutego/exercise/lang/NumberOfDigits.java
-int digits=1;
-for ( int powersOfTen=10; powersOfTen<=n; powersOfTen *= 10 )
-digits++;
+int digits = 1;
+for (int powersOfTen = 10; powersOfTen <= n; powersOfTen *= 10)
+    digits++;
 ```
 
 方案 7 使用了二分查找：
 
 ```java
 com/tutego/exercise/lang/NumberOfDigits.java
-int digits=1;
-for ( int powersOfTen=10; powersOfTen<=n; powersOfTen *= 10 )
-digits++;
+int digits = 1;
+for (int powersOfTen = 10; powersOfTen <= n; powersOfTen *= 10)
+    digits++;
 ```
 
 方案 8 使用了嵌套条件运算符：
 
 ```java
 com/tutego/exercise/lang/NumberOfDigits.java
-if ( n >= 10000 ) {
-  if ( n >= 1000000 ) {
-    if ( n >= 1000000000 )
-      System.out.println( 10 );
+if (n >= 10000) {
+    if (n >= 1000000) {
+        if (n >= 1000000000)
+            System.out.println(10);
+        else
+            System.out.println(9);
+    } else
+        System.out.println(8);
+} else if (n >= 1000) {
+    if (n >= 10000000)
+        System.out.println(7);
     else
-      System.out.println( 9 );
-  }
-  else
-    System.out.println( 8 );
-} else if ( n >= 1000 ) {
-  if ( n >= 10000000 )
-    System.out.println( 7 );
-  else
-    System.out.println( 6 );
+        System.out.println(6);
 } else {
-    System.out.println( 5 );
-} else if ( n >= 100 ) {
-  if ( n >= 1000 )
-    System.out.println( 4 );
-  else
-    System.out.println( 3 );
-} else if ( n >= 10 )
-  System.out.println( 2 );
+    System.out.println(5);
+} else if (n >= 100) {
+    if (n >= 1000)
+        System.out.println(4);
+    else
+        System.out.println(3);
+} else if (n >= 10)
+    System.out.println(2);
 else
-  System.out.println( 1 );
+    System.out.println(1);
 ```
 
 对于 `int` 类型，最多有 10 位。所以我们首先查询数字是否多于或少于 5 位，即大于 10,000。如果数字较小，我们取 5 位的一半，即 3 位，并询问值是否大于或小于 100。如果值大于 10,000，我们计算 5 位和 10 位之间的算术平均值，即 8 位，因此我们硬编码了从 1 位到 10 位的所有优点和缺点。这种过程的优点是比较是预先好的；而二分查找的运行时间是对数级的。缺点可能是算法不考虑数字范围。如果知道小数字出现的概率更高，那么我们可以对算法进行不同的处理。这就是方案 4 的做法。它处理了多个嵌套的条件运算符并偏向小数字。数字越大，需要的比较就越多。
@@ -2237,8 +2303,8 @@ $\log_{10}(10)=x$
 ```java
 com/tutego/exercise/lang/NumberOfDigits.java
 
-int digits = n > 0 ? (int) Math.log10( n ) + 1 : 0;
-System.out.println( digits );
+int digits = n > 0 ? (int) Math.log10(n) + 1 : 0;
+System.out.println(digits);
 ```
 
 对于 0 到 1 之间的数字，对数的结果是负数。从右侧趋于 0 时，函数值趋于负无穷。因此，我们将 0 视为一个特殊情况并返回 1 位。
@@ -2249,7 +2315,7 @@ System.out.println( digits );
 com/tutego/exercise/lang/LinePrinter.java
 
 public static void line() {
-    System.out.print( "************" );
+    System.out.print("************");
 }
 ```
 
@@ -2339,10 +2405,10 @@ public static boolean isRightTriangle(double a, double b, double c) {
 
 | 位置 | 位置 | 跨越 X 轴镜像 | 跨越 Y 轴镜像 |
 |---|---|---|---|
-| 右上 | 右上 | 否 | 否 |
-| 左上 | 左上 | 是 | 否 |
-| 右下 | 右下 | 否 | 是 |
-| 左下 | 左下 | 是 | 是 |
+| _X | 右上 | 否 | 否 |
+| _X | 左上 | 是 | 否 |
+| _X | 右下 | 否 | 是 |
+| _X | 左下 | 是 | 是 |
 
 这使得需要绘制的所有线条减少为绘制四个象限和线条的反射。
 
@@ -2355,37 +2421,35 @@ static void printCistercianDigit(int value, int x, int y, int size) {
   // top left corner
   printQuadrant((value / 10) % 10, x, y, size, true, false);
   // bottom right corner
-  printQuadrant((value / 100) % 10, x, y, size, false, true);
+  printQuadrant(value / 100) % 10, x, y, size, false, true);
   // bottom left corner
-  printQuadrant((value / 1000) % 10, x, y, size, true, true);
+  printQuadrant(value / 1000) % 10, x, y, size, true, true);
 }
 ```
 
 方法 `printCistercianDigit(...)` 被用于四位数，并带有起始坐标和尺寸，该尺寸代表绘制线条的小框的维度。中间的线被放置，四个象限由一个单独的方法处理。中心点的 x/y 坐标以及尺寸不会改变，改变的只有传递的两个布尔值，它们代表反射。
 
-一个象限就足以描述不同的场景，而不是为每种情况勾画单独象限。虽然可以为每个场景仅包含必要的线条，但存在可以利用的迷人关联。任何大于六的数字右侧都有条线。例如，7 是 6 和 1 的组合，8 是 6 和 2 的组合，而 9 是 7 和 2 的混合。同样，5 是 1 和 4 的结合。这种关联与二进制模式有关，合并后产生更高的值。
+一个象限就足以描述不同的场景，而不是为每种情况勾画单独象限。虽然可以为每个场景仅包含必要的线条，但存在可以利用的迷人关联。任何大于六的数字右侧都有条线。例如，7 是 6 和 1 的组合，8 是 6 和 2 的组合，而9 是 7 和 2 的混合。同样，5 是 1 和 4 的结合。这种关联与二进制模式有关，合并后产生更高的值。
 
 建议的解决方案没有使用这个属性，而是使用了更简单的方法：从 1 到 9 的每个数字在某些都有线条。case 语句可以放置每个数字的线条。这就是 `printQuadrant(...)` 的实现方式：
 
 ```
 com/tutego/exercise/CisterianDigits.java
 public static void printQuadrant(int value, int x, int y, int size,
-boolean mirroredX, boolean mirroredY ) {
-  int dx = mirroredX ? -size : size;
-  int dy = mirroredY ? -size : size;
-  y += -0.5 * dy;
+int dx=mirroredX -size; boolean mirroredX, boolean mirroredY ) {
+  int dy=mirroredY -size;
+  y = -0.5 * dy;
 
   switch ( value ) {
-    case 1, 5, 7, 9 -> printSVGLine(x, y, 0, -dy, dx, -dy);
+  case 1, 5, 7, 9 ->printSVGLine(x, y, 0, -dy, dx, -dy);
   }
   switch ( value ) {
-    case 2, 8, 9 -> printSVGLine(x, y, 0, dx, 0);
+  case 2, 8, 9 ->printSVGLine(x, y, 0, dx, 0);
   }
   switch ( value ) {
-    case 3 -> printSVGLine(x, y, 0, -dy, dx, 0);
-    case 4, 5 -> printSVGLine(x, y, 0, -dy);
-    case 6, 7, 8, 9 -> printSVGLine(x, y, 0, dx, dx, 0);
-  }
+  case 3 ->printSVGLine(x, y, 0, -dy, dx, 0);
+  case 4, 5 ->printSVGLine(x, y, 0, -dy);
+  case 6, 7, 8, 9 ->printSVGLine(x, y, 0, dx, dx, 0);
 }
 ```
 
@@ -2394,9 +2458,9 @@ boolean mirroredX, boolean mirroredY ) {
 ```
 com/tutego/exercise/CisterianDigits.java
 public static void main(String[] args ) {
-  final int SIZE = 10;
-  final int startX = 20;
-  final int startY = 20;
+  final int SIZE=10;
+  final int startX=20;
+  final int startY=20;
   System.out.println("
   <svg height=\"400\" width=\"400\">
     <g style=\"grey;line-cap:round;stroke-width:2\">
@@ -2404,10 +2468,10 @@ public static void main(String[] args ) {
     </g>
   </svg>");
 
-  int value = 1;
-  for (int i = 0; i <= 4; i++) {
-    for (int j = 0; j <= 4; j++) {
-      printCistercianDigit(value, startX + (i * 40), startY + (j * 40), SIZE);
+  int value=1;
+  for (int i=0; i <= 4; i++) {
+    for (int j=0; j <= 4; j++) {
+      printCistercianDigit(value, startX(i * 40), startY(j * 40), SIZE);
       value++;
     }
   }
@@ -2422,7 +2486,7 @@ public static void main(String[] args ) {
 
 ```java
 static long f(long value ) {
-    return value == 0 ? 0 : (value % 10) + f(value / 10);
+    return value == 0 ? 0 : (value / 10));
 }
 ```
 
@@ -2449,13 +2513,12 @@ static long f(long value ) {
 ```java
 static boolean isRepdigit( long n ) {
     if ( ( n % 100 ) / 10 != n % 10 )
-        return n < 10;
+        return n<10;
     return isRepdigit( n / 10 );
 }
 ```
 
 - 递归调用将传递的数字除以 10，截断了末尾数字并使其变小。
-
 - 重复的调用随后使数字足够小，以至于递归调用必须终止。这由条件负责。
 
 表达式 `(n % 100) / 10` 返回数字的第二位（从右侧），当两个数字相等时，`if` 语句不进入体并除以 10 继续递归。如果最后两个数字不等，并不自动意味着该数字不是 repdigit，但如果只剩一位，即数字小于 10，那么它是正确的。当我们有两个相等的数字时，它就不再是 repdigit。
@@ -2475,7 +2538,7 @@ static boolean isRepdigit( long n ) {
 | 66 | 0 | true |
 | 77 | 0 | true |
 | 88 | 0 | true |
-| 99 | 0 | true |
+| 99 | 1 | false |
 | 89 | 1 | false |
 
 ## 74 Java 编程练习
@@ -2504,12 +2567,10 @@ static long collatzMax( long n ) {
 
 ```java
 static long collatz( long n, long max ) {
-  if ( n == 1) {
-    return max;
-  }
-  if ( n % 2 == 0)
-    return collatz( n / 2, Math.max( n, max ) );
-  return collatz(3 * n + 1, Math.max( n, max ) );
+  if ( n < 1) {
+    if ( n % 2 == 0)
+      return collatz( n / 2, Math.max( n, max ) );
+    return collatz(3 * n + 1, Math.max( n, max ) );
 }
 ```
 
@@ -2524,7 +2585,7 @@ public static void main( String[] args ) {
 }
 ```
 
-我们编写了方法 `collatz(long)` 并假设一个整数 `n`。如果 `n` 大于 1，我们需要重复操作；如果 `n=1` 则终止。为了判断数字是偶数还是奇数，我们使用取余运算符。如果数字是偶数，将其除以 2；否则，将该数字乘以 3 并加 1。`n /= 2` 是 `n = n / 2` 的简写。我们不能简写为 `n *= 3 * n + 1`，不仅是因为可读性会变差，还因为 `n *= 3+1` 会变成 `n = n * (3+1)`。
+我们编写了方法 `collatz(long)` 并假设一个整数 `n`。如果 `n` 大于 1，我们需要重复操作；如果 `n=1` 则终止。为了判断数字是偶数还是奇数，我们使用取余运算符。如果数字是偶数，将其除以 2；否则，将该数字乘以 3 并加 1。`n /= 2` 是 `n /= 2` 的简写。我们不能简写为 `n *= 3 * n + 1`，不仅是因为可读性会变差，还因为 `n *= 3+1` 会变成 `n=n (3+1)`。
 
 如果我们想确定最大值，算法与上一个几乎相同。唯一的区别在于变量 `max` 的声明。在开始时，`max` 使用传入的参数初始化，并在循环期间可能会被更新。由于除以 2 得到的是较小的值，我们不需要调整 `max`。但在循环过程中，如果数字通过乘以 3 增加了，我们在必要时更新该变量。
 
@@ -2607,8 +2668,8 @@ static int obfuscatedMultiply(int a, int b) {
 5. 为神秘的百慕大三角创建一个三角形。坐标范围保持在 0 到 50 之间。
 6. 如果船的位置是一个点，你如何判断所选点是否在三角形内部？
 7. 创建两个针对 `0<=x<50` 和 `0<=y<50` 的嵌套循环，创建一个矩形网格。在循环体中测试：
-    - 如果 x 坐标击中虚拟屏幕边缘，打印一个彩虹字符（RAINBOW）。
-    - 如果 x-y 坐标是多边形内部的一个点，输出一个章鱼（OCTOPUS），否则输出一个木头字符（FOG）。
+    - 如果 x 坐标击中虚拟屏幕边缘，打印一个彩虹字符（`RAINBOW`）。
+    - 如果 x-y 坐标是多边形内部的一个点，输出一个章鱼（`OCTOPUS`），否则输出一个木头字符（`FOG`）。
 
 从 Java 9 开始引入了模块系统。默认情况下，仅包含 `java.base` 模块中的类型，其中不包含 GUI（图形用户界面）类型。AWT（抽象窗口工具包）类型属于桌面模块 `java.desktop`。如果你使用模块（在应用程序的主目录下存在 `module-info.java` 文件），则必须包含 `java.desktop` 模块：
 
@@ -2716,7 +2777,7 @@ public class EqualsOperatorOrMethod {
 
 ## 建议方案
 
-com/tutego/exercise/oop/BermudaTriangle.java
+`com/tutego/exercise/oop/BermudaTriangle.java`
 
 ```java
 import java.awt.Polygon;
@@ -2813,8 +2874,8 @@ if (Objects.requireNonNull(string) != null)
 
 ## 注意
 
-- https://docs.oracle.com/javase/specs/jls/index.html
-- https://docs.oracle.com/javase/specs/jls/index.html
+- <https://docs.oracle.com/javase/specs/jls/index.html>
+- <https://docs.oracle.com/javase/specs/jls/index.html>
 
 ## 数组
 
@@ -2878,7 +2939,7 @@ Ciao 长在海上航行，风从四面八方来。他必须时刻记住风速和
 
 示例：
 
-- 例如，如果 `windSpeed` 包含 {82, 70}，而 `windDirection` 包含 {12, 266}，则输出应该是：风速 82 km/h，风向 12°；风速 70 km/h，风向 266°。
+- 例如，如果 `windSpeed` 包含 `{82, 70}`，而 `windDirection` 包含 `{12, 266}`，则输出应该是：风速 82 km/h，风向 12°；风速 70 km/h，风向 266°。
 
 # 检测连续收入增长
 
@@ -2929,15 +2990,15 @@ Ciao 观察经过船只的旗帜，因为他在等待 Salty Snook。他查看每
 示例：
 
 ```java
-String[] signs1 = {"F", "DO", "MOS", "MOS", "MOS", "MOS", "WES"};
+String[] signs1 = {"F", "DO", "MOS", "MOS", "MOS", "MOS", "WES" };
 System.out.println(isProbablyApproaching(signs1)); // true
 ```
 
 
 
-```
-String[] signs2 = {"F", "DO", "MOS", "MOS", "WES", "MOS", "MOS"};
-System.out.println(isProbablyApproaching(signs2)); // false
+```java
+String[] signs2={"F", "DO", "MOS", "MOS", "WES", "MOS", "MOS" };
+System.out.println(isProbablyApproaching( signs2 ) ); // false
 ```
 
 ## 反转数组
@@ -2950,7 +3011,7 @@ Charlie Creevey 为 C 队长负责财务。然而，他并不是按升序排列�
 
   ```java
   public static void reverse(double[] numbers) {
-      // TODO
+  // TODO
   }
   ```
 
@@ -2961,13 +3022,16 @@ Charlie Creevey 为 C 队长负责财务。然而，他并不是按升序排列�
 示例：
 
 - `{ }` -> `{ }`
+
 - `{1}` -> `{1}`
+
 - `{1, 2}` -> `{2, 1}`
+
 - `{1, 2, 3}` -> `{3, 2, 1}`
 
 大括号中的表示纯是符号性的。
 
-## 寻找最近的电影院 ★★
+# 寻找最近的电影院 ★★
 
 `java.awt.Point` 类表示具有 x/y 坐标的点。这种数据类型非常适合表示位置。新电影《海盗之旗》（Under the flag of the buccaneers）正在电影院上映，恰恰奥队长（Captain ChaoCiao）必须看它。但最近的电影院在哪里呢？
 
@@ -2975,7 +3039,7 @@ Charlie Creevey 为 C 队长负责财务。然而，他并不是按升序排列�
 
 - 给定一个对象数组 `points`，其中包含电影院的位置。
 
-  `Point[] points = {new Point(10, 20), new Point(12, 2), new Point(44, 4)};`
+  `Point[] points={new Point(10, 20), new Point(12, 2), new Point(44, 4)};`
 
 - 编写一个方法 `minDist(Point[] points, int size)`，返回距离原点最近的点的距离。通过 `size` 我们可以指定应该考虑多少个数组元素，允许数组在理论上可以更大。
 
@@ -2985,12 +3049,12 @@ Charlie Creevey 为 C 队长负责财务。然而，他并不是按升序排列�
 
 检查 `java.awt.Point` 的 Javadoc，查看该点是否可以计算与其他坐标的距离。
 
-## 抢劫糖果店并公平分配 ★★
+# 抢劫糖果店并公平分配 ★★
 
 恰恰队长和他的孩子 Junior 和 Jackie 正在抢劫一家糖果店。糖果陈列在一个长架子上，每个物品都标有重量。这些信息以数组的形式给出：
 
 ```java
-int[] values = {10, 20, 30, 40, 50};
+int[] values={10, 20, 30, 40, 50 };
 ```
 
 Junior 和 Jackie 分位于架子的两端，一个在左边，一个在右边，但恰恰队长同样爱这两个孩子，他们最终拿的数量应该相同。恰恰队长指向架子上的糖果，它左侧的所有产品都给 Junior，该位置右侧的所有产品（包括显示的）都给 Jackie。
@@ -3000,8 +3064,8 @@ Junior 和 Jackie 分位于架子的两端，一个在左边，一个在右边�
 ```java
 private static int relativeDifference(int a, int b) {
     if (a == b) return 0;
-    int absoluteDifference = Math.abs(a - b);
-    return (int) (100. * absoluteDifference / Math.max(a, b));
+    int absoluteDifference=Math.abs(a - b);
+    return (int)100. * absoluteDifference / Math.max(a, b);
 }
 ```
 
@@ -3016,13 +3080,14 @@ private static int relativeDifference(int a, int b) {
 示例：
 
 - `10+20+30+40=50`，因为 `100=90`，返回的索引为 4。
+
 - `10 20 30 40` 结果为 -1，因为没有有效的划分。
 
-## 增强型 for 循环
+# 增强型 for 循环
 
 如果需要从第一个元素开始遍历数组，可以使用带有隐藏循环计数器的增强型 for 循环。这可以节省代码。在以下任务中，某些地方可以使用扩展 for 循环。
 
-## 乱序的数字 ★★
+# 乱序的数字 ★★
 
 Bonny Brain 的牌组中有五颗数字为 1 到 6 的游戏骰子。经过有力的摇晃和巨大的投掷，骰子会像战利箱里的宝藏一样洒在桌子上，向所有人展示它们注命的数字。
 
@@ -3031,25 +3096,38 @@ Bonny Brain 的牌组中有五颗数字为 1 到 6 的游戏骰子。经过有�
 任务：
 
 - 编写一个方法 `int[] shuffleDice()`，返回一个包含 1 到 6 之间随机数的数组。
+
 - 编写一个方法 `isHomogeneous(int[] values)`，测试数组中的所有值是否相等。（homogeneous 的意思是均匀/相似/相等）。原则上，数组可以是任意大小。
-- 编写一个方法 `int[] occurrences(int[] values)`，返回一个长度为 6 的新数组，指示每个数字出现的次数。
+
+- 编写一个方法 `int occurrences(int[] values)`，返回一个长度为 6 的新数组，指示每个数字出现的次数。
+
 - 编写一个方法 `isFullHouse(int[] values)`，检查是否有三个骰子具有相同的值且另外两个骰子具有相同的值。例如，`[1, 1, 1, 2, 2]` 就是这种情况。
-- 编写一个方法 `printDiceValues(int[] points)`，按如下方式将骰子数字写入屏幕：
+
+- 编写一个方法 `printDiceValues(int points)`，按如下方式将骰子数字写入屏幕：
+
   - 数字按升序排序。
+
   - 数字分组在一起。
-  - 屏幕上不要使用相同的符号，而是使用 Unicode 符号 ☐ (Unicode U+2680)、⚁ (U+2681)、⚂ (U+2682)、⚃ (U+2683)、⚄ (U+2684)、⚅ (U+2685)。
+
+  - 屏幕上不要使用相同的符号，而是使用 Unicode 符号 ☐ (Unicode U+2680)、⊟ (U+2682)、☑ (U+2683)、☒ (U+2684)、괘 (U+2685)。
+
 - 假设数组值是正确的。
 
 示例：
 
-- `isHomogeneous(new int[]{1, 1, 1, 1, 1})` 返回 `true`。
-- `isHomogeneous(new int[]{1, 2, 3, 4, 5})` 返回 `false`。
-- `occurrences(new int[]{1, 1, 1, 2, 2})` 返回一个数组，逻辑上是 `[3, 2, 0, 0, 0, 0]`。
-- `isFullHouse(new int[]{1, 1, 1, 2, 2})` 返回 `true`。
-- `isFullHouse(new int[]{1, 1, 2, 2, 3})` 返回 `false`。
-- `printDiceValues(new int[]{1, 1, 1, 2, 2})` 输出对应的 Unicode 符号。
+- `isHomogeneous(new int[]{1, 1, 1, 1, 1})` 返回 true。
 
-## 绘制山脉 ★★
+- `isHomogeneous(new int[]{1, 2, 3, 4, 5})` 返回 false。
+
+- `occurrences(new int[]{1, 1, 1, 2, 2})` 返回一个数组，逻辑上是 `[3,2]`。
+
+- `isFullHouse(new int[]{1, 1, 1, 2, 2})` 返回 true。
+
+- `isFullHouse(new int[]{1, 1, 2, 2, 3})` 返回 false。
+
+- `printDiceValues(new int[]{1, 1, 1, 2, 2})` 返回 false。
+
+# 绘制山脉 ★★
 
 为了即将到来的旅行，Bonny Brain 和她的团队必须穿越山脉。在出发之前，她获得了海拔数据并希望获得地形的预览。
 
@@ -3058,24 +3136,22 @@ Bonny Brain 的牌组中有五颗数字为 1 到 6 的游戏骰子。经过有�
 任务：
 
 - 编写一个方法 `printMountain(int[] altitudes)`，将海拔转换为 ASCII 表示。
+
 - 高度可以是任意的。
-- 使用符号 `/`、`\`、`^`。
 
-示例：
+- 使用符号 `/`、`-`、`^`。
 
 ```
+5
     ^
-   / \
-  /   \
- /     \
-/       \
+4
 ```
 
-## 二维数组
+# 二数组
 
 数组可以包含其他数组，这就是如何定义多维数组的。
 
-## 检查数独是否有效
+# 检查数独是否有效
 
 由于玩数独很费力，Bonny Brain 需要参与其中。数独游戏由 9x9 的网格组成。该网格可以被分为九块，在每个这些块中，1 到 9 的数字必须出现一次。
 
@@ -3083,26 +3159,23 @@ Bonny Brain 的牌组中有五颗数字为 1 到 6 的游戏骰子。经过有�
 
 任务：
 
-- 编写一个程序测试二维数组中的 1 到 9 的数字是否都出现。
+- 编写一个程序测试二维数组中的1 到 9 的数字是否都出现。
+
 - 缺失的元素需要报告。
 
 示例：
 
-- 下列数组是有效的数独（3x3 示例）：
+- 下列数组是有效的数独：
 
-  ```java
-  int[][] array = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
-  ```
+  `int[][] array={ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };`
 
 - 下列数组不是有效的数独：
 
-  ```java
-  int[][] array = { {1, 2, 3}, {4, 5, 6}, {7, 8, 8} };
-  ```
+  `int[][] array={ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 8 } };`
 
 错误可能报告为：缺失 9。
 
-## 放大恰恰队长 ★★
+# 放大恰恰队长 ★★
 
 恰恰队长正在寻找单眼 Billy 的宝藏。宝藏地图太小了，他的眼睛越来越花了。
 
@@ -3113,31 +3186,32 @@ Bonny Brain 的牌组中有五颗数字为 1 到 6 的游戏骰子。经过有�
 任务：
 
 - 给定一个值为 0 到 255 的二维整数数组，该数组在心理上表示一张灰度图像。
+
 - 编写一个方法 `int[][] magnify(int[][] array, int factor)`，返回一个新数组并按给定因子放大图像。因此，一个大小为 2×3 的图像和因子 2 变成一个 4×6 的图像。图像像素简单地双倍，不需要插值。
 
 示例：
 
 - 假设有数组：
 
-  ```java
-  { {1, 2, 3},
-    {4, 5, 6} }
-  ```
+  `{ 1, 2, 3 },`
 
-- 那么在双倍后，结果如下：
+  `{ 4, 5, 6 }`
 
-  ```java
-  { {1, 1, 2, 2, 3, 3},
-    {1, 1, 2, 2, 3, 3},
-    {4, 4, 5, 5, 6, 6},
-    {4, 4, 5, 5, 6, 6} }
-  ```
+- 那么在双倍后，后续如下：
 
-## 变长参数列表
+  `{ 1, 1, 2, 2, 3, 3 },`
+
+  `{ 1, 1, 2, 2, 3, 3 },`
+
+  `{ 4, 4, 5, 5, 6, 6 },`
+
+  `{ 4, 4, 5, 5, 6, 6 }`
+
+# 变长参数列表
 
 Java 允许向方法传递任意数量的参数。这些方法被称为变长参数方法（vararg methods）。变长参数只能出现在参数列表的末尾，并且它是一个数组。当使用变长参数调用方法时，编译器会自动创建一个新的匿名数组并将其传递给该方法。
 
-## 使用变数量坐标创建 SVG 多边形 ★
+# 使用变数量坐标创建 SVG 多边形 ★
 
 Bonny Brain 想要为她的下一份工作画一张地图，这幅地图在打印和任何分辨率下都应该保持美观，因为每一个细节都关重要。实现此点的最佳技术是 SVG。
 
@@ -3150,56 +3224,64 @@ Bonny Brain 想要为她的下一份工作画一张地图，这幅地图在打�
 任务：
 
 - 声明一个 Java 方法 `printSvgPolygon(...)` 以传递任意数量的坐标对。传递这些坐标时可能会出现哪些错误？
+
 - 该方法应根据传递的对在屏幕上打印对应的 SVG 输出。
 
 示例：
 
-- 在 `printSvgPolygon(200, 10, 250, 190, 160, 210)` 中，`200,10` 是一个坐标对，`250,190` 也是，`160,210` 也是。屏幕输出应该是：`<polygon points="200,10 250,190 160,210" />`。
+- 在 `printSvgPolygon( 200, 10, 250, 190, 160, 210 )` 中，`200,10` 是一个坐标对，`250,190` 也是，`160,210` 也是。屏幕输出应该是：`<polygon points="200,10 250,190 160,210" />`。
 
 可选：学习 https://tutego.go/trysvgpolygon 中的示例。将生成的 SVG 复制到网页界面。
 
-## 检查审批 ★
+# 检查审批 ★
 
-Captain CiaoCiao 正在获取船员关于一个订单的反馈。所有成员都可以投票赞成或反对。
-
-任务：
+Captain CiaoCiao 正在获取船员关于一个订单的反馈。所有成员都可以投票赞成或反对。任务：
 
 - 我们正在寻找一个变长方法 `allTrue(...)`，它可以接受任意数量的布尔值，但调用时必须包含一个参数。
-- 如果所有参数都为 `true`，则返回 `true`；如果其中一个布尔值为 `false`，则方法应返回 `false`。
-- 由于变长参数在内部是一个数组，可能会传递 `null`——这必须导致异常。
+
+- 如果所有参数都为 true，则返回 true；如果其中一个布尔值为 false，则方法应返回 false。
+
+- 由于变长参数在内部是一个数组，可能会传递 null——这必须导致异常。
 
 示例：
 
-- `allTrue(true, true, true)` 返回 `true`。
-- `allTrue(true)` 返回 `true`。
-- `allTrue(true, false)` 返回 `false`。
+- `allTrue(true, true, true)` 返回 false。
+
+- `allTrue(true)` 返回 true。
+
+- `allTrue(true, false)` 返回 false。
+
 - `allTrue(true, null)` 抛出异常。
+
 - `allTrue()` 无法编译并会产生编译器错误。
 
-## 救命，四恐症！把所有数字 4 放在最后 ★★★
+# 救命，四恐症！把所有数字 4 放在最后 ★★★
 
 Bonny Brain 在香港结识了一些海盗，发现许多人患有四恐症，对数字 4 抱有迷信的恐惧。会计现在必须将所有包含 4 的数字放在最后。
 
 ![](img/1772db956b1b6830f9a15683dc55dea0_113_0.png)
 
-### Java 编程练习
+## Java 编程练习
 
 任务：
 
 - 编写一个方法 `fourLast(int... numbers)`，将所有包含 4 的数字放在不包含 4 的数字之后。不包含 4 的数字顺序不能改变，包含 4 的数字可以放在任何位置。
+
 - `fourLast(...)` 应该返回传递的数组。
+
 - 参数 `null` 必须导致异常。
 
 示例：
 
-- `int[] numbers = {1, 44, 2, 4, 43}; fourLast(numbers);` 会修改数组 `numbers`，使得 1 和 2 位于数组中 44、4 和 43 之前。2 不能在 1 之前。
-- `fourLast(4, 4, 44, 1234)` 返回传递的数组，顺序为 4, 4, 44, 1234。
+- `int[] numbers={1, 44, 2, 4, 43}; fourLast(numbers);` 会修改数组 `numbers`，使得 1 和 2 位于数组中 44、4 和 43 之前。2 不能在 1 之前。
 
-## 数组基础 101
+- `fourLast( 4, 4, 44, 1234 )` 返回传递的数组，顺序为 4, 4, 44, 1234。
+
+# 数组基础 101
 
 ```java
-if (percent >= MIN_PERCENTAGE_INCREASE)
-    count++;
+if ( percent >= MIN_PERCENTAGE_INCREASE )
+  count++;
 }
 ```
 
@@ -3212,11 +3294,11 @@ return count;
 
 如果数组为空或只有一个元素，我们将其视为错误并返回 `0`。每当我们继续操作时，我们都会确保数组中至少有两个元素。我们对数组运行 `for` 循环，索引 `i=1`，并获取两个元素 `i`：索引 `i` 处的当前元素和前一个元素（位于位置 `i-1`）。这些元素代表 `todayGain` 和 `yesterdayGain`。原则上，我们也可以从 `0` 开始运行到 `dailyGains.length-1`。
 
-一旦读取了今天和昨天的原理，我们需要用一个简单的公式计算相对百分比增长。然而，请确保除法不是针对整数，而是浮点数。毕竟，如果两个整数相除，结果是一个整数。如果我们将数组中的数字取出并转换为 `double`，通过浮点数除法我们将获得更准确的比例。这避免了舍入误差问题，因为如果我们想在某处更改常量（例如改为一个极小的值），微小的跳变可能无法被正确检测。特殊情况：当没有产生销售额时，次日的增长可能是 `Double.INFINITY`，它大于 `MIN_PERCENTAGE_INCREASE`。
+一旦读取了今天和昨天的原理，我们需要用一个简单的公式计算相对百分比增长。然而，请确保除法不是针对整数，而是浮点数。毕竟，如果两个整数相除，结果是一个整数。如果我们将数组中的数字取出并转换为 `double`，通过浮点数除法我们将获得更准确的比例。这避免了舍入误差问题，因为如果我们想在某处更改常量（例如改为一个极小的值），微小的跳变可能无法被正确检测。特殊情况：当没有产生销售额时，次日的增长可能是 `Double.Infinity`，它大于 `MIN_PERCENTAGE_INCREASE`。
 
 在计算出相对增量后，我们计数是否达到了 `5%` 的计数并增加变量的值，记住所有元素。在行末尾，我们返回 `count` 以报告共找到了多少个实例。
 
-## 点的数组
+# 点的数组
 
 输出结果：
 
@@ -3227,30 +3309,37 @@ return count;
 让我们逐行分析程序：
 
 ```java
-/* 1 */ Point[] points = {null, null, null, null};
-/* 2 */ Point p = new Point();
-/* 3 */ p.setLocation(1, 2);
-/* 4 */ points[0] = p;
-/* 5 */ p.setLocation(3, 4);
-/* 6 */ points[1] = p;
-/* 7 */ Point q = points[1];
-/* 8 */ q.setLocation(5, 6);
-/* 9 */ points[2] = points[3] = q;
-/* 10 */ System.out.println(Arrays.toString(points));
+/* 1 */ Point[] points={null, null, null, null};
+/* 2 */ Point p=new Point();
+/* 3 */ p.setLocation( 1, 2 );
+/* 4 */ points[0]=p;
+/* 5 */ p.setLocation( 3, 4 );
+/* 6 */ points[1]=p;
+/* 7 */ Point q=p;
+/* 8 */ q.setLocation( 5, 6 );
+/* 9 */ points[2]=points[3]=q;
+/* 10 */ System.out.println(Arrays.toString( points ) );
 ```
 
 - 1. 第一行创建了一个包含四个元素的数组，全部为 `null`。通过 `new Point[4]` 创建数组也可以达到相同的效果。
-- 2. 创建了一个新的 `Point` 对象。
-- 3. 使用 setter 方法将坐标设置为 (1, 2)。
-- 4. 数组中的第一个元素（索引 0）被设置为该点。
-- 5. 然后，点 `p` 的坐标被修改为 (3, 4)。
-- 6. 然后，点 `p` 也被设置在数组的第二个位置（索引 1）。
-- 7. 获取该第二个位置的引用并存储在变量 `q` 中。因此，`q` 和 `p` 都指向同一个 `Point` 对象。
-- 8. 在整个程序运行期间，我们只处理同一个 `Point` 对象，它最终的坐标变为 (5, 6)。
-- 9. 这个 `Point` 引用设置在数组的第 3 和第 4 位置（索引 2 和 3）。
-- 10. 最终，数组中的所有元素都指向同一个 `Point` 对象，因此输出将是坐标为 (5, 6) 的 `Point` 对象的 `toString()` 表示，重复四次。
 
-## 搜索连续字符串并判断“咸鱼鲈鱼”是否正在到来
+- 2. 创建了一个新的 `Point` 对象。
+
+- 3. 使用 setter 方法将坐标设置为 (1, 2)。
+
+- 4. 数组中的第一个元素（索引 0）被设置为该点。
+
+- 5. 然后，点 `p` 也被设置在数组的第二个位置（索引 1）。
+
+- 6. 获取该第二个位置的引用并存储在变量 `q` 中。因此，`q` 和 `p` 都指向同一个 `Point` 对象。
+
+- 7. 在整个程序运行期间，我们只处理同一个 `Point` 对象，它最终的坐标变为 (5, 6)。
+
+- 8. 这个 `Point` 引用设置在数组的第 3 和第 4 位置（索引 2 和 3）。
+
+- 9. 最终，数组中的所有元素都指向同一个 `Point` 对象，因此输出将是坐标为 (5, 6) 的 `Point` 对象的 `toString()` 表示，重复四次。
+
+# 搜索连续字符串并判断“咸鱼鲈鱼”是否正在到来
 
 `com/tutego/exercise/array/SaltySnook.java`
 
@@ -3281,9 +3370,11 @@ public static boolean isProbablyApproaching(String[] signs) {
 
 我们将期望的船只数量记录在常量 `MIN_OCCURRENCES` 中，以便于更改。
 
-首先，我们检查数组中是否包含至少 `MIN_OCCURRENCES` 个元素。如果数组为 `null`，在访问 `length` 属性时将抛出 `NullPointerException`，表示参数错误。
+首先，我们检查数组中是否包含至少 `MIN_OCCURRENCES` 个元素。如果传入 `null`，在访问 `length` 属性时将抛出 `NullPointerException`，表示参数错误。
 
-如果数组长度不小于 `MIN_OCCURRENCES`，我们比较数组中的后续元素。我们生成一个从 0 到倒数第二个元素的索引，然后访问两个元素：索引 `i` 处的当前元素和下一个元素（位于位置 `i + 1`）。
+在比较数组中的后续元素时，我们有两种方法：
+
+- 生成一个从 0 到倒数第二个元素的索引，然后访问两个元素：索引 `i` 处的当前元素和下一个元素（位于位置 `i+1`）。
 
 ## 反转数组
 
@@ -3368,14 +3459,6 @@ private static int relativeDifference(int a, int b) {
 
 索引从前向后移动，并且和始终会被重新计算。这个算法非常简单，但我们必须多次遍历数组，因此最终运行时间是平方级的。这种方法效果更好。如果我们把数组分成两部分，光标向右移动一位，和就会根据一个简单的模式发生变化：加到左侧和中的元素会从右侧减去。这就是解决方案的核心思想。
 
-## 106 Java 编程练习
-
-在方法的开始处，我们检查是否传递了一个或没有元素。如果是这样，则无法进行公平划分，我们返回 `-1`。如果传递了空引用，程序将抛出 `NullPointerException`，这是一个很好的反应。
-
-下一步，我们声明了两个变量来存储左半和右部分的和。初始时，左和仅包含数组第一个元素，而右和包含从第二个位置（索引 1）到结束的元素。
-
-我们将在循环中调整这些变量 `sumLeft` 和 `sumRight`。循环从第一个元素运行到最后一个元素。由于我们在循环运行之前已经完成了左右两侧的计算，如果 `relativeDifference <= 10`，那么我们实际上已经得到了结果。如果值之间的距离更大，我们在左元素上增加并从右元素上减少。最后，我们继续进入循环，如果在任何时刻相对差异小于或等于 10，我们就带有 `splitIndex` 跳出循环，否则方法将以 `-1` 终止。
-
 ## 绘制山脉
 
 `com/tutego/exercise/array/MountainVisualizer.java`
@@ -3388,14 +3471,14 @@ public static void printMountain(int[] altitudes) {
 
     for (int currentAltitude : altitudes) {
         maxAltitude = Math.max(maxAltitude, currentAltitude);
-        // 包含高度0，所以它是 >=0 的
-        for (int height = maxAltitude; height >= 0; height--) {
-            System.out.print(height + " ");
-            for (int altitude : altitudes) {
-                System.out.print(altitude == height ? mountainChar() : ' ');
-            }
-            System.out.println();
+    }
+    // 包含高度0，所以它是 >=0 的
+    for (int height = maxAltitude; height >= 0; height--) {
+        System.out.print(height + " ");
+        for (int altitude : altitudes) {
+            System.out.print(altitude == height ? mountainChar() : ' ');
         }
+        System.out.println();
     }
 }
 ```
@@ -3408,7 +3491,7 @@ public static void printMountain(int[] altitudes) {
 
 山脉符号的绘制是由 `mountainChar()` 方法完成的；它返回一个 `*`。我们可以直接绘制该字符，或者使用常量引用它，而该方法是为了下一个任务的准备……
 
-## 可选扩展
+### 可选扩展
 
 在第一个提出的解决方案中，`mountainChar()` 方法始终返回 `*`：如果该方法要返回其他符号，它需要更多的上下文，因为它必须能够回溯和向前看。所以让我们看看 `mountainChar()` 是如何处理高度的。在 `altitudes` 的高度循环中，代码如下：
 
@@ -3504,7 +3587,7 @@ private static boolean allTrue(boolean first, boolean... remaining) {
 
 使用变长参数列表时无法期望最小数量的参数。解决此问题的方法是引入最小数量的参数，然后在最后使用变长参数处理剩余部分。
 
-方法有两个返回 `true` 或 `false` 的路径。
+方法有两个返回 true 或 false 的路径：
 
 
 
@@ -3516,7 +3599,7 @@ private static boolean allTrue(boolean first, boolean... remaining) {
 
 `deepEquals(...)` 还会跟踪被引用的子数组，并检查这些值是否等价。子数组的身份对于 `deepEquals(...)` 并不是必须。这两个整数数组是等价的，因此 `deepEquals(...)` 的返回值为 `true`。
 
-# 字符与字符串处理 5
+# 字符与字符串处理
 
 为了存储字符和字符串，Java 提供了 `char`、`Character`、`String` 和 `StringBuilder` 类型。必须练习这些数据类型，因为每种类型都有其理由。练习有助于读者理解每种数据类型的优缺点。
 
@@ -3531,15 +3614,15 @@ private static boolean allTrue(boolean first, boolean... remaining) {
 - `java.lang.String`
 - `java.lang.StringBuilder`
 
-# STRING 类及其成员变量
+## String 类及其成员变量
 
 `String` 不仅仅是一个代表不可变字符串的数据类型，该类还提供了许多方法。如果你了解这些方法以及如何使用它们，就能节省大量工作。
 
-# 测验：String 是内置关键字吗？
+## 测验：String 是内置关键字吗？
 
 Java 拥有内置数据类型，包括 `int`、`double`、`boolean`。`String` 也是原始内置数据类型吗？`String` 是 Java 中的关键字吗？
 
-# 使用简单拼接构建 HTML 元素 ★
+## 使用简单拼接构建 HTML 元素 ★
 
 提醒一下，HTML 中用于标记的标签，例如 `<strong><em>强调的斜体</em></strong>`（已翻译）。
 
@@ -3551,7 +3634,7 @@ Java 拥有内置数据类型，包括 `int`、`double`、`boolean`。`String` �
 
 注意：对标签名有几项限制，良好的程序应该检查这些限制。例如，标签名只能包含数字 0–9 以及大小写字母。这些大小写是可以忽略的。
 
-# 通过字符倍增检查安全传输 ★
+## 通过字符倍增检查安全传输 ★
 
 竹鱼使用打字电报（type-print telegraph）向 Bonny Brain 发送重要信息。由于每个字符都至关重要，竹鱼会连续发送两次字符以确保安全。
 
@@ -3564,7 +3647,7 @@ Java 拥有内置数据类型，包括 `int`、`double`、`boolean`。`String` �
 - 如果每个字符都出现两次，答案是任意正数。
 - 如果某个字符没有连续出现两次，方法返回第一个错误数字的位置，但对其取反值。
 
-# 116 Java 编程练习题
+## 116 Java 编程练习题
 
 示例：
 
@@ -3596,7 +3679,7 @@ Ciao 队长正在打字，现在默认实（fact）是不区分大小写的。�
 
 Defiant 负责 Ciao，但他被抓获了。如果输入是 "No!"，他回答 "Aye!"。
 
-# 测试属性。
+## 测试属性
 
 ![](img/1772db956b1b6830f9a15683dc55dea0_133_0.png)
 
@@ -3608,22 +3691,22 @@ Defiant 负责 Ciao，但他被抓获了。如果输入是 "No!"，他回答 "Ay
 - 使用类方法 `boolean isIgnoringCase(String s)` 增强程序，使测试不区分大小写。
 - 现在，所有非字母或数字的字符也应该被忽略。`Character.isLetterOrDigit(char)` 有助于此。我们将方法命名为 `isIgnoringLettersAndDigits(String)`。
 
-# 测验：用 == 和 equals 字符串
+## 测验：用 == 和 equals 字符串
 
 字符串是对象，因此有两种比较方法：
 
 - 比较引用 `==`
 - 使用方法 `equals(Object)`
 
-# 测验：equals(...) 是对称的吗？
+## 测验：equals(...) 是对称的吗？
 
 假设 s 是字符串：`s.equals("tego")` 和 `"teot"` 之间存在差异。
 
-# 测试回文属性
+## 测试回文属性
 
 回文是指正反读相同的单词，例如 "Otto" 甚至是 "121"。这种词的存在让 Ciao 感到有趣。然而，他总是遇到不是回文的字符串。因此，所有单词都必须经过测试。
 
-# 检查 CiaoCiao 是否在中间
+## 检查 CiaoCiao 是否在中间
 
 Ciao 队长是世界的中心，因此他也期望位于所有文本的中心。编写方法 `isCiaoCiaoInMiddle(String)` 检查 "CiaoCiao" 是否在中间。
 
@@ -3639,7 +3722,7 @@ Ciao 队长是世界的中心，因此他也期望位于所有文本的中心。
 - `isCiaoCiaoInMiddle("BambooCiaoCiaoBlop")` -> false.
 - `isCiaoCiaoInMiddle("Bernie und Ert")` -> false.
 
-# 查找数组中的最短名称 ★
+## 查找数组中的最短名称 ★
 
 Bonny Brain 对人只使用最短的称呼。
 
@@ -3655,7 +3738,7 @@ Bonny Brain 对人只使用最短的称呼。
 
 - `shortestName("Albert Tross", "Blowfish", "Nick Olaus", "Jo Ker")` -> "Jo"。
 
-# 统计字符串出现次数 ★
+## 统计字符串出现次数 ★
 
 CaptainCiao 在一次疏忽中消除了开发者 Dev David。他正在编写一个方法；Javadoc 已经准备好，但缺少实现代码。
 
@@ -3688,9 +3771,7 @@ public static int countMatches( String string, String other ) { return null; }
 
 - 实现该方法。
 
-# 5 字符与字符串处理 121
-
-# 确定更大的船员规模 ★
+## 确定更大的船员规模 ★
 
 Bonny Brain 正在研究旧日志，上面显示了她的船队和捕获船只的力量：
 
@@ -3714,7 +3795,7 @@ Bonny Brain 正在研究旧日志，上面显示了她的船队和捕获船只�
   - `||| =>` 船只船员规模相同
   - `||||| =>` 海盗船船员更多，差异为 3
 
-# 构建钻石形 ★★
+## 构建钻石形 ★★
 
 CaptainCiao 喜欢钻石，越大越好。
 
@@ -3736,7 +3817,7 @@ A
 
 通过控制台的提示符，能够指定钻石的最大宽度。在我们的示例中，这个值是 7——字符串 `ABCDCBA` 的长度。应该只接受可以通过升序和降序大写字母字符串实现的宽度输入，即最多为 `ABCDEFGHIJKLMNOPQRSTUVWXYZXYZWVU...BA` 的长度。
 
-# 检查良好的密码 ★
+## 检查良好的密码 ★
 
 所有的肮脏秘密都由 Captain CiaoCiao 加，但他的密码往往太简单而被破解。他已经知道安全的密码对他的业务很重要，但他不完全记得规则了：良好的密码具有特定的长度，包含特殊字符等。
 
@@ -3747,7 +3828,7 @@ A
 1. 创建新类 `PasswordTester`。
 2. 编写方法 `isGoodPassword(String)` 来测试某些标准。如果密码较弱，方法应返回 `false`，如果密码具有正确的语法则返回 `true`。如果测试失败，应通过 `System.err` 显示消息且不再进行后续检查。
 
-# 烘焙花生酱饼干 ★★
+## 烘焙花生酱饼干 ★★
 
 在假期之前，船员们聚集在 Captain CiaoCiao 周围制作花生酱饼干。业余厨师带来了花生酱、糖或蛋。当他们到达时，他们一个一个坐在桌旁准备开始烘焙。
 
@@ -3755,7 +3836,7 @@ A
 
 只要有三个业余厨师坐在一起并且拥有花生酱、糖和蛋，无论原料顺序如何都可以进行烘焙。
 
-# 124 Java 编程练习
+## 124 Java 编程练习
 
 ![](img/1772db956b1b6830f9a15683dc55dea0_140_0.png)
 
@@ -3770,13 +3851,11 @@ A
 - `"PPPPESSSS"` $\rightarrow$ 0
 - `"SEPELEE"` $\rightarrow$ 1
 
-# 计算数字和 ★
+## 计算数字和 ★
 
 由于 Bonny Brain 经常负责支付并担心有人更改金额，她采用了一种技巧，通过单独通道发送数字和。
 
 数字和是通过相加数字的每个位形成的。例如，如果数字是 1098，数字之和为 1+0+9+8。
-
-# 5 字符与字符串处理 121
 
 ![](img/1772db956b1b6830f9a15683dc55dea0_141_0.png)
 
@@ -3785,13 +3864,13 @@ A
 1. 创建新类 `PasswordTester`。
 2. 编写方法 `isGoodPassword(String)` 来测试某些标准。如果密码较弱，方法应返回 `false`，如果密码具有正确的语法则返回 `true`。如果测试失败，应通过 `System.err` 显示消息且不再进行后续检查。
 
-# 去殖民化文本 ★★
+## 去殖民化文本 ★★
 
 CiaoCiao 正在扫描旧书，但它们是列式的。OCR 之后，它们被翻译了。
 
 ![](img/1772db956b1b6830f9a15683dc55dea0_142_0.png)
 
-# 画带有花的草地 ★ ★
+## 画带有花的草地 ★ ★
 
 CaptainCiao 想美化他的船并装饰。
 
@@ -3807,7 +3886,7 @@ CaptainCiao 想美化他的船并装饰。
 
 在数组中存储花朵之间过渡的位置。
 
-# 5 • 字符与字符串处理 129
+## 5 • 字符与字符串处理 129
 
 任务：
 
@@ -3831,7 +3910,7 @@ most precious time. Now will
 never come again.
 ```
 
-# 测验：有多少个字符串对象？ ★
+## 测验：有多少个字符串对象？ ★
 
 以下程序代码中存在多少字符串对象？
 
@@ -3842,7 +3921,7 @@ String str3="tutego"
 String str4=new String( "tutego" );
 ```
 
-# 测试水果是否包裹在巧克力中 ★★★
+## 测试水果是否包裹在巧克力中 ★★★
 
 CiaoCiao 船长喜欢被巧克力包裹的水果。Sara 负责给水果涂层，制作不同层级的深巧克力和白巧克力。
 
@@ -3854,7 +3933,7 @@ Bambi 检查层数是否正确。如果她看到 `dhPhd`，她就知道水果 F 
 
 - 编写一个递归方法 `checkChocolate(String)`，检查字符串是否对称，即左侧和右侧是类型的巧克力，中间是水果 F。
 
-# 从上到下，从左到右 ★★★
+## 从上到下，从左到右 ★★★
 
 在一个洞穴里，Bonny Brain 发现了一段文本，然而，这段文本不是从左到右的，而是从上往下写的。
 
@@ -3868,7 +3947,7 @@ ao
 
 ![](img/1772db956b1b6830f9a15683dc55dea0_146_1.png)
 
-# 5 • 字符与字符串处理 131
+## 5 • 字符与字符串处理 131
 
 任务：
 
@@ -3974,13 +4053,13 @@ Bonny Brain 正在策划一个阴险的计划，在发送秘密消息时不会�
 
 示例：
 
-- `joinSplitMessages("Hoy", "ok")` → `"Hooky"`。
+- `joinSplitMessages("Hoy", "ok")` → `"Hooky"`
 
-- `joinSplitMessages("Hooky")` → `"Hooky"`。
+- `joinSplitMessages("Hooky")` → `"Hooky"`
 
-- `joinSplitMessages("H", "oy", "o")` → `"Hooky"`。
+- `joinSplitMessages("H", "oy", "o")` → `"Hooky"`
 
-- `joinSplitMessages("H", "", "ooky")` → `"Hooky"`。
+- `joinSplitMessages("H", "", "ooky")` → `"Hooky"`
 
 # 压缩重复空格 ★★
 
@@ -4165,20 +4244,6 @@ public static boolean equals(Object a, Object b) {
 
 ## 测试回文
 
-从原则上讲，字符串可以使用 `==...` 进行比较，但这行不通，因为 String 对象仅在虚拟机内部构建。通常，我们自己拥有对象，例如通过按行读取文件。然后每行和输入都是一个 `String`。Java 开发者应该养成始终使用 `equals(...)` 比较字符串的习惯。来自其他语言的新手在开始会遇到困难。
-
-# 测验：Equals(...) 是对称的吗？
-
-使用 `equals(Object)` 方法的比较应该是对称的，也就是说无论是 `a.equals(b)` 还是 `b.equals(a)` 都没有区别。然而，如果对称性被 `null` 破坏：`String s=null; s.equals("tutego")` 会导致 `NullPointerException`，但 `"test"` 则不会。在实践中，在字符串上调用 `equals(...)` 并传递另一个字符串更为健壮。如果比较中可能出现 `null` 并且为了防止 `NullPointerException`，可以使用 `Objects.equals(...)`：
-
-```java
-public static boolean equals(Object a, Object b) {
-    return (a == b) || (a != null && a.equals(b));
-}
-```
-
-## 测试回文
-
 ```java
 com/tutego/exercise/string/PalindromeTester.java
 static boolean isPalindrome(String string) {
@@ -4209,7 +4274,9 @@ static boolean isPalindromeCase(String string) {
 
 我们的 `isPalindromeCase(String)` 测试字符串是否为忽略大小写的回文。在这种情况下，我们将字符串转换为小写并传递给现有的 `isPalindromeAndDigits(String)`。
 
-## 迭代实现：`isPalindromeAndDigits`
+## 回文检测实现
+
+### 迭代实现（忽略非字母数字）
 
 ```java
 com/tutego/exercise/string/PalindromeTester.java
@@ -4232,7 +4299,7 @@ static boolean isPalindromeAndDigits(String string) {
 
 对于 `isPalindromeAndDigits(String)` 方法，我们可以通过删除所有非字母或数字，或者跳过额外步骤来清理字符串并直接查询。这是实现采用的方法。我们遍历字符串的每个字符，定义两个计数器 `startIndex` 和 `endIndex`。起始索引变大，结束索引变小。我们从第一个字符和最后一个作为结束索引开始。其中一个字符可能不是字母或数字。所以，我们从左侧搜索直到获得有效的符号，并且对右侧执行同样的操作。这就是两个循环所做的。由于检查现在可以不区分大小写，我们将两个字符转换为小写并进行比较。如果每次比较都不为真，返回 `false` 终止方法。
 
-## 递归实现：`isPalindromeRecursive`
+### 递归实现
 
 ```java
 com/tutego/exercise/string/PalindromeTester.java
@@ -4247,9 +4314,7 @@ static boolean isPalindromeRecursive(String string) {
 
 最后，我们看看递归实现。这里有两种可能性。这里展示了第一种可能性：首先检查字符串中没有或只有一个字符。在这种情况下，我们到达了递归的末尾并返回 `true`。接下来，我们提取第一个和最后一个字符并比较。如果字符不等，我们退出方法。如果字符不区分大小写——我们提取子字符串并进入下一层递归。由于递归在这里末尾，我们还调用了它，这在原则上可以被运行时环境优化，尽管标准的 JVM 并不那样进行优化。
 
----
-
-# 检查 Captain CiaoCiao 是否位于中间
+## 检查 Captain CiaoCiao 是否位于中间
 
 `com/tutego/exercise/string/InMiddle.java`
 
@@ -4259,7 +4324,8 @@ public static boolean isStringInMiddle( String string, String middle ) {
         return false;
 
     int start=string.length() / 2 - middle.length() / 2;
-    return string.regionMatches( start, middle, 0 /*middle offset */, middle.length() );
+    return string.regionMatches( start, middle, 0 /*middle offset */, middle.
+        length() );
 }
 
 public static boolean isCiaoCiaoInMiddle( String string ) {
@@ -4280,8 +4346,6 @@ boolean regionMatches(int offset, String other, int len).
 ```
 
 这是一个使用 `substring(...)` 切分字符串进行比较的更好方法。
-
----
 
 ## 数组中的最短字符串
 
@@ -4316,14 +4380,12 @@ private static String shortestName( String... names ) {
 
 为了简化算法，将确定两个字符串最短的操作放入独立的方法 `shortest(String, String)` 中，该方法会被多次调用。此方法返回两个字符串中较短的一个。如果两者相等，方法返回第一个；这种选择是任意的。
 
-实际的 `shortestName(...)` 方法接收字符串变长参数，通常参数可以是 `null`。如果传递了 `null`，访问时将抛出 `NullPointerException`。如果没有传递元素，方法什么都不做并返回空字符串。由于数组至少有一个字符串，我们使用它来初始化 `result`，最后也会返回。扩展 for 循环遍历数组中的所有字符串，循环体内可能会更新。首先，查看字符串中是否存在空格。有两种可选：
+实际的 `shortestName(...)` 方法接收字符串变长，通常参数可以是 `null`。如果传递了 `null`，访问时将抛出 `NullPointerException`。如果没有传递元素，方法什么都不做并返回空字符串。由于数组至少有一个字符串，我们使用它来初始化 `result`，最后也会返回。扩展 for 循环遍历数组中的所有字符串，循环体内可能会更新。首先，查看字符串中是否存在空格。有两种可选：
 
 1. 如果字符串中没有空格，`shortest(result, name)` 返回较短的字符串，并覆盖 `result`。
 2. 如果字符串中有空格，`substring(...)` 将字符串分为两部分：`part1` 和 `part2`。在这里我们有 `shortest(...)` 方法，它确定 `part1` 和 `part2` 之间的最短字符串。然后将其结果与 `result` 进行比较，以识别存储在 `result` 中的最短字符串。
 
 循环结束后，我们确定了最短字符串并返回。
-
----
 
 ## 统计字符串出现次数
 
@@ -4350,8 +4412,6 @@ public static int countMatches( String string, String other ) {
 
 如果在真实程序中需要这样的方法，开发者可以使用 Apache Commons。实现本身位于：https://commons.apache.org/proper/commons-lang/apidocs/src-html/apache/commons/lang/StringUtils.html。
 
----
-
 ## 确定较大的规模
 
 首先，让我们总结一下我们需要完成的任务：在字符串中，我们需要找到分隔符（减号），并确定减号左右各有多少个连字符。这些值必须进行比较。比较有三种结果：右侧值可以比左侧大或小，或者两个值可以相等。
@@ -4371,13 +4431,11 @@ public static int countMatches( String string, String other ) {
 
 然而，对这些信息进行更多处理。任务是团队实力的差异。可以计算差异并使用符号来判断哪个团队更强吗？是可以的。
 
-- |P| < |V| 意味着 `|P| - |V| < 0`。
-- |P| > |V| 从此意味着 `|P| - |V| > 0`。
-- |P| = |V| 从此意味着 `|P| - |V| = 0`。
+- |P| < |V| 意味着 `PI|-VI|<0`。
+- |P| > |V| 从此意味着 `PI|-VI|>0`。
+- |P| = |V| 从此意味着 `PI|-VI|=0`。
 
-当比较两个数字时，总是可以形成差异并观察符号。
-
----
+当比较两个数字时，总是可以形成差异并观察符号。在 for 循环中，我们反复使用 `String.indexOf(...)` 方法搜索这个部分字符串 `other`。为了这个目的，循环初始化了一个索引，它始终包含最后的位置，如果没有找到更多位置，这也是 for 循环的终止条件。该索引总是增加 `other` 的长度，以便 `indexOf(...)` 方法可以在下一次迭代中继续搜索 `other` 之后的内容。
 
 ## 构建菱形
 
@@ -4428,9 +4486,7 @@ public static void printDiamond( int diameter) {
 
 我们可以读到，半径和缩进之和始终相同，在我们的示例中为 4。现在我们可以使用循环从 3 递减到 0 再回到 3，并推导出半径。我们可以遍历从 1 到 4 再回 1 的菱形半径，并推导出缩进。
 
-所建议的解决方案使用缩进作为循环计数器。使用了一个技巧使得不再需要两个循环：循环让缩进从半径开始，到负半径结束。我们完整通过一次零点。在循环内部，我们对负数感兴趣，所以我们选择绝对值，从而得到一个下降和一个上升的缩进。正如我们刚刚看到的，通过这些缩进值，我们可以计算出半径并得到该行。在开始时，缩进等于半径，这意味着在开始时 `radius - indentation = 0`。因此，`printDiamondCore('A', 'A')` 只写入一个 A。在下一次迭代中，缩进减了 1，即半径（不改变）与缩进之间的差变为 `A+1=B`，所以我们绘制核心部分 ABA。
-
----
+所建议的解决方案使用缩进作为循环计数器。使用了一个技巧使得不再需要两个循环：循环让缩进从半径开始，到负半径结束。我们完整通过一次零点。在循环内部，我们对负数感兴趣，所以我们选择绝对值，从而得到一个下降和一个上升的缩进。正如我们刚刚看到的，通过这些缩进值，我们可以计算出半径并得到该行。在开始时，缩进等于半径，这意味着在开始时 `radius - indentation = 0`。因此，`printDiamondCore('A', 'A')` 只写入一个 A。在下一次迭代中，缩进减了 1，即半径（不改变）与缩进之间的差变为 `A+I=B`，所以我们绘制核心部分 ABA。
 
 ## 检查强密码
 
@@ -4478,9 +4534,9 @@ return sum;
 
 实现这两种方法中的某一个，取决于个人的喜好。这两者的方法有所不同。如果我们实现带有 `long` 参数的方法，那么我们总是必须使用 10 来逐步解码数字。在这种情况下，我们使用了一些数学方法，而且这种解决方案有一个局限的缺点，即我们是从右到左获取结果。这对于数字之和计算并不重要，因为我们实现的是 `digitSum(String)`。
 
-像往常一样，我们用 `for` 循环从左到右解析字符串。现在我们必须将每个字符视为数字。要将 Unicode 字符转换为数值，我们使用 `Character.getNumericValue(char)` 方法。像 `'1'` 这样的字符变成 1，`'7'` 变成 7。在原则上，我们可以通过从 Unicode 字符中减去 `'0'` 来手动进行此计算，但 `getNumericValue(...)` 通常适用于所有 Unicode 字符。例如，`getNumericValue('7')` 返回结果 2。
+像往常一样，我们用 `for` 循环从左到右解析字符串。现在我们必须将每个字符视为数字。要将 Unicode 字符转换为数值，我们使用 `Character.getNumericValue(char)` 方法。像 `'1'` 这样的字符变成 1，`'7'` 变成 7。在原则上，我们可以通过从 Unicode 字符中减去 `'0'` 来手动进行此计算，但 `getNumericValue(...)` 通常适用于所有 Unicode 字符。例如，`getNumericValue('7')` 返回结果 7。
 
-## 去列化文本 (Decolumize Texts)
+## 去列化文本
 
 算法必须执行以下操作：第一步，我们必须确定所有行中哪里有空格，这是列的指示。下一步，我们需要分离每个空格，首先将所有列的行排在一起，然后是右列的行。
 
@@ -4515,7 +4571,7 @@ private static int findColumnIndex(String[] lines) {
 }
 ```
 
-# 5 • 字符与字符串处理 155
+### 5 • 字符与字符串处理 155
 
 ```java
 mainLoop:
@@ -4582,9 +4638,10 @@ public static void decolumize(String string) {
         }
 
     }
+}
 ```
 
-## 156 Java 练习
+### 156 Java 练习
 
 ```java
 // 右列
@@ -4608,7 +4665,7 @@ for (String line : lines) {
 
 ## 检测重复
 
-在查看代码解决方案之前，必须先明确解决该问题的算法。让我们以简单的字符串 `aaa` 为例。作为人类，我们能毫不费力地识别出重复三次的模式。程序可以执行以下操作：它获取 `aaa` 的第一个字符——即 `a`——重复它直到字符串长度达到 3。然后我们比较它是否仍然是初始字符串 `aaa`。那么 `ababab` 呢？如果程序开始重复第一个字符 `a`，会产生 `aaaa`，与原始 `ababab` 的比较结果将为假。在下一步中，程序可以取前两个字符 `ab` 并重复它们，结果是 `ababab`，与原始字符串匹配。我们找到了匹配项。
+在查看代码解决方案之前，必须先明确解决该问题的算法。让我们以简单的字符串 `aaa` 为例。作为人类，我们能毫不费力地识别出重复三次的模式。程序可以执行以下操作：它获取 `aaa` 的第一个字符——即 `a`——重复它直到字符串长度达到 3。然后我们比较它是否仍然是初始字符串 `aaa`。那么 `ababab` 呢？如果程序开始重复第一个字符 `a`，会产生 `aaaaaa`，与原始 `ababab` 的比较结果将为假。在下一步中，程序可以取前两个字符 `ab` 并重复它们，结果是 `ababab`，与原始字符串匹配。我们找到了匹配项。
 
 通过这种简单的算法，我们可以测试任何长度；对于长度为 1, 2, 3, 4 ... 的子串重复。然而，考虑哪些有效的解决方案对我们很有帮助（表 5.1）。
 从表中可以看出，例如 `ab` 无法用于创建长度为 3 的字符串，而 `abcd` 无法用于创建长度为 2 的字符串。
@@ -4619,10 +4676,10 @@ for (String line : lines) {
 
 ```
 aaaaaaaaaaaa
-ababababab
-abcabcabc
-ababcdabcd
-ababcdef
+abababababab
+abcabcabcabc
+abcdabcdabcd
+abcdefabcdef
 ```
 
 这些是 `a`, `ab`, `abc`, `abcd`, `abcdef` 的重复；这些字符串的长度是 12 的除数，即 1, 2, 3, 4 和 6。其他组合是不可能的。特别是，子串长度不能超过字符串长度的一半，因为重复长度将超过原始字符串。因此，在朴素的方法中，对于总长度为 $n$，我们可以遍历到 $n/2$；如果想改进，我们只需遍历除数。
@@ -4638,7 +4695,7 @@ ababcdef
 | abcde | | | | | abcde | |
 | abcdef | | | | | | abcdef |
 
-## 5 • 字符与字符串处理 159
+### 5 • 字符与字符串处理 159
 
 `com/tutego/exercise/string/RepeatingStrings.java`
 
@@ -4657,9 +4714,9 @@ public static String repeatingStrings(String string) {
 
             String substring = string.substring(0, i);
 
-            String repeatedSubsubstring = substring.repeat(string.length() / i);
+            String repeatedSubstring = substring.repeat(string.length() / i);
 
-            if (string.equals(repeatedSubsubstring)) {
+            if (string.equals(repeatedSubstring)) {
 
                 return substring;
 
@@ -4709,7 +4766,7 @@ public static String wrap(String string, int width) {
 }
 ```
 
-## Java 练习
+### Java 练习
 
 递归总是需要一个停止标准。在我们的案例中，它是一个小于宽度的字符串。然后我们从递归返回调用者。因此，`wrap(...)` 的最后一次调用返回最后。由于递归，调用者获取前两行并将它们与第三行拼接。游戏一直持续直到递归解决。
 
@@ -4740,27 +4797,21 @@ public static boolean checkChocolate(String string, int layer) {
 
     }
 
-    if (string.length() == FRUIT.length()) {
+    if (string.length() == 1) {
 
         return string.equals(FRUIT) && layer != 0;
 
     }
 
-    return false;
+    if (string.charAt(0) != string.charAt(string.length() - 1))
 
+        return false;
+
+    return checkChocolate(string.substring(1, string.length() - 1), layer + 1);
 }
 ```
 
-## 5 • 字符与字符串处理 161
-
-```java
-if (string.charAt(0) != string.charAt(string.length() - 1))
-    return false;
-```
-
-```java
-return checkChocolate(string.substring(1, string.length() - 1), layer + 1);
-```
+### 5 • 字符与字符串处理 161
 
 
 
@@ -5217,7 +5268,7 @@ return result.toString();
 
 实际的 `joinSplitMessages(...)` 接收一个字符串的变长参数（vararg）。我们没有检查 `null`，但在当对所有部分进行扩展访问时，会抛出 `NullPointerException`。
 
-该算法由两个步骤组成。在第一步中，从所有部分中确定最大字符串长度。背景是信使可能会获取数据，因此我们以字符最多的信使为准。所以，查询的场景类似于 `joinSplitMessages("H", "ooky")`。在循环结束后，变量 `maxLength` 包含最长字符串的长度。
+该算法由两个步骤组成。在第一步中，从所有部分中确定最大字符串长度。背景是信使可能会获取数据，因此我们以字符最多的信使为准。所以，查询的场景类似于 `joinSplitMessages("H", "ooky")`。在循环结束后，变量 `maxString` 包含最长字符串的长度。
 
 在第二步中，我们请求第一个部分的第一个字符，然后是第二个部分的第二个字符。在下一步，我们获取第一个部分的字符、第二个部分的第二个字符，依此类推。外层循环生成从 0 到所有字符串最大长度的索引，内层循环遍历信使的所有部分。为了请求部分字符串的字符，我们求助于我们的方法，该方法确保了即使索引位置没有字符也不会发生异常。
 
@@ -5228,7 +5279,7 @@ return result.toString();
 `com/tutego/exercise/CompressSpace.java`
 
 ```java
-public static final String TWO_SPACES = "  ";
+public static final String TWO_SPACES = "";
 
 static String compressSpace(String string) {
     return compressSpace(new StringBuilder(string)).toString();
@@ -5307,6 +5358,8 @@ private static String camelCaseSplitter(String string) {
 
 现在测试两个字符 `previousChar` 和 `currentChar`，以检查上一个字符是小写字母还是大写字母。我们依赖 `Character` 方法，它们为所有 Unicode 字符提供正确答案。大小写区分检查大写字母必须跟在小写字母后面的标准。在这种情况下，我们在该位置放置一个空格。这会将后续字符块向右移动。如果我们检测到位移，那么索引 `i` 指向大写字母。如果我们在这个位置插入了空格，索引将指向后续。然而，我们不需要通过我们的算法检查空格。因此，我们可以将索引增加 1，以便索引位于下一个大写字母上。由于之后在循环的后续表达式中继续，索引会再次增加。因此，索引位于大写字母之前，并对后续字符继续测试。`i++` 是缺失的，这不会被注意到，因为空格不是字母，但通过递增它，算法节省了一次比较。
 
+## 5 • 字符和字符串处理
+
 在循环结束，将动态 `StringBuilder` 转换为 `String` 并返回。替代实现可能是先构建一个 `StringBuilder` 稍后不再对其修改，还有一种正则表达式的解决方案。
 
 使用正则表达式的解决方案是可行的，但并非易事：
@@ -5316,9 +5369,7 @@ String regex = "(?<=\\p{Lower})(?=\\p{Upper})";
 String s = String.join(" ", "CiaoCAPTAINCiaoCiao".split(regex));
 ```
 
-`\p{Lower}` 和 `\p{Upper}` 代表字符方法。“零宽正向后行查找”和“零宽正向前行查找”。“前瞻”已经很好地说明了它：只看，不要碰任何东西！我们可以用它来查找字符，但不要成为匹配的一部分；匹配到的字符数量为 0。拼写决定了从小写字母到大写字母的转换。
-
-## 凯撒密码
+`\\p{Lower}` 和 `\\p{Upper}` 代表字符方法。“零宽正向后行查找”和“零宽正向前行查找”。“前瞻”已经很好地说明了它：只看，不要碰任何东西！我们可以它来查找字符，但不要成为匹配的一部分；匹配到的字符数量为 0。拼写决定了从小写字母到大写字母的转换。
 
 细微的差别，即我们现在可以取括号内的表达式 `% ALPHABET_LENGTH`，使得 'Z' + 1 让我们回到 'A'。
 
@@ -5335,7 +5386,7 @@ public static String caesar(String s, int rotation) {
 
 // 奇葩解
 // IntUnaryOperator rotation = c -> rotate(c, rotation);
-// return s.chars().map(rotation).mapToObj(Character::toString).collect(Collectors.joining());
+return s.chars().map(rotation).mapToObj(Character::toString).collect(Collectors.joining());
 
 public static String decaser(String s, int rotation) {
     return caesar(s, ALPHABET_LENGTH - rotation);
@@ -5502,8 +5553,10 @@ Tracer.trace("End");
 
 预期输出是：
 
+```
 Start
 End
+```
 
 | Tracer |
 | --- |
@@ -5760,7 +5813,7 @@ public class Numbers {
 - 在 `ElectronicDevice` 类中声明一个新的静态方法：
   ```java
   public static int numberOfElectronicDevicesSwitchedOn(ElectronicDevice... devices ) {
-      // 返回传递给方法的已开启设备数量
+    // 返回传递给方法的已开启设备数量
   }
   ```
 
@@ -5822,7 +5875,7 @@ public class Toaster {
 
 # 火灾报警器未响：重写方法 ★
 
-火灾是Ciao 船长在船上完全不需要的东西。如果发生火灾，必须尽快扑灭。
+火灾是 Ciao 船长在船上完全不需要的东西。如果发生火灾，必须尽快扑灭。
 
 - 实现 `ElectronicDevice` 的子类作为火灾探测器的 `Firebox` 类。
 - 火灾探测器在创建后应始终保持开启。
@@ -5870,7 +5923,7 @@ Ciao 船长躺在吊床上，由于热带风暴的影响，船上的所有电器
 - 在 `Ship` 类中实现一个 `holiday()` 方法，关闭所有电器。
   ```java
   public void holiday() {
-      // 关闭所有电器
+    // 关闭所有电器
   }
   ```
 
@@ -5894,7 +5947,7 @@ Ciao 船长躺在吊床上，由于热带风暴的影响，船上的所有电器
 
 ## 大搬家
 
-无畏的Ciao船长决定放弃旧船，搬到新的驳船上。由于所有的海盗都能阅读，应该创建一个图形列表。任务：
+无畏的 Ciao 船长决定放弃旧船，搬到新的驳船上。由于所有的海盗都能阅读，应该创建一个图形列表。任务：
 
 - 将以下 `AsciiArt` 类作为内部类复制到 `Ship` 中：
 ```java
@@ -5906,11 +5959,9 @@ public static class AsciiArt {
 }
 ```
 
-![](img/1772db956b1b6830f9a15683dc55dea0_206_1.png)
-
 - 在 `Ship` 中实现一个新方法 `printLoading()`，遍历船上的所有设备并实现以下输出规则：
-  - 如果设备是收音机且功率为正，则在屏幕上打印 `AsciiArt.RADIO`。损坏的收音机功率为0，不打印。
-  - 如果设备是电视且功率超过10000，则打印大电视图像 `AsciiArt.BIG_TV`。
+  - 如果设备是收音机且功率为正，则在屏幕上打印 `AsciiArt.RADIO`。损坏的收音机功率为 0，不打印。
+  - 如果设备是电视且功率超过 10000，则打印大电视图像 `AsciiArt.BIG_TV`。
   - 如果设备是电视（无论功率如何），则打印普通电视 `AsciiArt.TV`。
   - 如果不符合上述任何情况，则打印插座 `AsciiArt.SOCKET`。
   - 使用 `switch` 模式匹配功能解决该任务。
@@ -5921,7 +5972,7 @@ Bonny Brain 在周刊“BETTER BOARDED”上找到了 Bumbo 的配方。但她�
 
 ![](img/1772db956b1b6830f9a15683dc55dea0_207_0.png)
 
-以下程序编译吗？如果是，它的输出是什么？如果不是，有什么编译错误？
+以下程序能编译吗？如果是，它的输出是什么？如果不是，有什么编译错误？
 
 ```java
 class Drink {
@@ -5935,7 +5986,6 @@ class YummyDrink extends Drink {
     public YummyDrink getInstance() {
       return this;
     }
-
     @Override public void printIngredients() {
       System.out.println(
         "2 ounces rum, 1 ounce water, 2 sugar cubes, cinnamon, nutmeg"
@@ -6025,10 +6075,8 @@ CaptainCiaoCiao 通过视频记录每次抢劫案，并在汇报中分析序列�
 一个 `java.util.Timer` 可以重复执行任务。为了实现这一点，`Timer` 类有一个 `schedule(...)` 方法来添加任务。任务的类型是 `java.util.TimerTask`。
 
 - 创建 `TimerTask` 的子类，每当文件系统上的剩余字节数低于某个阈值（例如少于 1000 MB）时，在屏幕上打印消息。
-
   返回剩余字节数：
   `long freeDiskSpace=java.io.File.listRoots()[0].getFreeSpace();`
-
 - `Timer` 应每 2 秒执行一次此 `TimerTask`。
 
 ## 194 Java 编程练习
@@ -6046,7 +6094,7 @@ import java.awt.TrayIcon.MessageType;
 import java.net.URL;
 try {
     String url="https://cdn4.iconconfider.com/data/icons/common-toolbar/36/Save-16.png";
-    Image icon=new ImageIcon(new URL (url)).getImage();
+    Image icon=new ImageIcon(new URL(url)).getImage();
     TrayIcon trayIcon=new TrayIcon(icon);
     SystemTray.getSystemTray().add(trayIcon);
     trayIcon.display("Warning", "Hard drive full", MessageType.INFO);
@@ -6232,7 +6280,7 @@ class Radio {
 public static final String SEA_101_STATION_NAME = "SEA 101".toLowerCase();
 ```
 
-类变量是我们的下一个要的话题。
+类变量是我们的下一个要讨论的话题。
 
 # 使用 Tracer 类编写日志输出
 
@@ -6343,7 +6391,7 @@ public Radio(String name) {
 
 有两个参数化构造函数。存储频率的构造函数调用 `setFrequency(double)` 将频率传递到内部实例变量。我们面临的决策是直接通过 `this.frequency = frequency` 初始化实例变量，还是调用 setter。使用 setter 的方案通常更好。有两个原因：首先，初始化状态是实现细节。如果我们更改了实例变量，开发者将不得不访问所有读取或写入的地方。同样重要的是要考虑 setter 也可以执行有效性检查。我们不想在构造函数中重复这一点，因为代码重复是糟糕的。因此，构造函数可以将保存操作委托给 setter。
 
-如果用名称初始化电台，首先将字符串转换为频率，然后构造函数转发
+如果用名称初始化电台，首先将字符串转换为频率，然后构造函数转发：
 
 ```java
 this(stationNameToFrequency(station));
@@ -6362,8 +6410,8 @@ private static final double AM_MIN_FREQUENCY = 148.5;
 private static final double AM_MAX_FREQUENCY = 26.1;
 private static final double FM_MIN_FREQUENCY = 87.5;
 private static final double FM_MAX_FREQUENCY = 108.0;
-private double minFrequency = MIN_FREQUENCY;
-private double maxFrequency = MAX_FREQUENCY;
+private double minFrequency = AM_MIN_FREQUENCY;
+private double maxFrequency = AM_MAX_FREQUENCY;
 
 public void setModulation(Modulation modulation) {
     this.modulation = Objects.requireNonNull(modulation);
@@ -6389,7 +6437,7 @@ public void setModulation(Modulation modulation) {
 
 图 6.11 带有三个构造器的 Radio UML 图。
 
-## 实现拷贝构造函数
+# 实现拷贝构造函数
 
 `com/tutego/exercise/device/device/Radio.java`
 
@@ -6420,51 +6468,13 @@ public class TreasureChest {
 
 
 
-## TreasureChest 类定义
-
-```java
-public final int gemstoneWeight;
-
-private TreasureChest(int goldboonWeight, int gemstoneWeight) {
-    if (goldboonWeight < 0 || gemstoneWeight < 0)
-        throw new IllegalArgumentException("Weight can't be negative");
-    this.goldboonWeight = goldboonWeight;
-    this.gemstoneWeight = gemstoneWeight;
-}
-
-public static TreasureChest newInstance() {
-    return new TreasureChest(0, 0);
-}
-
-public static TreasureChest newInstanceWithGoldboonWeight(int weight) {
-    return new TreasureChest(weight, 0);
-}
-
-public static TreasureChest newInstanceWithGemstonesWeight(int weight) {
-    return new TreasureChest(0, weight);
-}
-
-public static TreasureChest newInstanceWithGoldboonWeightAndGemstonesWeight(
-        int goldboonWeight, int gemstoneWeight) {
-    return new TreasureChest(goldboonWeight, gemstoneWeight);
-}
-```
-
-类定义包含两个 `public` 变量。由于它们是 `final` 的，一旦写入后就无法修改。将变量设为 `public` 是可以的；如果变量不再修改，就不需要 getter。setter 主要用于确保值的范围正确——在我们的情况下，这是通过接收并验证值实现的。
-
-我们有一个私有构造函数无法从外部调用，仅供我们的静态工厂方法使用。这四个工厂方法允许两个实例变量的所有排列组合：
-- 均未设置，值默认为 0。
-- 设置其中一个值，另一个初始化为 0。
-- 两个值都设置了。
-
-现在，这些工厂方法相比构造函数的优势是什么？如果有明确的方式来实例化，构造函数是一个很好的选择。但在我们的情况下，存在初始化 `goldboonWeight` 或 `gemstoneWeight` 的可能，而构造函数具有类名。无法编写两个接收整数的构造函数变体来区分应该赋值 `goldboonWeight` 还是 `gemstoneWeight`。当然，你可以跟踪它并将其作为枚举作为第二个参数，但这并不吸引人。工厂方法的魅力在于拥有命名的方法，即使不同方法的参数列表相同，也能通过方法名明确其功能。
-
-## 连接 MonitorTube 与 TV
+# 连接 MonitorTube 与 TV
 
 路径：`com/tutego/exercise/device/device/TVWithMonitorTube.java`
 
 ```java
 class MonitorTube {
+
     private final TV tv;
 
     public MonitorTube(TV tv) {
@@ -6485,6 +6495,7 @@ class MonitorTube {
 }
 
 class TV {
+
     private boolean isOn;
     private final MonitorTube tube = new MonitorTube(this);
 
@@ -6504,7 +6515,16 @@ class TV {
 }
 ```
 
-## 编写你的类
+类定义包含两个 `public` 变量。由于它们是 `final` 的，一旦写入后就无法修改。将变量设为 `public` 是可以的；如果变量不再修改，就不需要 getter。setter 主要用于确保值的范围正确——在我们的情况下，这是通过接收并验证值实现的。
+
+我们有一个私有构造函数无法从外部调用，仅供我们的静态工厂方法使用。这四个工厂方法允许两个实例变量的所有排列组合：
+- 均未设置，值默认为 0。
+- 设置其中一个值，另一个初始化为 0。
+- 两个值都设置了。
+
+现在，这些工厂方法相比构造函数的优势是什么？如果有明确的方式来实例化，构造函数是一个很好的选择。但在我们的情况下，存在初始化 `goldboonWeight` 或 `gemstoneWeight` 的可能，而构造函数具有类名。无法编写两个接收整数的构造函数变体来区分应该赋值 `goldboonWeight` 还是 `gemstoneWeight`。当然，你可以跟踪它并将其作为枚举作为第二个参数，但这并不吸引人。工厂方法的魅力在于拥有命名的方法，即使不同方法的参数列表相同，也能通过方法名明确其功能。
+
+# 6 编写你的类
 
 下一个类 `TV` 有开启或关闭状态。我们在 `on()` 和 `off()` 方法中设置这个内部标记。实例变量 `tube` 记录了这一点。初始化如下：
 
@@ -6514,7 +6534,7 @@ private final MonitorTube tube = new MonitorTube(this);
 
 在构造函数处，`this` 被传递了，即对 `TV` 的引用。我们建立了一个双向关系。如果我们只需要单向关系，我们将只有一个 `MonitorTube`，而不是从 `MonitorTube` 到 `TV` 的引用。`on()` 和 `off()` 方法有两个任务：首先设置内部标记，然后委托给 `tube`。双向关系非常方便，你始终可以到达另一端。然而，它们存在两个对象指向同一边的风险，即如果双方重新绑定，在建立新关系之前必须解决这两个关系。方法确保了对方解耦。
 
-## 测验：关联、组合与聚合
+# 测验：关联、组合与聚合
 
 普通的关联（Association）是对象之间的链接。当一个对象引用另一个对象时，该术语是正确的。
 
@@ -6523,12 +6543,13 @@ private final MonitorTube tube = new MonitorTube(this);
 - 在组合中，关联对象的生命周期与另一个对象的生命周期绑定。例如：对象 A 引用对象 B，如果 A “死亡”（即不再被引用且可以被垃圾回收器移除），B 也“死亡”，至少 B 上不再存在引用。
 - 聚合结合两个对象，被引用对象有自己的生命周期。如果对象 A 关联到另一个对象 B 且 A 被移除，B 可能仍然存在。“聚合”一词并不常用；人们简单地使用“关联”一词，尤其是在 UML 图中。然而，由于“关联”一词没有说明被引用对象的生命周期，可以显式地强调这一点。
 
-## 为 Ship 添加 1:n 关联的行
+# 为 Ship 添加 1:n 关联的行
 
 路径：`com/tutego/exercise/device/device/Application.java`
 
 ```java
 class Ship {
+
     private final ArrayList<Radio> radios = new ArrayList<>();
 
     public void load(Radio radio) {
@@ -6546,7 +6567,7 @@ class Ship {
 }
 ```
 
-## 206 Java 编程练习
+# 206 Java 编程练习
 
 ```java
 return result;
@@ -6560,21 +6581,22 @@ return result;
 ArrayList<Radio> radios = new ArrayList<>();
 ```
 
-由于该变量是私有的，无法从外部访问，我们必须通过可以访问实例变量的辅助方法。`load(Radio radio)` 允许添加收音机。该方法将其委托给了 `ArrayList` 的 `add(...)` 方法。
+由于该变量是私有的，无法从外部访问，我们必须通过可以访问实例变量的辅助方法。`load(Radio radio)` 允许添加收音机。该方法将其委托给了 `ArrayList` 的 `add(..)` 方法。
 第二个方法 `countDevicesSwitchedOn()` 返回开启的收音机数量。需要注意的是，它并不是收音机的总数——这个问题很容易就能回答——而是关于 `isOn` 状态设置为 `true` 的收音机数量。因此，我们需要遍历整个列表并逐个检查每个收音机。这里有几种解决方案：
 
-- 一种实用的变体是增强型 `for` 循环。我们在学习数组时知道了这种循环类型：在冒号右侧可以是一个 `ArrayList`。通过这种方式，我们可以轻松地从头到尾运行整个列表。我们获取每个收音机并测试实例变量是否被设置，如果是，我们就增加计数器。
+- 一种实用的变体是增强型 for 循环。我们在学习数组时知道了这种循环类型：在冒号右侧可以是一个 `ArrayList`。通过这种方式，我们可以轻松地从头到尾运行整个列表。我们获取每个收音机并测试实例变量是否被设置，如果是，我们就增加计数器。
 - 另一种解决方案是使用计数循环，从 0 运行到 `radios.size()`，并使用 `get(int)` 方法选取每个位置上的每个收音机。
-- 还有第三种使用 Stream API 的解决方案，但我们还需要一段时间才能到达那一步。不过，这个问题可以用一行代码来回答。
+- 还有第三种使用 stream API 的解决方案，但我们还需要一段时间才能到达那一步。不过，这个问题可以用一行代码来回答。
 
 如果我们想用现有的知识给船添加其他电器，我们就必须引入带有特殊类型的不同数据结构，例如，一个带有制冰机的 `ArrayList` 或一个带有电视机的 `ArrayList`。显然，这很快就会变得复杂，但面向对象的编程语言对对此提供了一个完美的解决方案：继承！
 
-## 通过继承在电子设备中引入抽象
+# 通过继承在电子设备中引入抽象
 
 路径：`com/tutego/exercise/device/jkvow/ElectronicDevices.java`
 
 ```java
 class ElectronicDevice {
+
     private boolean isOn;
 
     public void on() {
@@ -6590,7 +6612,7 @@ class ElectronicDevice {
     }
 
     public String toString() {
-        return "ElectronicDevice[" + (isOn ? "on" : "off") + "]";
+        return "ElectronicDevice[isOn=" + (isOn ? "on" : "off") + "]";
     }
 }
 
@@ -6613,22 +6635,20 @@ class Radio extends ElectronicDevice {
 
 程序可以执行，启动后屏幕上会有输出：
 
-```
-1
-2
-```
+12
 
 构建了一个类型为 `Three` 的对象，这导致构造函数 `Three()` 被调用。`Three()` 构造函数调用类 `Two` 的构造函数，`Two()` 构造函数调用 `One()`。
 糟糕的是，`Three` 类中只有一个编译器创建的默认构造函数，而我们添加了一个 `Three()` 方法，它与构造函数没有任何共同点。该方法首字母大写，这违反了命名规范，但并不允许。它会自动调用父类的构造函数。
 
 然而，默认构造函数中没有控制台输出。我们自己编写了带有控制台输出的构造函数 `Two()` 和 `One()`，只有这些构造函数运行到了顶部，输出是 1，然后是 2。
 
-## 测验：私有和受保护构造函数
+# 测验：私有和受保护构造函数
 
 如果一个类具有私有构造函数，则无法从外部构建该类的实例。但是，可以在类内部构建实例，我们可以通过使用静态方法来实现。如果该方法将此实例交给外部，我们还称之为工厂方法（factory method）。下面的示例说明了这一点：
 
 ```java
 class Cloth {
+
     private Cloth() {
     }
 
@@ -6657,7 +6677,7 @@ class Petticoat extends Cloth {
 将导致错误 `There is no constructor available in 'Cloth'`。
 这是因为构造函数是私有的，子类无法调用它。
 
-## 确定开启设备的数量
+# 确定开启设备的数量
 
 路径：`com/tutego/exercise/device/mkw/ElectronicDevice.java`
 
@@ -6674,14 +6694,15 @@ public static int numberOfDevicesSwitchedOn(ElectronicDevice[] devices) {
 
 该方法与我们编写的 `numberOfDevicesSwitchedOn()` 非常相似。唯一的区别是现在我们不仅是在询问收音机，而是询问开启的 `ElectronicDevice` 对象。也就是说，任何 `ElectronicDevice` 的东西都可以通过变长参数（vararg）引入方法。这可以是三台收音机，但也只有一个。
 
-使用变长参数时，记住它是一个数组，这些是对象，对象引用可以是 `null`。我们的方法没有对 `ElectronicDevice == null` 进行查询，本身不会抛出异常。然而，当增强型 `for` 循环访问空数组时，会隐式抛出此异常。因此，我们可以显式地查询 `null`，因为结果（空指针异常）是相同的。
+使用变长参数时，记住它是一个数组，这些是对象，对象引用可以是 `null`。我们的方法没有对 `ElectronicDevice == null` 进行查询，本身不会抛出异常。然而，当增强型 for 循环访问空数组时，会隐式抛出此异常。因此，我们可以显式地查询 `null`，因为结果（空指针异常）是相同的。
 
-## 船应该持有任何电子设备
+# 船应该持有任何电子设备
 
 路径：`com/tutego/exercise/device/lofryn/Ship.java`
 
 ```java
 public class Ship {
+
     private final ArrayList<ElectronicDevice> devices = new ArrayList<>();
 
     public void load(ElectronicDevice device) {
@@ -6695,12 +6716,13 @@ public class Ship {
 
 `Objects.requireNonNull(...)` 防止空引用被添加到列表中。
 
-## 将完好的收音机带上船
+# 将完好的收音机带上船
 
 路径：`com/tutego/exercise/device/dxsyvb/Ship.java`
 
 ```java
 public class Ship {
+
     private final ArrayList<ElectronicDevice> devices = new ArrayList<>();
 
     public void load(ElectronicDevice device) {
@@ -6775,7 +6797,7 @@ public class Firebox extends ElectronicDevice {
 }
 ```
 
-`Firebox` 是 `ElectronicDevice` 的另一个子类。该类继承了父类的所有内容，并重写了 `off()` 方法。在体内，只有控制台输出；并没有修改 `on/off` 标记。通过 `Override` 注解，我们标记该方法已存在于父类，但在子类中用新行为重写了它。
+`Firebox` 是 `ElectronicDevice` 的另一个子类。该类继承了父类的所有内容，并重写了 `off()` 方法。在体内，只有控制台输出；并没有修改 `on/off` 标记。通过 `@Override` 注解，我们标记该方法已存在于父类，但在子类中用新行为重写了它。
 
 对于编译器和运行时环境来说，该注解不是必不可少的；关键在于知道何时编写了方法。但有了注解，编译器可以检测到错误，例如拼写错误或子类变化（例如父类中的参数列表），导致子类中的方法不再是重写（override），而是变成了重载（overload）。
 
@@ -6817,13 +6839,15 @@ class TV extends ElectronicDevice {
 com/tutego/exercise/device/mkwrrt/Ship.java
 
 public void holiday() {
-    for ( ElectronicDevice device : devices )
+    for (ElectronicDevice device : devices)
         device.off();
 }
 ```
 
+```java
 aged += 4;
 }
+```
 
 所以构造函数说是：
 
@@ -6833,7 +6857,7 @@ Rum() {
 }
 ```
 
-如果我们在 `main(..)` 中创建变量 `agedGay`，那么它的对象类型是 `Rum`，引用类型是 `AlcoholicDrink`。如果我们调用 `older()` 方法，则会调用 `Rum` 类型的覆盖方法，因为内存中有一个 `Rum` 对象，且覆盖方法是动态绑定的。`older()` 方法查询变量 `aged` 并返回它。我们之前看到过 `aged` 默认被设置为 7。但为什么返回的不是 7 呢？因为变量名后面有一个后增运算符 `++`。也就是说，`aged` 的赋值值被保存用于返回，然后进行加1，最后返回保存的值。我们并不查询数字 8。
+如果我们在 `main(...)` 中创建变量 `agedGay`，那么它的对象类型是 `Rum`，引用类型是 `AlcoholicDrink`。如果我们调用 `older()` 方法，则会调用 `Rum` 类型的覆盖方法，因为内存中有一个 `Rum` 对象，且覆盖方法是动态绑定的。`older()` 方法查询变量 `aged` 并返回它。我们之前看到过 `aged` 默认被设置为 7。但为什么返回的不是 7 呢？因为变量名后面有一个后增运算符 `++`。也就是说，`aged` 的赋值值被保存用于返回，然后进行加1，最后返回保存的值。我们并不查询数字 8。
 
 实例变量 `aged` 存在于 `AlcoholicDrink` 和 `Rum` 类中。提醒一下，类变量和实例变量不是动态绑定的。只有对象是动态绑定的，类变量、实例变量或静态方法永远不是！
 
@@ -6845,27 +6869,28 @@ Rum() {
 
 ## TimerTask 作为抽象类的示例
 
-com/tutego/exercise/oop/FreeSpaceTimer.java
+`com/tutego/exercise/oop/FreeSpaceTimer.java`
 
 ```java
 public class FreeSpaceTimer {
-    public static void main(String[] args ) {
-        final int REPETITION_PERIOD=2000 /*ms */
+    public static void main(String[] args) {
+        final int REPETITION_PERIOD = 2000; // ms
         new Timer().schedule(new FreeSpaceTimerTask(), 0, REPETITION_PERIOD);
     }
 }
 
 class FreeSpaceTimerTask extends TimerTask {
-    private static final long MIN_CAPACITY=100_000_000L;
-    private final File root=File.listRoots()[0];
+    private static final long MIN_CAPACITY = 100_000_000L;
+    private final File root = File.listRoots()[0];
 
     @Override
     public void run() {
-        long freeSpace=root.getFreeSpace();
-        if ( freeDiskSpace<MIN_CAPACITY ) {
+        long freeSpace = root.getFreeSpace();
+
+        if (freeSpace < MIN_CAPACITY) {
             System.out.printf(
                 "Device %s has less than %d byte available, currently %d byte%n",
-                root, MIN_CAPACITY, freeDiskSpace );
+                root, MIN_CAPACITY, freeSpace);
         }
     }
 }
@@ -6879,7 +6904,7 @@ class FreeSpaceTimerTask extends TimerTask {
 
 ## 注意
 
-- 1 两种调制方法 AM 和 FM 的区别在于如何使用载波频率对待传输的信号进行编码。维基百科提供了概述：https://en.wikipedia.org/Modulation
+1. 两种调制方法 AM 和 FM 的区别在于如何使用载波频率对待传输的信号进行编码。维基百科提供了概述：https://en.wikipedia.org/Modulation
 
 ## Records、接口和密封类
 
@@ -6892,26 +6917,29 @@ Records 在 Java 中非常有用，因为它们提供了一种简单且紧凑的
 给定以下 Java Record：
 
 ```java
-record Candy( String name, int calories )
+record Candy(String name, int calories)
 ```
 
 以下哪些语句是正确的？
-- 1. `Candy` 对象的 name 和 age 在创建后无法更改。
-- 2. `Candy` 对象的属性通过 getter 方法访问。
-- 3. `Candy` 不能有静态方法。
-- 4. 必须手动实现 `equals()` 和 `hashCode()` 方法。
-- 5. `Candy` 的 `toString()` 方法产生 JSON（JavaScript 对象表示）格式。
+
+1. `Candy` 对象的 name 和 age 在创建后无法更改。
+2. `Candy` 对象的属性通过 getter 方法访问。
+3. `Candy` 不能有静态方法。
+4. 必须手动实现 `equals()` 和 `hashCode()` 方法。
+5. `Candy` 的 `toString()` 方法产生 JSON（JavaScript 对象表示）格式。
 
 ## 开发复数的 Record
 
 复数是工程、物理和计算机科学等领域的重要概念。复数由一个实部和一个虚部组成。以 $a+bi$ 的形式表示，其中 $a$ 是实部，$b$ 是虚部。数学运算实现如下：
+
 - 加法和减法：运算逐元素执行，即一个数的虚部加上/减去另一个数的实部。
 - 乘法：运算遵循规则 $(a+bi)\times(c+di)=(ac-bd)+(ad+bc)$。
-- 复数的绝对值：$z=a+bi$ 的绝对值定义为 $|z|=\sqrt{a²+b²}$。
+- 复数的绝对值：$z=a+bi$ 的绝对值定义为 $|z|=\sqrt{a^2+b^2}$。
 
 ## Records、接口和密封类
 
 编写一个带有实部和虚部组件的新 record。
+
 - 创建一个代表虚数单位的常量。
 - 实现 `add(Complex other)`、`subtract(Complex other)`、`multiply(Complex other)` 和 `abs()` 方法。
 - 重写 `toString()` 方法，将实部和虚部保留三位小数，以便输出变为 `-3.000+2.000i` 或 `2.000-3.000i`。
@@ -6921,8 +6949,8 @@ record Candy( String name, int calories )
 给定以下 Java Record：
 
 ```java
-record Candy( String name, int calories ) {
-    public static String id=UUID.randomUUID().toString();
+record Candy(String name, int calories) {
+    public static String id = UUID.randomUUID().toString();
 }
 ```
 
@@ -6931,10 +6959,11 @@ record Candy( String name, int calories ) {
 以下备选表示法有效吗？
 
 ```java
-record Candy( String name, int calories ) {
+record Candy(String name, int calories) {
     public static String id;
+
     Candy {
-        id=UUID.randomUUID().toString();
+        id = UUID.randomUUID().toString();
     }
 }
 ```
@@ -6944,25 +6973,25 @@ record Candy( String name, int calories ) {
 海盗不仅有猎物的嗅觉，还有对奇异宠物的喜爱。到目前，通过两个 record 表示宠物：
 
 ```java
-record MischiefMonkey( String name, boolean isMutinous )
-record FeistyParrot( String name, String favoritePhrase, boolean isMutinous )
+record MischiefMonkey(String name, boolean isMutinous)
+record FeistyParrot(String name, String favoritePhrase, boolean isMutinous)
 ```
 
 建模必须是灵活的，因为会有新类型的添加和更改。因此，来自 record 的数据应该转换为 `java.util.Properties` 对象。`Properties` 是一个将一个字符串与另一个字符串关联的关联存储器。`setProperty(String key, String value)` 方法将键值对存入 `Properties` 对象。
 
 - 编写方法 `convertToProperties(Object)` 将 `MischiefMonkey` 和 `FeistyParrot` 类型的宠物转换为 `Properties` 对象。
-- 叛变的（isMutinous）宠物应该被忽略，并产生空的 `Properties` 对象。
+- 叛变的（`isMutinous`）宠物应该被忽略，并产生空的 `Properties` 对象。
 - 该方法在调用 `null` 或未知类型时应返回空的 `Properties` 对象。
 
 ## Java 编程练习
 
 示例（显示 `Properties` 的 `toString()` 表示）：
 
-- `new MischiefMonkey("Jack", true ) -> {}`
-- `new FeistyParrot("Captain Squawk", "Avast, scallyags!", false ) -> [favoritePhrase=Avast, name=Captain Squawk]`
-- `new MischiefMonkey("Barbossa", false ) -> {name=Barbossa}`
-- `new FeistyParrot("Polly", "Pieces of eight!", true ) -> {}`
-- `new FeistyParrot("Marauder", "Walk the plank!", false ) -> {favoritePhrase=Walk the plank, name=Marauder}`
+- `new MischiefMonkey("Jack", true) -> {}`
+- `new FeistyParrot("Captain Squawk", "Avast, scallyags!", false) -> {favoritePhrase=Avast, name=Captain Squawk}`
+- `new MischiefMonkey("Barbossa", false) -> {name=Barbossa}`
+- `new FeistyParrot("Polly", "Pieces of eight!", true) -> {}`
+- `new FeistyParrot("Marauder", "Walk the plank!", false) -> {favoritePhrase=Walk the plank, name=Marauder}`
 
 ## 接口
 
@@ -6975,7 +7004,7 @@ record FeistyParrot( String name, String favoritePhrase, boolean isMutinous )
 任务部分 1：
 
 1. 在 `ElectronicDevice` 中声明一个私有实例变量 `watt`，并使用开发环境生成 Setter/Getter。
-2. 添加 `toString()` 方法，返回如下内容：“ElectronicDevice[watt=12kW]”。某些子类已经重写了 `toString()`；它们应该在自己的 `toString()` 方法中包含 `super.toString()`。
+2. 添加 `toString()` 方法，返回如下内容：“`ElectronicDevice[watt=12kW]`”。某些子类已经重写了 `toString()`；它们应该在自己的 `toString()` 方法中包含 `super.toString()`。
 
 任务部分 2：
 
@@ -6986,18 +7015,21 @@ record FeistyParrot( String name, String favoritePhrase, boolean isMutinous )
 示例：
 
 ```java
-ElectronicDevice ea1=new Radio(); ea1.setWatt( 200 );
-ElectronicDevice ea2=new Radio(); ea2.setWatt( 20 );
-Comparator<ElectronicDevice> c=new ElectronicDeviceWattComparator();
+ElectronicDevice ea1 = new Radio(); ea1.setWatt(200);
+ElectronicDevice ea2 = new Radio(); ea2.setWatt(20);
+Comparator<ElectronicDevice> c = new ElectronicDeviceWattComparator();
 ```
 
 
 
-System.out.println(`c.compare(ea1, ea2)`);
+System.out.println(c.compare(ea1, ea2));
 
-System.out.println(`c.compare(ea2, ea1)`);
+System.out.println(c.compare(ea2, ea1));
 
-## 练习目标：实现 `ElectronicDeviceWattComparator` 作为 `Comparator` 接口的实现，如图 UML 图所示：
+```
+```
+
+练习目标：实现 `ElectronicDeviceWattComparator` 作为 `Comparator` 接口的实现，如图 UML 图所示：
 
 ![](img/1772db956b1b6830f9a15683dc55dea0_235_0.png)
 
@@ -7007,7 +7039,7 @@ System.out.println(`c.compare(ea2, ea1)`);
 
 `java.util.Collections` 类有一个静态方法，可以返回集合中最大的元素（为了简化，删除了括号中的泛型）：
 
-```java
+```
 static T max(Collection coll, Comparator comp)
 ```
 
@@ -7024,7 +7056,7 @@ static T max(Collection coll, Comparator comp)
 
 - 以下程序返回输出 12000。
 
-```java
+```
 Radio grannysRadio = new Radio();
 grannysRadio.volumeUp();
 grannysRadio.setWatt(12_000);
@@ -7057,7 +7089,7 @@ System.out.println(ship.findPowerConsumingElectronicDevice().getWatt());
 
 使用示例：
 
-```java
+```
 Distance oneKm = Distance.ofKm(1);
 System.out.printf("1 km=%d km, %d m\n", oneKm.kilometer(), oneKm.meter());
 
@@ -7073,7 +7105,7 @@ System.out.printf("12345 m=%d km, %d m\n", moreMeter.kilometer(), moreMeter.mete
 
 例如，如果我们想从 `List<String>` 中删除空字符串，可以在列表上调用 `removeIf(new IsNotEmpty())`，其中 `IsNotEmpty` 声明如下：
 
-```java
+```
 class IsNotEmpty implements Predicate<String> {
     @Override
     public boolean test(String t) {
@@ -7139,7 +7171,7 @@ Ciao 船长开启了他的美食之旅，并总是随机选择糖果。
 
 - 给枚举类型 `CandyType` 添加一个返回随机糖果的 `random()` 方法。
 
-```java
+```
 System.out.println(CandyType.random()); // 例如 CHOCOLATE
 System.out.println(CandyType.random()); // 例如 LOLLIPOPS
 ```
@@ -7201,7 +7233,7 @@ System.out.println(CandyType.random()); // 例如 LOLLIPOPS
 
 枚举类型可以实现接口但不能继承类。给定一个接口：
 
-```java
+```
 interface Distance {
     double distance(double x1, double y1, double x2, double y2);
     double distance(double x1, double y1, double z1, double z2);
@@ -7213,7 +7245,7 @@ interface Distance {
 - 将接口 `Distance` 引入你的项目。
 - 声明实现 `Distance` 的枚举类型 `Distances`，包含一个元素 `EUCLIDEAN`。
 
-```java
+```
 enum Distances implements Distance {
     EUCLIDEAN
 }
@@ -7231,7 +7263,7 @@ enum Distances implements Distance {
 
 给定以下枚举类型的声明。程序能编译吗？如果编译通过并运行，有结果吗？如果有结果，输出是什么？
 
-```java
+```
 enum ShipType {
     AVISO("Aviso"), BRIG("Brig");
     private final String type;
@@ -7251,7 +7283,7 @@ enum ShipType {
 
 回顾：
 
-```java
+```
 record Candy(String name, int calories) { }
 ```
 
@@ -7260,7 +7292,7 @@ record Candy(String name, int calories) { }
 
 ## 练习：带有静态变量的 Record
 
-Record 可以包含包含实部和虚部分的组件。
+Record 复包含了包含实部和虚部分的组件。
 静态常量 `i` 代表虚数单位 `i`，并声明为 `final` 以防止被完全修改。自定义静态变量不会自动变为 `final`，这与 record 的状态不同。
 重写了 `toString()` 方法，根据虚部是负还是正，在实部和虚部之间放置加号或减号。虽然可以使用格式化字符串来设置符号，但直接在符号和数字之间添加空格并不十分直观。
 
@@ -7268,10 +7300,11 @@ Record 可以包含包含实部和虚部分的组件。
 
 Record 可以包含静态变量，因此两种变体都可以编译。它们的结果是相同的，变量 `id` 都包含一个全局唯一标识符（UUID）字符串。在第二种情况下，初始化只写在紧凑构造函数中。另一种写法是使用规范构造函数，如：
 
-```java
+```
 record Candy(String name, int calories) {
     public static String id;
 }
+
 Candy(String name, int calories) {
     this.name = name;
     this.calories = calories;
@@ -7281,7 +7314,7 @@ Candy(String name, int calories) {
 
 ## Record 模式 (Record Patterns)
 
-```java
+```
 static Properties convertProperties(Object pet) {
     Properties result = new Properties();
     switch (pet) {
@@ -7311,7 +7344,7 @@ com/tutorial/exercise/oop/PetDemo.java
 
 com/tutego/exercise/device/bhaddavq/ElectronicDevice.java
 
-```java
+```
 public class ElectronicDevice {
     private int watt;
     public int getWatt() {
@@ -7330,7 +7363,7 @@ public class ElectronicDevice {
 `ElectronicDevice` 类只有功率，其他内容都被删除了，因为它们对于作业是不必要的。`toString()` 方法将瓦除以 1000 以转换为千瓦。
 让我们再次查看 `Comparator` 接口的简化描述：
 
-```java
+```
 public interface Comparator<T> {
     int compare(T o1, T o2);
 }
@@ -7340,7 +7373,7 @@ public interface Comparator<T> {
 
 `Comparator` 是一个带有类型参数 `T` 的泛型接口。如果我们类实现了 `Comparator` 接口，我们需要创建一个带参数的参数类型。该类型代表 `Comparator` 想要比较的类型，在我们的例子中是 `ElectronicDevice`。当我们实现 `Comparator` 时，我们实现了 `compare(T o1, T o2)` 方法；类型参数变成了类型参数 `ElectronicDevice`。
 
-获取 `Comparator` 接口的实现有多种方法。第一种变体如解决方案所示。第二种变体通过枚举，第三种通过 Lambda 表达式。我们将坚持简单的解决方案，稍后会通过 Lambda 表达式更详细介绍 `Comparator` 的实现。
+获取 `Comparator` 接口的实现有多种方法。第一种变体如解决方案所示。第二种变体通过枚举（enum），第三种通过 Lambda 表达式。我们将坚持简单的解决方案，稍后会通过 Lambda 表达式更详细介绍 `Comparator` 的实现。
 
 ```java
 com/tutego/exercise/device/bhaddavq/ElectronicDeviceWattComparator.java
@@ -7545,6 +7578,35 @@ public static CandyType random() {
 
 *(注：原文代码块中存在格式错误/断裂，翻译时已根据逻辑进行了微调以保持可读性)*
 
+## 7 • 记录、接口、枚举和密封类 235
+
+函数参数是枚举元素（通过 `this`），但由于它们具有关联的序数（ordinal numbers），在枚举类型中，这种映射也可以理解为从整数到 `CandyType` 的映射：
+
+```text
+next: int -> CandyType
+```
+
+这种类型的映射可以使用关联数据结构很好地实现，这里有一个很方便特性：枚举元素的序数从 0 开始，且数字是递增的。可以使用数组，这是第二个提出的解决方案：
+
+`com/tutego/exercise/lang/AddictiveQualityCandy.java`
+
+```java
+private static CandyType[] NEXT = {
+    // CARAMELS, CHOCOLATE, GUMIES,
+    LICORICE, LOLLIPOPS, CHEWING_GUMS, COTTON_CAND
+    CARAMELS, CARAMELS, CHOCOLATE, GUMMILL, GUMMIS, LOLLIPOPS
+};
+
+public CandyType next() {
+    if (this == LOLLIPOPS) {
+        return Math.random() > 0.5 ? LICORICE : CHEWING_GUMS;
+    }
+    return NEXT[ordinal()];
+}
+```
+
+程序包含一个数组，该数组包含了以下每种糖果。`next()` 方法获取序数，然后跳转到数组。如果添加了新的枚举项，我们需要调整数组。剩下的问题是 `LOLLIPOPS`，程序通过特殊处理对其进行检查。在数组中，该位置为 `null`，因为永远不会访问到该元素。
+
 ## 高级用户的 Lambda 解决方案
 
 这种一边是数组，另一边在 `next()` 内部进行特殊处理的混合依然并不理想。因此，我们想要完成一个非常高级的第三种变体，它基于 Java 的全可能性：
@@ -7553,20 +7615,14 @@ public static CandyType random() {
 
 ```java
 interface CandyTypeSupplier extends Supplier<CandyType> {
-}
+    private static CandyTypeSupplier[] NEXT = {
+        () -> CARAMELS, () -> CARAMELS, () -> CHOCOLATE, () -> GUMMIS,
+        () -> (Math.random() > 0.5 ? LICORICE : CHEWING_GUMS), () -> GUMMIS, () -> LOLLIPOPS
+    };
 
-private static CandyTypeSupplier[] NEXT = {
-    () -> CARAMELS,
-    () -> CARAMELS,
-    () -> CHOCOLATE,
-    () -> GUMMIS,
-    () -> (Math.random() > 0.5 ? LICORICE : CHEWING_GUMS),
-    () -> GUMMIS,
-    () -> LOLLIPOPS
-};
-
-public CandyType next() {
-    return NEXT[ordinal()].get();
+    public CandyType next() {
+        return NEXT[ordinal()].get();
+    }
 }
 ```
 
@@ -7618,6 +7674,7 @@ public double distance(double x1, double y1, double z1,
 
 ```java
 enum Distances implements Distance {
+
     EUCLIDEAN
 
     @Override
@@ -7667,6 +7724,7 @@ import java.util.Comparator;
 
 public class ElectronicDeviceWattComparator
     implements Comparator<ElectronicDevice> {
+
     @Override
     public int compare(ElectronicDevice ea1, ElectronicDevice ea2) {
         // ...
@@ -7690,6 +7748,7 @@ public class ElectronicDeviceWattComparator
 
 ```java
 public class Pirate {
+
     static class Body {
         class Arm {
             public void wave() { }
@@ -7712,6 +7771,7 @@ class Distillery {
 
     class Bottle {
         private Bottle() { }
+
         String brand() { return name; }
     }
 
@@ -7733,7 +7793,7 @@ public class captainsDistillery {
 public class Bottle {
     public void drink() { }
 
-    public class Rum {
+    public static class Rum {
         public static void drink() {
             System.out.println("At a gulp");
         }
@@ -7764,6 +7824,7 @@ public class Radio {
     public void setModulation(Modulation modulation) {
         this.modulation = modulation;
     }
+
     // 省略剩余的字段和方法
 }
 ```
@@ -7876,7 +7937,7 @@ List<String> lines = Files.readAllLines(Paths.get(filename));
 
 开发者必须记住哪些语言结构、构造函数和方法可能会抛出异常。虽然 IDE 会为异常提供提示，但它们可能不会对某些可能发生异常的情况提供警告，例如在访问数组时或者可能会抛出 `ArrayIndexOutOfBoundsException` 时。
 
-### 任务
+任务：
 
 - 如果我们编译以下代码块，需要捕获哪些异常？请仅使用 Javadoc 进行查找。
 
@@ -7897,7 +7958,7 @@ clip.close();
 
 `Integer.parseInt(String)` 将字符串转换为 `int` 类型的整数，如果无法转换则会抛出 `NumberFormatException`，例如 `Integer.parseInt("0x10")` 或 `Integer.parseInt(null)`。Java 库没有提供将数字字符串数组转换为 `int` 数组的方法。
 
-### 任务
+任务：
 
 - 编写一个新的 `static int[] parseInts(String...)`，将所有给定的字符串转换为整数。
 - 传递的字符串数量决定了返回数组的大小。
@@ -7905,6 +7966,8 @@ clip.close();
 - 不带参数调用 `parseInts()` 是可以的，但调用 `parseInts(null)` 必须导致异常。
 
 示例：
+
+> 246 Java 编程练习
 
 ---
 
@@ -8055,7 +8118,6 @@ d
 C, d
 
 只允许有效的音符，这些：
-
 C, D, E, F, G, A, B, C D E F G A B c d e f g a b c d' e' f' g' a' b'
 
 请记住，大写字母上的逗号是分隔符，是音符指示的一部分，就像最后一个八度小写字母上的撇号一样。CaptainCiao 想听听这首新作品，它在乐谱上。这里 ABC 记谱法是合适的：一个包含从 C 到 b' 音符的文件如下：
@@ -8124,11 +8186,9 @@ try ( ResourceB resourceB=new ResourceB( new ResourceA() ) ) { }
 
 ```java
 String filename="src\main\resources\com\tutego\exercises\util\\family-names.txt";
-
 try {
     Collection<String> lines=Files.readAllLines( Paths.get( filename ) );
     String first="", second="";
-
     for ( String line : lines ) {
         if ( line.length()>first.length() ) {
             second=first;
@@ -8137,9 +8197,9 @@ try {
             second=line;
         }
     }
-
     System.out.println( first+"-"+second );
-} catch ( IOException e ) {
+}
+catch ( IOException e ) {
     System.err.println("Error reading file "
 +new File(filename).getAbsolutePath());
     e.printStackTrace();
@@ -8152,20 +8212,16 @@ try {
 catch ( LineUnavailableException ) {
     System.err.println("Line cannot be opened because it is unavailable");
 }
-
 catch ( IOException e ) {
     System.err.println("An I/O exception of some sort has occurred");
 }
-
 catch ( UnsupportedAudioException e ) {
     System.err.printf("File %s did not contain valid data of a recognized file type and format%s\n",
         filename);
 }
-
 catch ( InterruptedException e ) {
     // 无操作
 }
-
 catch ( RuntimeException e ) {
     Logger.getLogger(LaughingMyArseOff.class.getSimpleName())
     .log(Level.SEVERE, e.getMessage(), e);
@@ -8202,7 +8258,7 @@ public static int[] parseInts(String... numbers) {
 
 如果调用 `parseInts(String..)` 时传入参数 `null`，`numbers.length` 将导致 `NullPointerException`，这是刻意为之。如果参数不等于 `null`，我们创建一个与解析后数组大小相同的整数新数组。循环遍历字符串并将每个值传递给 `parseIntOrElse(..)` 方法，传递 `0` 作为默认值。因此始终能得到一个整数结果，要么是转换后的，要么是 `0`。最后，我们返回该数组。
 
-高级 Java 开发者可以替换循环。因为有一个实用的 `Arrays.set(..)` 方法，其实现如下：
+高级 Java 开发者可以替换循环。因为有一个实用的 `Arrays.setAll(..)` 方法，其实现如下：
 
 ### JDK 对 setAll(...) 的实现
 
@@ -8217,7 +8273,7 @@ public static void setAll(int[] array, IntUnaryOperator generator) {
 该方法的特殊之处在于它不是通过我们自己的循环来遍历数组，而是由 `setAll(..)` 方法为我们完成。调用者只需要传递数组和一个类型为 `IntUnaryOperator` 的特殊对象，这是一个将索引（`int`）映射到数组中元素对象的函数。
 
 我们可以用以下代码替换循环：
-`com/utget/exercise/exception/StringsToInt.java`
+`com/tutego/exercise/exception/StringsToInt.java`
 
 ```java
 public static int[] parseInts( String... numbers ) {
@@ -8239,7 +8295,7 @@ public static int[] parseInts( String... numbers ) {
 
 如果调用 `parseInts(String..)` 时传入参数 `null`，`numbers.length` 将导致 `NullPointerException`，这是刻意为之。如果参数不等于 `null`，我们创建一个与解析后数组大小相同的整数新数组。循环遍历字符串并将每个值传递给 `parseIntOrElse(..)` 方法，传递 `0` 作为默认值。因此始终能得到一个整数结果，要么是转换后的，要么是 `0`。最后，我们返回该数组。
 
-高级 Java 开发者可以替换循环。因为有一个实用的 `Arrays.setCount(..)` 方法，其实现如下：
+高级 Java 开发者可以替换循环。因为有一个实用的 `Arrays.setAll(..)` 方法，其实现如下：
 
 ### JDK 对 setAll(...) 的实现
 
@@ -8317,7 +8373,7 @@ public class IllegalWattException extends RuntimeException {
 
 ## Throwable
 
-| 方法 | 说明 |
+| 方法 | 描述 |
 | :--- | :--- |
 | `Throwable()` |  |
 | `Throwable(message: String)` |  |
@@ -8325,21 +8381,21 @@ public class IllegalWattException extends RuntimeException {
 
 ## Exception
 
-| 方法 | 说明 |
+| 方法 | 描述 |
 | :--- | :--- |
 | `Exception()` |  |
 | `Exception(message: String)` |  |
 
 ## RuntimeException
 
-| 方法 | 说明 |
+| 方法 | 描述 |
 | :--- | :--- |
 | `RuntimeException()` |  |
 | `RuntimeException(message: String)` |  |
 
 # IllegalWattException
 
-| 方法 | 说明 |
+| 方法 | 描述 |
 | :--- | :--- |
 | `IllegalWattException()` |  |
 | `IllegalWattException(format: String, args: Object...)` |  |
@@ -8419,7 +8475,7 @@ private static final String VALID_NOTES = "A, B, C, D, E, F, G";
 
 # Lambda 表达式与函数式编程 10
 
-Lambda 表达式是函数式编程的基础，并被用作映射。函数式编程以函数为中心，侧重于没有副作用的纯表达式。在 Java 中，无法直接将函数（方法）传递给其他函数或返回它们，因此变通方法是将这些方法封装在类中并将其作为对象传递。Lambda 表达式提供了一种快速实现具有特定接口的类的方便方法。它们是仅有一个抽象方法的函数式接口的实现——是实现不同接口的类的替代且高效的捷径方法。因此，编写程序代码并将其传递给其他方法变得更加直截了当。
+Lambda 表达式是函数式编程的基础，并被用作映射。函数式编程以函数为中心，侧重于没有副作用的纯表达式。在 Java 中，无法直接将函数（方法）传递给其他函数或返回它们，因此变通方法是将这些方法封装在类中并将其作为对象传递。Lambda 表达式提供了一种快速实现具有特定接口的类的方便方法。它们是仅有一个抽象方法的函数式接口的实现——是实现不同接口的类的替代且高效的捷径方法。因此，编写程序代码并将其传递给其他方法变得更加直截。
 
 以下任务涉及 lambda 表达式的不同表示法以及 Java 库中反复出现的一些重要的函数式接口。
 
@@ -8559,7 +8615,7 @@ Comparator<Rectangle> comparator = ...;
 
 
 
-# Lambda 表达式与函数式编程 10
+# Lambda 表达式与函数式编程
 
 Lambda 表达式是函数式编程的基础，并被用作映射。函数式编程以函数为中心，侧重于没有副作用的纯表达式。在 Java 中，无法直接将函数（方法）传递给其他函数或返回它们，因此变通方法是将这些方法封装在类中并将其作为对象传递。Lambda 表达式提供了一种快速实现具有特定接口的类的方便方法。它们是仅有一个抽象方法的函数式接口的实现——是实现不同接口的类的替代且高效的捷径方法。因此，编写程序代码并将其传递给其他方法变得更加直接。
 
@@ -8646,12 +8702,12 @@ interface Distance {
 
 ```java
 class Schmegeggy {
-    static void printDistance( Distance distance, int a, int b ) {
-        System.out.println(distance.distance( a, b ));
+    static void printDistance(Distance distance, int a, int b) {
+        System.out.println(distance.distance(a, b));
     }
-    public static void main(String[] args ) {
+    public static void main(String[] args) {
         class ManhattanDistance implements Distance {
-            @Override public int distance( int a, int b ) {
+            @Override public int distance(int a, int b) {
                 return a+b;
             }
         }
@@ -8661,16 +8717,16 @@ class Schmegeggy {
 }
 ```
 
-在复习期间，上面的实现应该被弃用 lambda 表达式。哪些 lambda 表达式是等效且有效的？
+在复习期间，上面的实现应该被 lambda 表达式取代。哪些 lambda 表达式是等效且有效的？
 
-- 1. `printDistance( a , b ) ->a+b, 12, 33 );`
-- 2. `printDistance( a , b ) ->{ return a+b; }, 12, 33 );`
-- 3. `printDistance( int a, int b ) ->a+b, 12, 33 );`
-- 4. `printDistance( int a, b ) ->a+b, 12, 33 );`
-- 5. `printDistance( a , b ->{ return a+b; }, 12, 33 );`
-- 6. `printDistance( a , b ) ->a+b, 12, 33 );`
-- 7. `printDistance( a , b ) ->(int a; return b+b); }, 12, 33 );`
-- 8. `printDistance( Integer a, Integer b ) ->a+b, 12, 33 );`
+- 1. `printDistance((a, b) -> a + b, 12, 33);`
+- 2. `printDistance((a, b) -> { return a + b; }, 12, 33);`
+- 3. `printDistance((int a, int b) -> a + b, 12, 33);`
+- 4. `printDistance((int a, b) -> a + b, 12, 33);`
+- 5. `printDistance((a, b -> { return a + b; }), 12, 33);`
+- 6. `printDistance((a, b) -> a + b, 12, 33);`
+- 7. `printDistance((a, b) -> (int a; return b + b); }, 12, 33);`
+- 8. `printDistance((Integer a, Integer b) -> a + b, 12, 33);`
 
 # 函数式接口的 Lambda 表达式
 
@@ -8679,24 +8735,22 @@ Java 库中有许多接口，特别是函数式接口，即只有一个抽象方
 任务：为下方的每个变量分配一个有效的 lambda 表达式。
 
 ```java
-interface Runnable { void run(); };
-interface ActionListener { void actionPerformed(ActionEvent e); };
-interface Supplier<T> { T get(); };
-interface Consumer<T> { void accept(T t); };
+interface Runnable { void run(); }
+interface ActionListener { void actionPerformed(ActionEvent e); }
+interface Supplier<T> { T get(); }
+interface Consumer<T> { void accept(T t); }
 interface Comparator<T> { int compare(T o1, T o2); }
 ```
 
-`Runnable runnable = ...;`
+```java
+Runnable runnable = ...;
+ActionListener listener = ...;
+Supplier<String> supplier = ...;
+Consumer<Point> consumer = ...;
+Comparator<Rectangle> comparator = ...;
+```
 
-`ActionListener listener = ...;`
-
-`Supplier<String> supplier = ...;`
-
-`Consumer<Point> consumer = ...;`
-
-`Comparator<Rectangle> comparator = ...;`
-
-这些 lambda 表达式只需要编译。函数式接口的声明在注释中是为了以便更好地理解，但没有实际作用。
+这些 lambda 表达式只需要编译通过。函数式接口的声明在注释中是为了便于更好地理解，但没有实际作用。
 
 # 测验：像这样写 Lambda 表达式？ ★
 
@@ -8710,16 +8764,16 @@ public class Ackamarus {
   }
 
   public static void main(String[] args) {
-    Flummiddle a -> { System.out.println(); };
-    Flummiddle b -> { System.out.println(); };
-    Flummiddle c -> { System.out.println(); };
-    Flummiddle d -> { System.out.println(); };
-    Flummiddle e -> { System.out.println(); };
-    Flummiddle f -> { System.out.println(); };
-    Flummiddle g -> { System.out.println(); };
-    Flummiddle h -> { System.out.println(); };
-    Flummiddle i -> { System.out.println(); };
-    Flummiddle j=System.out.println();
+    Flummiddle a = () -> { System.out.println(); };
+    Flummiddle b = () -> { System.out.println(); };
+    Flummiddle c = () -> { System.out.println(); };
+    Flummiddle d = () -> { System.out.println(); };
+    Flummiddle e = () -> { System.out.println(); };
+    Flummiddle f = () -> { System.out.println(); };
+    Flummiddle g = () -> { System.out.println(); };
+    Flummiddle h = () -> { System.out.println(); };
+    Flummiddle i = () -> { System.out.println(); };
+    Flummiddle j = System.out::println;
   }
 }
 ```
@@ -8831,14 +8885,14 @@ class Schmegeggy {
 
 在复习期间，上面的实现应该被弃用 lambda 表达式。哪些 lambda 表达式是等效且有效的？
 
-- 1. `printDistance((a, b) -> a+b, 12, 33);`
-- 2. `printDistance((a, b) -> { return a+b; }, 12, 33);`
-- 3. `printDistance((int a, int b) -> a+b, 12, 33);`
-- 4. `printDistance((int a, b) -> a+b, 12, 33);`
-- 5. `printDistance((a, b -> { return a+b; }, 12, 33);`
-- 6. `printDistance((a, b) -> a+b, 12, 33);`
-- 7. `printDistance((a, b) -> { int a; return b+b; }, 12, 33);`
-- 8. `printDistance((Integer a, Integer b) -> a+b, 12, 33);`
+- 1. `printDistance((a, b) -> a + b, 12, 33);`
+- 2. `printDistance((a, b) -> { return a + b; }, 12, 33);`
+- 3. `printDistance((int a, int b) -> a + b, 12, 33);`
+- 4. `printDistance((int a, b) -> a + b, 12, 33);`
+- 5. `printDistance(a, b -> { return a + b; }, 12, 33);`
+- 6. `printDistance((a, b) -> a + b, 12, 33);`
+- 7. `printDistance((a, b) -> { int a; return b + b; }, 12, 33);`
+- 8. `printDistance((Integer a, Integer b) -> a + b, 12, 33);`
 
 # 函数式接口的 Lambda 表达式
 
@@ -8876,16 +8930,16 @@ public class Ackamarus {
   }
 
   public static void main(String[] args) {
-    Flummiddle a -> { System.out.println(); };
-    Flummiddle b -> { System.out.println(); };
-    Flummiddle c -> { System.out.println(); };
-    Flummiddle d -> { System.out.println(); };
-    Flummiddle e -> { System.out.println(); };
-    Flummiddle f -> { System.out.println(); };
-    Flummiddle g -> { System.out.println(); };
-    Flummiddle h -> { System.out.println(); };
-    Flummiddle i -> { System.out.println(); };
-    Flummiddle j = System.out.println();
+    Flummiddle a = () -> { System.out.println(); };
+    Flummiddle b = () -> { System.out.println(); };
+    Flummiddle c = () -> { System.out.println(); };
+    Flummiddle d = () -> { System.out.println(); };
+    Flummiddle e = () -> { System.out.println(); };
+    Flummiddle f = () -> { System.out.println(); };
+    Flummiddle g = () -> { System.out.println(); };
+    Flummiddle h = () -> { System.out.println(); };
+    Flummiddle i = () -> { System.out.println(); };
+    Flummiddle j = () -> System.out.println();
   }
 }
 ```
@@ -8895,7 +8949,9 @@ public class Ackamarus {
 
 # Lambda 表达式与函数式编程 10
 
-Lambda 表达式是函数式编程的基础，并被用作映射。函数式编程以函数为中心，侧重于没有副作用的纯表达式。在 Java 中，无法直接将函数（方法）传递给其他函数或返回它们，因此变通方法是将这些方法封装在类中并将其作为对象传递。Lambda 表达式提供了一种快速实现具有特定接口的类的方便方法。它们是仅有一个抽象方法的函数式接口的实现——是实现不同接口的类的替代且高效的捷径方法。因此，编写代码并将其传递给其他方法变得更加直接。
+Lambda 表达式是函数式编程的基础，并被用作映射。函数式编程以函数为中心，侧重于没有副作用的纯表达式。在 Java 中，无法直接将函数（方法）传递给其他函数或返回它们，因此变通方法是将这些方法封装在类中并将其作为对象传递。Lambda 表达式提供了一种快速实现具有特定接口的类的方便方法。它们是仅有一个抽象方法的函数式接口的实现——是实现不同接口的类的替代且高效的捷径方法。因此，编写程序代码并将其传递给其他方法变得更加直接。
+
+以下任务涉及 lambda 表达式的不同表示法以及 Java 库中反复出现的一些重要的函数式接口。
 
 ## 前提条件
 
@@ -8996,14 +9052,14 @@ class Schmegeggy {
 
 在复习期间，上面的实现应该被 lambda 表达式取代。哪些 lambda 表达式是等效且有效的？
 
-- 1. `printDistance((a, b) -> a+b, 12, 33);`
-- 2. `printDistance((a, b) -> { return a+b; }, 12, 33);`
-- 3. `printDistance((int a, int b) -> a+b, 12, 33);`
-- 4. `printDistance((int a, b) -> a+b, 12, 33);`
-- 5. `printDistance((a, b -> { return a+b; }, 12, 33);`
-- 6. `printDistance((a, b) -> a+b, 12, 33);`
-- 7. `printDistance((a, b) -> (int a; return b+b); }, 12, 33);`
-- 8. `printDistance((Integer a, Integer b) -> a+b, 12, 33);`
+- 1. `printDistance((a, b) -> a + b, 12, 33);`
+- 2. `printDistance((a, b) -> { return a + b; }, 12, 33);`
+- 3. `printDistance((int a, int b) -> a + b, 12, 33);`
+- 4. `printDistance((int a, b) -> a + b, 12, 33);` // 编译错误：参数类型不能混合使用显式和隐式类型
+- 5. `printDistance(a, b -> { return a + b; }, 12, 33);` // 编译错误：lambda 参数列表语法错误
+- 6. `printDistance((a, b) -> a + b, 12, 33);` // 与 1 重复
+- 7. `printDistance((a, b) -> (int a; return b + b); }, 12, 33);` // 编译错误：语法错误
+- 8. `printDistance((Integer a, Integer b) -> a + b, 12, 33);`
 
 # 函数式接口的 Lambda 表达式
 
@@ -9020,11 +9076,11 @@ interface Comparator<T> { int compare(T o1, T o2); }
 ```
 
 ```java
-Runnable runnable = ...;
-ActionListener listener = ...;
-Supplier<String> supplier = ...;
-Consumer<Point> consumer = ...;
-Comparator<Rectangle> comparator = ...;
+Runnable runnable = () -> { };
+ActionListener listener = e -> { };
+Supplier<String> supplier = () -> "";
+Consumer<Point> consumer = p -> { };
+Comparator<Rectangle> comparator = (r1, r2) -> 0;
 ```
 
 这些 lambda 表达式只需要编译。函数式接口的声明在注释中是为了以便更好地理解，但没有实际作用。
@@ -9041,16 +9097,16 @@ public class Ackamarus {
   }
 
   public static void main(String[] args) {
-    Flummiddle a -> { System.out.println(); };
-    Flummiddle b -> { System.out.println(); };
-    Flummiddle c -> { System.out.println(); };
-    Flummiddle d -> { System.out.println(); };
-    Flummiddle e -> { System.out.println(); };
-    Flummiddle f -> { System.out.println(); };
-    Flummiddle g -> { System.out.println(); };
-    Flummiddle h -> { System.out.println(); };
-    Flummiddle i -> { System.out.println(); };
-    Flummiddle j = System.out.println();
+    Flummiddle a = () -> { System.out.println(); };
+    Flummiddle b = () -> { System.out.println(); };
+    Flummiddle c = () -> { System.out.println(); };
+    Flummiddle d = () -> { System.out.println(); };
+    Flummiddle e = () -> { System.out.println(); };
+    Flummiddle f = () -> { System.out.println(); };
+    Flummiddle g = () -> { System.out.println(); };
+    Flummiddle h = () -> { System.out.println(); };
+    Flummiddle i = () -> { System.out.println(); };
+    Flummiddle j = () -> System.out.println();
   }
 }
 ```
@@ -9184,7 +9240,7 @@ interface Consumer<T> { void accept(T t); };
 interface Comparator<T> { int compare(T o1, T o2); }
 ```
 
-```text
+```java
 Runnable runnable = ...;
 ActionListener listener = ...;
 Supplier<String> supplier = ...;
@@ -9223,11 +9279,11 @@ public class Ackamarus {
 城市旅行的目的地存储在一个 `ArrayList` 中。
 
 ```java
-List<City> cityTour = new ArrayList<City>();
+List<City> cityTour=new ArrayList<City>();
 
-City g = new City("Gotham (cathedral)", 8_000_000);
-City m = new City("Metropolis (pleasure garden)", 1_600_000);
-City h = new City("Hogsmeade (shopping street)", 1_124);
+City g=new City("Gotham (cathedral)", 8_000_000);
+City m=new City("Metropolis (pleasure garden)", 1_600_000);
+City h=new City("Hogsmeade (shopping street)", 1_124);
 
 Collections.addAll(cityTour, g, m, h);
 ```
@@ -9258,7 +9314,7 @@ Metropolis, 1600000
 
 ## MoreDistance
 
-一眼看上去，`MoreDistance` 接口与 `Distance` 相同；然而，我们需要查看继承关系，它给了 `MoreDistance` 两个抽象方法，即它自己的和继承自基类型的。在这里，接口中有两个抽象方法；这对于函数式接口是非法的。
+一眼看上去，`MoreDistance` 接口与 `Distance` 相同；然而，我们需要查看继承关系，它给了 `MoreDistance` 两个抽象方法，即它自己的和继承自基类型的。在这里，接口中有两个抽象方法；这对于函数式接口是非法的的。
 
 ## MoreDistance2
 
@@ -9274,7 +9330,8 @@ Metropolis, 1600000
 
 # 测验：从接口实现到 Lambda 表达式
 
-- 第 1、第 2 和第 3 项：这三者都可以编译且等价。所有其他表示法都会由于不同原因导致编译器错误。
+- 第 1、第 2 和第 3 项：这三者都可以编译且等价。
+所有其他表示法都会由于不同原因导致编译器错误。
 - 4. 要么两种类型都是确定的，要么没有类型。
 - 5. 多个 lambda 参数必须始终用括号括起来。
 - 6. 要么使用带有 `{}` 的代码块并编写 `return`，或者使用较短的表示法而不包含 `return`。
@@ -9299,12 +9356,9 @@ Comparator<Rectangle> comparator = (r1, r2) -> 0;
 
 
 
-实现尽可能简单，并且不包含任何始终依赖语义的逻辑。
-
 # 测验：像这样写 Lambda 表达式吗？
 
 以下赋值会导致编译器错误：
-
 - `System.out.println()` 结尾缺少分号，并且在 `{ }` 块中必须有完整的语句。
 - Lambda 参数左侧缺失，在我们的案例中是 `()`。
 - 函数式接口中的方法没有参数列表；因此，箭头左侧只能保留 `()`。
@@ -9410,7 +9464,7 @@ private static void printAsCsv(City city) {
 
 ## 注意事项
 
-1. 对于对历史感兴趣的读者，请访问 <http://www.javac.info/> 查看旧草稿。
+1. 对于对历史感兴趣的读者，请访问 `http://www.javac.info/` 查看旧草稿。
 
 # Java 类库中的特殊类型
 
@@ -9420,7 +9474,7 @@ private static void printAsCsv(City city) {
 
 ## 前提条件
 
-- 了解 `==`（标识性）和 `!=`（等价性）的区别。
+- 了解 `==`（标识性）和 `equals()`（等价性）的区别。
 - 实现 `equals()` 和 `hashCode()`。
 - 实现 `Comparator` 以定义排序标准。
 - 理解自动装箱的工作原理。
@@ -9481,7 +9535,7 @@ Javadoc 是怎么说的，或者类中的 `equals()` 实现是怎样的样的？
 
 # Java 类库中的特殊类型
 
-各个模块的代码可以在 OpenJDK 网上在线查看：<https://github.com/openjdk/jdk/tree/master/src/>；类可以在 `src` 目录下找到。
+各个模块的代码可以在 OpenJDK 网上在线查看：`https://github.com/openjdk/jdk/tree/master/src/`；类可以在 `src` 目录下找到。
 
 ## 接口 COMPARATOR 和 COMPARABLE
 
@@ -9523,11 +9577,9 @@ import java.util.Objects;
 import java.util.stream.Stream;
 
 public class Heroes {
-
     private Heroes() { }
 
     public record Hero(String name, Sex sex, int yearAppearance) {
-
         public enum Sex { MALE, FEMALE }
 
         public Hero {
@@ -9537,7 +9589,6 @@ public class Heroes {
     }
 
     public static class Universe {
-
         private final String name;
         private final List<Hero> heroes;
 
@@ -9551,9 +9602,8 @@ public class Heroes {
     }
 
     // https://github.com/fivethirtyeight/data/tree/master/comic-characters
-
     private static final Hero DEADPOOL = new Hero("Deadpool (Wade Wilson)", Hero.Sex.MALE, 1991);
-    private static final Hero LANA_LANG = new Hero("La Lang", Hero.Sex.FEMALE, 1958);
+    private static final Hero LANA_LANG = new Hero("Lana Lang", Hero.Sex.FEMALE, 1958);
     private static final Hero THOR = new Hero("Thor (Thor Odinson)", Hero.Sex.MALE, 1962);
     private static final Hero IRON_MAN = new Hero("Iron Man (Anthony Stark)", Hero.Sex.MALE, 1963);
     private static final Hero SPIDERMAN = new Hero("Spider-Man (Peter Parker)", Hero.Sex.MALE, 1962);
@@ -9574,7 +9624,7 @@ public static final List<Hero> MARVEL = List.of(
 
 
 
-`List.of(DEADPOOL, CAPTAIN_AMERICA, THOR, IRON_MAN, SPIDERMAN);`
+`List.of(DEADPOOL, CAPTAIN_AMERICA, THOR, IRON_MAN, SPIDERMAN)`;
 
 ```java
 public static final List<Hero> ALL =
@@ -9596,7 +9646,7 @@ public static final List<Universe> UNIVERSES =
 
 任务：
 
-- 首先，构建一个所有英雄的可变列表：`List<Hero> allHeroes = new ArrayList<>(Heroes.ALL);`
+- 首先，构建一个所有英雄的可变列表：`List<Hero> allHeroes = new ArrayList<>(Heroes.ALL)`
 - 编写一个比较器，使英雄按发布年份排序。实现时使用：
   1. 一个本地类。
   2. 一个匿名类。
@@ -9607,7 +9657,7 @@ public static final List<Universe> UNIVERSES =
 - `List` 接口有一个 `sort(...)` 方法。使用新的 `Comparator` 对列表 `allHeroes` 进行排序。
 - 扩展 `Comparator`，如果出版年份相同，则按名称比较。评估这种 `Comparator` 同时测试多个标准的方法。
 
-## 组合英雄比较器 ★
+## 并英雄比较器 ★
 
 排序通常不是通过一个标准完成的，而是通过多个标准。一个典型的例子是电话簿。首先，按姓排序条目，在同名的情况下，按名排序。
 
@@ -9634,7 +9684,10 @@ public static <T, U extends Comparable<? super U>> Comparator<T> comparing(Funct
 
 首先，进行强制性的空检查。然后，`keyExtractor.apply(...)` 返回第一个对象和第二个对象的值。由于两个对象都有自然顺序（它们实现了 `Comparable`），因此通过 `compareTo(...)` 进行比较。
 
----
+有些英雄有发布年份。
+1. 编写一个只按名称比较英雄的 `Comparator` 实现。
+2. 编写第二个仅按出版年份比较英雄的 `Comparator`。
+3. 按发布年份、名称对所有英雄按第一个标准进行排序。实现复合比较器 `thenComparing(...)`。
 
 # 284 Java 编程练习
 
@@ -9646,15 +9699,11 @@ switch (c) { }
 ```
 
 3. 编写以下代码有意义吗？
-
-```java
-Map<String, Integer> map = Map.of("number-of-ships", 102);
-int ships = map.get("number-of_ships");
-```
-
+`Map<String, Integer> map = Map.of("number-of-ships", 102);`
+`int ships = map.get("number-of_ships");`
 查找 `java.util.Map` 接口中 `get(...)` 方法的返回值。
 
-## 测验：自动拆箱的惊喜 ★★
+# 测验：自动拆箱的惊喜 ★★
 
 如果以下行代码出现在 `main(...)` 方法中，输出是什么？
 
@@ -9723,9 +9772,7 @@ public boolean equals(Object o) {
 
 之前的实例是原始类型的；最后我们看引用类型的等效性测试。在这里，我们委托给引用对象的 `equals(Object)` 方法。然而，我们必须考虑一种特殊情况，即一个或多个实例变量可能是 `null` 也可能不是；由于我们选择了 `null` 作为策略，所以添加了一个特殊的查询。一个很好的替代方案是：
 
-```java
-return Objects.equals(name, person.name);
-```
+`return Objects.equals(name, person.name);`
 
 来自 Eclipse 生成的 `equals(Object)` 方法
 
@@ -9748,6 +9795,7 @@ public boolean equals(Object o) {
 
 
 
+
 # 284 Java 编程练习
 
 2. 会发生什么？
@@ -9759,9 +9807,9 @@ switch ( c ) { }
 
 3. 编写以下代码有意义吗？
 
-```
-Map<String, Integer>map=map.of("number-of-ships", 102 );
-int ships=map.get("number-of_ships");
+```java
+Map<String, Integer> map = map.of("number-of-ships", 102 );
+int ships = map.get("number-of_ships");
 ```
 
 查找 `java.util.Map` 接口中 `get(...)` 方法的返回值。
@@ -9770,7 +9818,7 @@ int ships=map.get("number-of_ships");
 
 如果以下行代码出现在 `main(...)` 方法中，输出是什么？
 
-```
+```java
 Integer i1=1;
 Integer i2=1;
 System.out.println( i1 == i2 );
@@ -9778,7 +9826,7 @@ System.out.println( i1 <= i2 );
 System.out.println( i1 >= i2 );
 ```
 
-```
+```java
 Integer i21=1000;
 Integer i22=1000;
 System.out.println( i21 == i22 );
@@ -9885,6 +9933,7 @@ return name!=null ? name.equals( person.name ) : person.name == null;
 ```java
 return Objects.equals( name, person.name );
 ```
+
 
 
 
@@ -10138,7 +10187,7 @@ System.out.println(int1 >= int2); // true
 
 ### 表 A.1 类型
 
-| 类型名称 | 出现次数 | 百分比分布 |
+| 类型名称 | 出现 | 百比分布 |
 | :--- | :--- | :--- |
 | `java.lang.StringBuilder` | 605.692 | 25.28% |
 | `java.lang.String` | 190.854 | 7.97% |
@@ -10245,7 +10294,7 @@ System.out.println(int1 >= int2); // true
 
 ### 表 A.2 带有方法名的类型
 
-| 方法名称 | 出现次数 | 百分比分布 |
+| 方法名称 | 出现次数 | 百比分布 |
 | :--- | :--- | :--- |
 | `java.lang.StringBuilder#append` | 377.938 | 15.77% |
 | `java.lang.StringBuilder#toString` | 111.511 | 4.65% |
@@ -10362,7 +10411,7 @@ System.out.println(int1 >= int2); // true
 | `java.lang.Boolean#booleanValue()` | 7.132 | 0.30% |
 | `java.lang.Long#valueOf(long)` | 7.066 | 0.29% |
 | `java.lang.Integer#intValue()` | 7.006 | 0.29% |
-| `java.lang.IndexOutOfBoundsException#<init>(int)` | 6.941 | 0.29% |
+| `java.lang.IndexOutOfBoundsException#<init(int)` | 6.941 | 0.29% |
 | `java.util.Hashtable#put(Object, Object)` | 6.688 | 0.29% |
 | `java.util.Map.Entry#getValue()` | 6.781 | 0.28% |
 | `java.util.Map.Entry#getKey()` | 6.634 | 0.28% |
@@ -10372,27 +10421,27 @@ System.out.println(int1 >= int2); // true
 | `java.util.ArrayList#add(Object)` | 6.359 | 0.27% |
 | `java.util.Arrays#asList(Object...)` | 6.083 | 0.25% |
 | `java.lang.String#equalsIgnoreCase(String)` | 6.070 | 0.25% |
-| `java.lang.UnsupportedOperationException#<init>(int)` | 5.769 | 0.24% |
+| `java.lang.UnsupportedOperationException#<init(int)` | 5.769 | 0.24% |
 | `java.util.List#toArray(Object)` | 5.691 | 0.24% |
-| `java.lang.Enum#<init>(String, int)` | 5.352 | 0.22% |
+| `java.lang.Enum#<init(String, int)` | 5.352 | 0.22% |
 | `java.lang.Enum#valueOf(Class, String)` | 5.322 | 0.22% |
 | `java.lang.String#trim()` | 5.115 | 0.21% |
 | `java.lang.StringBuilder#append(char)` | 5.074 | 0.21% |
 | `java.lang.StringBuilder#append(long)` | 5.035 | 0.21% |
-| `java.util.HashSet#<init>(int)` | 5.015 | 0.21% |
+| `java.util.HashSet#<init(int)` | 5.015 | 0.21% |
 | `java.util.ArrayList#list(int)` | 4.941 | 0.21% |
 | `java.util.logging.Logger#log(java.util.logging.Level, Throwable)` | 4.766 | 0.20% |
 | `java.util.List#isEmpty()` | 4.748 | 0.20% |
 | `java.io.Writer#write(String)` | 4.690 | 0.20% |
 | `java.util.logging.Logger#log(java.util.logging.Level)` | 4.577 | 0.19% |
-| `java.lang.StringBuilder#<init>(int)` | 4.512 | 0.19% |
-| `java.lang.UnsupportedOperationException#<init>(String)` | 4.490 | 0.19% |
+| `java.lang.StringBuilder#<init(int)` | 4.512 | 0.19% |
+| `java.lang.UnsupportedOperationException#<init(String)` | 4.490 | 0.19% |
 | `java.lang.Class#isAssignableFrom(Class)` | 4.468 | 0.19% |
 | `java.lang.String#format(String, Object...)` | 4.411 | 0.18% |
-| `java.io.IOException#<init>(String)` | 4.321 | 0.18% |
-| `java.lang.StringBuilder#<init>(int)` | 4.314 | 0.18% |
+| `java.io.IOException#<init(String)` | 4.321 | 0.18% |
+| `java.lang.StringBuilder#<init(int)` | 4.314 | 0.18% |
 | `java.util.Map#entrySet(String)` | 4.254 | 0.18% |
-| `java.lang.AssertionError#<init>(Object)` | 4.129 | 0.17% |
+| `java.lang.AssertionError#<init(Object)` | 4.129 | 0.17% |
 | `java.lang.Throwable#addSuppressed(Throwable)` | 4.100 | 0.17% |
 
 | 方法名称与参数 | 出现次数 | 百比分布 |
@@ -10403,7 +10452,7 @@ System.out.println(int1 >= int2); // true
 | `java.util.Map#containsKey(Object)` | 3.905 | 0.16% |
 | `java.util.Hashtable#put(java.io.Serializable, Object)` | 3.890 | 0.16% |
 | `java.lang.Class#forName()` | 3.884 | 0.16% |
-| `java.lang.RuntimeException#<init>(String)` | 3.801 | 0.16% |
+| `java.lang.RuntimeException#<init(String)` | 3.801 | 0.16% |
 | `java.util.ArrayList#size()` | 3.758 | 0.16% |
 | `java.lang.String#endsWith(String)` | 3.718 | 0.16% |
 | `java.lang.Character#valueOf(char)` | 3.714 | 0.16% |
