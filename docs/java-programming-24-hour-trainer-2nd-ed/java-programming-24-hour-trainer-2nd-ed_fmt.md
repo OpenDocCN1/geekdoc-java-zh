@@ -17,7 +17,7 @@ Yakov Fain
 
 业务经理：Amy Kries
 
-技术编辑：Chad Darby、Rajeswer P. Singaravelu、Martijn Verburg
+技术编辑：Chád Darby、Rajesuwer P. Singaravelu、Martijn Verburg
 
 副出版：Jim Minatel
 
@@ -47,19 +47,21 @@ Yakov Fain 在 Farata Systems 担任软件架构师，该公司提供企业级�
 
 # 关于技术编辑
 
-**Chad** Darby 是 Java 开发世界的作者、讲师和演讲者。作为 Java 应用和架构的公认权威，他曾在全球各地的软件开发会议（美国、英国、印度、意大利、俄罗斯和澳大利亚）进行技术演讲。在专业软件架构师的十五年里，他有机会为 Blue Cross/Blue Shield、波音、红 Hat 以及一些初创公司工作。Chad 是多本《专业 Java 电子商务》（Sams 出版）的贡献作者。Chad 拥有太阳微系统和 IBM 的 Java 认证。他拥有卡内基梅隆大学计算机科学学士。
+**Chid** Darby 是 Java 开发世界的作者、讲师和演讲者。作为 Java 应用和架构的公认权威，他曾在全球各地的软件开发会议（美国、英国、印度、意大利、俄罗斯和澳大利亚）进行技术演讲。在专业软件架构师的十五年里，他有机会为 Blue Cross/Blue Shield、波音、红 Hat 以及一些初创公司工作。Chid 是多本《专业 Java 电子商务》（Sams 出版）的贡献作者。Chid 拥有太阳微系统和 IBM 的 Java 认证。他拥有卡内基梅隆大学计算机科学学士。
 
-访问他的网站 `http://www.javcode.com` 和 YouTube 频道 `http://www.youtube.com/chad` 与 Chad 保持联系。
+访问他的网站 `http://www.javcode.com` 和 YouTube 频道 `http://www.youtube.com/chid` 与 Chid 保持联系。
 
-Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技术，为纽约的金融服务行业构建分布式企业系统。当他不在编写代码时，他喜欢与妻子 Rohini 以及两个孩子 Hassini 和 Arvind 一起度过时光。他的兴趣在于跨平台技术，包括 Apache Appcelerator Titanium，他是 Titanium 认证专家（TCE）。他的 Twitter 账号是 `@rajeswerps`。
+Rajeswer P. Singavelu 自 90 年代后期以来一直从事 Java 和 Web 技术，为纽约的金融服务行业构建分布式企业系统。当他不在编写代码时，他喜欢与妻子 Rohini 以及两个孩子 Hassini 和 Arvind 一起度过时光。
 
-**Martijn Verburg** 是 Clarity 的 CEO，这家伦敦的性能分析和机器学习初创公司。他参与了各种 Java 和开源社区，并共同领导伦敦 Java 用户组（LJC，JCP 成员）。Martin 在 2012 年因对社区的贡献被评为 Java Champion。你可以在各大会议（Devoxx, JavaOne, OSCON 等）上看到他关于 Java、开源和软件开发的演讲，他被称为“魔鬼般的开发者”。
+他的兴趣在于跨平台技术，包括 Apache Apperator Titanium，他是 Titanium 认证专家（TCE）。他的 Twitter 账号是 `@rajeswerps`。
+
+**Martin Verberg** 是 Clarity 的 CEO，这伦敦的性能分析和机器学习初创公司。他参与了各种 Java 和开源社区，并共同领导伦敦 Java 用户组（LJC，JCP 成员）。Martin 在 2012 年因对社区的贡献被评为 Java Champion。你可以在各大会议（Devox, JavaOne, OSCON 等）上看到他关于 Java、开源和软件开发的演讲，他被称为“魔鬼般的开发者”。
 
 # 致谢
 
 首先，我要感谢我的家人，感谢他们理解（再次）抽调家庭时间来写一本计算机书籍是可以接受的。
 
-我想感谢技术编辑 Rajeswer P. Singaravelu 和 Martijn Verburg 提供的宝贵建议。
+我想感谢技术编辑 Rajesuwer P. Singaravelu 和 Martijn Verburg 提供的宝贵建议。
 
 特别感谢 Chad Darby 为本书制作了极佳的视频。
 
@@ -78,7 +80,7 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - Java 程序的生命周期
 - JDK 和 JRE
 - 下载并安装 Java SE
-- 为 Mac OS 安装 JDK 8
+- 为 MAC OS 安装 JDK 8
 - 在 Windows 中安装 JDK 8
 - 你的第一个程序：Hello World
 - 编译并运行 Hello World
@@ -86,7 +88,7 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 课程要求
 - 逐步详解
 
-## 第 2 课：Eclipse IDE
+## 第 2 课：ECLIPSE IDE
 
 - 介绍 IDE
 - 下载并安装 Eclipse
@@ -104,14 +106,14 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 类和对象
 - 变量和数据类型
   - 声明变量
-  - `final` 变量
+  - final 变量
   - 基本数据类型
   - 变量作用域
   - 包装类、自动装箱和拆箱
 - 程序注释
 - 第一个实用的程序
-- 条件语句 `if`
-- `switch` 语句
+- 条件语句 if
+- switch 语句
 - 继承
 - 方法重写
 - 补充材料
@@ -125,11 +127,11 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 方法参数
 - 方法重载
 - 构造函数
-- `super` 关键字
-- `this` 关键字
+- super 关键字
+- this 关键字
 - 按值或按引用传递
 - 变量作用域
-- `static` 关键字
+- static 关键字
 - 尝试一下
 - 课程要求
 - 逐步详解
@@ -140,8 +142,8 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 关于字符串的更多
 - 循环
 - 调试 Java 程序
-- 关于 `if` 和 `switch` 语句的更多
-  - `if` 语句的种类
+- 关于 if 和 switch 语句的更多
+  - if 语句的种类
 - 命令行参数
 - 尝试一下
 - 课程要求
@@ -152,10 +154,10 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - Java 包
 - 封装
 - 访问级别
-- `final` 关键字
-  - `final` 变量
-  - `final` 方法
-  - `final` 类
+- final 关键字
+  - final 变量
+  - final 方法
+  - final 类
 - 接口
 - 标记接口
 - 接口中的默认方法
@@ -177,19 +179,19 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 课程要求
 - 逐步详解
 
-## 第 8 课：使用 Swing 引入 GUI
+## 第 8 课：使用 SWING 引入 GUI
 
 - Swing 基础
 - 布局管理器
-- 使用 `FlowLayout` 的简单计算器
+- 使用 FlowLayout 的简单计算器
 - 布局管理器简要介绍
-  - `FlowLayout`
-  - `GridLayout`
-  - `BorderLayout`
+  - FlowLayout
+  - GridLayout
+  - BorderLayout
   - 组合布局管理器
-  - `BoxLayout`
-  - `GridBagLayout`
-  - `CardLayout`
+  - BoxLayout
+  - GridBagLayout
+  - CardLayout
   - 带有绝对布局的容器
 - 关于 Swing 组件的更多
 - Swing 构建器
@@ -197,7 +199,7 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 课程要求
 - 逐步详解
 
-## 第 9 课：Swing 中的事件处理
+## 第 9 课：SWING 中的事件处理
 
 - 监听器简介
 - 让计算器学会计算
@@ -218,11 +220,11 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 栈跟踪
 - Java 异常
 - 异常层次结构
-- `try/catch` 块
-- 使用 `throws` 子句
-- 使用 `finally` 子句
-- `try-with-resources`
-- `throw` 关键字
+- try/catch 块
+- 使用 throws 子句
+- 使用 finally 子句
+- try-with-resources
+- throw 关键字
 - 创建你自己的异常
 - 尝试一下
 - 课程要求
@@ -231,13 +233,13 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 ## 第 11 课：集合简介
 
 - 数组回顾
-- `java.util` 中的集合接口
-- 使用 `ArrayList` 动态数组
-- `Hashtable` 和 `HashMap` 类
-- `Properties` 类
-- `Enumeration` 和 `Iterator` 类
-- `LinkedList` 类
-- `BitSet` 类
+- java.util 中的集合接口
+- 使用 ArrayList 动态数组
+- Hashtable 和 Hashmap 类
+- 属性
+- Enumeration 和 Iterator 类
+- LinkedList 类
+- BitSet 类
 - 选择合适的集合
 - 尝试一下
 - 课程要求
@@ -262,10 +264,10 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 函数式接口
 - 方法与函数
 - 将函数传递给方法
-- 使用 `forEach()` 遍历集合
+- 使用 forEach() 遍历集合
 - Lambda 与继承和多态
 - 消除继承
-- 接口 `Function` 和 `BiFunction`
+- 接口 Function 和 BiFunction
 - 尝试一试
 - 课程要求
 - 逐步详解
@@ -278,18 +280,18 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 将 GUI 与 I/O 流结合起来
 - 数据流
 - 用于处理文件的工具类
-- `Class` 类文件
-- NIO.2：使用 `Files`、`Path` 和 `Paths`
+- Class 类文件
+- NIO.2：使用 Files、Path 和 Paths
 - NIO 是什么
 - 尝试一试
 - 课程要求
 - 逐步详解
 
-## 第 15 课：Java 序列化
+## 第 15 课：JAVA 序列化
 
-- `ObjectOutputStream` 类
-- `ObjectInputStream` 类
-- `Externalizable` 接口
+- The ObjectOutputStream 类
+- The ObjectInputStream 类
+- Externalizable 接口
 - 类版本控制
 - 将序列化为字节数组
 - 尝试一试
@@ -301,10 +303,10 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 从互联网读取数据
 - 通过 HTTP 代理服务器连接
 - 如何从互联网下载文件
-- 为 `FileDownload` 指定命令行参数
+- 为 FileDownload 指定命令行参数
 - 股票报价程序
 - Socket 编程
-- 为什么使用 Sockets?
+- 为什么使用 Sockets？
 - 使用 Sockets 的股票报价服务器
 - 尝试一试
 - 课程要求
@@ -313,59 +315,59 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 
 ## 第 17 课：并发与多线程
 
-- `Thread` 类
-- `Runnable` 接口
+- Thread 类
+- Runnable 接口
 - 消除继承
 - 线程休眠
 - 如何杀死线程
 - 线程优先级
 - 线程同步与竞态条件
 - 线程状态
-- `wait()` 与 `notify()` (等待与通知)
+- Wait 与 Notify (等待与通知)
 - Java 中的闭包
 - 合并线程
-- `java.util.concurrent` 中的实用工具
-- `ReentrantLock` 与 `synchronized`
-- `Executor` 框架
-- 并发集合简述
-- `SwingWorker` 线程
+- java.util.concurrent 中的实用工具
+  - ReentrantLock 与 Synchronized
+  - Executor 框架
+  - 并发集合简述
+- SwingWorker 线程
 - 尝试一试
 - 课程要求
 - 逐步详解
 
-## 第 18 课：使用 JavaFX 介绍 GUI
+## 第 18 课：使用 JFX 介绍 GUI
 
 - JavaFX 基础
-- 使用 `FXClip` 插件
+  - 使用 FXClip 插件
 - 布局
-  - 使用 `HBox` 布局的示例应用程序
-  - 使用 `GridPane` 布局的示例应用程序
-- 使用 CSS 换肤
+  - 使用 HBox 布局的示例应用程序
+  - 使用 GridPane 布局的示例应用程序
+  - 使用 CSS 换肤
 - 事件处理
 - 属性与绑定
 - 尝试一试
 - 课程要求
 - 逐步详解
 
-## 第 19 课：开发 JavaFX 计算器和井字游戏
+## 第 19 课：开发 JFX 计算器和井井游戏
 
 - 使用 Scene Builder 设计计算器
 - 使用 Scene Builder 设计计算器 GUI
 - 在 Controller 类中处理事件
 - 识别事件源
 - 从视图到控制器及反向传递数据
-- 井字游戏编程
+- 井井游戏编程
   - 游戏策略
-  - 使用 FXML 和 CSS 设计井字游戏 GUI
-  - 在井字游戏中实现游戏策略
-  - 井字游戏菜单
-  - 井字游戏：下一步尝试
+  - 使用 FXML 和 CSS 设计井井游戏 GUI
+  - 在井井游戏中实现游戏策略
+  - 井井游戏菜单
+  - 井井游戏：下一步尝试
 - Web 和移动设备上的 Java
 - 尝试一试
 - 课程要求
 - 逐步详解
 
-## 第 20 课：Stream API
+## 第 20 课：STREAM API
 
 - Stream 基础
 - 中间与终端操作
@@ -387,12 +389,12 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 安装 Derby 并创建数据库
 - JDBC 示例
 - 结果集 (Result Sets)
-- `PreparedStatement` 类
-- `CallableStatement` 类
-- `ResultSetMetaData` 类
-- 可滚动结果集与 `RowSet`
+- PreparedStatement 类
+- CallableStatement 类
+- ResultMetaData 类
+- 可滚动结果集与 Rowset
 - 事务更新
-- 连接池与 `DataSource`
+- 连接池与 DataSource
 - 尝试一试
 - 课程要求
 - 提示
@@ -414,11 +416,11 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 
 - Javadoc 注解
 - Java 注解基础
-- `@Override`
-- `@Deprecated`
-- `@Inherited`
-- `@FunctionalInterface`
-- `@Documented`
+  - @Override
+  - @Deprecated
+  - @Inherited
+  - @FunctionalInterface
+  - @Documented
 - 反射
 - 运行时注解处理
 - 总结
@@ -440,14 +442,14 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 提示
 - 逐步详解
 
-## 第 25 课：Java EE 7 概述
+## 第 25 课：JAVA EE 7 概述
 
 - 整体概念
 - JCP、JSR 以及其他缩写
 - Java EE 应用的分层
 - 容器与应用服务
 - 配置文件 (Profiles) 与剪枝 (Pruning)
-- 为什么使用 Java EE?
+- 为什么使用 Java EE？
 - 尝试一试
 - 课程要求
 - 逐步详解
@@ -458,15 +460,15 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 轻量客户端 (Thin Client)
 - 如何编写 Servlet
 - 如何部署 Servlet
-- 在 Eclipse 中配置 GlassFish
+- 在 Eclipse 中配置 Glassfish
 - 如何在 Eclipse 中创建 Servlet
 - 将 Web 应用部署为 WAR
 - 浏览器-Servlet 数据流
 - HTTP Get 和 Post 请求
 - 会话跟踪
-  - Cookie
+  - Cookie Cookies
   - URL 重写
-  - 服务端 `HttpSession`
+  - 服务端 HttpSession
 - 过滤器 (Filters)
 - 异步 Servlet
 - 尝试一试
@@ -478,16 +480,16 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 将 Java 代码嵌入 HTML
 - 隐式 JSP 对象
 - JSP 标签概述
-  - 所有的指令 (Directives)
-  - 声明 (Declarations)
-  - 表达式 (Expressions)
-  - 脚本段 (Scriptlets)
-  - 注释
+- 所有的指令 (Directives)
+- 声明 (Declarations)
+- 表达式 (Expressions)
+- 脚本段 (Scriptlets)
+- 注释
 - 标准动作 (Actions)
 - 错误页面
 - JSP 中的 JavaBeans
 - 在 JSP 中使用 JavaBeans
-- Bean 持续多久?
+- Bean 持续多久？
 - 从 Servlet 加载 JSP
 - 标签库
 - JSTL
@@ -503,7 +505,7 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 浏览器作为 WebSocket 客户端
 - 使用 WebSockets 与服务器通信
 - 发送消息
-- 接收消息 `@OnMessage`
+- 接收消息 @OnMessage
 - 编码器与解码器
 - 发布到所有客户端
 - 尝试一试
@@ -513,11 +515,11 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 ## 第 29 课：介绍 JNDI
 
 - 命名与目录服务
-- 使用 `InitialContext` 类
-  - 获取 `InitialContext`
+- 使用 InitialContext 类
+  - 获取 InitialContext
   - 注入 JNDI 资源
-- 在 GlassFish 中管理 JNDI 对象
-- `DataSource` 与 JNDI
+- 在 Glassfish 中管理 JNDI 对象
+- DataSource 与 JNDI
 - 轻量级目录访问协议 (LDAP)
 - 尝试一试
 - 课程要求
@@ -572,7 +574,7 @@ Rajeswer P. Singaravelu 自 90 年代后期以来一直从事 Java 和 Web 技�
 - 查询实体
 - JPQL
 - Criteria API
-- 实体管理器 (`EntityManager`)
+- 实体管理器 (EntityManager)
 - Bean 校验
 - 尝试一试
 - 课程要求
@@ -693,71 +695,63 @@ Wiley 出版公司和 Wrox 一尽确保文本或代码中没有错误。然而�
 
 有关关于如何使用 Wrox P2P 的更多信息，请务必阅读 P2P FAQ，以获得有关论坛软件如何工作以及针对 P2P 和 Wrox 书籍的常见问题的解答。要阅读 FAQ，请点击任何 P2P 页面上的 `FAQ` 链接。
 
-# 1
-
 # Java 简介
 
-在过去的二十年里，Java 保持了其作为最流行编程语言之一的地位，适用于从游戏编程到任务关键型应用的领域（例如华尔街交易或控制火星探测器）。当前的流行程度图表请参见 `http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html` 的 Tiobe Index。在本节中，您将接触一些非常基本的 Java 术语。您还将下载并安装 Java 开发包 (`JDK`) 并编译您的第一个程序。
+在过去的二十年里，Java 保持了其作为最流行编程语言之一的地位，适用于从游戏编程到任务关键型应用的领域（例如华尔街交易或控制火星探测器）。当前的流行程度图表请参见 `http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html` 的 Tiobe Index。在本节中，您将接触一些非常基本的 Java 术语。您还将下载并安装 Java 开发包 (JDK) 并编译您的第一个程序。
 
 ## 为什么要学习 Java？
 
-Java 编程语言由 James Gosling 于 1995 年在 Sun Microsystems 公司（于 2010 年被 Oracle 公司收购）创建。其目标是为 C++ 提供一种更简单且独立平台的替代方案。Java 程序运行在 Java 虚拟机 (`JVM`) 中，从应用程序的角度来看，它在每个平台上都是相同的。至于平台独立性的具体含义，请稍后在 *Java 程序的生命周期* 章节中理解。现在让我们来看看 Java 成为您首选语言的某些原因。
+Java 编程语言由 James Gosling 于 1995 年在 Sun Microsystems 公司（于 2010 年被 Oracle 公司收购）创建。其目标是为 C++ 提供一种更简单且独立平台的替代方案。Java 程序运行在 Java 虚拟机 (JVM) 中，从应用程序的角度来看，它在每个平台上都是相同的。至于平台独立性的具体含义，请稍后在 *Java 程序的生命周期* 章节中理解。现在让我们来看看 Java 成为您首选语言的某些原因。
 
 Java 是一种通用编程语言，适用于各行业的几乎任何类型的应用程序。如果您精通了它，您作为软件开发者的就业机会将比专攻某些领域特定编程语言更高。
 
 世界上有超过九百万名专业的 Java 开发者。
 
-# Java 程序的生命周期
+## Java 程序的生命周期
 
 编程语言有多种。在某些语言中，您将编写程序文本（即源代码）并立即执行该程序。这些是解释型语言（例如 JavaScript）。
 
-## JDK 和 JRE
+### JDK 和 JRE
 
-但 Java 要求首先对你的程序源代码进行编译。它会被转换为由 Java 虚拟机（`JVM`）运行的字节码，虚拟机可能会使用所谓的即时编译（`JIT`）编译器将部分字节码转换为特定平台的机器码。
+但 Java 要求首先对你的程序源代码进行编译。它会被转换为由 Java 虚拟机（JVM）运行的字节码，虚拟机可能会使用所谓的即时编译（JIT）编译器将部分字节码转换为特定平台的机器码。
 
 程序不仅会通过 Java 编译器检查语法错误，而且在编译完成后（部署阶段），还可以将其他 Java 代码库添加到你的程序中。有许多现成的、可复用的组件库可供选择，其中绝大多数都是免费的。
 
 在本节中，你将开始编写一个非常基础的 Java 程序，在你的电脑显示器上输出“Hello World”字样。
 
-从技术上讲，你可以在任何你喜欢的纯文本编辑器中编写 Java 程序的源代码（记事本、`TextEdit`、`Sublime Text`、`vi` 等），但要进行编译，你需要 Java 开发工具包（`JDK`）包含的额外工具和代码库。
+从技术上讲，你可以在任何你喜欢的纯文本编辑器中编写 Java 程序的源代码（记事本、TextEdit、Sublime Text、vi 等），但要进行编译，你需要 Java 开发工具包（JDK）包含的额外工具和代码库。
 
-### JDK 和 JRE
+#### JDK 和 JRE
 
-如果你计划使用特定的计算机来开发 Java 程序，你需要下载并安装 `JDK`。如果你计划仅用它运行在其他地方编译好的 Java 程序，你只需要 Java 运行环境（`JRE`）。
+如果你计划使用特定的计算机来开发 Java 程序，你需要下载并安装 JDK。如果你计划仅用它运行在其他地方编译好的 Java 程序，你只需要 Java 运行环境（JRE）。
 
-如果你在机器上安装了 `JDK`，它已经包含了 `JRE`。
+如果你在机器上安装了 JDK，它已经包含了 JRE。
 
-Java 的平台无关性源于你的 Java 程序并不知道它正在哪个操作系统（`OS`）或硬件上执行。它在预装的 `JRE` 内部运行。
+Java 的平台无关性源于你的 Java 程序并不知道它正在哪个操作系统（OS）或硬件上执行。它在预装的 JRE 内部运行。
 
-你需要熟悉两个术语：`Java SE`（标准版）和 `Java EE`（企业版）。后者包含了服务器端的工具和库，你将从第 25 章开始熟悉它们。
+你需要熟悉两个术语：Java SE（标准版）和 Java EE（企业版）。后者包含了服务器端的工具和库，你将从第 25 章开始熟悉它们。
 
 ## 下载与安装 Java SE
 
-从下载最新版本的 `JDK` 开发工具包开始，在本文写作时，最新版本是 Java 8。在某些文献中，你会看到对 `JDK 1.8` 的引用，它与 `JDK 8` 是相同的。在某些硬件版本中，数字 8 后面跟着字母 `a`；例如 Oracle 发布的 `JDK 8u5` 表示为 `JDK 8` 发布了第 5 次更新。
+从下载最新版本的 JDK 开发工具包开始，在本文写作时，最新版本是 Java 8。在某些文献中，你会看到对 JDK 1.8 的引用，它与 JDK 8 是相同的。在某些硬件版本中，数字 8 后面跟着字母 `a`；例如 Oracle 发布的 JDK 8u5 表示为 JDK 8 发布了第 5 次更新。
 
 ### 为 MAC OS 安装 JDK 8
 
-下载适用于 MAC OS x64 的 `jdk` 文件。在 Mac X 上运行此程序程序会将 Java 安装在 `/Library/Java/JavaVirtualMachines/jdk.8._jdk`。Mac OS X 是我的首选平台，但 Java 实际上可以在所有平台上运行，且所有的示例在 Windows 和 Linux 下都能良好运行。
+下载适用于 MAC OS x64 的 jdk 文件。在 Mac X 上运行此程序程序会将 Java 安装在 `/Library/Java/JavaVirtualMachines/jdk.8._jdk`。Mac OS X 是我的首选平台，但 Java 实际上可以在所有平台上运行，且所有的示例在 Windows 和 Linux 下都能良好运行。
 
-打开终端（`Terminal`）并输入 `java -version`。你应该能看到类似下面的输出：
+打开终端（Terminal）并输入 `java -version`。你应该能看到类似下面的输出：
 
-```
-java version "1.8.0_05"
-Java(TM) SE Runtime Environment (build 1.8.0_05-b13)
-Java HotSpot(TM) 64-Bit Server VM (build 25.5.0-b02, mixed mode)
-```
-
-图 1-1：在 MAC OS 中检查 Java 版本
+![图 1-1：在 MAC OS 中检查 Java 版本](img/c6ae2d81738909a4b5328d6eddc14dd7_39_0.png)
 
 ### 在 Windows 中安装 JDK 8
 
-选择并下载 Windows 可执行文件，这是适用于 32 位计算机的 Java 版本。该版本开始学习 Java 完全足够。点击 `Next`（下一步）按钮两次或三次，然后点击 `Close`（关闭）。一分钟后安装完成。默认情况下，`JDK` 安装在类似 `C:\Program Files\Java\jdk1.8.0_05` 的目录中。这是 `JDK` 和 `JRE` 的安装位置。
+选择并下载 Windows 8 可执行文件，这是适用于 32 位计算机的 Java 版本。该版本开始学习 Java 完全足够。点击 `Next`（下一步）按钮两次或三次，然后点击 `Close`（关闭）。一分钟后安装完成。默认情况下，JDK 安装在类似 `C:\Program Files\Java\jdk1.8.0_05` 的目录中。这是 JDK 和 JRE 的安装位置。
 
 现在，你需要将该路径添加到 Windows 系统的环境变量中。点击“开始”、“控制面板”，搜索“环境变量”。点击“编辑系统环境变量”链接，并按下“环境变量”按钮（如果你还没有，请创建一个）以包含以下路径：`C:\Program Files\Java\jdk1.8.0_05\bin`，除非你将其放在其他位置。别忘记像图 1-2 那样添加分号作为分隔符。
 
-图 1-2：添加到 Windows Path 变量中的 Java
+![图 1-2：添加到 Windows Path 变量中的 Java](img/c6ae2d81738909a4b5328d6eddc14dd7_39_1.png)
 
-如果你在电脑上安装了之前的 `JDK` 版本，每个版本都位于自己的目录中，它们之间不会冲突。
+如果你在电脑上安装了之前的 JDK 版本，每个版本都位于自己的目录中，它们之间不会冲突。
 
 ## 你的第一个 Java 程序：Hello World
 
@@ -765,22 +759,23 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.5.0-b02, mixed mode)
 
 ```
 java version "1.8.0_05"
-Java(TM) SE Runtime Environment (build 1.8.0_05-b13)
-Java HotSpot(TM) 64-Bit Server VM (build 25.5.0-b02, mixed mode)
+Java(TM) Operating System 6.2.0-x64
+Java(TM) HotSpot Client VM 1.8.0_05-b16 (64-Bit)
+build 14.8.0_05
 ```
 
 图 1-3：Java 版本确认
 
-## 编译与运行 HelloWorld
+### 编译与运行 HelloWorld
 
-`HelloWorld` 程序已经编写完成，你现在需要编译这个程序。Java 编译器会将你的源代码转换为 `JRE` 能够理解的字节码。`javac` 编译器是 `JDK` 的一部分，因此在你的 PC 上打开命令窗口或在 MAC 上打开终端（`Terminal`），将当前目录更改至 `c:\PracticalJava\Lesson`，并尝试编译以下程序：
+HelloWorld 程序已经编写完成，你现在需要编译这个程序。Java 编译器会将你的源代码转换为 JRE 能够理解的字节码。`javac` 编译器是 JDK 的一部分，因此在你的 PC 上打开命令窗口或在 MAC 上打开终端（Terminal），将当前目录更改 `c:\PracticalJava\Lesson`，并尝试编译以下程序：
 
 ```
 cd PracticalJava\Lesson
 javac HelloWorld.java
 ```
 
-尽管在第 1 章目录中没有 `javac` 程序，但你的操作系统在 Java 安装目录的 `bin` 目录中找到了它。MAC OS 知道 `bin` 目录的位置。对于 Windows OS，你已经将其添加到 `PATH` 环境变量中。
+尽管在第 1 章目录中没有 `javac` 程序，但你的操作系统在 Java 安装目录的 `bin` 目录中找到了它。MAC OS 知道 `bin` 目录的位置。对于 Windows OS，你已经将其添加到 PATH 环境变量中。
 
 你不会看到任何编译成功的确认信息；只需在 Windows 上输入 `dir`（或 MAC 上输入 `ls`）即可确认是否出现了一个名为 `HelloWorld.class` 的新文件，这说明你的程序已成功编译。
 
@@ -792,13 +787,11 @@ javac HelloWorld.java
 java HelloWorld
 ```
 
-注意，这次你没有使用 `javac` 程序，而是使用了 `java`，它启动 Java 并将 `HelloWorld` 加载到 Java 虚拟机（`JVM`）中。命令行窗口会显示“Hello World”。图 1-4 截图显示了 MAC OS 如何定位编译命令（`javac HelloWorld.java`）、编译后第 1 章文件夹的内容（`ls`——Windows 上的 `dir`）、如何运行程序（`java HelloWorld`）以及 `HelloWorld` 程序的输出：
+注意，这次你没有使用 `javac` 程序，而是使用了 `java`，它启动 Java 并将 HelloWorld 加载到 Java 虚拟机（JVM）中。命令行窗口会显示“Hello World”。图 1-4 截图显示了 MAC OS 如何定位编译命令（`javac HelloWorld.class`）、编译后第 1 章文件夹的内容（`ls`——Windows 上的 `dir` 等于 `ls`）、如何运行程序（`java HelloWorld`）以及 HelloWorld 程序的输出：
 
-```
 Hello World!
-```
 
-图 1-4：编译与运行 HelloWorld
+![图 1-4：编译与运行 HelloWorld](img/c6ae2d81738909a4b5328d6eddc14dd7_42_0.png)
 
 ## 尝试一下
 
@@ -806,7 +799,7 @@ Hello World!
 
 ## 课程要求
 
-在本节中，请按照“下载与安装 Java SE”章节说明下载并安装当前版本的 `JDK`。
+在本节中，请按照“下载与安装 Java SE”章节说明下载并安装当前版本的 JDK。
 
 ## 步骤详解
 
@@ -817,6 +810,8 @@ Hello World!
 
 > 提示：请在 `www.wrox.com/go/javaprog24hr2e` 选择第 1 节的在线视频。你也可以从该网站下载本节的代码和资源。
 
+![图片](img/c6ae2d81738909a4b5328d6eddc14dd7_44_0.png)
+
 
 
 ## 2 Eclipse IDE
@@ -825,13 +820,13 @@ Hello World!
 
 Eclipse 是目前使用最广泛的 IDE，我用它来编译和运行书中的大多数示例。从一个 IDE 切换到另一个是一个非常简单的过程，如果你发现某个 IDE 在某些领域比另一个效率更高，就根据任务选择最好的工具。事实上，我更倾向于使用 IntelliJ IDEA，但这并不阻止我享受在 Eclipse 中进行 Java 开发。
 
-### 引入 ECLIPSE IDE
+### 引入 Eclipse IDE
 
 Eclipse IDE 是一个开源项目，最初由 IBM 向 Java 社区捐赠大量代码后创建的，从 Eclipse 成为社区驱动的产品的那一刻起就是如此。它最初是一个用于开发 Java 程序的 IDE，但现在使用其富客户端平台（RCP）API 为应用程序构建用户界面（UI）。通过 Eclipse，你可以轻松生成复杂的 Web 应用程序、启动和停止服务器、将其用作数据库管理工具以及更多功能。使用它的插件开发报告。访问 `www.eclipse.org/downloads` 页面查看一些基于 Eclipse 的可用产品。
 
 除了是一个 IDE 之外，Eclipse 还支持插件开发，每个开发者都可以只添加自己感兴趣的插件。例如，有一个显示 UML 图的插件，另一个提供报告系统，还有用于 C、JavaScript、Apache Flex 及其他语言开发应用程序的插件。
 
-### 下载与安装 ECLIPSE
+### 下载与安装 Eclipse
 
 Eclipse IDE 有不同的版本，本书使用的是适用于 Java EE 开发人员的 Eclipse IDE。每个版本的 Eclipse IDE 都有一个名称。在编写本文时，当前版本称为 Luna，你应该从 `http://www.eclipse.org/downloads` 下载它。
 
@@ -855,7 +850,7 @@ Java EE 版 Eclipse 启动后会显示欢迎面板；只需点击顶部的“x�
 
 > 图 2-2：Java 视图
 
-### 在 ECLIPSE 中创建 Hello 项目
+### 在 Eclipse 中创建 Hello 项目
 
 在第 1 章中你只是创建了 HelloWorld，现在你必须创建第一个项目。`File → New Project`，并在弹出窗口输入 Hello 作为项目名称，如图 2-3 所示。
 
@@ -881,13 +876,13 @@ JRE 文件夹包含了所有支持 JVM 运行所需的 Java 1.8 库。HelloWorld
 
 将唯一的 HelloWorld 放在 jar 包中并没有意义，但随着你的示例应用程序的增长，你会发现如何在 jar 中对文件进行分组和压缩。
 
-### 在 Eclipse 中创建 HELLOWORD 类
+### 在 Eclipse 中创建 HelloWorld 类
 
 你的 Hello 项目将包含一个类：第 1 章中的 `HelloWorld`。选择 `File（文件）→ New（新建）→ Class（类）`，并在图 2-6 所示的弹出窗口 Name 字段中输入 `HelloWorld`。
 
 然后在 Package（包）字段中输入 `com.practical.java.lesson2`。该包名是第 1 章中 HelloWorld 旧版本的新新增。
 
-#### Java 包
+### Java 包
 
 Java 中的包用于更好地组织多文件项目并进行数据保护。项目拥有几百个 Java 类并不稀见。将它们全部保放在一个目录中永远不是一个好主意。因此，文件将位于各种目录和子目录（也称为包）中。
 
@@ -907,15 +902,15 @@ package com.acme.sales.domestic;
 
 除了有助于更好地组织 Java 类，包有助于控制数据访问。你将在 `access_levels_programming_with_abstract_classes_and_in` 章节学习这一功能。
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_50_0.png)
-
-> 图 2-6：在 Eclipse 中创建 HelloWorld 类
-
 ### 完成代码生成
 
 从图 2-6 你可能注意到我也勾选了请求 Eclipse 为我生成 `main` 方法的框框。
 
 点击 Finish，让 Eclipse 为 `HelloWorld` 类生成代码，如图 2-7 所示。
+
+![](img/c6ae2d81738909a4b5328d6eddc14dd7_50_0.png)
+
+> 图 2-6：在 Eclipse 中创建 HelloWorld 类
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_51_0.png)
 
@@ -967,7 +962,7 @@ Java 中的类可以有方法（methods）和字段（fields，也称为属性�
 **代码列表 3-1 类 Car**
 
 ```java
-class Car{
+class Car {
     String color;
     int numberOfDoors;
 
@@ -975,7 +970,7 @@ class Car{
         // 此处编写某些代码
     }
     void stopEngine() {
-        int tempCounter=0;
+        int tempCounter = 0;
         // 此处编写某些代码
     }
 }
@@ -988,9 +983,9 @@ class Car{
 **代码列表 3-2 JamesBondCar**
 
 ```java
-class JamesBondCar extends Car{
+class JamesBondCar extends Car {
     int currentSubmergeDepth;
-    boolean isGunOnBoard=true;
+    boolean isGunOnBoard = true;
     final String MANUFACT;
 
     void submerged() {
@@ -1005,7 +1000,7 @@ class JamesBondCar extends Car{
 
 正如你从方法名称中猜的那样，詹姆斯·邦德的汽车不仅可以行驶，还可以下水并救援。即使为 `JamesBondCar` 类定义了属性和方法，你也无法“驾驶它”，即使是在电脑屏幕上。Java 类就像建筑或工程中的蓝图；在根据此蓝图构建真实对象之前，你是无法使用它的。
 
-创建对象（也也称为类的实例）等同于根据蓝图建造真实的汽车。创建一个类的实例意味着根据类的定义在计算机内存中创建对象。
+创建对象（也称为类的实例）等同于根据蓝图建造真实的汽车。创建一个类的实例意味着根据类的定义在计算机内存中创建对象。
 
 要实例化一个类（将汽车放到路上），你需要声明一个该类类型的变量，并为每个汽车实例使用 `new` 运算符：
 
@@ -1059,8 +1054,6 @@ final String MANUFACTURER = "Toyota";
 |---|---|---|---|---|
 
 
-
-# Java 基础数据类型
 
 | 类型 | 大小 | 最小值 | 最大值 | 包装类 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -1135,7 +1128,9 @@ int luckyNumber = myNumber.get(23);
 */
 ```
 
-如果你想写一个单行的短注释，以双斜杠 `//` 开始。例如：
+如果你想写一个单行的短注释，以双斜杠 `//` 开始。
+
+例如：
 
 ```java
 // 计算运费
@@ -1204,7 +1199,7 @@ class TestTax {
 
 在最后一行之后，你可以通过调用 `calcTax()` 方法来计算由 `t` 表示的税额，该方法返回的结果将赋值给你的变量 `Tax`。`calcTax()` 方法仍然返回硬编码的值，但你可以在“它（It）”部分修复它。最后一行在系统控制台上显示结果。
 
-到此为止，你有两个相互通信的类（`TestTax` 和 `Class`）。`TestTax` 类创建了 `Tax` 的实例，初始化了它的变量，并且它的方法 `calcTax()` 将值返回给 `TestTax` 类。
+到此为止，你有两个相互通信的类（`TestTax` 和 `Tax`）。`TestTax` 类创建了 `Tax` 的实例，初始化了它的变量，并且它的方法 `calcTax()` 将值返回给 `TestTax` 类。
 
 ## 条件判断 if
 
@@ -1247,9 +1242,7 @@ switch (taxCode) {
 
 前面的代码仅调用 `println()` 方法之一，并继续执行关闭大括号下面的其他代码（如果有）。不要忘记在每个 `case` 语句末尾放置 `break`，以便程序跳出 `case` 语句。
 
----
-
-# 提示
+## 提示
 
 本节对 Java 语言基础结构进行了简要介绍。在完成本次及未来的作业时，在线 Java 教程可能会很有帮助。你可以在 [http://download.oracle.com/javase/tutorial/java/index.html](http://download.oracle.com/javase/tutorial/java/index.html) 找到。
 
@@ -1274,19 +1267,17 @@ public double calcTax() {
 
 6. 在列表 3-5 中创建 `NJTax` 类。
 7. 通过在 `NJTax` 中重写 `calcTax()` 来更改其功能。新版本的 `calcTax()` 应在返回值之前减少 $500 的税额。
-8. 修改 `TestTax` 类的代码以实例化 `NJTax` 而不是 `TestTax`。观察 $500 的扣除是否已正确计算。
+8. 修改 `TestTax` 类的代码以实例化 `NJTax` 而不是 `Tax`。观察 $500 的扣除是否已正确计算。
 
 要获取示例数据库文件，你可以从书籍网站 [www.wrox.com/go/javprog24r2e](http://www.wrox.com/go/javprog24r2e) 下载第 3 章。
 
 > **提示** 请在 [http://www.wrox.com/go/javaprog24hr2e](http://www.wrox.com/go/javaprog24hr2e) 在线选择第 3 节视频。你还可以从该网站下载本节的代码和资源。
 
----
-
-# 类方法与构造函数
+## 类方法与构造函数
 
 方法包含类可以执行的操作或功能的代码。虽然你在此之前的课程中已经开始接触方法，但在本节中，你将详细了解如何使用它们。你还将熟悉一种称为构造函数的特殊类型方法。
 
-## 方法参数
+### 方法参数
 
 每个类都执行某些功能，例如计算税收、下达订单或启动汽车。如果方法需要某些外部数据来执行其功能，则这些数据可以以参数（arguments）的形式提供，例如列表 3-5 所示的 `adjustForStudents()` 方法，它有一个参数：`stateTax`。
 
@@ -1306,7 +1297,7 @@ calcLoanPayment(20000, 60);
 
 Java 编译器将向你抛出错误，称没有找到仅接受两个参数的 `calcLoanPayment()` 函数。
 
-## 方法重载
+### 方法重载
 
 如果你想允许使用不同数量的参数调用方法，你需要创建该方法的多个版本。例如，你可以创建一个使用纽约州作为默认值的方法，以免得开发者提供州份作为参数。如果大多数贷款计算是针对纽约州居民的，那么这种方法可能是一个好主意。因此，除了具有三个参数的 `calcLoanPayment()` 方法外，你又创建了另一个只有两个参数的方法。为了避免代码重复，只由三个参数的方法实现支付的逻辑计算。通过添加“NY”作为第三个参数。
 
@@ -1346,7 +1337,7 @@ void println(String x) {
 }
 ```
 
-## 构造函数
+### 构造函数
 
 
 
@@ -1356,7 +1347,7 @@ void println(String x) {
 - 它们与类名相同。
 - 它们不能返回值；不需要指定 `void`。
 
-## 列表 4-1 带有构造函数的类
+### 列表 4-1 带有构造函数的类
 
 ```java
 class Tax {
@@ -1380,15 +1371,15 @@ class Tax {
 Tax t = new Tax(65000,"NY",3);
 ```
 
-注意，定义带参数的构造函数后，默认无参数构造函数的规则不再适用。如果你需要类有多个构造函数且其中是无参数的，你需要显式写：
+注意，定义带参数的构造函数后，默认无参数构造函数的规则不再适用。如果你需要类有多个构造函数且其中是无参数的，你需要显式写。
 
-## 关键字 super
+### 关键字 super
 
 如果方法在子类中重写，则存在两个相同签名的方法版本。如果你通过名称调用方法：例如在类中使用 `calcTax()`，JVM 将调用被重写的方法版本。在这种情况下，你可能需要显式调用父类的方法或构造函数。要调用父类方法，你需要在子类中写：`super.calcTax()`。
 
 如果一个类继承自另一个类，它们各可能有自己的构造函数。与普通类相反，子类的构造函数不能重写父类的构造函数；即使它们的名称不同。但有时你可能需要将此添加到从父类构造函数调的功能。为了避免代码重复，只需显式调用父类的构造函数，然后添加你在实例化期间运行的额外代码（见列表 4-2）。对构造函数的调用必须是构造函数的第一行。
 
-## 列表 4-2 调用父类的构造函数
+### 列表 4-2 调用父类的构造函数
 
 ```java
 class SmallerTax extends Tax {
@@ -1402,7 +1393,7 @@ class SmallerTax extends Tax {
 }
 ```
 
-## 关键字 this
+### 关键字 this
 
 当需要从方法引用类的实例时，`this` 关键字非常有用。回顾列表 4-1 中构造函数的代码。构造函数的参数名称与变量的名称不同类变量。但列表 4-3 中的代码展示了你如何在参数和类变量中使用完全相同的变量名。除了指向当前对象外，`this` 关键字有助于解决名称冲突。要指引 JVM 使用实例变量 `grossIncome`，请使用以下语法：
 
@@ -1412,7 +1403,7 @@ this.grossIncome = 5000;
 
 如果 `Tax` 类中只有一个 `grossIncome` 变量，你就可以简单地省略该前缀。但在列表 4-3 中，缺少该关键字会导致歧义，且实例变量将永远不会初始化。
 
-## 列表 4-3 使用关键字解决名称冲突
+### 列表 4-3 使用关键字解决名称冲突
 
 ```java
 class Tax {
@@ -1431,20 +1422,20 @@ class Tax {
 
 假设有一个被调用的 `SomeOtherClass` 类，其定义了一个名为 `verify(Tax t)` 的方法。如你所见，它期望一个 `Tax` 对象的实例作为参数。列表 4-4 展示了你如何在 `Tax` 类中使用 `this` 关键字来调用它，以传递当前 `Tax` 对象实例的引用。
 
-## 列表 4-4 使用关键字作为参数调用方法
+### 列表 4-4 使用关键字作为参数调用方法
 
 ```java
 class Tax {
     void verifyTax() {
         SomeOtherClass s = new SomeOtherClass();
-        s.verifyTax(this);
+        s.verify(this);
     }
 }
 ```
 
 这是另一种情况：一个类具有多个不同参数数量的重载构造函数。通过方法重载，重载的构造函数为实例化对象提供了更多选择并避免了代码重复。你可以使用 `this()` 符号来调用特定版本的构造函数。在列表 4-5 中，第二个构造函数调用了第一个。
 
-## 列表 4-5 使用关键字 this 调用重载的构造函数
+### 列表 4-5 使用关键字 this 调用重载的构造函数
 
 ```java
 class Tax {
@@ -1466,13 +1457,13 @@ class Tax {
 }
 ```
 
-## 按值传递或按引用传递
+### 按值传递或按引用传递
 
 带参数调用方法允许你向方法传递某些必需的数据。问题是 JVM 是如何将这些值传递给方法的。它是在调用程序中创建变量的副本并将其交给方法吗？
 
-基本数据类型的值是按值传递的（这意味着每个变量都会在内存中创建一个额外的副本）。当你创建一个 `Tax` 实例时（如列表 4-6 所示），将会有 `grossIncome` 的副本以及两个变量的副本——一个在 `TestTax` 中，另一个在 `Tax` 中。但对象是通过引用传递的。以下代码在内存中创建了一个 "NJ" 的副本。在 Java 中，对象有特殊的处理规则，将在第 5 章中讨论，但该规则仍然适用：非基本类型按引用传递的。
+基本数据类型的值是按值传递的（这意味着每个变量都会在内存中创建一个额外的副本）。当你创建一个 `Tax` 实例时（如列表 4-6 所示），将会有 `grossIncome` 的副本以及两个变量的副本——一个在 `TestTax` 中，另一个在 `Tax` 中。但对象是通过引用传递的。以下代码在内存中创建了一个 "NJ" 的副本。在 Java 中，对象有特殊的处理规则，将在第 5 章中讨论，但该规则仍然适用：非基本类型按引用传递。
 
-## 列表 4-6 测试类
+### 列表 4-6 测试类
 
 ```java
 class TestTax{
@@ -1481,9 +1472,9 @@ class TestTax{
         String state;
         int dependents;
 
-        grossIncome= 50000;
-        dependents= 2;
-        state= "NJ";
+        grossIncome = 50000;
+        dependents = 2;
+        state = "NJ";
 
         Tax t = new Tax(grossIncome, state, dependents);
 
@@ -1491,12 +1482,11 @@ class TestTax{
 
         // 打印结果
         System.out.println("Your tax is " + yourTax);
-
     }
 }
 ```
 
-在前面的示例中，如果你在 `Tax` 类的构造函数中更改 `grossIncome` 的值，它将不会影响 `Test` 类中对应变量的值，因为会有这些基本类型的两个副本。
+在前面的示例中，如果你在 `Tax` 类的构造函数中更改 `grossIncome` 的值，它将不会影响 `TestTax` 类中对应变量的值，因为会有这些基本类型的两个副本。
 
 现在考虑另一个例子。我声明了另一个 `Tax` 类型的变量，并将 `t` 的值赋值给它：
 
@@ -1512,7 +1502,7 @@ Tax t2 = t;
 
 这意味着，如果 `SomeOtherClass` 中的代码更改了 `Tax` 实例的某些属性，更改将仅应用到 `Tax` 实例的副本上，并且对 `Tax` 和 `SomeOtherClass` 都是不可见的。
 
-## 变量作用域
+### 变量作用域
 
 变量作用域定义了变量生存多久以及何时保持可用。如果你在方法内部声明一个变量，它就是局部变量，方法一旦执行完成就会超出作用范围（变得不可用）。例如，列表 4-6 中的变量 `t`、`grossIncome`、`dependents` 和 `state` 都是局部的。
 
@@ -1520,13 +1510,13 @@ Tax t2 = t;
 
 ```java
 public double calTax() {
-    double stateTax=0;
+    double stateTax = 0;
     if (grossIncome < 300) {
         int taxCredit = 30000;
-        stateTax=grossIncome*0.05;
+        stateTax = grossIncome * 0.05;
     }
     else {
-        stateTax+=grossIncome*0.06;
+        stateTax += grossIncome * 0.06;
     }
     return stateTax;
 }
@@ -1539,11 +1529,11 @@ Tax t1 = new Tax(50000, "NY", 3);
 Tax t2 = new Tax(65000, "TX", 4);
 ```
 
-## static 关键字
+### static 关键字
 
 Java 有一个特殊的关键字 `static`，表示变量被所有实例共享。但是，如果你如列表 4-7 所示将 `Tax` 作为类变量：
 
-## 列表 4-7 使用 static 关键字的 Tax 类
+### 列表 4-7 使用 static 关键字的 Tax 类
 
 ```java
 class Tax {
@@ -1556,13 +1546,13 @@ class Tax {
     Tax(double gi, String st, int dep){
         grossIncome = gi; // 类变量初始化
         state = st;
-        dependents=dep;
+        dependents = dep;
         customerCounter++; // 计数器加1
     }
 }
 ```
 
-注意 还可以声明静态方法。此类方法无需实例化类即可调用。这通常用于不使用任何实例变量，但通过参数获取输入并返回结果的方法。
+注意：还可以声明静态方法。此类方法无需实例化类即可调用。这通常用于不使用任何实例变量，但通过参数获取输入并返回结果的方法。
 
 以下函数将华氏度转换为摄氏度并返回结果：
 
@@ -1577,29 +1567,29 @@ class WeatherReport{
 你可以无需实例化 `WeatherReport` 即可从另一个类调用此函数：
 
 ```java
-double celsius=WeatherReport.convertToCelsius(98.7);
+double celsius = WeatherReport.convertToCelsius(98.7);
 ```
 
-## 练习
+## 练习题
 
 4. 在 `Tax` 类中添加 `calcTax()` 方法，通过将总收入乘以 0.33 并减去受养人人数乘以一百，来计算税额：
 
 ```java
-return (grossIncome * 0.33 - dependents*100);
+return (grossIncome * 0.33 - dependents * 100);
 ```
 
-5. 添加静态方法 `Tax` 以转换计算出的税额，应用 1.25 的货币汇率。
+5. 添加静态方法 `convertToEuros` 以转换计算出的税额，应用 1.25 的货币汇率。
 
 ```java
 public static void convertToEuros(double taxDollars){
-    System.out.println("Tax in Euros: " + taxDollars/1.25);
+    System.out.println("Tax in Euros: " + taxDollars / 1.25);
 }
 ```
 
 6. 创建一个 `TestTax` 类并输入列表 4-6 中的代码。在该类的 `main()` 方法中添加另一个 `Tax` 类的实例：
 
 ```java
-Tax t2 = new Tax(65000, "TX", 4 );
+Tax t2 = new Tax(65000, "TX", 4);
 ```
 
 使用 `Tax` 类的第二个实例计算税额：
@@ -1627,20 +1617,16 @@ Tax in Euros: 16840.0
 
 本教程并没有从详细介绍 Java 语言的基础结构（如 `if` 语句的语法、循环等）开始。你开始学习 Java 编程是从熟悉面向对象的术语和语言结构开始的。本节是基础语言元素、术语和数据结构的大杂锅。你还将了解如何在 Eclipse IDE 中调试 Java 程序，以及如何向从命令行启动的程序传递参数。
 
-# 数组 (ARRAY)
+# 数组
 
 数组是一种用于存储多个相同类型值的数据存储。假设你的程序需要存储 20 个不同女孩的名字，例如 Masha、Matilda、Rosa 等。与其声明 20 个 `String` 变量，不如声明一个容量为 20 个元素的 `String` 数组：
 
 ```java
-String [] friends = new String[20]; // 声明并例化数组
+String[] friends = new String[20]; // 声明并实例化数组
 friends[0] = "Masha"; // 初始化第一个元素
 friends[1] = "Matilda"; // 初始化第二个元素
 friends[2] = "Rosa";
-```
-
 // 在此处继续初始化数组的其他元素
-
-```java
 friends[19] = "Natasha"; // 初始化最后一个元素
 ```
 
@@ -1651,16 +1637,16 @@ String friends[];
 String[] friends;
 ```
 
-在给数组元素赋值之前，你必须知道数组的大小。如果你希望在运行时动态更改数组的大小，请考虑 `java.util` 包包中的其他 Java 集合类，例如 `Vector` 和 `ArrayList`。除了数组外，Java 还有许多可以存储多个重复值的集合类；例如 `HashMap`、`List` 和 `LinkedList`。你有机会在随书的代码示例中使用这些类。
+在给数组元素赋值之前，你必须知道数组的大小。如果你希望在运行时动态更改数组的大小，请考虑 `java.util` 包中的其他 Java 集合类，例如 `Vector` 和 `ArrayList`。除了数组外，Java 还有许多可以存储多个重复值的集合类；例如 `HashMap`、`List` 和 `LinkedList`。你有机会在随书的代码示例中使用这些类。
 
-## 列表 5-1 填充简单的数组
+### 列表 5-1 填充简单的数组
 
 ```java
 public class Girlfriend {
     public static void main(String[] args) {
-        String[] friends = new String[20]; // 声明并例化数组
-        friends[0] = "Masha";// 初始化第一个元素
-        friends[1] = "Matilda";// 初始化第二个元素
+        String[] friends = new String[20]; // 声明并实例化数组
+        friends[0] = "Masha"; // 初始化第一个元素
+        friends[1] = "Matilda"; // 初始化第二个元素
         friends[2] = "Rosa";
         // ...
         friends[18] = "Hillary";
@@ -1678,7 +1664,7 @@ public class Girlfriend {
 int totalElements = friends.length;
 ```
 
-如果你在声明时就已知数组中将存储的所有值，可以同时声明并初始化数组。以下几行声明、例化并填充了一个元素数组：
+如果你在声明时就已知数组中将存储的所有值，可以同时声明并初始化数组。以下几行声明、实例化并填充了一个元素数组：
 
 
 
@@ -1904,7 +1890,7 @@ do {
 
 ## 日志 API
 
-Java 还提供了一个日志接口（API）—— http://docs.oracle.com/javase/8/docs/techniques/logging/index.html 将允许记录日志到文件或其他位置。尽管第二章专门介绍了 Eclipse IDE，但在那时调试可能为时过早，因为没有代码可以调试。现在你准备好学习调试器如何帮助你了。
+Java 还提供了一个日志接口（API）—— <http://docs.oracle.com/javase/8/docs/techniques/logging/index.html> 将允许记录日志到文件或其他位置。尽管第二章专门介绍了 Eclipse IDE，但在那时调试可能为时过早，因为没有代码可以调试。现在你准备好学习调试器如何帮助你了。
 
 # 第 5 课 Java 语法：细节与部分
 
@@ -2003,8 +1989,6 @@ float salary;
 int bonus = salary > 90000 ? 5000 : 2000;
 ```
 
-# 第 5 课 Java 语法：细节与部分
-
 ## 命令行参数
 
 
@@ -2012,7 +1996,7 @@ int bonus = salary > 90000 ? 5000 : 2000;
 在第 1 章中你学会了如何从命令行启动 Java 程序。在 Eclipse 或其他 IDE 中开发后，Java 程序被部署在并通常通过命令行启动，对吗？例如，要从命令行运行 `TestTax` 程序（见第 4 章），你需要打开命令行（或终端），切换到目录。此数组是从命令行向程序传递某些数据的方法。你可以通过如下方式启动 `TestTax` 来传递总收入、州和依赖人数：
 
 ```
-java TestTax 50000 2
+java TestTax 50000 NJ 2
 ```
 
 `TestTax` 类的 `main(String[] args)` 接收这些数据。它由 JVM 自动创建，并且足够大以容纳从命令行输入的所有参数。该数组将填充如下：
@@ -2042,7 +2026,6 @@ double grossIncome = Double.parseDouble(args[0]);
 ## 步骤详解
 
 1. 在 Eclipse IDE 中，将 `TestClass` 从 `Lesson4` 项目复制到项目 `Lesson5` 的 `src` 文件夹中。同时，也从 `Chapter3` 项目中复制 `Tax` 类，该类在 `calcTax()` 方法中包含一个 `if` 语句。
-
 2. 添加以下代码片段以确保程序带有 3 个参数启动。如果不是，则打印错误消息并退出程序。
 
 ```java
@@ -2062,9 +2045,7 @@ int dependents = Integer.parseInt(args[2]);
 ```
 
 4. 虽然在 Eclipse 中有一种指定命令行参数的方法，但如果你想留在命令行窗口，请在 Eclipse IDE 中右键点击 `Lesson5` 项目并选择 `Properties`（属性）菜单（注意项目编译类的类位置——在我的情况下，它是 `c:\practical\Java\lesson5\bin`）。
-
 5. 打开命令行窗口并切换到包含 `TestTax.class` 的目录。
-
 6. 多次运行你的程序，为命令行参数指定不同的值。你的程序应该打印计算税额的不同值。
 
 > **提示** 请在 `www.wrox.com/go/javaprog24hr2e` 在线选择第 5 课视频。你也可以从网站下载本课程的代码和资源。
@@ -2130,7 +2111,7 @@ import java.net.*;
 
 ### final 关键字
 
-`final` 关键字在不同的语文中有不同的含义。将在后续章节中进行解释。
+`final` 关键字在不同的语境中有不同的含义。将在后续章节中进行解释。
 
 ### 访问级别
 
@@ -2179,11 +2160,11 @@ static final double convertToCelsius(double far) {
 
 ### final 类
 
-如果你将一个类声明为 `final`，没有人能够它的子类。例如，`String` 类被设计为不可变的，因此被声明为 `final`（参见 `http://docs.oracle.com/javase/8/docs/api/java/lang/String.html`）。如果一个类被声明为 `final`，它的所有方法都将隐式变为 `final`。
+如果你将一个类声明为 `final`，没有人能够继承它的子类。例如，`String` 类被设计为不可变的，因此被声明为 `final`（参见 `http://docs.oracle.com/javase/8/docs/api/java/lang/String.html`）。如果一个类被声明为 `final`，它的所有方法都将隐式变为 `final`。
 
 > **异常处理中的 FINAL**
-
-`final` 关键字还有一种用法。你可以在错误处理块（try-catch）中使用它。你可以在第 10 节关于错误处理的内容中看到 `finally` 的示例。
+>
+> `final` 关键字还有一种用法。你可以在错误处理块（try-catch）中使用它。你可以在第 10 节关于错误处理的内容中看到 `finally` 的示例。
 
 ## 接口
 
@@ -2485,11 +2466,11 @@ return true;
 
 11. 运行 `TestPay` 程序。它应该产生类似下面的输出：
 
+```text
 Increasing salary by 30%. Person's name is John
-
 Sorry, can't increase hourly rate by more than 20%. Person's name is Mary
-
 Increasing salary by 30%. Person's name is Steve
+```
 
 > **提示** 请在 www.wrox.com/go/javaprogr24hr2e 在线选择第 6 节的视频。你也可以下载该网站的代码和资源。
 
@@ -2564,8 +2545,6 @@ public abstract class Person {
     public abstract boolean increasePay(int percent);
 }
 ```
-
-### 75
 
 `increasePay()` 方法是抽象的，`Person` 类的作者不需要知道提高工资的具体细节。子类可能由其他开发者实现。但 `Person` 的作者可以编写甚至调用 `increasePay()` 的代码，例如在 `promote()` 方法中。这是允许的，因为当具体类实例化时，`increasePay()` 方法肯定已经实现了。为了简单起见，我没有写任何看起来像实际增加工资的代码 —— 这对于理解抽象类的概念无关。
 
@@ -2642,7 +2621,6 @@ public class TestPay {
 
 `TestPay` 类的输出类似于：
 
-```
 Promoting a worker...
 
 Giving a day off to John
@@ -2660,7 +2638,6 @@ Promoting a worker...
 Giving a day off to Steve
 
 Increasing salary by 30%. Person's name is Steve
-```
 
 多态使你能够避免带有 `instanceof` 慢开销的 `switch` 或 `if` 语句，你在第 6 章中用过它们。你是否同意，与这个版本的代码相比，即使是 `TestPay` 看起来也很丑陋？
 
@@ -2746,7 +2723,6 @@ public class ForeignContractor extends Person {
 
 ```java
 import com.practical.java.lesson6.*;
-
 public class TestPayIncreasePolyError {
     public static void main(String[] args) {
         Person workers[] = new Person[3];
@@ -2851,13 +2827,11 @@ public class TestPayIncreaseInterface {
 
 6. 运行此程序。它应该产生以下输出：
 
-```
 Increasing salary by 30%: John
 
 Sorry, can't increase hourly rate by more than 20%: Mary
 
 Increasing salary by 30%: Steve
-```
 
 注意 `Employee` 和 `Contractor` 不再继承 `Person`。这两个类现在可以自由地继承其他类，但另一方面，每个类都必须声明变量名和方法名，而这在 `Person` 类中已经完成过一次。
 
@@ -2881,11 +2855,9 @@ Swing 提供了在 Java 中构建 UI 所需的一切内容：有用于表示按�
 
 
 
-# Swing 类与 GUI 创建基础
-
 Swing 类位于 `javax.swing` 包中，创建 UI 的过程源于扩展其中的一些类来显示 UI 并响应各种用户生成和系统生成的事件。你通过实例化 `JFrame` 类来创建一个带有标题和边框的顶层窗口，如列表 8-1 所示。
 
-## 列表 8-1 JFrame 的空子类
+### 列表 8-1 JFrame 的空子类
 
 ```java
 import javax.swing.JFrame;
@@ -2897,7 +2869,7 @@ public class HelloWorld extends JFrame {
 
         // 向容器中添加按钮
         JButton jButton = new JButton("Click me");
-        myWindow.add(jButton);
+        myWindow.add(myButton);
         myWindow.setSize(200, 300);
         myWindow.setTitle("Hello World");
         myWindow.setVisible(true);
@@ -2916,7 +2888,7 @@ public class HelloWorld extends JFrame {
 运行之前的 `HelloWorld` 程序并尝试点击窗口的关闭按钮。它不起作用。JRE 发送了一个关闭窗口的事件，但程序没有该事件的事件处理代码。你将在下一节中学习如何添加它，但在此你可以在 `HelloWorld.java` 中添加以下行来让窗口关闭：
 
 ```java
-myWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+myWorld.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 ```
 
 通常 `JFrame` 包含一些嵌套容器，你在其中放置如 `JButton`、`Table` 和 `List` 等控件。例如，创建一个包含 `JPanel` 的 `JFrame` 的示例编码过程如下：
@@ -2924,25 +2896,22 @@ myWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 1. 创建一个 `JPanel`。
 2. 为它分配一个布局管理器。
 3. 实例化一些控件并将它们添加到面板。
-4. 通过调用 `setContentPane()` 方法将面板添加到顶层容器——`JFrame` 中。
+4. 通过调用 `setPane()` 方法将面板添加到顶层容器——`JFrame` 中。
 5. 设置框架的大小并使其可见。
 
-你可以为容器分配不同的布局管理器来创建非常复杂的窗口。但显示一个具有正确布局组件的窗口只是工作的一半，因为这些控件应该知道如何响应各种事件，例如点击按钮。本节涵盖了显示 UI 组件的基础；第 9 节将介绍事件处理。
+你可以为容器分配不同的布局管理器来创建非常复杂的窗口。但显示一个具有正确布局组件的窗口只是工作的一半，因为这些控件应该知道如何响应各种事件，例如点击按钮。本节涵盖了显示 UI 组件的基础；第 9 节
 
 ## 布局管理器
 
-最简单的布局管理器是 `FlowLayout`，它水平方向分配所有添加到容器的组件。如果没有空间，`FlowLayout` 会使用下一行，并重复此过程。
+最简单的布局管理器是 `FlowLayout`，它水平方向分配所有添加到容器的组件。如果没有空间，`FlowLayout` 会使用下一行，并重复重复。
 
-### 使用 FlowLayout 的简单计算器
+## 使用 FlowLayout 的简单计算器
 
 学习布局管理的最好方法是在实践中尝试使用它。你将为简单的计算器创建一个 UI，它可以接收数字并显示结果。创建一个名为 `Lesson8` 的 Eclipse 项目并创建一个带有以下代码的新类 `SimpleCalculator`：
 
-#### 列表 8-2 使用 FlowLayout 的计算器
+### 列表 8-2 使用 FlowLayout 的计算器
 
 ```java
-import javax.swing.*;
-import java.awt.*;
-
 public class SimpleCalculator {
     public static void main(String[] args) {
         // 创建一个面板
@@ -2974,7 +2943,7 @@ public class SimpleCalculator {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // 设置大小并让窗口可见
-        frame.setSize(400, 100);
+        frame.setSize(400,100);
         frame.setVisible(true);
     }
 }
@@ -2984,13 +2953,11 @@ public class SimpleCalculator {
 
 这可能不是最好的计算器，但它展示了 `FlowLayout` 的用法，开始重新分配控件，尝试填充新区域。如果你把窗口调得足够宽，所有组件将挤在一行中，见图 8-3。
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_120_0.png)
-
-> 注：文中提到的图 8-2 和 8-3
+![](img/c6ae2d81738909a4b5328d6eddc14dd7_120_0.png) (注：文中提到的图 8-2 和 8-3)
 
 尽管你可以为每个窗口组件强制约束和大小，但 Swing 拥有布局管理器可以保持所有控件的相对位置，而不需要它们有严格的位置。不过 `FlowLayout` 看起来并不好看。它是根据当前容器的宽度显示所有视觉组件的。
 
-## 布局管理器简介
+## 布局管理器简介绍
 
 Swing 提供了以下布局管理器：
 
@@ -3001,33 +2968,35 @@ Swing 提供了以下布局管理器：
 - `CardLayout`
 - `GridBagLayout`
 
+# 第 8 课：使用 Swing 引入 GUI
+
 要使用任何布局管理器，首先要实例化它，并通过 `setLayout()` 将此实例分配给容器，就像你在列表 8-2 中的 `SimpleCalculator` 类中所做的那样。
 
-### FlowLayout（流式布局）
+## FlowLayout（流式布局）
 
-这种布局将容器中的组件按行排列。例如，标签、文本字段和按钮会被添加到虚拟的行中，直到该行没有空间为止。
+这种布局将容器中的组件以网格中的行和列排列。例如，标签、文本字段和按钮会被添加到虚拟的行中，直到该行没有空间为止。
 
-当当前行填满时，剩余的组件将到下一行，依此类推。可以根据容器的 `componentOrientation` 属性将组件添加到容器中。如果用户更改了窗口的大小，该布局管理器会刷新组件，如图 8-2 所示改变 GUI。事实上，`FlowLayout` 不是计算器的最佳选择。让我们尝试一些不同的。
+当当前行填满时，剩余的组件将到下一行，依此类推。可以根据容器的 `componentLayout` 属性将组件添加到容器中。如果用户更改了窗口的大小，该布局管理器会刷新组件，如图 8-2 所示改变 GUI。事实上，FlowLayout 不是计算器的最佳选择。让我们尝试一些不同的。
 
-### GridLayout（网格布局）
+## GridLayout（网格布局）
 
 `java.awt.GridLayout` 类允许将组件排列在网格的虚拟单元格中。如果调整容器的大小，网格单元可能会变大或变小，但组件的相对位置保持不变。
 
 到目前为止，你的计算器有几个标签、三个文本字段和一个按钮。你可以通过如下创建 `GridLayout` 实例，将它们排列为四行两列的网格（一个单元格为空）：
 
 ```java
-GridLayout gl = new GridLayout(4, 2);
+GridLayout gr = new GridLayout(4, 2);
 ```
 
 你也可以为单元格分配水平和垂直空间，例如五像素：
 
 ```java
-GridLayout gl = new GridLayout(4, 2, 5);
+GridLayout gr = new GridLayout(4, 2, 5);
 ```
 
-将列表 8-2 中的 `FlowLayout` 替换为 `GridLayout`，计算器看起来会好一点。创建并编译新类 `SimpleCalculatorGrid`（见列表 8-3）。
+将列表 8-2 中的 FlowLayout 替换为 GridLayout，计算器看起来会好一点。创建并编译新类 `SimpleCalculatorGrid`（见列表 8-3）。
 
-#### 列表 8-3 使用 GridLayout 的计算器
+### 列表 8-3 使用 GridLayout 的计算器
 
 ```java
 import java.awt.*;
@@ -3035,8 +3004,8 @@ import javax.swing.*;
 
 public class SimpleCalculatorGrid {
     public static void main(String[] args) {
-        // 创建面板作为内容面板
-        JPanel windowContent = new JPanel();
+
+        JFrame windowContent = new JFrame();
 
         // 为面板设置布局管理器
         GridLayout gl = new GridLayout(4, 2);
@@ -3061,11 +3030,12 @@ public class SimpleCalculatorGrid {
 
         // 创建框架并将面板添加到框架中
         JFrame frame = new JFrame("My First Grid Calculator");
+
         frame.setContentPane(windowContent);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // 设置大小并显示窗口
-        frame.setSize(400, 100);
+        frame.setSize(400,100);
         frame.setVisible(true);
     }
 }
@@ -3073,61 +3043,87 @@ public class SimpleCalculatorGrid {
 
 运行程序 `SimpleCalculatorGrid` 以查看一个比以前好一点的计算器（图 8-4）。
 
-尝试调整此窗口的大小；控件随窗口增大，如图 8-5 所示，但它们的相对位置不会改变。注意，使用 `GridLayout` 时，网格的所有单元格具有相同的宽度和高度。
+| 我的第一个网格计算器 | |
+|---|---|
+| Number 1: | |
+| Number 2: | |
+| Sum: | |
+| | Add |
 
-### BorderLayout（边界布局）
+图 8-4: 运行 SimpleCalculatorGrid
 
-`java.awt.BorderLayout` 布局管理器将容器划分为 North、South、West、East 和 Center 五个区域。North 区域位于顶部，South 位于底部，West 在左侧，East 在右侧。例如，图 8-6 所示显示数字的字段位于 North 区域，面板 p2 位于 West。
+尝试调整此窗口的大小；控件随窗口增大，如图 8-5 所示，但它们的相对位置不会改变。注意，使用 GridLayout 时，网格的所有单元格具有相同的宽度和高度。
+
+| 我的第一个网格计算器 | |
+|---|---|
+| Number 1: | |
+| Number 2: | |
+| Sum: | |
+| | Add Add |
+
+图 8-5: 调整 SimpleCalculatorGrid
+
+## BorderLayout（边界布局）
+
+`java.awt.BorderLayout` 布局管理器将容器划分为 South、West、East 和 Center 区域。North 区域位于顶部，South 位于底部，West 在左侧，East 在右侧。例如，图 8-6 所示显示数字的字段位于 North 区域，面板 p2 位于 West。
 
 ![](img/c62d817389094b5328d6ed14dd7125_0.png)
 
-> 图 8-6: 创建 BorderLayout 并放置文本字段的代码示意
-
-代码示例：
+图 8-6: 创建 BorderLayout 并放置文本字段的 代码：
 
 ```java
 BorderLayout bl = new BorderLayout();
 this.setLayout(bl);
 JTextField txtDisplay = new JTextField(20);
-this.add(txtDisplay, BorderLayout.NORTH);
+this.add(BorderLayout.NORTH, txtDisplay);
 ```
 
-你不需要在五个区域都有控件。如果你需要 North、Center 和 South 区域，Center 区域会变宽。在计算器的下一个版本中使用 `BorderLayout`：`Calculator.java`。
+你不需要在五个区域都有控件。如果你需要 North、Center 和 South 区域，Center 区域会变宽。在计算器的下一个版本中使用 BorderLayout：Calculator.java。
 
-`BorderLayout` 是内容面板的默认布局管理器。
+BorderLayout 是内容面板的默认布局管理器。
 
-### 组合布局管理器
+## 组合布局管理器
 
-你认为 `GridLayout` 能让你设计出像图 8-6 所示的 Windows 计算器吗？遗憾的是不能，因为单元格的大小不同——文本字段更宽。然而，你可以通过使用拥有自己管理器的面板来组合布局管理器。
+你认为 GridLayout 能让你设计出像图 8-6 所示的 Windows 计算器吗？遗憾的是不能，因为单元格的大小不同——文本字段更宽。然而，你可以通过使用拥有自己管理器的面板来组合布局管理器。
 
-### BoxLayout
+| 计算器 | |
+|---|---|
+| 1 | 2 |
+| 3 | 4 |
+| 5 | 6 |
+| 7 | 8 |
+| 9 | = |
 
-`javax.swing.BoxLayout` 类允许沿 X 轴或 Y 轴排列多个窗口组件。与 `FlowLayout` 管理器不同，当带有 `BoxLayout` 的窗口调整大小时，它的控件不会重新流动。与 `GridLayout` 不同，`BoxLayout` 控件具有不同的大小。
+图 8-7: 组合布局管理器
 
-接下来的两行代码将垂直对齐的 `BoxLayout` 分配给 `JPanel`。为了简化代码，我没有声明变量来存储 `BoxLayout` 对象的引用，而是创建它的实例并立即作为参数传递给 `setLayout()` 方法。
+## BoxLayout
+
+`javax.swing.BoxLayout` 类允许沿 x 轴或 y 轴水平排列多个窗口组件。与 FlowLayout 管理器不同，当带有 BoxLayout 的窗口调整大时，它的控件不会反应。与 GridLayout 不同，BoxLayout 控件具有不同的大小。
+
+接下来的两行代码将垂直对齐的 BoxLayout 分配给 JPanel。为了简化代码，我没有声明变量来存储 BoxLayout 对象的引用，而是创建它的实例并立即作为参数传递给 `setLayout()` 方法。
 
 ```java
 JPanel p1 = new JPanel();
-p1.setLayout(new BoxLayout(p1, BoxLayout.Y_AXIS));
+setLayout(new BoxLayout(p1, BoxLayout.Y_AXIS));
 ```
 
-如果你将按钮添加到面板 `p1`，它们将一个接一个显示。
+如果你将按钮添加到面板 p1，它们将一个接一个显示。
 
-你可以使用实现水平或垂直 `BoxLayout` 的各种容器组合构建相当复杂的 UI。想象一个游戏的前页，在窗口顶部有几个并排的项，控件在一个侧边栏上垂直排列，窗口的其余空间分配给主战场。你可以使用 `BorderLayout`，在 North 使用一个带有水平 `BoxLayout` 的面板，在 West 使用一个带有垂直 `BoxLayout` 的面板。
+你可以使用实现水平或垂直 BoxLayout 的各种容器组合构建相当复杂的 UI。想象一个游戏的前页，在窗口顶部有几个并排的项，控件在一个侧边栏上垂直排列，窗口的其余空间分配给主战场。你可以使用 BorderLayout，在 North 使用一个带有水平 BoxLayout 的面板，在 West 使用一个带有垂直 BoxLayout 的面板。
 
-下一节将向你展示一种更加冗长的 `GridBagLayout`，但你应该总是尝试看看 `BoxLayout` 是否可以胜任，如果可能的话。
+下一节将向你展示一种更加冗长的 `GridBagLayout`，但你应该总是尝试看看 BoxLayout 是否可以胜任，如果可能的话。
 
-## GridBagLayout
+# GridBagLayout
 
-在本节中，你将熟悉另一种设计计算器的方法，即使用 `java.awt.GridBagLayout` 布局管理器，而不是组合不同布局的面板。`GridBagLayout` 是一种高级网格布局，允许创建不同大小的单元格。`GridBagLayout` 与另一个类 `GridBagConstraints` 配合使用。
+在本节中，你将熟悉另一种设计计算器的方法，即使用 `Java.GridBagLayout` 布局管理器，而不是组合不同布局的面板。GridBagLayout 是一种高级网格布局，允许创建不同大小的单元格。GridBagLayout 与另一个类 `GridBagConstraints` 配合使用。
 
-约束只是单元格的属性，你必须为每个单元格单独设置。在将组件放入单元格之前，必须设置该单元格的所有约束。例如，其中一个属性称为 `gridwidth`（参见图 8-8）。它允许让一个单元格变得与其他多个单元格一样宽。示例中的显示字段与五个单元格一样宽。左上角的单元格坐标为 (0, 0)。
+约束只是单元格的属性，你必须为每个单元格单独设置。在将组件放入单元格之前，必须设置该单元格的所有约束。例如，其中一个属性称为 `gridwidth`（参见图 8-8）。它允许让一个单元格变得与其他多个单元格一样宽。示例中的显示字段与五个单元格一样宽。左上角的单元格坐标为 0.0。
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_129_0.png)
 
-> **图 8-8**: 计算器中的 GridBagConstraints
+图 8-8: 计算器中的 GridBagConstraints
 
-在使用网格包布局时，你应该先创建一个约束对象的实例，并为其属性赋值。然后，你可以在容器中通过指定的坐标向单元格添加 UI 组件。重复此过程：用另一个单元格的属性填充同一个 `GridBagConstraints` 实例并将其添加到容器，依此类推。
+在使用网格布局时，你应该先创建一个约束对象的实例，并为其属性赋值。然后，你可以在容器中通过指定的坐标向单元格添加 UI 组件。重复此过程：用另一个单元格的属性填充同一个 `GridBagConstraints` 实例并将其添加到容器，依此类推。
 
 列表 8-5 中的代码示例充满了注释，以帮助你理解如何使用 `GridBagLayout`。在学习本课程期间，你将使用这段代码。
 
@@ -3141,14 +3137,11 @@ this.setLayout(gb);
 // 创建 GridBagConstraints 实例
 // 对于你想要添加到网格单元格的每个组件，
 // 都需要重复这些行代码
-GridBagConstraints gbc = new GridBagConstraints();
-// 设置约束属性...
-// this.add(component, gbc);
 ```
 
 
 
-```java
+```
 GridBagConstraints constr = new GridBagConstraints();
 
 // 为计算器的 displayField 设置约束：
@@ -3194,13 +3187,13 @@ windowContent.add(displayField);
 
 如果你希望容器的内容无论用户的窗口大小如何都看起来一样，请在添加组件时设置每个组件的 x 和 y 坐标、宽度和高度（边界）。你的类必须显式声明不使用 `null` 来设置布局：
 
-```java
+```
 windowContent.setLayout(null);
 ```
 
 下一个代码段显示了如何设置按钮宽度为 40 像素，高度为 20 像素，并将其放置在距离窗口左上角右侧 100 像素、下方 200 像素处：
 
-```java
+```
 JButton myButton = new JButton("New Game");
 myButton.setBounds(100, 200, 40, 20);
 ```
@@ -3366,7 +3359,7 @@ import javax.swing.JOptionPane;
 public class CalculatorEngine implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
-        // ... (此处为原文截断)
+        // ... (此处对应原文的截断逻辑)
         String label = clickedButton.getText();
         JOptionPane.showConfirmDialog(null, "Pressed " + label + ".", "Test", JOptionPane.PLAIN_MESSAGE);
     }
@@ -3606,7 +3599,7 @@ public class CalculatorEngine implements ActionListener {
 }
 ```
 
-# 设计模式：模型-视图-控制器 (MVC)
+# 设计模式 模型-视图-控制器 (MVC)
 
 软件工程师经常需要在他们的项目中实现类似的架构解决方案。多年来，许多设计模式在网上和书籍中被发布。其中一种架构模式就是模型-视图-控制器（MVC）。MVC 的核心思想是，你应该将处理 UI（视图）、存储应用程序数据（模型）以及触发视图和数据更改（控制器）的代码分离开。MVC 的实现可能根据应用程序而异，但原理保持不变。
 
@@ -3773,20 +3766,25 @@ this.addWindowListener(new WindowAdapter() {
 
 ## 步骤详解
 
-1. 创建一个新的 Eclipse 项目类，并将第 8 章中的 `Calculator` 复制到其中（参见列表 8-4）。
-2. 创建所有的 UI 组件 —— 以图 9-4 为原型。
-3. 创建事件监听器 `CalculatorEngine` —— 所有的事件处理和计算都应该在此执行。
-4. 从 `Calculator` 向 `CalculatorEngine` 引擎传递自身的引用。
-5. 向 `CalculatorEngine` 注册所有可以产生事件的 UI 组件。
-6. 实现以下场景的代码：
+- 1. 创建一个新的 Eclipse 项目类，并将第 8 章中的 `Calculator` 复制到其中（参见列表 8-4）。
+- 2. 创建所有的 UI 组件 —— 以图 9-4 为原型。
+- 3. 创建事件监听器 `CalculatorEngine` —— 所有的事件处理和计算都应该在此执行。
+- 4. 从 `Calculator` 向 `CalculatorEngine` 引擎传递自身的引用。
+- 5. 向 `CalculatorEngine` 注册所有可以产生事件的 UI 组件。
+- 6. 实现以下场景的代码：
 
 
 
 - a. 用户输入第一个数字的所有数字。
+
 - b. 如果用户点击了操作按钮之一（`+`、`-`、`/` 或 `*`），这表示第一个数字已输入。将此数字和选择的操作存储在类变量中（先声明它们），并从文本字段中删除该数字。你需要借助类 `double` 将 `String` 值转换为 `double`。
+
 - c. 用户输入第二个数字并点击 `+` 按钮。
+
 - d. 转换文本框中的 `String` 值。
+
 - e. 在字段中显示结果。
+
 - f. 运行计算器。
 
 # 异常层次结构
@@ -3900,7 +3898,7 @@ public class CustomerList {
 - try 块中的代码执行了 `return` 语句且程序返回。
 - try 块中的代码抛出了异常，控制转移到 catch 块。
 
-如果有一段无论成功失败都必须执行，请将其放在 finally 子句下。
+如果有一段无论成功失败都必须执行，请将其放在 `finally` 子句下。
 
 ### 列表 10-6 使用 finally 子句
 
@@ -3919,7 +3917,7 @@ try {
 }
 ```
 
-无论读取操作是否成功，代码都会关闭文件，因为在 finally 块中调用了 `close` 函数。如果你将 `close` 函数放在 try 块中，当发生异常时，下一个执行的代码将是 catch 块，跳过了 close 操作，导致资源泄漏，`file` 变量引用的对象留在内存中停留。总结来说，始终使用 finally 子句来释放系统资源。
+无论读取操作是否成功，代码都会关闭文件，因为在 `finally` 块中调用了 `close()` 函数。如果你将 `close()` 函数放在 try 块中，当发生异常时，下一个执行的代码将是 catch 块，跳过了 close 操作，导致资源泄漏，`file` 变量引用的对象留在内存中停留。总结来说，始终使用 `finally` 子句来释放系统资源。
 
 ## PRINTSTACKTRACE
 
@@ -3927,9 +3925,9 @@ try {
 
 ## Try资源（Try-With-Resources）
 
-从 Java 7 开始，你可以使用 try-with-resources 语法简化 try/catch 块的代码，该语法引导 Java 自动关闭资源而无需使用 finally 子句。你只需要在 try 关键字后的括号中打开资源，它们会被自动关闭。下面的代码说明了资源。输入对象 `InputStream`（在 I-7 节中解释）会自动关闭，无需使用 finally。
+从 Java 7 开始，你可以使用 try-with-resources 语法简化 try/catch 块的代码，该语法引导 Java 自动关闭资源而无需使用 `finally` 子句。你只需要在 `try` 关键字后的括号中打开资源，它们会被自动关闭。下面的代码说明了资源。输入对象 `InputStream`（在 I-7 节中解释）会自动关闭，无需使用 `finally`。
 
-## AUTCLOSABLE 接口
+## AUTOCLOSEABLE 接口
 
 自动关闭只有当资源实现了 `java.lang.AutoCloseable` 或 `java.io.Closeable` 接口时才有效，`FileInputStream` 就是此类情况。如果你想创建能够自动关闭某些资源的类，并让它们实现这些接口中的一个。
 
@@ -4008,13 +4006,11 @@ public class TooManyBikesException extends Exception {
 
 public class BikeOrder {
 
-    public static void validateOrder(String bikeModel,
-        int quantity) throws TooManyBikesException {
+    public static void validateOrder(String bikeModel, int quantity) throws TooManyBikesException {
 
         // 执行一些数据验证，如果输入的
         // 数量或型号无效，则执行以下操作：
-        throw new TooManyBikesException("Cannot ship " +
-            quantity + " bikes of the model " + bikeModel);
+        throw new TooManyBikesException("Cannot ship " + quantity + " bikes of the model " + bikeModel);
     }
 }
 
@@ -4032,6 +4028,8 @@ public class OrderWindow extends JFrame {
     }
 }
 ```
+
+列表 10-8 显示的 `TooManyBikesException` 有一个唯一的名称，并且文本包含某些特定于运输业务的信息。但提供应用程序特定信息的另一种方法是在自定义异常中声明一个或多个额外变量。这些变量可以存储描述错误的多个数据项。
 
 ## 列表 10-8 带有额外属性的自定义异常
 
@@ -4061,7 +4059,7 @@ public class TooManyBikesException extends Exception {
 
 你应该安装了 Java。
 
-> **注意** 你可以在 www.wrox.com/go/javapro24hre 下载本节的代码和资源。可以在 Lesson1。
+> 注意：你可以在 www.wrox.com/go/javapro24hre 下载本节的代码和资源。可以在 Lesson1。
 
 ### 步骤说明
 
@@ -4079,13 +4077,13 @@ Java 数组允许在内存中的一个位置存储基本类型或对象引用。
 
 首先，声明一个与数组要存储的对象（基本类型）类型匹配的变量，并预留足够的内存来容纳所有对象。例如，为了存储 10 个 `Customer` 类实例预留足够的内存，你如下声明变量 `customers`：
 
-```
+```java
 Customer[] customers = new Customer[10];
 ```
 
 此时，你已经为存储 10 个内存引用分配了足够的空间，而不是实际的对象。接下来，创建实例并将它们的引用存储在数组中。
 
-```
+```java
 Customer[] customers = new Customer[10];
 customers[0] = new Customer("David","Lee");
 customers[1] = new Customer("Ringo","Starr");
@@ -4094,7 +4092,7 @@ customers[9] = new Customer("Lucy","Mann");
 
 现在为在线商店消费超过 500 美元的客户提供 85 折优惠：
 
-```
+```java
 for (Customer c : customers) {
   if (c.getTotalCharges() > 500) {
     c.setDiscount(15);
@@ -4112,14 +4110,14 @@ for (Customer c : customers) {
 
 `List` 接口被 `ArrayList` 和 `LinkedList` 等有序集合使用。它允许存在重复元素。例如，以下代码段将在 `ArrayList` 中创建两个元素：
 
-```
-arrayList.list.add("Mary");
-arrayList.list.add("Mary");
+```java
+arrayList.add("Mary");
+arrayList.add("Mary");
 ```
 
 `Set` 接口由不允许存在重复元素的集合实现——例如 `HashSet` 和 `SortedSet`。例如，下面的代码段在 `HashSet` 中创建了一个元素。第二行发现 Mary 已经存在，它不会对其更改，并返回 `false`：
 
-```
+```java
 hashSet.add("Mary");
 hashSet.add("Mary"); // Returns false
 ```
@@ -4140,9 +4138,9 @@ hashSet.add("Mary"); // Returns false
 
 要创建并填充 `ArrayList` 对象，你应该先实例化它，然后通过调用 `add()` 方法将其他对象的元素添加到 `ArrayList` 中，如列表 11-1 所示。
 
-### 列表 11-1 填充 ArrayList
+## 列表 11-1 填充 ArrayList
 
-```
+```java
 ArrayList customers = new ArrayList();
 Customer customer1 = new Customer("David","Lee");
 customers.add(customer1);
@@ -4152,7 +4150,7 @@ customers.add(customer2);
 
 `add()` 方法并没有将对象的实例复制到 `customers` 集合中；它只是存储了添加对象的内存地址。`ArrayList` 中的元素编号从 0 开始。如果你知道一个 `ArrayList` 将存储例如 20 个对象，则使用构造函数进行实例化，这将在创建时处理正确数量内存的责任交给程序员：
 
-```
+```java
 ArrayList customers = new ArrayList(20);
 ```
 
@@ -4160,7 +4158,7 @@ ArrayList customers = new ArrayList(20);
 
 第一个示例声明了一个特定实现类的变量——`List` 接口的 `ArrayList`。
 
-`ArrayList` 除了 `List` 之外还实现了几个接口，这意味着它定义了。如果你阅读 `List` 接口的文档，你会发现其他接口包括 `add()`、`get()` 和 `size()` 等方法，这些是我们集合 `customers` 使用的唯一方法。如果需要，声明一个 `List` 类型的变量可以带给我们更大的灵活性。如果以后我们决定切换到 `List` 的另一种实现（例如用 `LinkedList` 代替 `ArrayList`），我们不需要更改 `customers` 的类型。
+`ArrayList` 除了 `List` 之外还实现了几个接口。如果你阅读 `List` 接口的文档，你会发现其他接口包括 `add()`、`get()` 和 `size()` 等方法，这些是我们集合 `customers` 使用的唯一方法。如果需要，声明一个 `List` 类型的变量可以带给我们更大的灵活性。如果以后我们决定切换到 `List` 的另一种实现（例如用 `LinkedList` 代替 `ArrayList`），我们不需要更改 `customers` 的类型。
 
 你可能会说，将声明从 `ArrayList` 改为 `LinkedList` 并不是什么大事——这只是一行代码。但这可能是一件大事，例如，如果你的程序需要将 `customers` 指向的对象传递给另一个参数类型声明为 `ArrayList` 的对象方法。现在我们需要两个地方进行更改。在大型项目中，这种重构可能是一个耗时的过程。
 
@@ -4183,7 +4181,7 @@ data.put("Order", order);
 data.put("Portfolio", portfolio);
 ```
 
-双引号中的值代表用于检索对象的键。在这个示例中，键由 `String` 类表示，但你可以使用任何对象作为键。键是根据应用程序需求选择的；例如，列表 11-3 中的代码可以写在某些订单管理应用程序。
+双引号中的值代表用于检索对象的键。在这个示例中，键由 `String` 类表示，但你可以使用任何对象作为键。键是根据应用程序需求选择的；例如，列表 11-3 中的代码可以写在某些订单管理应用程序中。
 
 如果你对计划在 `Hashtable` 中存储多少元素有一个大概数，请使用带容量参数的构造函数：
 
@@ -4207,15 +4205,15 @@ int totalElem = data.size();
 
 `HashMap` 与 `Hashtable` 类似，但它允许 `null` 键和值，并且不是同步的（在课程 9 中解释过）。如果你编写的代码没有通过多线程并发访问同一个元素，请使用 `HashMap`，因为它运行比 `Hashtable` 快。如果你进行并发访问，`Hashtable` 的另一个替代方案是 `ConcurrentHashMap`。
 
-为了加速查找，`Hashtable` 和 `HashMap` 使用哈希函数（基于对象的内容）对数据进行索引，生成一个代表大对象的哈希码。有两个对象生成相同哈希码的概率，但相同的对象总是产生相同的代码。你可以在维基百科上了解更多关于哈希函数的内容 [http://en.wikipedia.org/wiki/Hash_function](http://en.wikipedia.org/wiki/Hash_function)。
+为了加速查找，`Hashtable` 和 `HashMap` 使用哈希函数（基于对象的内容）对数据进行索引，生成一个代表大对象的哈希码。有两个对象生成相同哈希码的概率，但相同的对象总是产生相同的代码。你可以在维基百科上了解更多关于哈希函数的内容 [http://en.wikipedia.org/wiki/Hash_function]。
 
-### JAVA.UTIL.COLLECTIONS
+### java.util.Collections
 
 `java.util.Collections` 类由适用于类的有用方法组成；例如 `sort()`、`reverse()`、`swap()` 等。
 
 ## 属性类 (Class Properties)
 
-应用程序通常为你提供一种保存和存储用户偏好（如字体和颜色）的方法。这种情况正是需要存储 `key/value` 对的情况。你可以在本地或服务器上存储此类偏好。在[第 14 章]中，你将了解到如何处理文件和其他 I/O 流，但从数据结构的角度来看，你将处理 `key/value` 对，例如 `color=red`、`font=verdana`。
+应用程序通常为你提供一种保存和存储用户偏好（如字体和颜色）的方法。这种情况正是需要存储 `key/value` 对的情况。你可以在本地或服务器上存储此类偏好。在第 14 章中，你将了解到如何处理文件和其他 I/O 流，但从数据结构的角度来看，你将处理 `key/value` 对，例如 `color=red`、`font=verdana`。
 
 基于 Windows 的应用程序在 .ini 文件中存储某些可配置参数。通常，Java 应用程序将属性存储在纯文本文件、XML 文件、数据库等。
 
@@ -4251,7 +4249,7 @@ public class TestLinkedList {
 }
 ```
 
-代码列表 11-5 中的代码使用 `ListIterator` 接口遍历并打印列表中的所有对象，该接口允许程序双向方向遍历列表。
+代码列表 11-5 中的代码使用 `Iterator` 接口遍历并打印列表中的所有对象。
 
 你可能在好奇 `print()` 方法是如何工作的，以及如何通过迭代器打印对象。它会尝试寻找对象上定义的 `toString()` 方法并调用它。在我们的示例中，对象本身就是一个字符串，但在实际情况中，你可能需要打印对象，而定义 `toString()` 方法是实现这一正确方法。
 
@@ -4326,13 +4324,9 @@ Java 拥有几十个集合类和接口。在本节中，我向你展示了其中
 
 
 - 如果你需要通过索引访问，请考虑使用 `ArrayList`。
-
 - 如果你需要经常在集合中插入或删除数据，`LinkedList` 对于很多需求来说都是很好的选择。
-
 - 如果你需要一个不允许重复元素的集合，使用实现 `Set` 的集合之一。
-
 - 如果你需要存储键值对，使用实现 `Map` 的集合；例如 `HashMap` 或 `HashTable`。
-
 - 如果你需要一个无论大小如何都能快速查找的集合，使用 `HashSet`。
 
 ## 大 O 表示法
@@ -4341,7 +4335,7 @@ Java 拥有几十个集合类和接口。在本节中，我向你展示了其中
 
 ## 尝试一下
 
-修改列表 11-5 中的 LinkedList 示例，在列表第一个元素之后添加一个任意对象。你必须在遍历列表时这样做。当程序就绪时，它产生如下结果：
+修改列表 11-5 中的 `LinkedList` 示例，在列表第一个元素之后添加一个任意对象。你必须在遍历列表时这样做。当程序就绪时，它产生如下结果：
 
 - Alex Smith
 - VIP Customer
@@ -4356,17 +4350,11 @@ Java 拥有几十个集合类和接口。在本节中，我向你展示了其中
 ## 逐步详解
 
 1. 创建名为 `Lesson1` 的 Eclipse 项目。
-
 2. 在第一次调用 `iterator.next()` 之后添加以下行：`iterator.add("VIP Customer");`
-
 3. 运行程序并观察它没有产生 "VIP Customer"。由于迭代器位于新插入的对象之后。
-
 4. 在 "VIP Customer" 之后添加 `iterator.previous()` 行来移动迭代器元素。
-
 5. 再添加一个语句（否则程序不会运行）。编译并运行程序。它按要求打印所有元素。
-
 6. 现在通过将你在第 2 步中添加的行改为 `passengerList.add("VIP Customer");` 来破坏代码。
-
 7. 运行程序。它打印链表的第一个元素并产生运行时异常：
 
 ```
@@ -4381,27 +4369,29 @@ LinkedList.java:761)
 
 > **提示** 请在线在 `www.wrox.com/go/javaprog24hr2e` 选择第二单元的视频。你也可以从该网站下载本课程的代码和资源。
 
-## 12 泛型简介
+# 12
+
+# 泛型简介
 
 在上一节课程中，你看到了一个存储不同类型对象的集合示例（参见 [Listing II-2](#)）。在运行时，该程序会测试每个对象的实际类型并将其转换为相应的类型——`Customer` 或 `Order`。如果某些代码添加了另一种（意料之外的）数据类型的元素，那么与其将其留到运行时再处理，如果编译器在编译期间就能防止集合、对象甚至方法参数和返回类型出现意料之外的类型，那就太好了。
 
 Java 支持*泛型*（*generics*），它允许你使用参数化的数据类型——你可以在声明对象或方法时不指定具体的数据类型，而是将具体类型的定义转移到使用这些对象、集合或方法的代码中。换句话说，泛型是一种可以与参数化数据类型一起工作的类型。
 
-### 参数化类
+## 参数化类
 
 不仅是 Java 方法可以接受参数（也称为参数），类也可以拥有参数。我将在[自定义参数化类](#)章节向你展示如何实现。
 
 使用泛型表示法，你可以获得 Java 编译器的帮助，它不允许你使用与声明不匹配的“错误”类型的对象。换句话说，你可以在编译阶段之前更早地捕获不的数据类型。这个概念可以通过示例很容易解释，我们直接进入正题。
 
-### 类的泛型
+## 类的泛型
 
-考虑 [Listing II-2](#) 中的 `ArrayList`，它像一个万能篮——可以容纳几乎任何对象的存储器。但如果你在客户集合的声明中使用角括号添加参数化类型 `Customer`（`ArrayList<Customer>`，参见列表 [2-1]），那么任何拒绝 Order 对象的尝试都会产生以下编译器错误：
+考虑 [Listing II-2](#) 中的 `ArrayList`，它像一个万能篮——可以容纳几乎任何对象的存储器。但如果你在客户集合的声明中使用角括号添加参数化类型 `Customer`（`ArrayList<Customer>`，参见列表 [2-1]），那么任何拒绝 `Order` 对象的尝试都会产生以下编译器错误：
 
 The method add(Customer) in the type ArrayList<Customer> is not applicable for the arguments (Order).
 
 这样想：`ArrayList` 可以用于存储任何对象，而使用泛型允许你对特定 `ArrayList` 实例或参数化类（这只是泛型的一种类型）中允许的对象类型进行约束。
 
-#### LISTING 12-1 在集合中使用泛型
+## LISTING 12-1 在集合中使用泛型
 
 ```java
 import java.util.List;
@@ -4434,13 +4424,13 @@ implements List<E>, RandomAccess, Cloneable, Serializable
 
 类名后的这个魔法 `<E>` 告诉 Java 该类可以使用许多类型的元素，具体是哪一种在创建 `ArrayList` 的具体实例之前仍然未知。在 Listing 2-1 中，类型参数 `<Customer>` 在编译期间替换了 `<E>`，编译器确保代码在 `customers` 集合中只存储 `Customer` 实例。
 
-### 类型擦除
+## 类型擦除
 
 我想强调的是，`<E>` 表示仅在类型声明期间使用。Listing 2-1 中的代码不包含 `<E>`。编译器将 `<E>` 替换为 `Customer` 并擦除字节码中的参数化字节类型。这个过程被称为类型擦除（type erasure）；它主要为了与旧版本 Java 编写的代码兼容，旧版本中没有泛型。生成的代码与参数化数据类型和原始数据类型是相同的。
 
 现在，你可以通过移除强制转换来简化 Listing 2-1 中的代码（参见 Listing 2-2）。为什么呢？因为有了泛型，当编译器看到特定类型时，它会自动生成字节码，在内部执行强制转换！这就是为什么你不再需要将从方法 `get(i)` 返回的数据从 `Object` 强制转换为 `Customer` 了。此外，你被保证集合 `customers` 将只有 `Customer` 实例。Java 编译器有能力查看方法调用并正确推断参数的类型。它不仅用于泛型，还用于 lambda 表达式，我们将在 IS 中涵盖这些。
 
-#### LISTING 12-2 无需强制转换遍历 customers
+## LISTING 12-2 无需强制转换遍历 customers
 
 ```java
 List<Customer> customers = new ArrayList<>();
@@ -4461,17 +4451,17 @@ List customers = new ArrayList<>();
 
 编译器会给你一个警告，说明 `ArrayList` 是一个原始类型（raw type）并且应该被参数化。这基本上意味着如果你向此集合中添加一个可能在程序其他地方导致崩溃的类型对象，编译器将无法帮助你。虽然使用原始类型不是错误，但应该尽量避免。
 
-### 声明泛型
+## 声明泛型
 
 如果你要创建自己的类，可以使用角括号来声明你的类型。字母 `<E>` 代表元素（element），但你可以使用任何字母。例如，`<K>` 代表键（key），`<V>` 代表值（value）。这在处理 Maps 时常见。
 
 如果你想定义一个接受任何类型列表的方法，可以使用通配符 `?`。这允许方法在接受的类型上更具活性。
 
-### 通配符
+## 通配符
 
 Listing 12-3 包含代表未知类型的问号。通过示例解释它们更容易。我们将 Listing 12-2 中的 for 循环转换为一个方法。在 Eclipse 高亮代码，右键点击并选择 Refactor -> Extract Method。在弹出窗口中输入 `processCustomers` 并点击 OK。
 
-#### LISTING 12-4 重构后的类 TestGeneric
+## LISTING 12-4 重构后的类 TestGeneric
 
 ```java
 import java.util.ArrayList;
@@ -4504,7 +4494,7 @@ public class TestGeneric {
 }
 ```
 
-#### LISTING 12-5 回到强制转换
+## LISTING 12-5 回到强制转换
 
 ```java
 private static void processData(ArrayList data) {
@@ -4516,7 +4506,7 @@ private static void processData(ArrayList data) {
 }
 ```
 
-#### LISTING 12-3 来自 List 接口的片段
+## LISTING 12-3 来自 List 接口的片段
 
 ```java
 package java.util;
@@ -4537,7 +4527,7 @@ public interface List<E> extends Collection<E> {
 }
 ```
 
-### 146 | 第 12 ：泛型简介
+# 146 | 第 12 ：泛型简介
 
 但现在，掌握了新知识后，你可以将 `processData()` 方法的签名更改为：
 
@@ -4559,7 +4549,7 @@ private static void processData(List<? extends T> data) {
 
 你面临的下一个挑战是编译在未知类型对象上调用 `Something()` 方法的代码。
 
-### 创建参数化类
+## 创建参数化类
 
 让我们考虑第 10 节“It It”部分自行车商店的示例。那家在线商店有一辆卡车，用于向客户交付自行车和备轮。我们希望只允许自行车和轮子进入卡车；不允许人员进入。考虑图 12-1 中的层次结构：
 
@@ -4605,7 +4595,7 @@ public class TestGenericType {
 
 变量 `shipment` 指向 `Truck` 实例，该实例允许添加 `Product` 类型或其子类的对象。由于 `Person` 不是 `Product`，编译器将不允许你将其添加到卡车载荷中。
 
-### 边界类型参数
+## 边界类型参数
 
 边界类型参数允许你指定带有继承层次结构相关限制的泛型类型。让我们继续使用自行车商店的示例。虽然 `Product` 是 `Bike` 的父类，但 `ArrayList<Product>` 并不是 `ArrayList<Bike>` 的父类。在这里，如果有一个方法期望 `ArrayList<Product>` 作为参数，你不能提供 `ArrayList<Bike>` 代替。使用泛型时，你应该使用 `extends` 关键字来指定继承层次结构中允许类型的上界。在这种情况下，它将是 `ArrayList<? extends Product>`。这意味着允许包含 `Product` 类型及其子类对象的 `ArrayList`。问号在这里是通配符。
 
@@ -4626,7 +4616,7 @@ public class Ferry {
 }
 ```
 
-`load()` 方法声明了与上界通配符的约定——只有带有 `Product` 及其子类的卡车可以装上轮渡。`TestGenericBounded` 类创建了一个装有两辆自行车的卡车，另一个装有三个备轮子的卡车。然后它将两辆卡车都装在了轮渡上。
+`loadTruck()` 方法声明了与上界通配符的约定——只有带有 `Product` 及其子类的卡车可以装上轮渡。`TestGenericBounded` 类创建了一个装有两辆自行车的卡车，另一个装有三个备轮子的卡车。然后它将两辆卡车都装在了轮渡上。
 
 ```java
 public class TestGenericBounded {
@@ -4906,7 +4896,7 @@ public interface Payable {
 
 # 方法与函数
 
-方法（`methods`）与函数（`functions`）的区别在于，函数没有绑定到任何类实例。你可以说静态方法也没有绑定到实例，但静态方法必须在类或接口内部声明，而函数不需要。
+方法（methods）与函数（functions）的区别在于，函数没有绑定到任何类实例。你可以说静态方法也没有绑定到实例，但静态方法必须在类或接口内部声明，而函数不需要。
 
 你可以尝试使用 lambda，以便在需要实现函数式接口的同时保持面向对象的编程风格，从而简化你的代码。替换实现 `ActionListener` 的匿名内部类的代码示例就是这种简化的说明。
 
@@ -4915,15 +4905,16 @@ public interface Payable {
 以下 `Tax` 类示例是用面向对象的风格编写的。在实例化 `Tax` 类型的对象后，它的字段 `grossIncome` 和方法 `calcTax()` 不是函数，因为它期望从类 `grossIncome` 中获取某些值来修改 `federalTax`。这是一个可变状态的情况。
 
 ```java
-class Tax {
+class Tax{
     double grossIncome;
     double federalTax;
 
     public void calcTax() {
         if (grossIncome < 30000) {
-            federalTax = grossIncome + 0.05;
-        } else {
-            federalTax = grossIncome + 0.06;
+            federalTax=grossIncome+0.05;
+        }
+        else{
+            federalTax= grossIncome+0.06;
         }
     }
 }
@@ -4945,6 +4936,8 @@ class Tax {
 }
 ```
 
+在 `TaxState` 中，`createState()` 方法通过参数获取所需值。它仍然是一个方法，因为它位于类内部，但更像是一个函数。在 `TaxState` 中我们删除了类变量并使用了方法参数。问题是为什么税务计算使用了类字段？你可以从外部提供税费吗？基本类型或对象是可以传递给方法的唯一。但现在你可以将 lambda 表达式作为方法参数，我将在下一节向你展示此示例。
+
 ## 将函数传递给方法
 
 在函数式编程中，你可以将函数作为参数传递给另一个函数（或者函数返回一个函数）。这种外部函数被称为高阶函数。
@@ -4957,8 +4950,10 @@ class Customer {
     public double grossIncome;
 
     public void applyTaxCalculationFunction(TaxFunction taxFunc) {
+
         double calculatedTax = taxFunc.calc(grossIncome);
         System.out.println("The calculated tax for " + name + " is " + calculatedTax);
+
     }
 }
 ```
@@ -4983,11 +4978,12 @@ public class TestTaxLambda {
         // 并将其存储在变量中
         TaxFunction taxFunction = (double grossIncome) -> {
 
-            double federalTax = 0;
+            double federalTax=0;
             if (grossIncome < 30000) {
-                federalTax = grossIncome * 0.05;
-            } else {
-                federalTax = grossIncome * 0.06;
+                federalTax=grossIncome*0.05;
+            }
+            else{
+                federalTax=grossIncome*0.06;
             }
             return federalTax;
         };
@@ -4996,24 +4992,25 @@ public class TestTaxLambda {
         // 用于计算黑手成员的税
         TaxFunction taxFunctionMafia = (double grossIncome) -> {
 
-            double stateTax = 0;
+            double stateTax=0;
             if (grossIncome < 30000) {
-                stateTax = grossIncome * 0.01;
-            } else {
-                stateTax = grossIncome * 0.02;
+                stateTax=grossIncome*0.01;
+            }
+            else{
+                stateTax=grossIncome*0.02;
             }
             return stateTax;
         };
 
         Customer customer1 = new Customer();
         customer1.name = "Mary Lou";
-        customer1.grossIncome = 50000;
-        customer1.applyTaxCalculationFunction(taxFunction);
+        customer1.grossIncome=50000;
+        customer1.applyCalcFunction(taxFunction);
 
         Customer customer2 = new Customer();
         customer2.name = "Al Capone";
-        customer2.grossIncome = 25000;
-        customer2.applyTaxCalculationFunction(taxFunctionMafia);
+        customer2.grossIncome=25000;
+        customer2.applyCalcFunction(taxFunctionMafia);
 
     }
 }
@@ -5047,14 +5044,14 @@ for (Customer customer : customers) {
 
 你可能会问，你说的“最好”是什么意思？集合知道如何处理它的元素吗？是的，它知道。从 Java 8 开始，集合变得更加智能，并且可以实现并行化，特别是在多处理器计算机上。例如，它将集合一分为二并合并结果。因此，你最好将你的函数交给集合；它可能会运行更快。
 
-我将在 `TestCollectionsForEachEach` 类中向你展示命令式和函数式风格的实现。它将遍历由 `Person` 类实例表示的工人集合，该类有一个布尔变量 `workerStatus` 来存储雇佣状态：E 代表员工，C 代表合同工。
+我将在 `TestCollectionsForEachEach` 类中向你展示命令式和函数式风格的实现。它将遍历由 `Person` 类实例表示的工人集合，该类有一个布尔变量 `workerStatus` 来存储雇佣状态：E 代表员工，C 代表合同工工。
 
 ```java
 public class Person {
     private String name;
     private char workerStatus; // 'E' 或 'C'
 
-    public Person(String name, char workerStatus) {
+    public Person(String name, char workerStatus){
         this.name = name;
         this.workerStatus = workerStatus;
     }
@@ -5137,12 +5134,11 @@ Lambda 促进了函数式编程风格。在之前的节中，你已经学习了�
 要创建一个可以复用另一个类的类，可以使用继承或组合作为设计技术。在继承的情况下，你可以创建一个扩展 `ClassA` 的 `ClassB`，并在子类中使用祖类的元素。以下示例演示了继承，`ClassB` 在构造函数中调用了祖类定义的 `doSomething()` 方法。
 
 ```java
-class ClassA {
-    public void doSomething() {
-    }
+ClassA {
+    public void doSomething(){
 }
 
-class ClassB extends ClassA {
+ClassB extends ClassA{
     ClassB() {
         doSomething();
     }
@@ -5152,16 +5148,17 @@ class ClassB extends ClassA {
 在组合的情况下，你不需要继承 `ClassA`，只需要在 `ClassB` 中实例化（并持有引用）`ClassA` 即可：
 
 ```java
-class ClassA {
-    public void doSomething() {
-    }
+ClassA {
+    public void doSomething(){
 }
+```
 
-class ClassB {
-    ClassB() {
-        ClassA classA = new ClassA();
-        classA.doSomething();
-    }
+```java
+ClassB{
+  ClassB(){
+    classA = new classA();
+    classA.doSomething();
+  }
 }
 ```
 
@@ -5177,15 +5174,15 @@ class ClassB {
 
 ```java
 public class Person {
-    private String name;
+  private String name;
 
-    public Person(String name) {
-        this.name = name;
-    }
+  public Person(String name){
+    this.name = name;
+  }
 
-    public String getName() {
-        return "Person's name is " + name;
-    }
+  public String getName(){
+    return "Person's name is " + name;
+  }
 }
 ```
 
@@ -5193,8 +5190,8 @@ public class Person {
 
 ```java
 public interface Payable {
-    int INCREASE_CAP = 20;
-    boolean increasePay(int percent);
+  int INCREASE_CAP = 20;
+  boolean increasePay(int percent);
 }
 ```
 
@@ -5459,13 +5456,13 @@ Java 中的文本被表示为一组 `char` 值（双字节字符），它们基�
 
 
 
-## 列表 14-4 从文件中读取字节并将其从 UTF-8 编码转换为 Unicode
+# 列表 14-4 从文件中读取字节并将其从 UTF-8 编码转换为 Unicode，然后以 `String` 形式返回结果
 
-列表 14-4 从文件中读取字节并将其从 UTF-8 编码转换为 Unicode，然后以 `String` 形式返回结果。为了提高效率，读取过程通过 `BufferedReader` 进行管道，它从流缓冲区读取。注意，这段代码使用了可变的 `StringBuilder`，在执行文本操作时它的运行速度实际上比 `String` 快。使用 `StringBuilder` 是拼接字符串的推荐方法。这就是为什么我决定说明它的用法：
+为了提高效率，读取过程通过 `BufferedReader` 进行管道，它从流缓冲区读取。注意，这段代码使用了可变的 `StringBuilder`，在执行文本操作时它的运行速度实际上比 `String` 快。使用 `StringBuilder` 是拼接字符串的推荐方法。这就是为什么我决定说明它的用法：
 
 如果你要拼接 `String` 值，Java 编译器会优化这段代码，并将字符串拼接替换为另一个辅助类 `StringBuilder`。你也可以手动使用 `StringBuilder` 代替 `String`，如第 16 节所示。
 
-### 列表 14-4 读取文本文件
+## 列表 14-4 读取文本文件
 
 ```java
 StringBuilder buffer = new StringBuilder();
@@ -5511,7 +5508,7 @@ California
 
 列表 14-5 中的程序显示了一个 `Tax` 类，你可以从第 4 节的 `class_methods_and_structures` 中借用它。确保它使用了 `calcTax()` 方法。
 
-### 列表 14-5 整合 Swing 和流
+## 列表 14-5 整合 Swing 和流
 
 ```java
 public class TaxGuiFrame extends JFrame {
@@ -5622,15 +5619,15 @@ private void populateStates() {
 }
 ```
 
-列表 14-3 填充了 states。Vector 集合（同步）扮演了数据模型。Swing 组件知道如何显示其数据模型。这是 MVC（模型-视图-控制器）设计模式的实现，促进了数据与用户界面（UI）的分离。当用户选择状态时，JComboBox 扮演控制器。
+列表 14-3 填充了 states。`Vector` 集合（同步）扮演了数据模型。Swing 组件知道如何显示其数据模型。这是 MVC（模型-视图-控制器）设计模式的实现，促进了数据与用户界面（UI）的分离。当用户选择状态时，`JComboBox` 扮演控制器。
 
-注意 TaxGui 类没有实现 `ActionListener`。Go 和 Reset 按钮的点击事件是通过 lambda 表达式实现的。
+注意 `TaxGui` 类没有实现 `ActionListener`。Go 和 Reset 按钮的点击事件是通过 lambda 表达式实现的。
 
 列表 14-5 程序的输出如图 14-1 所示。
 
 ## 分离 GUI 和处理
 
-在较大的应用程序中，将 GuiFile 类拆分为两个部分是合理的：一个创建 GUI 组件，另一个从文件或其他源读取数据。我在第 9 节的计算器程序中说明了这一点，该程序有两个类：Calculator 和 CalculatorEngine。
+在较大的应用程序中，将 `GuiFile` 类拆分为两个部分是合理的：一个创建 GUI 组件，另一个从文件或其他源读取数据。我在第 9 节的计算器程序中说明了这一点，该程序有两个类：`Calculator` 和 `CalculatorEngine`。
 
 178 | 第 14 节 处理 I/O 流
 
@@ -5644,9 +5641,9 @@ private void populateStates() {
 
 `DataInputStream` 类是另一个可以连接到其他流的“管道”。列表 14-6 提供了一个如何通过以下部分构建管道的示例：
 
-FileInputStream BufferedInputStream DataInputStream
+`FileInputStream` `BufferedInputStream` `DataInputStream`
 
-### 列表 14-6 使用 DataInputStream
+## 列表 14-6 使用 DataInputStream
 
 ```java
 try (FileInputStream myFile = new FileInputStream("data.dat");
@@ -5663,13 +5660,13 @@ try (FileInputStream myFile = new FileInputStream("data.dat");
  }
 ```
 
-此示例中，`FileInputStream` 打开 `fileData.dat` 进行读取。`BufferedInputStream` 使读取更高效，而 `DataInputStream` 从缓冲区提取了两个整数、三个浮点数和一个双精度浮。这里的假设是 `fileData.dat` 恰好包含这些类型，并且按照指定的顺序排列。此类可以通过 `DataOutputStream` 的帮助创建，它允许你将 Java 原始数据类型写入到多种可选的方法中：`writeInt()`、`writeByte()`、`writeFloat()` 等。
+此示例中，`FileInputStream` 打开 `fileData.dat` 进行读取。`BufferedInputStream` 使读取更高效，而 `DataInputStream` 从缓冲区提取了两个整数、三个浮点数和一个双精度浮点数。这里的假设是 `fileData.dat` 恰好包含这些类型，并且按照指定的顺序排列。此类可以通过 `DataOutputStream` 的帮助创建，它允许你将 Java 原始数据类型写入到多种可选的方法中：`writeInt()`、`writeByte()`、`writeFloat()` 等。
 
 ## 用于处理文件的工具类
 
 通常你需要对文件进行某些操作，这些操作并不总是涉及读取或写入文件。例如，你可能需要检查文件是否存在，或者通过程序对其进行重命名。Java 包含了用于目录的工具类 `File` 和 `Path`。
 
-### File 类
+## File 类
 
 `java.File` 类允许你重命名或删除文件、执行存在性检查、创建目录、检查文件大小等。如果你需要这些功能，可以从创建一个该类的实例开始：
 
@@ -5699,7 +5696,7 @@ if (backup.exists()) {
 file.renameTo(backup);
 ```
 
-### NIO.2: 使用 Files, Path 和 Paths
+## NIO.2: 使用 Files, Path 和 Paths
 
 Java 7 引入了许多新的类和接口用于更高效地处理文件和目录，通常被称为 NIO.2。
 
@@ -5715,55 +5712,70 @@ Java 7 引入了许多新的类和接口用于更高效地处理文件和目录�
 
 
 
-# Java 序列化
-
-## 示例代码：TestFilesPaths
-
 ```java
 public class TestFilesPaths {
 
     public static void main(String[] args) {
-        // 获取位于程序启动目录下的 file.txt 路径
+        // 获取位于程序启动目录 
+        // 下的 file.txt 路径
         Path sourceFilePath = Paths.get("states.txt");
 
         // 将源文件复制到此目标地
         Path destFilePath = Paths.get("states.bak");
 
-        if (Files.exists(sourceFilePath)) {
+        if (Files.exists(sourceFilePath)){
             System.out.println("the " + sourceFilePath + " exists");
             System.out.println("the absolute path is " + sourceFilePath.toAbsolutePath());
-            try {
-                // 检查文件大小（字节）
+            try{
+                // 检查文件大小（字节）为 " +
                 System.out.println("its size is " + Files.size(sourceFilePath));
 
-                // 将文件从 states.txt 复制到 states.bak
-                Files.copy(sourceFilePath, destFilePath,
-                        StandardCopyOption.REPLACE_EXISTING);
-                System.out.println("Copy completed. The backup file is at " +
-                        destFilePath.toAbsolutePath());
+// 将文件从 states.txt 复制到 states.bak
+Files.copy(sourceFilePath, destFilePath,
+StandardCopyOption.REPLACE_EXISTING);
+System.out.println("Copy completed. The backup file is at " + 
+destFilePath.toAbsolutePath());
 
-            } catch (IOException ioe) {
-                ioe.printStackTrace();
+catch (IOException ioe) {
+    ioe.printStackTrace();
+}
             }
         }
     }
 }
 ```
 
-## 程序输出
+程序 `TestFilesPaths` 的输出如下：
 
-```
 file states.txt exists
-The absolute path is
-/users/yfaint/practical/Java/workspace/Lesson14/states.txt
-It's size in 44
-Copy completed. The backup file is at
-/users/yfaint/practical/Java/workspace/Lesson14/states.bak
-```
 
-## 用于处理文件的工具类
+The absolute path is
+
+/users/yfaint/practical/Java/workspace/Lesson14/states.txt
+
+It's size in 44
+
+Copy completed. The backup file is at
+
+/users/yfaint/practical/Java/workspace/Lesson14/states.bak
+
+## 用于处理文件的工具类 | 181
+
+file states.txt exists
+
+The absolute path is
+
+/users/yfaint/practical/Java/workspace/Lesson14/states.txt
+
+It's size in 44
+
+Copy completed. The backup file is at
+
+/users/yfaint/practical/Java/workspace/Lesson14/states.bak
 
 这一行代码并没有创建一个文件；它创建了 `File` 类的实例，该实例准备好对文件名 `abc.txt` 执行操作。如果你想创建一个物理文件，请使用 `File` 类中定义的 `createFile()` 方法。以下是 `File` 类的方法列表：
+
+[注：上述文本跨页合并]
 
 `java.nio.File` 类与 `java.File` 类似。它包含了对文件和目录进行操作的静态方法。这些方法大部分委托给底层操作系统（OS）文件系统。除了功能外，它还可以遍历目录树、检查属性、创建符号链接并与流工作。使用 `Files` 你可以复制、移动和删除待办事项。
 
@@ -5804,43 +5816,55 @@ NIO 的另一个有趣特性是能够执行异步输出，这可以大幅提高�
 
 ## 尝试一下
 
-编写一个程序读取 zip 压缩包，并在系统控制台上打印压缩包包含的文件列表。对 `java.util.zip.ZipInputStream` 类进行一些研究，并将其配合 `FileInputStream` 一起使用。也阅读一下 `ZipEntry` 类。
+编写一个程序读取 zip 压缩包，并在系统控制台上打印压缩包包含的文件列表。对 `java.util.zip.ZipInputStream` 类进行一些研究，并将其配合 `FileInputStream` 一使用。也阅读一下 `ZipEntry` 类。
 
 ## 课程要求
 
-你应该已经了解 Java。
+你应该已经了 Java。
 
 > 注意：你可以从书籍的网页 www.wrox.com/go/javaprog24hr2e 下载此“尝试一下”练习的代码和资源。你可以在下载的 `Lesson14.zip` 文件夹中找到它们。
 
 ## 步骤详解
 
-1. 创建一个名为 `Lesson14` 的新 Eclipse 项目。
-2. 将任何 .zip 文件复制到其根目录。
-3. 打开 `FileInputStream` 并连接 `ZipInputStream`。
-4. 编写一个循环，使用 `ZipInputStream` 的 `getNextEntry()` 方法。该方法读取 `ZipEntry`（如果有），并将流置于条目数据的开头。
-5. 对找到的每个 `ZipEntry` 实例调用 `getName()` 函数。
-6. 在系统控制台上打印条目名称。
-7. 在循环内部关闭条目。
-8. 运行程序并观察它是否正确打印了所选 .zip 文件中的文件名。
-9. 如果你想学习如何用 Java 创建 .zip 文件，请阅读关于 `ZipOutputStream`。
+- 1. 创建一个名为 `Lesson14` 的新 Eclipse 项目。
 
-> 提示：请在 www.wrox.com/go/javaprog24hr2e 在线选择第 14 课的视频。你可以从该网站下载本课程的代码和资源。
+- 2. 将任何 .zip 文件复制到其根目录。
 
-# 15 Java 序列化
+- 3. 打开 `FileInputStream` 并连接 `ZipInputStream`。
+
+- 4. 编写一个循环，使用 `ZipInputStream` 的 `getNextEntry()` 方法。该方法读取 `ZipEntry`（如果有），并将流置于条目数据的开头。
+
+- 5. 对找到的每个 `ZipEntry` 实例调用 `getName()` 函数。
+
+- 6. 在系统控制台上打印条目名称。
+
+- 7. 在循环内部关闭条目。
+
+- 8. 运行程序并观察它是否正确打印了所选 .zip 文件中的文件名。
+
+- 9. 如果你想学习如何用 Java 创建 .zip 文件，请阅读关于 `ZipOutputStream`。
+
+> 提示：请在 www.wrox.com/go/javaprog24hr2e 在线选择第 14 的视频。你可以从该网站下载本课程的代码和资源。
+
+# 15
+
+## Java 序列化
 
 想象一栋建筑，按下一个按钮，它就能变成一堆建筑材料和居民的物品。再按另一个按钮，这栋建筑就会在另一个位置以原始形式重新创建。这就是 Java 序列化。通过“按下序列化按钮”，你将一个对象的实例转换为一堆字节，而按下“反序列化按钮”则可以神奇地重建该对象。
 
 Wikipedia 对序列化术语的定义为：
 
-> 将数据结构或对象状态转换为可以存储的格式（例如，存储在文件或内存缓冲区中，或通过网络连接传输）并在稍后在相同或另一个计算机环境中重建的过程。当根据序列化格式读取生成的位序列时，可以使用它创建原始对象的语义等效克隆……这种序列化对象的过程也称为压缩（deflation）或封存（marshalling）。相反的操作从字节序列中提取数据是反序列化（也称为解压缩 inflating 或解封存 unmarshalling）。
+将数据结构或对象状态转换为可以存储的格式（例如，存储在文件或内存缓冲区中，或通过网络连接传输）并在稍后在相同或另一个计算机环境中重建的过程。当根据序列化格式读取生成的位序列时，可以使用它创建原始对象的语义等效克隆……这种序列化对象的过程也称为压缩（deflation）或封存（marshalling）。相反的操作从字节序列中提取数据是反序列化（也称为解压缩inflating 或解封存 unmarshalling）。
 
 在第 14 章中，你熟悉了处理单个字节、字符、原始类型和文本的流。现在让我们看看为什么以及如何将对象写入流中，或者如何序列化 Java 对象。
 
-考虑以下场景：`ClassA` 创建了一个 `Employee` 对象的实例，该对象具有 `firstName`、`lastName`、`hireDate`、`salary` 等字段。字段的值（即对象的状态）必须保存到流中。随后，`ClassB` 需要这些数据，必须从 `ObjectInputStream` 重新创建实例。`ClassA` 和 `ClassB` 的实例可能运行在不同计算机的不同 Java 虚拟机 (JVM) 中。
+考虑以下场景：`ClassA` 创建了一个 `Employee` 对象的实例，该对象具有 `firstName`、`lastName`、`hireDate`、`salary` 等字段。字段的值（即对象的状态）必须保存到流中。随后，`ClassB` 需要这些数据，必须从 `objectInputStream` 重新创建实例。`ClassA` 和 `ClassB` 的实例可能运行在不同计算机的不同 Java 虚拟机 (JVM) 中。
 
 如果足够，你的程序可以记住 `firstName`、`lastName`、`hireDate` 和 `salary` 的顺序及其数据类型，并使用 `DataOutputStream` 遍历字段执行输出。程序需要知道字段的顺序及其类型。
 
 这是另一个用例：你的应用程序有一个 `Preferences` 菜单，用户可以在其中选择启动视图显示的字体、颜色和用户界面控件。为了支持此类功能，`Preferences` 面板创建了一个 `UserPreferences` 类的实例，具有 50 个配置属性（其中一些是自定义数据类型），这些属性必须保存在本地文件中。在下次启动应用程序时，将从文件中恢复 `UserPreferences`。
+
+# 186 |  15 Java 序列化
 
 手动编写序列化 `UserPreferences` 是繁琐的。Java 提供了使用 `ObjectOutputStream` 和 `ObjectInputStream` 实现相同结果的优雅方法。
 
@@ -5852,13 +5876,13 @@ Wikipedia 对序列化术语的定义为：
 
 ```java
 class Employee implements Serializable {
-    String name;
-    String fname;
-    double salary;
+ String name;
+ String fname;
+ double salary;
 }
 ```
 
-接口 `Serializable` 没有定义任何方法，因此没有需要实现。如果一个接口没有定义任何方法，它就是标记接口。标记接口仅影响编译器生成字节码的方式。
+接口 没有定义任何方法，因此没有需要实现。如果一个接口没有定义任何方法，它就是标记接口。标记接口仅影响编译器生成字节码的方式。
 
 本节的两种情况代表了 Java 序列化的主要用途：在 JVM 之间传递 Java 对象以及以后使用的对象持久化。通常由 Java 框架在分布式应用程序之间序列化。
 
@@ -5866,10 +5890,13 @@ class Employee implements Serializable {
 
 要序列化对象，请执行以下操作：
 
-1. 打开输出流。
-2. 将其连接到 `ObjectOutputStream`。
-3. 调用 `writeObject()` 方法，并将序列化实例作为参数。
-4. 关闭流。
+- 1. 打开输出流。
+
+- 2. 将其连接到 `ObjectOutputStream`。
+
+- 3. 调用 `writeObject()` 方法，并将序列化实例作为参数。
+
+- 4. 关闭流。
 
 列表 15-2 显示了将 `Employee` 实例序列化到文件的代码示例：
 
@@ -5888,7 +5915,7 @@ class A {
             new FileOutputStream("BestEmployee.ser");
         ObjectOutputStream oOut =
             new ObjectOutputStream(fout)) {
-        oOut.writeObject(emp); // 序列化 employee
+        oOut.writeObject(emp); //序列化 employee
     } catch (IOException e) {
         e.printStackTrace();
     }
@@ -5901,7 +5928,7 @@ class A {
 所有原始数据类型都是可序列化的。序列化类的所有成员变量必须是原始类型或指向可序列化对象的引用变量。列表 15-1 中的 `Employee` 类仅包含可序列化的数据类型。如果类具有自定义数据类型的字段，则每个类型都必须是可序列化的。列表 15-3 中的 `Employee` 类只有在 `PromotionHistory` 类（以及它使用的所有类型）也声明了 `implements Serializable` 的情况下才能被序列化。
 
 ```java
-class Employee implements java.io.Serializable {
+class Employee implements java.io.Serializable{
     String iName;
     String fName;
     double salary;
@@ -5910,7 +5937,7 @@ class Employee implements java.io.Serializable {
 }
 ```
 
-如果你不想序列化某些敏感信息（例如薪资），请使用 `transient` 关键字声明该变量。如果你使用 `transient` 修饰符声明 `Employee` 类的 `salary` 字段，它的值就不会被序列化。序列化的字节集仍然包含该 `transient` 字段，但它将不会是实际值；该字段将具有其类型的默认值。
+如果你不想序列化某些敏感信息（例如薪资），请使用 `transient` 关键字声明该变量。如果你使用 `transient` 修饰符声明 `Employee` 类类的 `salary` 字段，它的值就不会被序列化。序列化的字节集仍然包含该 `transient` 字段，但它将不会是实际值；该字段将具有其类型的默认值。
 
 ```java
 transient double salary;
@@ -5918,13 +5945,16 @@ transient double salary;
 
 通常，如果变量包含某些敏感信息或其值在目标流中没有用处，你会将变量声明为 `transient`。假设运行在服务器上的某个类具有数据库连接变量。如果该类被序列化到客户端机器，发送数据库凭据可能不仅没用，而且是不安全的。因此，此类变量必须声明为 `transient`。使用 `transient` 关键字的另一个原因是序列化包含不可序列化类型字段的对象。
 
-## 对象输入流
+## 对象输入流 (THE OBJECTINPUT)
 
 要反序列化一个对象，请执行以下步骤：
 
 1. 打开一个输入流。
+
 2. 使用 `ObjectInputStream` 对其进行链式包装。
+
 3. 调用 `readObject()` 方法并将返回的对象强制转换为正在反序列化的类。
+
 4. 关闭流。
 
 列表 15-4 显示了读取之前序列化的文件 `BestEmployee.ser` 的示例代码。该代码打开了一个指向 `BestEmployee.ser` 的 `FileInputStream`，然后将 `FileInputStream` 与 `ObjectInputStream` 链式连接。`readObject()` 方法恢复内存中 `Employee` 对象的实例。
@@ -5933,22 +5963,21 @@ transient double salary;
 
 ```java
 import java.io.*;
-
 class ClassB {
 
-    public static void main(String[] args) {
-        try (FileInputStream fin =
-                new FileInputStream("BestEmployee.ser");
-             ObjectInputStream oin = new ObjectInputStream(fin)) {
-            Employee bestEmp = (Employee) oin.readObject();
-        } catch (ClassNotFoundException cnf) {
+    public static void main(String[] args){
+        try ( FileInputStream fin =
+            new FileInputStream("BestEmployee.ser");
+            ObjectInputStream oin = new ObjectInputStream(fin);
+            Employee bestEmp=(Employee)oin.readObject();
+        ) catch (ClassNotFoundException cnf) {
             cnf.printStackTrace();
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
 
         System.out.println(
-            "The Employee has been deserialized.");
+        "The Employee has been deserialized.");
     }
 }
 ```
@@ -5969,7 +5998,7 @@ class ClassB {
 
 该接口定义两个方法：`readExternal()` 和 `writeExternal()`。这些方法必须由你编写以实现所选字段的序列化。列表 15-5 显示了实现 `Externalizable` 的类 `Employee2` 的片段。它有多个字段，但在某些场景下，只需要序列化 `id` 和 `salary`。
 
-### 列表 15-5 Employee 的外部化版本
+## 列表 15-5 Employee 的外部化版本
 
 ```java
 class Employee2 implements java.io.Externalizable {
@@ -5997,7 +6026,7 @@ class Employee2 implements java.io.Externalizable {
 
 请注意，类的每个属性都是单独被序列化的，且 `writeExternal()` 和 `readExternal()` 方法必须以相同的顺序写入和读取属性。列表 15-6 中的 `EmpProcessor` 类展示了如何外部化对象 `object2`。
 
-### 列表 15-6 外部化 Employee 对象
+## 列表 15-6 外部化 Employee 对象
 
 ```java
 import java.io.*;
@@ -6025,7 +6054,7 @@ public class ClassA {
 }
 ```
 
-### 类版本控制 (VERSIONING)
+## 类版本控制
 
 假设程序 `ClassA` 将 `Employee` 序列化到文件。几天后，另一个程序 `ClassB` 尝试反序列化它。如果类在此期间发生了变化，反序列化可能会失败。
 
@@ -6039,13 +6068,13 @@ public static final long serialVersionUID = 1L;
 
 现在，如果你将新版本中的值与旧版本相同，你就可以向该类添加更多方法，JVM 会假设这两个类具有相同的版本。如果新版本增加了字段，反序列化过程会忽略它。如果新版本删除了字段，反序列化后的版本仍然具有该字段（值为默认值）。但如果你更改了公共字段的数据类型，反序列化过程将失败。
 
-### 序列化为字节数组
+## 序列化为字节数组
 
 你可以将序列化为内存字节数组 `byte[]`。这是创建一种可以在不同虚拟机（VM）之间交换的内存块的最简单方法。
 
 序列化的语法非常直观。假设你有一个实现 `Serializable` 的类 `XYZ`，并且以正确的格式包含了报告的所有元素。要从它准备字节数组，编写列表 15-8 中的代码。
 
-#### 列表 15-8 转换为字节数组
+### 列表 15-8 转换为字节数组
 
 ```java
 XYZ MyXyz = new XYZ();
@@ -6068,9 +6097,9 @@ outout.close();
 
 另一种序列化字节数组并立即反序列化的方便方法可以在短时间内创建对象的深拷贝，这相当于创建一个对象实例的精确拷贝。尽管 `Object` 类（所有类的根类）包含了 `clone()` 方法，但该方法仅适用于实现了另一个标记接口 `Cloneable` 的对象，否则克隆将失败。当你克隆其他类型的对象实例时，情况变得更加复杂：你需要对对象进行深拷贝。
 
-在执行完列表 15-9 中的代码序列化为字节数组后，你在内存中得到了两个相同的对象。变量 `bestEmployee` 指向其中一个，变量 `bestEmployee` 指向另一个。
+在执行完列表 15-9 中的代码序列化为字节数组后，你在内存中得到了两个相同的对象。变量 `bestEmployee` 指向其中一个，变量 `cloneOfEmployee` 指向另一个。
 
-#### 列表 15-9 使用序列化进行对象克隆
+### 列表 15-9 使用序列化进行对象克隆
 
 ```java
 Employee bestEmployee = new Employee();
@@ -6086,26 +6115,28 @@ ObjectInputStream in = new ObjectInputStream(bain);
 Employee cloneOfEmployee = (Employee) in.readObject();
 ```
 
-### 尝试一下
+## 尝试一下
 
 创建一个名为 `MyCustomizableGUI` 的 Java Swing 程序，允许你指定她的偏好，例如背景颜色、字体大小等。选择任何具有这些属性的 GUI 组件。选定的值应赋值给可序列化类 `UserPreferences` 的字段，并将其序列化到名为 `preferences.ser` 的文件中。每次启动 `MyCustomizableGUI` 时，它都应该检查 `preferences.ser` 文件是否存在。如果文件存在，`MyCustomizableGUI` 应该将其反序列化并将预存的偏好应用到 GUI 上。
 
-### 课程要求
+## 课程要求
 
 你必须安装了 Java。
+
+### 逐步步骤说明
 
 1. 创建一个新的 Eclipse 项目并命名为 Lesson15。
 2. 创建一个名为 `MyCustomGUI` 的可执行 Swing 类，包含一个文本框和一个 User Preferences 按钮。
 3. 编写按钮程序，以打开一个名为 Preferences 的新窗口（基于 `JDialog`），该窗口有三个下拉菜单（`JComboBox`）、一个保存按钮和一个取消按钮。第一个下拉菜单允许用户选择颜色，第二个选择字体，第三个选择字体大小。
-4. 创建一个可序列化的类 `UserPreferences`，用于记录用户的选择。当用户做出选择后，保存按钮将将 `UserPreferences` 的实例序列化到名为 `preferences.ser` 的文件中。
+4. 创建一个可序列化的类 `UserPreferences`，用于记录用户的选择。当用户做出选择后，保存按钮将 `UserPreferences` 的实例序列化到名为 `preferences.ser` 的文件中。
 5. 每次启动 `MyCustomGUI` 时，都要确定 `preferences.ser` 文件是否存在，如果存在，则将相应的颜色作为 `MyCustomGUI` 窗口的背景颜色。字体偏好应应用到文本框。
 6. 运行程序以确保你可以更改并保存偏好，并且它们被正确地应用到 GUI 上。
 
 > 提示可以在 http://www.wrox.com/go/javaprog24hr2e 选择第 15 节的视频。你也可以从该网站下载本节的代码和资源。
 
----
+> 注意你可以从书籍的网页 http://www.wrox.com/go/javaprog24hr2e 下载此“尝试一下”章节的代码和资源。你可以在 `Lesson15.zip` 中找到它们。
 
-## 16 编程基础
+# 16 编程基础
 
 连接到网络的计算机只有在它们对通信规则（称为协议）一致时才能相互通信，这些规则定义了如何请求数据、数据是否应该分段发送、如何确认接收到的数据、两台计算机之间的连接应如何保持等。TCP/IP、UDP/IP、FTP、HTTP 和 WebSocket 是一些网络协议的示例。
 
@@ -6117,7 +6148,7 @@ Employee cloneOfEmployee = (Employee) in.readObject();
 http://www.mycompany.com:80/training.html
 ```
 
-主机必须是，并且由你的互联网服务提供商（ISP）转换为物理服务器的互联网协议（IP）地址，这也称为你的托管公司。IP 地址是四个数字一组（IPv4）——多多八个十六进制数（IPv6），例如 2001:0db8:0:0:0:ff00:42:3。大多数连接到互联网的个人其计算机被分配动态（非永久）IP 地址，但通过额外费用，你可以请求静态 IP 地址，并分配给位于你地下室、办公室或车库的任何服务器。在企业中，网络计算机使用静态（永久）IP 地址。对于个人使用，只要你的 ISP 能通过将域名解析为当前 IP 地址找到你，拥有动态分配的 IP 地址就足够了。
+主机必须是，并且由你的互联网服务提供商（ISP）转换为物理服务器的互联网协议（IP）地址，这也称为你的托管公司。IP 地址是四个数字一组（IPv4）——多多八个十六进制数（IPv6），例如 `2001:0db8:0:0:0:ff00:42:3`。大多数连接到互联网的个人其计算机被分配动态（非永久）IP 地址，但通过额外费用，你可以请求静态 IP 地址，并分配给位于你地下室、办公室或车库的任何服务器。在企业中，网络计算机使用静态（永久）IP 地址。对于个人使用，只要你的 ISP 能通过将域名解析为当前 IP 地址找到你，拥有动态分配的 IP 地址就足够了。
 
 在网上寻找资源类似于通过地址寻找某人。IP 地址的作用类似于建筑的门牌号。
 
@@ -6135,11 +6166,13 @@ http://www.mycompany.com:80/training.html
 http://www.mycompany.com:80/training.html
 ```
 
-主机必须由你的互联网服务提供商（ISP）转换为物理服务器的互联网协议（IP）地址，这也称为你的托管公司。IP 地址是四个数字一组（IPv4）——或多达八个十六进制数（IPv6），例如 `2001:0db8:0:0:0:ff00:42:3`。大多数连接到互联网的个人其计算机被分配动态（非永久）IP 地址，但通过额外费用，你可以请求静态 IP 地址，并分配给位于你地下室、办公室或车库的任何服务器。在企业中，网络计算机使用静态（永久）IP 地址。对于个人使用，只要你的 ISP 能通过将域名解析为当前 IP 地址找到你，拥有动态分配的 IP 地址就足够了。
+主机名必须由你的互联网服务提供商（ISP）转换为物理服务器的互联网协议（IP）地址，这也称为你的托管公司。IP 地址是四个数字一组（IPv4）——或多达八个十六进制数（IPv6），例如 `2001:0db8:0:0:0:ff00:42:3`。大多数连接到互联网的个人其计算机被分配动态（非永久）IP 地址，但通过额外费用，你可以请求静态 IP 地址，并分配给位于你地下室、办公室或车库的任何服务器。在企业中，网络计算机使用静态（永久）IP 地址。对于个人使用，只要你的 ISP 能通过将域名解析为当前 IP 地址找到你，拥有动态分配的 IP 地址就足够了。
 
 在网上寻找资源类似于通过地址寻找某人。IP 地址的作用类似于建筑的门牌号。
 
 ---
+
+# 从网络读取数据
 
 ## 代码列表 16-1 读取 google.com 主页的内容
 
@@ -6185,10 +6218,15 @@ public class WebSiteReader {
 <!doctype html><html itemscope itemtype="http://schema.org/WebPage" lang="en">
 <head><meta content="搜索世界信息，
 包括网页、图像、视频等更多。Google 具有许多特殊
-功能帮助你精确找到你正在寻找的内容。" name="description"><meta content="noop" name="robots">
+功能帮助你精确找到你正在寻找的内容。"
+name="description"><meta content="noop" name="robots">
 <meta content="/images/google_favicon_128.png" itemprop="image">
 <title>Google</title>
-<script>window.google={KEI:'K_JLOU64FJSyAT61K4DA',getEI:function(a){for(var c&&a(c=a.getAttribute("eid"));a=a.parentNode;return c},a.parentNode;return:function(){return "https://"+window.location.protocol EXP1:'4791,2565,400016,4000142,4000933,40009641,</script><div></body></html>
+<script>window.google={KEI:'K_JLOU64FJSyAT61K4DA',getEI:function(a){
+for(var c&&a(c=a.getAttribute("eid"));a=a.parentNode;return c},a.parentNode;return:function(){
+return "https://"+window.location.protocol
+EXP1:'4791,2565,400016,4000142,4000933,40009641,
+</script><div></body></html>
 ```
 
 `WebHttpRequest` 类显式地创建了 `URLConnection`。严格来说，你可以使用相同的类来实现相同的结果：
@@ -6200,6 +6238,8 @@ BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 ```
 
 你可能使用 `URLConnection` 的原因是它可以对 I/O 过程提供一些额外的控制。例如，通过调用方法 `setOutput(true)`，可以指定该 Java 程序打算使用 URL 根目录。在 HTTP 连接中，这将指定请求类型为 POST（参见第 26 章）。`URL` 允许你指定协议是否可以使用缓存对象，或者始终从指定的 URL 请求文档的最新备用副本。如果你计划使用仅支持 HTTP 协议的 Java 程序，请使用 `HttpURLConnection`，它支持 HTTP 特有的功能，如处理标头字段、获取响应码、设置代理属性等。
+
+---
 
 ## 通过代理服务器连接
 
@@ -6225,6 +6265,8 @@ Proxy myProxy = new Proxy(Proxy.Type.HTTP,
     new InetSocketAddress("http://proxy.mycompany.com", 8080));
 url = new URL("http://www.google.com");
 ```
+
+---
 
 ## 如何从网络下载文件
 
@@ -6268,6 +6310,8 @@ class FileDownload {
 
 如果你喜欢在 Eclipse 中运行此程序，请选择“运行配置”（使用绿色按钮旁的下拉菜单），选择 `FileDownload` 作为主类，并在“参数”框中输入 `http://google.com nyc.jpg`。文件将下载到你的项目目录，你可以通过刷新 Eclipse 看到它。
 
+---
+
 ## 股票报价程序
 
 本节展示了如何编写一个从网络读取股票价格程序。许多互联网网站提供此类报价；雅虎门户就是之一。
@@ -6296,7 +6340,7 @@ while ((txt = buff.readLine()) != null) {
 theWholePage = sb.toString();
 ```
 
-![股票报价页面截图](img/c6ae2d81738909a4b5328d6eddc14dd7_236_0.png)
+![AAPL 股票报价页面截图](img/c6ae2d81738909a4b5328d6eddc14dd7_236_0.png)
 
 如果你尝试根据列表 16-1 中 `WholePage` 的各个部分将标记（tokens）拆分，以删除所有 HTML 标签以及 `(AAPL)` 周围的所有内容，你可以创建自己的股票报价程序。这种方法对于提高你的解析技能很有用，但可能不是最佳解决方案，特别是如果该页面上股票符号的显示发生变化（例如去除了括号）。这就是为什么示例使用了一个以逗号分隔 (CSV) 格式提供股票信息的 URL。以下是用于符号 `AAPL` 应该使用的 URL：
 
@@ -6327,7 +6371,7 @@ public class StockQuote {
             url = new URL("http://quote.yahoo.com/quotes.csv?s=" + symbol + "&f=s11lldtichohvg&e=csv");
             urlConn = url.openConnection();
         } catch (IOException ioe) {
-            io.printStackTrace();
+            ioe.printStackTrace();
         }
         try(InputStreamReader inStream = 
             new InputStreamReader(urlConn.getInputStream());
@@ -6344,7 +6388,7 @@ public class StockQuote {
             System.out.println("Symbol: " + ticker + 
                 " Price: " + price + " Date: " + tradeDate + 
                 " Time: " + time);
-        } catch (MalformedException e) {
+        } catch (MalformedURLException e) {
             System.out.println("请检查 的拼写: " + 
                 " the URL: " + e.toString());
         } catch (IOException e) {
@@ -6355,20 +6399,12 @@ public class StockQuote {
     public static void main(String[] args[]) {
         if (args.length==0) {
             System.out.println("示例用法: java StockQuote IBM");
+        } else {
+            printStockQuote(args[0]);
         }
     }
 }
 ```
-
-*
-
-```java
-System.exit(0);
-}
-printStockQuote(args[0]);
-```
-
-如果你已经读过书中的所有之前的课程，阅读并理解列表 16-4 中的代码对你来说将易如反掌。测试 `StockQuote` 程序。在“运行配置”窗口中输入 AAPL 或股票符号作为参数，或按如下方式从命令行运行：
 
 ```bash
 java StockQuote AAPL
@@ -6378,9 +6414,9 @@ java StockQuote AAPL
 
 Symbol: "AAPL" 108.60 Date: "11/4/2014" Time: "4:00pm"
 
-## SOCKET 编程
+## Socket 编程
 
-基于 Java 技术为网络通信提供了许多选项，要考虑的技术之一是 socket。socket 是通信线路中的一个端点。在本节中，你将学习如何使用 `java.net` 包中的 `Socket` 和 `ServerSocket` 类。IP 网络中的许多通信协议都是基于 socket 的。例如，传输控制协议/网协议 (TCP/IP) 在整个期间维持一个连接，而用户数据报协议 (UDP) 是一种无连接协议，它处理称为数据报（datagrams）的小块。
+基于 Java 技术为网络通信提供了许多选项，要考虑的技术之一是 socket。socket 是通信线路中的一个端点。在本节中，你将学习如何使用 `java.net` 包中的 `Socket` 和 `ServerSocket` 类。IP 网络中的许多通信协议都是基于 socket 的。例如，传输控制协议/网际协议 (`TCP/IP`) 在整个期间维持一个连接，而用户数据报协议 (`UDP`) 是一种无连接协议，它处理称为数据报（datagrams）的小块。
 
 socket 地址是一个 IP 地址，当 Java 程序创建 `ServerSocket` 类的实例时，它将变成一个运行在内存中的服务器，并在指定的端口上监听其他程序的请求。以下行创建了一个监听端口 3000 的服务器：
 
@@ -6389,7 +6425,7 @@ ServerSocket serverSocket = new ServerSocket(3000);
 client = serverSocket.accept();
 ```
 
-socket 地址是一个 IP 地址，当一个 Java 程序创建 `ServerSocket` 类的实例时，它将变成一个运行在内存中的服务器，并在指定的端口上监听其他程序的请求。以下行创建了一个监听端口 3000 的服务器：
+当一个 Java 程序创建 `Socket` 类的实例时，它将作为客户端连接到指定地址和端口的服务器。以下行创建了连接到端口 3000 的客户端：
 
 ```java
 clientSocket = new Socket("124.67.98.101", 3000);
@@ -6397,21 +6433,19 @@ clientSocket = new Socket("localhost", 3000);
 clientSocket = new Socket("127.0.0.1", 3000);
 ```
 
-在为 `ServerSocket` 选择端口时，应使用1024以下的端口号以避免与系统冲突。例如，端口80通常用于 HTTP 服务器；端口443留给 HTTPS；端口21通常用于 FTP；端口389用于 LDAP 服务器，以此类推。在创建基于 socket 的连接后，客户端和服务器都应该获取输入/输出流
+在为 `ServerSocket` 选择端口时，应使用 **1024 以上** 的端口号以避免与系统冲突。例如，端口 80 通常用于 HTTP 服务器；端口 443 留给 HTTPS；端口 21 通常用于 FTP；端口 389 用于 LDAP 服务器，以此类推。在创建基于 socket 的连接后，客户端和服务器都应该获取输入/输出流。
 
-204 | 第16 节 网络编程基础
-
-## 为什么要使用 Socket？
+### 为什么要使用 Socket？
 
 如果你可以轻松建立计算机间的通信，例如使用 HTTP（它内部使用 socket）、启动许多开源或商业 Web 服务器，并让客户端如前面的示例所示连接到服务器，为什么还要使用手动 socket 编程？因为 socket 连接比任何标准协议的开销都要小得多。
 
 你可以创建自己的紧凑协议，允许你只发送需要的数据，且没有或极少的头部。socket 通信提供了双工流……你的程序必须维持数千并发连接需要比使用请求-响应系统的更强大的服务器，后者仅在客户端请求期间维持连接。
 
-# 基于 Socket 的股票报价服务器
+## 基于 Socket 的股票报价服务器
 
-让我们构建一个基于的客户端/服务器应用程序，模拟提供请求股票报价的服务器以及消费这些数据的客户端。`StockQuote` 类是我们的客户端服务器，在端口3000上监听请求（见16-5）。
+让我们构建一个基于 Socket 的客户端/服务器应用程序，模拟提供请求股票报价的服务器以及消费这些数据的客户端。`StockQuoteServer` 类是我们的服务器，在端口 3000 上监听请求（见列表 16-5）。
 
-列表16-5 生成股票报价的服务器
+### 列表 16-5 生成股票报价的服务器
 
 ```java
 public class StockQuoteServer {
@@ -6423,54 +6457,51 @@ public class StockQuoteServer {
         OutputStream outbound = null;
 
         try {
-            // 创建服务器字
+            // 创建服务器套接字
             serverSocket = new ServerSocket(3000);
             System.out.println("等待报价请求...");
-            {
-                // 等待请求
-                client = serverSocket.accept();
+            
+            // 等待请求
+            client = serverSocket.accept();
 
-                // 获取输入流
-                inbound = new BufferedReader(new
-                    InputStreamReader(client.getInputStream()));
-                outbound = client.getOutputStream();
+            // 获取输入流
+            inbound = new BufferedReader(new
+                InputStreamReader(client.getInputStream()));
+            outbound = client.getOutputStream();
 
-                String symbol = inbound.readLine();
+            String symbol = inbound.readLine();
 
-                // 生成一个随机股票价格
-                String price = (new
-                    Double(Math.random() * 100)).toString();
-                outbound.write("\nThe price of " + symbol + "\n  is " + price + "\n".getBytes());
+            // 生成一个随机股票价格
+            String price = (new
+                Double(Math.random() * 100)).toString();
+            outbound.write(("\nThe price of " + symbol + "\n  is " + price + "\n").getBytes());
 
-                System.out.println("\nRequest for " + symbol + 
-                    "\\n  has been processed - the price of " + symbol + "\n  is " + price + "\n".getBytes());
-                outbound.write("\nEnd\n".getBytes());
+            System.out.println("\nRequest for " + symbol + 
+                "\n  has been processed - the price of " + symbol + "\n  is " + price);
+            outbound.write("\nEnd\n".getBytes());
 
-            } 
-            catch (IOException e) {
-                System.out.println("Error in Server: " + e);
-            } finally {
-                try {
-                    inbound.close();
-                    outbound.close();
-                } catch (Exception e) {
-                    System.out.println("StockQuoteServer: can't close streams " + e.getMessage());
-                }
+        } 
+        catch (IOException e) {
+            System.out.println("Error in Server: " + e);
+        } finally {
+            try {
+                if (inbound != null) inbound.close();
+                if (outbound != null) outbound.close();
+            } catch (Exception e) {
+                System.out.println("StockQuoteServer: can't close streams " + e.getMessage());
             }
         }
     }
 }
 ```
 
-`Socket` 类的 `accept()` 方法是让程序进入等待模式的关键。当它启动时，你会在系统控制台上看到“Waiting for a request...”，在请求到达之前，不会发生任何其他事情。创建一个 `Server` 实例会将它绑定到指定的端口，但如果该端口已被进程占用，你将得到一个 `BindException` 异常。
+`Socket` 类的 `accept()` 方法是让程序进入等待模式的关键。当它启动时，你会在系统控制台上看到“Waiting for a request...”，在请求到达之前，不会发生任何其他事情。创建一个 `ServerSocket` 实例会将它绑定到指定的端口，但如果该端口已被进程占用，你将得到一个 `BindException` 异常。
 
-客户端程序在独立的 Java 虚拟机 (JVM) 中运行。当客户端连接到服务器的套接字时，我们的 `StockQuoteServer` 类将获取其 I/O 流的引用以及针对请求股票的随机生成的报价。在现实世界中，这台服务器必须连接到另一个提供实时市场数据的服务器，但为了本例的演示，生成数字作为“价格报价”就足够了。
+客户端程序在独立的 Java 虚拟机 (`JVM`) 中运行。当客户端连接到服务器的套接字时，我们的 `StockQuoteServer` 类将获取其 I/O 流的引用以及针对请求股票的随机生成的报价。在现实世界中，这台服务器必须连接到另一个提供实时市场数据的服务器，但为了本例的演示，生成数字作为“价格报价”就足够了。
 
-列表 II-6 所示的客户端程序启动时带有如 AAPL、IBM、MSFT 等命令行参数，以生成价格报价。你可能无法访问两台连接的计算机，你可以在同一台计算机上启动客户端程序，但它将在一个的 JVM 中运行。
+列表 16-6 所示的客户端程序启动时带有如 `AAPL`、`IBM`、`MSFT` 等命令行参数，以生成价格报价。你可能无法访问两台连接的计算机，你可以在同一台计算机上启动客户端程序，但它将在一个独立的 `JVM` 中运行。
 
-206 | 课程 16 网络编程基础
-
-# 列表 16-6 发送股票报价请求的客户端
+### 列表 16-6 发送股票报价请求的客户端
 
 ```java
 public class Client {
@@ -6496,7 +6527,7 @@ public class Client {
             new InputStreamReader(clientSocket.getInputStream()));
 
         // 将股票代码发送到服务器
-        outbound.write(args[0] + "\n".getBytes());
+        outbound.write((args[0] + "\n").getBytes());
 
         String quote;
         while (true) {
@@ -6516,47 +6547,48 @@ public class Client {
 
 你是否注意到 `StockQuoteServer` 附加了“End”一词来表示价格报价已结束？这是一个非常自定义的网络协议示例。这是我刚刚构想出来的规则——“End”表示数据的结束。在处理套接字时，决定从客户端到服务器以及反向的数据格式是你的责任。
 
-# 非阻塞套接字
+## 非阻塞套接字
 
 我在股票服务器示例中使用了简单的阻塞套接字。股票服务器调用了 `accept()` 方法，该方法会在套接字上发生阻塞，这在多客户端应用程序中可能会产生瓶颈。`java.nio.channels` 包包含了许多类和接口，它们支持通用数据的异步工作，特别是支持非阻塞套接字。
 
-在具有多个客户端的现实应用中，请考虑学习非阻塞套接字，它们在 `SocketChannel` 和 `ServerSocketChannel` 类中实现。你不需要调用 `SocketServer.accept()`，而是需要打开套接字通道将其绑定到特定端口并调用 `accept()`，它可以在阻塞或非阻塞模式下监听客户端的连接。要将通道置于非阻塞模式——请在通道上调用 `configure(false)`。
+在具有多个客户端的现实应用中，请考虑学习非阻塞套接字，它们在 `SocketChannel` 和 `ServerSocketChannel` 类中实现。你不需要调用 `ServerSocket.accept()`，而是需要打开套接字通道将其绑定到特定端口并调用 `accept()`，它可以在阻塞或非阻塞模式下监听客户端的连接。要将通道置于非阻塞模式——请在通道上调用 `configureBlocking(false)`。
 
 ## 尝试一下
 
 本次练习的目标是实战测试套接字连接，即使你只有一台计算机也可以完成。
 
-## 课程要求
+### 课程要求
 
 你已安装了 Java。
 
-> 注意：你可以从书籍的网页 www.rox.com/go/javaprolog24hr2e 下载此“尝试一下”的练习代码和资源。你可以在 `Lesson16.zip` 中找到它们。
+> **注意**：你可以从书籍的网页 `www.rox.com/go/javaprolog24hr2e` 下载此“尝试一下”的练习代码和资源。你可以在 `Lesson16.zip` 中找到它们。
 
-## 提示
+### 提示
 
-在本次练习中，你使用两个独立的命令行窗口来运行套接字客户端和服务器。Eclipse IDE 允许你拥有多个一个“控制台”（Console）视图。在控制台视图工具栏中找到一个看起来像显示器的小图标，点击小三角形以便在运行多个应用程序时切换控制台窗口。
+在本次练习中，你使用两个独立的命令行窗口来运行套接字客户端和服务器。Eclipse IDE 允许你拥有多个“控制台”视图。在控制台视图工具栏中找到一个看起来像显示器的小图标，点击小三角形以便在运行多个应用程序时切换控制台窗口。
 
-## 逐步步骤
+### 逐步步骤
 
-1. 在本次练习中，你使用两个独立的命令行窗口来运行套接字客户端和服务器。Eclipse IDE 允许你拥有多个一个“控制台”视图。在控制台视图工具栏中找到一个看起来像显示器的小图标，点击小三角形以便在运行多个应用程序时切换控制台窗口。
+1. 打开两个独立的命令行窗口（或 Eclipse 控制台视图）。
+2. 在第一个窗口中启动服务器：`java StockQuoteServer`。
+3. 在第二个窗口中启动客户端并传入股票代码：`java Client AAPL`。
+4. 观察两个窗口中的输出，验证通信是否成功。
 
-2. 你可能无法访问两台连接的计算机，你可以在同一台计算机上启动客户端程序，但它将在一个的 JVM 中运行。
+---
 
-3. 在本次练习中，你使用两个独立的命令行窗口来运行套接字客户端和服务器。Eclipse IDE 允许你拥有多个一个“控制台”视图。在控制台视图工具栏中找到一个看起来像显示器的小图标，点击小三角形以便在运行多个应用程序时切换控制台窗口。
-
-210 | 第 17 ：并发与多线程
+## 第 17 课：并发与多线程
 
 在许多情况下，特别是在日益消失的单 CPU 计算机上，多线程的优势在于大多数操作都有大量的空闲时间。特别是，如果一个操作是 I/O 密集型而非 CPU 密集型，那么使用多个线程有助于利用未被使用的时间段。
 
 人们也可以以多线程模式工作。例如，他们可以边喝咖啡边打电话边开车。
 
-## Thread 类
+### Thread 类
 
-如果类 A 需要在类 B 和 C 中启动某些并行执行，那么后两个类从一开始就要声明多线程支持。类 B 和 C 的每个类都必须继承自 Java 类 `Thread`，或者实现 `Runnable` 或 `Callable` 接口之一（后者将在 Callable 中介绍）。如果一个类继承自 `Thread`，则它必须重写 `run()` 方法。你必须在 `run()` 方法中初始化作为线程执行的代码。
+如果类 A 需要在类 B 和 C 中启动某些并行执行，那么后两个类从一开始就要声明多线程支持。类 B 和 C 的每个类都必须继承自 Java 类 `Thread`，或者实现 `Runnable` 或 `Callable` 接口之一（后者将在后续介绍）。如果一个类继承自 `Thread`，则它必须重写 `run()` 方法。你必须在 `run()` 方法中初始化作为线程执行的代码。
 
-市场投资组合示例的第一版本包含三个类（代码 17-1、代码 17-2 和代码 17-3）。其中两个是 `Thread` 类的子类（`MarketNews` 和 `Portfolio`），第三个（`TestThreads`）只是一个测试程序，它实例化并启动了每个类中代码的执行。你必须在 `run()` 方法中初始化线程代码。
+市场投资组合示例的第一版本包含三个类（代码 17-1、代码 17-2 和代码 17-3）。其中两个是 `Thread` 类的子类（`MarketNews` 和 `Portfolio`），第三个（`TestThreads`）只是一个测试程序，它实例化并启动了每个类中代码的执行。
 
-## 代码 17-1 MarketNews 类
+### 代码 17-1 MarketNews 类
 
 ```java
 public class MarketNews extends Thread {
@@ -6570,7 +6602,7 @@ public class MarketNews extends Thread {
 }
 ```
 
-## 代码 17-2 Portfolio 类
+### 代码 17-2 Portfolio 类
 
 
 
@@ -6590,7 +6622,7 @@ public class Portfolio extends Thread {
 
 ```java
 public class TestThreads {
-    public static void main(String args[]){
+    public static void main(String args[]) {
         MarketNews mn = new MarketNews("Market News");
         mn.start();
 
@@ -6687,19 +6719,19 @@ You have 500 shares of IBM
 - 列表 17-8 杀死线程
 
 ```java
-class KillThread{
+class KillThread {
     public static void main(String[] args) {
-        PortfolioVolatile p =new PortfolioVolatile("Portfolio data");
+        PortfolioVolatile p = new PortfolioVolatile("Portfolio data");
         p.start();
     }
 // 此处是代码实现逻辑
 ```
 
 ```java
-int i=0;
+int i = 0;
 do {
     System.out.println(" i = " + i++);
-} while (i<100);
+} while (i < 100);
 ```
 
 ```java
@@ -6708,7 +6740,7 @@ p.stopMe();
 ```
 
 ```java
-class PortfolioVolatile extends Thread{
+class PortfolioVolatile extends Thread {
     private volatile Thread stopMe;
 
     public PortfolioVolatile(String threadName) {
@@ -6776,17 +6808,17 @@ Thread.setPriority(Thread.NORM_PRIORITY + 1);
 - 列表 17-9 声明同步方法
 
 ```java
-class ATMProcessor extends Thread{
-  synchronized withdrawCash(int accountID, int amount) {
-    // 此处是一些线程安全的代码，例如从
-    // 文件或数据库读取
-    boolean allowTransaction = validateWithdrawal(accountID, amount);
-    if (allowTransaction) {
-      updateBalance(accountID, "Withdraw");
-    } else {
-      System.out.println("Not enough money on the account");
+class ATMProcessor extends Thread {
+    synchronized withdrawCash(int accountID, int amount) {
+        // 此处是一些线程安全的代码，例如从
+        // 文件或数据库读取
+        boolean allowTransaction = validateWithdrawal(accountID, amount);
+        if (allowTransaction) {
+            updateBalance(accountID, "Withdraw");
+        } else {
+            System.out.println("Not enough money on the account");
+        }
     }
-  }
 }
 ```
 
@@ -6795,19 +6827,19 @@ class ATMProcessor extends Thread{
 - 列表 17-10 声明同步块
 
 ```java
-class ATMProcessor extends Thread{
-  withdrawCash(int accountID, int amount) {
-    // 此处是一些线程安全的代码，例如从
-    // 文件或数据库读取
-    synchronized(this) {
-      boolean allowTransaction = validateWithdrawal(accountID, amount);
-      if (allowTransaction) {
-        updateBalance(accountID, "Withdraw");
-      } else {
-        System.out.println("Not enough money on the account");
-      }
+class ATMProcessor extends Thread {
+    withdrawCash(int accountID, int amount) {
+        // 此处是一些线程安全的代码，例如从
+        // 文件或数据库读取
+        synchronized (this) {
+            boolean allowTransaction = validateWithdrawal(accountID, amount);
+            if (allowTransaction) {
+                updateBalance(accountID, "Withdraw");
+            } else {
+                System.out.println("Not enough money on the account");
+            }
+        }
     }
-  }
 }
 ```
 
@@ -6836,7 +6868,7 @@ class ATMProcessor extends Thread{
 
 让我们重新回顾我们的 `TestThreads3.lambda` 类，它为市场新闻和投资组合创建了线程。在 `main()` 方法的末尾有如下行：
 
-```
+```java
 System.out.println("The main method Test3 is finished");
 ```
 
@@ -6851,21 +6883,15 @@ The market is improving I
 
 注意，`main()` 方法并没有等待投资组合和市场新闻线程完成！下一个代码示例展示了线程如何在不使用 `wait()` 的情况下等待通知。为了简化示例的理解，我只使用了两个线程：主线程和市场新闻。新类名为 `TestLambdaWaitNotify`。我想一石二鸟，顺便解释一下 lambda 的一个有趣用例。为了让 `main()` 方法等待通知，它可以包含以下代码片段：
 
-```
+```java
 TestLambdaWaitNotify thisInstance = new TestLambdaWaitNotify();
 
-synchronized(thisInstance) {
-
-  try{
-
-    thisInstance.wait(20000); // 最多等待 20 秒
-
-  } catch (InterruptedException e) {
-
-    e.printStackTrace();
-
-  }
-
+synchronized (thisInstance) {
+    try {
+        thisInstance.wait(20000); // 最多等待 20 秒
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
 }
 ```
 
@@ -6926,7 +6952,7 @@ private Runnable getMNewsRunnable(Object whoToNotify) {
 这是一个方法返回 lambda 表达式的示例，因此以下语句是有效的：
 
 ```java
-Runnable mktNewsRunnable = getMNewsRunnable(thisInstance);
+Runnable mktNewsRunnable = getMNewsRunnable(this);
 ```
 
 ## TestThreads3LambdaJoin 示例
@@ -6977,7 +7003,7 @@ void withdraw(int accountID, int amount) {
 
 你可以通过 `Callable` 接口解决第一个问题，通过使用 `Executor` 框架中的类解决第二个问题。`Executor` 的 `execute` 方法从 `Runnable` 对象创建线程，`ExecutorService` 知道如何创建 `Callable` 线程，而 `ScheduledExecutorService` 允许你调度线程在未来执行。
 
-`Executors` 工具类具有静态方法，允许你创建执行器。特别是 `Executors.newFixedThreadPool(5)` 会创建一个指定大小的线程池。例如，`Executors.newCachedThreadPool()` 给你一个 `ExecutorService` 实例，它自动支持无限数量的线程池。如果所有线程都忙，当请求进来时会创建一个新线程，此时它会等待运行中的线程之一完成。使用池可以确保你可以更好地控制系统资源。
+`Executors` 工具类具有静态方法，允许你创建执行器。特别是 `Executors.newFixedThreadPool(5)` 会创建一个指定大小的线程池。例如，`Executors.newCachedThreadPool()` 给你一个 `ExecutorService` 实例，它自动支持无限数量的线程池。如果所有线程都忙，当请求进来时会创建一个新线程；此时它会等待运行中的线程之一完成。使用池可以确保你可以更好地控制系统资源。
 
 如果你需要线程在完成后启动某些工作，请创建一个实现 `Callable` 接口的类，并定义 `call()` 方法，其作用与 `Runnable` 中的 `run()` 相同。在这种情况下，你需要以不同的方式创建线程；该类不接受 `Callable` 作为参数。`Executors` 类返回一组静态方法，这些方法从你的 `Callable` 类创建线程，并将执行结果封装在实现接口 `Future` 的特殊对象中返回。
 
@@ -7007,7 +7033,7 @@ public class MarketData implements Callable<Integer> {
 }
 ```
 
-创建 `Future` 对象的一种方法是将 `Callable` 线程的实例提交给 `Executor`。在 `Future` 实例上调用 `get()` 函数，它会阻塞线程，直到其 `call()` 方法返回结果：
+创建 `Future` 对象的一种方法是将 `Callable` 线程的实例提交给 `Executor`。在 `Future` 实例上调用 `get()` 方法，它会阻塞线程，直到其 `call()` 方法返回结果：
 
 ```java
 // 线程的结果可以存储在 Futures 集合中
@@ -7034,7 +7060,7 @@ for (Future<Integer> future : threadResults) {
 
 以下类 `TestThreads` 创建 `Future` 对象集合——每个线程一个。`Executor` 创建了一个包含两个线程的池，每个线程都提交了执行。Lambda 表达式实现了 `Callable`。
 
-### 列表 7-13 TestThreads 示例
+### 列表 17-13 TestThreads 示例
 
 ```java
 public class TestThreads {
@@ -7091,17 +7117,17 @@ public class TestThreads {
 
 程序的输出如下所示。但如果你将池中的线程数从两个改为一个，程序将先打印所有来自投资组合线程的消息，之后才打印所有市场新闻的消息。
 
-+ 你拥有 500 股 IBM 股票
-+ 市场正在改进 0
-+ 你拥有 501 股 IBM 股票
-+ 市场正在改进 1
-+ 你拥有 502 股 IBM 股票
-+ 你拥有 503 股 IBM 股票
-+ 市场正在改进 2
-+ 你拥有 504 股 IBM 股票
-+ 市场正在改进 34
-+ 得到结果：10
-+ 得到结果：12345
+- 你拥有 500 股 IBM 股票
+- 市场正在改进 0
+- 你拥有 501 股 IBM 股票
+- 市场正在改进 1
+- 你拥有 502 股 IBM 股票
+- 你拥有 503 股 IBM 股票
+- 市场正在改进 2
+- 你拥有 504 股 IBM 股票
+- 市场正在改进 34
+- 得到结果：10
+- 得到结果：12345
 
 ## 并发集合简要回顾
 
@@ -7133,7 +7159,7 @@ Java 引入了 `Deque` 接口，用于从队列的两端插入和删除元素。
 
 
 
-假设你的 GUI 是用 Swing 编写的，点击 `JButton` 会启动一个服务器端数据请求，需要 10 秒才能完成。你**不**应该在事件线程中执行耗时请求。如果你这样做，UI 将变得冻结，因为在长时间运行的进程释放线程锁之前，不会有任何更新。这时，你需要为这种长过程启动一个单独的线程，当它完成后，程序必须通过事件线程修改 GUI。
+假设你的 GUI 是用 Swing 编写的，点击 `JButton` 会启动一个服务器端数据请求，需要 10 秒才能完成。你应该在事件线程中执行耗时请求。如果你这样做，UI 将变得冻结，因为在长时间运行的进程释放线程锁之前，不会有任何更新。这时，你需要为这种长过程启动一个单独的线程，当它完成后，程序必须通过事件线程修改 GUI。
 
 所有与 UI 相关的事件（如按钮点击和窗口重绘）都放置在一个特殊的队列中，`java.awt.EventQueue` 对象从你那里检索它们。这应该将对 UI 的修改（示例中的 `JTextField`）定向到此队列。
 
@@ -7155,7 +7181,7 @@ SwingUtilities.invokeLater(
 
 假设一个 Swing 应用程序需要几秒钟。当 UI 在这几秒内冻结时，此请求必须在后台线程中执行，为了安排这一点，创建一个 `SwingWorker` 的子类并重写它的 `doInBackground()` 方法，然后实例化并调用它的 `execute()` 方法，如列表 17-14 所示。
 
-### 列表 17-14 SwingWorker 的基本用法
+### 17-14 SwingWorker 的基本用法
 
 ```
 class MarketNewsWorker extends SwingWorker<List<String>, String> {
@@ -7182,12 +7208,12 @@ class TestMarketNews {
 
 你不允许直接调用 `process()` 方法，必须调用 `publish()`，它内部会调用 `process()`。重写 `process()` 将消息添加到日志文件或更新进度条。在 UI 上显示计算进度的代码应该是：
 
-### 列表 17-15 使用 SwingWorker 的典型方式
+### 17-15 使用 SwingWorker 的典型方式
 
 ```
 class MarketNewsWorker extends SwingWorker<List<String>, String> {
     @Override
-    public List<String> doInBackground() {
+    List<String> doInBackground() {
         // 向服务器发送请求并返回结果，
         // 即 String 列表
         for (String news : someNewsCollection) {
@@ -7198,12 +7224,12 @@ class MarketNewsWorker extends SwingWorker<List<String>, String> {
     }
 
     @Override
-    protected void process(List<String> progressMessage) {
+    void process(String progressMessage) {
         // 在此处显示进度信息
     }
 
     @Override
-    protected void done() {
+    void done() {
         // 通过调用 get() 在此处修改 UI 组件
         // Future 的 get() 提供了线程
         // 执行的结果
@@ -7227,7 +7253,7 @@ class TestMarketNews {
 
 你已经安装了 Java。
 
-> **注意**：你可以从 wrox 网页下载“Try It”的代码和资源：http://www.wrox.com/go/javaproq24hr2e。你可以在第7课中找到它。
+> 注意：你可以从 wrox 网页下载“Try It”的代码和资源：http://www.wrox.com/go/javaproq24hr2e。你可以在第7课中找到它。
 
 ## 步骤详解
 
@@ -7240,11 +7266,9 @@ class TestMarketNews {
 7. 测试此程序。
 8. 这是可选的。重写该方法并确保它使用关于读取过程的进度信息更新视图。进度应以百分比形式显示：百分比公式为 `progressToDisplay/readBytes/FileSize*100`。使用 `Swing ProgressBar` 显示进度条。
 
-> **提示** 请在线访问 http://www.wrox.com/go/javaproq24hr2e 选择第 17 课的视频。你可以从该网站下载本课程的代码和资源。
+> 提示：请在线访问 http://www.wrox.com/go/javaproq24hr2e 选择第 17 课的视频。你可以从该网站下载本课程的代码和资源。
 
-# 第 18 课 JavaFX 介绍
-
-JavaFX 的创建是为了与以前的富级网络应用（RIA）框架竞争，例如 Adobe Flex 和 Microsoft Silverlight。事实上，JavaFX 从未在 RIA 领域获得过具有竞争力的地位，但在涉及到在 Java 中开发图形用户界面（GUI）时，它为 Swing 提供了一个更好、更多的替代方案。Swing 是构建在旧的 AWT 库之上的，而 JavaFX 则不是。此外，虽然 JavaFX 随 Java SE 8 一起，但它并不是其的一部分。
+# 18 JavaFX 的创建是为了与以前的富级网络应用（RIA）框架竞争，例如 Adobe Flex 和 Microsoft Silverlight。事实上，JavaFX 从未在 RIA 领域获得过具有竞争力的地位，但在涉及到在 Java 中开发图形用户界面（GUI）时，它为 Swing 提供了一个更好、更多的替代方案。Swing 是构建在旧的 AWT 库之上的，而 JavaFX 则不是。此外，虽然 JavaFX 随 Java SE 8 一起，但它并不是其的一部分。
 
 使用 JavaFX，你可以用 Java 开发 GUI，也可以混合使用 FXML 和 Java。FXML 是一种 XML 标记语言，允许你以声明式的方式定义组件。此类 GUI 组件的源码将存储在扩展名为 `.fxml` 的文件中，这些文件代表了模型-视图-控制器（MVC）架构中的视图。业务代码和数据将使用 Java 配合丰富的 JavaFX 组件库来编写。使用 FXML 开发 GUI 可以通过从工具栏将 GUI 组件拖动到窗口区域，从而促进代码的整洁分离。
 
@@ -7254,7 +7278,7 @@ JavaFX 的创建是为了与以前的富级网络应用（RIA）框架竞争，�
 
 在本节课中，你将发现使用 JavaFX 8 创建 GUI 的基础知识。在下一节课中，你将使用 JavaFX 创建一个井跳棋游戏。
 
-## JavaFX 应用程序基础
+## JAVAFX 应用程序基础
 
 JavaFX 使用剧场术语。要创建一个应用程序，你需要实例化一个阶段（stage）对象。假设你是一个演员，并设置一个或多个场景（scene，即视图）。每个场景的骨干是一个场景图（scene graph）——节点的层级树（即 GUI 节点和组件）。每个节点都可以使用层级样式表（CSS）文件进行样式设置。你还可以对节点应用效果和过渡。如果需要，可以为节点分配事件处理器。在场景图的顶部，你创建一个根节点。
 
@@ -7282,15 +7306,15 @@ Swing 和 Java FX 运行在不同的线程上。为了在 JavaFX 应用程序内
 
 现代 IDE 通过提供代码生成器、嵌入 Scene Builder 以及对 FXML 的支持来实现 JavaFX 编程。开发 JavaFX 的最佳 IDE 是 NetBeans。IntelliJ IDEA 紧随。由于我们在本次构建中使用 Eclipse，我们需要安装 Efxclipse 插件来调用 E(fx)clipse。
 
-打开 Eclipse 菜单 Help -> Install New Software。点击 Add 按钮并在 location 字段中包含以下 URL 以获取最新版本：http://download.eclipse.org/efxclipse/updates-nightly/site，如图 18-1 所示。
+打开 Eclipse 菜单 Help -> Install New Software。点击 Add 按钮并在 location 字段中包含以下 URL 以获取最新版本：http://download.eclipse.org/efclipse/updates-nightly/site，如图 18-1 所示。
 
-![图 18-1](http://download.eclipse.org/efxclipse/updates-nightly/site)
+![图 18-1](http://download.eclipse.org/efclipse/updates-nightly/site)
 
 图 18-1: 添加 E(fx)clipse
 
 点击 OK，勾选所有组件，如图 18-2 所示。
 
-![图 18-2](http://download.eclipse.org/efxclipse/updates-nightly/site)
+![图 18-2](http://download.eclipse.org/efclipse/updates-nightly/site)
 
 图 18-2: 选择插件
 
@@ -7341,30 +7365,29 @@ public class Main extends Application {
 
 ## 布局
 
-与 Java Swing 布局管理器（见第 8 节）类似，JavaFX 布局有助于在场景中安排 GUI 控件，并在不同的阶段保持布局。除了使用内置布局外，你还可以使用 CSS 自定义定位。
+与 Java Swing 布局管理器（见第 0 节）类似，JavaFX 布局有助于在场景中安排 GUI 控件，并在不同的阶段保持布局。除了使用内置布局外，你还可以使用 CSS 自定义定位。
 
 本节仅包含两个布局代码示例，并假设你已经掌握了第 8 和 9 节并理解了概念。请参考产品文档查看其他布局的工作原理。
 
 JavaFX 拥有以下布局类（布局窗）：
 
-- `HBox`
-- `VBox`
-- `FlowPane`
-- `GridPane`
-- `BorderPane`
-- `StackPane`
-- `AnchorPane`
-- `TilePane`
+- HBox
+- VBox
+- FlowPane
+- GridPane
+- BorderPane
+- StackPane
+- AnchorPane
 
-`HBox` 类（水平框布局）将控件在同一行内相邻排列。垂直框布局 `VBox` 将控件按垂直方向排列。`FlowPane` 则将节点放置在行中，如果当前行没有空间，则会自动换到下一行。
+HBox 类（水平框布局）将控件在同一行内相邻排列。垂直框布局 VBox 将控件按垂直方向排列。FlowPane 则将节点放置在行中，如果当前行没有空间，则会自动换到下一行。
 
-`GridPane` 类似于 Swing 中的 `GridBagLayout`（已在第 8 节中描述过）。它允许你按行和列排列用户界面（UI）控件，并为单元格分配约束。
+GridPane 类似于 Swing 中的 `GridBagLayout`（已在第 8 节中描述过）。它允许你按行和列排列用户界面（UI）控件，并为单元格分配约束。
 
-`BorderPane` 可以将场景分为五个区域，类似于 Swing 的 `BorderLayout`，但在 JavaFX 中这些区域被称为 left（左）、top（上）、right（右）、bottom（下）和 center（中）。
+BorderPane 可以将场景分为多五个区域，类似于 Swing 的 BorderLayout，但在 JavaFX 中这些区域被称为 left（左）、top（上）、right（右）、bottom（下）和 center（中）。
 
-`TilePane` 类似于 `FlowPane`，但它将每个节点放在相同的单元格中（类似于墙上的瓷砖）。假设你想以网格布局显示图像。向 `TilePane` 中添加 `ImageView` 节点将使它们以相邻瓷砖的形式显示。
+TilePane 类似于 FlowPane，但它将每个节点放在相同的单元格中（类似于墙上的瓷砖）。假设你想以网格布局显示图像。向 TilePane 中添加 ImageView 节点将使它们以相邻瓷砖的形式显示。
 
-`AnchorPane` 允许将节点锚定在场景的左、上、右和底部。想象有一个音乐器应用程序，左侧是“后退”按钮，右侧是“前进”按钮。假设你想确保“后退”按钮距离窗口左边界 20 像素，距离顶部 10 像素。当用户调整窗口大小时，你希望保持这种定位。为此，你可以使用 `leftAnchor` 和 `bottomAnchor` 属性。
+AnchorPane 允许将节点锚定在场景的左、上、右和底部。想象有一个音乐器应用程序，左侧是“后退”按钮，右侧是“前进”按钮。假设你想确保“后退”按钮距离窗口左边界 20 像素，距离顶部 10 像素。当用户调整窗口大小时，你希望保持这种定位。为此，你可以使用 leftAnchor 和 bottomAnchor 属性。
 
 ```
 AnchorPane.setLeftAnchor(rewind, 20);
@@ -7376,15 +7399,15 @@ AnchorPane.setBottomAnchor(rewind, 10);
 通常，你将按照以下步骤操作：
 
 1. 创建要在布局容器内使用的子节点实例。
-2. 创建所选布局类的实例（例如，`HBox`）。该实例将作为你添加到它的所有子节点的容器和布局管理器。
+2. 创建所选布局类的实例（例如，HBox）。该实例将作为你添加到它的所有子节点的容器和布局管理器。
 3. 使用 `add()` 或 `addAll()` 方法添加子节点。
-4. 如果此布局实例需要放置在另一个布局内部（例如，`HBox` 可以放置在 `BorderPane` 内部），则使用 `add()` 方法将第 1 步创建的实例添加到父容器中。
+4. 如果此布局实例需要放置在另一个布局内部（例如，HBox 可以放置在 BorderPane 内部），则使用 `add()` 方法将第 1 步创建的实例添加到父容器中。
 
 让我们通过 HBox 示例来看看它是如何运行的。
 
 ## 使用 HBox 布局的示例应用程序
 
-假设你想让用户输入电子邮件，并将其发送给某些能够处理的 Java 代码。使用以下 JavaFX 组件：`Label`、`Button` 和 `TextField`，它们位于 `javafx.scene.control` 包中。
+假设你想让用户输入电子邮件，并将其发送给某些能够处理的 Java 代码。使用以下 JavaFX 组件：Label、Button 和 TextField，它们位于 `javafx.scene.control` 包中。
 
 
 
@@ -7552,7 +7575,7 @@ public class GridPaneSampleCSS extends Application {
         Label userLbl = new Label("User ID:");
         TextField userIdTxt = new TextField();
         Label userPwdLbl = new Label("Password:");
-        userPwdLbl.getStyleClass().add("bluelelabel");
+        userPwdLbl.getStyleClass().add("bluelabel");
         PasswordField userPwdTxt = new PasswordField();
 
         GridPane root = new GridPane();
@@ -7609,7 +7632,7 @@ public class GridPaneSampleCSS extends Application {
   -fx-text-fill: red;
 }
 
-.labelabel{
+.bluelabel{
   -fx-text-fill: blue;
   -fx-font-weight: bold;
   -fx-font-family: verdana;
@@ -7637,7 +7660,7 @@ public static void main(String[] args) {
 - Lambda 表达式处理器。点击了取消。
 - 方法引用处理器。点击了忘记密码。
 
-每个处理器的工作方式都相同，但我更倾向于 JavaFX 表达式版本，因为它简洁且易于阅读。每个 JavaFX 控件都有一组 `onXXX()` 方法（如 `setOnMouseClicked()`），在你处理你感兴趣的事件时应该调用它们。
+每个处理器的工作方式都相同，但我更倾向于 JavaFX Lambda 表达式版本，因为它简洁且易于阅读。每个 JavaFX 控件都有一组 `onXXX()` 方法（如 `setOnMouseClicked()`），在你处理你感兴趣的事件时应该调用它们。
 
 ### 属性与绑定
 
@@ -7649,9 +7672,9 @@ Java 开发者通常使用“属性”一词来指类属性，但 JavaFX 属性�
 
 ### 观察者模式
 
-在软件开发中，有一种名为“观察者”的设计模式。它用于实现一种场景：一个对象（观察者）等待其他对象（可观察对象）的变化。例如，如果 Twitter 用户发布了推文，他所有的粉丝（观察者）都会收到通知。你可以在 http://www.javacamp.org/ 了解更多关于此和其他设计模式。
+在软件开发中，有一种名为“观察者”的设计模式。它用于实现一种场景：一个对象（观察者）等待其他对象（可观察对象）的变化。例如，如果 Twitter 用户（观察者）发布了推文，他所有的粉丝（观察者）都会收到通知。你可以在 http://www.javacamp.org/designPattern 了解更多关于此和其他设计模式。
 
-JavaFX 属性类位于 `javafx.beans.property` 包中。对于每种属性类型都有两个类：只读和读写。例如，如果你需要处理 String 属性，请使用 `SimpleStringProperty` 或 `ReadOnlyWrapper`。这两者都实现了 `StringProperty` 接口。其他数据类型和某些集合也存在同名的类。
+JavaFX 属性类位于 `javafx.beans.property` 包中。对于每种属性类型都有两个类：只读和读写。例如，如果你需要处理 String 属性，请使用 `SimpleStringProperty` 或 `ReadOnlyStringWrapper`。这两者都实现了 `StringProperty` 接口。其他数据类型和某些集合也存在同名的类。
 
 就像你在书中所做的那样，你可以通过编码来学习。这次，你将通过修改上一节中的 `GridPaneSampleEvents` 类，在登录窗口底部放置一个额外的 `Label` 组件。当用户点击按钮和超链接时，显示有关事件的消息。最初，此标签没有任何文本：
 
@@ -7668,7 +7691,7 @@ messageLbl.textProperty().bind(message);
 
 
 
-# 课程 18 使用 JavaFX 介绍 GUI
+# 使用 JavaFX 介绍 GUI
 
 在上一节中，当用户点击按钮或超链接时，`GridPaneSample` 类向系统控制台打印消息。新的 `GridPaneSampleBinding` 修改了属性字符串 `message`，例如：
 
@@ -7680,9 +7703,7 @@ cancelBtn.setOnAction(event -> {
 
 点击 `cancelBtn` 会改变 `message` 属性的值，而该值绑定到了 `messageLbl` 的文本属性；GUI 会自动更改！图 18-8 显示了用户按下“取消”按钮后登录窗口的样子。
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_283_0.png)
-
-**图 18-B：实际绑定**
+## GridPaneSampleBinding 完整代码
 
 `GridPaneSampleBinding` 的完整代码继承自 `Application`：
 
@@ -7731,12 +7752,12 @@ public void start(Stage primaryStage) {
     });
 
     // lambda 表达式
-    cancelBtn.setOnAction(evt -> {
+    cancel.setOnAction(evt -> {
         message.set("Cancel clicked.");
     });
 
     // 方法引用
-    forgotPwdLink.setOnAction(this::forgotPwdHandler);
+    forgetPwdLink.setOnAction(this::forgotPwdHandler);
 
     // 显示窗口
     Scene scene = new Scene(root, 250, 220);
@@ -7763,13 +7784,13 @@ messageLbl.textProperty().unbind();
 
 将第 8 章的计算器作为 JavaFX 应用程序重新创建。
 
-## 课程要求
+### 课程要求
 
 你应该安装 JavaFX。
 
-> **注意** 你可以从书籍网页 www.wrox.com/go/javaprog24hr2e 下载本节的代码示例。你可以在 `Lesson18.zip` 中找到它们。
+> **注意** 你可以从书籍网页 `www.wrox.com/go/javaprog24hr2e` 下载本节的代码示例。你可以在 `Lesson18.zip` 中找到它们。
 
-## 步骤说明
+### 步骤说明
 
 1. 在 Eclipse 中创建一个新的 JavaFX 项目。
 2. 创建一个继承 `Application` 的类（你可以重命名主类）。
@@ -7778,13 +7799,13 @@ messageLbl.textProperty().unbind();
 5. 在显示字段与 `CalculatorController` 的 `String` 属性之间使用 JavaFX 绑定，以显示输入的数字。
 6. 实现至少一种操作（例如加法），并使用绑定显示结果。计算器功能的示例实现，请参见第 19 节的“尝试一下”部分。
 
-> **提示** 请在 www.wrox.com/go/javaprog24hr2e 在线选择第 18 节的视频。你也可以从该网站下载本节的代码和资源。
+> **提示** 请在 `www.wrox.com/go/javaprog24hr2e` 在线选择第 18 节的视频。你也可以从该网站下载本节的代码和资源。
 
 ---
 
-# 第 19 课 开发 JavaFX 计算器和井字棋
+# 第 19 课：开发 JavaFX 计算器和井字游戏
 
-现在你已经熟悉了 JavaFX 的基础知识，是时候编写一些实用的应用程序了。在本节中，你将编写计算器和井字棋游戏。在第 18 节中，你用 Java 编写了应用程序，但这次你将使用声明性语言 FXML 来创建图形用户界面（GUI）部分。应用程序逻辑和事件处理则在 Java 中完成。
+现在你已经熟悉了 JavaFX 的基础知识，是时候编写一些实用的应用程序了。在本节中，你将编写计算器和井字游戏。在第 18 节中，你用 Java 编写了应用程序，但这次你将使用声明性语言 FXML 来创建图形用户界面（GUI）部分。应用程序逻辑和事件处理则在 Java 中完成。
 
 在本节中，你将熟悉 Scene Builder——这是一个设计工具，允许你通过将组件（按钮、文本字段、标签等）直接拖放到内容面板（如图 19-4 所示的 Scene Builder 中心区域）来创建 GUI。当你使用 Scene Builder 设计视图时，它会生成一个名为 `.fxml` 的文件，该文件包含反映你设计的带有类 XML 标签。
 
@@ -7792,7 +7813,7 @@ messageLbl.textProperty().unbind();
 
 ## 使用 Scene Builder 设计计算器
 
-假设你已经按照第 18 节中的描述安装了 e(fx)clipse 插件。现在你需要从 Oracle 的 http://bit.ly/trnwIS5 下载并安装 Scene Builder。
+假设你已经按照第 18 节中的描述安装了 e(fx)clipse 插件。现在你需要从 Oracle 的 `http://bit.ly/trnwIS5` 下载并安装 Scene Builder。
 
 | Scene Builder 下载的替代站点 |
 | :--- |
@@ -7800,23 +7821,17 @@ messageLbl.textProperty().unbind();
 
 如果你已经完成了第 18 节的“尝试一下”部分的作业，你应该已经有一个显示计算器 GUI 的程序，它看起来可能与图 19-1 所示类似。
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_287_0.png)
+![图 19-1：计算器](img/c6ae2d81738909a4b5328d6eddc14dd7_287_0.png)
 
-**图 19-1：计算器**
-
-现在你将发现如何使用 Scene Builder 创建这个计算器。你仍然需要在 Eclipse 中通过选择菜单 File -> New -> Other -> JavaFX 来创建一个 Java 项目。
+现在你将发现如何使用 Scene Builder 创建这个计算器。你仍然需要在 Eclipse 中通过选择菜单 `File -> New -> Other -> JavaFX` 来创建一个 Java 项目。
 
 我将此项目命名为 `Lesson19`。在创建此项目期间，我指定了包名 `calculator`、语言 `FXML`、文件名 `Calculator`，以及控制器名称 `CalculatorController`，如图 19-2 所示。
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_288_0.png)
+![图 19-2：在 Eclipse 中配置新的 JavaFX](img/c6ae2d81738909a4b5328d6eddc14dd7_288_0.png)
 
-**图 19-2：在 Eclipse 中配置新的 JavaFX**
+点击 `Finish`（完成）按钮会创建一个新的 Eclipse 项目，该项目包含两个 Java 类——`Main` 和 `CalculatorController`；FXML 文件 `Calculator.fxml` 如图 19-3 所示，以及一个名为 `application.css` 的 CSS 文件。
 
-点击 Finish（完成）按钮会创建一个新的 Eclipse 项目，该项目包含两个 Java 类——`Main` 和 `CalculatorController`；FXML 文件 `Calculator.fxml` 如图 19-3 所示，以及一个名为 `application.css` 的 CSS 文件。
-
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_288_1.png)
-
-**图 19-3：生成的项目结构**
+![图 19-3：生成的项目结构](img/c6ae2d81738909a4b5328d6eddc14dd7_288_1.png)
 
 注意，`<BorderPane>` 包含了属性 `fx:controller`，其名称是在你的基于 MVC 的应用程序中充当控制器的类名。
 
@@ -7856,13 +7871,9 @@ public class Main extends Application {
 
 `@Override` 注解表示它重写了父类方法。在下一节中，你将看到它使用 `FXMLLoader` 来加载 `Calculator.fxml` 文件。`@FXML` 注解用于将 FXML 元素链接到 Java 控制器变量。
 
-## 使用 Scene Builder 设计计算器
+下一步是在网格单元格中添加按钮。从左侧的 `Controls` 板中将 `Button` 拖到网格的左上角，如图 19-9 所示。拖动按钮的右边框将其放大。将每个按钮的 `Margin`（外边距）属性设置为 5；这是按钮与单元格边界之间的距离。最后，将按钮上的文本更改为 `MC`，以与图 19-1 中的左上角匹配。图 19-9 显示了 Scene Builder 窗口现在的样子。
 
-下一步是在网格单元格中添加按钮。从左侧的 Controls 板中将 `Button` 拖到网格的左上角，如图 19-9 所示。拖动按钮的右边框将其放大。将每个按钮的 `Margin`（外边距）属性设置为 5；这是按钮与单元格边界之间的距离。最后，将按钮上的文本更改为 `MC`，以与图 19-1 中的左上角匹配。图 19-9 显示了 Scene Builder 窗口现在的样子。
-
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_294_0.png)
-
-**图 19-9：位于左上角网格单元格的按钮 MC**
+![图 19-9：位于左上角网格单元格的按钮 MC](img/c6ae2d81738909a4b5328d6eddc14dd7_294_0.png)
 
 设计完此 `Calculator.fxml` 后，`<GridPane>` 内部有了一个新的 `<children>` 部分。目前它只有一个：
 
@@ -7870,19 +7881,17 @@ public class Main extends Application {
 <children>
   <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="99.0" text="MC">
     <GridPane.margin>
-      <Insets bottom="5.0" left="5.0" right="5.0" />
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
     </GridPane.margin>
   </Button>
 </children>
 ```
 
-并没有显示单元格 (0,0)，因为 0 是 `<GridPane.columnIndex>` 和 `<GridPane.rowIndex>` 属性的默认值。你现在需要在其他单元格中重复此按钮。你可以多次使用 Ctrl+C/Ctrl+V 并拖放内容。通过修改 `Calculator.fxml` 更改每个按钮的属性。在此过程中，观察你是如何添加更多按钮的。我发现直接在 FXML 文件中复制代码比使用 Scene Builder 进行操作更好。
+并没有显示单元格 (0,0)，因为 0 是 `<GridPane.columnIndex>` 和 `<GridPane.rowIndex>` 属性的默认值。你现在需要在其他单元格中重复此按钮。你可以多次使用 `Ctrl+C`/`Ctrl+V` 并拖放内容。通过编辑 `Calculator.fxml` 更改每个按钮的属性。在此过程中，观察你是如何添加更多按钮的。我发现直接在 FXML 文件中复制代码比使用 Scene Builder 进行操作更好。
 
 注意图 19-1 中位于单元格 (0,5) 的按钮跨越了两列，坐标为 (3,4) 的按钮跨越了两行。对于这些按钮，你需要在右侧的属性面板上输入 2 作为行（或列）跨度（span），并将 `MAX_VALUE` 设置为最大宽度（或高度）。完成所有操作后，Scene Builder 窗口应该看起来像图 19-10。
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_295_0.png)
-
-**图 19-10：网格中的所有按钮**
+![图 19-10：网格中的所有按钮](img/c6ae2d81738909a4b5328d6eddc14dd7_295_0.png)
 
 运行 `Main` 类并查看类似于图 19-1 的计算器。
 
@@ -7890,7 +7899,7 @@ public class Main extends Application {
 
 ## 在 Controller 类中处理事件
 
-作为 MVC 设计模式的一部分，你将创建 `Calculator.fxml`。现在你可以编写一个控制器并将其关联到视图。当最初生成 `Calculator.fxml` 文件时，指定了处理位于根容器中所有组件事件的控制器名称：
+作为 MVC 设计模式，你将创建 `Calculator.fxml`。现在你可以编写一个控制器并将其关联到视图。当最初生成 `Calculator.fxml` 文件时，指定了处理位于根容器中所有组件事件的控制器名称：
 
 ```xml
 <BorderPane xmlns="http://javafx.com/javafx/8"
@@ -7913,7 +7922,7 @@ public class CalculatorController {
 }
 ```
 
-如果你还记得，第 8 课的 `GridPaneSampleEvents` 类调用了 `setOnMouseClicked()` 将事件处理器分配给按钮点击。但如果你在 FXML 中开发 GUI，那里没有 Java 对象。或者，你可以为 `<Button>` 的 `onAction` 属性指定控制器的事件处理方法。以下代码段用于标签为 1 的按钮。
+如果你还记得，第 8 课的 `GridPaneSampleEvents` 类调用了 `setOnMouseClicked()` 将事件处理器分配给按钮点击。但如果你在 FXML 中开发 GUI，那里没有 Java 对象。或者，你可以为 `<Button>` 的 `onAction` 属性指定控制器的事件处理方法。以下代码片段用于标签为 1 的按钮：
 
 ```xml
 <Button fx:id="btn1" onAction="#buttonClickHandler" text="1" />
@@ -7922,13 +7931,9 @@ public class CalculatorController {
 
 
 <Button prefHeight="97.0" prefWidth="132.0" text="1" onAction="buttonClickHandler">
-
-<GridPane margin>
-
+  <GridPane.margin>
     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-
-</GridPane>
-
+  </GridPane.margin>
 </Button>
 
 根容器包含子元素，容器的子元素知道处理事件的方法名称。在示例中，我为所有按钮设置了一个事件处理器，并将 `onAction="buttonHandler"` 复制粘贴到每个按钮上。或者，我可以为数字和执行操作的按钮分别分配一个事件处理器。
@@ -7944,9 +7949,7 @@ public class CalculatorController {
 
 ```java
 private void processOperation(String buttonLabel) {
-
     System.out.println("You selected operation " + buttonLabel);
-
 }
 ```
 
@@ -7962,9 +7965,7 @@ private void processOperation(String buttonLabel) {
 
 ```xml
 <top>
-
     <TextField id="displayField" BorderPane.alignment="CENTER" />
-
 </top>
 ```
 
@@ -7972,7 +7973,6 @@ private void processOperation(String buttonLabel) {
 
 ```java
 @FXML
-
 private TextField displayField;
 ```
 
@@ -7981,58 +7981,38 @@ private TextField displayField;
 ```java
 package mycalculator;
 
+import javafx.event.ActionEvent;
 import javafx.event.Event;
-
 import javafx.fxml.FXML;
-
 import javafx.scene.control.Button;
-
 import javafx.scene.control.TextField;
 
 public class CalculatorController {
 
-@FXML
+    @FXML
+    private TextField displayField;
 
-private TextField displayField;
-
-public void buttonClickHandler(ActionEvent evt) {
-
-    Button clickedButton = (Button) evt.getTarget();
-
-    String buttonLabel = clickedButton.getText();
-
-    // 区分数字和操作
-
-    switch (buttonLabel) {
-
-        case "0": case "1": case "2": case "3": case "4": case "5":
-
-        case "6": case "7": case "8": case "9": case "10": case "..":
-
-            processDigit(buttonLabel);
-
-            break;
-
-        default:
-
-            processOperation(buttonLabel);
-
+    public void buttonClickHandler(ActionEvent evt) {
+        Button clickedButton = (Button) evt.getTarget();
+        String buttonLabel = clickedButton.getText();
+        // 区分数字和操作
+        switch (buttonLabel) {
+            case "0": case "1": case "2": case "3": case "4": case "5":
+            case "6": case "7": case "8": case "9": case "10": case "..":
+                processDigit(buttonLabel);
+                break;
+            default:
+                processOperation(buttonLabel);
+        }
     }
 
-}
+    private void processDigit(String buttonLabel) {
+        displayField.setText(displayField.getText() + buttonLabel);
+    }
 
-private void processDigit(String buttonLabel) {
-
-    displayField.setText(displayField.getText() + buttonLabel);
-
-}
-
-private void processOperation(String buttonLabel) {
-
-    System.out.println("You selected operation " + buttonLabel);
-
-}
-
+    private void processOperation(String buttonLabel) {
+        System.out.println("You selected operation " + buttonLabel);
+    }
 }
 ```
 
@@ -8042,31 +8022,30 @@ private void processOperation(String buttonLabel) {
 
 ## @FXML 注解
 
-你可以对返回 `void` 的字段和方法使用 `@FXML` 注解。如果你在控制器类中添加了带有 `@FXML` 注解的 `initialize()` 方法，FXLoader Java 运行时会在所有 GUI 组件构造后调用此方法。特别是，如果你想使用绑定并确保所有 GUI 组件都已构造，这可能会非常有用。
+你可以对返回 `void` 的字段和方法使用 `@FXML` 注解。如果你在控制器类中添加了带有 `@FXML` 注解的 `initialize()` 方法，`FXMLLoader` Java 运行时会在所有 GUI 组件构造后调用此方法。特别是，如果你想使用绑定并确保所有 GUI 组件都已构造，这可能会非常有用。
 
 ```java
-@FXML public void initialize() {
-
+@FXML
+public void initialize() {
     myComponent1.textProperty().bind(myComponent2);
-
 }
 ```
 
-## 编写井棋游戏
+## 编写井字游戏
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_300_0.png)
 
 图 19-11：输入数字 159.23 后的计算器视图
 
-## 编写井棋游戏
+## 编写井字游戏
 
-现在你已经熟悉了使用 FXML 和 Scene Builder 创建 GUI 的基础知识，本节将展示编写一个井棋游戏有多简单。
+现在你已经熟悉了使用 FXML 和 Scene Builder 创建 GUI 的基础知识，本节将展示编写一个井字游戏有多简单。
 
 ## 游戏策略
 
-每个游戏都实现了算法——一组根据玩家动作必须执行的规则或策略。你需要为井棋游戏想出一个简单的策略。
+每个游戏都实现了算法——一组根据玩家动作必须执行的规则或策略。你需要为井字游戏想出一个简单的策略。
 
-如果你不熟悉井棋游戏，或者它在你的所在地区有不同的名称，请阅读关于它的维基百科文章。对于你正在构建的流行游戏版本，请实现以下策略：
+如果你不熟悉井字游戏，或者它在你的所在地区有不同的名称，请阅读关于它的维基百科文章。对于你正在构建的流行游戏版本，请实现以下策略：
 
 - 游戏由两个玩家在 3x3 的二维棋盘上进行。
 - 两个玩家可以玩这个游戏。一个人使用符号 X，另一个人使用符号 O。
@@ -8075,7 +8054,7 @@ private void processOperation(String buttonLabel) {
 - 获胜组合必须被高亮显示。
 - 每次移动后，程序必须检查是否有胜利者。
 
-## 使用 FXML 设计井棋 GUI
+## 使用 FXML 设计井字 GUI
 
 创建一个新的 JavaFX 项目 `TicTacToe`，指定包名为 `tictoe`，类名为 `TicTacToe`，控制器名为 `TacToeController`。
 
@@ -8083,47 +8062,32 @@ private void processOperation(String buttonLabel) {
 public class Main extends Application {
 
     @Override
-
     public void start(Stage primaryStage) {
-
         try {
-
-            BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("TicTacToe.fxml"));
-
+            BorderPane root = (BorderPane) FXMLLoader.load(getClass().getResource("TicTacToe.fxml"));
             Scene scene = new Scene(root, 300, 320);
-
             scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-
             primaryStage.setScene(scene);
-
             primaryStage.setResizable(false);
-
             primaryStage.show();
-
         } catch (Exception e) {
-
             e.printStackTrace();
-
         }
-
     }
 
     public static void main(String[] args) {
-
         launch(args);
-
     }
-
 }
 ```
 
-你的井棋游戏在 `BorderPane` 顶部有一个菜单栏，中心有一个三列的 `GridPane`。
+你的井字游戏在 `BorderPane` 顶部有一个菜单栏，中心有一个三列的 `GridPane`。
 
-JavaFX 菜单是作为层次结构创建的。`Menu` 组件可以包含一个或多个 `MenuItem`。你也可以创建一个包含一个或多个 `Menu` 组件的 `MenuBar` 或 `ContextMenu`。我解释如何为井棋游戏创建菜单，但你可以访问 Oracle 关于该主题的教程了解更多关于 JavaFX 菜单的信息。
+JavaFX 菜单是作为层次结构创建的。`Menu` 组件可以包含一个或多个 `MenuItem`。你也可以创建一个包含一个或多个 `Menu` 组件的 `MenuBar` 或 `ContextMenu`。我解释如何为井字游戏创建菜单，但你可以访问 Oracle 关于该主题的教程了解更多关于 JavaFX 菜单的信息。
 
 在 Scene Builder 中，将 Controls 面板的 `MenuBar` 组件拖到 `BorderPane` 的“INSERT TOP”位置。
 
-展开 Hierarchy 面板中的 `MenuBar`。默认菜单有 File、Edit 和 Help。井棋游戏没有编辑内容，所以右键点击 Edit 并选择 Delete。使用 Scene Builder 的属性面板将 File 菜单重命名为 Actions。File 菜单最初带有 `MenuItem`，你应该将其重命名为 Quit。
+展开 Hierarchy 面板中的 `MenuBar`。默认菜单有 File、Edit 和 Help。井字游戏没有编辑内容，所以右键点击 Edit 并选择 Delete。使用 Scene Builder 的属性面板将 File 菜单重命名为 Actions。File 菜单最初带有 `MenuItem`，你应该将其重命名为 Quit。
 
 将 `MenuItem` 放入 Actions 菜单。Scene Builder 会自动创建菜单项 Unspecified。将其重命名为 Play。
 
@@ -8139,7 +8103,7 @@ Menu Help 最初带有 `MenuItem` About。在 help 菜单上放入另一个 `Men
 
 如果你运行 `Main` 类，它将打开一个顶部带有菜单栏的窗口，如图 19-13 所示。
 
-268 | 第 19 ：开发 JavaFX 计算器和井井字
+268 | 第 19 章：开发 JavaFX 计算器和井字游戏
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_303_0.png)
 
@@ -8148,112 +8112,71 @@ Menu Help 最初带有 `MenuItem` About。在 help 菜单上放入另一个 `Men
 在 Eclipse 中打开生成的 `TicTacToe.fxml` 并对其进行简化。移除行列约束并向 `GridPane` 中添加九个高度为 100 的按钮，使其看起来如下所示所示：
 
 ```xml
-<xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <?import java.lang.*?>
-
 <?import javafx.scene.control.*?>
-
 <?import javafx.scene.layout.*?>
-
 <?import javafx.scene.layout.BorderPane?>
 
 <BorderPane xmlns="http://javafx.com/javafx/8"
-
     xmlns:fx="http://javafx.com/fxml/1"
-
     fx:controller="tictactoe.TicTacToeController">
-
   <top>
-
     <MenuBar BorderPane.alignment="CENTER">
-
       <menus>
-
         <Menu text="Actions">
-
           <items>
-
             <MenuItem text="Play" />
-
             <MenuItem text="Quit" />
-
           </items>
-
         </Menu>
-
         <Menu text="Help">
-
           <items>
-
             <MenuItem text="About" />
-
             <MenuItem text="How to play" />
-
           </items>
-
         </Menu>
-
-      </MenuBar>
-
+      </menus>
+    </MenuBar>
   </top>
-
-<center>
-
-  <GridPane fx:id="gameBoard" BorderPane alignment="CENTER">
-
-    <children>
-
-      <Button fx:id="b1" prefHeight="100.0" prefWidth="100.0" />
-
-      <Button fx:id="b2" prefHeight="100.0" prefWidth="100.0" GridPane.columnindex="1" GridPane.rowIndex="0" />
-
-      <Button fx:id="b3" prefHeight="100.0" prefWidth="100.0" GridPane.columnindex="2" GridPane.rowIndex="0" />
-
-      <Button fx:id="b4" prefHeight="100.0" prefWidth="100.0" GridPane.columnindex="0" GridPane.rowIndex="1" />
-
-      <Button fx:id="b5" prefHeight="100.0" prefWidth="100.0" GridPane.columnindex="1" GridPane.rowIndex="1" />
-
-      <Button fx:id="b6" prefHeight="100.0" prefWidth="100.0" GridPane.columnindex="2" GridPane.rowIndex="1" />
-
-      <Button fx:id="b7" prefHeight="100.0" prefWidth="100.0" GridPane.columnindex="0" GridPane.rowIndex="2" />
-
-      <Button fx:id="b8" prefHeight="100.0" prefWidth="100.0" GridPane.columnindex="1" GridPane.rowIndex="2" />
-
-      <Button fx:id="b9" prefHeight="100.0" prefWidth="100.0" GridPane.columnindex="2" GridPane.rowIndex="2" />
-
-    </children>
-
-  </GridPane>
-
-</center>
-
+  <center>
+    <GridPane fx:id="gameBoard" BorderPane.alignment="CENTER">
+      <children>
+        <Button fx:id="b1" prefHeight="100.0" prefWidth="100.0" />
+        <Button fx:id="b2" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Button fx:id="b3" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Button fx:id="b4" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Button fx:id="b5" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Button fx:id="b6" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Button fx:id="b7" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Button fx:id="b8" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button fx:id="b9" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      </children>
+    </GridPane>
+  </center>
 </BorderPane>
 ```
 
-运行 `Main` 类，查看图 19-14 所示带有菜单的井井字盘。注意，第一个按钮有一个为蓝色边框的焦点。
+运行 `Main` 类，查看图 19-14 所示带有菜单的井字盘。注意，第一个按钮有一个为蓝色边框的焦点。
 
-270 | 第 19 ：开发 JavaFX 计算器和井井字
+270 | 第 19 章：开发 JavaFX 计算器和井字游戏
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_305_0.png)
 
-图 19-14：第一个按钮带有焦点边框的井井字
+图 19-14：第一个按钮带有焦点边框的井字
 
 要移除焦点边框，你需要更改生成的应用程序 `application.css` 文件中按钮的属性。从理论上讲，样式属性 `-fx-focus-color: transparent;` 应该起作用，但在编程中并非一切都按部就班。这里是移除焦点边框的样式：
 
 ```css
-.button(
-
+.button {
   -fx-focus-color: transparent;
-
   -fx-background-insets: -1, 0, 1, 1;
-
-)
+}
 ```
 
 
 
-`Main` 类加载了 `application.css` 文件并将其样式应用于舞台（stage）上的匹配组件。（参见图 19-15。）
+`Main` 类加载了 `application.css` 文件并将其样式应用于舞台上的匹配组件。（参见图 19-15。）
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_306_0.png)
 
@@ -8301,17 +8224,11 @@ public class TicTacToeController {
 
 ```css
 .button{
-
   -fx-focus-color: transparent;
-
   -fx-background-insets: -1, 0, 1, 1;
-
   -fx-font-weight: bold;
-
   -fx-font-size: 36;
-
   -fx-text-fill: blue;
-
 }
 ```
 
@@ -8346,55 +8263,46 @@ public class TicTacToeController {
 // 方法代码自而易见：
 
 private boolean find3Row() {
-
     // 第一行
     if (b1.getText() != null && b1.getText().equals(b2.getText()) && b2.getText().equals(b3.getText())) {
         highlightWinningCombo(b1, b2, b3);
         return true;
     }
-
     // 第二行
     if (b4.getText() != null && b4.getText().equals(b5.getText()) && b5.getText().equals(b6.getText())) {
         highlightWinningCombo(b4, b5, b6);
         return true;
     }
-
     // 第三行
     if (b7.getText() != null && b7.getText().equals(b8.getText()) && b8.getText().equals(b9.getText())) {
         highlightWinningCombo(b7, b8, b9);
         return true;
     }
-
     // 第一列
     if (b1.getText() != null && b1.getText().equals(b4.getText()) && b4.getText().equals(b7.getText())) {
         highlightWinningCombo(b1, b4, b7);
         return true;
     }
-
     // 第二列
     if (b2.getText() != null && b2.getText().equals(b5.getText()) && b5.getText().equals(b8.getText())) {
         highlightWinningCombo(b2, b5, b8);
         return true;
     }
-
     // 第三列
     if (b3.getText() != null && b3.getText().equals(b6.getText()) && b6.getText().equals(b9.getText())) {
         highlightWinningCombo(b3, b6, b9);
         return true;
     }
-
     // 对角线1
     if (b1.getText() != null && b1.getText().equals(b5.getText()) && b5.getText().equals(b9.getText())) {
         highlightWinningCombo(b1, b5, b9);
         return true;
     }
-
     // 对角线2
     if (b3.getText() != null && b3.getText().equals(b5.getText()) && b5.getText().equals(b7.getText())) {
         highlightWinningCombo(b3, b5, b7);
         return true;
     }
-
     return false;
 }
 ```
@@ -8403,11 +8311,10 @@ private boolean find3Row() {
 
 ```java
 private void highlightWinningCombo(Button first, Button second,
-        Button third) {
-
-    first.setStyle("-fx-background-color:radial-gradient(radius 100%, white, lightyellow, lawgreen); -fx-text-fill:red;");
-    second.setStyle("-fx-background-color:radial-gradient(radius 100%, white, lightyellow, lawgreen); -fx-text-fill:red;");
-    third.setStyle("-fx-background-color:radial-gradient(radius 100%, white, lightyellow, lawgreen); -fx-text-fill:red;");
+    Button third) {
+    first.setStyle("-fx-background-color:radial-gradient(radius 100%, white, lightyellow, lawgreen);-fx-text-fill:red;");
+    second.setStyle("-fx-background-color:radial-gradient(radius 100%, white, lightyellow, lawgreen);-fx-text-fill:red;");
+    third.setStyle("-fx-background-color:radial-gradient(radius 100%, white, lightyellow, lawgreen);-fx-text-fill:red;");
 }
 ```
 
@@ -8421,12 +8328,9 @@ private void highlightWinningCombo(Button first, Button second,
 
 ```css
 .winning-button {
-
     -fx-background-color:
         radial-gradient(radius 100%, white, yellowish, lawngreen);
-
     -fx-text-fill: red;
-
 }
 ```
 
@@ -8434,11 +8338,10 @@ private void highlightWinningCombo(Button first, Button second,
 
 ```java
 private void highlightWinningCombo(Button first, Button second,
-        Button third) {
-
-    first.getStyleClass().add("winning-button");
-    second.getStyleClass().add("winning-button");
-    third.getStyleClass().add("winning-button");
+Button third) {
+first.getStyleClass().add("winning-button");
+second.getStyleClass().add("winning-button");
+third.getStyleClass().add("winning-button");
 }
 ```
 
@@ -8458,27 +8361,16 @@ private void highlightWinningCombo(Button first, Button second,
 
 ```java
 public void menuClickHandler(ActionEvent evt) {
-
     MenuItem clickedMenu = (MenuItem) evt.getTarget();
-
     String label = clickedMenu.getText();
-
     if ("Play".equals(label)) {
-
         ObservableList<Button> buttons = gameBoard.getChildren();
-
         buttons.forEach(btn -> {
-
             ((Button) btn).setText("");
-
             btn.getStyleClass().remove("winning-button");
-
         });
-
         isFirstPlayer = true; // X 开始新游戏
-
     }
-
 }
 ```
 
@@ -8503,8 +8395,8 @@ public void menuClickHandler(ActionEvent evt) {
 3. 要对两个数字执行操作，你需要知道它们的值和选择的操作。计算器的显示字段一次显示一个数字，因此你需要将第一个输入的值存储在程序变量中。你也可以将执行操作的结果存储在单独的变量中。记住显示字段中的值是用字符串表示的。在 `CalculatorController` 类中声明以下字段：
 
 ```java
-private String previousValue = "";
-private String currentValue = "";
+private String previousValue="";
+private String currentValue="";
 private double result;
 ```
 
@@ -8512,23 +8404,14 @@ private double result;
 
 ```java
 private void addNumbers() {
-
     if ("".equals(previousValue)) {
-
         previousValue = displayField.getText();
-
         displayField.setText("");
-
     } else {
-
         currentValue = displayField.getText();
-
         result = Double.parseDouble(previousValue) + Double.parseDouble(currentValue);
-
         displayField.setText("" + result);
-
     }
-
 }
 ```
 
@@ -8542,33 +8425,26 @@ private String lastOperation;
 
 ```java
 private void processOperation(String label) {
-
     switch (label) {
-
         case "+":
             lastOperation = "+";
             addNumbers();
             break;
-
         case "=":
             processOperation(lastOperation); // 递归
     }
 }
 ```
 
-280 | 第 19 课 开发 JavaFX 计算器和井井字游戏
 
 
-
-# 第 19 课 开发 JavaFX 计算器和井字游戏
+“递归”（recursion）一词描述了函数或方法调用自身的情况。递归有助于避免重复代码。因为当用户点击加号或等号按钮时，你需要重复相同的操作，因此使用递归是有意义的。
 
 ```java
 case "":
     processOperation(lastOperation); // 递归
 }
 ```
-
-“递归”（recursion）一词描述了函数或方法调用自身的情况。递归有助于避免重复代码。因为当用户点击加号或等号按钮时，你需要重复相同的操作，因此使用递归是有意义的。
 
 - 6. 运行 `Math` 类，你应该能够输入并相加两个数字。但为了支持用户想要执行多次连续加法的场景，你需要少量的代码来捕获用户在操作执行后继续点击数字的时刻。在这种情况下，你需要将结果存储在变量 `previousValue` 中，并清空显示字段，以便让用户可以输入下一个要相加的数字。
 - 7. 类似于加法，实现其他操作。添加输入验证：不允许用户在数字中输入多个句号。不允许除以零。
@@ -8625,7 +8501,7 @@ List<Beer> americanBeers = beer.stream()
 
 如何判断特定操作是中间的还是终端的？中间操作返回 `Stream` 以外的任何内容。事实上，流操作可以链联成流水线，因为每个中间操作都返回一个 `Stream`。
 
-### 懒性操作
+#### 懒性操作
 
 在终端操作被调用之前，中间操作甚至不会尝试读取数据。使用中间操作的核心思想是以声明式的形式表达你的意图。考虑以下代码片段：
 
@@ -8638,13 +8514,17 @@ OptionalDouble averagePrice = beer.stream()
 
 在给你展示这段代码之前，它解释道：“我们想过滤掉非美国啤酒，然后应用 map 操作来提取啤酒价格。最后我们计算平均价格。”在调用 `average()` 之前，`filter()` 和 `mapToDouble()` 都没有被调用（我在下一个代码中向你证明）。确切知道你计划对数据做什么，允许 Java 创建最高效的执行计划。我所说的“懒性执行”（lazy execution）是指，在终端操作调用之前，中间操作不会执行。
 
+### 集合与流的排序
+
+总结一下，将中间操作视为一系列所需的动作，这些动作将与终端操作一起在一次遍历中执行。终端操作都不会修改源数据。流（Streams）是不可变的。
+
 ### 并行处理与顺序处理
 
-十个人走进了慕尼黑啤酒节帐篷。他们坐在一张桌旁，服务生走了过来。其中一个人说：“请给我们带几杯 Leffe Blonde 啤酒，并按照以下步骤操作：去吧台，装满第一杯带到这里；然后对第二杯也这样做。重复十次。”服务生礼貌地回答：“请不要告诉我如何给你们送啤酒，请一次性全部上齐。”服务生优化了流程。他只需要客户告诉他要做什么，而不是怎么做。
+十个人走进了慕尼黑啤酒节节帐篷。他们坐在一张桌旁，服务生走了过来。其中一个人说：“请给我们带几杯 Leffe Blonde 啤酒，并按照以下步骤操作：去吧台，装满第一杯带到这里；然后对第二杯也这样做。重复十次。”服务生礼貌地回答：“请不要告诉我如何给你们送啤酒，请一次性全部上齐。”服务生优化了流程。他只需要客户告诉他要做什么，而不是怎么做。
 
 并行处理是有规则的！我在第 11 课使用 `forEach()` 迭代集合时已经提到过这一点。流也一样。当你对数据源调用 `stream()` 时，数据处理很可能会被优化并并行执行；运行时可能会在内部将数据分成块，并行执行操作，并重构结果。
 
-如果你想确保处理是并行执行的，请在数据上使用 `parallelStream()`，它可能会在内部创建多个线程来处理流数据。Java 7 引入了 Fork/Join 框架来实现并行性，但其代码编写并不简单。在 Java 8 中，Fork/Join 例程被隐藏在流的实现内部，对应用程序开发者透明。
+如果你想确保处理是并行执行的，请在数据上使用 `parallelStream()`，它可能会在内部创建多个线程来处理流数据。Java 7 引入了 Fork/Join 框架来实现并行性，但其代码编写并不简单。在 Java 8 中，Fork/Join 例被隐藏在流的实现内部，对应用程序开发者透明。
 
 即使 Java 文档也指出 `parallelStream()` 返回一个可能的并行的流。
 
@@ -8686,7 +8566,7 @@ public class Beer implements Comparable<Beer> {
         } else if (this.price < otherBeer.price) {
             return -1; // 这只啤酒比另一个“小”
         } else {
-            return 0; // 啤酒“相等”
+            return 0; // 啤酒“相等”的
         }
     }
 
@@ -8698,10 +8578,10 @@ public class Beer implements Comparable<Beer> {
 
 `compareTo()` 方法接受一个参数——要比较的对象。根据规则，如果这只啤酒的值比另一个“大”，`compareTo()` 方法必须返回 1。如果这只啤酒较“小”，则返回 -1。如果值“相等”，`compareTo()` 返回 0。当前的示例比较的是价格。
 
-我们将复用本节之前使用过的相同啤酒集合。接下来的代码片段使用了 `java.util.Collections` 类，展示了你如何按价格对其排序：
+我们将复用本节之前在此过的相同啤酒集合。接下来的代码片段使用了 `java.util.Collections` 类，展示了你如何按价格对其排序：
 
 ```java
-List<Beer> beers = loadBeer(); // 填充啤酒集合
+List<Beer> beers = loadCell(); // 填充啤酒集合
 Collections.sort(beers);
 beers.forEach(System.out::println);
 ```
@@ -8709,6 +8589,17 @@ beers.forEach(System.out::println);
 这是预期的输出：
 
 
+
+Name: Obolon, price: 4.0
+Name: Bud Lights, price: 5.0
+Name: Turnling, price: 5.5
+Name: Sam Adams, price: 7.0
+Name: Stella, price: 7.25
+Name: Brooklyn Lager, price: 8.25
+Name: Leffe Blonde, price: 8.75
+Name: Chimay Blue, price: 10.0
+
+`Comparable` 接口只能按单个属性排序对象，这限制了它的用途。如果你想按名称排序，你需要考虑：
 
 # 使用 Comparator 接口
 
@@ -8720,9 +8611,6 @@ beers.sort(priceComparator);
 beers.forEach(System.out::println);
 ```
 
-输出结果：
-
-```
 Name: Obolon, price: 4.0
 Name: Bud Lights, price: 5.0
 Name: Turnling, price: 5.5
@@ -8731,7 +8619,6 @@ Name: Stella, price: 7.25
 Name: Brooklyn Lager, price: 8.25
 Name: Leffe Blonde, price: 8.75
 Name: Chimay Blue, price: 10.0
-```
 
 如果你想按降序排序，可以使用 `reversed()` 方法：
 
@@ -8765,7 +8652,7 @@ beers.sort(Comparator.comparing((Beer) -> beer.name).thenComparing((Beer) -> bee
 beers.forEach(System.out::println);
 ```
 
-# 第20节 Stream API
+# 288 | 第20 Stream API
 
 Stream API 提供了一种处理对象的强大方式。流是支持函数式操作的元素序列。你可以用简洁的方式过滤（`filter`）、映射（`map`）和还原（`reduce`）数据。
 
@@ -8794,15 +8681,17 @@ Name: Leffe Blonde, price: 8.75
 Name: Chimay Blue, price: 10.0
 ```
 
+排序集合与流 | 289
+
 ```java
-beers.sort(Comparator.comparing(Beer::getName).thenComparing(Beer::getPrice));
+be.sort(Comparator.comparing(Beer::getName).thenComparing(Beer::getPrice));
 ```
 
-## 可变集合
+## 可变集合 (MUTABLE COLLECTIONS)
 
 在使用 `Comparable` 和 `Comparator` 接口结合 `sort()` 方法会修改（排序）原始数据集合。因此，集合是可变的。排序流时情况并非如此，接下来将进行解释。
 
-# 排序流
+# 排序流 (Sorting Streams)
 
 现在你已经熟悉了数据集合通用排序的基础知识，是时候看看如何使用 Stream API 对任何数据进行排序了。提醒一下，当你处理流时，原始数据源保持不变——即不会对数据源进行任何更改。若要将数据存储在另一个集合或数组中，你需要使用终端操作 `collect()`。
 
@@ -8814,7 +8703,7 @@ beers.stream()
   .forEach(System.out::println);
 ```
 
-对多个字段进行排序的方法与 `Comparator` 上的代码示例类似。下一个示例展示了如何按国家和价格对啤酒进行排序。稍微修改 `Beer` 类中的 `sortTo()` 方法以打印国家。
+对多个字段进行排序的方法与 Comparator 上的代码示例类似。下一个示例展示了如何按国家和价格对啤酒进行排序。稍微修改 `Beer` 类中的 `sortTo()` 方法以打印国家。
 
 啤酒和价格排序看起来可能像所示：
 
@@ -8834,29 +8723,35 @@ Country: Belgium Name: Blue, price: 10.0
 Country: USA Name: Bud Light, price: 5.9
 Country: USA Name: Yuengling, price: 5.5
 Country: USA Name: Sam Adams, price: 7.0
-Country: USA Name: Brooklyn Lager, price: 0.25
-Country: Ukraine Name: Obolon, price: 4.0
 ```
 
-若要在一个新的 `List` 集合中查看排序结果，你需要添加一个终端操作：
+*
+
+# 290 | 第 20 节 STREAM API
+
+Country: USA Name: Brooklyn Lager, price: 0.25
+
+Country: Ukraine Name: Obolon, price: 4.0
+
+若要在一个新的 List 集合中查看排序结果，你需要添加一个终端操作：
 
 ```java
-List<Beer> sortedBeers = beers.stream()
+List<Beer> sortedBiers = beers.stream()
     .sorted(Comparator.comparing(b -> b.price))
     .collect(Collectors.toList());
 ```
 
-现在你有两个集合。原始的（`beers`）集合是未排序的，而新的（`sortedBeers`）是排序过的。
+现在你有两个集合。原始的（`beers`）集合是未排序的，而新的（`sortedBiers`）是排序过的。
 
-# 并行流与排序
+# 并行流与排序 (PARALLEL STREAMS AND SORTING)
 
 如果你决定使用 `parallelStream()`，则 `forEach()` 方法无法用于排序后的数据。根据 Oracle 文档，对于并行流水线，此操作不保证遇到流的顺序，因为这会牺牲并行带来的优势。你需要改用 `forOrdered` 方法。
 
-# 流源
+# 流源 (STREAM SOURCES)
 
 到为止，本章中的所有代码示例都使用对象集合作为流数据源。但事实并非如此。你可以使用 Stream API 处理有限和无限数据源。
 
-## 创建有限大小的源
+# 创建有限大小的源 (Creating Finite Size Sources)
 
 你可以获取一组任意值并使用 `Stream.of()` 方法将它们放入流中。例如，以下代码段创建了一个有限大小的字符串流。
 
@@ -8866,7 +8761,7 @@ Stream<String> beerNames = Stream.of("Leffe Blonde",
 beerNames.forEach(System.out::println);
 ```
 
-`builder()` 方法是创建有限大小源的另一种方法。以下代码段创建了一个包含三个基本类型的流并找到最大值。由于 `max()` 返回 `OptionalLong` 类型（它可能有值也可能没有），我调用了 `getAsLong()` 来获取基本类型 `long`。运行此代码后，`maxValue` 等于 21。
+`builder()` 方法是创建有限大小源的另一种方法。以下代码段创建了一个包含三个基本类型的流并找到最大值。由于 `max()` 返回 `OptionalLong` 类型（它可能有值也可能没有），我调用了 `getAsLong()` 来获取基本类型 long。运行此代码后，`maxValue` 等于 21。
 
 ```java
 long maxValue = LongStream.builder()
@@ -8877,11 +8772,11 @@ long maxValue = LongStream.builder()
     .max().getAsLong();
 ```
 
-## 创建无限大小的流
+# 创建无限大小的流 (Creating Infinite-Size Streams)
 
 尽管数据集合具有有限大小，但你可以使用 Stream API 处理无限数据流。
 
-### 生成流数据
+# 生成流数据 (Generating Stream Data)
 
 `Stream.generate()` 方法可以接受一个 lambda 表达式，该表达式通过某种任意算法生成值。实现 `java.util.function.Supplier` 意味着要编写一个返回某些结果的函数。
 
@@ -8890,8 +8785,7 @@ long maxValue = LongStream.builder()
 ```java
 import java.time.LocalDateTime;
 import java.util.function.Supplier;
-import java.util.stream.Stream;
-
+import java.util.Stream;
 public class StreamDates {
     public static void main(String[] args) {
         // 实现 Supplier 接口
@@ -8918,14 +8812,24 @@ public class StreamDates {
 ...
 ```
 
-# 短路操作
+# 291 | 第 20 节 STREAM API
+
+## 292 | 第 20 节 STREAM API
+
+## 293 | 第 20 节 STREAM API
+
+## 294 | 第 20 节 STREAM API
+
+# 短路操作 (SHORT-CIRCUIT OPERATIONS)
 
 在某些情况下，你想提前停止流。假设你只想显示流中的前五个元素。短路操作为此提供了目的。回顾打印数字的示例。如果你生成一个无限数字流，为了打印前五个数字，可以使用短路操作 `limit()`：
 
 ```java
 LongStream evenNumbers = LongStream.iterate(0, num -> num+2)
     .limit(5);
+```
 
+```java
 evenNumbers.forEach(System.out::println);
 ```
 
@@ -8939,7 +8843,7 @@ evenNumbers.forEach(System.out::println);
 8
 ```
 
-另一个短路方法是流的 `findFirst()` 元素。该方法返回 Java 8 引入的 `Optional` 对象。如果未找到对象，`findFirst()` 返回一个空 `Optional`。下一个代码示例打印集合中的第一个元素：
+另一个短路方法是流的 `findFirst()` 元素。该方法返回 Java 8 引入的 Optional 对象。如果未找到对象，`findFirst()` 返回一个空 Optional。下一个代码示例打印集合中的第一个元素：
 
 ```java
 Optional<Beer> firstBeer = beers.stream()
@@ -8948,15 +8852,7 @@ System.out.println("集合中的第一个啤酒: " +
     firstBeer.orElse(new Beer("No name", "No country", 0)));
 ```
 
-针对你的啤酒集合运行此代码将打印出：
-
-- 集合中的第一瓶啤酒：Stella，价格：7.75
-
-如果你的集合为空，`println()` 方法将使用来自 `orElse()` 方法的代码。尝试从空集合中打印 `firstBeer` 将输出 `Optional.empty`。
-
-`Stream` 类上的其他短路方法还有 `skip()`、`findAny()`、`allMatch()`、`noneMatch()` 和 `anyMatch()`。
-
-# 与 I/O 使用 Stream API
+# 与 I/O 使用 Stream API (Using Stream API with I/O)
 
 ```java
 public class WebSiteReader {
@@ -8977,17 +8873,29 @@ public class WebSiteReader {
 try {
     InputStream in = new InputStreamReader(connection.getInputStream(),"UTF-8");
     BufferedReader buff = new BufferedReader(in);
-    // 使用 Stream API 读取并打印 Google 页面内容
-    buff.lines()
-        .forEach(System.out::println);
+// 使用 Stream API 读取并打印 Google 页面内容
+
+buff.lines()
+    .forEach(System.out::println);
+
 } catch (IOException e) {
     System.out.println("无法从互联网读取: " + e.toString());
 }
 ```
 
+## 短路操作 (Short-Circuit Operations)
+
 不仅流的读取部分变得更简单——只需调用 `lines()`——而且你现在可以添加一些中间操作，在数据进入时进行某些过滤。例如，你可以使用正则表达式（本书未涵盖）创建一个匹配模式，并只读取匹配该模式的数据。你可以通过查找使用 `Matcher` 类的示例来进一步研究。
 
-# 尝试一下
+针对你的啤酒集合运行此代码将打印出：
+
+- 集合中的第一瓶啤酒：Stella，价格：7.75
+
+如果你的集合为空，`println()` 方法将使用来自 `orElse()` 方法的代码。尝试从空集合中打印 `firstBeer` 将输出 `Optional.empty`。
+
+`Stream` 类上的其他短路方法还有 `skip()`、`findAny()`、`allMatch()`、`noneMatch()` 和 `anyMatch()`。
+
+## 尝试一下
 
 在接下来的练习中，你需要在处理流时使用方法引用。你还将尝试使用短路操作。
 
@@ -9001,11 +8909,11 @@ try {
 
 在本次练习中，你需要在配合流操作时使用静态方法引用。
 
-1. 在 Eclipse IDE 中导入项目 `Lesson20`。
+- 1. 在 Eclipse IDE 中导入项目 `Lesson20`。
 
-2. 在 `OutputStream` 类中，添加一个名为 `myStopWatchFunction()` 的静态方法，并将 lambda 表达式 `myStopWatch` 中的代码移动到那里。这是 lambda 表达式 `myStopWatch` 原始实现方式：
+- 2. 在 `OutputStream` 类中，添加一个名为 `myStopWatchFunction()` 的静态方法，并将 lambda 表达式 `myStopWatch` 中的代码移动到那里。这是 lambda 表达式 `myStopWatch` 原始实现方式：
 
-```java
+```
 Supplier myStopWatch = () -> {
   try {
     Thread.sleep(1000);
@@ -9016,9 +8924,9 @@ Supplier myStopWatch = () -> {
 };
 ```
 
-3. 从类中删除 lambda 表达式 `Supplier myStopWatch` 的声明。
+- 3. 从类中删除 lambda 表达式 `Supplier myStopWatch` 的声明。
 
-4. 现有的 `generate` 方法调用如下：
+- 4. 现有的 `generate` 方法调用如下：
 
 
 
@@ -9078,7 +8986,7 @@ export DERBY_HOME=~/derby
 
 Derby DB 有一个交互式命令行工具称为 `ij`，你可以用它创建数据库、表并填充数据。我将向你展示如何创建一个示例数据库并存储员工数据。
 
-首先打开命令提示符或终端并运行命令 `startNetworkServer .exe`（如果你使用 Mac 则运行 `startNetworkServer`）。
+首先打开命令提示符或终端并运行命令 `startNetworkServer.exe`（如果你使用 Mac 则运行 `startNetworkServer`）。
 
 Derby DB 服务器启动时会显示类似的消息：
 
@@ -9096,7 +9004,7 @@ connect 'jdbc:derby://localhost:15227/Lesson21;create=true'
 
 ```sql
 CREATE TABLE Employee (
-    EMPNO NOT NULL,
+    EMPNO INT NOT NULL,
     ENAME VARCHAR(50) NOT NULL,
     JOB_TITLE VARCHAR(150) NOT NULL
 );
@@ -9151,12 +9059,12 @@ Statement.executeQuery("Select * from Employee");
 
 对于产生多个结果的 SQL 查询，你可以使用 `Statement` 类的 `execute()` 方法。
 
-对于 `Insert`、`Update` 和 `Delete` SQL 语句，使用 `updateQuery()` 方法。例如：
+对于 `Insert`、`Update` 和 `Delete` SQL 语句，使用 `executeUpdate()` 方法。例如：
 
 ```java
 String myInsertStmt = "INSERT INTO Employee values " +
     "(1234, 'John Bush', 'Clerk');";
-Statement.updateQuery(myInsertStmt);
+Statement.executeUpdate(myInsertStmt);
 ```
 
 5. 为了处理接收到的数据并遍历 `ResultSet` 对象，使用以下代码：
@@ -9169,7 +9077,7 @@ while (resultSet.next()) {
 
 6. 通过关闭 `ResultSet`、`Statement` 和 `Connection` 对象来释放资源。
 
-所有步骤都在 `EmployeeList` 类中实现，参见列表 21-1，该类打印了 `Employee` 表中的记录。尽管你不需要使用 `Class()` 为 Derby DB 加载驱动，但你的程序必须知道驱动类的位置，否则你将得到“No suitable driver”（无合适的驱动程序）错误。你可以将 Derby 安装目录下 `lib` 目录中的 `addDriverClient.jar` 添加到 `CLASSPATH` 环境变量中，或者将其作为外部 `.jar` 文件添加到你的 Eclipse 项目中（查看项目菜单 Properties -> Java Path -> External JARs）。
+所有步骤都在 `EmployeeList` 类中实现，参见列表 21-1，该类打印了 `Employee` 表中的记录。尽管你不需要使用 `Class.forName()` 为 Derby DB 加载驱动，但你的程序必须知道驱动类的位置，否则你将得到“No suitable driver”（无合适的驱动程序）错误。你可以将 Derby 安装目录下 `lib` 目录中的 `derbyclient.jar` 添加到 `CLASSPATH` 环境变量中，或者将其作为外部 `.jar` 文件添加到你的 Eclipse 项目中（查看项目菜单 Properties -> Java Build Path -> External JARs）。
 
 # 列表 21-1 EmployeeList 程序
 
@@ -9208,7 +9116,7 @@ class EmployeeList {
 7521, Mary Lou, Director
 ```
 
-当执行 SQL 语句时，始终包含 `ResultSet`。让我们仔细查看列表 21-1 处的 `ResultSet`。对于产生多个结果的 SQL 查询，你可以使用 `Statement` 类的 `execute()` 方法。对于 `Insert`、`Update` 和 `Delete` SQL 语句，使用 `updateQuery()` 方法。为了处理接收到的数据并遍历 `ResultSet` 对象，使用以下代码。`ResultSet` 包含了结果集的数据。`ResultSet` 对象的 `getXxx()` 方法，指定列名：
+当执行 SQL 语句时，始终包含 `ResultSet`。让我们仔细查看列表 21-1 处的 `ResultSet`。`ResultSet` 包含了结果集的数据。`ResultSet` 对象的游标指向当前行，使用 `getXxx()` 方法指定列名：
 
 ```java
 int empNo = rs.getInt("EMPNO");
@@ -9217,25 +9125,23 @@ String name = rs.getString("ENAME");
 
 ## 处理结果集
 
-列表 21-1 处的代码展示了如何通过 `ResultSet` 填充类。`ResultSet` 包含了结果集的游标。在列表 21-1 处，`ResultSet` 转换为 Java 类型：
+列表 21-1 处的代码展示了如何通过 `ResultSet` 填充类。`ResultSet` 包含了结果集的游标。在列表 21-1 处，`ResultSet` 转换为 Java 类型，可以通过列索引或列名获取：
 
-按列索引位置：
+**通过列索引：**
 
 ```java
 int empNo = rs.getInt(1);
 String name = rs.getString(2);
 ```
 
-按列名：
+**通过列名：**
 
 ```java
 int empNo = rs.getInt("EMPNO");
 String name = rs.getString("ENAME");
 ```
 
-列表 21-1 处的代码展示了如何通过 `ResultSet` 填充类。`ResultSet` 包含了结果集的游标。在列表 21-1 处，`ResultSet` 转换为 Java 类型：
-
-`EmployeeList` 填充 `ResultSet` 到 Java 集合。`ResultSet` 对象持有数据库连接且不可序列化的。这就是为什么在进行 DBMS 操作时，常见的做法是创建一个表示行的类，并填充，例如 `ArrayList` 或其他 Java 集合。
+`EmployeeList` 将 `ResultSet` 填充到 Java 集合中。`ResultSet` 对象持有数据库连接且不可序列化。这就是为什么在进行 DBMS 操作时，常见的做法是创建一个表示行的类，并填充，例如 `ArrayList` 或其他 Java 集合。
 
 列表 21-2 展示了此类类的示例，它可以代表一条记录。只持有某些数据的类被称为值对象（value objects）。在分布式应用程序中，此类对象可能需要在不同的计算机之间传输，它们被称为数据传输对象（DTO）。
 
@@ -9264,7 +9170,7 @@ class EmployeeDTO {
 
 列表 21-1 使用 `Statement` 类创建一个可以执行 SQL 的对象。但这不是向 JDBC API 提供 SQL 的唯一方法。`PreparedStatement` 类是 `Statement` 的子类，但它在执行之前会对 SQL 语句进行预编译。
 
-通过 `PreparedStatement`，你可以创建带有程序动态传递参数的 SQL。假设你需要多次执行查询 "SELECT * FROM EMP WHERE empno=?"，并从 `empNumbers[]` 数组提供 `empno` 值。如果你像下面的代码段那样使用 `Statement` 类，那么 `sqlQuery` 在循环的每次迭代中都必须经过修改和预编译：
+通过 `PreparedStatement`，你可以创建带有程序动态传递参数的 SQL。假设你需要多次执行查询 `"SELECT * FROM EMP WHERE empno=?"`，并从 `empNumbers[]` 数组提供 `empno` 值。如果你像下面的代码段那样使用 `Statement` 类，那么 `sqlQuery` 在循环的每次迭代中都必须经过修改和预编译：
 
 ```java
 for (int i=0; i<empNumbers.length; i++) {
@@ -9299,13 +9205,11 @@ for (int i = 0; i < empNumbers.length; i++) {
 }
 ```
 
-如果你需要传递一个 NULL 值作为参数，请使用 `setNull()` 方法。
+如果你需要传递一个 `NULL` 值作为参数，请使用 `setNull()` 方法。
 
 # CallableStatement 类
 
 该类扩展了 `PreparedStatement`，用于从 Java 执行数据库存储过程。假设有一个名为 `changeEmpTitle` 的存储过程，它接受两个参数：`empno` 和 `title`。以下是执行此存储过程的代码：
-
-ResultSetMetaData 类 | 305
 
 如果存储过程使用输出参数返回某些值，则必须在执行语句之前注册 `OUT` 数据类型。接下来的代码段展示了执行具有两个参数的存储过程的示例：第一个是输入参数，第二个是输出参数，存储过程可以通过该参数将其执行结果返回给 Java 程序。
 
@@ -9532,7 +9436,7 @@ Swing 包含了 `DefaultTableModel` 和 `AbstractTableModel` 类，它们实现�
 
 通常，创建 `JTable` 的类定义了一个或多个监听器来感知数据的更改。列表 22-1 中不完整的 `MyFrame` 类实现了 `Listener` 接口，该接口只定义了一个方法——`tableChanged()`。此方法应包含执行数据修改的代码——将数据保存到数据库。
 
-## 列表 22-1 带有 JTable 的窗口
+# 列表 22-1 带有 JTable 的窗口
 
 
 
@@ -9863,14 +9767,14 @@ Java 反射的主题不需要使用注解；反射在 Java 开发的各个领域
 ## 322 第 23 节 注解与反射
 
 * 要启用行的排序和过滤，请使用一个 `RowSorter`；
-* 对于所有 `<code>Component</code>` 类，你可以使用 `InputMap` 和 `ActionMap` 将 `KeyEvent` 对象与执行 action 关联，在指定的条件下。
-* **警告：** Swing 不是线程安全的。更多信息请参阅 `package-summary.html#threading`。
+* 对于所有 `Component` 类，你可以使用 `InputMap` 和 `ActionMap` 将 `KeyEvent` 对象与执行 action 关联，在指定的条件下。
+* **警告：** Swing 不是线程安全的。更多信息请参阅 `package-summary.html#threading` Swing 线程策略
 * @version 1.02 05/30/08
 * @author Philip Mine
-* @see `DefaultTableModel`
-* @see `TableSorter`
+* @see DefaultTableModel
+* @see TableSorter
 
-Java SE 中已经包含了大约十几个预定义的注解。你可以在 `java.lang`、`java.lang.annotation` 和 `javax.annotation` 包中找到它们以及支持它们的类。你可以在 Java SE API 的在线文档中熟悉这些包的内容，在本文编写时该文档位于 http://www.oracle.com/java/javase/docs/。
+Java SE 中已经包含了大约十几个预定义的注解。你可以在 `java.lang`、`java.lang.annotation` 和 `javax.annotation` 包中找到它们以及支持它们的类。你可以在 Java SE API 的在线文档中熟悉这些包的内容，在本文编写时该文档位于 http://www.oracle.com/java/javase/docs/
 
 某些注解供编译器使用 `@Override`、`@Warning`、`@Deprecated`、`@Target`、`@Retention` 和 `@Inherited`；某些由 Java 运行时或必须按特定顺序调用的方法使用 `@PostConstruct`、`@PreDestroy`，或者标记由第三方工具生成的代码 `@Generated`。我不再重复
 
@@ -9878,7 +9782,7 @@ Java SE 中已经包含了大约十几个预定义的注解。你可以在 `java
 
 这是关于如何使用这些注解的详细描述，但我将为你提供一些特定的示例来帮助你开始使用注解。
 
-## @Override
+### @Override
 
 在第 3 章的“try”部分中，`calcTax()` 方法在 `NJTax` 和其子类 `NTax` 中是相同的。你故意在 `NJTax` 中为 `calcTax()` 添加了一个参数，就像是你不小心这样做一样。代码可以编译且没有错误。但你可能是误操作了，并且没有像计划那样重写该方法，而是重载了它。如果你在计划重写方法时始终使用 `@Override` 注解，就不会发生这种情况。
 
@@ -9894,7 +9798,7 @@ The method calcTax() must override or implement a supertype
 
 `@Override` 注解向编译器表示预期进行重写，如果没有发生重写，则它将会失败。该注解表示了你的意图，并帮助未来可能阅读你代码的人。
 
-## @SuppressWarnings
+### @SuppressWarnings
 
 编译器可以生成阻止你的程序运行但指示潜在问题的消息。在某些情况下，你希望抑制某些或所有警告，以确保项目构建输出是干净的。例如，`-Xlint none` 禁用所有警告，而 `-Xlint:fall` 指令编译器在你忘记在 switch 语句中添加 break 时发出警告（第 3 章）。在 Eclipse 中，你可以将编译器设置为检查项目，并选择 `Properties -> Compiler -> Errors/Warnings -> Potential Programming Problems`（属性 -> 潜在编程问题）。
 
@@ -9912,47 +9816,47 @@ public class SuppressWarningsDemo {
         int salaryBand=3;
         int bonus;
         // 从某处获取人的薪资范围
-
-// 数据源在此
-switch(salaryBand){
-  case 1:
-    bonus=1000;
-    System.out.println("Giving bonus " + bonus);
-    break;
-  case 2:
-    bonus=2000;
-    System.out.println("Giving bonus " + bonus);
-    break;
-  case 3:
-    bonus=6000;
-    System.out.println("Giving bonus " + bonus);
-    break;
-  case 4:
-    bonus=1000;
-    System.out.println("Giving bonus " + bonus);
-    break;
-  default:
-    // 错误的薪资范围
-    System.out.println("Invalid salary band");
-}
+        // 数据源在此
+        switch(salaryBand){
+            case 1:
+                bonus=1000;
+                System.out.println("Giving bonus " + bonus);
+                break;
+            case 2:
+                bonus=2000;
+                System.out.println("Giving bonus " + bonus);
+                break;
+            case 3:
+                bonus=6000;
+                System.out.println("Giving bonus " + bonus);
+                break;
+            case 4:
+                bonus=1000;
+                System.out.println("Giving bonus " + bonus);
+                break;
+            default:
+                // 错误的薪资范围
+                System.out.println("Invalid salary band");
+        }
+    }
 }
 ```
 
-注意在 case 3 部分缺少了 `break` 关键字。在这段代码中，`salaryBand` 为 3 的员工有权获得两次奖金——在 $10,000 之外额外获得 $6,000。编译注解 `@SuppressWarnings("fallthrough")` 仅抑制此方法的编译器警告。在所有其他可能包含 switch 语句的类或方法中，都会生成警告。
+注意在 case 3 部分缺少了 `break` 关键字。在这段代码中，`salaryBand` 为 3 的员工有权获得两次奖金——在 $10,000 之外额外获得 $6,000。编译器注解 `@SuppressWarnings("fallthrough")` 仅抑制此方法的编译器警告。在所有其他可能包含 switch 语句的类或方法中，都会生成警告。
 
-## @Deprecated
+### @Deprecated
 
 如果你正在开发供他人使用的类，可以将其标记为 `@Deprecated` 类或方法，它们在该代码的未来版本中可能会移除。其他开发者仍然可以使用这些代码，但他们会收到警告，建议切换到更新版本。
 
-## @Inherited
+### @Inherited
 
 此注解仅意味着该注解必须被其使用的类的后类继承。下一节将包含其用法示例。
 
-## @FunctionalInterface
+### @FunctionalInterface
 
 这是一种信息性注解类型，用于指示接口类型声明意图是一个函数式接口。如果你定义了具有单个抽象方法的接口，你可以选择性地用 `@FunctionalInterface` 标记此类接口，仅以此提示它可以被实现为 lambda 表达式。
 
-## @Documented
+### @Documented
 
 如果你想将注解包含在 Javadoc 工具中，请将其标记为 `@Documented`。下一节将包含此注解的示例。
 
@@ -10011,7 +9915,7 @@ class HRBrowser{
 }
 ```
 
-如果注解只有一个名为 `value` 的参数，上述代码段中的 `value=` 是不是需要的。但我希望有三个参数：要执行的 SQL、事务性的以及一个通知其他应用程序数据库修改的标志。在你的注解中添加更多参数：
+如果注解只有一个名为 `value` 的参数，上述代码段中的 `value=` 不是需要的。但我希望有三个参数：要执行的 SQL、事务性的以及一个通知其他应用程序数据库修改的标志。在你的注解中添加更多参数：
 
 ```java
 @Target({ElementType.METHOD})
@@ -10094,7 +9998,7 @@ public class Employee extends Person{
 
 列表 23-4 中的 `Reflection` 类加载了 `Employee`，打印了它的方法签名，并在运行时查询对象的过程被称为反射。
 
-## 列表 23-4 检查 Employee
+## 列表 23-4 检查省 Employee
 
 
 
@@ -10211,70 +10115,6 @@ Method changeAddress = c.getMethod("changeAddress");
 changeAddress.invoke(c.newInstance(), "250 Broadway");
 ```
 
-反射在运行时根据注解加载不同类的应用程序：
-
-```java
-Class c = Class.forName("Employee");
-Method changeAddress = c.getMethod("changeAddress");
-changeAddress.invoke(c.newInstance(), "250 Broadway");
-```
-
-反射在运行时根据注解加载不同类的应用程序：
-
-```java
-Class c = Class.forName("Employee");
-Method changeAddress = c.getMethod("changeAddress");
-changeAddress.invoke(c.newInstance(), "250 Broadway");
-```
-
-反射在运行时根据注解加载不同类的应用程序：
-
-```java
-Class c = Class.forName("Employee");
-Method changeAddress = c.getMethod("changeAddress");
-changeAddress.invoke(c.newInstance(), "250 Broadway");
-```
-
-反射在运行时根据注解加载不同类的应用程序：
-
-```java
-Class c = Class.forName("Employee");
-Method changeAddress = c.getMethod("changeAddress");
-changeAddress.invoke(c.newInstance(), "250 Broadway");
-```
-
-反射在运行时根据注解加载不同类的应用程序：
-
-```java
-Class c = Class.forName("Employee");
-Method changeAddress = c.getMethod("changeAddress");
-changeAddress.invoke(c.newInstance(), "250 Broadway");
-```
-
-反射在运行时根据注解加载不同类的应用程序：
-
-```java
-Class c = Class.forName("Employee");
-Method changeAddress = c.getMethod("changeAddress");
-changeAddress.invoke(c.newInstance(), "250 Broadway");
-```
-
-反射在运行时根据注解加载不同类的应用程序：
-
-```java
-Class c = Class.forName("Employee");
-Method changeAddress = c.getMethod("changeAddress");
-changeAddress.invoke(c.newInstance(), "250 Broadway");
-```
-
-反射在运行时根据注解加载不同类的应用程序：
-
-```java
-Class c = Class.forName("Employee");
-Method changeAddress = c.getMethod("changeAddress");
-changeAddress.invoke(c.newInstance(), "250 Broadway");
-```
-
 ## 运行时注解处理
 
 作者通常将注解提供给其他开发者，第三方框架读取配置文件：
@@ -10303,7 +10143,7 @@ c:/java MyAnnotationProcessor HRBrowser
 
 列表 23-5 显示了 `MyAnnotationProcessor`，它通过加载命令行提供的另一个类开始。之后，它内省加载的类，并将所有方法引用放入名为 `methods` 的数组中。然后它遍历这个数组，对于每个带有注解的方法，它找到并打印参数 `sqlStatement`、`notifyUpdates` 和 `transactionRequired` 的值。
 
-## 列表 23-5 MyAnnotationProcessor
+### 列表 23-5 MyAnnotationProcessor
 
 ```java
 import java.lang.reflection.*;
@@ -10438,7 +10278,7 @@ public ArrayList<String> getNasdaqSymbols() throws RemoteException {
 
 列表 24-3 解码了将 `StockServerImpl` 实例绑定到主机端口 1099 的代码（在我的示例中，该主机是本地计算机）。对于世界其他部分，此服务被称为 `QuoteService`。
 
-> **列表 24-3 创建注册表、服务器并将其绑定到注册表**
+> 列表 24-3 创建注册表、服务器并将其绑定到注册表
 
 ```java
 public class StartServer {
@@ -10448,7 +10288,7 @@ public class StartServer {
             LocateRegistry.createRegistry(1099);
 
             // 实例化 StockServerImpl 并将其绑定
-            // 到注册表中，名称为 QuoteService
+            // 到注册表中，名称为 QuoteService 
             StockServerImpl ssi = new StockServerImpl();
             Naming.bind("rmi://localhost:1099/QuoteService", ssi);
         } catch (MalformedURLException ex) {
@@ -10493,17 +10333,13 @@ public class Client {
         }
 
         try {
-            StockServer myServer = (StockServer)
-                Naming.lookup("rmi://localhost:1099/QuoteService");
+            StockServer myServer = (StockServer) Naming.lookup("rmi://localhost:1099/QuoteService");
 
             String price = myServer.getQuote(args[0]);
             if (price != null) {
-                System.out.println("The price of " + args[0] +
-                    " is: $" + price);
+                System.out.println("The price of " + args[0] + " is: $" + price);
             } else {
-                System.out.println("Invalid Nasdaq symbol. " +
-                    "Please use one of these: " +
-                    myServer.getNasdaqSymbols().toString());
+                System.out.println("Invalid Nasdaq symbol. " + "Please use one of these: " + myServer.getNasdaqSymbols().toString());
             }
         } catch (MalformedURLException ex) {
             System.out.println(ex.getMessage());
@@ -10523,8 +10359,9 @@ public class Client {
 任何 RMI 客户端都能限制代码执行的操作吗？你可以通过一个安全文件来限制 RMI 客户端执行的操作。例如，在列表 24-3 和 24-4 中你可以通过以下代码启动安全管理器：
 
 ```java
-if (System.getSecurityManager() == null)
+if (System.getSecurityManager() == null) {
     System.setSecurityManager(new RMISecurityManager());
+}
 ```
 
 `java.rmi.RMISecurityManager` 类继承自 `java.lang.SecurityManager` 并为下载的代码提供安全上下文。在 RMI 客户端中，目标是通过安全文件来限制下载的代码。你可以使用 JDK 安装目录下的默认安全文件 `java.policy`，也可以通过代码设置它：
@@ -10534,7 +10371,6 @@ System.setProperty("java.security.policy", "");
 ```
 
 > **注意**
->
 > 关于安全文件的更多详细说明，请参考 http://docs.oracle.com/javase/8/docs/technotes/guides/security/PolicyFiles。
 
 ## 查找远程对象
@@ -10567,20 +10403,19 @@ Eclipse 有一个可选的 RMI 插件，这对于开发基于 RMI 的分布式�
 
 1. 导入名为 Lesson24 的 Eclipse 项目。它包含两个包：client（客户端）和 server（服务端）。
 2. 重编译（使用菜单 Project -> Clean）。注意 Eclipse 工作空间（workspace）的位置；你需要它，因为你从命令行窗口运行所有代码示例。确保在导入后，它指向你计算机上安装的 JRE（右键点击项目名称并使用菜单 Properties -> Java Build）。
-3. 运行 `StartServer` 以启动并将 StockServer 注册到注册表（注意注册表的位置）。在你输入与下方所示类似的命令后，服务器将启动并保持运行，在 Eclipse 控制台中打印消息：
+3. 运行 `StartServer` 以启动并将 `StockServer` 注册到注册表（注意注册表的位置）。在你输入与下方所示类似的命令后，服务器将启动并保持运行，在 Eclipse 控制台中打印消息：
 4. 你可以从 Eclipse 运行客户端，但为了更好地说明你可以使用不同的 JVM，请从命令行（或终端）窗口运行客户端并跳转到。在我的计算机上，我是这样操作的：
-5. 运行位于 client 下的 Client 程序，将股票代码作为命令行参数传入，客户端将连接到你的“远程”服务器并接收价格——例如：
+5. 运行位于 client 下的 `Client` 程序，将股票代码作为命令行参数传入，客户端将连接到你的“远程”服务器并接收价格——例如：
 6. 打开多个命令行窗口并在每个窗口中运行客户端程序，模拟多个客户端向服务器发送请求。
 
 > QuoteService 已就绪。
->
 > 服务器保持开启状态并等待客户端的请求。
 
-```
+```bash
 cd /Users/yfain11/practical/Java/workspace/Lesson24/bin
 ```
 
-```
+```bash
 java client.Client AAPL
 ```
 
@@ -10596,9 +10431,7 @@ System.out.println("Got the price quote request for " + symbol);
 
 > **提示**：请在 www.wrox.com/go/javaprog24hr2e 在线选择第24节的视频。你也可以从该网站下载本节的代码和资源。
 
-# 25
-
-## Java EE 7 概述
+# 25 Java EE 7 概述
 
 从本节开始，你将学习 Java 企业版（Java EE，以前称为 J2EE），它是一个强大、成熟且广泛使用的平台，用于开发分布式应用程序。“企业（enterprise）”一词并不意味着它仅用于大型应用程序，Java EE 组件被用于开发各种应用，从一个运行在五百美元计算机上的本地披萨店网站应用程序，到运行在数百个互连服务器的集群上的超级强大的华尔街交易应用程序。
 
@@ -10637,7 +10470,7 @@ Java 社区习惯使用缩写。起初这些缩写可能看起来令人生畏且
 
 一个典型的分布式应用程序可以分为三或四层。（如果应用程序直接从 DBMS 获取数据，如第 25 节所述，它具有双层客户端/服务器架构，不需要 Java EE 组件。）图 25-1 显示了构建 Java EE 应用的选择技术和方法。
 
-## 全局图
+### 全局图
 
 ![](/c6ae2d81738909a4b5328d6eddc14dd7_382_0.png)
 
@@ -10714,7 +10547,7 @@ Java SE 8 也有配置文件。引入紧凑配置（compact profiles）是为了
 
 ## Java EE 与多线程
 
-与之前的版本相比，Java EE 7 的一个一个主要变化之一是允许你在应用程序代码中引入在 Java EE 容器内部运行的多个线程。在此之前是不允许的——只有容器才能创建和管理线程。现在通过这种帮助
+与之前的版本相比，Java EE 7 的一个主要变化之一是允许你在应用程序代码中引入在 Java EE 容器内部运行的多个线程。在此之前是不允许的——只有容器才能创建和管理线程。现在通过这种帮助
 
 通过 `ManagedExecutorService` 和 `ManagedThreadFactory` 类，你也可以从自己的代码中创建线程。
 
@@ -10736,7 +10569,7 @@ JSON 代表 JavaScript 对象表示法（JavaScript Object Notation）。JSON �
 
 ## JAVA EE 代码示例
 
-在 https://github.com/javaee-samples/javaee7-samples 提供了超过 200 个用于说明各种 Java EE 7 技术的代码示例。
+在 `https://github.com/javaee-samples/javaee7-samples` 提供了超过 200 个用于说明各种 Java EE 7 技术的代码示例。
 
 ## 尝试一试
 
@@ -10750,7 +10583,7 @@ JSON 代表 JavaScript 对象表示法（JavaScript Object Notation）。JSON �
 
 一个 GlassFish 服务器实例可以运行多个领域（domain），domain 是默认的。停止领域的命令看起来相似，但不是使用 `start-domain` 命令而是使用 `stop-domain`。
 
-1. 下载 GlassFish 服务器开源版。在编写本文时，最新版本 GlassFish 4.1 可在 URL 获取：https://glassfish.java.net/download.html。
+1. 下载 GlassFish 服务器开源版。在编写本文时，最新版本 GlassFish 4.1 可在 URL 获取：`https://glassfish.java.net/download.html`。
 2. 下载并解压标题为 Java EE Full Platform 的文件。
 3. 在命令行（或终端）窗口中切换到目录 `glassfish4/bin`。如果你使用 Mac OS，使用以下命令启动服务器：
 
@@ -10770,20 +10603,20 @@ asadin.bat start-domain domain
 
 图 25-2：在 Mac OS 终端中启动 GlassFish
 
-4. 默认情况下，GlassFish 服务器运行在端口 8080，管理端口为 4848。打开你的 浏览器并输入 http://localhost:8080——你应该看到 GlassFish 欢迎页面。
-5. 在浏览器中输入 http://localhost:4848 打开 GlassFish 管理控制台。 浏览器应显示图 25-3 所示的窗口。
+4. 默认情况下，GlassFish 服务器运行在端口 8080，管理端口为 4848。打开你的 浏览器并输入 `http://localhost:8080`——你应该看到 GlassFish 欢迎页面。
+5. 在浏览器中输入 `http://localhost:4848` 打开 GlassFish 管理控制台。 浏览器应显示图 25-3 所示的窗口。
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_388_0.png)
 
-6. 从 https://glassfish.java.net/docs/4.0/quick-start-guide.pdf 下载 Oracle GlassFish 服务器快速入门指南，以获取操作 GlassFish 服务器的管理命令说明。
+6. 从 `https://glassfish.java.net/docs/4.0/quick-start-guide.pdf` 下载 Oracle GlassFish 服务器快速入门指南，以获取操作 GlassFish 服务器的管理命令说明。
 
 **图 25-3：** GlassFish 管理控制台
 
-> 提示 请在 www.wrox.com/go/javapro24hr2e 在线选择第 25 节的视频。你还可以从该网站下载本节的代码和资源。
+> 提示 请在 `www.wrox.com/go/javapro24hr2e` 在线选择第 25 节的视频。你还可以从该网站下载本节的代码和资源。
 
 # 26
 
-使用 Servlet 编程
+## 使用 Servlet 编程
 
 Web 应用可以提供静态或动态内容。静态内容的一些示例是带有 HTML 标记的文本文件、图像和视频。动态内容是生成的。想象一个允许你浏览在线商店库存的 Web 应用。你在屏幕上看到的 Web 内容是根据你的查询创建的——也就是说，是动态的。
 
@@ -10805,15 +10638,15 @@ Servlet 是按照特定规则编写的类，并部署在你选择的符合 Java 
 
 在学习如何创建和部署 servlet 之前，先查看虚拟在线商店 www.MyBooks.com 的组件和工作流
 
-- 客户端机器需要一个 Web 浏览器。书店由多个用于与用户交互的 HTML 页组成。浏览器使用 HTTP 协议向服务器发送数据，数据必须放置在 HttpRequest 中。
+- 客户端机器需要一个 Web 浏览器。书店由多个用于与用户交互的 HTML 页组成。浏览器使用 HTTP 协议向服务器发送数据，数据必须放置在 `HttpRequest` 中。
 - 运行 MyBooks 某些 Web 软件的计算机通常位于端口 80 上。对于使用 HTTPS（安全超文本传输协议）的安全通信，默认端口是 443。这两个端口通常在 80 端口开放，否则外部客户端无法对资源发出任何请求。
-- Web 服务器“监听”客户端请求。当它接收到静态内容（如文件或图像）请求时，Web 服务器不需要额外的软件即可处理请求，并返回带有内容的 HttpResponse。
-- MyBooks.com 还运行一个部署了 servlet 的 servlet 容器。如果 Web 服务器收到基于某些搜索标准的书籍请求，它将创建并将 HttpServlet 传递给相应的 servlet，例如部署在 servlet运行的 InBooksServlet。此部分显示了显式列出 InBooksServlet 名称的示例 HTML。
-- Servlet 调用执行搜索的 Java 代码并创建列出符合搜索标准书籍的 HTML 页，然后将其封装在 HttpResponse 中发送给 Web 服务器。
-- Web 服务器从 HttpServlet 中提取内容，将其封装在 HttpResponse 对象中，并传回给 Web 浏览器。
+- Web 服务器“监听”客户端请求。当它接收到静态内容（如文件或图像）请求时，Web 服务器不需要额外的软件即可处理请求，并返回带有内容的 `HttpResponse`。
+- MyBooks.com 还运行一个部署了 servlet 的 servlet 容器。如果 Web 服务器收到基于某些搜索标准的书籍请求，它将创建并将 `HttpServlet` 传递给相应的 servlet，例如部署在 servlet运行的 `InBooksServlet`。此部分显示了显式列出 InBooksServlet 名称的示例 HTML。
+- Servlet 调用执行搜索的 Java 代码并创建列出符合搜索标准书籍的 HTML 页，然后将其封装在 `HttpResponse` 中发送给 Web 服务器。
+- Web 服务器从 `HttpServlet` 中提取内容，将其封装在 `HttpResponse` 对象中，并传回给 Web 浏览器。
 - 浏览器显示收到的页面，并知道它是静态 HTML 页还是新出炉的。
 
-用户的 Web 浏览器不需要知道使用了哪种服务器端技术来执行动态内容。可以是 Java、.NET、Python、PHP 等。浏览器知道使用 HTTP 协议向服务器发送数据，数据必须放置在 HttpRequest 中。
+用户的 Web 浏览器不需要知道使用了哪种服务器端技术来执行动态内容。可以是 Java、.NET、Python、PHP 等。浏览器知道使用 HTTP 协议向服务器发送数据，数据必须放置在 `HttpRequest` 中。
 
 以 `HttpServlet` 的形式从服务器到达。服务器上发生的所有其他“魔法”对 Web 浏览器来说并不。
 
@@ -10821,10 +10654,10 @@ Servlet 是按照特定规则编写的类，并部署在你选择的符合 Java 
 
 让我们从创建一个简单的 HTTP 页面开始，作为 Java Servlet 的客户端。列表 26-1 显示了一个简单的 HTML 文件，其中包含一个带有文本输入字段和提交按钮的表单，用户可以使用它通过标题查找书籍。
 
-+ 列表 26-1 产生 404 错误的 HTML
+### 列表 26-1 产生 404 错误的 HTML
 
 ```html
-<html
+<html>
 <head>
   <title>Find a book</title>
 </head>
@@ -10842,11 +10675,11 @@ Servlet 是按照特定规则编写的类，并部署在你选择的符合 Java 
 
 在任何纯文本编辑器中，创建一个名为 `BookSearch.html` 的文件，包含列表 26-1 中的 HTML 内容。在 Web 浏览器中打开此文件（文件 -> 打开），在输入字段中输入文本并点击搜索。你将收到错误信息，因为没有服务器提供 `www.MyBooks.com` 这个 URL，也没有名为 `FindBooksServlet` 的 Servlet，这只是为了客户端可能外观的说明。
 
-客户端使用 HTTP 协议与 Servlet 通信，当未找到请求的资源时，响应将带错误返回。如果服务器有响应但请求的 `FindBooksServlet` 不存在，则返回代码 404。如果服务器没有响应，Web 客户端将显示错误代码。成功检索的请求资源范围在 200 到 300 之间。HTTP 可能会返回 304，这表示浏览器在缓存位置找到了请求的资源，无需向 Web 服务器发送请求。可能的 HTTP 状态码列表请见 `www.w3.org/Protocols/rfc2616/rfc2616-sec-10.html`。
+客户端使用 HTTP 协议与 Servlet 通信，当未找到请求的资源时，响应将带错误返回。如果服务器有响应但请求的 (`FindBooksServlet`) 不存在，则返回代码 404。如果服务器没有响应，Web 客户端将显示错误代码。成功检索的请求资源范围在 200 到 300 之间。HTTP 可能会返回 304，这表示浏览器在缓存位置找到了请求的资源，无需向 Web 服务器发送请求。可能的 HTTP 状态码列表请见 `www.w3.org/Protocols/rfc2616/rfc2616-sec-10.html`。
 
 ## 如何编写 Servlet
 
-要创建一个 Servlet，请编写一个继承自 `HttpServlet` 的类，并使用 `@WebServlet` 注解对其进行标记。`HttpServlet` 类继承自 `GenericServlet`，后者定义了 `service()` 方法。`service()` 方法接收客户端请求并将其重定向到你的类中继承自 `HttpServlet` 的子类的某个方法。
+要创建一个 Servlet，请编写一个自 `HttpServlet` 的类，并使用 `@WebServlet` 注解对其进行标记。`HttpServlet` 类自 `GenericServlet`，后者定义了 `service()` 方法。`service()` 方法接收客户端请求并将其重定向到你的类中自 `HttpServlet` 的子类的某个方法。
 
 通常你必须重写 `doGet()` 和/或 `doPost()` 方法。重写哪一个？取决于客户端的请求方法。如果客户端使用方法为 `Post` 的 HTTP 请求，重写 `doPost()`；如果客户端使用 `Get` 请求（见列表 26-2），如 `your_first_servlet` 所示，重写回调 `doGet()`。
 
@@ -10920,7 +10753,7 @@ package com.practical.java.lesson26;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10953,7 +10786,7 @@ out.println("Hello from FindBooks");
 
 不要忘记为 `PrintWriter` 添加导入。最后一步是将 servlet 部署到 GlassFish 服务器。打开 Servers 视图，右键点击服务器，从弹出菜单中选择 Add and Remove（添加和移除）。在列表中选择项目 Lesson 26 并将其移动到右侧。点击 Finish。
 
-servlet 部署完成。现在在 Eclipse 项目中右键点击类名 `FindBooksServlet`，选择 Run On -> GlassFish 并点击。如果服务器未运行，Eclipse 会先启动服务器，然后形成 URL 来访问 servlet `FindBooks`。Eclipse 运行其内部浏览器并显示消息。
+servlet 部署完成。现在在 Eclipse 项目中右键点击类名 `FindBooksServlet`，选择 Run On -> GlassFish 并点击。如果服务器未运行，Eclipse 会先启动服务器，然后形成 URL 来访问 servlet `FindBooksServlet`。Eclipse 运行其内部浏览器并显示消息。
 
 你可以将此 URL 复制到计算机上的任何其他浏览器中；响应将相同的。从 Eclipse 启动服务器不会改变它监听 8080 端口的事实，任何客户端都可以通过此端口请求和部署服务。
 
@@ -10987,7 +10820,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse res)
 
 # HTTP GET 和 POST 请求
 
-HTTP 规范定义了多种用于网络数据交换的方法，其中 servlet 的 Get 和 Post 方法使用得最广泛。如果你不指定方法，它将默认为 Get：在列表 1 的 `<form>` 标签中使用 `method="Get"`。servlet容器会调用 `FindBooksServlet` 上的 `doGet()` 方法。使用 Get 时，网络浏览器会将表单中输入的值附加在 URL 的问号后面。例如，如果用户输入单词 `Apollo` 作为书名，URL 可能会如下所示：
+HTTP 规范定义了多种用于网络数据交换的方法，其中 servlet 的 Get 和 Post 方法使用得最广泛。（在第 3 节中你将看到 HTTP 方法的使用。）如果你不指定方法，它将默认为 Get：在列表 i 的 `<tag>` 标签中使用 `method=Get`。servlet容器会调用 `FindBooksServlet` 上的 `doGet()` 方法。使用 Get 时，网络浏览器会将表单中输入的值附加在 URL 的问号后面。例如，如果用户输入单词 `Apollo` 作为书名，URL 可能会如下所示：
 
 ```
 http://www.mybooks.com?booktitle=Apollo
@@ -11020,7 +10853,7 @@ Cookie 是服务器发送到网络客户端的一小部分数据，并作为文�
 ```java
 Cookie myCookie = new Cookie("bookname"); // Java 编程“24小时训练师”
 // 设置 cookie 的寿命为 24 小时
-myCookie.setMaxAge(60 * 60 * 24);
+myCookie.setMaxAge(60*60*24);
 response.addCookie(myCookie);
 ```
 
@@ -11029,12 +10862,12 @@ response.addCookie(myCookie);
 ```java
 Cookie[] cookies = request.getCookies();
 if (cookies != null) {
-    // 获取每个 cookie（一个键/值对）
-    for (i = 0; i < cookies.length; i++) {
-        Cookie currentCookie = cookies[i];
-        String name = currentCookie.getName();
-        String value = currentCookie.getValue();
-    }
+  // 获取每个 cookie（一个键/值对）
+  for (i=0; i < cookies.length; i++) {
+    Cookie currentCookie = cookies[i];
+    String name = currentCookie.getName();
+    String value = currentCookie.getValue();
+  }
 }
 ```
 
@@ -11064,7 +10897,7 @@ OWASP 代表开源安全项目。它发布了一份关于前 10 大风险的文�
 HttpSession session = request.getSession(true);
 ```
 
-`getSession(true)` 调用意味着“查找现有会话或创建一个”。例如，购物过程通常包括一系列后续的 servlet 调用：查找库存、将项目添加到购物车、输入信息等。在第一次时，应用程序服务器生成一个唯一的会话 ID（可以通过 `getId()` 获取），并通过特殊的 cookie（`JSESSIONID`）或将其发送给用户浏览器。当浏览器向服务器发送 HTTP 请求时，会话 ID 位于请求头中以便 servlet 找到会话对象。
+`getSession(true)` 调用意味着“查找现有会话或创建一个”。例如，购物过程通常包括一系列后续的 servlet 调用：查找库存、将项目添加到购物车、输入信息等。在第一次时，应用程序服务器生成一个唯一的会话 ID（可以通过 `getId()` 获取），并通过特殊的 cookie（JSESSIONID）或将其发送给用户浏览器。当浏览器向服务器发送 HTTP 请求时，会话 ID 位于请求头中以便 servlet 找到会话对象。
 
 `getSession(false)` 调用“查找我的会话对象”，假设它已经创建。如果此调用返回 `null`，则会话已超时或销毁，你可能希望显示一条会话已期的消息，让用户重新开始。
 
@@ -11270,7 +11103,7 @@ aContext.start(() -> {
 
 为了简单起见，在本示例中在 Thread 上使用 `sleep()` 来模拟长时间运行的过程。在现实场景中，你应该使用 `ManagedExecutorService`、`ManagedThreadFactory` 等类在 Java EE 容器中创建线程。
 
-要捕获异步 servlet 生命周期周期中的某些事件，你可以添加 `AsyncListener` 并为 `onComplete()`、`onError()` 和 `onTimeout()` 提供回调函数。
+要捕获异步 servlet 生命周期中的某些事件，你可以添加 `AsyncListener` 并为 `onComplete()`、`onError()` 和 `onTimeout()` 提供回调函数。
 
 ## 尝试一下
 
@@ -11292,14 +11125,16 @@ aContext.start(() -> {
 
 - 4. 通过响应对象将动态创建的 HTML 页面返回给客户端。
 - 5. 在 Eclipse IDE 中测试 servlet：右键点击 HTML 文件并选择 Run As → Run on Server。输入股票代码并获取价格。
-- 6. 从 Eclipse 中的 `GlassFish` 卸载 Lesson26 项目，因为你将直接在 GlassFish 中部署此应用。参考 Eclipse 中的 `GlassFish` 步骤。
+- 6. 从 Eclipse 中的 GlassFish 卸载 Lesson26 项目，因为你将直接在 GlassFish 中部署此应用。参考 Eclipse 中的 `GlassFish` 步骤。
 - 7. 将 Lesson26 导出为 `Lesson26.war` 文件。通过将该文件复制到已安装 GlassFish 服务器的 `glassfish/domains/domain1/autodeploy` 目录，在 GlassFish 中部署此应用。
 - 8. 按照第 25 “尝试一下”中的描述，从命令行启动 GlassFish 服务器。
 - 9. 在浏览器中打开以下 URL：`http://localhost:8080/Lesson26/tryit.html`，你应该看到与步骤 5 相同的页面。通过输入各种股票代码来测试此 Web 应用。你应该能够获得报价。
 
-> 提示：在 `www.wrox.com/go/javaprog24hr2e` 选择第 26 课视频。你也可以从该网站下载本课程的代码和资源。
+> 提示：在 www.wrox.com/go/javaprog24hr2e 选择第 26 课视频。你也可以从该网站下载本课程的代码和资源。
 
-# 第 27 课：JavaServer Pages (Java 服务页面)
+# 27
+
+# JavaServer Pages (Java 服务页面)
 
 JavaServer Pages (JSP) 技术是作为 servlet 演进的下一步而创建的。JSP 2.3 是 Java EE 7 规范的一部分，通过 JSP，你可以完成使用 servlet 能做的所有事情，但操作更简单。在早期的 Java EE 中，JSP 引入了 JavaServer Faces (JSF)。虽然 JSF 拥有更多功能，但我仍然看到许多企业级应用在使用 JSP，因此本版书籍涵盖了 JSP 但未涵盖 JSF。现在让我们看看为什么使用 servlet 对于开发所有 Java EE 应用的表示层是不够的。
 
@@ -11319,7 +11154,7 @@ out.println("<body>Hello World</html>");
 </html>
 ```
 
-将此文件放置在文档根目录中（假设你运行在 `MyBooks.com` 的 servlet 容器中，请参见第 26 课）。现在用户可以通过在网络浏览器中输入以下 URL 访问此 JSP：
+将此文件放置在文档根目录中（假设你运行在 `MyBooks.com` 的 servlet 容器中，请参见第 26 节）。现在用户可以通过在网络浏览器中输入以下 URL 访问此 JSP：
 
 ```
 http://www.MyBooks.com/HelloWorld.jsp
@@ -11346,15 +11181,15 @@ out.println(2);
 </html>
 ```
 
-部署 JSP 简单地将 JSP 文件复制到容器的根目录即可。当然，如果你的 JSP 是多个项目的一部分，你将像第 26 课描述的那样将它们部署在 war 文件中。
+部署 JSP 简单地将 JSP 文件复制到容器的根目录即可。当然，如果你的 JSP 是多个项目的一部分，你将像第 26 节描述的那样将它们部署在 war 文件中。
 
-如第 26 课所述，在 Eclipse 中创建一个动态 Web 项目（Dynamic Web Project）并将其命名为 Lesson27。右键点击 `WebContent` 目录（文档根）并创建一个名为 `index.jsp` 的新 JSP 文件。
+如第 26 节所述，在 Eclipse 中创建一个动态 Web 项目（Dynamic Web Project）并将其命名为 Lesson27。右键点击 WebContent 目录（文档根）并创建一个名为 `index.jsp` 的新 JSP 文件。
 
 在创建项目时，确保 GlassFish 服务器是目标运行环境。Eclipse 生成的文件包含以下内容：
 
 ```jsp
 <%@ page language="java" content="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+Encoding="UTF-8"%>
 ```
 
 ```html
@@ -11371,9 +11206,7 @@ out.println(2);
 
 在此文件的 `<body>` 部分添加以下行：
 
-```html
 <h1>Hello World</h1>
-```
 
 `<h1>` 标签将文本格式化为标题，Eclipse 显示了未来 Web 页面将渲染的效果，见图 27-1 的顶部部分。
 
@@ -11381,7 +11214,7 @@ out.println(2);
 
 图 27-1：添加标签时查看页面
 
-右键点击 `index.jsp` 并选择 Run on Server。如果 GlassFish 服务器未运行，Eclipse 将启动它并部署 Lesson27 项目，你会在 Eclipse 内部浏览器中看到 Hello World Web 页面，如图 27-2 所示。
+右键点击 `index.jsp` 命名并选择 Run on Server。如果 GlassFish 服务器未运行，Eclipse 将启动它并部署 Lesson27 项目，你会在 Eclipse 内部 浏览器中看到 Hello World Web 页面，如图 27-2 所示。
 
 ### Hello，世界
 
@@ -11391,9 +11224,9 @@ out.println(2);
 
 在你的网络浏览器中输入 URL，即可看到结果。服务器在端口 8080 上运行，由于它已经部署，因此使用哪种浏览器作为客户端并不重要，因为它支持 HTTP 协议。
 
-现在尝试一个 JSP。在项目 Lesson27 中将 `index.jsp` 复制并重命名为 `MyCalculator.jsp` (Ctrl+C/V)，并将 `<body>` 部分的内容替换为列表 27-1 中 `<body>` 部分的内容。运行 `MyCalculator.jsp`，你将会在 Eclipse 中看到该页面，如图 27-3 所示。
+现在尝试一个 JSP。在项目 Lesson27 中将 `index.jsp` 复制并重命名为 `MyCalculator.jsp` (Ctrl+C/V)，并将 `<body>` 部分的内容替换为列表 27-1 中 `<body>` 部分的内容。运行 MyCalculator.jsp，你将会在 Eclipse 中看到该页面，如图 27-3 所示。
 
-表达式 `<%= 2 + 2 %>` 已经被预编译。JSP 不仅仅是一个从包含有效 HTML 和 JSP 标签的文件自动生成的 servlet。
+表达式 `<2 + 2 %>` 已经被预编译。JSP 不仅仅是一个从包含有效 HTML 和 JSP 标签的文件自动生成的 servlet。
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_417_1.png)
 
@@ -11418,7 +11251,7 @@ JSP 是基于 servlet 构建的，其核心概念保持不变。以下是转换�
 ```html
 <html>
 <body>
-  <%= CurrencyConverter.getDollarRate() %>
+  out.println(CurrencyConverter.getDollarRate());
 </body>
 </html>
 ```
@@ -11432,13 +11265,13 @@ JSP 是基于 servlet 构建的，其核心概念保持不变。以下是转换�
 
 ## JSP 标签概览
 
-JSP 标签以角括号开始和结束，并可以包含在任何 HTML 文件中，你需要将 JSPs 保存为 .jsp 文件，以便 JSP 容器对其进行正确的识别和处理。本节是 JSP 标签的简要概述。更多详细内容，请参阅 `http://docs.oracle.com/javaee/5/tutorial/doc/bnagx.html` 中的 JSP 文档。
+JSP 标签以角括号开始和结束，并可以包含在任何 HTML 文件中，你需要将 JSPs 保存为 .jsp 文件，以便 JSP 容器对其进行正确的识别和处理。本节是 JSP 标签的简要概述。更多详细内容，请参阅 http://docs.oracle.com/javaee/5/tutorial/doc/bnagx.html 中的 JSP 文档。
 
 ### 指令 (Directives)
 
 指令不生成屏幕输出，但指示 JSP 容器关于应用于 JSP 的规则。某些 JSP 指令包括：include、attribute 和 taglib。
 
-Page 指令（页面指令）以 `<%@ page` 开头，仅在当前页面内有效。指令与 import、extends、session、error、contentType 等属性一起使用。例如，要导入 `java.io.*` 包，请使用此指令：
+Page 指令（页面指令）以 `<@ page` 开头，仅在当前页面内有效。指令与 import、extends、session、error、contentType 等属性一起使用。例如，要导入 `.java.*` 包，请使用此指令：
 
 ```jsp
 <%@ page import="java.io.*" %>
@@ -11454,13 +11287,13 @@ Include 指令允许在页面编译为 servlet 的时候包含来自文件的任
 要使用自定义标签的第三方库，你需要指定该库的位置，如下例所示：
 
 ```jsp
-<%@ taglib uri="my_taglib.tld" prefix="test" %>
+<% taglib uri="my_taglib.tld" prefix="test" %>
 ```
 
 Attribute 指令（属性指令）允许你定义自定义标签的属性，如下：
 
 ```jsp
-<%@ attribute name="corporate_logo_file_name" %>
+<% attribute name="corporate_logo_file_name" %>
 ```
 
 ### 声明 (Declarations)
@@ -11468,13 +11301,13 @@ Attribute 指令（属性指令）允许你定义自定义标签的属性，如�
 声明用于在在使用之前声明变量。你可以像这样声明一个变量 `salary`：
 
 ```jsp
-<%! double salary; %>
+<% double salary; %>
 ```
 
 该变量仅在该页面内可见。你可以以相同的方式在 JSP 页面中声明 Java 方法：
 
 ```jsp
-<%! private void myMethod() {
+<% private void myMethod() {
     ...
 } %>
 ```
@@ -11489,7 +11322,7 @@ Attribute 指令（属性指令）允许你定义自定义标签的属性，如�
 <%= salary*1.2 %>
 ```
 
-### 脚本段 (Scriptlets)
+### 脚本段 (SCRIPTLETS)
 
 最初，脚本段（scriptlets）是用于嵌入 Java 代码的。
 
@@ -11503,7 +11336,7 @@ Attribute 指令（属性指令）允许你定义自定义标签的属性，如�
 
 ### 注释 (Comments)
 
-注释以 `<%--` 开始并以 `--%>` 结束，它们在源代码中是可见的。
+注释以 `<%--` 开始并以 `--` 结束，它们在源代码中是可见的。
 
 ```jsp
 <%-- 这是一个注释 --%>
@@ -11516,7 +11349,7 @@ Attribute 指令（属性指令）允许你定义自定义标签的属性，如�
 `include` 动作允许在运行时包含另一个资源的内容。
 
 ```jsp
-<jsp:include page="header.jsp" />
+<%@ include action="forward" />
 ```
 
 `forward` 动作将请求转发到另一个资源。
@@ -11541,72 +11374,82 @@ Attribute 指令（属性指令）允许你定义自定义标签的属性，如�
 
 ### Bean 动作 (Bean Actions)
 
-`setProperty` 动作用于设置 bean 的属性。
+`set` 动作用于设置 bean 的属性。
 
 ```jsp
-<jsp:setProperty property="name" value="John" bean="userBean" />
+<jsp:set property="name" value="John" bean="userBean" />
 ```
 
-`getProperty` 动作用于获取 bean 的属性。
+`get` 动作用于获取 bean 的属性。
 
 ```jsp
-<jsp:getProperty property="name" bean="userBean" />
+<jsp:get property="name" bean="userBean" />
 ```
 
-`useBean` 动作用于实例化 bean。
+`bean` 动作用于实例化 bean。
 
 ```jsp
-<jsp:useBean id="userBean" class="com.example.User" />
+<jsp:bean id="userBean" class="com.example.User" />
 ```
 
 ### 循环动作 (Loop Actions)
 
-`forEach` 动作用于迭代集合（通常结合 JSTL 使用）。
+`forEach` 动作用于迭代集合。
 
 ```jsp
-<c:forEach var="user" items="${userList}">
+<jsp:forEach var="user" items="${userList}">
   ${user.name}
-</c:forEach>
+</jsp:forEach>
+```
+
+`iterate` 动作用于固定次数的迭代。
+
+```jsp
+<jsp:iterate var="i" begin="1" end="10">
+  Iteration ${i}
+</jsp:iterate>
 ```
 
 ### 条件动作 (Conditional Actions)
 
-`choose/when/otherwise` 动作用于执行条件逻辑（通常结合 JSTL 使用）。
+`if` 动作用于执行条件逻辑。
 
 ```jsp
-<c:choose>
-  <c:when test="${not empty user}">
+<jsp:choose>
+  <jsp:when test="${not empty user}">
     欢迎，${user.name}!
-  </c:when>
-  <c:otherwise>
+  </jsp:when>
+  <jsp:otherwise>
     请登录。
-  </c:otherwise>
-</c:choose>
+  </jsp:otherwise>
+</jsp:choose>
 ```
 
-`set` 动作用于设置变量值（通常结合 JSTL 使用）。
+`set` 动作用于设置布尔值。
 
 ```jsp
-<c:set value="${user.role == 'admin'}" var="isAdmin" />
+<jsp:set value="${user.role == 'admin'}" var="isAdmin" />
 ```
 
-### 标签库动作 (Tag Library Actions)
+### 标签动作 (Tag Actions)
 
-`taglib` 指令用于导入自定义标签库。
+`taglib` 动作用于导入自定义标签库。
 
 ```jsp
-<%@ taglib uri="my_taglib.tld" prefix="test" %>
+<%@jsp:taglib uri="my_taglib.tld" prefix="test" %>
 ```
 
-自定义标签调用示例：
+`tag` 动作用于调用自定义标签。
 
 ```jsp
-<test:myTag param1="value1" />
+<jsp:tag name="myTag">
+  <jsp:attribute name="param1" value="value1" />
+</jsp:tag>
 ```
 
-## JavaBeans
+## JAVA BEANS
 
-JavaBeans 规范将 bean 定义为一种 Java 类，它实现了 `Serializable` 接口，并具有公共的无参数构造函数、私有字段以及公共的 setter 和 getter 方法。数据传输对象（DTO）的类似概念在第 21 课中介绍（参见列表 21-2）。Java bean 主要用于数据存储和交换，而不是将业务代码与 HTML 混合在一起（参见本节稍后的“标签库”部分；它们有助于避免 Java 和 HTML 的混合）。
+JavaBeans 规范将 bean 定义为一种 Java 类，它实现了 `Serializable` 接口，并具有公共的无参数构造函数、私有字段以及公共的 setter 和 getter 方法。数据传输对象（DTO）的类似概念在第 21 节中介绍（参见列表 21-2）。Java bean 主要用于数据存储和交换，而不是将业务代码与 HTML 混合在一起（参见本节稍后的“标签库”部分；它们有助于避免 Java 和 HTML 的混合）。
 
 在基于 JSP 的 Web 应用程序中实现了 MVC 模式。JSP 属于视图层；servlet 可以充当控制器；而 Java bean 可以代表模型。与其在 JSP 内部编写逻辑，不如将表现层与业务逻辑及数据存储分离。首先，这让你能够轻松地在 JSP 和 HTML 之间拆分逻辑，并且可以在重用相同 Java 代码的同时，拥有多个表现层解决方案（例如，针对移动设备的 UI）。
 
@@ -11618,6 +11461,7 @@ JavaBeans 规范将 bean 定义为一种 Java 类，它实现了 `Serializable` 
 
 ```java
 import java.io.Serializable;
+
 class Student implements Serializable {
     private String lastName;
     private String firstName;
@@ -11789,14 +11633,14 @@ public class DowJonesHandler extends SimpleTagSupport {
 </taglib>
 ```
 
-当你完成所有这些操作后，创建一个名为 `test.jsp` 的示例文件并开始使用你的标签库。列表 27-5 中的示例 JSP 使用标签 `<sts:DowJones>`。
+当你完成所有这些操作后，创建一个名为 `test.jsp` 的示例文件并开始使用你的标签库。列表 27-5 中的示例 JSP 使用标签 `<sts:DowJones/>`。
 
 ### 列表 27-5 在 JSP 中使用自定义标签
 
 ```jsp
 <html>
 <head>
-  <%@ taglib url="http://www.mystockserver.com/taglib" prefix="sts" %>
+  <%@ taglib uri="http://www.mystockserver.com/taglib" prefix="sts" %>
 </head>
 <body>
 今日的道琼斯指数： <sts:DowJones/>
@@ -11830,15 +11674,11 @@ JSP 标签库 (JSTL) 是库组件的标准化规范，包含了在许多基于 J
 
 列表 27-3 中的 JSP 必须指定标签库在服务器上的位置，而标准库具有预定义的 URL。例如，要使用 `<c:forEach>` 迭代器，你需要指定以下 URI：
 
-```
-http://java.sun.com/jsp/jst/core
-```
+> http://java.sun.com/jsp/jst/core
 
 XML 处理标签位于以下 URI：
 
-```
-http://java.sun.com/jsp/jst/xml
-```
+> http://java.sun.com/jsp/jst/xml
 
 因此，使用迭代器的代码片段可能如下：
 
@@ -11850,9 +11690,7 @@ http://java.sun.com/jsp/jst/xml
 
 要学习使用 JSTL 和表达式语言进行编程，请参考以下 URL 中的 Oracle 教程：
 
-```
-http://download.oracle.com/javaee/5/tutorial/doc/bank.html
-```
+> http://download.oracle.com/javaee/5/tutorial/doc/bank.html
 
 ## 尝试一下
 
@@ -11904,14 +11742,17 @@ Price: <%= stock.getPrice() %>
 
 
 
+# 使用 WebSocket 进行客户端服务器通信
+
+## 尝试一下
+
 8. 该 JSP 应该使用 `StockPriceGenerator`、`Stock`、`<jsp:useBean>` 和 `<jsp:setProperty property="name" />`。
 
 8. 如果服务器已经在运行，请重启。
-Symbol: MSFT Price: 78
 
-> 提示：你可以从书籍网页 `www.wrox.com/go/javaprog24r2e.zip` 下载此“尝试一下”练习的代码和资源。你可以在下载项的 `Lesson27.zip` 文件中找到它们。
+> **提示**：你可以从书籍网页 `www.wrox.com/go/javaprog24r2e.zip` 下载此“尝试一下”练习的代码和资源。你可以在下载项的 `Lesson27.zip` 文件中找到它们。
 
-# 使用 WebSocket 进行客户端服务器通信 | 397
+## 通信方式对比
 
 - 轮询 (Polling)
 - 长轮询 (Long polling)
@@ -11938,53 +11779,41 @@ Symbol: MSFT Price: 78
 
 ## 网页浏览器作为 WebSocket 客户端
 
-WebSocket 通常在网页浏览器内部运行的 JavaScript 中编写。2012 年及以后发布的所有浏览器都支持 `WebSocket` 对象，该对象 `http://aniuse.com/websockets` 也可以告诉你特定的旧版本浏览器是否支持它。在 JavaScript 中，你首先通过创建该对象的实例来与服务器建立连接，然后是客户端部分的通信，直到处理当连接打开、消息从服务器到达时由浏览器分发的事件。因此，你的客户端代码可以执行以下操作：
+WebSocket 通常在网页浏览器内部运行的 JavaScript 中编写。2012 年及以后发布的所有浏览器都支持 `WebSocket` 对象，该对象 `http://caniuse.com/websockets` 也可以告诉你特定的旧版本浏览器是否支持它。在 JavaScript 中，你首先通过创建该对象的实例来与服务器建立连接，然后是客户端部分的通信，直到处理当连接打开、消息从服务器到达时由浏览器分发的事件。因此，你的客户端代码可以执行以下操作：
 
 1. 发起到服务器端点的连接——创建一个提供服务器 URL 的 `WebSocket` 对象实例。
-2. 编写 `onOpen()` 回调函数。
-3. 编写 `onMessage()` 回调函数。
-4. 编写 `onClose()` 回调函数。
-5. 编写 `onError()` 回调函数
+2. 编写 `onopen()` 回调函数。
+3. 编写 `onmessage()` 回调函数。
+4. 编写 `onclose()` 回调函数。
+5. 编写 `onerror()` 回调函数。
 
 由于本书没有涵盖 JavaScript 编程，我只向你展示一段易读的代码片段，它在网页浏览器运行的 JavaScript 中执行了上述所有步骤。如果你对阅读 HTML 编程感兴趣，可以阅读《Enterprise Web Development》（O'Reilly Media, 2014），该书由我编写。以下简单的 JavaScript 代码连接到 WebSocket 回声服务器并定义了所有可能的回调函数：
 
 ```javascript
 if (window.WebSocket) {
-
   ws = new WebSocket("ws://www.websocket.org/echo");
 
   ws.onopen = function() {
-
     console.log("onopen");
-
   };
 
   ws.onmessage = function(e) {
-
     console.log("echo from server : " + e.data);
-
   };
 
   ws.onclose = function() {
-
     console.log("onclose");
-
   };
 
   ws.onerror = function() {
-
     console.log("onerror");
-
   };
-
 } else {
-
   console.log("WebSocket object is not supported");
-
 }
 ```
 
-当 WebSocket 被创建时，它会向指定的 URL 发送握手请求。该 URL 以 `ws` 和 `wss` 开头，而不是 `http` 和 `https`。握手的 HTTP 请求头包含以下属性：
+当 `WebSocket` 被创建时，它会向指定的 URL 发送握手请求。该 URL 以 `ws` 和 `wss` 开头，而不是 `http` 和 `https`。握手的 HTTP 请求头包含以下属性：
 
 ```
 Upgrade: websocket
@@ -11995,11 +11824,11 @@ Connection: Upgrade
 
 当接收到服务器的消息时，客户端上调用带有 `@OnMessage` 注解的回调方法。
 
-如果客户端发送消息，服务器上调用带有 `@OnMessage` 注解的回调方法。如果服务器返回错误，客户端调用 `@onError` 回调。当连接关闭时，调用带有 `@OnClose` 注解的方法。
+如果客户端发送消息，服务器上调用带有 `@OnMessage` 注解的回调方法。如果服务器返回错误，客户端调用 `@OnError` 回调。当连接关闭时，调用带有 `@OnClose` 注解的方法。
 
-与原始套接连接类似，WebSocket 不定义消息事件的数据格式。
+与原始套接字连接类似，WebSocket 不定义消息事件的数据格式。
 
-## 使用 Websockets 进行客户端与服务器通信 | 401
+## 使用 Websockets 进行客户端与服务器通信
 
 现在添加一个空的 HTML 标签 `<span>`，用于显示服务器的消息。你还需要一段简单的 JavaScript 代码来建立连接并声明处理 `onmessage` 回调的函数。你的客户端如下（手动添加的内容如下所示）：
 
@@ -12023,9 +11852,9 @@ Connection: Upgrade
 </html>
 ```
 
-当浏览器加载此内容时，它会运行脚本、实例化 WebSocket 对象并注册 `onmessage()` 回调函数。此时，通过调用 `getElementById()`，你获取了 `<span>` 标签的引用，并将其设置为项目数据（该数据包含 "Hello stranger"）。
+当浏览器加载此内容时，它会运行脚本、实例化 `WebSocket` 对象并注册 `onmessage()` 回调函数。此时，通过调用 `getElementById()`，你获取了 `<span>` 标签的引用，并将其设置为项目数据（该数据包含 "Hello stranger"）。
 
-使用 GlassFish 部署 Lesson28（右键点击服务器并选择 "Add and Remove" 菜单），右键点击 index.html 文件并在服务器上运行它。你将看到一个显示 "Hello stranger" 文字的页面。
+使用 GlassFish 部署 Lesson28（右键点击服务器并选择 "Add and Remove" 菜单），右键点击 `index.html` 文件并在服务器上运行它。你将看到一个显示 "Hello stranger" 文字的页面。
 
 ## 使用 @PathParam 传递参数
 
@@ -12040,9 +11869,8 @@ ws://localhost:8080/Lesson28/hello/Mary
 ```java
 @ServerEndpoint("/hello/{userName}")
 public class HelloWebSocket {
-
   @OnOpen
-  public void greet(Session session, @PathParam String userName){
+  public void greet(Session session, @PathParam String userName) {
 ```
 
 值 "Mary" 被注入到方法参数 `userName` 中，你可以像处理其他任何方法参数一样处理它。
@@ -12051,7 +11879,7 @@ public class HelloWebSocket {
 
 ## 监控 WebSocket 网络流量
 
-Google Chrome 浏览器允许监控 WebSocket 流量。我正在使用上一节中的 WebSocket 向你展示线上传输了什么。首先，在 Chrome 中打开 URL `http://localhost:8080/Lesson28/index.html`，然后打开开发者工具并刷新网页。Network（网络）标签页包含 WebSockets 部分。数据以帧（chunks frames）的形式发送，你可以在 Frames 标签下的 Data 列中看到 "Hello stranger"，如图 28-2 所示。
+Google Chrome 浏览器允许监控 WebSocket 流量。我正在使用上一节中的 WebSocket 向你展示线上传输了什么。首先，在 Chrome 中打开 URL `http://localhost:8080/Lesson28/index.html`，然后打开开发者工具并刷新网页。Network（网络）标签页包含 WebSockets 部分。数据以帧的形式发送，你可以在 Frames 标签下的 Data 列中看到 "Hello stranger"，如图 28-2 所示。
 
 在图 28-2 中，注意帧的长度仅为 14 字节，而数据的长度为 13 字节。在消息交换期间不存在 HTTP 头部。头部仅在初始握手和协议升级期间存在。你可以在 Headers 标签页下看到它们，如图 28-3 所示。
 
@@ -12083,24 +11911,24 @@ session.getBasicRemote().sendPing(applicationData);
 
 ```java
 @OnMessage
-public String getStockPrice(String symbol){
+public String getStockPrice(String symbol) {
   String stockPrice;
   // 在此处获取股票价格
   return stockPrice;
 }
 ```
 
-@OnMessage 的在线文档提供了参数选择：
+`@OnMessage` 的在线文档提供了参数选择：
 
-- 唯一一个参数（文本、二进制或 PongMessage）
-- 多个带有 @PathParam 注解的参数
-- 可选的 Session 参数
+- 唯一一个参数（文本、二进制或 `PongMessage`）
+- 多个带有 `@PathParam` 注解的参数
+- 可选的 `Session` 参数
 
 `String` 类型用于发送文本数据。`ByteBuffer` 用于图像、视频。服务器端的心跳（ping）和客户端的回跳（pong）用于 WebSocket。
 
 ## 端点实例
 
-默认情况下，WebSocket 为每个客户端连接创建一个独立的端点实例，可以使用 `Session` 对象在服务器上存储客户端状态。如果你希望多个客户端使用同一个端点实例，你需要在 `@OnMessage` 注解中使用可选的 `serverEndpointConfig` 参数（详见 JavaFX），并重写 `Configurator` 中的 `getEndpointInstance()` 方法。
+默认情况下，WebSocket 为每个客户端连接创建一个独立的端点实例，可以使用 `Session` 对象在服务器上存储客户端状态。如果你希望多个客户端使用同一个端点实例，你需要在 `@ServerEndpoint` 注解中使用可选的 `serverEndpointConfig` 参数（详见 JavaFX），并重写 `Configurator` 中的 `getEndpointInstance()` 方法。
 
 消息处理器可以返回 `void`、基本类型及其包装类、字节数组、`ByteBuffer` 或任何存在编码器的自定义对象。
 
@@ -12108,7 +11936,7 @@ public String getStockPrice(String symbol){
 
 JSR 356 描述了如何使用 `@ClientEndpoint` 注解编写 Java WebSocket 客户端。编程 WebSocket 与你在服务器端的操作非常相似，你仍然需要注解 `@OnOpen`、`@OnMessage` 等。
 
-浏览器无需特殊功能即可访问 WebSocket。如果你在 Java 中编写 WebSocket 客户端，首先需要获取 `WebSocket.Container` 对象的引用，然后可以使用 `connectToServer()` 方法提供服务器端点的 URI 来连接。编译客户端时，需要在 classpath 中包含一些实现（JSR-356 客户端 jar 包——例如 Project Tyrus）。参考 Oracle 的 WebSocket 教程开发 Java WebSocket 客户端。
+浏览器无需特殊功能即可访问 WebSocket。如果你在 Java 中编写 WebSocket 客户端，首先需要获取 `WebSocketContainer` 对象的引用，然后可以使用 `connectToServer()` 方法提供服务器端点的 URI 来连接。编译客户端时，需要在 classpath 中包含一些实现（JSR-356 客户端 jar 包——例如 Project Tyrus）。参考 Oracle 的 WebSocket 教程开发 Java WebSocket 客户端。
 
 ## 编码器和解码器
 
@@ -12116,20 +11944,15 @@ WebSocket 协议解码一个特定的应用程序协议进行数据交换，但�
 
 此外，WebSocket 协议的 Java 实现允许你通过客户端-服务器之间的交换将消息负载从一种格式转换为另一种格式。执行这种转换的自定义类被称为解码器（decoders）和编码器（encoders）。
 
-例如，网页浏览器向你的 Java WebSocket 端点发送一个 JSON 格式的字符串（如果你是 JSON 新手，请参阅第 33 节）。你可以创建一个 `JsonToPojoDecoder` 类，将传入的字符串解析为指定类型的 POJO。同样，你可以创建一个 `PoJoToJsonEncoder` 类，将每个 POJO 序列化为 JSON 字符串，并从 Java EE 编码器发送到用户的浏览器。图 28-4 中的图描述了消息交换中的解码器和编码器类。
-
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_441_0.png)
-
-图 28-4：消息交换中的编码器和解码器
+例如，网页浏览器向你的 Java WebSocket 端点发送一个 JSON 格式的字符串（如果你是 JSON 新手，请参阅第 33 节）。你可以创建一个 `JsonToPojoDecoder` 类，将传入的字符串解析为指定类型的 POJO。同样，你可以创建一个 `PojoToJsonEncoder` 类，将每个 POJO 序列化为 JSON 字符串，并从 Java EE 编码器发送到用户的浏览器。图 28-4 中的图描述了消息交换中的解码器和编码器类。
 
 现在我将展示一个使用解码器和编码器获取股票价格报价的应用程序。之前的 HelloWorld 示例中，你只在 `@ServerEndpoint` 注解使用了 `value` 参数 "hello"。但此注解有更多参数：`decoders`、`encoders`、`subprotocols` 和 `configurator`。你在接下来的 `ServerEndpoint` 类中使用了 `decoders` 和 `encoders` 参数（为了简洁省略了导入语句）：
 
 ```java
 @ServerEndpoint(value = "stockprice",
-    encoders = (StockEncoder.class),
-    decoders = (StockDecoder.class))
+    encoders = {StockEncoder.class},
+    decoders = {StockDecoder.class})
 public class StockWebSocketEndpoint {
-
     @OnMessage
 ```
 
@@ -12142,12 +11965,14 @@ public Stock getPriceQuote(Stock stock) {
 
 当消息从服务器到达时，此端点会调用 `getPriceQuote()` 方法。该方法生成随机股票价格。注意，`getPriceQuote()` 方法的参数和返回值均为所示的 `Stock` 类型：
 
+```java
 public class Stock {
     public String symbol;
     public double price;
 }
+```
 
-### 编码器与解码器
+编码器与解码器 | 407
 
 如果 WebSocket 也用 Java 编写，那么这里没有问题。典型的客户端是用 JavaScript 编写的，运行在浏览器中并将数据作为文本发送到服务器。因此，运行在网页浏览器中的客户端可能期望收到格式化文本而不是 Java 对象。
 
@@ -12185,7 +12010,9 @@ public class StockEncoder implements Encoder.Text<Stock> {
     public void init(EndpointConfig config) {}
 
     public String encode(Stock stock) throws EncodeException {
-        System.out.println("In Encoder: Serializing Stock object into String");
+        System.out.println(
+            "In Encoder: Serializing Stock object into String"
+        );
         return stock.symbol + " : " + stock.price;
     }
 
@@ -12201,26 +12028,26 @@ public class StockEncoder implements Encoder.Text<Stock> {
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Insert title</title>
+<meta charset="UTF-8">
+<title>Insert title</title>
 </head>
 <body>
-    <form>
-        <input id="stockSymbol" type="text">
-        <input onclick="getPrice()" type="button" value="Get Price">
-    </form>
-    <span id="priceQuote"></span>
-    <script type="text/javascript">
-        var ws = new WebSocket("ws://localhost:8080/stockprice");
-        ws.onmessage = function(event) {
-            var mySpan = document.getElementById("priceQuote");
-            mySpan.innerHTML = event.data;
-        };
-        function getPrice() {
-            var symbol = document.getElementById("stockSymbol");
-            ws.send(symbol);
-        }
-    </script>
+<form>
+    <input id="stockSymbol" type="text">
+    <input onclick="getPrice()" type="button" value="Get Price">
+</form>
+<span id="priceQuote"></span>
+<script type="text/javascript">
+var ws = new WebSocket("ws://localhost:8080/stockprice");
+ws.onmessage = function(event) {
+    var mySpan = document.getElementById("priceQuote");
+    mySpan.innerHTML = event.data;
+};
+function getPrice() {
+    var symbol = document.getElementById("stockSymbol");
+    ws.send(symbol);
+}
+</script>
 </body>
 </html>
 ```
@@ -12233,11 +12060,11 @@ public class StockEncoder implements Encoder.Text<Stock> {
 
 图 28：测试 decoders.html
 
-### 调试 JAVASCRIPT
+# 调试 JAVASCRIPT
 
 > Chrome（以及所有其他浏览器）都提供了调试 JavaScript 的方便方法。我在 JavaScript 函数 `getPrice()` 中犯了一个类型错误，但没有编译器可以指出我的错误。`undefined` 到达我的 Java 端点。使用 Chrome 开发者工具我在 `getPrice()` 函数内部设置了断点并迅速找到了类型。你可以在产品文档中阅读关于调试 JavaScript 的内容。
 
-### 向所有客户端发布
+# 向所有客户端发布
 
 经常你需要一个向所有连接客户端发送相同消息程序。例如，在线拍卖的多个客户端在有新出价时需要收到通知。另一个例子是当新的股票报价需要从服务器推送到所有客户端时。使用 WebSocket 这是一个相当简单的任务。
 
@@ -12282,20 +12109,20 @@ Web 客户端查找 Hello WebSocket 示例：
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 </head>
 <body>
-    <span id="messageGoesHere"></span>
-    <script type="text/javascript">
-        var ws = new WebSocket("ws://localhost:8080/lesson28/clock");
-        ws.onmessage = function(event) {
-            var mySpan = document.getElementById("messageGoesHere");
-            mySpan.innerHTML = event.data;
-        }
-        ws.onerror = function(event) {
-            console.log("Error: " + event);
-        }
-    </script>
+  <span id="messageGoesHere"></span>
+  <script type="text/javascript">
+    var ws = new WebSocket("ws://localhost:8080/lesson28/clock");
+    ws.onmessage = function(event) {
+      var mySpan = document.getElementById("messageGoesHere");
+      mySpan.innerHTML = event.data;
+    }
+    ws.onerror = function(event) {
+      console.log("Error: " + event);
+    }
+  </script>
 </body>
 </html>
 ```
@@ -12308,37 +12135,38 @@ Web 客户端查找 Hello WebSocket 示例：
 
 在完成“动手尝试”（Try It）作业时，你会发现这个示例非常有用，你需要将股票报价推送到客户端。
 
-### 优化消息发布的性能
+# 优化消息发布的性能
 
 如果连接的客户端数量较少，遍历所有打开的会话是行得通的。但如果你有数百个客户端，请考虑在 `@OnOpen` 消息处理器中将 `Session` 对象放入单独的集合，并从多个线程并行向每个组发送消息。重要提示：Java EE 服务器会为每个客户端连接创建一个服务器端点类的新实例，因此，如果你创建了自己的会话集合，它们必须是静态的：
 
 ```java
 private static Set<Session> sessionsChunk1 = Collections.synchronizedSet(new HashSet<>());
 private static Set<Session> sessionsChunk2 = Collections.synchronizedSet(new HashSet<>());
+...
 ```
 
 ## 动手尝试
 
 重写你在第 27 课“动手尝试”中创建的相同股票应用程序，但这次要使用 WebSockets 实现。创建一个基于 HTML 的 WebSocket 客户端。
 
-### 课程要求
+## 课程要求
 
 你应该已经安装了 Java、GlassFish 和 Eclipse。
 
 > 注意：你可以从书籍的网页 www.wrox.com/go/javprog24hr2e 下载“动手尝试”的代码和资源。你可以在下载内容的 Lesson28 文件夹中找到它们。
 
-### 步骤说明
+## 步骤说明
 
 1. 重用你早些在本节中创建的动态项目 Lesson28。如果你还没有，请从书籍下载并导入。
 2. 创建一个 HTML 客户端 `GetPriceQuote.html`，其与“解码器和编码器”部分中的示例类似。它应该有一个文本输入字段用于输入股票代码以及一个 Get 按钮。用户必须输入股票代码以获取报价并按下按钮。服务器应为所选股票生成随机报价。
-3. 在“解码器和编码器”部分的 `WebSocketEndpoint` 类中创建一个服务器端点，但这次要使用第 27 课“动手尝试”部分中的股票价格生成器（`StockPriceGenerator`）类。
+3. 在“解码器和编码器”部分的 WebSocketEndPoint 类中创建一个服务器端点，但这次要使用第 27 节“动手尝试”部分中的股票价格生成器（`StockPriceGenerator`）类。
 4. 实现一个定时器，每五秒生成一次新的随机价格。参考“向所有客户端推送消息”部分中 `WebSocketClock` 类中的 `ScheduledExecutorService`。
 5. 在 GlassFish 中部署项目并启动服务器。
 6. 在 Eclipse 或你的 Web 浏览器中运行网页 `GetStockPrice.html` 并测试应用程序。网页中的一个股票代码应该每五秒刷新一次价格。用户应该能够随时输入新的股票代码，并显示且刷新新所选股票的价格。
 
-> 提示：请在 www.wrox.com/go/javprog24hr2e 选择第 28 课的在线视频。你可以从该网站下载本节的代码和资源。
+> 提示：请在 www.wrox.com/go/javprog24hr2e 选择第 28 节的在线视频。你可以从该网站下载本节的代码和资源。
 
-# 29 介绍 JNDI
+# 第 29 课 介绍 JNDI
 
 与其让分布式 Java 程序反复不断地实例化大量可重用对象，不如让这些对象预先创建并发布在已知的服务器上，在那里可以轻松快速地找到它们。第 24 课引入了注册概念，在该概念中，Java 对象可以发布在某个名称下，以便客户端进行查找。
 
@@ -12346,9 +12174,9 @@ Java 命名和目录接口（JNDI）也是关于在分布式环境中注册和�
 
 ## 命名和目录服务
 
-命名服务允许你添加、更改或删除名称。命名服务为每个条目提供唯一的名称。Java EE 服务器在启动时会将 EJB、JMS 和数据库连接池绑定到命名服务器。文件系统是命名树的一个例子，命名树源于根，称为初始上下文（initial context）。
+命名服务允许你添加、更改或删除名称。命名服务为每个条目提供唯一的名称。Java EE 服务器在启动时会将 EJB、JMS 和数据库连接池绑定到命名服务器。文件系统。命名树源于根，称为初始上下文（initial context）。
 
-目录服务允许你通过属性而不是对象名称搜索命名树。例子是域名系统（DNS），它是一个分布式系统，接收网络计算机的域名并返回 IP 地址和端口号。
+目录服务允许你通过属性而不是对象名称搜索命名树。例子是域名系统，它是一个分布式系统，接收网络计算机的域名并返回 IP 地址和端口号。
 
 为了允许客户端查找，必须有一个过程将对象绑定到命名树。这可以通过服务器控制台或独立程序处理。
 
@@ -12374,33 +12202,34 @@ env.put(Context.INITIAL_CONTEXT_FACTORY, "org.jboss.naming.client.InitialContext
 
 
 
-# 第 29 节 引入 JNDI
+env.put(`Context.PROVIDER_URL`, "http://127.0.0.1:8080");
 
-## 配置 InitialContext
+env.put(`Context.SECURITY_PRINCIPAL`, "Alex123");
 
-```java
-env.put(Context.PROVIDER_URL, "http://127.0.0.1:8080");
-env.put(Context.SECURITY_PRINCIPAL, "Alex123");
-env.put(Context.SECURITY_CREDENTIALS, "MySecretPwd");
-```
+env.put(`Context.SECURITY_CREDENTIALS`, "MySecretPwd");
 
 如果外部程序需要访问 GlassFish 服务器中的 `InitialContext` 对象，代码可能如下：
 
 ```java
 final Properties env = new Properties();
+
 env.setProperty("java.naming.factory.initial",
       "com.sun.enterprise.naming.InitialContextFactoryImpl");
+
 env.setProperty("java.naming.factory.url",
       "com.sun.enterprise.naming");
+
 env.setProperty("java.naming.factory.state",
       "com.sun.corba.ext.impl.presentation.rmiNDIStateFactoryImpl", "localhost");
+
 env.setProperty("org.sun.corba.CORBA.ORInitialPort", "8000");
+
 InitialContext initContext = new InitialContext(env);
 ```
 
 你需要阅读应用程序自带的文档，以获取外部程序访问 JNDI 的正确代码。
 
-在获取 `InitialContext` 引用后，你可以调用 `lookup()` 方法并指定所需的资源名称。第 30 节详细介绍了 Java 消息，但现在我将向你展示一个获取消息队列引用的示例。
+在获取 `InitialContext` 引用后，你可以调用 `lookup()` 方法并指定所需的资源名称。第30 节详细介绍了 Java 消息，但现在我将向你展示一个获取消息队列引用的示例。
 
 ```java
 Destination destination = (Destination)
@@ -12412,6 +12241,7 @@ initContext.lookup("jms/queue/test");
 ```java
 MySessionBean msb = (MySessionBean)initContext.lookup(
       "java:com/env/ejb/MySessionBean");
+
 DataSource ds = (DataSource)initContext.lookup(
       "java:com/env/jdbc/DefaultDataSource");
 ```
@@ -12426,12 +12256,17 @@ DataSource ds = (DataSource)initContext.lookup(
 
 ```java
 import javax.annotation.Resource;
+
 ...
+
 @Resource(name="MyTestConnectionFactory")
   private ConnectionFactory factory;
+
 @Resource(name="My.JMSTestQueue")
   private Queue ioQueue;
 ```
+
+### 416 | 第 29 节 引入 JNDI
 
 例如，你可以将此代码放在 Java Servlet 中，它向绑定到控制台的队列发送消息：借助具有 JNDI 名称 `MyTestConnectionFactory` 的 `ConnectionFactory`，在名为 `MyTestQueue` 的名称下构建了 JNDI 树。这些资源由 Servlet 容器注入到变量 `iQueue` 和 `factory` 中——无需执行 lookup。
 
@@ -12447,7 +12282,7 @@ import javax.annotation.Resource;
 
 图 29-1：GlassFish 管理控制台
 
-管理控制台允许你配置 Glassfish 服务器的实例并管理 Java EE 应用程序所需的资源。在第 30 节中，你看到了如何配置 JMS 资源。
+管理控制台允许你配置 Glassfish 服务器的实例 ($) 并管理 Java EE 应用程序所需的资源。在第 30 节中，你看到了如何配置 JMS 资源。
 
 ## 数据源与 JNDI
 
@@ -12458,6 +12293,8 @@ import javax.annotation.Resource;
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_452_0.png)
 
 然后你需要为新池添加参数。GlassFish 包含了 DerbyDB 数据库服务器并为其预配置了池。图 29-3 显示了 GlassFish 管理控制台的快，其中现有资源名称 `DerbyPool` 代表一个 JDBC 连接池。`jax.sql.DataSource` 对象是数据库连接的工厂。管理员将此工厂配置为 JNDI 资源，指定使用哪个 JDBC 驱动、初始创建多少个连接以及允许的最大连接数。
+
+### 418 | 第 29 节 引入 JNDI
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_453_0.png)
 
@@ -12473,6 +12310,7 @@ Java EE 服务器可以使用 XML 文件进行配置。你可以在第 31 节中
 
 ```java
 InitialContext ic = new InitialContext();
+
 DataSource ds = (DataSource)ic.lookup("DerbyPool");
 ```
 
@@ -12487,14 +12325,15 @@ DataSource ds;
 
 轻量目录访问协议（LDAP）服务器是特殊的软件，它们以层次结构存储目录条目并对读取高度优化。这使得它们成为员工列表或电话目录等服务的良好选择。从企业 Java 来看，当需要快速查找 Java 对象时应该考虑 LDAP 解决方案，例如 JNDI 连接工厂、查询或主题。Java 开发者使用 JNDI API 来绑定、查找和更新 LDAP 中的条目。JNDI 之于 LDAP 正如 JDBC 之于 DBMS。
 
-以下是一些 LDAP 服务器：
+是一些 LDAP 服务器：
 
 - Oracle Directory Server (Oracle)
 - Microsoft Active Directory (Microsoft)
 - OpenLDAP (open-source, community developed)
 - ApacheDS (open-source, Apache)
+- OpenLDAP (open-source, community developed)
 
-LDAP 目录有一个根节点，由一个或多个区分名称（唯一标识符）组成。通常层次结构的顶部是一个带有组织前缀的对象。下方是单元或常用名称，以此类推。与其他命名服务不同，搜索字符串从最低层次结构开始，根节点最后被搜索。这里有一个用于搜索的区分名称示例：
+LDAP 目录有一个根节点，由一个或多个区分名称（唯一标识符）组成。通常层次结构的顶部是一个带有组织前缀的对象。下方是单元或常用名称，以此此类推。与其他命名服务不同，搜索字符串从最低层次结构开始，根节点最后被搜索。这里有一个用于搜索的区分名称示例：
 
 ```
 cn=jsmith, ou=accounting, oracle.com
@@ -12504,14 +12343,23 @@ cn=jsmith, ou=accounting, oracle.com
 
 接下来的 Java 代码段搜索 JNDI 属性，连接到运行在端口 389 的 LDAP 服务器，并查找名为 Customer Hom 的对象：
 
+### 420 | 课程 29 简介介绍 JNDI
+
 ```java
 Hashtable<String, String> env = new Hashtable<>();
+
 env.put(Context.INITIAL_FACTORY, "com.sun.jndi.ldap.LdCtxFactory");
+
 env.put(Context.PROVIDER_URL, "ldap://localhost:389");
+
 env.put(Context.SECURITY_AUTHENTICATION, "simple");
+
 env.put(Context.SECURITY_PRINCIPAL, "Directory Manager");
+
 env.put(Context.SECURITY_CREDENTIALS, "myPassword");
+
 DirContext ctx = new InitialDirContext(env);
+
 CustomerHome customHome = (CustomerHome)ctx.lookup("cn=CustomerHome,ou=RealIPProject,ou=tromp.com");
 ```
 
@@ -12570,7 +12418,7 @@ public class MyDerbyClientServlet extends HttpServlet {
 
 
 
-## 422 | 课程 29 简介介绍 JNDI
+## 422 | 课程 29 简介：介绍 JNDI
 
 5. 部署服务：在 Server 视图中右键点击并选择 Add and Remove。检查 Eclipse 控制台并找到 Lesson29 管理正在加载的消息。
 6. 右键点击 servlet 名称并选择 Run on Server。你应该在 Console 视图中看到“Got pooled connection to DerbyDB”的消息。
@@ -12586,7 +12434,7 @@ public class MyDerbyClientServlet extends HttpServlet {
 
 > 提示：请在 www.wrox.com/go/javprog24hrre 在线选择课程 29 的视频。你也可以从该网站下载本课程的代码和资源。
 
-## 424 | 课程 30 简介介绍 JMS 和 MOM
+## 424 | 课程 30 简介：介绍 JMS 和 MOM
 
 ### 消息概念与术语
 
@@ -12620,13 +12468,13 @@ public class MyDerbyClientServlet extends HttpServlet {
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_460_0.png)
 
-图 30-2：P2P 消息传递
+**图 30-2：** P2P 消息传递
 
 如果程序发布消息以供多个接收者消费，那就是发布/订阅（pub/sub）模式。消息被发布到一个主题（topic），许多订阅者可以订阅并接收它。图 30-3 阐述了发布订阅模式，消息可以被多个订阅者消费。
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_460_1.png)
 
-图 30-3：发布/订阅消息传递
+**图 30-3：** 发布/订阅消息传递
 
 主题代表了应用程序和/或用户的某些重要新闻；例如，PriceDropAlert、BreakNews 等。在发布/订阅模式下，消息通常在所有订阅者都接收到后立即从队列中移除（请在“如何订阅主题”章节中阅读关于持久性订阅者的内容）。
 
@@ -12660,7 +12508,7 @@ IMQ_DEFAULT_JAVAHOME=/L/Library/Java/VirtualMachines/jdk.8_0_25_jdk/Contents/Hom
 
 现在创建一个物理目标——一个用于放置订单的队列。右键点击 `StockBroker` 节点下的 `Destinations` 并选择 `Add Broker Destination`。在弹出窗口中，输入目标的名称：`TradingOrdersQueue`，如图 30-5 所示。
 
-## 引入 OpenMQ MOM | 427
+### 引入 OpenMQ MOM | 427
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_462_0.png)
 
@@ -12668,17 +12516,17 @@ IMQ_DEFAULT_JAVAHOME=/L/Library/Java/VirtualMachines/jdk.8_0_25_jdk/Contents/Hom
 成功更新代理项 'StockBroker'。
 成功连接到代理 'StockBroker'。
 
-图 30-4：带有新创建 StockBroker 的 Open MQ 控制台
+**图 30-4：** 带有新创建 StockBroker 的 Open MQ 控制台
 
 428 | 课程 30 引入 JMS 和 MOM
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_463_0.png)
 
-**图 30-5：在 Open MQ 中配置目标**
+**图 30-5：** 在 Open MQ 中配置目标
 
 如果你想创建一个主题而不是队列，你需要选择 Topic 单选按钮。如你所见，你可以在目标上设置其他参数。
 
-详细概述 Open MQ MOM 出了本书的范围；请尝试阅读《Open MQ 管理指南》以获取更多信息。只要你有一个运行中的 MOM 服务器并配置了消息目标，你就可以开始编写向该目标发送和接收消息的程序了。
+详细概述 Open MQ MOM 超出了本书的范围；请尝试阅读《Open MQ 管理指南》以获取更多信息。只要你有一个运行中的 MOM 服务器并配置了消息目标，你就可以开始编写向该目标发送和接收消息的程序了。
 
 ### JMS API 概述
 
@@ -12694,11 +12542,13 @@ JMS API 包含了允许你发送和接收消息的 Java 类。在本节中，你
 
 ### 如何直接向 MOM 发送消息
 
-`DirectMessageSender` 类使用了 JMS `ConnectionFactory` 的 Open MQ 特定实现，该实现位于供应商的包 `com.sun.messaging` 中。如果你决定更改 MOM 提供者或其他服务器，将需要修改、重新编译并重新部署此代码。这并不完美，但你会在该 Java EE 版本中修复这个问题。
+JMS API 包含了发送和接收消息的 Java 类。在本节中，你将讨论在 Java EE 7 中引入的 JMS 2.0。如果你在使用仅提供 Java EE 规范的应用服务器，请查找描述以下内容的教程：
 
-```java
-new com.sun.messaging.ConnectionFactory();
-```
+### JMS API 概述 | 431
+
+`new com.sun.messaging.ConnectionFactory();`
+
+`DirectMessageSender` 类使用了 JMS `ConnectionFactory` 的 Open MQ 特定实现，该实现位于供应商的包 `com.sun.messaging` 中。如果你决定更改 MOM 提供者或其他服务器，将需要修改、重新编译并重新部署此代码。这并不完美，但你会在该 Java EE 版本中修复这个问题。
 
 ### 如何直接从 MOM 接收消息
 
@@ -12713,11 +12563,11 @@ new com.sun.messaging.ConnectionFactory();
 5. 创建一个 `JMSConsumer` 并调用其 `setMessageListener()`，指定实现 `MessageListener` 的对象。
 6. 实现 `onMessage()` 以在消息到达时处理该消息。
 
-# 432 第 30 节 引入 JMS 和 MOM
+### 432 | 第 30 节 引入 JMS 和 MOM
 
 列表 30-2 中的示例类 `MyReceiver` 展示了如何异步地从 `TradingOrdersQueue` 消费消息。它的构造函数创建了 JMS 对象并将自己注册为消息监听器。`onMessage()` 回调包含处理接收到的消息的代码。
 
-## 列表 30-2 接收消息
+#### 列表 30-2 接收消息
 
 ```java
 public class DirectMessageReceiver implements MessageListener {
@@ -12777,7 +12627,7 @@ public class DirectMessageReceiver implements MessageListener {
 }
 ```
 
-# JMS API 概述 | 433
+### JMS API 概述 | 433
 
 ```java
 // IBM 200 Mkt
@@ -12808,7 +12658,7 @@ JMSPriority(): 0
 JMSType(): Text
 ```
 
-# 436 | 课程 30 介绍 JMS 和 MOM
+### 436 | 课程 30 介绍 JMS 和 MOM
 
 - `DUP_OK_ACKNOWLEDGE` 模式用于服务器失败时；同一条消息可能会被交付多次。在某些情况下，这是可以接受的——例如，接收两次价格报价不会产生任何影响。
 
@@ -12886,25 +12736,31 @@ public class MessageSenderServlet extends HttpServlet {
 }
 ```
 
-### 图 30-7：GlassFish 中的 JMS 物理目标
+### GlassFish 中的 JMS 配置
 
 目标 `TradingOrdersQueue` 已知的唯一原因是 Open MQ 与 GlassFish 集成了。要配置另一个 MOM 服务器，你需要使用导航面板中的 `Configurations` 节点创建一个新的 JMS 主机。
 
 现在，你需要创建一个映射到物理 MOM 队列的 GlassFish JMS 条目。将新的目标资源添加到 JMS Resources（见图 30-8）。我给它分配了一个 JNDI 名称 `OutTradeOrders`。
 
-### 图 30-8：将 JMS 映射到物理队列
+![](img/c6ae2d81738909a4b5328d6eddc14dd7_475_0.png)
+
+**图 30-8：** 将 JMS 映射到物理队列
 
 JMS 连接的创建和关闭（由 `JMSContext` 内部完成）是耗时操作；你应该考虑使用连接池。Java EE 服务器允许你通过配置连接工厂来创建此类池。图 30-9 显示了如何使用它们。
 
-### 图 30-9：配置 JMS 连接
+![](img/c6ae2d81738909a4b5328d6eddc14dd7_477_0.png)
 
-# 第 31 课 Enterprise JavaBeans 简介
+**图 30-9：** 配置 JMS 连接
+
+---
+
+# 第 31 课：Enterprise JavaBeans 简介
 
 本节向你介绍 Java EE 技术之一——Enterprise JavaBeans（EJB，JSR 345），它可以用于实现分布式应用中的业务逻辑层（参见图 25-1）。第 26 章和第 27 章介绍了在 Web 上编写表示层的各种方法；在第 30 章和第 29 章中，你学习了如何使用消息机制组织应用不同层之间的通信。应用程序的业务逻辑是在 POJO 中编写的。
 
 在本节中，你将看到如何使用 EJB（也是 POJO，但由 EJB 容器管理）业务层。Java EE 7 包含了 EJB 3.2 和 Java Persistence API (JPA) 2.1，它们为业务逻辑和数据持久化提供了标准的解决方案。将 EJB 作为 JMS 监听器可以提高企业应用程序的可扩展性，而无需编写额外的代码。
 
-本节将向你介绍各种 EJB，下一节将介绍如何使用 JPA 持久数据。
+本节将向你介绍各种 EJB，下一节将介绍如何使用 JPA 持久化数据。
 
 ## 谁需要 EJB 容器？
 
@@ -12912,7 +12768,7 @@ POJO 有什么问题吗？为什么不在那里直接实现业务逻辑呢？你
 
 你知道如何使用 JMS 编写消息接收器是很棒的，但你如何让这个解决方案具有可扩展性呢？如果你需要几十个消息监听器并发从队列中取出消息怎么办？忘记将 POJO 与其他层集成以执行身份验证和 JDBC 操作的任务吧。
 
-EJB 容器处理了所有与基础设施相关的问题，而无需你侧进行手动编程。应用程序服务器允许你在有多个消息监听器时配置消息驱动豆（MDB）池。如果需要，你可以运行事务支持。如果你的 bean 运行在 EJB 容器中，你就不需要担心多线程问题。将 POJO 转换为 EJB 只需要向 EJB 类添加 Java 注解，非常简单。bean 之间的相互通信也是通过依赖注入或单例 bean 实现的。
+EJB 容器处理了所有与基础设施相关的问题，而无需你侧进行手动编程。应用程序服务器允许你在有多个消息监听器时配置消息驱动豆（MDB）池。如果需要，你可以运行事务支持。如果你的 bean 运行在 EJB 容器中，你就不需要担心多线程问题。将 POJO 转换为 EJB 只需要向 EJB 类添加 Java 注解，非常简单。Bean 之间的相互通信也是通过依赖注入或单例 Bean 实现的。
 
 如果你需要扩展分布式应用，EJB 容器提供了集群和故障转移支持。安全授权也是容器的责任。由于不需要手动编写所有这些基础设施功能，你的 EJB 代码变得非常轻量。
 
@@ -12930,7 +12786,7 @@ EJBContainer myContainer = EJBContainer.createEJBContainer();
 
 ## EJB 的类型
 
-Bean 有两种类型：EJB 会话豆（Session Beans）和消息驱动豆（Message-Driven Beans）。MDB 提供了从 JMS 队列或主题中接收消息的功能——这就是你能做的所有事情。你的应用程序逻辑驻在会话豆中。会话豆有三种：
+Bean 有两种类型：EJB 会话豆（Session Beans）和消息驱动豆（Message-Driven Beans）。MDB 提供了从 JMS 队列或主题中接收消息的功能——这就是你能做的所有事情。你的应用程序逻辑驻留在会话豆中。会话豆有三种：
 
 *   **无状态豆（Stateless Bean）** 包含业务逻辑但不支持状态。也就是说，它不会为客户端“记住”任何数据。如果客户端连续在无状态 Bean 上调用两个方法，容器可能需要使用两个 EJB Bean 实例，因为它没有为客户端存储任何中间数据。
 *   **有状态豆（Stateful Bean）** 包含业务逻辑和状态。EJB 容器会分配一个特定的 Bean 实例，并可以在随后的 Bean 调用之间存储结果。
@@ -12940,22 +12796,23 @@ Bean 有两种类型：EJB 会话豆（Session Beans）和消息驱动豆（Mess
 
 EJB 容器创建并管理会话豆池。无状态豆分配给客户端的时间比有状态豆短。因此，如果你正在开发一个具有数百或数千个并发请求指向 EJB 容器的多用户应用，无状态豆提供了一个比较小池更具扩展性的解决方案，可以服务更多用户。
 
-### 无状态会话豆
+### 无状态会话豆的生命周期
 
-即使使用无状态会话豆，EJB 容器运行得也很聪明，那些留在内存中但与客户端没有活动交互的实例正在被钝化——从内存中移除并存储在磁盘上。当客户端向被钝化的无状态 Bean 发出另一个请求时，容器会再次激活它。
+但即使使用无状态会话豆，EJB 容器运行得很聪明，那些留在内存中但与客户端没有活动交互的实例正在被钝化——从内存中移除并存储在磁盘上。当客户端向被钝化的无状态 Bean 发出另一个请求时，容器会再次激活它。
 
-### Bean 示例
+### 无状态会话豆示例
 
 我将通过创建一个简单的示例来向你介绍无状态会话豆，该示例包含一个带有返回“Hello World”消息逻辑的 EJB。
 
+#### Bean 实现
+
 一个返回“Hello World”并存在于容器中的类可以轻松实现为无状态会话豆：它只有一个方法，并且没有状态需要记住。清单 31-1 展示了你如何编写这样的 Bean。
 
-#### 清单 31-1 HelloWorld Bean
+**清单 31-1：HelloWorld Bean（版本 1）**
 
 ```java
 @Stateless
 public class HelloWorld {
-
     public String sayHello() {
         return "Hello World";
     }
@@ -12971,15 +12828,15 @@ public class HelloWorld {
 myBean.sayHello();
 ```
 
-### 客户端视图
+#### 客户端视图
 
-在所示示例中，Bean 运行在服务器上，但客户端调用它的 `sayHello()` 方法。
+在所示的 Bean 运行在服务器上，但客户端调用它的 `sayHello()` 方法。
 
 #### 本地无接口 Bean
 
 我计划在位于相同 JVM 的 Servlet 中使用 `HelloWorldBean`，代码的最终版本位于清单 31-2。
 
-#### 清单 31-2
+**清单 31-2：HelloWorld Bean（最终版本）**
 
 ```java
 import javax.ejb.LocalBean;
@@ -12988,7 +12845,6 @@ import javax.ejb.Stateless;
 @LocalBean
 @Stateless
 public class HelloWorld {
-
     public String sayHello() {
         // 如果需要，你可以在这里实例化并使用其他 POJO
         return "Hello World";
@@ -12996,9 +12852,9 @@ public class HelloWorld {
 }
 ```
 
-任何 EJB 都可以使用普通类来实现业务逻辑。例如，`sayHello()` 方法可以使用 `new` 操作符创建其他 Java 类的实例，并在需要时注入它们的业务方法。或者更好，你可以使用上下文依赖注入 (CDI) 注入 POJO，这将在后续章节中解释。
+任何 EJB 都可以使用普通类来实现业务逻辑。例如，`sayHello()` 方法可以使用 `new` 操作符创建其他 Java 类的实例，并在需要时调用它们的业务方法。或者更好，你可以使用上下文依赖注入 (CDI) 注入 POJO，这将在后续章节中解释。
 
-现在是时候动手操作了。在 Eclipse 中创建一个 Lesson31 动态 Web 项目。然后，在包 `session31.client` 中创建一个新的 Servlet 类 `HelloWorldServlet`（选择 File -> New -> Servlet）。在此 Servlet 中仅使用 `doGet()` 方法。该 Servlet 连接你的客户端，与通信...
+现在是时候动手操作了。在 Eclipse 中创建一个 `Lesson31` 动态 Web 项目。然后，在包 `session31.client` 中创建一个新的 Servlet 类 `HelloWorldServlet`（选择 File -> New -> Servlet）。在此 Servlet 中仅使用 `doGet()` 方法。该 Servlet 连接你的客户端，与通信层交互。
 
 从包 `session31.ejb` 中创建一个 Java 类 `HelloWorldBean`（选择 File -> New -> Other -> EJB -> Session Bean (EJB 3.x)）。不要使用任何本地或远程业务接口。默认情况下，Eclipse 生成无接口 Bean 并将其标记为 `@Stateless` `@LocalBean`。Eclipse 会创建一个带有默认构造函数的类。为了实现这一点，使用我早些显示的 `sayHello()` 方法，EJB 就可以使用了。
 
@@ -13010,7 +12866,7 @@ public class HelloWorld {
 
 Eclipse 会在该行标记一个红色的错误标记。右键点击它并选择“Quick Fix”（快速修复），自动插入两个导入语句：一个用于 `@EJB` 注解，另一个用于 `HelloWorldBean`。
 
-### 使用 JNDI 作为客户端注入的替代方案
+#### 使用 JNDI 作为替代方案
 
 Java EE 支持不依赖于应用程序服务器实现的可移植 JNDI 名称。与其使用 `@EJB` 注解，不如你使用以下代码：
 
@@ -13028,7 +12884,7 @@ out.println(myBean.sayHello());
 
 就是这样了。Servlet 的完整代码如清单 31-3 所示。
 
-#### 清单 31-3 HelloWorldBean 的 Servlet 客户端
+**清单 31-3：HelloWorldBean 的 Servlet 客户端**
 
 ```java
 package lesson31.client;
@@ -13061,9 +12917,7 @@ public class HelloWorldServlet extends HttpServlet {
 
 在 GlassFish 服务器中部署项目 `Lesson31`（右键点击服务器名称并使用 `Add and Remove` 菜单）并启动服务器。右键点击 servlet `HelloWorldServlet` 并选择 `Run As -> Run on Server`。servlet 会调用 EJB 上的方法，查看 Eclipse 内部浏览器中图 31-1 显示的内容。
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_485_0.png)
-
-图 31-1: 运行 servlet，EJB 客户端
+![图 31-1: 运行 servlet，EJB 客户端](img/c6ae2d81738909a4b5328d6eddc14dd7_485_0.png)
 
 你可以在浏览器中复制 servlet 的 URL，生成的网页将是相同的。
 
@@ -13085,17 +12939,15 @@ public class HelloWorldServlet extends HttpServlet {
 | 源文件夹 | `/Lesson31/src` |
 | Java 包 | `lesson31.ejb` |
 | 类名 | `HelloWorldLocal` |
-| 超类 | |
+| 超类 |  |
 | 状态类型 | `Stateless` |
-| 创建业务接口 | |
+| 创建业务接口 |  |
 | 远程 | `lesson31.ejb.HelloWorldLocal/Remote` |
 | 本地 | `lesson31.ejb.Authorizable` |
-| 无接口视图 | |
-| 异步 | |
+| 无接口视图 |  |
+| 异步 |  |
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_486_0.png)
-
-图 31-2: 创建带有业务接口的 EJB
+![图 31-2: 创建带有业务接口的 EJB](img/c6ae2d81738909a4b5328d6eddc14dd7_486_0.png)
 
 Eclipse 生成了接口 `Authorizable` 以及应该实现的 EJB 类。
 
@@ -13108,7 +12960,9 @@ import javax.ejb.Local;
 
 @Local
 public interface Authorizable {
+
     public String authorize();
+
 }
 ```
 
@@ -13123,6 +12977,7 @@ import javax.ejb.Stateless;
 
 @Stateless
 public class HelloWorldLocal implements Authorizable {
+
     public String authorize() {
         return "The user is authorized!";
     }
@@ -13130,6 +12985,7 @@ public class HelloWorldLocal implements Authorizable {
     public String sayHello() {
         return "Hello World!";
     }
+
 }
 ```
 
@@ -13137,7 +12993,38 @@ public class HelloWorldLocal implements Authorizable {
 
 ## 远程 Bean
 
-对于远程访问 bean 的客户端，你需要一个远程接口。在 J2EE 中，远程接口被用 `@Remote` 注解标记。`@Remote` 接口允许从不同的 JVM 调用 EJB。在 Java EE 5 中，如果 bean 只有一个远程接口，则 `@Remote` 注解是可选的。
+对于远程访问 bean 的客户端，你需要一个远程接口。在 J2EE 中，远程接口被 `@Remote` 注解标记。`@Remote` 接口允许从不同的 JVM 调用 EJB。在 Java EE 5 中，如果 bean 只有一个远程接口，则 `@Remote` 注解是可选的。
+
+## 有状态 Bean
+
+有状态 session bean 维护与特定客户端的会话状态。当客户端调用有状态 bean 的方法时，EJB 容器会为该客户端分配一个 bean 实例。该实例将一直与该客户端关联，直到会话结束或 bean 被移除。
+
+```java
+@Stateful
+public class MyShoppingCart implements ShoppingCart {
+
+    private List<String> items = new ArrayList<>();
+
+    public void addItem(String item) {
+        items.add(item);
+    }
+
+    public List<String> getItems() {
+        return items;
+    }
+
+    @Remove
+    public void placeOrder() {
+        // 处理订单逻辑
+        // The client is ready to complete the purchase
+        // ...
+    }
+}
+```
+
+为了完成购物流程并为其他用户释放有状态 bean，程序需要调用 bean 的一个标记有 `@Remove` 注解的 `MyShoppingCart` 方法。在前面的示例中，`placeOrder()` 方法应该标记有此注解。你还应该在 bean 上提供另一个 `@Remove` 方法，允许该 bean 在没有任何活动的情况下保持分配给客户端。当此时间过期时，会话将超时，bean 将被释放。
+
+释放有状态 bean 的另外一种方法是使用 `@StatefulTimeout` 注解，它允许你指定 bean 保持分配客户端的时间。当此时间过期时，bean 将被移除。
 
 ## 单例 Bean
 
@@ -13148,38 +13035,44 @@ public class HelloWorldLocal implements Authorizable {
 ```java
 @Singleton
 public class MyGlobalStorage {
+
 }
 ```
 
-当 bean 被创建时，由 EJB 容器决定创建时机，除非你明确请求在应用程序启动时创建该 bean。这被称为**尽早初始化**，有一个特殊的注解：
+当 bean 被创建时，由 EJB 容器决定创建时机，除非你明确请求在应用程序启动时创建该 bean。这被称为**尽早初始化**，有一个特殊的注解 `@Startup`：
 
 ```java
 @Startup
 @Singleton
 public class MyGlobalStorage {
+
     // 用于共享的对象的存储器
     private Map<String, Object> map = new HashMap<>();
 
-    void addToStore(String key, Object objToStore) {...}
-    void removeFromStore(String key) {...}
+    void addToStore(String key, Object objToStore) { ... }
+
+    void removeFromStore(String key) { ... }
+
 }
 ```
 
-假设你想创建一个程序，在某些时间向队列发送一些消息。编写一个单例 bean，让 EJB 容器在应用程序启动时实例化它，并在单例完成初始化后开始推送消息。另一个实用的注解是 `@PostConstruct`，它会导致构造函数在 bean 的构造函数完成后立即调用一个方法：
+假设你想创建一个程序，在某些时间向队列发送一些消息。编写一个单例 bean，让 EJB 容器在应用程序启动时实例化它，并在单例完成初始化后开始推送消息。另一个实用的注解是 `@PostConstruct`，它会导致容器在 bean 的构造函数完成后立即调用一个方法：
 
 ```java
 @Startup
 @Singleton
 public class MyStockQuoteServer {
+
     @PostConstruct
     void setStockQuotes() {
         // 在此处连接到股票价格源并
         // 向队列发送消息
     }
+
 }
 ```
 
-要访问单例的业务方法，客户端类需要在特定实例上调用公共静态方法 `getInstance()`。如果你在 Java SE 中手动实现单例模式，你需要在类中创建一个构造函数和一个 `public static` 的 `getInstance()` 方法：
+要访问单例的业务方法，客户端类需要在特定实例上调用公共方法。如果你在 Java SE 中手动实现单例模式，你需要在类中创建一个私有构造函数和一个 `public static` 的 `getInstance()` 方法：
 
 ```java
 MyGlobalStorage.getInstance().addStorage("empOfTheMonth", bestEmployee);
@@ -13191,18 +13084,19 @@ MyGlobalStorage.getInstance().addStorage("empOfTheMonth", bestEmployee);
 @Singleton
 @ConcurrencyManagement(ConcurrencyManagementType.BEAN)
 public class MyGlobalStorage {
+
 }
 ```
 
 ## 部署 EJB
 
-在部署到任何应用程序服务器之前，EJBs 通常被打包成一个归档文件，这可以是 jar、企业级归档或对于 Web 应用程序的 .war。一个简单的 Web 应用程序应该压缩并作为一个整体部署。如果你的客户端代码位于 Web 应用程序中，将 EJB 保留在 .war 文件内部。
+在部署到任何应用程序服务器之前，EJB 通常被打包成一个归档文件，这可以是 `.jar`、企业级归档 `.ear`（这是一个 Java 归档文件）；或者对于 Web 应用程序的 `.war`。一个简单的 Web 应用程序应该压缩并作为一个整体部署。如果你的客户端代码位于 Web 应用程序中，将 EJB 保留在 `.war` 文件内部。
 
-在归档文件中打包应用程序的正确方法是使用 Ant、Maven 或 Gradle 等构建系统（参见第 36 课）。为了训练目的，你也可以在 Eclipse 中创建一个 .war 文件。在 Eclipse 项目 `Lesson31` 中右键点击 `Deployment Selector`，并选择 `Export -> WAR file`。几秒钟后，你就得到了包含 `Lesson31.war` 文件，它同时包含了 servlet 和 EJB。
+在归档文件中打包应用程序的正确方法是使用 Ant、Maven 或 Gradle 等构建系统（参见第 36 课）。为了训练目的，你也可以在 Eclipse 中创建一个 `.war` 文件。在 Eclipse 项目 `Lesson31` 中右键点击项目名称，并选择 `Export -> WAR file`。几秒钟后，你就得到了包含 `Lesson31.war` 文件，它同时包含了 servlet 和 EJB。
 
-此文件可以部署在任何符合 Java EE 标准的应用程序服务器中。这个 .war 文件很小：小于 4 KB！Java EE 让 EJB 组件变得相对轻量。如果你有多个 EJB 类，将它们放在 `WEB-INF/lib` 目录下的一个或多个 jar 中。
+此文件可以部署在任何符合 Java EE 标准的应用程序服务器中。这个 `.war` 文件很小：小于 4 KB！Java EE 让 EJB 组件变得相对轻量。如果你有多个 EJB 类，将它们放在 `WEB-INF/lib` 目录下的一个或多个 `.jar` 中。
 
-如果你的客户端不是一个小型 Web 应用程序，或者你想单独部署 EJBs，你可以将它们封装在单独的 .jar 或 .ear 文件中。你用于创建 .ear 文件的根目录必须包含所有编译后的 Java 类，如果适用，还包括可选的 `META.xml` 文件。事实上，你可以创建一个仅包含你的 EJBs 但同时也包含 .war 文件的 .ear 文件。
+如果你的客户端不是一个小型 Web 应用程序，或者你想单独部署 EJB，你可以将它们封装在单独的 `.jar` 或 `.ear` 文件中。你用于创建 `.ear` 文件的根目录必须包含所有编译后的 Java 类，如果适用，还包括可选的 `META-INF/application.xml` 文件。事实上，你可以创建一个仅包含你的 EJB 但同时也包含 `.war` 文件的 `.ear` 文件。
 
 可选文件 `ejb-jar.xml` 允许你为 EJB 指定元数据，如果你需要在不重新编译代码的情况下更改生产系统上的元数据，请在 `ejb-jar.xml` 中进行更改。
 
@@ -13218,12 +13112,12 @@ EJB 中的 JTA 事务包含两种类型：容器管理的和 Bean 管理的。�
 
 但使用容器管理的声明式事务是最简单的。它处理了若干个事务属性：
 
-- **MANDATORY**：此方法必须是调用方法事务的一部分。如果调用方法没有事务，则会抛出 `EJBTransactionRequiredException`。
-- **REQUIRED**：此方法必须在事务范围内被调用。如果调用方法不是事务性的，容器将启动一个新事务。
-- **REQUIRES_NEW**：即使调用方法有自己的事务，也为此方法启动一个新事务。
-- **SUPPORTS**：作为调用方法事务的一部分执行此方法的代码。
-- **NOT_SUPPORTED**：挂起调用方法的事务，直到此方法完成。如果调用方法不是在事务中执行的，则此方法也不具有事务性。
-- **NEVER**：此方法绝不能是事务的一部分。如果调用方法有事务，则抛出 `EJBException`。
+- `MANDATORY`：此方法必须是调用方法事务的一部分。如果调用方法没有事务，则会抛出 `EJBTransactionRequiredException`。
+- `REQUIRED`：此方法必须在事务范围内被调用。如果调用方法不是事务性的，容器将启动一个新事务。
+- `REQUIRES_NEW`：即使调用方法有自己的事务，也为此方法启动一个新事务。
+- `SUPPORTS`：作为调用方法事务的一部分执行此方法的代码。
+- `NOT_SUPPORTED`：挂起调用方法的事务，直到此方法完成。如果调用方法不是在事务中执行的，则此方法也不具有事务性。
+- `NEVER`：此方法绝不能是事务的一部分。如果调用方法有事务，则抛出 `EJBException`。
 
 如果类被标记了事务属性，它将适用于类中的所有方法。你可以在方法上重写类属性。下一个示例显示了一个无状态 bean，它声明容器必须为每个方法创建一个新事务，其中 `method3()` 永远不应该在事务内部执行：
 
@@ -13231,11 +13125,14 @@ EJB 中的 JTA 事务包含两种类型：容器管理的和 Bean 管理的。�
 @Stateless
 @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
 class MySessionBean {
-    public void method1() {...}
-    public void method2() {...}
+
+    public void method1() { ... }
+
+    public void method2() { ... }
 
     @TransactionAttribute(TransactionAttributeType.NEVER)
-    public void method3() {...}
+    public void method3() { ... }
+
 }
 ```
 
@@ -13252,10 +13149,12 @@ EJB 支持 `@Schedule` 注解，它接受基于日历的表达式，因此你可
 ```java
 @Stateless
 public class MyStockQuotefeed {
+
     @Schedule(second="*", minute="*", hour="9:30-16:00", dayOfWeek="Mon-Fri")
     public List getPriceQuotes() {
         // 连接报价源的代码写在这里
     }
+
 }
 ```
 
@@ -13289,7 +13188,7 @@ public class Employee {
 }
 ```
 
-如果持久化存储是关系型 DBMS，则每个实体实例对应数据库表中的行。如果你从空数据库开始，JPA 工具允许你根据 Java 实体创建数据库表。你也可以将实体映射到现有的数据库表。就像数据库表一样，Java 实体有一一对应关系（例如一个 `Employee` 实体对应一个 `Address` 实体）、多对一关系（例如一个 `Customer` 对应多个 `Orders`）、多对多关系（一对多的反向）以及一对多关系（例如，一个 `UniversityClass` 学生可以参加多门课程）。
+如果持久化存储是关系型 DBMS，则每个实体实例对应数据库表中的行。如果你从空数据库开始，JPA 工具允许你根据 Java 实体创建数据库表。你也可以将实体映射到现有的数据库表。就像数据库表一样，Java 实体有一一对关系（例如一个 `Employee` 实体对应一个 `Address` 实体）、多对一关系（例如一个 `Customer` 对应多个 `Orders`）、多对多关系（一对多的反向）以及一对多关系（例如，一个 `UniversityClass` 学生可以参加多门课程）。
 
 ## JPA 与 NoSQL
 
@@ -13316,19 +13215,19 @@ public class Employee {
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @NotNull
-    @Size(max = 10)
+    @Size(max=10)
     private String firstName;
 
     @NotNull
-    @Size(min = 2, max = 20)
+    @Size(min=2, max=20)
     private String lastName;
 
-    @Column(name = "boss_name")
+    @Column(name="boss_name")
     private String managerName;
 
-    @ToMany(mappedBy = "employee")
+    @ToMany(mappedBy="employee")
     private List<Address> addresses = new ArrayList<Address>();
 
     // 构造函数
@@ -13349,10 +13248,8 @@ public class Employee {
 ```java
 @Embeddable
 public class SmartPhone implements Serializable {
-
-    @Size(max = 10)
+    @Size(max=10)
     public String phoneNumber;
-
     public String model;
 }
 ```
@@ -13362,15 +13259,12 @@ public class SmartPhone implements Serializable {
 ```java
 @Entity
 public class Employee {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @NotNull
     public String firstName;
-
     // 其他一些字段放在这里
     // ...
-
     @Embedded
     public SmartPhone company;
 }
@@ -13395,7 +13289,7 @@ JPQL 包含了容易记忆的（不区分大小写）：`SELECT`、`FROM`、`WHE
 ```sql
 SELECT e.managerName
 FROM Employee AS e
-WHERE e.lastName = 'Smith'
+WHERE e.lastName='Smith'
 ```
 
 不要被 `SELECT`、`FROM` 和 `WHERE` 子句误导；它不是 SQL，实体类在底层会生成 SQL。`e` 作为引用 `Employee` 实体的别名。该查询的结果是零或多个实例的 Java 对象。
@@ -13405,7 +13299,7 @@ WHERE e.lastName = 'Smith'
 ```sql
 SELECT e.firstName, e.lastName
 FROM Employee AS e
-WHERE e.company.model = 'IPhone'
+WHERE e.company.model='IPhone'
 ```
 
 要填充所有实体（相当于 SQL 中的 Select），只需在 `SELECT` 子句后指定实体的别名：
@@ -13419,7 +13313,7 @@ SELECT e FROM Employee AS e
 ```sql
 SELECT DISTINCT
 FROM Employee AS e JOIN e.addresses AS a
-WHERE a.city = 'New York'
+WHERE a.city='New York'
 ```
 
 ### Criteria API
@@ -13492,7 +13386,6 @@ EntityManager em;
 ```java
 private EntityManagerFactory factory;
 private static final String PERSISTENCE_CONTEXT_NAME = "employees";
-
 factory = Persistence.createEntityManagerFactory(PERSISTENCE_CONTEXT_NAME);
 EntityManager em = factory.createEntityManager();
 ```
@@ -13511,13 +13404,11 @@ EntityManagerFactory factory;
 EntityManager em;
 @Resource
 UserTransaction userTransaction;
-
 ...
 em = factory.createEntityManager();
 Employee newEmployee = new Employee();
-newEmployee.firstName = "Mary";
-newEmployee.lastName = "Thompson";
-
+newEmployee.firstName="Mary";
+newEmployee.lastName="Thompson";
 try {
     userTransaction.begin();
     em.persist(newEmployee);
@@ -13539,7 +13430,7 @@ try {
 EntityManager em;
 List<Employee> employees;
 ...employees = em.createQuery(
-    "SELECT e FROM Employee AS e WHERE e.firstName = 'Mary' AND e.lastName = 'Thompson'").getResultList();
+    "SELECT e FROM Employee AS e WHERE e.firstName='Mary' AND e.lastName='Thompson'").getResultList();
 ```
 
 此查询仅适用于全名为 Mary Thompson 的员工。在创建的查询对象上调用 `getResultList()` 方法。如果你期望结果只有一个实体，请改调用 `getSingleResult()` 方法。为了动态指定名和姓，你应该使用参数；例如：
@@ -13547,7 +13438,6 @@ List<Employee> employees;
 ```java
 EntityManager em;
 List<Employee> employees;
-
 // 参数
 String firstName = "Mary";
 String lastName = "Thompson";
@@ -13557,29 +13447,7 @@ employees = em.createQuery(
 
 
 
-"SELECT e FROM Employee AS e WHERE
-e.firstName = :name AND e.lastName = :name"
-.setParameter("name", lastName)
-.setParameter("name", firstName)
-.getResultList());
-
-`EntityManager` 实例管理一个持久化单元（persistence unit）——配置文件 `persistence.xml` 中的一组类，它位于部署的 EJB jar 包的 `META-INF` 目录下。如果你将应用程序打包在 `.war` 文件，它必须位于 `WEB-INF/` 目录。
-
-```xml
-<persistence>
-    <persistence-unit name="EmployeeManagement">
-        <description>此单元管理员工</description>
-        <jta-data-source>jdbc/Database</jta-data-source>
-        <jar-file>EmployeeApp.jar</jar-file>
-        <class>Employee</class>
-        <class>Address</class>
-    </persistence-unit>
-</persistence>
-```
-
-* `persistence-unit` 元素必须指定唯一名称。包含在持久化单元中的类必须在你的 Java 应用中配置为 JNDI 资源。
-
-## Bean 验证
+## Bean 验证 (BEAN VALIDATION)
 
 当用户输入数据时可能会出错。输入验证应在客户端完成，以防止数据错误或不完整产生服务器请求。然后数据传输到服务器，服务器也必须进行验证以防止劫持并修改数据的恶意用户。Bean Validation 框架受所有 Java 实现服务器的支持。它是确保实体值正确的 Java API。你可以在实体上定义约束，并在创建、更新或删除实体时自动触发验证。你也可以在映射 Bean 的类、字段或方法上放置内置注解来定义约束。验证是通过创建自定义注解并实现 `ConstraintValidator` 接口的 `isValid()` 方法来实现的。示例 32-1 使用 `javax.validation.constraints` 包定义的 `@NotNull` 和 `@Size` 约束定义字段验证，你可以创建并实现自定义验证规则。可以使用实体类的非静态方法。
 
@@ -13589,7 +13457,7 @@ e.firstName = :name AND e.lastName = :name"
 
 ```java
 @PrePersist
-public void validateTransfer(){
+public void validateTransfer() {
     if (!transferApproved()) {
         throw new TransferException("经理未批准传输");
     }
@@ -13608,7 +13476,7 @@ public Employee getEmployee() {
 
 ```java
 @ValidateEmploymentDates(start="hireDate", end="resignationDate")
-public class Employee{
+public class Employee {
     Date hireDate;
     Date resignationDate;
 }
@@ -13620,7 +13488,7 @@ public class Employee{
 @Target({ TYPE, ANNOTATION_TYPE })
 @Retention(RUNTIME)
 @Constraint(validatedBy = {EmploymentValidator.class})
-@interface ValidateEmploymentDates{
+@interface ValidateEmploymentDates {
     String message() default "(end) 应该晚于 (start) 且不能落在周末和假日";
     String start();
     String end();
@@ -13634,8 +13502,7 @@ public class Employee{
 实现此验证的类必须实现 `javax.validation.ConstraintValidator` 接口，该接口声明了两个方法：`initialize()` 和 `isValid()`。第一个方法初始化要验证的值，第二个方法实现验证逻辑。
 
 ```java
-public class EmploymentValidator implements
-    ConstraintValidator<ValidateEmploymentDates, Employee> {
+public class EmploymentValidator implements ConstraintValidator<ValidateEmploymentDates, Employee> {
     private String start;
     private String end;
 
@@ -13644,8 +13511,7 @@ public class EmploymentValidator implements
         end = validateEmploymentDates.end();
     }
 
-    public boolean isValid(Employee employee,
-        ConstraintValidatorContext constraintValidator) {
+    public boolean isValid(Employee employee, ConstraintValidatorContext constraintValidator) {
         // 在此处实现验证逻辑。
         // 如果有效则返回 true，无效则返回 false
     }
@@ -13668,102 +13534,97 @@ GlassFish 4 服务器包含了 JPA 2.1 提供者 [EclipseLink]，它是一个开
 
 ## 逐步步骤
 
-1. 这次你创建了一个新类型的 Eclipse 项目。通过选择 `File -> New -> JPA project` 创建一个新的 JPA 项目。将其命名为 `Lesson32`。选择 GlassFish 4 作为目标运行时，并选择 JPA Configuration 2.1，如图 32-1 所示。
+1.  这次你创建了一个新类型的 Eclipse 项目。通过选择 `File -> New -> JPA project` 创建一个新的 JPA 项目。将其命名为 `Lesson32`。选择 GlassFish 4 作为目标运行时，并选择 JPA Configuration 2.1，如图 32-1 所示。
 
-474 | 第 32 节 JAVA PERSISTENCE API 概览
+    ![](img/c6ae2d81738909a4b5328d6eddc14dd7_509_0.png)
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_509_0.png)
+2.  弹出的窗口建议默认输出目录的名称。在那里不要更改任何内容；点击 `Next`。
 
-2. 弹出的窗口建议默认输出目录的名称。在那里不要更改任何内容；点击 `Next`。
+3.  JPA Facet 窗口允许你选择 JPA 实现——实现 JPA 规范的库。`User Library` 框最初是空的。点击它旁边的小图标，然后在 `Preferences` 窗口中点击 `New` 来配置新库。将其命名为 `EcLink.ink`。
 
-3. JPA Facet 窗口允许你选择 JPA 实现——实现 JPA 规范的库。`User Library` 框最初是空的。点击它旁边的小图标，然后在 `Preferences` 窗口中点击 `New` 来配置新库。将其命名为 `EcLink.ink`。
+4.  为了包含 EclipseLink 实现，将 `folder/glassfish4/glassfish/modules` 文件夹下的外部 jar 文件添加到你的 EclipseLink 用户库：
 
-4. 为了包含 EclipseLink 实现，将 `folder/glassfish4/glassfish/modules` 文件夹下的外部 jar 文件添加到你的 EclipseLink 用户库：
+    ```
+    org.eclipse.persistence.antlr.jar
+    org.eclipse.persistence.asm.jar
+    org.eclipse.persistence.corre.jar
+    org.eclipse.persistence.demos.jar
+    org.eclipse.persistence.jpa.jar
+    org.eclipse.persistence.jpql.jar
+    org.eclipse.persistence.modelgen.processor.jar
+    org.eclipse.persistence.moxy.jar
+    org.eclipse.persistence.oracle.jar
+    javax.persistence.jar
+    ```
 
-```
-org.eclipse.persistence.antlr.jar
-org.eclipse.persistence.asm.jar
-org.eclipse.persistence.corre.jar
-org.eclipse.persistence.demos.jar
-org.eclipse.persistence.jpa.jar
-org.eclipse.persistence.jpql.jar
-org.eclipse.persistence.modelgen.processor.jar
-org.eclipse.persistence.moxy.jar
-org.eclipse.persistence.oracle.jar
-javax.persistence.jar
-```
+5.  点击 `Finish` 按钮，Eclipse JPA 项目的生成将完成。你的项目结构应该类似于图 32-2。
 
-5. 点击 `Finish` 按钮，Eclipse JPA 项目的生成将完成。你的项目结构应该类似于图 32-2。
+    ![](img/c6ae2d81738909a4b5328d6eddc14dd7_510_0.png)
 
-尝试一下 | 475
+    图 22：带有 EclipseLink 的新生成的 Eclipse JPA 项目
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_510_0.png)
+6.  使用 `t:networkServer` 命令启动你的数据库服务器，正如 [create-a-database-with-derby] 第 21 节中解释的那样。
 
-图 22：带有 EclipseLink 的新生成的 Eclipse JPA 项目
+7.  在单独的命令行窗口中使用实用程序，检查数据库 `Lesson21` 是否以及 `Lesson21` 中的 `Employee` 表是否存在。
 
-6. 使用 `t:networkServer` 命令启动你的数据库服务器，正如 [create-a-database-with-derby] 第 21 节中解释的那样。
+8.  将 `derby.jar` 文件添加到项目的构建路径中。
 
-7. 在单独的命令行窗口中使用实用程序，检查数据库 `Lesson21` 是否以及 `Lesson21` 中的 `Employee` 表是否存在。
+9.  在项目中右键点击 `Data Source` 以创建新的配置。
 
-8. 将 `derby.jar` 文件添加到项目的构建路径中。
-
-9. 在项目中右键点击 `Data Source` 以创建新的配置。
-
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_511_0.png)
+    ![](img/c6ae2d81738909a4b5328d6eddc14dd7_511_0.png)
 
 10. 在弹出的窗口中配置连接、架构和表。
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_512.png)
+    ![](img/c6ae2d81738909a4b5328d6eddc14dd7_512.png)
 
-图 32：连接
+    图 32：连接
 
 11. 点击 `Test` 确保连接成功。
 
 12. 在 Eclipse 中右键点击检查表是否存在，如图 32-5 所示。
 
-478 | 第 32 节 JAVA PERSENCE API
+    ![](img/c6ae2d81738909a4b5328d6eddc14dd7_513.png)
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_513.png)
-
-图 32：验证表
+    图 32：验证表
 
 13. 如果表没有定义主键，你可以通过执行以下命令来修复：`alter table APP.Employee add primary key (empno);`
 
 14. 右键点击项目 `Lesson32` 并选择 `JPA Tools -> Generate Entities`，如图 32-7 所示。
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_514.png)
+    ![](img/c6ae2d81738909a4b5328d6eddc14dd7_514.png)
 
-图 32：生成实体
+    图 32：生成实体
 
 15. 打开 Eclipse 项目中的 `src` 文件夹，你将发现一个新生成的类 `Employee`，如下：
 
-```java
-package model;
+    ```java
+    package model;
 
-import java.io.Serializable;
-import javax.persistence.*;
+    import java.io.Serializable;
+    import javax.persistence.*;
 
-/** EMPLOYEE 表的持久化类。 */
-@Entity
-@NamedQuery(name="Employee find", query="SELECT e FROM Employee e")
-public class Employee implements Serializable {
-    private static final long serialVersionUID = 1L;
-    @Id int empno;
-    private String ename;
-    @Column(name="JOB_TITLE") private String jobTitle;
+    /** EMPLOYEE 表的持久化类。 */
+    @Entity
+    @NamedQuery(name="Employee find", query="SELECT e FROM Employee e")
+    public class Employee implements Serializable {
+        private static final long serialVersionUID = 1L;
 
-    public Employee() { }
+        @Id int empno;
+        private String ename;
+        @Column(name="JOB_TITLE") private String jobTitle;
 
-    public int getEmpno() { return this.empno; }
-    public void setEmpno(int empno) { this.empno = empno; }
-    public String getName() { return this.ename; }
-    public void setName(String fname) { this.ename = fname; }
-    public String getJobTitle() { return this.jobTitle; }
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
+        public Employee() { }
+
+        public int getEmpno() { return this.empno; }
+        public void setEmpno(int empno) { this.empno = empno; }
+        public String getName() { return this.ename; }
+        public void setName(String fname) { this.ename = fname; }
+        public String getJobTitle() { return this.jobTitle; }
+        public void setJobTitle(String jobTitle) {
+            this.jobTitle = jobTitle;
+        }
     }
-}
-```
+    ```
 
 最后，打开 `META-INF` 文件夹，你将发现 `persistence.xml`：
 
@@ -13791,7 +13652,7 @@ Eclipse 从现有的数据库表生成 Java 类 `Employee`。这完成了你的�
 
 传统的 JSP/Service/JSF Web 应用与 Web 服务之间的区别在于，后者仅提供数据，而不关心客户端用户界面（UI）的外观。例如，一个实例可以提供有关其产品的信息，或者一个共同基金可以将其数据作为 Web 服务暴露出来并返回 XML 文档。客户端不需要知道该公司是否使用 Oracle 的服务器运行应用程序，或者该共同基金是否在 IBM 的大型机上运行。
 
-Java EE 包含了两种不同 Web 服务实现的规范：`JAX-WS` 和 `JAX-RS`，我将在下文中讨论它们。再次看一眼第 25 节中的示例架构图，注意我将这些 API 放置在不同的位置——一个在提供者层（Provider tier），一个在客户端。只需将 Web 服务视为一种可以通过 HTTP 请求检索的有用数据的暴露机制即可。
+Java EE 包含了两种不同 Web 服务实现的规范：`JAX-WS` 和 `JAX-RS`，我将在下文中讨论它们。再次看一眼第 25 节中的示例架构图，注意我将这些 API 放置在不同的位置——一个在提供者层，一个在客户端。只需将 Web 服务视为一种可以通过 HTTP 请求检索的有用数据的暴露机制即可。
 
 有数以万计可用的 Web 服务 API 用于获取各种数据。你可以在 ProgrammableWeb 目录找到许多实用的 Web 服务。企业也会为了其内部需求使用私有的 Web 服务。
 
@@ -13884,13 +13745,11 @@ while (parser.hasNext()) {
       System.out.println(event.toString());
       break;
     case KEY_NAME:
-      System.out.print(event.toString() + " : " +
-        parser.getString() + " - - ");
+      System.out.print(event.toString() + " : " + parser.getString() + " - - ");
       break;
     case VALUE_STRING:
     case VALUE_NUMBER:
-      System.out.println(event.toString() + " : " +
-        parser.get());
+      System.out.println(event.toString() + " : " + parser.get());
       break;
   }
 }
@@ -13940,8 +13799,7 @@ public class JavaStreaming {
 public class JavaToJSON {
   public static void main(String[] args) {
     Product pr = new Product("777", "Chanel Handbag", 1000.00);
-    try (OutputStream fos = 
-         new FileOutputStream("product_from_object.json");
+    try (OutputStream fos = new FileOutputStream("product_from_object.json");
          JsonWriter jsonWriter = Json.createWriter(fos)) {
       JsonObjectBuilder prBuilder = Json.createObjectBuilder();
       prBuilder.add("id", pr.getId())
@@ -14245,15 +14103,10 @@ public class HelloWorldGlobalLogger {
     private static Logger logger = Logger.getGlobal();
 
     public static void main(String[] args) {
-
         logger.fine("Hello world!");
-
         logger.info("Hello world!");
-
         logger.severe("Hello severe!");
-
     }
-
 }
 ```
 
@@ -14294,17 +14147,13 @@ public class HelloWorldLogger {
     private static Logger helloLogger = Logger.getLogger(HelloWorldLogger.class.getName());
 
     public static void main(String[] args) {
-
         helloLogger.info("Trying to divide by zero");
-
         try {
-            int result = 25/0;
+            int result = 25 / 0;
         } catch (ArithmeticException e) {
             helloLogger.severe("Division by zero");
         }
-
     }
-
 }
 ```
 
@@ -14344,7 +14193,6 @@ log(Level.FINE, "Hello world");
 要将处理器分配给日志器，你需要创建一个之前提到的处理器的实例，并通过调用 `addHandler()` 方法将其添加到 Logger：
 
 ```java
-FileHandler helloHandler;
 FileHandler helloHandler = new FileHandler("HelloWorld.log");
 logger.addHandler(helloHandler);
 ```
@@ -14359,17 +14207,13 @@ import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-```
 
-```java
 public class HelloWorld {
 
     private static Logger logger = Logger.getLogger(HelloWorld.class.getName());
 
     public static void main(String[] args) {
-
         FileHandler helloFileHandler;
-
         try {
             helloFileHandler = new FileHandler("logs/helloWorld.log");
             logger.addHandler(helloFileHandler);
@@ -14385,7 +14229,9 @@ public class HelloWorld {
 
 
 
-# Java 日志 API 示例
+# Java 日志 API 详解
+
+## 示例代码：WorldHandlers 程序
 
 ```java
 hellogger.fine("Hello from fine world");
@@ -14487,7 +14333,7 @@ FileHandler handler =
     new FileHandler("logs/HelloWorld.log", 1000, 3);
 ```
 
-你可以在本节的“尝试一下”部分看到此代码。
+你可以在本节的“动手尝试”部分看到此代码。
 
 ## 格式化器和过滤器
 
@@ -14505,6 +14351,7 @@ import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 public class MyFormatter extends Formatter {
+
     @Override
     public String format(LogRecord logRecord) {
         return logRecord.getSourceClassName() + "=="
@@ -14532,7 +14379,7 @@ com.lesson34.HelloWorldHandlers=main=>Division by zero
 
 ### 过滤器
 
-通过过滤器，你可以编写逻辑来决定特定的 `LogRecord` 是否应该被记录。如果你想发布特定的 `LogRecord`，只需返回 `false`，否则返回 `true`。`Filter` 是一个只有一个方法的接口。记得第 37 节中的函数式接口。你可以通过 Lambda 表达式实现过滤器。
+通过过滤器，你可以编写逻辑来决定特定的 `LogRecord` 是否应该被记录。如果你想发布特定的 `LogRecord`，只需返回 `true`，否则返回 `false`。`Filter` 是一个只有一个方法的接口。记得第 37 节中的函数式接口。你可以通过 Lambda 表达式实现过滤器。
 
 以下示例生成股票随机价格，但它只记录大于 $60 的股票：
 
@@ -14544,34 +14391,31 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class StockQuotePublisher {
+
     private static Logger stockLogger = 
         Logger.getLogger(StockQuotePublisher.class.getName());
 
     // 一个 Lambda 表达式
-    static Filter expenseStocks = (logRecord) -> {
+    static Filter expensiveStocks = (logRecord) -> {
         Object[] parameters = logRecord.getParameters();
         Double price = ((Double) parameters[0]).doubleValue();
-        return (price > 60) ? true : false;
+        return (price > 60);
     };
-}
-```
 
-```java
-public static void main(String args[]) {
-    stockLogger.setFilter(expensiveStocks);
-    getPrice("IBM");
-    getPrice("MSFT");
-    getPrice("AAPL");
-    getPrice("CAT");
-    getPrice("VZ");
-}
-```
+    public static void main(String args[]) {
+        stockLogger.setFilter(expensiveStocks);
+        getPrice("IBM");
+        getPrice("MSFT");
+        getPrice("AAPL");
+        getPrice("CAT");
+        getPrice("VZ");
+    }
 
-```java
-private static double getPrice(String stockSymbol) {
-    double price = Math.random() * 100;
-    stockLogger.log(Level.INFO, stockSymbol + " ", price);
-    return price;
+    private static double getPrice(String stockSymbol) {
+        double price = Math.random() * 100;
+        stockLogger.log(Level.INFO, stockSymbol + " ", price);
+        return price;
+    }
 }
 ```
 
@@ -14661,11 +14505,17 @@ logger.info("Hello World!");
 
 如果 John 和 Mary 使用相同的源代码，Java 编译器可能会捕获此错误。但如果 Mary 将编译后的代码打包成 JAR 文件并连接...
 
-- QA 测试不是由软件开发人员执行的；而是经过专门培训的 IT 人员使用软件开发人员编写的应用程序并识别功能上的问题——例如，图形用户界面 (GUI) 中的“下订单”按钮允许用户下订单，即使用户不是专家。在某些情况下，QA 工程师可以捕获错误。在很多情况下，他们使用测试自动化软件（如 Selenium 或 Quick Test）。他们使用脚本语言为不同的用例编写脚本，供软件开发人员提供代码修复。所有错误都会报告在问题跟踪系统中。
+## QA 测试
+
+QA 测试不是由软件开发人员执行的；而是经过专门培训的 IT 人员使用软件开发人员编写的应用程序并识别功能上的问题——例如，图形用户界面 (GUI) 中的“下订单”按钮允许用户下订单，即使用户不是专家。在某些情况下，QA 工程师可以捕获错误。在很多情况下，他们使用测试自动化软件（如 Selenium 或 Quick Test）。他们使用脚本语言为不同的用例编写脚本，供软件开发人员提供代码修复。所有错误都会报告在问题跟踪系统中。
+
+## 用户验收测试
 
 用户验收测试由用户执行。它通常被称为黑盒测试，因为软件是独立构建的。尽管 QA 工程师可以发现大量问题，但他们并不是软件编写所针对业务领域的专家。例如，一个为保险代理人设计的应用程序会检查代理人在某些州是否拥有业务执照，而她并不是专家。这类错误可以由用户发现。
 
-- 压力测试或负载测试必须确保应用程序保持运行。负载测试工具（如 Apache JMeter 或 NeedLoad）允许设置多个组件并模拟大量用户运行您的应用程序。然而，一个良好的应用程序应该是能够运行数小时，但在用户数量增加到 100 时无响应的。
+## 压力测试或负载测试
+
+压力测试或负载测试必须确保应用程序保持运行。负载测试工具（如 Apache JMeter 或 NeedLoad）允许设置多个组件并模拟大量用户运行您的应用程序。然而，一个良好的应用程序应该是能够运行数小时，但在用户数量增加到 100 时无响应的。
 
 理想情况下，应该有一份名为服务水平协议 (SLA) 的文档，定义正在开发的软件的并发用户数和可接受的响应时间。精明的项目经理会在开发开始之前签署 SLA。如果用户开始抱怨等待 10 秒，您应该检查 SLA，要么改进响应，要么拒绝用户的请求。
 
@@ -14681,7 +14531,7 @@ JUnit 是一个开源单元测试框架，可以从 `http://junit.org` 下载。
 - 测试套件 (Test suite) 是一组运行的测试类。
 - 异常测试 (Exception testing) 检查在应该抛出异常的地方抛出了异常，或者在不应该抛出异常的地方没有抛出。
 - 测试运行器 (Test runner) 是可以运行测试的工具。
-- 规则 (Rules) 允许添加适用于测试类中所有测试的功能，但这种方式更通用。
+- 规则 (Rules) 允许添加测试类中所有测试的功能，但这种方式更通用。
 - 理论 (Theories) 允许组合断言以更清晰地说明测试假设。
 - 断言 (Assertions) 根据某些标准选择性地忽略某些测试。
 - 参数 (Parameters) 允许您准备一组数据并作为参数传递。
@@ -14755,7 +14605,7 @@ public double applyDeduction(double taxAmount, int dependents) {
 }
 ```
 
-为什么要使用接口？
+### 为什么要使用接口？
 
 您可能会问，“为什么我甚至需要为这样的类创建一个接口？”设计接口是一个好主意，因为它能清晰地暴露应用程序接口 (API) 并在无需更改类的情况下测试。现在在 `src/test/java` 中创建一个包。选择此包并通过 File -> New Test Case 让 Eclipse 生成测试类。Eclipse 会显示一个窗口，您在其中输入类名 TaxTest，以及被测类名 Tax。（见图 35-2。）
 
@@ -14816,7 +14666,14 @@ public class TaxTest {
 
 
 
-# JUnit 简介
+`Assert` 类有 `assertEquals()` 方法的多个重载，用于检查预期值是否等于实际值。我使用了带有以下参数的方法：
+
+- 测试失败时显示的消息
+- 预期值
+- 在测试主体上要调用的方法
+- 预期值与实际值之间的最大差异（`delta`），在此范围内的两个数字仍被视为相等
+
+使用测试运行器执行此测试返回成功。在前面的示例中，调用 `assertEquals()` 时更改预期值或 `delta`，测试将失败。JUnit 有许多种版本的 `assert()` 方法，例如检查布尔值是否为真的 `assertTrue()`，以及检查值是否不为空的 `assertNotNull()`。这些方法的名称是言自自明的，且非常易于理解。
 
 ## 静态导入
 
@@ -14922,7 +14779,7 @@ JUnit 提供了几个位于 `org.junit.runner` 包中的测试运行器。`JUnit
 @RunWith(Suite.class)
 ```
 
-在 `Parameterized`、`Categories` 和 `Enclose` 类中还实现了其他专门的运行器。此外许多第三方运行器。
+在 `Parameterized`、`Categories` 和 `Enclosed` 类中还实现了其他专门的运行器。此外还有许多第三方运行器。
 
 在 Eclipse 中使用测试运行器对于开发并不方便，但在实际项目中，你应该将单元测试整合到构建脚本中。你需要知道如何在没有 IDE 的情况下启动 JUnit 运行器。你可以通过以下方法之一在任何 IDE 之外启动运行器：
 
@@ -14958,19 +14815,23 @@ core.run(AllTests.class);
 java org.junit.runner.JUnitCore tax.TestTest
 ```
 
-# 尝试一下 (TRY IT)
+第 36 节解释了如何使用 Gradle 实现构建自动化。如果你为应用程序创建了单元测试，就可以轻松地将它们整合到构建过程中，这样它们就可以无需 IDE 手动干预即可运行。在“尝试一下”部分，你将练习从命令行使用 JUnit 测试运行器。
+
+在本节中，你已经学习了如何使用 JUnit 框架编写简单的单元测试。对于更高级的测试，你应该学习 JUnit 的在线文档。其他可以用于单元测试的框架还有 TestNG 和 Spock。我还可以推荐你观看 Pavel Lipinski 的演示文稿《Java 测试驱动开发的工具链》。
+
+## 尝试一下
 
 在本次作业中，你需要从命令行运行本节描述的测试类。首先，你创建一个带有调用运行器代码的 Java 类。然后你尝试另一种启动运行器的方法；从命令行启动 JUnit 运行器。
 
-## 课程要求
+### 课程要求
 
 你应该安装了 Java 并准备好了 JUnit JAR 包。
 
 > 注意：你可以从书的网页 www.wrox.com/java/javprog24hr2e 下载“尝试一下”的代码和资源。你可以在下载包的 Lesson35 文件夹中找到它们。
 
-## 步骤详解
+### 步骤详解
 
-1. 继续为 Eclipse 项目 Lesson35 创建的目录结构。在 `src/test/java` 目录下创建一个名为 `TestCommandLineRunner` 的类，内容如下：
+1. 继续为 Eclipse 项目 Lesson35 创建的目录结构。在 `src/test/java` 目录下创建一个名为 `TestCommandLineRunner` 的类，并内容如下：
 
 ```java
 package test;
@@ -15047,7 +14908,7 @@ OK (3 tests)
 
 本节首先对旧的构建工具 Ant 和 Maven 进行非常简短的介绍，然后你将熟悉一种名为 Gradle 的现代构建自动化工具。
 
-## 使用 Ant 实现 HELLO WORLD
+## 使用 Ant 实现 Hello World
 
 大约十五年前，Apache Ant 是 Java 世界最流行的构建工具。Ant 中的构建被描述在一个文件中，该文件包含了若干个构建应该实现的目标——序列——例如：编译、打包和运行。一个目标由任务组成，例如 `mkdir` 和 `javac`。
 
@@ -15088,7 +14949,7 @@ OK (3 tests)
 
 `jar` 目标创建 `build/jar` 目录，然后从编译后的类创建一个 jar 文件，并将 `HelloWorld` 类指定为可运行程序。`run` 目标启动应用程序。如果你进入 `build.xml` 所在的目录并输入不带参数的 `ant` 命令，默认会运行 `main` 目标。
 
-你还可以添加自定义的 `<property>` 标签（例如命名源目录或目标目录）以及列出本应添加到 `CLSPATH` 环境变量中的 JAR 文件的 `<path>` 元素。
+你还可以添加自定义的 `<property>` 标签（例如命名源目录或目标目录）以及列出本应添加到 `CLASSPATH` 环境变量中的 JAR 文件的 `<path>` 元素。
 
 大多数目标依赖于另一个目标的成功（参见 `depends` 属性）。如果 `depends` 属性中列出的任何目标失败，该目标的执行单元就会失败。编写此类关于必须做什么的详细指令是指导构建的强制性方法。
 
@@ -15111,10 +14972,10 @@ ant compile jar run
 Maven 中最小的工作单元被称为目标（goal）。你可以通过打开命令行或终端并输入带有 `archetype:generate` 目标的 `mvn` 命令，从生成标准项目结构开始开发：
 
 ```bash
-mvn archetype:generate -DgroupId=hello.app -DartifactId=Lesson36 -DarchetypeId=maven-archetype-quickstart -DinteractiveMode=false
+mvn archetype:generate -DgroupId=hello.app -DartifactId=Lesson36 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 ```
 
-## 使用 Gradle 构建构建自动化
+## 使用 Gradle 实现构建自动化
 
 几秒钟后，`Lesson36` 目录中生成了图 36-2 所示的目录和文件。
 
@@ -15163,9 +15024,9 @@ mvn archetype:generate -DgroupId=hello.app -DartifactId=Lesson36 -DarchetypeId=m
 </project>
 ```
 
-## 构建 Hello World
+### 构建 Hello World
 
-虽然 Gradle 提供的功能并不多，但你可以将其作为不同编程语言的构建工具。所有特定语言的特性都以插件的形式提供，你只需要添加项目所需的插件即可。有些插件是开箱即用的，你也可以编写自己的插件来扩展 Gradle。
+虽然 Gradle 提供的功能并不多，但你可以将其作为不同编程语言的构建工具。所有特定语言的特性都以插件（plug-ins）的形式提供，你只需要添加项目所需的插件即可。有些插件是开箱即用的，你也可以编写自己的插件来扩展 Gradle。
 
 这里有一个简单的脚本 `build.gradle`，它可以执行几项任务。特别是，它可以编译位于 `src/main/java` 目录下的 Java 类：
 
@@ -15173,7 +15034,7 @@ mvn archetype:generate -DgroupId=hello.app -DartifactId=Lesson36 -DarchetypeId=m
 apply plugin: 'java'
 ```
 
-`build.gradle` 应该位于与 `src` 相同的目录下。要运行构建，请在此目录下打开命令行或终端并运行构建任务：
+`build.gradle` 应该位于与 `src` 相同的目录下。要运行构建，请在此目录下打开命令行（Command）或终端（Terminal）并运行构建任务：
 
 ```bash
 gradle build
@@ -15188,10 +15049,10 @@ Total time: 3.15 secs
 :>Hello yafins gradle build
 :compileJava
 :processResources UP-TO-DATE
-:classes
+classes
 :assemble
 :compileTest UP-TO-DATE
-:processTestResources UP-TO-DATE
+processTestResources UP-TO-DATE
 :testClasses UP-TO-DATE
 :test UP-TO-DATE
 :build
@@ -15201,9 +15062,9 @@ Total time: 3.675 secs
 
 **图 36-4：** 首次运行 Gradle 构建命令
 
-注意，`build` 任务启动了一系列其他任务：`compileJava`、`processResources`、`classes`、`jar` 等。实际上，某些任务被标记为 `UP-TO-DATE`——它们没有运行，因为你在 `src/main/resources` 下没有任何资源，在 `src/test/java` 下没有测试类。你还没有包含另一个可以检查代码质量的插件。现在再次运行 Gradle 构建任务。输出看起来会有所不同，如图 36-5 所示。
+注意，`build` 任务启动了一系列其他任务：`compileJava`、`processResources`、`classes`、`jar` 等。实际上，某些任务被标记为 `UP-TO-DATE`（已更新）——它们没有运行，因为你在 `src/main/resources` 下没有任何资源，在 `src/test/java` 下没有测试类。你还没有包含另一个可以检查代码质量的插件。现在再次运行 Gradle 构建任务。输出看起来会有所不同，如图 36-5 所示。
 
-## Gradle 基础
+### Gradle 基础
 
 ```
 Yakov:HelloWorld yfain1$ gradle build
@@ -15226,7 +15087,7 @@ Yakov:HelloWorld yfain1$ _
 
 图 36-5：运行 Gradle 构建
 
-这次 Gradle 无事可做，因为包括编译后的类和 JAR 包在内的所有内容都是最新的。这种特性被称为**增量构建**——Gradle 不会运行那些产生相同结果的任务。
+这次 Gradle 无事可做，因为包括编译后的类和 JAR 包在内的所有内容都是最新的。这种特性被称为**增量构建**（incremental build）——Gradle 不会运行那些产生相同结果的任务。
 
 `compileJava` 任务支持增量 Java 编译，通过只编译已修改的类来节省时间。
 
@@ -15236,17 +15097,17 @@ Yakov:HelloWorld yfain1$ _
 
 图 36-6：运行 Gradle 构建任务后的 Hello World 项目
 
-`classes` 目录包含编译后的类，`libs` 目录包含内部有 HelloWorld 的 JAR 文件（由 `Jar` 任务创建）。
+`classes` 目录包含编译后的类，`libs` 目录包含内部有 `HelloWorld` 的 JAR 文件（由 `Jar` 任务创建）。
 
 > **指定构建文件名**
 >
 > 默认情况下，Gradle 假设构建脚本的名为 `build.gradle`。但如果你想在同一个目录下保留多个文件，你可以始终使用 `-b` 命令行选项并输入构建文件名；例如：
->
-> ```bash
-> gradle -b mySecondBuildFile.gradle build
-> ```
 
-## 运行 Hello World
+```bash
+gradle -b mySecondBuildFile.gradle build
+```
+
+### 运行 Hello World
 
 你可以通过输入以下命令像编译其他程序一样编译 `HelloWorld` 类：
 
@@ -15259,7 +15120,7 @@ java -cp build/classes/main hello.HelloWorld
 ```gradle
 apply plugin: 'java'
 apply plugin: 'application'
-mainClassName = "hello.HelloWorld"
+mainClassName="hello.HelloWorld"
 ```
 
 现在在命令行输入 `gradle run`，你将看到控制台上打印出 Hello World 信息。
@@ -15269,7 +15130,7 @@ mainClassName = "hello.HelloWorld"
 ```gradle
 apply plugin: "java"
 apply plugin: "application"
-mainClassName = "hello.HelloWorld"
+mainClassName="hello.HelloWorld"
 
 jar {
   manifest {
@@ -15287,7 +15148,7 @@ Main-Class: hello.HelloWorld
 
 你的 `build.gradle` 文件看起来比使用 Ant 编写的短得多，在使用 Ant 时，你需要创建 `MANIFEST` 文件并将其放入 JAR 中。
 
-## 修改构建约定
+### 修改构建约定
 
 我并不鼓励你更改默认的项目布局，但在某些情况下，你需要将 Gradle 引入到具有不同结构的现有项目中。`SourceSet` API 允许你更改 Gradle 的约定。SourceSet 是一个概念，代表一组会被编译和执行的文件（类和资源）。
 
@@ -15298,7 +15159,7 @@ Main-Class: hello.HelloWorld
 ```gradle
 apply plugin: "java"
 apply plugin: "application"
-mainClassName = "hello.HelloWorld"
+mainClassName="hello.HelloWorld"
 
 jar {
   manifest {
@@ -15325,7 +15186,7 @@ libsDirName = '../libs'
 
 本节展示了如何处理那些不与默认约定匹配的源代码和资源存放位置。
 
-## 使用 Gradle 管理依赖关系
+### 使用 Gradle 管理依赖关系
 
 真实世界的项目通常依赖于外部库。例如，第 21 节的 JDBC 示例如果没有封装在 `dependency.jar` 中的数据库驱动程序将无法工作。为了为连接数据库的应用程序创建构建脚本，你需要将此 JAR 添加到你的 `build.gradle` 脚本中。
 
@@ -15356,7 +15217,7 @@ mainClassName = 'EmployeeList'
 
 
 
-运行`gradle build`不产生错误，并在`directory/build/classes/main/libs`目录下创建`EmployeeList.class`文件。当你执行命令`gradle run`时，它会抛出“No suitable driver”异常，如图 36-8 所示：
+运行 `gradle build` 不产生错误，并在 `directory/build/classes/main/libs` 目录下创建 `EmployeeList.class` 文件。当你执行命令 `gradle run` 时，它会抛出“No suitable driver”异常，如图 36-8 所示：
 
 ```
 Yakov:derbySample fail11$ gradle run
@@ -15404,6 +15265,8 @@ repositories{
     mavenLocal()
 }
 ```
+
+使用 Gradle 管理依赖
 
 默认情况下，Gradle 使用本地计算机上的 `USER_HOME/.m2/repository` 目录。该位置可以在 `.gradle` 设置文件中进行更改（详见 Gradle 文档）。
 
@@ -15557,13 +15420,9 @@ dependencies {
 
 Gradle 支持所有的 IDE，而 IDE 也支持 Gradle。Eclipse 的集成是一个由 Pivotal 创建的 Eclipse IDE 插件。
 
-安装插件后，我通过 `File Import -> Gradle Project` 导入了上一节中的 `HelloWorld` 项目。现在 `build.gradle` 上的右键菜单有一个 `Run As -> Gradle Build` 选项。你可以手动输入要运行的任务，也可以通过选择 `Window -> Show View -> Gradle -> Gradle Tasks` 打开任务。图 36-14 显示了导入的项目在我的电脑上的样子。
+安装插件后，我通过 `File Import -> Gradle Project` 导入了上一节中的 `HelloWorld` 项目。现在 `build.gradle` 上的右键菜单有一个 `Run As -> Gradle Build` 选项。你可以手动输入要运行的任务，也可以通过选择 `Window -> Show View -> Gradle -> Gradle Tasks` 打开任务。图 36-15 显示了 Eclipse 中我导入的项目 `HelloWorldEclipse` 的 Gradle 任务视图。
 
-![](img/c6ae2d81738909a4b5328d6eddc14dd7_583_0.png)
-
-FIGURE 36-14. Eclipse 中生成的 gradle
-
-## Eclipse 插件
+# Eclipse 插件
 
 Gradle 带了 Eclipse 插件：`eclipse` 和 `eclipse-wtp`：
 
@@ -15577,7 +15436,11 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 ```
 
-运行 gradle 命令，它会生成两个新文件——`.project` 和 `.classpath`，以及 `.settings` 目录。打开 Eclipse 并选择 `File -> Import -> Existing Projects into Workspace`，将 `HelloWorldEclipse` 为根目录。Eclipse 会导入项目，你可以像运行其他项目一样运行它。
+运行 gradle 命令，它会生成两个新文件——`.project` 和 `.classpath`，以及 `.settings` 目录。打开 Eclipse 并选择 `File -> Import -> Existing Projects into Workspace`，将 `HelloWorldEclipse` 为根目录。Eclipse 会导入项目，你可以像运行其他项目一样运行它。图 36-14 显示了导入的项目在我的电脑上的样子。
+
+![](img/c6ae2d81738909a4b5328d6eddc14dd7_583_0.png)
+
+FIGURE 36-14. Eclipse 中生成的 gradle
 
 用于生成动态 Web 项目的简单 `build.gradle` 文件可能如下：
 
@@ -15590,11 +15453,7 @@ apply plugin: 'eclipse-wtp'
 
 如果你需要从头重新生成 Eclipse 项目，运行 `gradle cleanEclipse` 命令以删除现有的项目文件。
 
-## Eclipse IDE 和 Gradle
-
-Gradle 支持 IDE，而 IDE 也支持 Gradle。Eclipse 的集成是一个由 Pivotal 创建的 Eclipse IDE 插件。
-
-安装插件后，我通过 `File Import -> Gradle Project` 导入了上一节中的 `HelloWorld` 项目。现在 `build.gradle` 上的右键菜单有一个 `Run As -> Gradle Build` 选项。你可以手动输入要运行的任务，也可以通过选择 `Window -> Show View -> Gradle -> Gradle Tasks` 打开任务。图 36-15 显示了 Eclipse 中我导入的项目 `HelloWorldEclipse` 的 Gradle 任务视图。
+# 尝试一下
 
 ![](img/c6ae2d81738909a4b5328d6eddc14dd7_584_0.png)
 
@@ -15647,9 +15506,7 @@ apply plugin: 'eclipse-wtp'
 
 > **提示（TIP）**：在 `www.wrox.com/go/javaprog24hr2e` 选择第 36 节的视频。你将下载该网站的代码和资源。
 
-# 37
-
-# Java 技术面试
+# 第 37 课 Java 技术面试
 
 技术职位面试是一场规则明确的游戏。在我的 Java 职业中，我多次担任过面试官和应试者的角色。在这一节中，我将与你分享关于招聘 Java 开发人员以及准备技术面试的见解。
 
@@ -15657,7 +15514,7 @@ apply plugin: 'eclipse-wtp'
 
 1. 获得面试机会
 2. 成功面试
-3. 考虑录取（offer）
+3. 考虑录取（Offer）
 
 我无法强调单独处理这些每个任务、一步一步来的有多么重要！让我们逐一讨论。
 
@@ -15667,13 +15524,13 @@ apply plugin: 'eclipse-wtp'
 
 如果你正在申请 Java 开发人员职位，没有人需要知道 10 年前的 Visual Basic 细节。始终根据你从招聘人员或经验丰富的程序员那里收到的反馈来更新你的简历。
 
-每份简历都有一个总结部分（summary），许多人用垃圾话浪费这个空间，比如“我正在寻找一个能让我提高才华的挑战性职位”。太浪费了！用这行总结来展示你的相关技能。
+每份简历都有一个总结部分（Summary），许多人用垃圾话浪费这个空间，比如“我正在寻找一个能让我提高才华的挑战性职位”。太浪费了！用这行总结来展示你的相关技能。
 
-假设你在过去两年中专攻 Java 消息传递（messaging），但这份工作需要 Web 开发人员。添加一句话，说明消息架构能够同时支持 Java 和 Web 客户端。招聘人员技术性不强——他们快速扫描简历以寻找所需关键词的存在。此外，你以前开发过 Web 应用程序的机会很大；在简历的总结部分突出你的这些经验。同一天，你可能想响应另一个寻找 Java 消息传递人才的人。
+假设你在过去两年中专攻 Java 消息传递（Messaging），但这份工作需要 Web 开发人员。添加一句话，说明消息架构能够同时支持 Java 和 Web 客户端。招聘人员技术性不强——他们快速扫描简历以寻找所需关键词的存在。此外，你以前开发过 Web 应用程序的机会很大；在简历的总结部分突出你的这些经验。同一天，你可能想响应另一个寻找 Java 消息传递人才的人。
 
 相应地修改你的总结，并发送一个强调你消息传递经验版本的简历；在这里你对 Web 的理解并不重要。
 
-人脉（Networking）是获得面试机会的另一种极佳方法。这次我不是在说 Java；我是在说结识 IT 人。参加当地的用户组（Users Groups），参加聚会（meetups），在 Twitter 上关注 Java 开发者，并参加会议和研讨会。
+人脉（Networking）是获得面试机会的另一种极佳方法。这次我不是在说 Java；我是在说结识 IT 人。参加当地的用户组（Users Groups），参加聚会（Meetups），在 Twitter 上关注 Java 开发者，并参加会议和研讨会。
 
 ## 面试表现良好
 
@@ -15681,7 +15538,7 @@ apply plugin: 'eclipse-wtp'
 
 做好你的功课，准备好讨论你在大学或实际项目中可能遇到的有趣且具有挑战性的问题。如果你没有超级复杂的项目，就选一个。另一个很好的来源是名为 Stackoverflow 的热门资源。这是开发者就不同编程语言和技术提问的地方。查看 Stackoverflow 的 Java 部分。
 
-例如，如果你准备好讨论并发（currency），在不讨论它的情况下是不离开面试的。如果面试官问你 Java 并发呢？这并不重要。找个方法将对话转向你准备的主题并尽尽全力。面试官会因为不需要问什么而感到高兴，而你也会有机会讨论准备充分的主题而感到高兴。
+例如，如果你准备好讨论并发（Concurrency），在不讨论它的情况下是不离开面试的。如果面试官问你 Java 并发呢？这并不重要。找个方法将对话转向你准备的主题并尽全力。面试官会因为不需要问什么而感到高兴，而你也会有机会讨论准备充分的主题而感到高兴。
 
 这种技巧一直有效。不，它在大多数时候有效。显然，你需要研究所选主题，否则会碰钉子。谈谈你解决过的挑战。
 
@@ -15689,7 +15546,7 @@ apply plugin: 'eclipse-wtp'
 
 ## 考虑录取机会
 
-技术面试是一场规则已知的游戏，但在很多情况下，面试官并没有准备好进行面试。有时他们只是照着一份准备好的问题清单来问。有些面试者会利用这一点，花时间学习入门课程，然后背诵技术面试的题答案。信不由你，在很多情况下这种方法是有效的。
+技术面试是一场规则已知的游戏，但在很多情况下，面试官并没有准备好进行面试。有时他们只是照着一份准备好的问题清单来问。有些面试者会利用这一点，花时间学习入门课程，然后背诵技术面试的题答案。信不信由你，在很多情况下这种方法是有效的。
 
 一个优秀的 Java 开发者除了理解抽象类和接口之间的区别外还需要知道什么？通常雇主寻找的是具备以下知识的人：Java Servlets、JSP、Spring 框架、JMS、任何商业消息面向型中间件、JDBC、JNDI、HTML、XML、Hibernate、构建工具、SQL、主流应用程序服务器之一，以及几个数据库管理系统。
 
@@ -15697,13 +15554,13 @@ apply plugin: 'eclipse-wtp'
 
 这里还有一条建议：评判你潜在雇主的架构。如果你被录用了，会有很多机会提供技术建议，所以要专注于获得录取（Offer）。记住，一步一步来！
 
-面试期间要保持精力，并表现出对工作的兴趣。即使你是一个技术大师，也不要表现得好像你你的出现就是在施恩。性格很重要。人们不喜欢自命不凡的大明星形象。
+面试期间要保持精力，并表现出对工作的兴趣。即使你是一个技术大师，也不要表现得好像你的出现就是在施恩。性格很重要。人们不喜欢自命不凡的大明星形象。
 
 准备好在白板上写代码并为此进行练习。面试官可能不会要求你这样做，但如果房间里有白板，开始在板上画出你的想法可能是个好主意。如果没有白板，就用记事本。面试是为了判断你的思考能力以及更有效地解决问题的方法，这比你背下了某个算法、类名或方法要重要得多。
 
 不需要急。如果你在白板上写代码片段，不要害怕犯错。思考正确的计划。练习向你的朋友解释小的代码片段；他们看到错误的方法并纠正它；这样他们不需要懂 Java 也能参与这些角色扮演游戏。
 
-数据结构和类的问题在面试中非常流行。例如，你需要能够解释什么时候使用链表（Linked List）比数组（Array）更好。有些人会在像“写一个程序反转单词中的字母”这样的简单任务上通过面试。在去面试之前买一本关于数据结构和算法的书并快速读一遍。
+数据结构和类的问题在面试中非常流行。例如，你需要能够解释什么时候使用链表（`LinkedList`）比数组（`Array`）更好。有些人会在像“写一个程序反转单词中的字母”这样的简单任务上通过面试。在去面试之前买一本关于数据结构和算法的书并快速读一遍。
 
 面试结束后，在你离开时，立即记录下刚刚发生的事情。不要推迟回到家里；你可能会忘记重要的细节。记下那些你可能没有回答正确的问题。这些问题需要你的关注和研究。在每次面试后提高你的技术技能。
 
@@ -15713,7 +15570,7 @@ apply plugin: 'eclipse-wtp'
 
 不要仅仅因为新工作每年多付 5,000 美元（扣税后每月不到 300 美元）就接受录取。如果一个录取能给你与有趣的技术或业务应用合作的机会，即使它不会多给你一分钱，也要接受它。
 
-录取的其他货币因素是健康福利、灵活的工作时间、通勤的便利性，或者仅仅是你对潜在雇主员工产生的一种亲近感。信不由你，有些人不会接受要求穿西装领领带的雇主的录取。只需对什么对你最重要做出决定——拥有一份有趣的工作还是能够展示你最新的纹身。
+录取的其他货币因素是健康福利、灵活的工作时间、通勤的便利性，或者仅仅是你对潜在雇主员工产生的一种亲近感。信不信由你，有些人不会接受要求穿西装领带的雇主的录取。只需对什么对你最重要做出决定——拥有一份有趣的工作还是能够展示你最新的纹身。
 
 无论你的偏好如何，都要掌握自己的职业生涯并建立你想要的生活。
 
@@ -15721,13 +15578,14 @@ apply plugin: 'eclipse-wtp'
 
 当市场健康时，主要的在线搜索引擎会显示数千个职位空缺，人们正在竞争这些工作。如今，一个老练的开发者必须了解 10 种不同的工具或技术才能找到好工作并感到几年的安全。在过去的五年里，我面试了 Java 开发者，我观察到了这些：
 
-- 人们不会匿名地自称为 Java 开发者或程序员；大多数人更倾向于 Java 架构师的头。遗憾的是，只有少数人真的理解 Java EE 组件是如何运行的或提出设计解决方案。Java EE 的知识并不是 Java 架构师应该知道的所有内容。
-
+- 人们不会匿名地自称为 Java 开发者或程序员；大多数人更倾向于 Java 架构师的头衔。遗憾的是，只有少数人真的理解 Java EE 组件是如何运行的或提出设计解决方案。Java EE 的知识并不是 Java 架构师应该知道的所有内容。
 - 应聘者的资历更深，我没有见过任何大学毕业生或初级程序员。许多初级职位被大量人数挤压，而且拥有计算机科学学位的毕业生人数在过去几年中有所下降。
-
 - 拥有软件技能并不会让简历脱颖而出。事实上，如果一份简历以证书列表开头，可能有点过头了。我不反对认证，因为它们能帮你学习一种语言或工具，并证明你愿意且能够学习。但一个证书并不能让一个人成为熟练的专业人士。
-
 - 随着 Hibernate 等中间层对象关系映射框架的引入，许多查询执行并不良好——他们只知道如何写 SQL 查询。在多次情况下，我面试了接受过框架培训的企业级 Java 开发者，但他们并不理解底层是如何运作的。问一个简单的问题来解释用户在网页上点击“获取数据”到数据到达之间发生了什么，通常会得到对某些框架工作原理的描述。
+
+服务器组件。要点是了解求职者是否理解整个端到端的数据流。
+
+网页浏览器连接到位于调用 URL 的服务器，如果 `FindBooks` 尚未启动，Servlet 容器将启动并调用 Servlet 的 `init()` 方法，随后调用 `service()` 方法，该方法会根据 HTTP 请求的方法调用 `doGet()` 或 `doPost()`。`HttpServletRequest` 和 `HttpServletResponse` 用于客户端与 `FindBooks` 之间的交互。Servlet 的输出可以通过 `HttpServletResponse` 的方法（例如 `println()`）发送回用户。
 
 ## 要认证还是不要认证？
 
@@ -15741,9 +15599,9 @@ apply plugin: 'eclipse-wtp'
 
 你如何在当前使用的应用程序服务器中部署 Web 应用？
 
-在 Java EE 应用程序中，你创建一个 web 归档（war 文件），并根据应用程序服务器的文档将其复制到指定的目录。（你应该能够解释 war 文件中的目录结构）。
+在 Java EE 应用程序中，你创建一个 Web 归档（WAR 文件），并根据应用程序服务器的文档将其复制到指定的目录。（你应该能够解释 WAR 文件中的目录结构）。
 
-为什么在 Java 8 中引入了默认方法（default methods）？
+为什么在 Java 8 中引入了默认方法（Default Methods）？
 
 Oracle 的软件工程师希望在现有的接口中包含新方法。如果他们只是添加新的方法声明，那么许多现有代码将会破坏，因为实现这些接口的类没有实现新引入的方法。`default` 关键字允许他们在向接口中添加新方法，而不需要强制类去实现它们。
 
@@ -15755,7 +15613,7 @@ Oracle 的软件工程师希望在现有的接口中包含新方法。如果他�
 
 你不能强制垃圾回收，但你可以请求垃圾回收，因为 JVM 不保证它会立即启动。调用 `System.gc()` 会请求垃圾回收。
 
-你为什么会在代码中使用 lambda？
+你为什么会在代码中使用 Lambda？
 
 Lambda 表达式使代码更加简洁，在某些情况下允许开发者扁平类层次结构并消除某些类。有关消除多态的更多详细信息，请参阅第 15 节。
 
@@ -15773,38 +15631,38 @@ Java 泛型可以消除对显式类型转换的需求。对于子类到父类的
 
 ## 技术问题与问答
 
-**问：你可以在不同类型的对象之间进行类型转换吗？**
+**问：** 你可以在不同类型的对象之间进行类型转换吗？
 
 **答：** 不可以。对象之间可以存在子类与子类的关系，或者你可以转换到该类所实现的接口。
 
-**问：一个 Java 类可以继承两个类吗？**
+**问：** 一个 Java 类可以继承两个类吗？
 
 **答：** Java 不允许多重继承，但一个类可以实现多个接口，在某种程度上这可以作为一种变通方法。
 
-**问：构造函数和普通方法有什么区别？**
+**问：** 构造函数和普通方法有什么区别？
 
 **答：** 构造函数的名称与类名相同，且没有返回值。它们只被调用一次，而普通方法可以被调用多次。
 
-**问：什么是 Cookie？哪些 Java 组件创建了它们？**
+**问：** 什么是 Cookie？哪些 Java 组件创建了它们？
 
 **答：** Cookie 是一个表示键/值对的对象。Servlets、JSP 和第三方 Java 框架会创建并存储 Cookie 到浏览器中，浏览器将其保存在用户磁盘的特殊目录中。Cookie 帮助服务端代码识别用户并实现会话跟踪。
 
-**问：抽象类是否至少包含有一个抽象方法？**
+**问：** 抽象类是否至少包含有一个抽象方法？
 
-**答：** 不一定。如果一个类用 `abstract` 关键字声明，即使它没有抽象方法，也可以被实例化。例如，你可以声明一个抽象类 Animal，它永远不应该被实例化，而可以创建具体子类 Cat 和 Dog 的实例。
+**答：** 不一定。如果一个类用 `abstract` 关键字声明，即使它没有抽象方法，也可以被实例化。例如，你可以声明一个抽象类 `Animal`，它永远不应该被实例化，而可以创建具体子类 `Cat` 和 `Dog` 的实例。
 
-**解释 Java 包（packages）的作用。**
+**问：** 解释 Java 包（Packages）的作用。
 
 **答：** 包提供了一种组织多个项目的方法。它们还有助于当不同包具有相同名称时解决冲突。包的访问级别还允许你保护数据不受未授权类的使用，只允许同包中的类查看彼此的成员变量。
 
-**解释 `transient` 关键字的作用。**
+**问：** 解释 `transient` 关键字的作用。
 
-`transient` 关键字表示该成员变量的值不会随对象一起序列化。当类被反序列化时，transient 变量将被初始化为数据类型的默认值（例如整数使用 int）。
+**答：** `transient` 关键字表示该成员变量的值不会随对象一起序列化。当类被反序列化时，transient 变量将被初始化为数据类型的默认值（例如整数使用 `int`）。
 
-**你对线程同步了解多少？解释以下之间的区别**
+**问：** 你对线程同步了解多少？解释以下之间的区别：
 
 ```java
-public void synchronized myMethod() { ... }
+public synchronized void myMethod() { ... }
 ```
 
 和
@@ -15818,55 +15676,49 @@ public void methodName() {
 
 **答：** `synchronized` 关键字用于防止多个线程尝试更新某些值时发生竞态条件。同步块优于同步方法，因为它们锁定的时间更短。`java.util.concurrent` 包包含了 `ReentrantLock`，这可能是比使用 `synchronized` 关键字更好的解决方案。
 
-**问：方法 `sleep(1000)` 和 `wait()` 有什么区别？**
+**问：** 方法 `sleep(1000)` 和 `wait()` 有什么区别？
 
 **答：** `sleep(1000)` 代码让线程精确停止一秒。`wait(1000)` 代码让线程等待最多一秒。如果线程收到 `notify()` 或 `notifyAll()` 调用，它可以提前停止等待。`wait()` 方法定义在 `Object` 类中，而 `sleep()` 定义在 `Thread` 类中。
 
-**问：继承 `Thread` 类创建线程和实现 `Runnable` 接口创建线程有什么区别？**
+**问：** 继承 `Thread` 类创建线程和实现 `Runnable` 接口创建线程有什么区别？
 
-**答：** 使用 `Thread` 类创建线程要求你的类继承自它。然后你需要创建该类的实例并调用 `start()`。如果一个类实现了 `Runnable` 接口，过程就不同；你必须创建你的类实例以及 `Thread` 的实例，并将 `Runnable` 传递给后者。使用 `Runnable` 允许你从必须继承自 Thread 类的类创建线程。你可以用 lambda 表达式实现 `Runnable`。
+**答：** 使用 `Thread` 类创建线程要求你的类继承自它。然后你需要创建该类的实例并调用 `start()`。如果一个类实现了 `Runnable` 接口，过程就不同；你必须创建你的类实例以及 `Thread` 的实例，并将 `Runnable` 传递给后者。使用 `Runnable` 允许你从必须继承自 `Thread` 类的类创建线程。你可以用 Lambda 表达式实现 `Runnable`。
 
-**问：你如何创建一个可以从其 `run()` 方法返回值的线程？**
+**问：** 你如何创建一个可以从其 `run()` 方法返回值的线程？
 
 **答：** 你需要实现 `Callable` 接口。
 
-**问：你会用什么来比较两个变量：`equals()` 方法还是 `==` 运算符？**
+**问：** 你会用什么来比较两个变量：`equals()` 方法还是 `==` 运算符？
 
 **答：** 我会使用 `equals()` 来比较字符串的值，而使用 `==` 运算符检查两个变量。
 
-**问：你对 MVC 设计模式了解多少？**
+**问：** 你对 MVC 设计模式了解多少？
 
 **答：** MVC 代表模型-视图-控制器（Model-View-Controller）设计模式，用于将演示与业务逻辑分离。模型部分代表数据和业务逻辑，视图是视觉表示（例如 UI），而控制器接收视图的数据并将其传递给模型。
 
-**问：你如何减少 JVM 在频繁使用的实例上花费的时间？**
+**问：** 你如何减少 JVM 在频繁使用的实例上花费的时间？
 
-我会创建或配置对象池（例如，DataSource 可以配置使用连接池）。
+**答：** 我会创建或配置对象池（例如，`DataSource` 可以配置使用连接池）。
 
-**问：以下语句会在磁盘上创建文件 xyz.txt 吗？**
+**问：** 以下语句会在磁盘上创建文件 `xyz.txt` 吗？
 
 ```
 File a = new File("xyz.txt");
 ```
 
-不会，它创建一个指向该文件的对象。
+**答：** 不会，它创建一个指向该文件的对象。
 
-**问：子类如何调用父类定义的方法？**
+**问：** 子类如何调用父类定义的方法？
 
-Java 有 `super` 关键字。如果方法被重写了，你想调用父类中的版本，使用以下语法：`super.myMethod()`。要调用父类的构造函数，在子类构造函数的第一行使用 `super();` 并带上必要参数。
+**答：** Java 有 `super` 关键字。如果方法被重写了，你想调用父类中的版本，使用以下语法：`super.myMethod()`。要调用父类的构造函数，在子类构造函数的第一行使用 `super();` 并带上必要参数。
 
-## 服务器组件
-
-要点是了解求职者是否理解整个端到端的数据流。
-
-网页浏览器连接到位于调用 URL 的服务器，如果 FindBooks 尚未启动，Servlet 容器将启动并调用 servlet 的 `init()` 方法，随后调用 `service()` 方法，该方法会根据 HTTP 请求的方法调用 `doGet()` 或 `doPost()`。`HttpServletRequest` 和 `HttpServletResponse` 用于客户端与 FindBooks 之间的交互。Servlet 的输出可以通过 `HttpServletResponse` 的方法（例如 `println()`）发送回用户。
-
-**解释在 Java SE 程序中使用 JDBC 从数据库表中获取数据的过程。使用了哪些类和方法？**
+**问：** 解释在 Java SE 程序中使用 JDBC 从数据库表中获取数据的过程。使用了哪些类和方法？
 
 
 
 首先，你使用 `ClassName()` 加载 JDBC 驱动。然后，你通过 `DataSource` 或 `DriverManager.getConnection()` 获取 `Connection` 对象。然后你创建一个对象并调用它的方法，如 `executeQuery()` 或 `executeUpdate()`。处理 `ResultSet`（如果有），并关闭 `Connection`、`Statement` 和 `ResultSet` 对象。在某些情况下，你使用 `PreparedStatement` 或 `CallableStatement` 代替 `Statement`。
 
-### 关键字 `final`、`finalize` 和 `finally` 之间有什么区别？
+## 关键字 `final`、`finalize` 和 `finally` 之间有什么区别？
 
 根据其位置，关键字 `final` 意味着变量只能初始化一次，或者你不能重写方法，或者你不能派生一个类。`catch` 块中的参数是 `final` 的。
 
@@ -15874,35 +15726,35 @@ Java 有 `super` 关键字。如果方法被重写了，你想调用父类中的
 
 关键字 `finally` 用于 `try/catch` 块，放置无论块中的代码执行成功还是失败都必须执行的代码。
 
-### 你可以在接口中声明字段吗？
+## 你可以在接口中声明字段吗？
 
 你只能在接口中声明 `final` 和 `static` 变量。
 
-### 在方法内部声明的内部类可以访问该方法的局部变量吗？
+## 在方法内部声明的内部类可以访问该方法的局部变量吗？
 
 只有当方法的变量是 `final` 时才是可能的。
 
-### 可以使用什么来跟踪 Web 中的会？
+## 可以使用什么来跟踪 Web 中的会话？
 
 你可以使用 cookies、URL 重写和 `HTTPSession` 对象。
 
-### 使用 cookies 进行会话管理总是有效吗？
+## 使用 cookies 进行会话管理总是有效吗？
 
 不是的，如果用户在网络浏览器中禁用了 cookies，它将无法工作。在这种情况下，应用服务器通常会自动切换到 URL 重写。
 
-### 你如何停止一个长时间的线程？
+## 你如何停止一个长时间的线程？
 
 `Thread` 类有一个已弃用的方法 `stop()`，但该方法不能保证线程会停止。根据此线程运行的进程，你可以尝试关闭连接或任何资源，或者使用 `interrupt()` 方法。
 
-### Java 类什么时候可以被称为 bean（节点）？
+## Java 类什么时候可以被称为 bean？
 
 如果一个类有一个无参数构造函数、实现了 `Serializable` 接口，并且对其私有属性有公共的 setter/getter 方法，你就可以称之为 bean。
 
-### 使用 JSP 而不是 Servlets 有什么优点？
+## 使用 JSP 而不是 Servlets 有什么优点？
 
 JSP 允许你将表示与业务逻辑分离，生成的页面可以由不懂 Java 的人员修改。
 
-### 举例说明运算符 `&&` 和 `||` 使用的区别。
+## 举例说明运算符 `&&` 和 `||` 使用的区别。
 
 在以下代码段中，如果变量为 null，`if` 语句中的第二个表达式甚至不会被评估。
 
@@ -15911,31 +15763,31 @@ String a=null;
 if (a != null && a.length()>10) {..}
 ```
 
-### 列出一些预定义的 JSP 变量。
+## 列出一些预定义的 JSP 变量。
 
 `request`, `response`, `out`, `session`...
 
-### 你如何部署 JSP？
+## 你如何部署 JSP？
 
 你可以将 `.jsp` 文件放在 Servlet 容器或应用服务器的根目录下，或者创建一个 war 文件并将 JSP 放在文档根树中。
 
-### Web 服务器用于 HTTP 通信的默认端口号是多少？
+## Web 服务器用于 HTTP 通信的默认端口号是多少？
 
 HTTP 请求通过 80 端口；HTTPS 通过 443 端口。
 
-### Servlet 类中哪个方法等同于普通 Java 类中的构造函数？
+## Servlet 类中哪个方法等同于普通 Java 类中的构造函数？
 
 答：Servlet 的 `init()` 方法起到类似的作用，但因为所有客户端都使用 Servlet 的同一个实例，你应该只初始化那些允许每个用户请求具有相同值的变量，例如数据库服务器名称。
 
-### 问：数组（array）还是 ArrayList 更快？
+## 问：数组（array）还是 ArrayList 更快？
 
 答：在大多数情况下，数组更快。如果你预先知道数组中元素的数量，就可以使用数组。`ArrayList` 是数组之上的 API。你不需要预先知道它的大小；根据需要添加新元素。数组只为所有元素分配一次内存。但为了给你一个更好的答案，我必须根据上下文编写一个合适的基准测试来找出。
 
-### 问：你对 Java 反射（reflection）了解什么？
+## 问：你对 Java 反射（reflection）了解什么？
 
 答：反射是在运行时查找有关 Java 类内部信息的方法。例如，你可以找到特定类的构造函数和方法，具有如 `Constructor()`、`getFields()`、`getMethods()` 等方法。
 
-### 问：如果你的 JVM 在运行时因“内存溢出”（out of memory）错误而崩溃，你会做什么？
+## 问：如果你的 JVM 在运行时因“内存溢出”（out of memory）错误而崩溃，你会做什么？
 
 答：我会尝试在程序启动时使用命令行参数增加 JVM 动态内存（堆）的大小。例如，你可以请求最小堆大小 512 MB 和最大堆大小 1024 MB，如下：
 
@@ -15943,37 +15795,21 @@ HTTP 请求通过 80 端口；HTTPS 通过 443 端口。
 java -Xms512 -Xmx1024 MyProgram
 ```
 
-### 问：你如何确保应用程序中只能创建一个类的实例？
+## 问：你如何确保应用程序中只能创建一个类的实例？
 
 答：你需要实现单例模式。创建一个带有私有构造函数的类，并提供一个返回该类唯一实例的公共 getter——例如 `MyClass.getInstance()`。
 
-### 问：Hashtable 和 HashMap 有什么区别？
+## 问：Hashtable 和 HashMap 有什么区别？
 
 答：Hashtable 在内部是同步的，而 HashMap 则不是。
 
-### 问：列出设计模式。
+## 问：列出设计模式。
 
 答：单例（Singleton）、MVC、数据传输对象（data transfer object）。
 
-### 问：Hashtable 和 HashMap 有什么区别？
-
-答：Hashtable 在内部是同步的，而 HashMap 不是。
-
-### 问：列出设计模式。
-
-答：单例、MVC、数据传输对象。
-
-### 问：Hashtable 和 HashMap 有什么区别？
-
-答：Hashtable 在内部是同步的，而 HashMap 不是。
-
-### 问：列出设计模式。
-
-答：单例、MVC、数据传输对象。
-
 （注：原文后续部分包含大量重复和 OCR 错误，译文已根据核心内容进行清理。）
 
-## APPLETS类
+# APPLETS 类
 
 - 流式 (Streaming), 484
 - 小程序 (applets), 88
@@ -16036,6 +15872,9 @@ java -Xms512 -Xmx1024 MyProgram
 - 字节数组，序列化
 - 序列化 (serialization), 192
 - 字节流 (byte streams), 173
+
+![](img/c6ae2d81738909a4b5328d6eddc14dd7_601_0.png)
+
 - 带 Scene 的计算器, 251–260
 - CalculatorEngine 类, 100, 101
 - call() 方法, 228
@@ -16060,7 +15899,7 @@ java -Xms512 -Xmx1024 MyProgram
 - CLASS 留存策略, 326
 - 类版本 (class versioning), 159
 
-### B
+## B
 
 - Bean 变量 (Bean variable), 477–473
 - @Before, 317
@@ -16079,7 +15918,7 @@ java -Xms512 -Xmx1024 MyProgram
 - 抽象的 (abstract), 72–76–78
 - 访问级别 (access level), 63
 
-## 客户端-集合 (CLIENTS-COLLECTIONS)
+# 客户端-集合 (CLIENTS-COLLECTIONS)
 
 - ActionEvent, 102
 - 适配器类 (adapter classes), 108
@@ -16185,7 +16024,9 @@ java -Xms512 -Xmx1024 MyProgram
 - 选择提示 (selection tips), 138
 - 排序 (sorting), 266
 
-## Collections-DECODE() 方法
+![](img/c6ae2d81738909a4b5328d6eddc14dd7_602_png)
+
+# Collections-DECODE() 方法
 
 - Comparable 接口 (Comparable interface), 286
 - Comparator 接口 (Comparator interface), 287
@@ -16256,11 +16097,11 @@ java -Xms512 -Xmx1024 MyProgram
 - `NoSQL`, 272
 - `@Null 注解`, 465
 - `表 (table)`
-  - `映射对象到 (mapping objects to)`, 464–466
-  - `主键 (primary keys)`, 465
+- `映射对象到 (mapping objects to)`, 464–466
+- `主键 (primary keys)`, 465
 - `事务 (transactions)`
-  - `提交 (committing)`, 308
-  - `回滚 (rolling back)`, 308
+- `提交 (committing)`, 308
+- `回滚 (rolling back)`, 308
 - `数据报 (datagram)`, 203
 - `DataInputStream 类`, 171, 178
 - `DataOutputStream 类`, 171, 178
@@ -16459,7 +16300,7 @@ java -Xms512 -Xmx1024 MyProgram
   - `传递给方法`, 158
   - `与方法`, 157-160
 
-## F
+# F
 
 - `胖客户端`, 347
 - `File.class`, 179
@@ -16474,7 +16315,7 @@ java -Xms512 -Xmx1024 MyProgram
 
 # GC (垃圾回收器) - IDE (集成开发环境)
 
-## G
+# G
 
 - `GC (垃圾回收器)`, 25
 - `生成代码`, 16-18
@@ -16529,172 +16370,158 @@ java -Xms512 -Xmx1024 MyProgram
 
 
 
-# 索引
+# Gradle
 
-## Gradle
-- Gradle, 335-336
-
-## Java Logging API
-- Java Logging API, 500
+- `Java Logging API`, 500
 - 类级日志器, 501
 - 全局日志器, 501
-
-## Maven
-- Maven, 529
+- `Maven`, 529
 - 调优, 529
 
-## HelloFX
-- HelloFX, 235
+# HelloFX
 
-## HelloWorld
-- HelloWorld 类, Eclipse IDE, 14
-- HelloWorldBean, 447
-
-## 异常与函数
+- `HelloWorld` 类, `Eclipse IDE`, 14
+- `HelloWorldBean`, 447
 - 异常, 168
 - 高阶函数, 168
 - 高阶, 158
-- URL 中的主机名, 158
-
-## 热点
+- `URL` 中的主机名, 158
 - 热点, 374
 
-## HTML (文本标记语言)
+# HTML (文本标记语言)
+
 - 编码, 380-383
 
-## HTTP (文本传输协议)
-- HTTP, 355
-- HTTPLET 方法, 483
+# HTTP (文本传输协议)
+
+- `HTTPLET` 方法, 483
 - 缺点, 396-397
-- GET, 367
-- GET 方法, 482
-- PUT 方法, 482
+- `GET`, 367
+- `GET` 方法, 482
+- `PUT` 方法, 482
 - 服务端数据推送, 396
 - 会话跟踪, 368
-- Cookie, 368
-- HTTPS, 370-373
-- HTTP 代理服务器, 198
-- HTTPS 接口, 368
+- `Cookie`, 368
+- `HTTPS`, 370-373
+- `HTTP` 代理服务器, 198
+- `HTTPS` 接口, 368
 
-## H
+# H
+
 - 半耦合通信, 395
-- Java Logging API处理器, 502-506
+- `Java Logging API` 处理器, 502-506
 - 哈希函数, 139
-- HashMap 类, 132
-- Hashtable 类, 132
-- I/O 错误, 160
-- I/O 流, 177
+- `HashMap` 类, 132
+- `Hashtable` 类, 132
+- `I/O` 错误, 160
+- `I/O` 流, 177
 - 缓冲流, 173
-- InputStream 类, 173
+- `InputStream` 类, 173
 - 字节流, 172
 - 数据流, 178
-- GUI 和, 177
-- IO, 182-183
-- Stream API, 292
-- XML 注解, 465
+- `GUI` 和, 177
+- `IO`, 182-183
+- `Stream API`, 292
+- `XML` 注解, 465
 
-## IDE (集成开发环境)
-- IDE, 9
+# IDE (集成开发环境)
 
-## IF-语句
-- if 语句, 30, 52, 57-58
-- if-else 语句, 67
-- @Override 注解, 518
+# IF-语句
+
+- `if` 语句, 30, 52, 57-58
+- `if-else` 语句, 67
+- `@Override` 注解, 518
 - 命令式编程与函数式, 152
 - 命令式类, 152
 - 隐式对象, (34), 383
-- include 指令, 384
+- `include` 指令, 384
 - 无限循环, 54
 - 继承, 170, 41
 - 强制转换, 68-79
 - 消除, 165, 213
-- lambda 表达式比较, 162-169
+- `lambda` 表达式比较, 162-169
 - 组合, 162
-- @Inherited 注解, 324
-- int 方法, 324, 331
-- InitialContext 类, 414
+- `@Inherited` 注解, 324
+- `int` 方法, 324, 331
+- `InitialContext` 类, 414
 - 内部类, 110
-- InputStream 类, 171
+- `InputStream` 类, 171
 - 实例化操作, 130
 - 实例, 22
 - 堆内存, 23
 - 锁, 217
 - 集成测试, 511
-
-## 接口
 - 接口, 65-76
-- AutoCloseable, 121
-- BiFunction, 167-169
-- Callable, 32
-- Collection, 128
+- `AutoCloseable`, 121
+- `BiFunction`, 167-169
+- `Callable`, 32
+- `Collection`, 128
 - 集合工具类, 128
 - 比较, 286
-- Comparator, 287-289
-- CriteriaBuilder, 467
-- Criteria, 467
-- DataSource, 306
+- `Comparator`, 287-289
+- `CriteriaBuilder`, 467
+- `Criteria`, 467
+- `DataSource`, 306
 - 设计, 306
-- Enumeration, 135
+- `Enumeration`, 135
 - 可扩展, 189
-- Filter, 175
-- Function, 167-169
+- `Filter`, 175
+- `Function`, 167-169
 - 功能性接口, 368
-- Session, 3, 368
-- Iterable, 128
-- Iterator, 135
-- for-循环, 79-82
-- List, 129
-- Map, 29
+- `Session`, 3, 368
+- `Iterable`, 128
+- `Iterator`, 135
+- `for` 循环, 79-82
+- `List`, 129
+- `Map`, 29
 - 标记监听器, 66
-- MessageListener, 431
-- default, 67
-- static, 68
-- 无接口 (EJB), 448
-- Path, 180
+- `MessageListener`, 431
+- `default`, 67
+- `static`, 68
+- 无接口 (`EJB`), 448
+- `Path`, 180
 - 编程到, 131
-- Property, 246
-- public, 63
-- Queue, 236
+- `Property`, 246
+- `public`, 63
+- `Queue`, 236
 - 建议, 493
 - 远程, 336
-- RMI, 335
-- Root, 467
-- RowSet, 307
-- Runnable, 210, 213
-- Serializable, 186
-- Sel, 192
-- TableModel, 312-318
-- TypeCode, 468
+- `RMI`, 335
+- `Root`, 467
+- `RowSet`, 307
+- `Runnable`, 210, 213
+- `Serializable`, 186
+- `Sel`, 192
+- `TableModel`, 312-318
+- `TypeCode`, 468
 - 与抽象类, 78
 - 流, 282
 - 文件下载, 199
 - 内内网, 195
 - 反射和, 329
-- invoke 方法, 329
+- `invoke` 方法, 329
 - 调用方法, 333
-- IoT (物联网), 32, 347
-- IP (网协议), 195
-- IP 地址, 195
-- isVariable, 329
-- isAnnotation 方法, 329
-- ISP-服务提供者, 195
+- `IoT` (物联网), 32, 347
+- `IP` (网协议), 195
+- `IP` 地址, 195
+- `isVariable`, 329
+- `isAnnotation` 方法, 329
+- `ISP` 服务提供者, 195
 - 斜体文本, 241
-- GenericListener, 108
+- `GenericListener`, 108
 - 可互操作接口, 128
 - 迭代, 135
-- Iteration 接口, 135
-- iterator 类, 135
+- `Iteration` 接口, 135
+- `iterator` 类, 135
 
-## JARS (Java 存档)
-- JARS, 457
+# JARS (Java 存档)
 
-## Java 架构
-- Java 架构, 554
+# Java 架构
 
-## Java EE
-- Java EE, 3, 345
+# Java EE
 
-## Java Logging API - JPA (Java 持久 API)
+# Java Logging API - JPA (Java 持久 API)
+
 - 容器, 348
 - 层, 246-348
 - 消息和, 437-438
@@ -16704,13 +16531,13 @@ java -Xms512 -Xmx1024 MyProgram
 - 使用原因, 350
 - 版本, 246
 
-## Java Logging API
-- Java Logging API, 499
+# Java Logging API
+
 - 重复消息, 505
 - 过滤器, 507
 - 格式化器, 500-506
 - 处理器, 500-506
-- Hello World, 350
+- `Hello World`, 350
 - 类级日志器, 501
 - 全局日志器, 501
 - 课程, 350
@@ -16719,113 +16546,109 @@ java -Xms512 -Xmx1024 MyProgram
 - 消息组, 500
 - 下载器, 350
 
-## Java SE (标准版)
-- Java SE, 3
-- `java.io`包, 171
-- `java.nio`包, 173
+# Java SE (标准版)
+
+- `java.io` 包, 171
+- `java.nio` 包, 173
 - `java.util.collections`, 128
 - `java.util.Collections`, 133
 - 类包, 224-229
 - 集合, 228
-- beans 和, 387
-- RESTful 服务, 488
+- `beans` 和, 387
+- `RESTful` 服务, 488
 
-## JavaEE (带 Derby DB)
+# JavaEE (带 Derby DB)
+
 - 注解, 321
 - 布局类, 236
 - 布局, 236-238
-- Broker-Pane, 236
+- `Broker-Pane`, 236
 - 课程, 240
 - 移动设备, 278
 - 属性类, 248-249
 - 属性类, 247
 - 根节点, 235
-- Scene Builder, 251-260
+- `Scene Builder`, 251-260
 - 场景图, 233
 - 阶段, 234
 - 术语, 267
-- TicTacToe游戏类, 273-276
-- Web, 278
+- `TicTacToe` 游戏类, 273-276
+- `Web`, 278
 
-## JavaScript
-- JavaScript, 301
+# JavaScript
+
 - 调试, 409
 
-## JavaToStreaming 类
-- JavaToStreaming 类, 485
+# JavaToStreaming 类
 
-## JAX-RS
-- JAX-RS, 381
+# JAX-RS
 
-## JAX-WS
-- JAX-WS, 481
+# JAX-WS
 
-## JPA (Java 社区过程)
-- JPA, 346
+# JPA (Java 社区过程)
 
-## JDBC
-- CallableStatement 类, 350
+# JDBC
+
+- `CallableStatement` 类, 350
 - 连接点, 508
-- DataSource 接口, 308
-- PreparedStatement 类, 304
+- `DataSource` 接口, 308
+- `PreparedStatement` 类, 304
 - 结果集, 302-303
 - 可滚动, 307
-- ResultSetMetaData 类, 305
+- `ResultSetMetaData` 类, 305
 - 示例程序, 300-302
 
-## JDBC API
-- JDBC API, 246-247
+# JDBC API
 
-## JDK (Java 开发工具包)
-- JDK, 32, 3
-- MAC OS, 3
-- Windows, 4
-- frames
+# JDK (Java 开发工具包)
 
-## JMS (Java 服务)
-- JMS, 346, 423-429
+# MAC OS
+
+# Windows
+
+# frames
+
+# JMS (Java 服务)
+
 - 异步通信, 424
 - 消息类型, 429
-- MOM 和, 421
-- GlassFish 中的对象, 438-441
+- `MOM` 和, 421
+- `GlassFish` 中的对象, 438-441
 
-## JNDI (Java 命名和目录接口)
-- JNDI, 413
+# JNDI (Java 命名和目录接口)
+
 - 管理的对象, 413
 - 数据源和, 417-419
-- InitialContext 类, 414
+- `InitialContext` 类, 414
 - 课程, 41
-- 对象, GlassFish 和, 416
+- 对象, `GlassFish` 和, 416
 - 资源, 416
-- join 方法, 222
+- `join` 方法, 222
 - 合并线程, 222
 
-## JPA (Java 持久 API)
-- JPA, 463, 466
+# JPA (Java 持久 API)
 
-## JPQL (JAVA 持久查询语言)-晚期绑定
-- (参见 JPQL)
-- Bean 验证, 471-473
-- 实体管理器 (Entity Manager), 468-473
+# JPQL (JAVA 持久查询语言) - 晚期绑定
+
+(参见 `JPQL`)
+
+- `Bean` 验证, 471-473
+- 实体管理器 (`Entity Manager`), 468-473
 - 课程, 473
-- JPQL (Java 持久查询语言), 463, 466
-- Criteria API, 467
-- JRE (Java 运行时环境), 3
-- JSF (JavaServer Faces), servlets 以及 355
-
-## JSON (JavaScript 对象表示)
-- JSON, 351
-- 对象模型 API, 484
-- 写入 JSON, 486
-- RESTful 服务, 483-487
-- Stream API 和, 484
-- 读取 API, 484
-- 流式 API, 484
-- 写入 JSON, 485
-- XML 比较, 483
-
-## JSF (JavaServer Faces)
-- JSF, 346, 379
+- `JPQL` (Java 持久查询语言), 463, 466
+- `Criteria API`, 467
+- `JRE` (Java 运行时环境), 3
+- `JSF` (`JavaServer Faces`), `servlets` 以及 355
+- `JSON` (JavaScript 对象表示), 351
+- 对象模型 `API`, 484
+- 写入 `JSON`, 486
+- `RESTful` 服务, 483-487
+- `Stream API` 和, 484
+- 读取 `API`, 484
+- 流式 `API`, 484
+- 写入 `JSON`, 485
+- `XML` 比较, 483
+- `JSF` (`JavaServer Faces`), 346, 379
 - 动作, 385
 - 声明, 384
 - 部署, 380
@@ -16836,558 +16659,712 @@ java -Xms512 -Xmx1024 MyProgram
   - 错误页面, 384
 - 表达式, 384
 - 转发元素, 385
-- 在 JavaBean 中, 388
+- 在 `JavaBean` 中, 388
 - 课程, 389
 - 隐式对象, 383
 - 插件元素, 383
-- servlets, 以及 355
+- `servlets`, 以及 355
 - 从...加载, 389
 - 标签库, 389-392
 - 变量, 383
-
-## JSR (Java 规范请求)
-- JSR, 346
-
-## STL (Java 标准标签库)
-- STL, 392
-
-## JTA (Java 事务 API)
-- JTA, 349, 459
-
-## 测试
+- `JSR` (Java 规范请求), 346
+- `STL` (Java 标准标签库), 392
+- `JTA` (Java 事务 `API`), 349, 459
 - 测试运行器, 523-524
 - 测试套件, 520-521
+- `JVM` (Java 虚拟机), 1, 2
 
-## JVM (Java 虚拟机)
-- JVM, 1, 2
+# K
 
-## K
-- KeyEvent, 262
-- KeyListener, 108
+- `KeyEvent`, 262
+- `KeyListener`, 108
 - 键
-  - Hashmap 类, 132
-  - Hashtable 类, 132
+  - `Hashmap` 类, 132
+  - `Hashtable` 类, 132
   - 主键
 - 关键字
-  - abstract, 73
-  - break, 52
-  - catch, 118
-  - continue, 52
-  - extended, 147
-  - final, 23, 64
-  - finally, 118
-  - full, 51
-  - private, 63
-  - public, 6
-  - static, 64
-  - String, 6
-  - super, 189
-  - synchronized, 217, 224
-  - this, 40
-  - throw, 118
-  - throws, 118
-  - transient, 188
-  - try, 118
-  - void, 6
-  - public, 63
+  - `abstract`, 73
+  - `break`, 52
+  - `catch`, 118
+  - `continue`, 52
+  - `extended`, 147
+  - `final`, 23, 64
+  - `finally`, 118
+  - `full`, 51
+  - `private`, 63
+  - `public`, 6
+  - `static`, 64
+  - `String`, 6
+  - `super`, 189
+  - `synchronized`, 217, 224
+  - `this`, 40
+  - `throw`, 118
+  - `throws`, 118
+  - `transient`, 188
+  - `try`, 118
+  - `void`, 6
+  - `public`, 63
 
-## L
-- lambda 表达式, 121, 153
-- @FunctionalInterface, 156
+# L
+
+- `lambda` 表达式, 121, 153
+- `@FunctionalInterface`, 156
 - 参数, 154
 - 线索与, 166
 - 大括号, 54
 - 实例比较, 162-169
 - 内部类替代方案, 112
 - 课程, 169
-- Luna 以及, 156
+- `Luna` 以及, 156
 - 方法引用, 155
 - 多态比较, 162-169
 - 语法, 154
-- TableModelListener, 317
-- LANs (局域网), 195
+- `TableModelListener`, 317
+- `LANs` (局域网), 195
 - 晚期绑定, 72
-
-## JTable
-- 记法, 321
-- 单元格编辑器, 318-319
-- 单元格渲染器, 318-319
-- UI 类, 331
-
-## JTable 类
-- MVC 和, 311
-- Unit 框架, 511, 512
-- (参见使用 unit)
+- `JTable`
+  - 记法, 321
+  - 单元格编辑器, 318-319
+  - 单元格渲染器, 318-319
+  - `UI` 类, 331
+- `JTable` 类
+  - `MVC` 和, 311
+- `Unit` 框架, 511, 512
+  (参见使用 `Unit`)
 - 记法, 518
 - 应用, 518-520
-- Eclipse 目录结构, 513
+- `Eclipse` 目录结构, 513
 - , 513
 - 安装, 513
 - 课程, 524
 - 测试用例, 514-517
 
-## LAUNCH( ) 方法--消息
-- launch() 方法, 234
+# LAUNCH() 方法 -- 消息
 
-## 布局管理器: (Swing)
-- 绝对布局, 90
-- BorderLayout 布局管理器, 90
-- BoxLayer, 93
-- CellLayout, 95
-- 组合, 90
-- FlowLayout, 86–88
-- GridBagLayout, 94
-- GridLayout, 88
-
-## List
-- List, 392
+- `launch()` 方法, 234
+- 布局管理器: (`Swing`)
+  - 绝对布局, 90
+  - `BorderLayout` 布局管理器, 90
+  - `BoxLayer`, 93
+  - `CellLayout`, 95
+  - 组合, 90
+  - `FlowLayout`, 86–88
+  - `GridBagLayout`, 94
+  - `GridLayout`, 88
+- `List`, 392
 - 链表, 双向链表, 135
-- LinkedBlockingDeque, 228
-- LinkedList 类, 135
-- LinkedList 集合, 129
+- `LinkedBlockingDeque`, 228
+- `LinkedList` 类, 135
+- `LinkedList` 集合, 129
 - 链接, 符号, 180
-- List 接口, 129
-- ArrayList 接口, 129
-
-## 监听器
+- `List` 接口, 129
+- `ArrayList` 接口, 129
 - 监听器, 事件, 529
-
-## 负载测试
 - 负载测试, 352
-
-## 列表
 - 列表, 双, 135
-
-## 布局容器
-- AnchorPane, 237
-- BorderPane, 237
-- FlowPane, 237
-- GridPane, 237–240
-- HBox, 237
-- JLabel, 236–238
+- `AnchorPane`, 237
+- `BorderPane`, 237
+- `FlowPane`, 237
+- `GridPane`, 237–240
+- `HBox`, 237
+- `JLabel`, 236–238
 - 容器类, 236
-- StackPane, 237
-- TilePane, 237
-- VBox, 237
-
-## LDAP (Java 目录协议)
-- LDAP, 419–420
-
-## 课程
+- `StackPane`, 237
+- `TilePane`, 237
+- `VBox`, 237
+- `LDAP` (Java 目录协议), 419–420
 - 课程, 33
-
-## 命令行参数
 - 命令行参数, 59
-
-## 数据库
 - 数据库, 320
-
-## EJB
-- EJB, 460
-
-## 异常
+- `EJB`, 460
 - 异常, 125
-
-## 泛型
 - 泛型, 569
-
-## 图形
 - 图形, 569
-
-## 接口
 - 接口, 729
-
-## Java EE
-- Java EE, 356
-
-## Java Logging API
-- Java Logging API, 509
-
-## JavaFX
-- JavaFX, 249
-
-## JNDI
-- JNDI, 421
-
-## JButton
-- JButton, 173
-
-## JSP
-- JSP, 391
-
-## Unit 框架
-- Unit 框架, 524
-
-## lambda 表达式
-- lambda 表达式, 169
-
-## LinkedList 修改
-- LinkedList 修改, 139
-
-## 消息消费者
+- `Java EE`, 356
+- `Java Logging API`, 509
+- `JavaFX`, 249
+- `JNDI`, 421
+- `JButton`, 173
+- `JSP`, 391
+- `Unit` 框架, 524
+- `lambda` 表达式, 169
+- `LinkedList` 修改, 139
 - 消息消费者, 441
-
-## 操作方法
 - 操作方法, 278
-
-## 包
 - 包, 208
-
-## REST 服务
-- REST 服务, 495
-
-## RMI
-- RMI, 341
-
-## 运行时注解
+- `REST` 服务, 495
+- `RMI`, 341
 - 运行时注解, 332
-
-## 序列化
 - 序列化, 193
-
-## servlets
-- servlets, 375
-
-## Socket 编程
-- Socket 编程, 207
-
-## Swing 应用
-- Swing 应用, 232
-
-## websockets
-- websockets, 412
-
-## 本地规模
+- `servlets`, 375
+- `Socket` 编程, 207
+- `Swing` 应用, 232
+- `websockets`, 412
 - 本地规模, 257
-
-## @LocalBean 注解
-- @LocalBean 注解, 447
-
-## @Local 方法
-- @Local 方法, 221
-
-## 锁接口
+- `@LocalBean` 注解, 447
+- `@Local` 方法, 221
 - 锁接口, 217
-
-## Logger 对象
-- Logger 对象, 503
-
-## 日志框架
+- `Logger` 对象, 503
 - 日志框架, 508–509
-
-## 循环
 - 循环, 54
-- do-while, 53
-- for-each, 51
-- forEach() 方法, 51
+- `do-while`, 53
+- `for-each`, 51
+- `forEach()` 方法, 51
 - 无限, 54
-- while, 52
+- `while`, 52
 
-## M
-- MAC OS, 333
-- main 方法, 59
-- main() 方法, 6
+# M
+
+- `MAC OS`, 333
+- `main` 方法, 59
+- `main()` 方法, 6
 - 格式错误, 196
-- Map 接口, 129
+- `Map` 接口, 129
 - 映射, 283
 - 标记接口, 666
-- Maven, 532
-- MDBs (消息驱动豆), 424, 445
+- `Maven`, 532
+- `MDBs` (消息驱动豆), 424, 445
 - 成员变量, 访问级别, 63
 - 内存, 288
 - 堆内存, 233
 - 基本数据类型, 24
 - 消息消费者, 441
-- 消息队列 (MOM), 423
-- 消息选择器 (MOM), 436
-- @MessageListener 注解, 447
-- MessageListener 接口, 331
-- messages close(), 399
-- onError(), 399
-- JOptionPane(), 399
+- 消息队列 (`MOM`), 423
+- 消息选择器 (`MOM`), 436
+- `@MessageListener` 注解, 447
+- `MessageListener` 接口, 331
+- `messages close()`, 399
+- `onError()`, 399
+- `JOptionPane()`, 399
+- `websockets` 接收, 404
+- `websockets` 库
+  - `Swing`, 84
+- 标签库 (`JSP`), 390–392
+
+# MESSAGE SENDERS - METHODS
+
+- `send()`, 403
+- `MessageSender`, 438
+- 元注解, 329
+- `META-info` 目录, 359
+- 元数据, 321
+- 方法提取器, 288
+- 方法签名, 6
+- (参见 `RMI` (远程方法调用))
+- `accept()`, 205
+- `actionPerformed()`, 100, 229
+- `add()`, 129
+- 参数, 37
+- 异步方法调用, 446
+- 236, 359
+- `methodWithReflection()`, 246
+- `body`,
+- `buttonClickHandler()`, 260
+- 回调方法, 102
+- `chaff`, 37
+- 类, 283
+- `collect`, 282
+- `common()`, 308
+- `compareTo()`, 286
+- `comparing()`, 288
+- `keySet()`, 133
+- `containsValue()`, 133
+- `createDuplicateConsumer()`, 434
+- `createNewFile()`, 729
+- 类型, 325
+- `code()`, 407
+- `default`, 在接口中, 67
+- `dest`, 362, 375
+- `get()`, 358
+- `dnInbound()`, 230
+- `dnPool()`, 321
+- `method()`, 160, 162
+- 点符号表示, 6
+- `equal()`, 521
+- `filter`, 285
+- `final` 关键字, 64
+- `forEach()`, 55, 160
+- 泛型, 145
+- `get()`, 133, 226
+- `getConstructor()`, 329
+- `getField()`, 329
+- `getInterface()`, 329
+- `getProperty()`, 134
+- `getSession()`, 370
+- `getState()`, 319
+- `hasMoreElements()`, 135
+- `init()`, 234, 367
+- `inited`, 328
+
+
+
+- 调用, 37, 335
+- `isAlive`, 219
+- `isAnnotationPresent()`, 329
+- `isInBound()`, 246
+- `join()`, 225
+- `load()`, 124
+- `lock()`, 224
+- `main()`, 59
+- `newFixedThreadPool()`, 225
+- `nextElement()`, 135
+- `notify()`, 219, 222
+- `notifyAll()`, 219, 222
+- `onMessage()`, 309, 431
+- overloading, 38
+- overriding, 333
+- `parallelStream()`, 285
+- passing functions to insert, 158
+- perish, 268
+- `print()`, 6, 499
+- `process()`, 231
+- `processLog()`, 262
+- `processOperation()`, 262
+- proxies, 335
+- `publish()`, 723
+- `readExternal()`, 189-191
+- `readObject()`, 188
+- `remove()`, 38
+- `run()`, 210, 221
+- `sort()`, 404
+- `sendObject()`, 404
+- `sendStream()`, 404
+- service, 357
+- `setConstraints()`, 240
+- `setOutputPair()`, 288
+- `setLoss()`, 526
+- `setPriority()`, 217
+- size, 574
+
+# MOBILE DEVICES, AND
+
+- `wait()`, 219
+- `writeExternal()`, 189-191
+- writing JSON, 485
+- websockets, 412
 - websockets 接收, 404
 - websockets 库
   - Swing, 84
 - 标签库 (JSP), 390–392
 
-## MESSAGE SENDERS-METHODS
-- 发送(), 403
-- MessageSender, 438
-- 元注解, 329
-- META-info 目录, 359
-- 元数据, 321
-- 方法提取器, 288
-- 方法签名, 6
-- (参见 RMI (远程方法调用))
-- accept(), 205
-- actionPerformed(), 100, 229
-- add(), 129
-- 参数, 37
-- 异步方法调用, 446
-- 236, 359
-- methodWithReflection(), 246
-- body,
-- buttonClickHandler(), 260
-- 回调方法, 102
-- chaff, 37
-- 类, 283
-- collect, 282
-- common(), 308
-- compareTo(), 286
-- comparing(), 288
-- keySet(), 133
-- containsValue(), 133
-- createDuplicateConsumer(), 434
-- createNewFile(), 729
-- 类型, 325
-- code(), 407
-- default, 在接口中, 67
-- dest, 362, 375
-- get(), 358
-- dnInbound(), 230
-- dnPool(), 321
-- method(), 160, 162
-- 点符号表示, 6
-- equal(), 521
-- filter, 285
-- final 关键字, 64
-- forEach(), 55, 160
-- 泛型, 145
-- get(), 133, 226
-- getConstructor(), 329
-- getField(), 329
-- getInterface(), 329
-- getProperty(), 134
-- getSession(), 370
-- getState(), 319
-- hasMoreElements(), 135
-- init(), 234, 367
-- inited, 328
+## OUTPUT-CLASS-QUEUES
 
-
-
-# 索引
-
-## 符号
-
-- `@Override` 注解, 323-324
-- `@POST` 注解, 489
-- `@Produces` 注解, 490
-- `@Path` 注解, 489
-- `@PathParam` 注解, 401, 490
-- `@QueryParam` 注解, 490
-- `@Resource` 注解, 415
-- `@Schedule` 注解, 460
-- `@Service` 注解, 400
-- `@WebFilter` 注解, 374
-- `@WebObserver` 注解, 357
-
-## A
-
-- `isAlive()`, 219
-- `isAnnotationPresent()`, 329
-- `isInBound()`, 246
-
-## B
-
-- 基本数据类型, 24
-- 包装类, 26
-
-## C
-
-- CDI (上下文与依赖注入), 493, 495
-- `Class` 类, 321-328
-
-## D
-
-- `draw` 数据类型, 143
-
-## E
-
-- EJB, 153, 444, 446, 454, 455
-- Eclipse, 234-236
-- Eclipse IDE 中的 Gradle, 547
-
-## F
-
-- `final` 关键字, 64
-- 函数式编程语言, 351
-- 函数式样式, 351
-
-## G
-
-- GUI 构建器, 233
-
-## H
-
-- Hello WebSocket, 400-402
-
-## I
-
-- 内省, 329
-- 接口, 103, 109, 129, 180, 213, 220, 268, 312, 336, 396, 467, 468
-- 接字编程, 203-207
-
-## J
-
-- JavaBeans, 488
-- JavaFX 根节点, 233
-- JAX-RS, 481
-- JAX-WS, 481
-- JSF, 359
-- JSP (JavaServer Pages), 383, 390-392
-- JPQL, 466
-- JDK 安装, 4
-
-## K
-
-- KeyListener, 96
-
-## L
-
-- lambda 表达式, 162-169
-- `List.of()`, 285
-
-## M
-
-- `main()`, 59
-- 方法重载, 38
-- 方法重写, 33, 333
-- `MouseListener`, 108
-- `MouseMotionListener`, 108
-- 多态性, 61, 76-78
-
-## N
-
-- `newFixedThreadPool()`, 225
-- `nextElement()`, 135
-
-## O
-
-- `Object` 类, 186-191
-- OWASP (开源 Web 安全项目), 369
+OutputStream 类, 171
+方法重载, 38
+`@Override` 注解, 323-324
+方法重写, 33
+OWASP (开源 Web 安全项目), 369
+`@POST` 注解, 489
+POST 方法, 481
+POST 方法 (HTTP), 367
+偏好面板, 185
+PrepareStatement 类, 304
+表现层分级, 337
+presentation tier, 337
+主键, 数据库, 465
+基本数据类型, 24
+内存, 24
+包装类, 26
+preinit 方法, 5, 499
+private 关键字, 63
+私有变量, 301
+process 方法, 331
+`processDigit()` 方法, 262
+`processOperation()` 方法, 262
+`@Produces` 注解, 490
+程序生命周期, 2
+程序化端点, 399
+编程,
+函数式编程语言, 351
+函数式样式, 351
+重要性与功能性, 152
+接字编程, 203-207
+到接口, 103
+项目资源管理器 (EE), 10
 
 ## P
 
-- P2P (点对点)消息, 425
-- `parallelStream()`, 285
-- `Path` 接口, 180
-- `PersistenceContext` API, 463
-- POJO (简单旧 Java 对象), 347, 355, 445
-- `print()`, 6, 499
-- `process()`, 231
-- `processDigit()`, 262
-- `processLog()`, 262
-- `processOperation()`, 262
-- `publish()`, 723
+P2P (点对点)消息, 425
+P2P 论坛, 33
+包, 15, 61
+类的放置, 61
+java.io, 71
+java.nio, 71
+java.util.concurrent, 224-229
+JavaProperties 类, 247
+课程, 70
+命名规范, 16
+反转默认名称, 61
+page 指令, 384
+page 变量, 383
+PageComponent 类, 285
+并行流流, 285
+排序, 299
+`parallelStream()` 方法, 285
+泛型类, 141
+自定义, 147
+泛型数据类型, 141
+泛型类型, 144
+参数, 有边界的, 147-149
+dasing
+对象, 104-106
+视图与控制器之间, 263
+参数, websockets, 401
+值传递,
+按引用传递, 42
+按值传递, 42
+密码, 189
+`@Path` 注解, 489
+Path 接口, 180
+`@PathParam` 注解, 401, 490
+`persist()` 方法, 460
+持久化上下文, 468
+PersistenceContext.API, 463
+平台接口, 1
+plugin-in
+Eclipse, 234-236
+Eclipse IDE 中的 Gradle, 547
+POJO (简单旧 Java 对象), 347, 355, 445
+拉取, 367
+多态性, 61, 76-78
+lambda 表达式比较, 162-169
+填充数组, 128
 
 ## Q
 
-- QA 测试, 52
-- Quartz 调度器, 460
+QA 测试, 052
+Quartz 调度器, 460
+JPQL 中的查询, 466
+`@QueryParam`, 490
+`@Queue` 接口, 129
+队列, 228
+
+```
+![](img/c6ae2d81738909a4b5328d6eddc14dd7_613_0.png)
+```
+
+## RACE CONDITIONS-SESSION BEANS (EJB)
 
 ## R
 
-- RCP (远程客户端平台), 9
-- RDBMS (关系型数据库管理系统), 297
-- `readExternal()`, 185-191
-- `readObject()`, 188
-- 反射, 321-328
-- 反向域名, 361
-- `reverse()`, 361
-- RIA (Java 远程应用接口)框架, 233
-- RMI (远程方法调用), 335
-- `Root` 接口, 467
-- RPC (远程过程调用), 423
-- `Runnable` 接口, 213, 220
-- `run()`, 210, 211, 221
-- 运行时绑定, 227
-- 运行时注解处理, 330-332
-- `RUNTIME` 保留策略, 326
+竞态条件, 131, 217–219
+draw 数据类型, 143, 143
+RCP (远程客户端平台), 9
+RDBMS (关系型数据库管理系统), 297
+(见属性), 482
+Reader 类, 177
+`readExternal()` 方法, 185–189
+`readObject()` 方法, 188
+Recommendations 类, 493
+ReentrantLock 类, 124
+反射, 321–328
+内省, 329
+反射示例, 328
+回归, 230
+远程接口, 336
+实现, 337
+StockService, 163
+RemoteException 类, 124
+`remove()` 方法, 151
+仓库, Grace 和, 540
+请求变量, 383
+`@Resource` 注解, 415
+response 示例, 383
+RESTful 服务, 482
+CDI (上下文与依赖注入), 493, 495
+端点类, 489–492
+JavaBeans, 488
+lessless, 465
+websockets 连接, 484
+读取结果示例, 507
+ResultSet 类, 305
+反向域名, 361
+`reverse()` 方法, 361
+反向域名规范, 16
+RIA (Java 远程应用接口)框架, 233
+RMI (远程方法调用), 335
+运行时文档模型, 336–341
+客户端, 339
+应用为, 341
+分布式应用, 335
+session 类, 341
+对象注册, 338
+查找对象, 341
+远程接口, 336
+实现, 337
+安全, 340
+stubs, 335
+Root 接口, 467
+JavaFX 根节点, 233
+Rowset 方法, 307
+RPC (远程过程调用), 423
+EJB, 153
+`run()` 方法, 210, 211
+运行时绑定, 227
+Runnable 接口, 220, 213
+运行时注解处理, 330–332
+运行时错误, 轨迹栈, 115
+RUNTIME 保留策略, 326
 
 ## S
 
-- `Serializable` 接口, 186
-- `sendBean()`, 404
-- `sendObject()`, 404
-- `sendStream()`, 404
-- `send()`, 404
-- `service()`, 357, 367
-- Servlet, 246, 355, 357-362, 366, 389
-- `Session` 接口, 396
-- `setConstraints()`, 240
-- `setLoss()`, 526
-- `setOutputPair()`, 288
-- `setPriority()`, 217
-- `size()`, 213
-- `sort()`, 298, 404
-- `SocketServer`, 336
-- SPA (单页应用), 484
-- SSE (Server-Side Events), 397
-- `stack trace`, 115, 186
-- `static` 关键字, 45
-- `static final` 变量, 192
-- `stop()`, 215
-- Stream API, 281-285, 291-293, 418
-- `Stream` 数据, 295
-- `swap()`, 133
-- `synchronized`, 340
-- 同步性, 323, 325
+Scale, 151
+可扩展性, 订阅, 435
+Scene Builder, 233
+序列化, 252–260
+Schedule 注解, 460
+范围, 版本, 25
+屏幕, 326
+安全, RMI 和, 340
+`sendBean()` 方法, 404
+`send()` 方法, 404
+顺序流, 287
+序列版本 ID, 192
+Serializable 接口, 186
+序列化, 65, 185–186
+setter 方法, 191
+反序列化, 186
+可扩展接口, 109
+OutputStream 类, 187–188
+Service 注解, 400
+服务器, 连接, 399–402
+Service 类, 392
+`service()` 方法, 357, 367
+servlets, 246, 355
+同步方法, 375
+创建, 357
+servlet 类, 362
+数据流, 366
+部署, 358
+文档根, 358
+过滤器, 353
+在线请求, 355
+JSF 和, 359
+加载自, 389
+数据, 356
 
-## T
+## SESSION TRACKING (HTTP)
 
-- `transient` 变量, 188, 189
-- `try` 关键字, 118
-- `try-with-resources`, 121
-- `TypeQuery` 接口, 468
-- 类型推断, 143, 162
+状态ful, 446, 435
+stateless, 446, 454
+会话跟踪, 368
+会话 (HTTP), 370
+cookie, 270
+会话变量, 383
+会话接口, 396
+stateful (EJB), 444
+singleton 注解, 326
+单例 bean (EJB), 446, 455
+单例方法, 320
+`size()` 方法, 213
+socket 的, 203
+接字编程, 207
+接字, 205
+SocketServer 类, 336
+`stop()` 方法, 215
+排序, 298
+Stream API, 418
+source, 244, 335
+source code, 300
+source events, 352
+source policy, 326
+SPA (单页应用), 484
+SSE (Server-Side Events), 397
+stack trace, 186
+singleton bean, 447
+switch, 311
+throw, 122
+static final 变量, 192
+static 方法, 44
+static方法, 接口, 268
+同步方法, 340
+static 关键字, 45
+stock 价格, 200–203
+stock 报价服务器, 204–206
+socket 接口, 336
+`stop()` 方法, 215
+存储过程, 298
+Stream API, 418
+I/O 流, 292
+Streaming 方法, 486
+读取 JSON, 484
+写入 JSON, 485
+Stream 数据, 295
+流, 281–285
+过滤器, 291
+中间操作, 282
+惰性操作, 282
+映射, 283
+并行, 285
+`parallel()` 方法, 285
+reduce, 285
+顺序流, 287
+终端操作, 293
+流数据, 295
+压力, 215
+`swap()` 方法, 133
+synchronized, 340
+同步性, 323
+同步性别名, 624
+同步性, 325
+transient 线程, 188
+transient 变量, 188, 189
+try 关键字, 118
+try-with资源, 121
+try/catch 块, 116, 118
+try-with-resources, 121
+类型推断, 143, 162
+TypeQuery 接口, 468
+类型, 泛型, 144
 
-## U
+## SWING-CLASS-UML
 
-- `unbind()`, 228, 246
-- `unbindDirectional()`, 246
+抽象类, 84
+默认类, 312
+FocusListener, 108
+GUI 构建器, 233
+Java 的, 311
+布局管理器, 85
+绝对布局, 96
+BoxLayout, 90
+CardLayout, 93
+组合, 70
+FlowLayout, 84
+GridLayout, 85
+GridLayout, 94
+监听器, 107
+KeyListener, 96
+MouseListener, 108
+MouseMotionListener, 108
+TableModel 接口, 312–318
+线程, 272–276
+Swing 类, 230
+Swing 标记, 163
+小组件, 96
+WindowListener, 108
+
+# UNBIND() 方法-WRITER 类
+
+- `unbind()` 方法, 246
+- `unbindDirectional()` 方法, 246
+- `unbind()` 讲解, 228
 - 解箱 (unboxing), 26
+- unicat 通信, 337
+- 测试, 56
 - 向上转型 (upcasting), 68
 - 上界通配符 (upper bound wildcard), 148
-- `URL` 类, 198
-- `URLConnection`, 197, 198
+- URL-类, 198
+- URL 对象, 196
+- URL.Connection, 198
+- URL.Connection 对象, 197
 - URLs (统一资源定位符), 195
-- `userCache()`, 198
-- 用户验收测试, 512
+- 重写 (rewriting), 369
+- `userCache()` 方法, 198
+- 用户验收测试 (user-acceptance testing), 512
+- UserPreferences, 185
 
-## V
+# V
 
-- 验证 Bean Validation 框架, 471-473
-- 变量, 22, 23, 25, 52, 53, 58, 63, 64, 66, 188, 189, 192, 255, 301, 381, 383
-- `VBox` 布局, 237
-- 版本控制, 191
-- `void` 关键字, 6
+- 验证 Bean Validation 框架, 471–473
+- 传递 (passing)
+    - 按引用传递 (by reference), 42
+    - 按值传递 (by value), 42
+- 变量 (variables)
+    - 应用 (application), 383
+    - 布尔 (boolean), 255
+    - 类级别声明 (class level declaration), 25
+    - 冲突 (conflict), 58
+    - 声明 (declaring), 22
+    - 点符号表示法 (dot notation), 66
+    - 异常 (exception), 381
+    - final, 23
+    - final 关键字, 64
+    - JSP (JavaServer Pages), 383
+    - 成员变量 (member variables)
+        - 访问级别 (access level), 63
+        - 程序化方式 (programmatic), 383
+        - pageContext, 383
+        - 私有 (private), 383
+        - 请求 (request), 383
+        - 响应 (response), 383
+        - 范围 (scope), 52, 53
+        - 会话 (session), 381
+        - 静态 final, 192
+        - 瞬态 (transient), 188–189
+- VBox 布局, 237
+- 版本控制 (versioning), 类版本控制 (class versioning), 191
+- vi, 3
+- void 关键字, 6
 
-## W
+```
+![](img/c6ae2d81738909a4b5328d6eddc14dd7_617_0.png)
+```
 
-- `wait()`, 219-222
+- `wait()` 方法, 219–222
+- 与 slept 相比比较, 220
+- WANs (广域网), 195
 - WAR 文件, 366, 540
-- Web 服务, 481, 482
-- `WebSocket` 协议, 104, 395
-- WebSocket 客户端, 397-399, 405
-- websockets, 397-412, 484
-- `WindowListener`, 108
-- `Workbench` 编辑器, 420
-- `writeExternal()`, 189-191
-- `writeObject()`, 187
-- `Writer` 类, 171
+- 警告信息，抑制 (suppressing), 323
+- Web 服务 (Web Services), 482
+- (另见 RESTful 服务)
+- JAX-RS, 481
+- JAX-WS, 481
+- SOAP, 481
+- WSDL, 482
+- WEB-INF, 359
+- WebFilter 注解, 374
+- WebObserver 注解, 357
+- WebSiteReader, 198
+- WebSocket 客户端，浏览器作为, 397–399
+- WebSocket 协议, 104, 395
+- 解码器 (decoders), 405
+- 编码器 (encoders), 409
+- Hello WebSocket, 400–402
+- 基于 Java 的客户端, 405
+- 发布 (publishing), 401
+- Sec-WebSocket-Key 属性, 398
+- 流量监控 (traffic monitoring), 402
+- websockets
+    - 注解端点 (annotated endpoints), 399
+    - 双向 (bidirectional), 397
+    - 客户端-服务器通信, 397–405
+    - 数据格式 (data format), 399
+    - 端点实例 (endpoint instances), 405
+    - 课程 (lesson), 412
+    - 消息 (messages)
+        - 接收 (receiving), 404
+        - 发送 (sending), 409
+        - 参数提交 (parameter posting), 401
+        - 程序化方式 (programmatic), 399
+    - RESTful 服务, 484
+    - 请求通信 (request communication), 392
+    - 子协议 (subprotocols), 399
+    - while 循环, 52
+    - while 程序的输出, 53
+    - 通配符 (wildcards), 144
+    - 上界 (upper bound), 148
+    - willDecode, 407
+- WindowListener, 108
+- JDK, JDK 安装, 4
+- Workbench 编辑器, 420
+- 包装类 (wrapper classes), 26
+- `writeExternal()` 方法, 189–191
+- `writeObject()` 方法, 187
+- Writer 类, 171
+
+# WSDL (Web 服务描述语言)--ZIP 文件
+
 - WSDL (Web 服务描述语言), 482
 
-## X
+# Z
+
+# X
 
 - 零索引数组 (zero-based arrays), 47
 
-## Z
-
-- ZIP 文件
 
 
-
-- XML（可扩展标记语言），233
+- `XML`（可扩展标记语言），233
 - `.zip` 文件，183
-- JSON 比较，483
+- `JSON` 比较，483
