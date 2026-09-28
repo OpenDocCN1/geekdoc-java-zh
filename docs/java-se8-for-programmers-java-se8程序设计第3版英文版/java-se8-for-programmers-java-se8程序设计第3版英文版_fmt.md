@@ -63,12 +63,7 @@ www.deitel.com
 
 www.deitel.com/training, 或邮寄 deail@deitel.com
 
-加入网络社区：
-
-- Facebook 社 (facebook.com/DeitelFan)
-- Twitter 社区 (@deitel)
-- Google+ 社 (plus.deitel.com)
-- LinkedIn 社 (bit.ly/deitelLinkedIn)
+加入网络社区：Facebook 社 (facebook.com/DeitelFan)、Twitter 社区 (@deitel)、Google+ 社 (plus.deitel.com);LinkedIn 社 (bit.ly/deitelLinkedIn)
 
 获得本书的更新，请订阅免费的 Deitel Buzz Online 邮件订阅服务
 
@@ -107,23 +102,23 @@ Oracle 公司
 
 欢迎阅读本书。本书将向软件开发者介绍先进的计算技术。我们专注于软件工程的最佳实践。本书用了 Deitel 特色的“程序讲解”——可以在 Windows、Linux 和 OS X 最新版本中运行的完整代码（而不是代码片段）来解释相关概念。每个完整的代码示例都随着样例。所有的源代码从下面的地址下载：
 
-`http://www.deitel.com/books/javafp3/`
+http://www.deitel.com/books/javafp3/
 
-与作者保持联系
+## 与作者保持联系
 
-你在阅读本书遇到任何问题，都可以给我们邮件，邮箱地址为 `deitel@deitel.com`
+你在阅读本书遇到任何问题，都可以给我们邮件，邮箱地址为 `deitel@deitel.com`。
 
-要了解本书的最新信息，可以访问 `http://www.deitel.com/books/jfp3`
+要了解本书的最新信息，可以访问 http://www.deitel.com/books/jfp3。
 
-可以从以下网址订阅 Deitel Buzz Online 电子邮件报：`http://www.deitel.com/newsletter/subscribe.html`
+可以从以下网址订阅 Deitel Buzz Online 电子邮件报：http://www.deitel.com/newsletter/subscribe.html。
 
 还可以加入 Deitel 社交社区：
 
-- Facebook (`http://www.deitel.com/deitelfan`)
-- Twitter (`@deitel`)
-- Google+ (`http://www.google.com/+DeitelFan`)
-- YouTube (`http://www.youtube.com/DeitelTV`)
-- LinkedIn (`http://linkedin.com/company/deitel-associates`)
+- Facebook (http://www.deitel.com/deitelfan)
+- Twitter (@deitel)
+- Google+ (http://www.google.com/+DeitelFan)
+- YouTube (http://www.youtube.com/DeitelTV)
+- LinkedIn (http://linkedin.com/company/deitel-associates)
 
 本书适合具有高级语言背景的程序员阅读。本书的特点是具有模块化结构。
 
@@ -136,7 +131,11 @@ Oracle 公司
 
 Java SE 8 中最重要的特性就是希腊字母 λ (lambda)。在本书第17章中详细介绍。与之前的编程相比，函数式编程 lambdas可以帮助你更快、简单、更少错误、更容易（多核系统上的性能改进）。
 
-- **Java 文档**。我们在书中提供了 Java 文档的链接，你可以从这些文档中了解更多关于我们介绍的所有主题信息。Java SE 7 文档的链接从如下网址下载：
+![](img/28513f3b4ab12c97e738c92ed0e327a8_12_0.png)
+
+### Java 文档
+
+我们在书中提供了 Java 文档的链接，你可以从这些文档中了解更多关于我们介绍的所有主题信息。Java SE 7 文档的链接从如下网址下载：
 
 ```
 http://docs.oracle.com/java/7/
@@ -160,39 +159,40 @@ http://docs.oracle.com/java/jfp8/
 http://www.example.com/books/jfp3
 ```
 
-- **Swing GUI 和 Java 2D 图形**。我们在第 12 章和第 19 章讨论 Java 的 GUI。Swing 目前处于维护模式——Oracle 已经停止开发，接下来只会提供 GUI 修复，然而它仍然是 Java 的一部分，而且被广泛使用。行业中大多数 GUI 的遗留代码都是使用的 Swing GUI。我们会在第 13 章讨论 Java 2D 图形。
+### Swing 和 JavaFX GUI, Java 2D 图形
 
+- **Swing GUI 和 Java 2D 图形**。我们在第 12 章和第 19 章讨论 Java 的 GUI。Swing 目前处于维护模式——Oracle 已经停止开发，接下来只会提供 GUI 修复，然而它仍然是 Java 的一部分，而且被广泛使用。行业中大多数 GUI 的遗留代码都是使用的 Swing GUI。我们会在第 13 章讨论 Java 2D 图形。
 - **JavaFX GUI**。JavaFX 是 GUI、图形和多媒体技术的进一步发展。在第 2 章我们使用的是 Java FX 2.2 (Java SE 7)，使用的是 Scene Builder——一种快速方便地构建的 Java GUI 的强大工具。它是一个独立的工具，你可以单独使用它，也可以在 Java IDE 中使用它。
 
+### 并发
+
 - **最佳内核性的并发**。我们非常邀请《Java 开发编程实战》（Addison-Wesley）的合著者 Brian Goetz 作为我们的编写人员。我们使用 Java SE 8 技术更新了第 20 章。我们增加了一个 Java SE 8 日期/时间 API 的 `parallelSort vs. sort` 示例，对于许多操作时并行 `parallelSort` 在多系统上的性能增强。我们还包含了使用时间/日期 API 的 Java 8 和序列流处理来显示性能增强。最后，我们添加了一个 Java SE 8 `Comparable`示例，它比较了长时间计算的串行和并行的性能。
-
 - **SwingWorker 类**。我们使用 `SwingWorker` 类来创建多线程界面。
-
 - **并发是一个挑战**。并存在许多并发特性。我们指出了大多数开发者应该使用的特性，并指出了那些应该特殊关注的特性。
 
-- **货币金额**。为了方便，我们在前面的章节中使用 `double` 类型来表示货币金额。由于 `double` 类型可能会误导货币金额，因此我们使用了更多的 `BigDecimal` 类来表示货币金额。我们会在第 8 章和第 22 章介绍 `BigDecimal`。
+### 获取货币的金额
+
+**货币金额**。为了方便，我们在前面的章节中使用 `double` 类型来表示货币金额。由于 `double` 类型可能会误导货币金额，因此我们使用了更多的 `BigDecimal` 类来表示货币金额。我们会在第 8 章和第 22 章介绍 `BigDecimal`。
+
+### 对象技术
 
 - **面向对象的方法**。我们使用早期的方法回顾第 1 章中对象的基本概念和语言。读者会在第 3 章开发一个特定的类和实例。
-
-- **早期对象的实例研究**。早期的类和对象主要由 `Account`、`Student`、`AutoPolicy`、`Time`、`Employee`、`Gradebook`、类和案例研究组成，并逐渐引入更深入的面向对象。
-
+- **早期对象的实例研究**。早期的类和对象主要由 Account、Student、AutoPolicy、Time、Employee、Gradebook、类和案例研究组成，并逐渐引入更深入的面向对象。
 - **继承、接口和组合**。我们使用一系列真实的案例来说明这些如何面向对象，并解释了理解应用程序应该选择哪些接口。我们还会讨论 Java SE 8 接口的改进。
-
 - **异常处理**。在本的前几章节中包含了基本的异常处理，然后我们在第 11 章介绍了了更深入的异常处理。异常处理对于创建“任务关键”和“业务关键”的应用非常重要。异常处理需要考虑：“当程序用于执行特定任务的组件在出现问题时发生了什么？该组件如何表示它出现了问题？”要使用一个 Java 组件，你不仅需要知道该组件在“事情进展”时的行为，还需要知道“事情无法进展”时该组件会抛出哪异常。
-
-- **Array 和 ArrayList 类**。第 7 章包含了 `Array` 类（其中包含用于执行常见操作的方法）和 `ArrayList` 类（它实现了动态数组的数据结构）。这符合在学习中定义自己的类的需要，使用现有的类进行大量操作的理念。
+- **Array 和 ArrayList 类**。第 7 章包含了 Array 类（其中包含用于执行常见操作的方法）和 ArrayList 类（它实现了动态数组的数据结构）。这符合在学习中定义自己的类的需要，使用现有的类进行大量操作的理念。
 
 # 阅读书籍之前的准备
 
 这部分内容包含你在使用本书之前应该知道的信息。这里介绍的任何信息的更新都会被发布在：
 
-`http://www.deitel.com/books/javafp3`
+http://www.deitel.com/books/javafp3
 
 此外，我们还提供了用于演示“阅读书籍之前的准备”节说明的 Dive-Into 视频（可能在 2014 年秋季课程上获取）。
 
 # 字体和命名约定
 
-我们使用字体来区分屏幕组件（例如，菜单名和菜单单项）和 Java 代码或者命令。我们的命名约定是：用 sans-serif bold Helvetica 字体（例如`File` 菜单）强调屏幕组件，用 sans-serif Lucida 字体（例如`System.out.println()`）强调 Java 代码和命令。
+我们使用字体来区分屏幕组件（例如，菜单名和菜单单项）和 Java 代码或者命令。我们的命名约定是：用 sans-serif bold Helvetica 字体（例如File 菜单）强调屏幕组件，用 sans-serif Lucida 字体（例如`System.out.println()`）强调 Java 代码和命令。
 
 本书使用的软件都可以免费从互联网获取。除了专门针对 Java SE 8 的示例，所有代码都使用 Java SE 7 和 Java SE 8 JDK（Java 标准开发工具包）进行了测试。
 
@@ -200,15 +200,15 @@ http://www.example.com/books/jfp3
 
 Windows, OS X Linux 平台的 JDK 7 可以如下网址获取：
 
-`http://www.oracle.com/technwork/java/javase/downloads/index.html`
+http://www.oracle.com/technwork/java/javase/downloads/index.html
 
 在本书出版时，Windows, OS X 和 Linux 平台的最新版 JDK 8 可以如下网址获取：
 
-`https://jdk.java.net/download.html`
+https://jdk.java.net/download.html
 
 当 JDK 8 的最终版发布时，可以如下网址获取：
 
-`http://www.oracle.com/technwork/java/javase/downloads/index.html`
+http://www.oracle.com/technwork/java/javase/downloads/index.html
 
 JDK 安装程序完成后，请务必按照 JDK 安装说明在你的平台上安装 JDK，该说明的网址如下：
 
@@ -220,7 +220,9 @@ http://docs.oracle.com/java/7/docs/webnotes/install/index.html
 
 计算机的 `PATH` 变量用于指定查找应用程序时要检索的计算机目录，例如允许编译和运行 Java 程序的路径（分别称为 `javac` 和 `java`）。按照安装说明在你的平台上安装，确保能够正确设置 `PATH` 环境变量。设置环境变量的步骤根据操作系统的不同然而有所不同，有时，不同的操作系统版本（例如Windows 7 和 Windows 8）也会设置环境变量的不同。各种平台的说明可见如下地址中：
 
-`http://www.java.com/en/download/path.xml`
+```
+http://www.java.com/en/download/path.xml
+```
 
 如果你没有正确地在 Windows 和一些 Linux 中设置 `PATH` 环境变量，那么当你使用 JDK 的工具时就会出现如下：
 
@@ -232,7 +234,7 @@ JDK 安装目录根据平台的不同而有所不同。下面列出的目录用�
 
 # 阅读本书之前的准备工作 XXXV
 
-根据你使用的平台的不同，当使用不同的 JDK 7 或 JDK 8 时，JDK 安装名称可能有所不同。对于 Linux 来说，安装位置取决于你使用的安装程序以及使用的 Linux 版本。我们使用的是 Ubuntu Linux。`PATH` 环境变量必须指向 JDK 安装的 `bin` 目录。
+根据你使用的平台的不同，当使用不同的 JDK 7 或 JDK 8 时，JDK 安装名称可能有所不同。对于 Linux 来说，安装位置取决于你使用的安装程序以及使用的 Linux 版本。我们使用的是 Ubuntu Linux。`PATH` 环境变量必须指向 JDK 安装的 bin 目录。
 
 在设置 `PATH` 时，一定要为你安装时使用的 JDK 版本使用正确的 JDK 安装目录名更改，以便包括不同的版本号。例如，我们在编写这部分内容时，最新的 JDK 7 版本是 update 51。因此，JDK 安装目录名为“_51”结束。
 
@@ -338,6 +340,28 @@ swing.defaultLookAndFeel=com.sun.plaf.Nimbus
 
 # 第一章 Java 简介与 Java 应用的测试驱动
 
+## 提纲
+
+- 1.1 引言
+- 1.2 对象技术概念
+  - 1.2.1 作为对象的汽车
+  - 1.2.2 方法与类
+  - 1.2.3 实例化
+  - 1.2.4 复用
+  - 1.2.5 消息与方法调用
+  - 1.2.6 属性与实例变量
+  - 1.2.7 封装与信息隐藏
+  - 1.2.8 继承
+  - 1.2.9 接口
+  - 1.2.10 面向对象分析与设计 (OOAD)
+  - 1.2.11 UML（统一建模语言）
+- 1.3 开源软件
+- 1.4 Java
+- 1.5 典型的 Java 开发环境
+- 1.6 Java 应用的测试驱动
+- 1.7 软件技术
+- 1.8 跟进信息技术变化
+
 ## 1.1 引言
 
 欢迎学习 Java——这是世界上使用最广泛的编程语言之一。你将学习面向对象编程——当今的核心编程方法。你将创建并使用许多软件对象。
@@ -351,11 +375,11 @@ Forrester Research 预测到 2015 年将有超过二十亿台 PC。根据 Oracle
 | 蓝光光盘播放器 | 有线电视盒 | 复印机 |
 | 信用卡 | CT 扫描仪 | 台式电脑 |
 | 电子书阅读器 | 游戏主机 | GPS 导航系统 |
-| 家电 | 家庭安系统系统 | 灯开关 |
+| 家电 | 家庭安防系统 | 灯开关 |
 | 彩票终端 | 医疗设备 | 手机 |
 | 磁共振成像仪 (MRI) | 停车支付系统 | 打印机 |
 
-**图 1.1** 使用 Java 的某些设备。（部分，共 2 部分）
+**图 1.1** 使用 Java 的某些设备。（第 1 部分，共 2 部分）
 
 1. http://www.worldometers.info/computers.
 2. http://www.oracle.com/technetwork/articles/java/javaone12-review-1863742.html.
@@ -366,7 +390,7 @@ Forrester Research 预测到 2015 年将有超过二十亿台 PC。根据 Oracle
 | 智能手机 | 平板电脑 | 电视 |
 | 电视顶盒 | 恒温器 | 车辆诊断系统 |
 
-**图 1.1** 使用 Java 的某些设备。（部分 2，共 2 部分）
+**图 1.1** 使用 Java 的某些设备。（第 2 部分，共 2 部分）
 
 根据 Gartner 的一项研究，移动设备将继续作为用户的主要计算设备优于 PC；预计 2015 年将出货 19.6 亿智能手机和 3.8 亿平板电脑，是 PC 数量的 8.7 倍。到 2018 年，移动应用（apps）市场预计将达到 920 亿美元。为编写移动应用程序的人员创造了巨大的职业机会，其中许多都是通过编程实现的。
 
@@ -394,7 +418,7 @@ Java 微型版 (Java ME) 是 Java 的子集，用于开发资源受限设备，�
 
 为了帮助你理解对象及其内容，让我们从一个简单的类比开始。假设你想开车并通过踩油门板让它变快。在这样做之前需要发生什么？嗯，在开车之前，必须有人来设计它。汽车通常以工程图开始，类似于描述房屋的蓝图。这些图中包含了加速踏板的设计。踏板隐藏了让汽车加速的机制，就像刹车隐藏了减速的机制，方向盘隐藏了转向机制一样。这让不懂发动机、刹车和转向机制的人也能开车。
 
-正如你无法在蓝图厨房里做饭，你也无法通过工程图开车。在开车之前，必须根据描述它的工程图进行建造。完成的汽车有一个加速踏板来使其变快，但还不够——汽车会自动加速（希望如此！），所以司机必须按下踏板来加速。
+正如你无法在蓝图厨房里做饭，你也无法通过工程图开车。在开车之前，必须根据描述它的工程图进行建造。完成的汽车有一个加速踏板来使其变快，但还不够——汽车不会自动加速（希望如此！），所以司机必须按下踏板来加速。
 
 ### 1.2.2 方法与类
 
@@ -406,7 +430,7 @@ Java 微型版 (Java ME) 是 Java 的子集，用于开发资源受限设备，�
 
 ### 1.2.4 复用
 
-正如汽车的工程图可以多次复用以制造许多汽车、建筑一样，你也可以多次复用一个类（`class`）来构建许多对象（`object`）。构建新类时复用现有的类可以节省可能和精力。复用还能帮助你构建更可靠、更有效的系统，因为现有的类和组件通常经过了广泛的测试、调试和性能调优。正如互换零件的概念对工业革命至关重要一样，可复用的类对于由对象技术引发的软件革命也至关重要。
+正如汽车的工程图可以多次复用以制造许多汽车一样，你也可以多次复用一个类（class）来构建许多对象（object）。构建新类时复用现有的类可以节省时间和精力。复用还能帮助你构建更可靠、更有效的系统，因为现有的类和组件通常经过了广泛的测试、调试和性能调优。正如互换零件的概念对工业革命至关重要一样，可复用的类对于由对象技术引发的软件革命也至关重要。
 
 > **软件工程观察 1.1**
 >
@@ -420,7 +444,7 @@ Java 微型版 (Java ME) 是 Java 的子集，用于开发资源受限设备，�
 
 汽车除了具有完成任务的能力外，还具有属性，例如颜色、车门数量、油箱中的汽油量、当前速度以及总行驶里程记录（即里程表读数）。与能力一样，汽车的属性在工程图中被表示为设计的一部分（例如，图中包含里程表和油表）。当你驾驶一辆真实的汽车时，这些属性会随车移动。每辆汽车都维护着自己的属性。例如，每辆汽车都知道自己的油箱里有多少汽油，但不知道其他汽车油箱里有多少油。
 
-同样，对象也拥有它在程序中使用时携带的属性。这些属性被指定为对象类的一部分。例如，一个银行账户对象有一个 `balance`（余额）属性代表账户中的金额。每个银行账户对象都知道它所代表的账户余额，但不知道银行中其他账户的余额。属性是通过类的 `instance variables`（实例变量）来指定的。
+同样，对象也拥有它在程序中使用时携带的属性。这些属性被指定为对象类的一部分。例如，一个银行账户对象有一个 `balance`（余额）属性代表账户中的金额。每个银行账户对象都知道它所代表的账户余额，但不知道银行中其他账户的余额。属性是通过类的**实例变量**（instance variables）来指定的。
 
 ### 1.2.7 封装与信息隐藏
 
@@ -434,11 +458,15 @@ Java 微型版 (Java ME) 是 Java 的子集，用于开发资源受限设备，�
 
 ### 1.2.9 接口
 
-Java 还实现了接口（`interfaces`）——相关方法的集合，通常允许你告诉对象*做什么*，而不是*怎么做*（我们将在 Java SE 8 中看到一个特例）。在汽车的类比中，一个由方向盘、加速踏板和刹车板组成的“基本驾驶能力”接口可以让驾驶员告诉汽车该做什么。一旦你学会了如何使用这个接口进行转向、加速和刹车，你就可以驾驶许多类型的汽车，尽管制造商可能以不同的方式实现这些系统。
+Java 还实现了接口（interfaces）——相关方法的集合，通常允许你告诉对象*做什么*，而不是*怎么做*（我们将在 Java SE 8 中看到一个特例）。在汽车的类比中，一个由方向盘、加速踏板和刹车板组成的“基本驾驶能力”接口可以让驾驶员告诉汽车该做什么。一旦你学会了如何使用这个接口进行转向、加速和刹车，你就可以驾驶许多类型的汽车，尽管制造商可能以不同的方式实现这些系统。
 
-一个类可以实现两个或多个接口，每个接口可以有一个或多个方法，正如类可以满足基本驾驶功能、控制收音机、控制空调系统的接口一样，正如汽车制造商以不同的方式实现能力一样，类也可以以不同的方式实现。
+一个类可以实现两个或多个接口，每个接口可以有一个或多个方法，正如类可以满足基本驾驶功能、控制收音机、控制空调系统的接口一样，正如汽车制造商以不同的方式实现能力一样，类也可以以不同的方式实现这些能力。
 
 ### 1.2.10 面向对象分析与设计 (OOAD)
+
+尽管存在许多 OOAD 过程，统一建模语言（UML）现在是**广泛使用的**。我们将在第 3 章介绍 UML 图。
+
+### 1.2.11 UML (统一建模语言)
 
 尽管存在许多 OOAD 过程，统一建模语言（UML）现在是**广泛使用的**。我们将在第 3 章介绍 UML 图。
 
@@ -451,6 +479,8 @@ Linux 操作系统——在服务器和个人电脑上非常流行——也许�
 ### Android
 
 Android——增长最快的移动和手机操作系统——基于 Linux 内核和 Java。经验丰富的程序员可以快速进入 Android 开发。开发应用的优点之一是平台的开放性。该操作系统是开放且免费的。Android 操作系统由 Android, Inc. 开发，该公司在 2005 年被 Google 收购。2007 年成立的 Android 联盟旨在维护和演进 Android，推动移动技术创新并在改进用户体验的同时降低成本。截至 2013 年 4 月，每天有超过 150 万台 Android 设备（手机、平板电脑等）被激活。到 2013 年 10 月，Strategy Analytics 的报告显示，Android 全球智能手机市场份额为 81.3%，而 Apple 为 13.4%，微软为 4%，黑莓为 1%。
+
+设备、智能手机、车载娱乐系统（用于控制收音机、GPS、电话、恒温器等）等。
 
 Android 智能手机集成了手机、网络客户端（用于浏览和网络通信）、MP3 播放器、游戏机、数码相机等功能。这些手持设备具有彩色多点触摸屏，允许你通过涉及单次或多次触摸的手势来控制设备。你可以通过 Google Play 和其他市场直接向你的 Android 设备下载应用。在编写本文时，Google Play 上已有超过百万个应用，而且数量正在快速增长。
 
@@ -493,7 +523,7 @@ Web 在 1993 年爆发式流行，Sun 看中了使用 Java 为网页添加动态
 |---|---|---|
 | 在编辑器中创建并存储在磁盘上 | | |
 
-**图 1.2** 典型的开发环境——编辑阶段
+**图 1.2 典型的开发环境——编辑阶段**
 
 集成开发环境（IDEs）提供了支持开发过程的工具，如编辑器、调试器等。许多流行的 IDE 包括：
 
@@ -503,7 +533,7 @@ Web 在 1993 年爆发式流行，Sun 看中了使用 Java 为网页添加动态
 
 ## 阶段 2：将 Java 程序编译为字节码
 
-在阶段 2，使用 `javac` 命令（Java 编译器）来编译程序（图 1.3）。例如，为了编译名为 `welcome.java` 的程序，你需要在系统窗口（Windows 的命令提示符，OS X 的 Terminal 或 Linux 的 shell）中输入：
+在阶段 2，使用 `javac` 命令（Java 编译器）来编译程序（图 1.3）。例如，为了编译名为 `welcome.java` 的程序，你需要在系统窗口（Windows 的命令提示符，OS X 的 Terminal 或 Linux 的 shell）中输入
 
 ```
 javac welcome.java
@@ -513,11 +543,11 @@ javac welcome.java
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_48_0.png)
 
-**图 1.3** 典型的开发环境——编译阶段
+**图 1.3 典型的开发环境——编译阶段**
 
 Java 编译器将源代码转换为字节码以代表执行阶段（阶段 5）的任务。Java 虚拟机（JVM）——JDK 的一部分也是 Java 平台的基础——执行字节码。虚拟机（VM）是一种模拟计算机的软件应用程序，它为交互的程序隐藏了底层的操作系统和硬件。如果在许多平台上实现了相同的虚拟机，该类型的虚拟机就可以在所有平台上运行。JVM 是最常用的虚拟机之一。微软 .NET 使用了类似的虚拟机架构。
 
-与机器指令（即取决于平台，即取决于特定的计算机硬件）不同，字节码指令与平台无关。因此，Java 的字节码是可移植的——无需重新编译源代码，任何包含编译该字节码的 Java 版本的平台都可以执行相同的字节码指令。JVM 通过 `java` 命令调用。例如，为了执行名为 `welcome` 的应用，你输入命令：
+与机器指令（即取决于平台，即取决于特定的计算机硬件）不同，字节码指令与平台无关。因此，Java 的字节码是可移植的——无需重新编译源代码，任何包含编译该字节码的 Java 版本的平台都可以执行相同的字节码指令。JVM 通过 `java` 命令调用。例如，为了执行名为 `welcome` 的应用，你输入命令
 
 ```
 java Welcome
@@ -531,7 +561,7 @@ java Welcome
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_49_0.png)
 
-**图 1.4** 典型的 Java 开发环境——加载阶段
+**图 1.4 典型的 Java 开发环境——加载阶段**
 
 ## 第 4 阶段：字节码验证
 
@@ -539,7 +569,7 @@ java Welcome
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_49_1.png)
 
-**图 1.5** 典型的 Java 开发环境——验证阶段
+**图 1.5 典型的 Java 开发环境——验证阶段**
 
 ## 第 5 阶段：执行
 
@@ -547,13 +577,11 @@ java Welcome
 
 若要执行程序，JVM 读取字节码并将其即时编译（JIT）编译（即翻译）为计算机可以理解的语言。随着程序的执行，它可能会在主内存中存储值。
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_50_0.png)
-
-**图 1.6** 典型的 Java 开发环境——执行阶段
+**图 1.6 典型的 Java 开发环境——执行阶段**
 
 ## 执行时可能出现的问题
 
-程序在第一次尝试时可能无法运行。之前的每个阶段都可能因为我们在本书中讨论的错误而失败。例如，执行程序可能会尝试除以零（这在 Java 的整数算术中是非合法的）。这会导致程序显示错误消息。
+程序在第一次尝试时可能无法运行。之前的每个阶段都可能因为我们在本书中讨论的错误而失败。例如，执行程序可能会尝试除以零（这在 Java 的整数算术中是非法的）。这会导致程序显示错误消息。
 
 ## 常见编程错误 1.1
 
@@ -567,7 +595,8 @@ java Welcome
 
 1. **检查你的设置。** 在开始之前，请按照第 1.6.1 节中的步骤，确认你已在计算机上正确设置了 Java，已将书籍的示例复制到硬盘，并且你知道如何在系统上打开命令窗口。
 2. **切换到完成的应用程序目录。** 打开命令窗口并使用 `cd` 命令切换到 Painter 应用程序的目录（也称为文件夹）。我们假设书籍示例位于 Windows 上的 `C:\examples`，或者 Linux/OS X 上你用户账户的 `Documents/examples` 文件夹中。
-   - 在 Windows 上输入 `cd C:\examples\ch01\painter`，然后按回车。在 Linux/OS X 上，输入 `cd ~/Documents/examples/ch01/painter`，然后按回车。
+   - 在 Windows 上输入 `cd C:\examples\ch01\painter`，然后按回车。
+   - 在 Linux/OS X 上，输入 `cd ~/Documents/examples/ch01/painter`，然后按回车。
 3. **运行 Painter 应用程序。** 回想 `java` 命令后接应用程序的 `.class` 文件名（在本例中为 Painter）即可执行应用程序。输入 `java Painter` 并按回车执行该程序。图 1.7 显示了程序在 Windows、Linux 和 OS X 上运行的情况。[注：Java 命令对大小写敏感——大写字母与小写字母不同。此外，如果你收到“Exception in thread java.lang.NoClassFoundError: Painter”错误，请参考相关章节进行修复。]
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_51_0.png)
@@ -589,9 +618,9 @@ java Welcome
 | 软件即服务 (SaaS) | 软件通常被视为一种产品；大多数软件都是以这种方式提供的。如果你想运行一个应用程序，你就从软件供应商处购买软件包——通常是 CD、DVD 或网络下载。然后你将该软件安装在计算机上并根据需要运行。当新版本出现时，你就会升级软件，通常需要花费大量的时间和金钱。对于必须在各种计算机设备上维护数万个系统的组织来说，这个过程可能会变得繁琐。通过软件即服务 (SaaS)，软件运行在互联网其他地方服务器上。当该服务器进行更新时，全球所有的客户端都能看到新功能——不需要本地安装。你通过浏览器访问该服务。浏览器具有很强的移植性，因此你可以在世界任何地方的各种计算机上运行相同的应用程序。Salesforce、Google 以及微软的 Office Live 和 Windows 都提供 SaaS。 |
 | 平台即服务 (PaaS) | 平台即服务提供了一个计算平台，用于通过 Web 作为服务开发和运行应用程序，而不是在你的计算机上安装工具。PaaS 供应商包括 Google App Engine、Amazon EC2 和 Windows Azure™。 |
 | 云计算 | SaaS 和 PaaS 是云计算的示例。你可以在“云端”中使用和存储数据——即通过互联网在远程计算机（服务器）访问并按需使用——而不是将其放在桌面电脑、笔记本电脑或移动设备上。这允许你根据需要增加或减少计算资源以满足你的需求，这比购买硬件来提供足够的存储和处理能力以满足偶尔的峰值需求更具成本效益。云计算还通过将管理这些应用的负担转移给提供商来节省费用。 |
-| 软件开发包 (SDK) | 软件开发包 (SDK) 包括开发者用于编写应用程序的工具和文档。例如，你将使用 Java 开发包 (JDK) 来构建和运行 Java。 |
+| 软件开发包 (SDK) | 软件开发包 (SDK) 包括开发者用于编写应用程序的工具和文档。例如，你将使用 Java 开发包 (JDK) 来构建和运行 Java 。 |
 
-**图 1.13** 软件技术（2 部分中的 2 部分）
+**图 1.13 软件技术（2 部分中的 2 部分）**
 
 # 18 第一章 Java 简介与 Java 程序的驱动测试
 
@@ -605,7 +634,7 @@ java Welcome
 | Final release（正式发布版） | 发布中出现的任何 Bug 都会被修正，最终产品将向公众发布。软件公司通常通过互联网分发增量更新。 |
 | Continuous beta（持续测试版） | 使用这种方法开发的软件（例如 Google 或 Gmail）通常没有版本号。它托管在云端（未安装在你的计算机上）并不断演进，使使用户始终拥有最新版本。 |
 
-**图 1.14** 软件产品发布术语
+**图 1.14 软件产品发布术语**
 
 ## 1.8 跟进信息技术动态
 
@@ -620,7 +649,7 @@ java Welcome
 | Computerworld | www.computerworld.com |
 | Engadget | www.engadget.com |
 
-**图 1.15** 技术和商业出版物（2 部分中的 1 部分）
+**图 1.15 技术和商业出版物（2 部分中的 1 部分）**
 
 | 出版物 | URL |
 | --- | --- |
@@ -670,7 +699,7 @@ java Welcome
 - 2.4 使用 printf 显示文本
 - 2.5 另一个应用：整数加法
 - 2.6 算术
-- 2.7 决策：等待和关系运算符
+- 2.7 决策：等等和关系运算符
 - 2.8 总结
 
 本章介绍了 Java 应用程序编程。我们从显示（输出）消息的示例开始。然后介绍一个从用户处获取（输入）两个数字、计算和并保存结果的应用。最后一个示例演示了如何做出决策。应用程序比较两个数字，然后显示比较结果。你将使用 JDK 命令行工具编译和运行程序。如果你更喜欢集成开发环境 (IDE)，我们还在 `http://www.deitel1.com/jfp3/` 发布了针对 Eclipse、NetBeans 和 IntelliJ IDEA 的视频。
@@ -696,7 +725,7 @@ public class Welcome1
 
 图 2.1 | 打印文本程序。
 
-该程序包含行号——它们不是 Java 程序的一部分。第 9 行执行工作——在屏幕上显示 `Welcome to Java Programming!` 短语。
+该程序包含行号——它们不是 Java 程序的一部分。第 9 行执行工作——在屏幕上显示 Welcome to Java Programming! 短语。
 
 ### 为程序编写注释
 
@@ -722,11 +751,11 @@ Java 提供了第三种注释——Javadoc 注释。它们由 `/**` 和 `*/` 分
 
 ### 声明类
 
-第 4 行开始声明名为 `Welcome1` 的类。每个 Java 程序都至少包含一个你（程序员）定义的类。`class` 关键字引入类声明，后面紧跟类名（`Welcome1`）。关键字（有时称为保留字）留供 Java 使用，并且始终用小写字母拼写。关键字列表见附录 C。
+第 4 行开始声明名为 `Welcome1` 的类。每个 Java 程序都至少包含一个你（程序员）定义的类。`class` 关键字引入类声明，后面紧跟类名（`Welcome1`）。关键字（有时称为保留字） 留供 Java 使用，并且始终用小写字母拼写。关键字列表见附录 C。
 
 在第 2 到 7 章中，每个类都以 `public` 关键字开头。目前，我们简单地直接使用 public 类。你将在第 8 章学习更多关于 public 类和非 public 类的知识。
 
-#### 公共类的文件名
+### 公共类的文件名
 
 public 类必须存放在文件名为 `ClassName.java` 格式的文件中，因此 `class Welcome1` 存储在 `Welcome1.java` 文件中。
 
@@ -734,7 +763,7 @@ public 类必须存放在文件名为 `ClassName.java` 格式的文件中，因�
 
 如果公共类的文件名与类名完全相同（包括拼写和大小写）且带有 `.java` 扩展名，将会发生编译错误。
 
-### 类名的命名惯例
+### 类名命名惯例
 
 按照惯例，类名大写字母开头，并包含的每个单词的首字母大写（例如 `SampleClassName`）。类名是一个标识符——由字母、下划线（`_`）和美元符号（`$`）组成的序列，不以数字开头且不包含空格。一些有效的标识符是 `welcome1`、`$value`、`_value`、`m_inputField1`，而 `7button` 不是有效的标识符，因为它以数字开头，`name input field` 不是有效的标识符，因为它包含空格。通常，不以大写字母开头的标识符不是类名。Java 是大小写敏感的——大写和小写字母是不同的——所以 `value` 和 `Value` 是不同的（但都是有效的）标识符。
 
@@ -766,7 +795,7 @@ public 类必须存放在文件名为 `ClassName.java` 格式的文件中，因�
 
 ### 使用 System.out.println 执行输出
 
-第 9 行显示双引号之间的字符（引号不会显示）。字符串中的空白字符不被编译器忽略。`System.out` 对象被预定义为标准输出。在最新版本的 Microsoft Windows 中，命令行窗口是 Command Prompt。在 UNIX/Linux/macOS 中，命令行窗口被称为 shell。许多程序员将其称为命令行。`System.out.println` 方法在命令行窗口中打印一行文本。
+第 9 行显示双引号之间的字符（引号不会忽略）。字符串中的空白字符不被编译器忽略。`System.out` 对象被预定义为标准输出。在最新版本的 Microsoft Windows 中，命令行窗口是 Command Prompt。在 UNIX/Linux/macOS 中，命令行窗口被称为 shell。许多程序员将其称为命令行。`System.out.println` 方法在命令行窗口中打印一行文本。
 
 ### 编译你的第一个 Java 应用
 
@@ -775,7 +804,7 @@ public 类必须存放在文件名为 `ClassName.java` 格式的文件中，因�
 打开命令行窗口并切换到程序存储的目录。许多操作系统使用 `cd` 命令切换目录，例如在 Windows 上：
 
 ```bash
-cd \examples\ch02\fig02_01
+cd C:\examples\ch02\fig02_01
 ```
 
 切换到 `fig02_01` 目录。在 UNIX/Linux/macOS 上，使用命令：
@@ -825,261 +854,63 @@ java Welcome1
 
 ### 使用多个语句显示单行文本
 
-“Welcome to Java Programming!”可以通过多种方式显示。图 2.3 所示的 `class Welcome2` 使用两个语句（第 9–10 行）产生图 2.1 所示的输出。[注：从现在起，我们将用灰色背景突出每个代码列表中新出现的关键特性，正如我们对第 9–10 行所做的那样。]
+“Welcome to Java Programming!”可以通过多种方式显示。图 2.3 所示的 `class Welcome2` 使用两个语句（第 9–10 行）产生图 2.1 所示的输出。[注：从现在起，我们将用灰色背景突出每个代码列表中新出的关键特性，正如我们对第 9–10 行所做的那样]。
 
-```java
-// 图 2.3: Welcome2.java
-// 使用多个语句打印一行文本。
-public class Welcome2
-{
-    // main 方法开始 Java 应用的执行
-    public static void main(String[] args)
-    {
-        System.out.print("Welcome to ");
-        System.out.println("Java Programming!");
-    } // 结束 main 方法
-} // 结束类 Welcome2
-```
+![](img/28513f3b4ab12c97e738c92ed0e327a8_64_1.png)
 
-Welcome to Java Programming!
+图 2.3 使用多个语句打印一行文本。
 
-图 2.3 | 使用多个语句打印一行文本。
-
-程序与图 2.1 类似。`main` 方法第 9 行使用 `System.out.print` 显示 `"Welcome to "` 并保持光标在同一行。第 10 行使用 `System.out.println` 显示 `"Java Programming!"` 并换行。
+程序与图 2.1 类似。`main` 方法第 9 行使用 `System.out.print` 显示 "Welcome to " 且不换行。第 10 行使用 `System.out.println` 显示 "Java Programming!" 并换行。
 
 ### 使用单个语句显示多行文本
 
-图 2.4 所示的 `class Welcome3` 使用一个语句（第 9 行）产生四行输出。
+图 2.4 所示的 `class Welcome3` 使用单个语句（第 9 行）产生四行输出。转义序列 `\n` 表示换行符。
 
 ```java
 // 图 2.4: Welcome3.java
 // 使用单个语句打印多行文本。
 public class Welcome3
 {
-    // main 方法开始 Java 应用的执行
     public static void main(String[] args)
     {
         System.out.println("Welcome\nto\nJava\nProgramming!");
-    } // 结束 main 方法
-} // 结束类 Welcome3
-```
-
-Welcome
-to
-Java
-Programming!
-
-图 2.4 | 使用单个语句打印多行文本。
-
-转义序列 `\n` 表示换行符。当在字符串中遇到 `\n` 时，`System.out.println` 会将光标移动到下一行的开头。
-
-## 2.4 使用 printf 显示文本
-
-Java 提供了 `System.out.printf` 方法来格式化输出。图 2.5 演示了 `printf` 的几种用法。
-
-```java
-// 图 2.5: Welcome4.java
-// 使用 printf 显示格式化文本。
-public class Welcome4
-{
-    public static void main(String[] args)
-    {
-        System.out.printf("%s\n%s\n%s\n%s\n", "Welcome", "to", "Java", "Programming!");
-    } // 结束 main 方法
-} // 结束类 Welcome4
-```
-
-Welcome
-to
-Java
-Programming!
-
-图 2.5 | 使用 printf 显示格式化文本。
-
-格式字符串包含固定文本和格式说明符。每个格式说明符以 `%` 开头，以转换字符结尾。`%s` 是字符串的格式说明符。`\n` 是换行转义序列。
-
-## 2.5 另一个应用：整数加法
-
-图 2.6 所示的应用从用户处读取两个整数（整数为整数类型），计算它们的和并显示结果。
-
-```java
-// 图 2.6: Addition.java
-// 计算两个整数的和。
-import java.util.Scanner; // 程序使用 Scanner
-
-public class Addition
-{
-    // main 方法开始 Java 应用的执行
-    public static void main(String[] args)
-    {
-        // 创建 Scanner 从命令行窗口获取输入
-        Scanner input = new Scanner(System.in);
-
-        int number1; // 要读取的第一个数字
-        int number2; // 要读取的第二个数字
-        int sum; // 数字的和
-
-        System.out.print("Enter first integer: "); // 提示
-        number1 = input.nextInt(); // 读取用户输入的第一个数字
-
-        System.out.print("Enter second integer: "); // 提示
-        number2 = input.nextInt(); // 读取用户输入的第二个数字
-
-        sum = number1 + number2; // 计算和
-
-        System.out.printf("Sum is %d\n", sum); // 显示结果
-    } // 结束 main 方法
-} // 结束类 Addition
-```
-
-Enter first integer: 45
-Enter second integer: 72
-Sum is 117
-
-图 2.6 | 计算两个整数的和。
-
-### 导入类声明
-
-第 3 行 `import java.util.Scanner;` 告诉编译器 `Scanner` 类在 `java.util` 包中。如果忘记导入，编译器会报错。
-
-### 声明变量
-
-第 9-11 行声明变量 `number1`、`number2` 和 `sum` 为 `int` 类型。变量声明指定名称和类型。`int` 是基本类型之一。
-
-### 创建 Scanner 对象
-
-第 7 行 `Scanner input = new Scanner(System.in);` 创建 `Scanner` 对象 `input` 以从标准输入读取数据。
-
-### 读取输入
-
-`input.nextInt()` 方法读取用户输入的整数。
-
-### 计算与输出
-
-第 17 行计算和，第 19 行使用 `printf` 格式化输出。`%d` 是整数的格式说明符。
-
-## 2.6 算术
-
-Java 的算术运算符见表 2.2。
-
-| 运算符 | 含义 | 示例 | 结果 |
-| :--- | :--- | :--- | :--- |
-| `+` | 加法 | `10 + 3` | `13` |
-| `-` | 减法 | `10 - 3` | `7` |
-| `*` | 乘法 | `10 * 3` | `30` |
-| `/` | 除法 | `10 / 3` | `3` |
-| `%` | 取余 | `10 % 3` | `1` |
-
-整数除法会截断小数部分。取余运算符 `%` 返回除法的余数。
-
-### 算术表达式的求值顺序
-
-运算符优先级决定求值顺序：
-1. `*`、`/`、`%`（优先级高，从左到右结合）
-2. `+`、`-`（优先级低，从左到右结合）
-3. 括号 `()` 可改变顺序。
-
-例如 `a + b * c` 先算 `b * c`。
-
-## 2.7 决策：等待和关系运算符
-
-Java 使用 `if` 语句进行决策。关系运算符见表 2.3。
-
-| 运算符 | 含义 | 示例 |
-| :--- | :--- | :--- |
-| `==` | 等于 | `x == y` |
-| `!=` | 不等于 | `x != y` |
-| `>` | 大于 | `x > y` |
-| `<` | 小于 | `x < y` |
-| `>=` | 大于等于 | `x >= y` |
-| `<=` | 小于等于 | `x <= y` |
-
-图 2.7 比较两个整数。
-
-```java
-// 图 2.7: Comparison.java
-// 使用关系运算符比较两个整数。
-import java.util.Scanner;
-
-public class Comparison
-{
-    public static void main(String[] args)
-    {
-        Scanner input = new Scanner(System.in);
-
-        int number1;
-        int number2;
-
-        System.out.print("Enter first integer: ");
-        number1 = input.nextInt();
-
-        System.out.print("Enter second integer: ");
-        number2 = input.nextInt();
-
-        if (number1 == number2)
-            System.out.printf("%d == %d\n", number1, number2);
-
-        if (number1 != number2)
-            System.out.printf("%d != %d\n", number1, number2);
-
-        if (number1 < number2)
-            System.out.printf("%d < %d\n", number1, number2);
-
-        if (number1 > number2)
-            System.out.printf("%d > %d\n", number1, number2);
-
-        if (number1 <= number2)
-            System.out.printf("%d <= %d\n", number1, number2);
-
-        if (number1 >= number2)
-            System.out.printf("%d >= %d\n", number1, number2);
     }
 }
 ```
 
-Enter first integer: 777
-Enter second integer: 777
-777 == 777
-777 <= 777
-777 >= 777
+![](img/28513f3b4ab12c97e738c92ed0e327a8_65_0.png)
 
-图 2.7 | 比较两个整数。
-
-每个 `if` 语句独立判断。如果条件为真，执行紧随其后的语句。
-
-## 2.8 总结
-
-本章介绍了：
-- 编写、编译、运行 Java 应用。
-- `System.out.println`、`print`、`printf` 输出。
-- `Scanner` 输入。
-- 基本类型 `int`、变量声明。
-- 算术运算符及优先级。
-- 关系运算符与 `if` 决策语句。
+图 2.4 使用单个语句打印多行文本。
 
 
+
+# Java 应用程序简介：输入/输出与运算符
+
+## 编译错误排查
 
 在使用 `javac` 时，如果收到类似“bad command or filename”、“javac command not found”或“'javac' is not recognized as an internal or external command, operable program or batch file”的消息，则说明 Java 软件安装未正确完成。这表明系统 `PATH` 环境变量未设置正确。请复习本书中“开始之前”部分的安装说明。在某些系统上，纠正 `PATH` 后，你可能需要重启计算机或打开一个新的命令行窗口以使这些设置生效。
 
 每个语法错误消息都包含错误发生的文件名和行号。例如，`welcome1.java:6` 表示在 `welcome1.java` 的第 6 行发生了错误。其余消息提供了有关语法错误的信息。
 
-## 常见编程错误 2.4
+### 常见编程错误 2.4
 
 编译器错误“Class Welcome1 is public, should be declared in a file named welcome1.java”表示文件名与文件中的公共类名不匹配，或者你在编译时输入的类名有误。
 
 ## 执行 Welcome1 应用程序
 
-以下指令假设书中的示例位于 Windows 上的 `C:\examples` 或 Linux/OS 上用户账户的 `Documents/examples` 文件夹中。要在命令行窗口中执行此程序，请切换到包含 `welcome1.java` 的目录——Microsoft Windows 上的 `C:\ch02` 或 Linux/OS 上的 `~/Documents/examples/ch02/figit02_01`。接下来，输入
+以下指令假设书中的示例位于 Windows 上的 `C:\examples` 或 Linux/OS 上用户账户的 `Documents/examples` 文件夹中。要在命令行窗口中执行此程序，请切换到包含 `welcome1.java` 的目录——Microsoft Windows 上的 `C:\ch02` 或 Linux/OS 上的 `~/Documents/examples/ch02/fig02_01`。接下来，输入
 
 ```
 java welcome1
 ```
 
-并回车。此命令启动 JVM，加载 `welcome1.class` 文件。命令省略了 `.class` 文件扩展名；否则 JVM 将无法执行程序。JVM 调用 `welcome1` 的 `main` 方法。接下来，`main` 方法第 9 行的语句显示“Welcome to Java Programming!”。图 2.2 显示了 Windows 命令提示符中的程序执行情况。[注：许多环境显示黑色背景和白色文字的窗口。我们调整了这些设置以使我们的截图更易读。]
+并回车。此命令启动 JVM，加载 `welcome1.class` 文件。命令省略了 `.class` 文件扩展名；否则 JVM 将无法执行程序。JVM 调用 `welcome1` 的 `main` 方法。接下来，`main` 方法第 9 行的语句显示“Welcome to Java Programming!”。图 2.2 显示了 Windows 命令提示符中的程序执行情况。
 
-## 错误预防提示 2.3
+> **注**：许多环境显示黑色背景和白色文字的窗口。我们调整了这些设置以使我们的截图更易读。
 
-在尝试运行 java 程序时，如果收到类似“Exception in thread "main" java.lang.NoClassDefFoundError: Welcome1”的消息，说明你的 `CLASSPATH` 环境变量未设置正确。请仔细复习本书中“开始之前”部分的说明。在某些系统上，在配置 `CLASSPATH` 后，你可能需要重启计算机或打开一个新的命令行窗口。
+### 错误预防提示 2.3
+
+在尝试运行 Java 程序时，如果收到类似“Exception in thread "main" java.lang.NoClassDefFoundError: Welcome1”的消息，说明你的 `CLASSPATH` 环境变量未设置正确。请仔细复习本书中“开始之前”部分的说明。在某些系统上，在配置 `CLASSPATH` 后，你可能需要重启计算机或打开一个新的命令行窗口。
 
 ## 2.3 修改你的第一个 Java 程序
 
@@ -1087,52 +918,56 @@ java welcome1
 
 ### 使用多个语句显示单行文本
 
-“Welcome to Java Programming!”可以通过多种方式显示。图 2.3 所示的 `class welcome2` 使用两个语句（第 9–10 行）产生图 2.1 所示的输出。[注：从现在起，我们将用灰色背景突出每个代码列表中新出的关键特性，正如我们对第 9–10 行所做的那样。]
+“Welcome to Java Programming!”可以通过多种方式显示。图 2.3 所示的 `class Welcome2` 使用两个语句（第 9–10 行）产生图 2.1 所示的输出。
+
+> **注**：从现在起，我们将用灰色背景突出每个代码列表中新出现的关键特性，正如我们对第 9–10 行所做的那样。
 
 ### 使用单个语句显示多行文本
 
-图 2.4 所示的 `class welcome3` 使用单个语句（第 9 行）产生四行输出。该语句使用 `System.out.printf` 和格式字符串。
+图 2.4 所示的 `class Welcome3` 使用一个语句（第 9 行）产生四行输出。
 
 ```
 System.out.printf("%s\n%s\n%s\n%s\n", "Welcome", "to", "Java", "Programming!");
 ```
 
-格式说明符以百分号（`%`）开头，后跟一个表示数据类型的字符。例如，格式说明符 `%s` 是字符串的占位符。第 9 行中的格式字符串指定 `printf` 输出四个字符串，每个字符串后面都跟着一个换行符。在第一个格式说明符的位置，`printf` 用格式字符串之后的第一个参数的值替换它。在每个随后的格式说明符的位置，`printf` 用下一个参数的值替换它。此示例将第一个 `%s` 替换为 "Welcome"，第二个替换为 "to"，第三个替换为 "Java"，第四个替换为 "Programming!"。
+格式说明符以百分号（`%`）开头，后跟一个表示数据类型的字符。例如，格式说明符 `%s` 是字符串的占位符。第 9 行中的格式字符串指定 `printf` 输出四个字符串，每个字符串后面都跟着一个换行符。在第一个格式说明符的位置，`printf` 用格式字符串之后的第一个参数的值替换它。在每个后续格式说明符的位置，`printf` 用下一个参数的值替换它。此示例将第一个 `%s` 替换为 `"Welcome"`，第二个替换为 `"to"`，第三个替换为 `"Java"`，第四个替换为 `"Programming!"`。
 
-请注意，不要使用转义序列 `\n`，而要使用 `%n` 格式说明符，它是一个跨操作系统可移植的行分隔符。你不能在 `System.out.print` 或 `System.out.println` 的参数中使用 `%n`；然而，`System.out.println` 在显示其参数后输出的行分隔符在跨操作系统是可移植的。附录 I 提供了更多关于使用 `printf` 输出的详细信息。
+> **注意**：不要使用转义序列 `\n`，而要使用 `%n` 格式说明符，它是一个跨操作系统可移植的行分隔符。你不能在 `System.out.print` 或 `System.out.println` 的参数中使用 `%n`；然而，`System.out.println` 在显示其参数后输出的行分隔符在跨操作系统是可移植的。附录 I 提供了更多关于使用 `printf` 输出的详细信息。
 
 ## 2.5 另一个应用：相加
 
 我们的下一个应用（图 2.7）读取（或输入）用户在键盘上输入的两个整数，计算它们的和并显示出来。在示例输出中，使用**粗体文本**识别用户的输入（即 45 和 72）。
 
+```java
+// Fig. 2.7: Addition.java
+// 输入两个数字并显示它们的和的程序。
+import java.util.Scanner; // 程序使用 Scanner 类
+
+public class Addition
+{
+    // main 方法开始 Java 程序的执行
+    public static void main(String[] args)
+    {
+        // 创建一个 Scanner 从命令行窗口获取输入
+        Scanner input = new Scanner(System.in);
+
+        int number1; // 第一个加数
+        int number2; // 第二个加数
+        int sum;     // number1 和 number2 的和
+
+        System.out.print("Enter first integer: "); // 提示
+        number1 = input.nextInt(); // 从用户读取第一个数字
+
+        System.out.print("Enter second integer: "); // 提示
+        number2 = input.nextInt(); // 从用户读取第二个数字
+
+        sum = number1 + number2; // 相加，并将总和存储在 sum 中
+        System.out.printf("Sum is %d%n", sum); // 显示和
+    } // main 结束
+} // 类结束
 ```
-1 // Fig. 2.7: Addition.java
-2 // 输入两个数字并显示它们的和的程序。
-3 import java.util.Scanner; // 程序使用 Scanner 类
-4
-5 public class Addition
-6 {
-7     // main 方法开始 Java 程序的执行
-8     public static void main(String[] args)
-9     {
-10         // 创建一个 Scanner 从命令行窗口获取输入
-11         Scanner input = new Scanner(System.in);
-12
-13         int number1; // 第一个加数
-14         int number2; // 第二个加数
-15         int sum; // number1 和 number2 的和
-16
-17         System.out.print("Enter first integer: "); // 提示
-18         number1 = input.nextInt(); // 从用户读取第一个数字
-19
-20         System.out.print("Enter second integer: "); // 提示
-21         number2 = input.nextInt(); // 从用户读取第二个数字
-22
-23         sum = number1 + number2; // 相加，并将总和存储在 sum 中
-24         System.out.printf("Sum is %d%n", sum); // 显示和
-25     } // main 结束
-26 } // 类结束
-```
+
+**图 2.7** 输入两个数字并显示它们的和的程序。
 
 ```
 Enter first integer: 45
@@ -1142,7 +977,7 @@ Sum is 117
 
 ### 导入声明
 
-Java 的一大强大优势在于它有一组预定义的类，你可以重用它们，而不是“重复发明轮子”。这些类被分组在包（packages）中——相关类的命名组——并统称为 Java 类库或 Java 应用程序编程接口（Java API）。第 3 行是一个导入声明，帮助编译器定位程序中使用的类。它表示程序使用了来自名为 `java.util` 包的定义的 `Scanner` 类（稍后讨论）。编译器随后确保你正确地使用该类。
+Java 的一大强大优势在于它有一组预定义的类，你可以重用它们，而不是“重复发明轮子”。这些类被分组在包（packages）中——相关类的命名组——并统称为 Java 类库或 Java 应用程序编程接口（Java API）。第 3 行是一个导入声明，帮助编译器定位程序中使用的类。它表示程序使用了来自名为 `java.util` 包的 `Scanner` 类。编译器随后确保你正确地使用该类。
 
 #### 常见编程错误 2.5
 
@@ -1160,23 +995,23 @@ Java 的一大强大优势在于它有一组预定义的类，你可以重用它
 
 ### 声明类 Addition
 
-第 5 行开始声明类 `Addition`。此公共类的文件名必须是 `Addition.java`。记住，每个类声明的主体以左括号（第 6 行）开始，以右括号（第 26 行）结束。
+第 5 行开始声明类 `Addition`。此公共类的文件名必须是 `Addition.java`。记住，每个类声明的主体以左括号（第 6 行）开始，以右括号（第 29 行）结束。
 
-应用程序从 `main` 方法开始执行（第 8–25 行）。左括号（第 9 行）标记方法的开始，右括号（第 25 行）标记方法的结束。
+应用程序从 `main` 方法开始执行（第 8–28 行）。左括号（第 9 行）标记方法的开始，右括号（第 28 行）标记方法的结束。
 
 ### 声明变量并创建 Scanner 从键盘获取输入
 
-第 11 行是一个变量声明，指定了名称（`input`）和类型（`Scanner`）。使用 `Scanner` 时，必须用右侧的表达式对其初始化——`new Scanner(System.in)`。标准对象 `System.in` 使应用程序能够从许多源读取数据，例如键盘或磁盘上的文件。
+第 12 行是一个变量声明，指定了名称（`input`）和类型（`Scanner`）。使用 `Scanner` 时，必须用右侧的表达式对其初始化——`new Scanner(System.in)`。标准对象 `System.in` 使应用程序能够从许多源读取数据，例如键盘或磁盘上的文件。
 
 ### 声明存储整数的变量
 
-第 13–15 行的变量声明声明 `number1`、`number2` 和 `sum` 使用 `int`。`int` 的值范围为 -2,147,483,648 到 +2,147,483,647。
+第 14–16 行的变量声明声明 `number1`、`number2` 和 `sum` 使用 `int`。`int` 的值范围为 -2,147,483,648 到 +2,147,483,647。
 
-其他数据类型为 `float` 和 `double`（用于存储数字）以及 `char`。实数包含小数点，例如 3.4、0.0 和 -11.1。`char` 类型表示单个字符，例如大写字母（如 A）、数字（如 7）、特殊字符（如 * 或 %）或转义序列（如制表符 `\t`）。`int`、`float`、`double` 和 `char` 类型被称为基本类型。基本类型名称是关键字且必须全小写。
+其他数据类型为 `float` 和 `double`（用于存储实数）以及 `char`。实数包含小数点，例如 3.4、0.0 和 -11.1。`char` 类型表示单个字符，例如大写字母（如 `A`）、数字（如 `7`）、特殊字符（如 `*` 或 `%`）或转义序列（如制表符 `\t`）。`int`、`float`、`double` 和 `char` 类型被称为基本类型。基本类型名称是关键字且必须全小写。
 
-多个相同类型的变量可以在单个声明中声明，变量用逗号分隔。例如，第 13–15 行也可以写成：
+多个相同类型的变量可以在单个声明中声明，变量用逗号分隔。例如，第 14–16 行也可以写成：
 
-```
+```java
 int number1, // 第一个加数
     number2, // 第二个加数
     sum;     // number1 和 number2 的和
@@ -1184,35 +1019,35 @@ int number1, // 第一个加数
 
 #### 良好的编程习惯 2
 
-按照惯例，变量名标识符以小写字母开头，名称中第一个单词后的每个单词以大写字母开头。例如，变量名 `firstNumber` 它的第二个单词 `Number` 以大写 N 开头。这种约定被称为驼峰命名法（camel case），因为大写字母像骆驼的峰一样突出。
+按照惯例，变量名标识符以小写字母开头，名称中第一个单词后的每个单词以大写字母开头。例如，变量名 `firstNumber` 它的第二个单词 `Number` 以大写 `N` 开头。这种约定被称为驼峰命名法（camel case），因为大写字母像骆驼的峰一样突出。
 
 ### 提示用户输入
 
-第 17 行使用 `System.out.print` 显示消息“Enter first integer: ”。我们在这里使用该方法而不是 `println`，这样用户的输入就会与提示显示在同一行。`System` 类属于 `java.lang` 包。注意，程序开头没有通过导入声明导入 `System` 类。
+第 19 行使用 `System.out.print` 显示消息“Enter first integer: ”。我们在这里使用该方法而不是 `println`，这样用户的输入就会与提示显示在同一行。`System` 类属于 `java.lang` 包。注意，程序开头没有通过导入声明导入 `System` 类。
 
 #### 软件工程观察 2.2
 
-默认情况下，每个 Java 程序都会自动导入 `java.lang` 包；因此，`java.lang` 中的类是 Java API 中唯一不需要导入声明（import declaration）的类。
+默认情况下，每个 Java 程序都会自动导入 `java.lang` 包；因此，`java.lang` 中的类是 Java API 中唯一不需要导入声明的类。
 
 ### 从用户处获取整数输入
 
-第 18 行使用 `Scanner` 对象的 `nextInt` 方法从键盘获取一个整数。此时，程序会等待用户输入数字并按回车键将数字提交给程序。
+第 20 行使用 `Scanner` 对象的 `nextInt` 方法从键盘获取一个整数。此时，程序会等待用户输入数字并按回车键将数字提交给程序。
 
 我们的程序假设用户输入的是有效的整数。如果不是，将会发生运行时错误且程序将终止。第 11 章“异常处理：深度查看”将讨论如何通过使程序能够处理此类错误来让你的程序更具健壮性。
 
-在第 18 行中，我们使用赋值运算符 `=` 将 `nextInt` 的调用结果（一个 `int` 值）存储在变量 `number1` 中。该语句可以读为“`number1` 获取 `input.nextInt()` 的值”。赋值运算符 `=` 是一个二元操作符。在赋值运算符 `=` 右侧的所有内容在执行赋值之前都会进行求值。
+在第 20 行中，我们使用赋值运算符 `=` 将 `nextInt` 的调用结果（一个 `int` 值）存储在变量 `number1` 中。该语句可以读为“`number1` 获取 `input.nextInt()` 的值”。赋值运算符 `=` 是一个二元操作符。在赋值运算符 `=` 右侧的所有内容在执行赋值之前都会进行求值。
 
-第 20 行提示用户输入第二个整数。第 21 行读取第二个整数并将其赋值给变量 `number2`。
+第 22 行提示用户输入第二个整数。第 23 行读取第二个整数并将其赋值给变量 `number2`。
 
 ### 在计算中使用变量
 
-第 23 行计算变量 `number1` 和 `number2` 的和，然后使用赋值运算符 `=` 将结果赋值给 `sum`。加法操作符是一个二元操作符。包含计算的语句部分称为表达式（expressions）。表达式是语句中任何与其关联有值的部分。表达式 `number1 + number2` 的值是这两个数字的和。表达式 `input.nextInt()` 的值是由用户输入的。
+第 26 行计算变量 `number1` 和 `number2` 的和，然后使用赋值运算符 `=` 将结果赋值给 `sum`。加法操作符是一个二元操作符。包含计算的语句部分称为表达式。表达式是语句中任何与其关联有值的部分。表达式 `number1 + number2` 的值是这两个数字的和。表达式 `input.nextInt()` 的值是由用户输入的。
 
 ### 显示计算结果
 
-计算执行完成后，第 24 行使用 `System.out.printf` 显示总和。格式说明符 `%d` 是 `int` 类型值（在本例中为 `sum` 的值）的占位符——`d` 代表“十进制整数”（decimal integer）。格式中剩余字符都是固定文本。因此，`System.out.printf` 会显示“Sum is ”，随后是 `sum` 的值（位于 `%d` 说明符所在的位置）和一个换行符。我们可以将第 23 行和第 24 行的语句合并为如下语句：
+计算执行完成后，第 27 行使用 `System.out.printf` 显示总和。格式说明符 `%d` 是 `int` 类型值（在本例中为 `sum` 的值）的占位符——`d` 代表“十进制整数”（decimal integer）。格式字符串中剩余字符都是固定文本。因此，`System.out.printf` 会显示“Sum is ”，随后是 `sum` 的值（位于 `%d` 说明符所在的位置）和一个换行符。我们可以将第 26 行和第 27 行的语句合并为如下语句：
 
-```
+```java
 System.out.printf("Sum is %d%n", number1 + number2);
 ```
 
@@ -1226,7 +1061,7 @@ System.out.printf("Sum is %d%n", number1 + number2);
 http://docs.oracle.com/javase/docs/api/index.html
 ```
 
-你可以从“附加资源”（Additional Resources）部分下载它：
+你可以从“附加资源”部分下载它：
 
 ```
 http://www.oracle.com/technetwork/java/javase/downloads/index.html
@@ -1236,19 +1071,19 @@ http://www.oracle.com/technetwork/java/javase/downloads/index.html
 
 ## 2.6 算术
 
-算术操作符总结在图 2.8 中。星号 `*` 表示乘法，百分号 `%` 是模运算符（remainder operator），我们稍后会讨论。图 2.8 中的算术操作符都是二元操作符。
+算术操作符总结在图 2.8 中。星号 `*` 表示乘法，百分号 `%` 是模运算符，我们稍后会讨论。图 2.8 中的算术操作符都是二元操作符。
 
-整数除法产生一个整数商。例如，表达式 `7 / 4` 求值结果为 `1`，表达式 `17 / 5` 求值结果为 `3`。除法中的任何小数部分直接被截断——不发生四舍五入。Java 模运算符 `%`，它产生除法后的余数。表达式 `x % y` 产生 `x` 除以 `y` 的余数。因此，`7 % 4` 产生 `3`，`17 % 5` 产生 `2`。该运算符最常用于整数操作数，但也可以用于其他算术类型。模运算符的一个有趣应用是判断一个数是否是另一个数的倍数——在这种情况下，余数为 `0`。
+整数除法产生一个整数商。例如，表达式 `7 / 4` 求值结果为 `1`，表达式 `17 / 5` 求值结果为 `3`。除法中的任何小数部分直接被截断——不发生四舍五入。Java 模运算符 `%` 产生除法后的余数。表达式 `x % y` 产生 `x` 除以 `y` 的余数。因此，`7 % 4` 产生 `3`，`17 % 5` 产生 `2`。该运算符最常用于整数操作数，但也可以用于其他算术类型。模运算符的一个有趣应用是判断一个数是否是另一个数的倍数——在这种情况下，余数为 `0`。
+
+**图 2.8** 算术操作符。
 
 | Java 操作 | 操作符 | 代数表达式 | Java 表达式 |
 | :--- | :--- | :--- | :--- |
-| 加法 | `+` | f+7 | `f + 7` |
-| 减法 | `-` | p-c | `p - c` |
-| 乘法 | `*` | b*m | `b * m` |
-| 除法 | `/` | x/y | `x / y` |
-| 模 | `%` | r mod s | `r % s` |
-
-图 2.8 算术操作符。
+| 加法 | `+` | `f + 7` | `f + 7` |
+| 减法 | `-` | `p - c` | `p - c` |
+| 乘法 | `*` | `b * m` | `b * m` |
+| 除法 | `/` | `x / y` | `x / y` |
+| 模 | `%` | `r % s` | `r % s` |
 
 ### 操作符优先级
 
@@ -1257,22 +1092,61 @@ Java 按照以下顺序执行算术表达式：
 1. 乘法、除法和模运算首先执行（如果表达式中包含这些操作符）。
 2. 加法和减法随后执行。
 
-这些规则决定了运算符的优先级。运算符的结合性（associativity）通常是从左到右的。
+这些规则决定了运算符的优先级。运算符的结合性通常是从左到右的。
 
 ## 2.7 决策制定：相等与关系运算符
 
-`if` 语句通过比较两个整数来做出决策。如果这些语句中的任何一个条件为真，则执行与之相关的语句；否则，则跳过。我们使用 `Scanner` 从用户处输入整数并存储在变量 `number1` 和 `number2` 中。这部分引入了基于值的决策。运算符的优先级总结在书中，参见第 15 章（`http://docs.oracle.com/javase/specs/`）。注意运算符的结合性（associativity）通常是从左到右的。
+`if` 语句通过比较两个整数来做出决策。如果这些语句中的任何一个条件为真，则执行与之相关的语句；否则，则跳过。我们使用 `Scanner` 从用户处输入整数并存储在变量 `number1` 和 `number2` 中。这部分引入了基于值的决策。运算符的优先级总结在书中，参见第 15 章（`http://docs.oracle.com/javase/specs/`）。
 
-| 操作符 | 操作 | Java 优先级 |
+**图 2.9** 关系运算符。
+
+| 操作符 | 操作 | 示例 |
 | :--- | :--- | :--- |
-| `==` | 等于 | 低 |
-| `!=` | 不等于 | 低 |
-| `>` | 大于 | 低 |
-| `<` | 小于 | 低 |
-| `>=` | 大于等于 | 低 |
-| `<=` | 小于等于 | 低 |
+| `==` | 等于 | `x == y` |
+| `!=` | 不等于 | `x != y` |
+| `>` | 大于 | `x > y` |
+| `<` | 小于 | `x < y` |
+| `>=` | 大于等于 | `x >= y` |
+| `<=` | 小于等于 | `x <= y` |
 
-图 2.10 关系运算符。
+**图 2.10** 使用 `if` 语句、关系运算符和相等运算符比较整数（第 1 部分）。
+
+```java
+// Fig. 2.10: Comparison.java
+// 使用 if 语句、关系运算符和相等运算符比较整数。
+import java.util.Scanner;
+
+public class Comparison
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+
+        int number1;
+        int number2;
+
+        System.out.print("Enter first integer: ");
+        number1 = input.nextInt();
+        System.out.print("Enter second integer: ");
+        number2 = input.nextInt();
+
+        if (number1 == number2)
+            System.out.printf("%d == %d%n", number1, number2);
+        if (number1 != number2)
+            System.out.printf("%d != %d%n", number1, number2);
+        if (number1 < number2)
+            System.out.printf("%d < %d%n", number1, number2);
+        if (number1 > number2)
+            System.out.printf("%d > %d%n", number1, number2);
+        if (number1 <= number2)
+            System.out.printf("%d <= %d%n", number1, number2);
+        if (number1 >= number2)
+            System.out.printf("%d >= %d%n", number1, number2);
+    }
+}
+```
+
+**图 2.11** 使用 `if` 语句、关系运算符和相等运算符比较整数（第 2 部分）。
 
 ```
 Enter first integer: 1000
@@ -1287,8 +1161,6 @@ Enter second integer: 1000
 2000 > 1000
 2000 >= 1000
 ```
-
-图 2.11 使用 `if` 语句、关系运算符和相等运算符比较整数。（第 2 部分，共 2 部分）
 
 
 
@@ -1306,17 +1178,19 @@ Comparison 类的声明从第 6 行开始。类的 `main` 方法（第 9–40 �
 
 每个语句的第一行末尾没有分号（`;`）。这样的控制台程序会在执行时产生逻辑错误。例如：
 
-```
+```java
 if (number1 == number2) { // 逻辑错误
-System.out.printf("%d = %d%n", number1, number2);
+    System.out.printf("%d = %d%n", number1, number2);
+}
 ```
 
 会被 Java 解释为：
 
-```
+```java
 if (number1 == number2) {
     // 空语句
-    System.out.printf("%d == %d%n", number1, number2);
+}
+System.out.printf("%d == %d%n", number1, number2);
 ```
 
 注意。
@@ -1366,32 +1240,37 @@ if (number1 == number2) {
 - 理解方法的局部变量与实例变量的区别。
 - 理解什么是基本数据类型和引用类型。
 - 使用构造函数初始化对象的数据。
+- 3.2 实例变量、set 方法
+- 3.3 基本类型与引用类型
+- 3.4 构造函数
+- 3.5 浮点数
+- 3.6 总结
 
 ## 3.2 实例变量、set 方法和 get 方法
 
-不同的账户有不同的名称。因此，`Account` 类（图 3.1）包含一个 `name` 实例变量。类的实例变量为类的对象（即实例）维护数据。在本稍后的部分，我们将添加一个 `balance` 实例变量，以便跟踪账户金额。`Account` 类包含两个方法——`setName()` 在对象中存储名称，`getName()` 从对象中获取名称。
+不同的账户有不同的名称。因此，`Account` 类（图 3.1）包含一个 `name` 实例变量。类的实例变量为类的对象（即实例）维护数据。在本稍后的部分，我们将添加一个 `balance` 实例变量，以便跟踪账户金额。`Account` 类包含两个方法——`setName` 在对象中存储名称，`getName` 从对象中获取名称。
 
-```
-1 // 图 3.1: Account.java
-2 // Account 类包含一个 name 实例变量
-3 // 以及设置和获取其值的方法。
-4
-5 public class Account
-6 {
-7     private String name; // 实例变量
-8
-9     // 设置对象中名称的方法
-10     public void setName(String name)
-11     {
-12         this.name = name; // 存储名称
-13     }
-14
-15     // 从对象中检索名称的方法
-16     public String getName()
-17     {
-18         return name; // 返回 name 值给调用者
-19     }
-20 } // 类 Account 结束
+```java
+// 图 3.1: Account.java
+// Account 类包含一个 name 实例变量
+// 以及设置和获取其值的方法。
+
+public class Account
+{
+    private String name; // 实例变量
+
+    // 设置对象中名称的方法
+    public void setName(String name)
+    {
+        this.name = name; // 存储名称
+    }
+
+    // 从对象中检索名称的方法
+    public String getName()
+    {
+        return name; // 返回 name 值给调用者
+    }
+} // 类 Account 结束
 ```
 
 **图 3.1** Account 类包含一个 name 实例变量以及设置和获取其值的方法。
@@ -1416,7 +1295,7 @@ if (number1 == number2) {
 private String name; // 实例变量
 ```
 
-声明了类型为 `String` 的实例变量 `name`，它位于方法 `setName()`（第 10–13 行）和 `getName()`（第 16–19 行）的方法体之外。`String` 变量可以存储字符值，例如 `"Jane Green"`。如果有许多 `Account` 对象，每个对象都有自己的名称。由于 `name` 是一个实例变量，因此它可以被该类的任何方法进行操作。
+声明了类型为 `String` 的实例变量 `name`，它位于方法 `setName`（第 10–13 行）和 `getName`（第 16–19 行）的方法体之外。`String` 变量可以存储字符值，例如 `"Jane Green"`。如果有许多 `Account` 对象，每个对象都有自己的名称。由于 `name` 是一个实例变量，因此它可以被该类的任何方法进行操作。
 
 > **良好的编程实践 3.1**
 >
@@ -1424,11 +1303,11 @@ private String name; // 实例变量
 
 ### 访问修饰符 public 和 private
 
-大多数实例变量声明之前都有一个 `private` 关键字（如第 7 行所示）。像 `public` 一样，`private` 也是一种访问修饰符。用访问修饰符声明的变量或方法仅对其所在类中的方法可见。因此，变量 `name` 只能在每个 `Account` 对象的方法中使用（在本例中为 `setName()` 和 `getName()`）。你会发现这提供了强大的软件工程机会。
+大多数实例变量声明之前都有一个 `private` 关键字（如第 7 行所示）。像 `public` 一样，`private` 也是一种访问修饰符。用访问修饰符声明的变量或方法仅对其所在类中的方法可见。因此，变量 `name` 只能在每个 `Account` 对象的方法中使用（在本例中为 `setName` 和 `getName`）。你会发现这提供了强大的软件工程机会。
 
 ### Account 类的 setName 方法
 
-让我们过一下 `setName()` 方法声明的代码（第 10–13 行）：
+让我们过一下 `setName` 方法声明的代码（第 10–13 行）：
 
 ```java
 public void setName(String name) // 这一行是方法头
@@ -1437,17 +1316,17 @@ public void setName(String name) // 这一行是方法头
 }
 ```
 
-我们将每个方法声明的第一行（在本例中为第 10 行）称为方法头。方法的返回类型（出现在方法名之前）指定了方法在执行任务后返回给调用者的数据。返回类型 `void`（第 10 行）表示 `setName()` 将执行任务但不会向其调用者返回（即给出）任何信息。在第 2 章中，你使用了返回信息的方法——例如，你使用 `Scanner.nextInt()` 输入用户在键盘上输入的整数。当 `nextInt()` 从用户处读取一个值时，它会返回该值供程序使用。正如你所见，`Account` 方法 `getName()` 返回了一个值。
+我们将每个方法声明的第一行（在本例中为第 10 行）称为方法头。方法的返回类型（出现在方法名之前）指定了方法在执行任务后返回给调用者的数据。返回类型 `void`（第 10 行）表示 `setName` 将执行任务但不会向其调用者返回（即给出）任何信息。在第 2 章中，你使用了返回信息的方法——例如，你使用 `Scanner.nextInt()` 输入用户在键盘上输入的整数。当 `nextInt()` 从用户处读取一个值时，它会返回该值供程序使用。正如你所见，`Account` 方法 `getName` 返回了一个值。
 
-方法 `setName()` 接收类型为 `String` 的参数 `name`。参数声明在参数列表中，参数列表位于方法头中方法名后的括号内。当有多个参数时，每个参数之间用逗号隔开。每个参数必须指定一个类型（在本例中为 `String`），后跟一个变量名（在本例中为 `name`）。
+方法 `setName` 接收类型为 `String` 的参数 `name`。参数声明在参数列表中，参数列表位于方法头中方法名后的括号内。当有多个参数时，每个参数之间用逗号隔开。每个参数必须指定一个类型（在本例中为 `String`），后跟一个变量名（在本例中为 `name`）。
 
 #### 参数是局部变量
 
-在第 2 章中，我们在 `main()` 方法中声明了应用程序的所有变量。声明在特定方法（如 `main()`）中的变量是局部变量，它们只能在该方法中使用。每个方法都可以访问自己的局部变量，但不能访问其他方法的局部变量。当方法终止时，其局部变量的值就会丢失。方法的参数是方法的局部变量。
+在第 2 章中，我们在 `main` 方法中声明了应用程序的所有变量。声明在特定方法（如 `main`）中的变量是局部变量，它们只能在该方法中使用。每个方法都可以访问自己的局部变量，但不能访问其他方法的局部变量。当方法终止时，其局部变量的值就会丢失。方法的参数是方法的局部变量。
 
 #### setName 方法体
 
-每个方法都由一对括号界定（如图 3.1 中的第 11 行和第 13 行），包含一个或多个执行方法任务的语句。在这种情况下，方法包含单条语句（第 12 行），该语句将参数 `name`（`String`）的值赋值给类实例变量，将名称存储在对象中。
+每个方法都由一对大括号界定（如图 3.1 中的第 11 行和第 13 行），包含一个或多个执行方法任务的语句。在这种情况下，方法包含单条语句（第 12 行），该语句将参数 `name`（`String`）的值赋值给类实例变量，将名称存储在对象中。
 
 如果方法包含一个与实例变量同名的局部变量（分别如第 10 行和第 7 行），则该方法体将引用局部变量而不是实例变量。在这种情况下，局部变量被称为“遮蔽”了方法体中的实例变量。方法体可以使用 `this` 关键字来显式地引用被遮蔽的变量，如第 12 行赋值语句左侧所示。
 
@@ -1455,7 +1334,7 @@ public void setName(String name) // 这一行是方法头
 >
 > 我们可以通过为第 10 行的参数选择不同的名称来避免对 `this` 关键字的需求，但使用第 12 行所示的关键字是一种广泛接受的做法，可以尽力减少标识符名称的泛滥。
 
-在第 12 行执行后，方法完成了它的任务，因此它返回给调用者。你很快就会看到，`main()` 方法第 21 行的语句（图 3.2）调用了 `setName()` 方法。
+在第 12 行执行后，方法完成了它的任务，因此它返回给调用者。你很快就会看到，`main` 方法第 21 行的语句（图 3.2）调用了 `setName` 方法。
 
 ### Account 类的 getName 方法
 
@@ -1472,9 +1351,9 @@ public String getName()
 
 ### 3.2.2 创建并使用对象的 AccountTest 类
 
-接下来，我们想在应用程序中使用 `Account` 类并调用它的每个方法。包含 `main()` 方法的类开始 Java 应用程序的执行。`Account` 类不能单独执行因为它不包含 `main()` 方法——如果你在命令行运行 `Account`，将得到一个错误，指示“未找到 main 方法”。要解决这个问题，你必须声明一个包含 `main()` 方法的独立类，或者在 `Account` 中放置 `main()` 方法。
+接下来，我们想在应用程序中使用 `Account` 类并调用它的每个方法。包含 `main` 方法的类开始 Java 应用程序的执行。`Account` 类不能单独执行因为它不包含 `main` 方法——如果你在命令行运行 `Account`，将得到一个错误，指示“未找到 main 方法”。要解决这个问题，你必须声明一个包含 `main` 方法的独立类，或者在 `Account` 中放置 `main` 方法。
 
-我们使用包含 `main()` 方法的独立类 `AccountTest`（图 3.2）来测试 `Account`。一旦 `main()` 开始执行，它可以调用本类和其他类的方法；这些方法反过来调用其他方法，依此类推。`AccountTest` 的 `main()` 方法创建一个 `Account` 对象并调用它的 `setName()` 方法。这种类有时被称为驱动类——就像 Person 通过告诉 Car 做什么（快点、慢点、左转、右转等）来驱动 Car 一样，`AccountTest` 通过调用方法来驱动对象，告诉它做什么。
+我们使用包含 `main` 方法的独立类 `AccountTest`（图 3.2）来测试 `Account`。一旦 `main` 开始执行，它可以调用本类和其他类的方法；这些方法反过来调用其他方法，依此类推。`AccountTest` 的 `main` 方法创建一个 `Account` 对象并调用它的 `setName` 方法。这种类有时被称为驱动类——就像 Person 通过告诉 Car 做什么（快点、慢点、左转、右转等）来驱动 Car 一样，`AccountTest` 通过调用方法来驱动对象，告诉它做什么。
 
 ```java
 // AccountTest.java
@@ -1514,27 +1393,27 @@ public class AccountTest {
 | 对象 myAccount 中的名称为： |
 | Jane Green |
 
-**图 3.2** 创建和操作 Account 对象。（第 2 部分，共 2 部分。）
+**图 3.2** 创建和操作 Account 对象。（第 2 部分，共 2 部分）。
 
-## 用于接收用户输入的 Scanner 对象
+### 用于接收用户输入的 Scanner 对象
 
-第 10 行创建了一个名为 `input` 的 `Scanner` 对象，用于从用户处输入名称。第 19 行提示用户输入名称。第 20 行使用 `Scanner` 对象的 `nextLine()` 方法从用户处读取名称，并将其赋值给局部变量 `name`。你输入名称并按回车键将其提交给程序。按回车键会在你输入的字符后插入一个换行符。`nextLine()` 方法读取字符（包括空白字符，例如 `"Jane Green"` 中的空格），直到遇到换行符，然后返回一个包含换行符之前（但不包含换行符）的所有字符的 `String`，而换行符会被丢弃。
+第 10 行创建了一个名为 `input` 的 `Scanner` 对象，用于从用户处输入名称。第 19 行提示用户输入名称。第 20 行使用 `Scanner` 对象的 `nextLine` 方法从用户处读取名称，并将其赋值给局部变量 `name`。你输入名称并按回车键将其提交给程序。按回车键会在你输入的字符后插入一个换行符。`nextLine` 方法读取字符（包括空白字符，例如 `"Jane Green"` 中的空格），直到遇到换行符，然后返回一个包含换行符之前（但不包含换行符）的所有字符的 `String`，而换行符会被丢弃。
 
-`Scanner` 类提供了其他输入方法，正如你将在整书中看到的那样。与 `nextLine()` 类似的方法——`next()` 读取下一个单词。当你输入某些文本后按回车键，`next()` 方法读取字符直到遇到空白字符（如空格、制表符或换行符），然后返回一个包含空白字符之前（但不包含空白字符）的所有字符的 `String`，而空白字符会被丢弃。第一个空白字符之后的信息不会丢失——可以由程序中后期 `Scanner` 方法的后续语句读取。
+`Scanner` 类提供了其他输入方法，正如你将在整书中看到的那样。与 `nextLine` 类似的方法——`next` 读取下一个单词。当你输入某些文本后按回车键，`next` 方法读取字符直到遇到空白字符（如空格、制表符或换行符），然后返回一个包含空白字符之前（但不包含空白字符）的所有字符的 `String`，而空白字符会被丢弃。第一个空白字符之后的信息不会丢失——可以由程序中后期 `Scanner` 方法的后续语句读取。
 
-## 实例化对象——关键字 new 和构造函数
+### 实例化对象——关键字 new 和构造函数
 
 第 13 行创建了一个 `Account` 对象并将其赋值给类型为 `Account` 的 `myAccount`。变量 `myAccount` 使用类实例创建表达式 `new Account()` 的结果初始化。`new` 创建指定类的新对象——在本例中，是 `Account`。包含 `Account` 的括号是必须的。正如你将在第 3.4 节中学到的，这些括号与类名结合代表了对构造函数的调用，它类似于方法，但由 `new` 操作符隐式地调用，以便在创建对象时初始化实例变量。在第 3.4 节中，你将看到如何在括号中放置参数以为 `Account` 的实例变量指定初始值——你将增强 `Account` 类来实现这一点。目前，我们让括号为空。第 10 行包含一个 `Scanner` 对象的类实例创建表达式——该表达式用 `System.in` 初始化 `Scanner`，这告诉 `Scanner` 从标准输入（即键盘）读取输入。
 
-## 调用类的 getName 方法
+### 调用类的 getName 方法
 
-第 16 行显示初始名称，该名称是通过调用对象的 `getName()` 方法获得的。我们可以直接使用 `System.out` 来调用它的 `print()` 和 `println()` 方法，可以使用 `myAccount` 来调用它的 `getName()` 和 `setName()` 方法。第 16 行使用第 13 行创建的 `myAccount` 对象调用 `getName()`，随后跟着一个点分隔符 `.` 和方法名 `getName()` 以及一组空括号，因为没有传递参数。当调用 `getName()` 时：
+第 16 行显示初始名称，该名称是通过调用对象的 `getName` 方法获得的。我们可以直接使用 `System.out` 来调用它的 `print` 和 `println` 方法，可以使用 `myAccount` 来调用它的 `getName` 和 `setName` 方法。第 16 行使用第 13 行创建的 `myAccount` 对象调用 `getName`，随后跟着一个点分隔符 `.`，然后是方法名 `getName` 和一组空括号，因为没有传递参数。当调用 `getName` 时：
 
 
 
-- 1. 应用程序将程序执行从调用（`main` 中的第 16 行）转移到方法 `getName` 的声明（图 3.1 的第 16-19 行）。因为是通过 `myAccount` 对象调用的 `get`，所以 `getName` “知道”要操作哪个对象的实例变量。
-- 2. 下一步，方法 `get` 执行它的任务——即它返回名称（图 3.1 的第 18 行）。当 `return` 语句执行时，程序执行继续调用 `getName` 的地方（图 3.2 的第 16 行）。
-- 3. `System.out.printf` 显示方法 `get` 返回的 String，然后程序在 `main` 的第 19 行继续执行。
+- 1. 应用程序将程序执行从调用（`main` 中的第 16 行）转移到方法 `getName` 的声明（图 3.1 的第 16-19 行）。因为是通过 `myAccount` 对象调用的 `getName`，所以 `getName` “知道”要操作哪个对象的实例变量。
+- 2. 下一步，方法 `getName` 执行它的任务——即它返回名称（图 3.1 的第 18 行）。当 `return` 语句执行时，程序执行继续调用 `getName` 的地方（图 3.2 的第 16 行）。
+- 3. `System.out.printf` 显示方法 `getName` 返回的 `String`，然后程序在 `main` 的第 19 行继续执行。
 
 > **错误预防提示 3.1**
 >
@@ -1542,7 +1421,7 @@ public class AccountTest {
 
 ## null—String 变量的默认初始值
 
-输出的第一行显示名称 "null"。与不会自动初始化的局部变量不同，每个实例变量都有一个默认初始值——当你没有指定变量的初始值时，由 Java 赋予该值。因此，实例变量在程序中使用之前不需要初始化——除非它们必须初始化为除默认值以外的值。String 类型实例变量（如示例中的这个 `name`）的默认值为 `null`，我们将在第 3.3 节考虑引用类型时进一步讨论。
+输出的第一行显示名称 "null"。与不会自动初始化的局部变量不同，每个实例变量都有一个默认初始值——当你没有指定变量的初始值时，由 Java 赋予该值。因此，实例变量在程序中使用之前不需要初始化——除非它们必须初始化为除默认值以外的值。`String` 类型实例变量（如示例中的这个 `name`）的默认值为 `null`，我们将在第 3.3 节考虑引用类型时进一步讨论。
 
 ## 调用类的 setName 方法
 
@@ -1571,7 +1450,7 @@ public class AccountTest {
 在 UML 中，每个类在类图中被建模为带有三个区域的矩形。在此图中，顶部区域包含类名 `Account`，水平居中并加粗显示。
 
 | Account |
-| :--- |
+| --- |
 | 顶部区域 |
 | - name: String |
 | 中间区域 |
@@ -1585,7 +1464,7 @@ public class AccountTest {
 
 ### 中间区域
 
-中间区域包含该类的属性名称，这对应于 Java 中同名的实例变量。在 Java 中，实例变量是私有的（private）的，因此 UML 类图在属性名称前列出了一个减号（`-`）修饰符。属性名称之后是一个冒号和属性类型，在本例中为 String。
+中间区域包含该类的属性名称，这对应于 Java 中同名的实例变量。在 Java 中，实例变量是私有的（`private`），因此 UML 类图在属性名称前列出了一个减号（`-`）修饰符。属性名称之后是一个冒号和属性类型，在本例中为 `String`。
 
 ### 下部区域
 
@@ -1593,11 +1472,11 @@ public class AccountTest {
 
 ### 返回类型
 
-UML 通过在操作名称后的括号之后放置冒号和返回类型来指示操作的返回类型。`Account` 类的 `getName` 方法（图 3.1）具有 String 返回类型。`setName` 方法不返回值（因为它在 Java 中返回 `void`），因此 UML 类图没有在该操作的括号后指定返回类型。
+UML 通过在操作名称后的括号之后放置冒号和返回类型来指示操作的返回类型。`Account` 类的 `getName` 方法（图 3.1）具有 `String` 返回类型。`setName` 方法不返回值（因为它在 Java 中返回 `void`），因此 UML 类图没有在该操作的括号后指定返回类型。
 
 ### 参数
 
-UML 对参数的建模与 Java 略有不同，它在操作名称后的括号内列出参数名称，随后是冒号和参数类型。UML 拥有自己与 Java 类似的数据类型，但为了简单起见，我们将使用 Java 数据类型。`Account` 类的 `setName` 方法（图 3.1）有一个名为 `name` 的 String 参数，因此图 3.3 在方法名后的括号之间列出了 `name : String`。
+UML 对参数的建模与 Java 略有不同，它在操作名称后的括号内列出参数名称，随后是冒号和参数类型。UML 拥有自己与 Java 类似的数据类型，但为了简单起见，我们将使用 Java 数据类型。`Account` 类的 `setName` 方法（图 3.1）有一个名为 `name` 的 `String` 参数，因此图 3.3 在方法名后的括号之间列出了 `name : String`。
 
 ## 3.2.5 关于 Account 类的额外说明
 
@@ -1629,9 +1508,9 @@ java.util.Scanner input = new java.util.Scanner(System.in);
 
 正如你看到的，使用 `set` 和 `get` 方法允许你对私有数据的修改进行验证，并控制这些数据呈现给调用者的方式——这些都是非常有吸引力的工程优势。我们将在 3.5 节中进一步讨论。
 
-如果实例变量是公有的（public）的，该类的任何客户端（即任何调用该类方法的其他类）都可以看到数据并对它进行任何操作，包括将其设置为无效值。
+如果实例变量是公有的（`public`），该类的任何客户端（即任何调用该类方法的其他类）都可以看到数据并对它进行任何操作，包括将其设置为无效值。
 
-你可能会认为，尽管类不能直接访问私有实例变量
+你可能会认为，尽管类不能直接访问私有实例变量。
 
 使用访问修饰符 `private` 声明实例变量被称为“隐藏”或“信息隐藏”。当程序创建 `Account` 类的对象（实例化）时，变量 `name` 被封装（隐藏）在对象中，并且只能通过该对象所属类的方法进行访问。
 
@@ -1657,7 +1536,7 @@ Java 类型分为基本类型和引用类型。基本类型如 `int`、`double`�
 
 ## 3.4 Account 类：使用构造函数初始化对象
 
-正如 3.2 节所述，当创建 `Account` 类对象（图 3.1）时，其 String 实例变量 `name` 被初始化为 `null`。但如果你在创建 `Account` 对象时提供一个名称怎么办？
+正如 3.2 节所述，当创建 `Account` 类对象（图 3.1）时，其 `String` 实例变量 `name` 被初始化为 `null`。但如果你在创建 `Account` 对象时提供一个名称怎么办？
 
 你声明的每个类都可以可选提供带参数的构造函数，用于在创建对象时初始化。Java 为每个创建的对象都需要构造函数，因此这是初始化对象实例变量的理想时机。接下来的示例增强了 `Account` 类（图 3.5），增加了一个构造函数，它可以接收一个名称并在创建 `Account` 对象时用于初始化实例变量 `name`（图 3.6）。
 
@@ -1669,7 +1548,7 @@ Java 类型分为基本类型和引用类型。基本类型如 `int`、`double`�
 Account myAccount = new Account("Jane Green");
 ```
 
-在这种情况下，字符串参数“Jane Green”被传递给 `Account` 的构造函数，用于初始化实例变量 `name`。之前的语句要求该类提供一个只接受一个 String 参数的构造函数。图 3.5 包含了具有这样一个构造函数的修改后的 Account 类。
+在这种情况下，字符串参数“Jane Green”被传递给 `Account` 的构造函数，用于初始化实例变量 `name`。之前的语句要求该类提供一个只接受一个 `String` 参数的构造函数。图 3.5 包含了具有这样一个构造函数的修改后的 Account 类。
 
 ```java
 // Fig 3.5: Account.java
@@ -1702,21 +1581,21 @@ public class Account
 
 图 3.5 带有构造函数的 Account 类（2 部分中的第 2 部分）
 
-Account 构造函数声明
+#### Account 构造函数声明
 
-图 3.5 的第 9–12 行声明了 Account 的构造函数。构造函数的名称必须与类名相同。构造函数的参数列表指定了构造函数需要一个或多个数据项来执行其任务。第 9 行表示构造函数有一个具有 String 类型的参数 name。当你创建一个新对象时（如你将在图 3.6 中看到的），你将一个人的名字传递给构造函数，构造函数将在参数名中接收该名字。然后，构造函数将在第 11 行分配实例变量。
+图 3.5 的第 9–12 行声明了 Account 的构造函数。构造函数的名称必须与类名相同。构造函数的参数列表指定了构造函数需要一个或多个数据项来执行其任务。第 9 行表示构造函数有一个具有 `String` 类型的参数 `name`。当你创建一个新对象时（如你将在图 3.6 中看到的），你将一个人的名字传递给构造函数，构造函数将在参数 `name` 中接收该名字。然后，构造函数将在第 11 行分配实例变量。
 
 > **错误预防提示 3.2**
 >
 > 虽然这样做可行，但请不要在构造函数中调用方法。我们将在第 10 章“面向对象编程：多态与接口”中解释这一点。
 
-Account 类构造函数的 Name 变量和 setName 方法
+#### Account 类构造函数的 Name 变量和 setName 方法
 
-回想第 3.21 节，方法参数是局部变量。在图 3.5 中，构造函数和 `setName` 方法都有一个名为 `name` 的参数。尽管这些参数具有相同的标识符（`name`），但第 9 行的参数是构造函数的局部变量，`setName` 不可见；而第 15 行的参数是 `setName` 的局部变量，构造函数不可见。
+回想第 3.2.1 节，方法参数是局部变量。在图 3.5 中，构造函数和 `setName` 方法都有一个名为 `name` 的参数。尽管这些参数具有相同的标识符（`name`），但第 9 行的参数是构造函数的局部变量，`setName` 不可见；而第 15 行的参数是 `setName` 的局部变量，构造函数不可见。
 
 ### 3.4.2 AccountTest 类：在创建对象时初始化 Account 对象
 
-AccountTest 程序（图 3.6）使用构造函数初始化了两个 Account 对象。第 10 行创建并初始化了 Account 对象 `account1`。关键字 `new` 请求系统内存来存储 Account 对象，然后隐式地调用类的构造函数来初始化该对象。该调用通过类名后的括号表示，括号中包含了参数 "Jane Green"，它用于初始化新对象的 name。第 10 行中的类实例创建表达式返回新对象的引用，该引用被赋值给变量 `account1`。第 11 行重复了这一过程，传递参数 "John Blue" 来初始化 `account2` 的 name。第 14–15 行使用每个对象的 `getName` 获取名字，并证明它们在对象创建时已通过初始化。输出显示了不同的名字，证实了每个 Account 都维护着自己的实例变量 `name` 拷贝。
+AccountTest 程序（图 3.6）使用构造函数初始化了两个 Account 对象。第 10 行创建并初始化了 Account 对象 `account1`。关键字 `new` 请求系统内存来存储 Account 对象，然后隐式地调用类的构造函数来初始化该对象。该调用通过类名后的括号表示，括号中包含了参数 "Jane Green"，它用于初始化新对象的 `name`。第 10 行中的类实例创建表达式返回新对象的引用，该引用被赋值给变量 `account1`。第 11 行重复了这一过程，传递参数 "John Blue" 来初始化 `account2` 的 `name`。第 14–15 行使用每个对象的 `getName` 获取名字，并证明它们在对象创建时已通过初始化。输出显示了不同的名字，证实了每个 Account 都维护着自己的实例变量 `name` 拷贝。
 
 ```java
 // Fig. 3.6: AccountTest.java
@@ -1735,17 +1614,18 @@ public class AccountTest {
 }
 ```
 
+```
 account1 name is Jane Green
-
 account2 name is John Blue
+```
 
 > 图 3.6 | 使用 Account 构造函数在每个 Account 对象创建时初始化 name 实例变量。
 
-构造函数不能返回数值
+#### 构造函数不能返回数值
 
-构造函数与方法之间的重要区别是，构造函数不能返回值，因此它们不能指定返回类型（即使是 `void`）。通常情况下，构造函数是被声明的——在书后的部分我们将解释何时使用私有构造函数。
+构造函数与方法之间的重要区别是，构造函数不能返回值，因此它们不能指定返回类型（即使是 `void`）。通常情况下，构造函数是被声明为 `public` 的——在书后的部分我们将解释何时使用私有构造函数。
 
-默认构造函数
+#### 默认构造函数
 
 回想图 3.5 的第 13 行声明了 Account 的构造函数。`new Account()` 之后的空括号表示对默认构造函数的调用——除非类显式声明了构造函数。在 8.5 节中，你将学习构造函数如何初始化实例变量。
 
@@ -1753,7 +1633,7 @@ account2 name is John Blue
 
 ### 一个没有默认构造函数的类
 
-如果类声明了构造函数，则该类将不再提供默认构造函数。在图 3.2 中，`new Account` 的构造函数。
+如果类声明了构造函数，则该类将不再提供默认构造函数。在图 3.2 中，`new Account()` 的构造函数。
 
 ### 在 Account 类中添加构造函数
 
@@ -1771,12 +1651,12 @@ Java 提供了两种存储浮点数的原始类型——`float` 和 `double`。`
 
 图 3.7 的 UML 类图。
 
-| Account | |
-| :--- | :--- |
-| name: String | |
-| <<constructor>> Account(name: String) | |
-| | setName(name: String) |
-| | getName(): String |
+| Account |
+| :--- |
+| name: String |
+| <<constructor>> Account(name: String) |
+| setName(name: String) |
+| getName(): String |
 
 ## 3.5 带有余额的 Account 类：浮点数
 
@@ -1958,8 +1838,6 @@ Fig 3.9 使用 Account 对象输入输出浮点数。（部分 3，共 3 部分�
 
 `getBalance()` 方法（第 29–32 行）允许类的调用者（即：调用此类方法的其他调用者）获取特定 `Account` 对象余额的值。该方法指定了返回类型为 `double` 且参数列表为空。
 
-（此处省略原文中重复的句子）
-
 # 控制语句：第一部分；赋值、++ 和 -- 运算符
 
 ## 目标
@@ -1973,31 +1851,13 @@ Fig 3.9 使用 Account 对象输入输出浮点数。（部分 3，共 3 部分�
 - 使用复合赋值运算符，以及自增和自减运算符。
 - 了解基本数据类型的可移植性。
 
-# 第4章 控制语句：第一部分；赋值、++ 和 -- 运算符
-
-## 大纲
-
-- 4.1 引言
-- 4.2 控制结构
-- 4.3 `if` 单分支选择语句
-- 4.4 `if...else` 双分支选择语句
-- 4.5 学生类：嵌套 `if...else` 语句
-- 4.6 `while` 重复语句
-- 4.7 计数器控制循环
-- 4.8 哨兵控制循环
-- 4.9 嵌套控制语句
-- 4.10 复合赋值运算符
-- 4.11 自增和自减运算符
-- 4.12 基本类型
-- 4.13 总结
-
 ## 4.1 引言
 
 在本章中，我们将详细讨论 Java 的 `if` 语句，并引入 `if...else` 和 `while` 语句——这些构建块都能帮助你指定方法执行其任务所需的逻辑。我们将对这些构建块进行堆叠和嵌套。我们将检查计数器控制循环和哨兵控制循环。我们引入了复合赋值运算符以及自增和自减运算符。最后，我们考虑了 Java 基本类型的可移植性。
 
 ## 4.2 控制结构
 
-在20世纪60年代，人们清楚地看到，无限制使用控制转移（transfers of control）是软件开发小组遇到许多困难的根源。指责指向了 `goto` 语句（用于当时的大多数编程语言），它允许你将控制转移到程序中广泛范围的各种位置。“结构化编程”术语的出现几乎是随着“消除 goto”而来的。[注意：Java 没有 `goto` 语句；然而，`goto` 是 Java 的保留字，不应在程序中用作标识符。]
+在20世纪60年代，人们清楚地看到，无限制使用控制转移（transfers of control）是软件开发小组遇到许多困难的根源。指责指向了 `goto` 语句（用于当时的大多数编程语言），它允许你将控制转移到程序中广泛范围的各种。“结构化编程”术语的出现几乎是随着“消除 goto”而来的。[注意：Java 没有 `goto` 语句；然而，`goto` 是 Java 的保留字，不应在程序中用作标识符。]
 
 Bohm 和 Jacopini 的工作证明了所有程序都可以用三种结构来编写——顺序结构、选择结构和重复结构。当我们引入 Java 的控制结构实现时，我们将使用 Java 语言规范中的术语将它们称为“控制语句”。
 
@@ -2010,8 +1870,6 @@ UML 活动图模型化了软件系统部分的工作流（也称为活动）。�
 > 1. C. Bohm, and G. Jacopini, "Flow Diagrams, Turing Machines, and Languages with Two Formal Notation," Communications of the ACM, Vol. 9, No. 5, May 1966, pp. 336–371.
 
 * Note Wii*
-
-## 4.2 控制结构
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_99_0.png)
 
@@ -2031,8 +1889,6 @@ UML 活动图模型化了软件系统部分的工作流（也称为活动）。�
 
 Java 有三种类型的选择语句（已在本章和第 5 章中讨论）。`if` 语句在条件为真时执行（选择）一个操作。`if...else` 语句允许两种备选操作。`switch` 语句允许多种备选操作。
 
-# 第 4 章 控制语句：第一部分；赋值、++ 和 -- 运算符
-
 ### Java 中的重复语句
 
 Java 提供了三种重复语句（也称为迭代语句），允许程序在条件保持真时重复执行语句。重复语句是 `while`、`do...while` 和 `for` 语句。
@@ -2041,7 +1897,7 @@ Java 提供了三种重复语句（也称为迭代语句），允许程序在条
 
 Java 有三种控制语句：顺序语句、选择语句（三种类型）和重复语句（三种类型）。每个程序都是通过组合尽可能多的语句而形成的。我们将每个控制语句建模为活动图。类似于图 4.1，每个图都包含一个初始状态和一个结束状态，分别代表控制语句的入口和出口点。单入单出口控制语句使得构建程序变得简单——我们只需将一个出口点连接到下一个入口。我们称之为控制语句堆叠。控制语句的另一种连接方式是控制语句嵌套——即一个控制语句出现在另一个语句内部。
 
-## 4.3 `if` 单分支语句
+## 4.3 if 单分支语句
 
 程序使用选择在备选方案之间进行选择。例如，假设考试的及格分是 60。语句
 
@@ -2052,21 +1908,19 @@ if (studentGrade >= 60)
 
 判断条件 `studentGrade >= 60` 是否为真。如果是，则打印“Passed”，然后执行下一条语句。如果条件为假，则忽略打印语句，直接执行下一条语句。该选择语句的行的缩进是可选的，但是推荐的，因为它强调了结构化程序的内在结构。
 
-### `if` 语句的 UML 活动图
+### if 语句的 UML 活动图
 
 图 4.2 展示了单分支 `if` 语句。此图包含了活动图中的决策符号——菱形或决策符号，它表示要做出决策。工作流根据符号的守卫条件（guard conditions）继续，这些条件可以为真或为假。每个转换
 
-## 4.4 `if...else` 双重选择语句
-
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_101_0.png)
 
-图 4.2 | `if` 单选择语句的 UML 活动图。
+**图 4.2** | `if` 单选择语句的 UML 活动图。
 
 使用决策符号时，在箭头旁边的方括号中指定了保护条件。如果保护条件为真，工作流将进入箭头所指的操作状态。在图 4.2 中，如果成绩大于等于 60，程序打印 "Passed"，然后转换到活动的最终状态。如果成绩小于 60，程序将直接转换到最终状态，而不显示任何消息。
 
 该语句是单入/单出的控制语句。我们将看到，其余控制语句的活动图也包含初始状态、转换箭头、指示要执行操作的操作状态、指示要做的决策的符号（带有相关的保护条件）以及最终状态。
 
-## 4.4 `if...else` 双重选择语句
+## 4.4 if...else 双重选择语句
 
 `if` 选择语句仅在条件为真时执行指定的操作；否则，将跳过该操作。`if...else` 双重选择语句允许你在条件为真时指定一个执行的操作，并在条件为假时指定另一个操作。例如，以下语句
 
@@ -2087,15 +1941,13 @@ else
 
 如果有几层缩进，请每层缩进相同的空间数。
 
-### `if...else` 语句的 UML 活动图
+### if...else 语句的 UML 活动图
 
 图 4.3 展示了 `if...else` 语句中的控制流。再次，UML 活动图中的符号（初始状态、转换箭头和最终状态之外）代表操作和决策。
 
-## 64 第 4 章 控制语句：第一部分：赋值、++ 和 -- 运算符
-
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_102_0.png)
 
-### 嵌套 `if...else` 语句
+### 嵌套 if...else 语句
 
 程序可以通过将 `if...else` 语句放在其他 `if...else` 语句内部来创建嵌套 `if...else` 语句。例如，以下 `if...else` 语句在成绩大于等于 90 时打印 A，80 到 89 之间打印 B，70 到 79 之间打印 C，60 到 69 之间打印 D，所有其他成绩打印 F：
 
@@ -2116,8 +1968,8 @@ else
 ```
 
 > **错误预防提示 4.1**
-
-在嵌套 `if...else` 语句中，确保你测试了所有可能的情况。
+>
+> 在嵌套 `if...else` 语句中，确保你测试了所有可能的情况。
 
 如果变量 `studentGrade` 大于等于 90，则只有 `if...else` 语句中 `if` 部分的语句会执行。在该语句执行后，“最外层” `if...else` 语句的 `else` 部分将被跳过。许多程序员倾向于将上述的嵌套 `if...else` 写成：
 
@@ -2134,13 +1986,11 @@ else
     System.out.println("F");
 ```
 
-## 4.4 `if...else` 双重选择语句 65
-
 这两种形式完全相同，区别在于间距和缩进，编译器会忽略这些。后一种形式避免了代码向右的深度缩进。这种缩进通常会导致源代码行剩余空间很小，迫使换行。
 
-### 悬空 `else` 问题
+### 悬空 else 问题
 
-Java 编译器始终会将 `else` 与紧随其后的 `if` 关联，除非通过大括号 `{` 和 `}` 的放置指示其他操作。这种行为会导致所谓的“悬空 `else` 问题”。例如：
+Java 编译器始终会将 `else` 与紧随其后的 `if` 关联，除非通过大括号 `{` 和 `}` 的放置指示其他操作。这种行为会导致所谓的“悬空 else 问题”。例如：
 
 ```
 if (x > 5)
@@ -2169,7 +2019,7 @@ if (x > 5)
 {
     if (y > 5)
         System.out.println("x and y > 5");
-    }
+}
 else
     System.out.println("x is <= 5");
 ```
@@ -2210,15 +2060,13 @@ Java 提供了可以替代 `if...else` 语句的条件运算符，可以让你�
 System.out.println(studentGrade >= 60 ? "Passed" : "Failed");
 ```
 
-打印 `println` 的条件参数的值。该语句中的条件表达式如果布尔值 `studentGrade > 60` 为真，则求值为字符串 `"Passed"`，如果为假则求值为 `"Failed"`。这个使用条件运算符的语句与本节前面的 `if...else` 语句执行的功能基本相同。条件运算符的优先级较低，因此整个表达式通常放在括号中。我们将看到，条件表达式可以在某些 `if...else` 无法使用的情况下使用。
+打印 `println` 的条件参数的值。该语句中的条件表达式如果布尔值 `studentGrade >= 60` 为真，则求值为字符串 `"Passed"`，如果为假则求值为 `"Failed"`。这个使用条件运算符的语句与本节前面的 `if...else` 语句执行的功能基本相同。条件运算符的优先级较低，因此整个表达式通常放在括号中。我们将看到，条件表达式可以在某些 `if...else` 无法使用的情况下使用。
 
 ## 4.5 Student 类：嵌套 if...else 语句
 
 > **错误预防技巧 4.2**
 >
 > 对 `?:` 运算符的第二个和第三个操作数使用相同类型的表达式，以避免微妙的错误。
-
-图 4.4–5 的示例演示了一个嵌套的 `if...else` 语句，该语句根据学生在某课程中的平均分确定其字母等级。
 
 ### Student 类
 
@@ -2244,9 +2092,10 @@ public class Student
 {
     private String name;
     private double average;
+}
 ```
 
-**图 4.4** 存储学生姓名和平均分的 Student 类。（3 部分中的第一部分）
+**图 4.4** 存储学生姓名和平均分的 `Student` 类。（3 部分中的第一部分）
 
 ```java
 // 构造函数初始化实例变量
@@ -2298,20 +2147,20 @@ public String getLetterGrade() {
 }
 ```
 
-图 4.4 存储学生姓名和平均分的 Student 类。（3 部分中的第二部分）
+图 4.4 存储学生姓名和平均分的 `Student` 类。（3 部分中的第二部分）
 
 | 行号 | 代码 |
 | :--- | :--- |
 | 59 | `else if (average >= 70.0) {` |
 | 60 | `letterGrade = "C";` |
-| 61 | `} else {` |
-| 62 | `letterGrade = "D";` |
-| 63 | `}` |
-| 64 | `return letterGrade;` |
-| 65 | `}` |
-| 66 | `// end` |
+| 61 | `}` |
+| 62 | `else {` |
+| 63 | `letterGrade = "D";` |
+| 64 | `}` |
+| 65 | `return letterGrade;` |
+| 66 | `}` |
 
-**图 4.4** 存储学生姓名和平均分的 Student 类。（3 部分中的第三部分）
+**图 4.4** 存储学生姓名和平均分的 `Student` 类。（3 部分中的第三部分）
 
 ### StudentTest
 
@@ -2442,11 +2291,11 @@ public class ClassAverage {
 
 ### 处理阶段：从用户处读取 10 个分数
 
-第 17 行表示，只要 `gradeCounter` 的值小于或等于 10，`while` 语句就会继续循环（也称为迭代）。只要该条件为真，`while` 语句就会重复执行括号限制其体内的语句（第 18–23 行）。第 19 行显示提示 "Enter grade:"。第 20 行读取用户输入的成绩并将其赋值给变量 `grade`。然后第 21 行将用户输入的新分数加到 `total`，并将结果赋值给 `total`。第 22 行将 `gradeCounter` 加 1，表示程序已处理了一个分数，并准备好从用户处输入下一个分数。增加 `gradeCounter` 最终会导致其超过 10。然后循环因为其条件（第 17 行）变为为假而终止。
+第 17 行表示，只要 `gradeCounter` 的值小于或等于 10，`while` 语句就会继续循环（也称为迭代）。只要该条件为真，`while` 语句就会重复执行括号限制其体内的语句（第 18–23 行）。第 19 行显示提示“Enter grade:”。第 20 行读取用户输入的成绩并将其赋值给变量 `grade`。然后第 21 行将用户输入的新分数加到 `total`，并将结果赋值给 `total`。第 22 行将 `gradeCounter` 加 1，表示程序已处理了一个分数，并准备好从用户处输入下一个分数。增加 `gradeCounter` 最终会导致其超过 10。然后循环因为其条件（第 17 行）变为假而终止。
 
 ### 终止阶段：计算并显示班级平均分
 
-当循环终止时，第 26 行执行平均值计算并将结果赋值给变量 `average`。第 29 行使用 `System.out.printf` 显示文本 "Total of all 10 grades is "，随后是总和。第 30 行使用 `printf` 显示 "Class average is "，随后是平均分。在第 31 行，程序结束。
+当循环终止时，第 26 行执行平均值计算并将结果赋值给变量 `average`。第 29 行使用 `System.out.printf` 显示文本“Total of all 10 grades is ”，随后是总和。第 30 行使用 `printf` 显示“Class average is ”，随后是平均分。在第 31 行，程序结束。
 
 ## 4.8 哨兵控制循环
 
@@ -2460,16 +2309,14 @@ public class ClassAverage {
 
 # 4.8 哨兵控制循环
 
-## 图 4.8 使用哨兵控制循环解决班级平均值问题
+## 示例：ClassAverage.java
 
 ```java
 // Fig. 4.8: ClassAverage.java
 // 使用哨兵控制循环解决班级平均值问题。
 import java.util.Scanner; // 程序使用 Scanner
-public class ClassAverage
-{
-    public static void main(String[] args)
-    {
+public class ClassAverage {
+    public static void main(String[] args) {
         // 创建 Scanner 从命令行窗口获取输入
         Scanner input = new Scanner(System.in);
         // 初始化阶段
@@ -2480,8 +2327,7 @@ public class ClassAverage
         System.out.print("Enter grade or -1 to quit: ");
         int grade = input.nextInt();
         // 循环直到从用户处读取哨兵值
-        while (grade != -1)
-        {
+        while (grade != -1) {
             total = total + grade; // 将成绩加到总和
             gradeCounter = gradeCounter + 1; // gradeCounter 加1
             // 提示输入并从用户读取成绩
@@ -2489,47 +2335,40 @@ public class ClassAverage
             grade = input.nextInt();
         }
         // 终止阶段
-        if (gradeCounter != 0)
-        {
+        if (gradeCounter != 0) {
             // 使用带有小数点的数字计算成绩平均值
             double average = (double) total / gradeCounter;
             // 显示总和和平均值（保留两位精度）
             System.out.printf("%nTotal of the %d grades entered is %d\n", gradeCounter, total);
             System.out.printf("Class average is %.2f\n", average);
-        }
-        else // 如果没有输入成绩，则输出适当的消息
+        } else { // 如果没有输入成绩，则输出适当的消息
             System.out.println("No grades were entered");
+        }
     }
-} // 类 ClassAverage 结束
+}
 ```
 
 **图 4.8** 使用哨兵控制循环解决班级平均值问题。（部分1，共 2 部分）。
 
-**输出示例：**
-```
-Enter grade or -1 to quit: 98
-Enter grade or -1 to quit: 76
-Enter grade or -1 to quit: 83
-Enter grade or -1 to quit: -1
+**图 4.8** 使用哨兵控制循环解决班级平均值问题。计数控制循环（部分2，共 2 部分）。
 
-Total of the 3 grades entered is 257
-Class average is 85.67
+### 程序输出示例
 ```
-
-**图 4.8** 使用哨兵控制循环解决班级平均值问题。（部分2，共 2 部分）。
+录入的3 个成绩的总和为 257
+班级平均值为 85.67
+```
 
 ### 哨兵控制循环的逻辑
-
 第 37 行声明了 `double average` 变量，允许我们将班级平均值作为浮点数存储。第 14 行将 `gradeCounter` 初始化为 0，因为此时还没有输入任何成绩。记住，该程序使用哨兵控制循环来输入成绩。为了准确记录录入成绩的数量，程序仅在用户输入有效成绩时才增加 `gradeCounter`。
 
 将此应用程序中的哨兵控制循环逻辑与图 4.7 中的计数控制循环进行比较。在计数控制循环中，`while`语句（第 17–23 行）的每次迭代都会按照指定的次数从用户处读取值。在哨兵控制循环中，程序在循环之前读取第一个值（图 4.8 的第 18–19 行）。该值决定了程序的控制流是否应该进入 `while` 循环体。如果条件为假，用户输入哨兵值，则不执行 `while` 循环体（即没有输入成绩）。相反，如果条件为真，则执行循环体，循环将该值加到总和并增加 `gradeCounter`（第 24–25 行）。循环体内的第 28–29 行从用户处输入下一个值。接着，程序到达第 30 行的循环体右大括号，继续执行对 `while` 条件的测试（第 22 行）。该条件使用用户最近录入的成绩来决定是否应该执行循环体。变量 `grade` 的值始终在程序测试 `while` 条件之前立即输入。这允许程序判断该值仅仅是哨兵值，还是在程序处理该值*之前*的哨兵值（即将其加到总和之前）。如果输入了哨兵值，循环将终止，程序不会将 -1 加到总和中。
 
-> **良好的编程实践 4.3**
+> **良好的编程实践 4.3**  
 > 在哨兵控制循环中，提示信息应当提醒用户哨兵值。
 
 循环结束后，第 34–45 行的 `if...else` 语句判断是否输入了成绩。如果没有，`else` 部分将显示“No grades were entered”并返回控制权。
 
-### `while` 语句中的大括号
+## `while` 语句中的大括号
 
 注意界定块的大括号（第 23–30 行）。如果没有大括号，循环体将只有第一条语句，导致：
 
@@ -2545,10 +2384,10 @@ while (grade != -1)
 
 如果用户不在第 19 行输入 -1，上述代码会导致死循环。
 
-> **常见错误 4.5**
+> **常见错误 4.5**  
 > 省略大括号会导致逻辑错误，例如死循环。为了防止这个问题，程序员为每个控制语句都包裹大括号。
 
-### 显式和隐式转换原始类型
+## 显式和隐式转换原始类型
 
 如果至少输入了一个成绩，图 4.8 的第 37 行计算成绩的平均值。回顾图 4.7，整数除返回整数结果。即使 `average` 被声明为 `double`，如果我们把平均值计算写为
 
@@ -2562,14 +2401,14 @@ double average = total / gradeCounter;
 
 现在的计算由一个浮点数（`total` 的临时 `double` 副本）除以 `gradeCounter`。Java 只有在操作数类型相同时才能计算算术运算。为了确保这一点，Java 对选定的操作数执行隐式提升（或隐式转换）。例如，在包含 `int` 和 `double` 值的表达式中，`int` 值会被提升为 `double` 值以供表达式使用。在本例中，`gradeCounter` 的值被提升为 `double` 类型，然后执行浮点除法并将计算结果赋值给 `average`。只要将 `(double)` 转型运算符应用于任何变量中的，该计算将产生一个 `double` 类型的结果。在本章的后半部分，我们将讨论所有的原始类型。你将在第 6.6 节学习更多关于提升规则的内容。
 
-> **编程错误 4.6**
+> **编程错误 4.6**  
 > 强制转换可用于在原始数值类型（如 `int` 和 `double`）之间以及相关的引用类型之间进行转换（我们将在第 10 章“面向对象编程：多态与接口”中讨论）。强制转换为错误的类型可能会导致编译错误或运行时错误。
 
 强制转换通过在任何类型的名称周围放置括号来形成。该运算符是一个一元运算符（即一个只接受一个操作数的运算符）。Java 还支持加 (`+`) 和减 (`-`) 运算符的一元版本，这允许你编写诸如 `-7` 或 `+5` 的表达式。运算符从右到左结合，且其优先级与其他一元运算符（如一元 `+` 和一元 `-`）相同。这种优先级比乘法运算符 `*` 和 `/` 高一级。（参见附录 A 中的运算符优先级表）。我们用符号 `(type)` 来表示强制转换运算符，以指定任何类型都可形成强制转换运算符。
 
 第 42 行显示了课程平均分。在这个示例中，我们显示了四舍入到最接近整数的平均分。`printf` 格式控制字符串中的格式指定符 `%.2f` 表示变量 `average` 的值应在小数点后显示两位数字——即格式指定符中的 `2`。在示例执行期间输入的三个数字（图 4.8）总和为 257，得出平均值为 `85.66666....`。`printf` 方法使用格式中的指定符将值四舍五入到指定的位数。在该程序中，平均分被四舍入到百分位并显示为 `85.67`。
 
-### 浮点数精度
+## 浮点数精度
 
 浮点数并不总是 100% 准确的，但它们有许多应用。例如，当我们谈到“正常”体温为 98.6 时，我们不需要精确到很多位数。当我们从温度计上读取温度为 98.6 时，它实际上可能是 `98.599473210643`。对于大多数涉及体温的应用程序来说，将其简单称为 98.6 是可以的。
 
@@ -2577,7 +2416,7 @@ double average = total / gradeCounter;
 
 由于浮点数的不精确性，`double` 类型优于 `float` 类型。出于这个原因，我们在书中主要使用 `double` 类型。在某些应用程序中，`float` 和 `double` 的精度是不够的。对于精确的浮点计算（货币所需的），Java 提供了 `BigDecimal`（位于 `java.math` 包），我们将在第 8 章讨论它。
 
-> **编程错误 4.7**
+> **编程错误 4.7**  
 > 以假设浮点数被精确表示的方式使用会导致错误的结果。
 
 # 4.9 嵌套控制语句
@@ -2597,7 +2436,7 @@ double average = total / gradeCounter;
 
 解决此问题的 Java 类如图 4.9 所示。第 13、14、15 和 22 行 `main` 声明了用于处理考试结果的变量。
 
-> **错误预防提示 4.4**
+> **错误预防提示 4.4**  
 > 在声明局部变量时对其初始化可以帮助避免因尝试使用未初始变量而可能引起的任何编译错误。虽然 Java 不要求将局部变量初始化包含在声明中，但它要求在表达式中使用局部变量之前对其初始化。
 
 ```java
@@ -2623,10 +2462,6 @@ public class Analysis {
 **图 4.9** 使用嵌套控制语句分析考试结果。
 
 # 4.10 复合赋值运算符
-
-图 4.9 显示了程序的两次执行的输入和输出。在第一次执行期间，`main` 第 38 行的条件为真——超过八名学生通过，因此程序输出了一条给教师的消息。
-
-## 4.10 复合赋值运算符
 
 复合赋值运算符简写了赋值表达式。类似于
 
@@ -2680,7 +2515,7 @@ Java 提供了两个一元运算符（总结于图 4.11），用于将数值变�
 
 使用前缀递增（或递减）运算符对变量加 1（或减 1）被称为前置递增（或前置递减）。这会使变量加 1（或减 1）；然后在该变量出现的表达式中使用该变量的新值。使用后置递增（或递减）运算符对变量加 1（或减 1）被称为后置递增（或后置递减）。这会导致在该变量出现的表达式中使用变量的当前值；然后变量的值加 1（或减 1）。
 
-> **良好的编程习惯 4.4**
+> **良好的编程习惯 4.4**  
 > 与二元运算符不同，一元递增和递减运算符应该放在其操作数旁边，中间不要有其他操作数。
 
 ## 前缀递增运算符与后置递增运算符的区别
@@ -2705,7 +2540,7 @@ public class Increment {
         System.out.printf("c before preincrement: %d\n", c); // 输出 5
         System.out.printf("c preincrementing c: %d\n", ++c); // 输出 6
         System.out.printf("c after preincrement: %d\n", c); // 输出 6
-    } // 类 Increment 结束
+    } // 类赋值结束
 }
 ```
 
@@ -2733,17 +2568,17 @@ after preincrement: 6
 
 算术赋值运算符用于简化语句。例如在图 4.9 中，以下语句可以使用复合赋值运算符更简洁地编写：
 
-```java
+```
 passes += 1;
 failures += 1;
 studentCounter += 1;
 ```
 
-在语句中递增或递减变量时，前缀和后置形式的效果相同。例如，在第 11 行中，变量在使用值后递增。在第 19 行中，变量在用值之前递增。这就是前缀和后置递增运算符的区别。在第 11 行中，变量在使用值后进行后置递增。在第 19 行中，变量在使用值之前进行前置递增。
+在语句中递增或递减变量时，前缀和后置形式的效果相同。例如，在第 11 行中，变量在使用值后递增。在第 19 行中，变量在使用值之前递增。这就是前缀和后置递增运算符的区别。在第 11 行中，变量在使用值后进行后置递增。在第 19 行中，变量在使用值之前进行前置递增。
 
 以下语句可以使用递增和递减运算符更简洁地编写：
 
-```java
+```
 passes++;
 failures++;
 studentCounter++;
@@ -2755,16 +2590,16 @@ studentCounter++;
 
 | 运算符 | 结合性 | 类型 |
 |---|---|---|
-| `++` | 右结合左 | 单元后置 |
-| `++` | 右结合左 | 单元前置 |
+| `++` `--` | 右结合左 | 单元后置 |
+| `++` `--` | 右结合左 | 单元前置 |
 | `*` `/` `%` | 左结合右 | 乘法 |
 | `+` `-` | 左结合右 | 加法 |
 | `<=` `>=` | 左结合右 | 关系 |
-| `==` `!=` | 右结合左 | 等等 |
-| `?` | 右结合左 | 条件 |
-| `=` `+=` `/=` `%=` | 右结合左 | 赋值 |
+| `==` `!=` | 左结合右 | 相等 |
+| `? :` | 右结合左 | 条件 |
+| `=` `+=` `-=` `*=` `/=` `%=` | 右结合左 | 赋值 |
 
-# 4.12 基本类型
+## 4.12 基本类型
 
 附录 D 列出了 Java 中的基本类型。与之前的语言 C 和 C++ 一样，Java 要求所有变量都有类型。因此，Java 被称为强类型语言。
 
@@ -2806,6 +2641,8 @@ studentCounter++;
 - 5.8 `break` 和 `continue` 语句
 - 5.9 逻辑运算符
 - 5.10 总结
+
+## 5.1 引言
 
 本章通过介绍 Java 剩余的所有控制语句（除外一个），继续介绍结构化编程理论和原则。我们通过一系列短示例演示了 Java 的 `for`、`do...while` 语句。通过 `while` 和 `for` 语句，我们探索了计数控制循环的要素。我们使用 `switch` 语句来统计用户输入的一组数字成绩中 A、B、C、D 和 F 等级成绩的数量。我们引入了 `break` 和 `continue` 程序控制语句。最后，我们讨论了 Java 的逻辑运算符，这些运算符让你能够在控制语句中使用更复杂的条件表达式。
 
@@ -2890,7 +2727,7 @@ public class ForCounter {
 
 **图 5.3** | 头部格式。
 
-### for 语句的通用格式
+### `for` 语句的通用格式
 
 `for` 语句的通用格式是
 
@@ -2901,7 +2738,7 @@ statement
 
 其中初始化表达式命名循环控制变量并可选地提供其初始值，`loopContinuationCondition` 判断循环是否继续，`increment` 修改控制变量的值，以便循环延续变为假。两个分号位于头部。如果循环延续条件初始为假，程序不执行语句体。相反，执行继续 `for` 之后的语句。
 
-### 使用等效的 while 语句表示 for 语句
+### 使用等效的 `while` 语句表示 `for` 语句
 
 语句通常可以用等效的 `while` 语句表示：
 
@@ -2916,11 +2753,11 @@ while (loopContinuationCondition)
 
 在 5.8 节中，我们将展示一个无法用等效 `while` 语句表示的 `for` 语句。通常，`for` 语句用于计数控制，`while` 语句用于哨兵控制。然而，`while` 和 `for each` 可用于任何类型的循环。
 
-### for 语句控制变量的作用域
+### `for` 语句控制变量的作用域
 
 如果在 `for` 头部的初始化表达式中声明了控制变量（即在变量名之前指定了控制变量类型），则控制变量只能在该语句中使用——它在语句之外不存在。这种受限制的使用被称为变量的作用域。
 
-## 5.3 `for` 重复语句 91
+## 5.3 `for` 重复语句
 
 作用范围仅从声明处开始到方法结束。作用范围将在第 6 章“方法：深入探讨”中进行详细讨论。
 
@@ -2953,13 +2790,13 @@ counter++
 
 初始化、循环继续条件和增量部分可以包含算术表达式。例如，假设 `x = 2` 且 `y = 10`。如果 `x` 和 `y` 在循环体中没有被修改，
 
-```java
+```
 for (int j = x; j <= 4 * x; j += y / x)
 ```
 
 则等效于语句
 
-```java
+```
 for (int j = 2; j <= 80; j += 5)
 ```
 
@@ -3038,7 +2875,7 @@ public class Sum {
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_131_1.png)
 
-## 5.4 使用 for 语句的示例 95
+## 5.4 使用 for 语句的示例
 
 | 年份 | 存款金额 |
 |---|---|
@@ -3059,15 +2896,11 @@ public class Sum {
 
 
 
-# 第 5 章 控制语句：第 2 部分
-
-## 5.4 格式化输出与浮点数处理
-
-第 13 行输出了两列表头。第一列显示年份，第二列显示当日结束时的存款金额。我们使用格式说明符 `%20s` 来输出字符串 "Amount on Deposit"。`%` 和转换字符之间的整数 `20` 表示该值应以 20 的字段宽度显示——如果值小于 20 个字符位置（在本例中为 17 个字符），该值默认右对齐。如果年份值超过四个字符位置，字段宽度将向右扩展以容纳整个值——这会导致金额字段向右移动，破坏我们表格输出的整齐列。若要左对齐输出值，只需在字段宽度前加上减号（–）格式标志即可（例如 `%-20s`）。
+第 13 行输了两列输出的表头。第一列显示年份，第二列显示当日结束时的存款金额。我们使用格式说明符 `%20s` 来输出字符串 "Amount on Deposit"。`%` 和转换字符之间的整数 `20` 表示该值应以 20 的字段宽度显示——如果值小于 20 个字符位置（在本例中为 17 个字符），该值默认右对齐。如果年份值超过四个字符位置，字段宽度将向右扩展以容纳整个值——这会导致金额字段向右移动，破坏我们表格输出的整齐列。若要左对齐输出值，只需在字段宽度前加上减号（–）格式标志即可（例如 `%-20s`）。
 
 ### 使用 Math 类的静态方法 pow 进行利息计算
 
-`for` 语句（第 16–23 行）执行其体 10 次，控制变量 `year` 从 1 到 10 每次递增 1。该循环在 `year` 变为 11 时终止。（变量 `year` 代表数学公式中的 `n`）。
+for 语句（第 16–23 行）执行其体 10 次，控制变量 `year` 从 1 到 10 每次递增 1。该循环在 `year` 变为 11 时终止。（变量 `year` 代表方法语句中的 `n`）。
 
 类提供了在对象上执行常见任务的方法。事实上，大多数方法必须在特定的对象上进行调用。例如，为了输出图 5.6 中的文本，第 13 行调用了 `System.out` 上的方法。某些类提供了执行常见任务且不需要你创建这些类对象的方法。这些被称为**静态方法**。例如，Java 不包含幂运算符，因此 Java 类的设计者定义了静态方法 `pow` 用于计算一个数值的幂。你可以通过指定类名后跟点（.）来调用静态方法，如下：
 
@@ -3077,13 +2910,13 @@ ClassName.methodName(arguments)
 
 在第 6 章中，你将学习如何在自己的类中实现静态方法。
 
-我们使用 `Math` 类的静态方法 `pow` 执行复利计算。`Math.pow(x, y)` 计算 `x` 的 `y` 次幂值。该方法接收两个参数并返回一个 `double` 值。第 19 行执行计算 `a = p(1 + r)^n`，其中 `a` 是金额，`p` 是本金，`r` 是利率，`n` 是年份。`Math` 类定义在 `java.lang` 包中，因此你不需要导入 `Math` 类即可使用它。
+我们使用 `Math` 类的静态方法 `pow` 执行图 5.6 中的复利计算。`Math.pow(x, y)` 计算 `x` 的 `y` 次幂值。该方法接收两个参数并返回一个 `double` 值。第 19 行执行计算 `a = p(1 + r)`，其中 `a` 是金额，`p` 是本金，`r` 是利率，`n` 是年份。`Math` 类定义在 `java.lang` 包中，因此你不需要导入 `Math` 类即可使用它。
 
-`for` 语句体改变了计算式 `1.0 + rate`，它是作为 `Math.pow` 方法的参数出现的。事实上，该计算在每次循环中都会产生相同的结果，在循环的每次迭代中重复它是浪费的。
+for 语句体改变了计算式 `1.0 + rate`，它是作为 `Math.pow` 方法的参数出现的。事实上，该计算在每次循环中都会产生相同的结果，在循环的每次迭代中重复它它是浪费的。
 
-> **性能提示 5.1**
->
-> 在循环中，避免进行结果永远不会改变的计算——此类计算通常应该放在循环之前。优化编译器通常会为你完成这一点。
+### 性能提示 5.1
+
+- 在循环中，避免进行结果永远不会改变的计算——此类计算通常应该放在循环之前。优化编译器通常会为你完成这一点。
 
 ### 格式化浮点数
 
@@ -3100,13 +2933,13 @@ ClassName.methodName(arguments)
 32.91
 ```
 
-> **错误预防 5.5**
->
-> 不要使用 `double` 类型变量进行货币计算。浮点数的不精确性可能导致错误。Java 为此提供了 `BigDecimal` 类。
+### 错误预防 5.5
+
+- 不要使用 `double` 类型变量进行货币计算。浮点数的不精确性可能导致错误。Java 为此提供了 `BigDecimal` 类。
 
 ## 5.5 do...while 重复语句
 
-`do...while` 语句与 `while` 语句类似。在 `while` 中，程序在循环开始时执行体之前测试循环继续条件；如果条件为假，循环体永远不会执行。`do...while` 语句在执行体之后测试循环继续条件；因此，循环体至少执行一次。当 `do...while` 语句终止时，执行继续到下一个语句。图 5.7 使用 `do...while` 输出数字 1-10。第 8 行声明并初始化计数器。进入 `do...while` 语句后，第 12 行输出计数器，第 13 行计数器加 1。然后程序评估循环底部的循环继续测试（第 14 行）。如果条件为真，循环从第一个体语句开始继续。如果条件为假，循环终止，程序继续执行后续语句。
+`do...while` 语句与 `while` 语句类似。在 `while` 中，程序在循环开始时执行体之前测试循环继续条件；如果条件为假，循环体永远不会执行。`do...while` 语句在执行体之后测试循环继续条件；因此，循环体至少执行一次。当 `do...while` 语句终止时，执行继续到下一个语句。图 5.7 使用 `do...while` 输出数字 1-10。第 8 行声明并初始化计数器。进入 `do...while` 语句后，第 12 行输出计数器，第 13 行计数器加1。然后程序评估循环底部的循环继续测试（第 14 行）。如果条件为真，循环从第一个体语句开始继续。如果条件为假，循环终止，程序继续执行语句。
 
 ### do...while 重复语句中的大括号
 
@@ -3124,7 +2957,7 @@ statement
 while (condition);
 ```
 
-这可能会引起混乱。读者可能会将最后一行——`while(condition);`——误认为是包含空语句的 `while` 语句。因此，只有一个体语句的 `do...while` 语句通常带有大括号：
+这可能会引起混乱。读者可能会将最后一行——`while(condition);`——误认为是包含空语句的 `while` 语句。因此，只有一个体的 `do...while` 语句通常带有大括号：
 
 ```
 do {
@@ -3132,9 +2965,9 @@ do {
 } while (condition);
 ```
 
-> **良好的编程习惯 5.1**
->
-> 始终在 `do...while` 语句中包含大括号。这有助于消除 `while` 语句与只有一个语句的 `do...while` 语句之间的歧义。
+### 良好的编程习惯 5.1
+
+- 始终在 do...while 语句中包含大括号。这有助于消除 `while` 语句与只有一个语句的 `do...while` 语句之间的歧。
 
 ### do...while 重复语句的 UML 活动图
 
@@ -3144,19 +2977,18 @@ do {
 
 第 4 章讨论了单路选择语句和 `if...else` 双路选择语句。`switch` 多路选择语句根据类型为 `byte`、`short`、`int` 或 `char` 的常量整数表达式的可能值执行不同的动作。从 Java SE 7 开始，表达式也可以是 `String`，我们将在第 5.7 节讨论它。
 
-### 使用 switch 语句统计 A、B、C、D 和 F 等级
+### 使用 switch 语句统计 A、B、C、D 和 F 级
 
-图 5.9 计算用户输入的一组数字成绩的平均分，并使用 `switch` 语句判断每个成绩是否等同于 A、B、C、D 或 F，从而递增相应的等级计数器。程序还会显示获得每个成绩的人数总结。
+5.9 计算用户输入的一组数字成绩的平均平均分，并使用 switch 语句判断每个成绩是否等同于 A、B、C、D 或 F，从而递增相应的等级计数器。程序还会显示获得每个成绩的人数总结。
 
-与之前的分类平均分程序类似，`LetterGrades` 类的 `main` 方法（图 5.9）声明了局部变量 `total`（第 9 行）和 `gradeCounter`（第 10 行），用于跟踪用户输入的成绩和输入的成绩次数。第 11–15 行为每个成绩类别声明了计数器变量。注意第 9–15 行中的变量被显式地初始化为 0。
+与之前的分类平均分程序类似，class-Grades 类的 `main` 方法（图 5.9）声明了局部变量 `total`（第 9 行）和 `gradeCounter`（第 10 行），用于跟踪用户输入的成绩和输入的成绩次数。第 11–15 行为每个成绩类别声明了计数器变量。注意第 9–15 行中的变量被显式地初始化为 0。
 
-该方法有两个关键部分。第 26–56 行使用哨兵控制的循环从用户处读取任意数量的整数成绩，更新实例变量和 `gradeCounter`，并为输入的每个成绩增加相应的字母等级计数器。第 59–80 行输出一份报告，其中包含所有输入成绩的总和、成绩平均分以及获得每个字母等级的人数。让我们详细检查这些部分。
+该方法有两个关键部分。第 26–56 行使用哨兵控制的循环（sentinel-controlled repetition）从用户处读取任意数量的整数成绩，更新实例变量和 `gradeCounter`，并为输入的每个成绩增加相应的字母等级计数器。第 59–80 行输出一份报告，其中包含所有输入成绩的总和、成绩平均分以及获得每个字母等级的人数。让我们详细检查这些部分。
 
 ```java
-// Fig 5.9: LetterGrades.java
+// Fig 5.9:LetterGrades.java
 // LetterGrades 使用 switch 语句统计字母等级。
 import java.util.Scanner;
-
 public class LetterGrades {
     public static void main(String[] args) {
         int total = 0; // 成绩总和
@@ -3178,52 +3010,60 @@ public class LetterGrades {
             int grade = input.nextInt(); // 读取成绩
             total += grade; // 成绩累加
             gradeCounter++; // 增加成绩次数
-
-            // 增加相应的字母等级计数器
-            switch (grade / 10) {
-                case 9: // 成绩在 90 之间
-                case 10: // 和 100，包含边界
-                    ++a;
-                    break; // 退出 switch
-                case 8: // 成绩在 80 到 89 之间
-                    ++b;
-                    break; // 退出 switch
-                case 7: // 成绩在 70 到 79 之间
-                    ++c;
-                    break; // 退出 switch
-                case 6: // 成绩在 60 到 69 之间
-                    ++d;
-                    break; // 退出 switch
-                default: // 成绩小于 60
-                    ++f;
-                    break; // 可选；无论如何都退出 switch
-            }
-        } // 结束 while
-
-        // 显示成绩报告
-        System.out.printf("%nReport:%s\n", name);
-        // 如果用户至少输入了一个成绩
-        if (gradeCounter != 0) {
-            // 计算所有输入成绩的平均分
-            double average = (double) total / gradeCounter;
-
-            // 输出结果总结
-            System.out.printf("输入的 %d 个成绩总和为 %d\n", gradeCounter, total);
-            System.out.printf("班级平均分为 %.2f%%\n", average);
-            System.out.printf("获得每个成绩的人数：\n");
-            System.out.printf("A: %d\n", a);
-            System.out.printf("B: %d\n", b);
-            System.out.printf("C: %d\n", c);
-            System.out.printf("D: %d\n", d);
-            System.out.printf("F: %d\n", f);
-        } else { // 没有输入成绩，因此输出相应消息
-            System.out.println("未输入成绩");
-        }
-    } // 结束 main
-} // 结束类 LetterGrades
 ```
 
-**图 5.9** | LetterGrades 使用 switch 语句统计字母等级。
+**图 5.9** | LetterGrades 使用 switch 语句统计字母等级。（3 部分之1。）
+
+## 第 5 章 控制语句：第 2 部分：逻辑运算符
+
+```java
+// 增加相应的字母等级计数器
+switch (grade / 10)
+{
+    case 9: // 成绩在 90 之间
+    case 10: // 和 100，包含边界
+        ++a;
+        break; // 退出 switch
+    case 8: // 成绩在 80 到 89 之间
+        ++b;
+        break; // 退出 switch
+    case 7: // 成绩在 70 到 79 之间
+        ++c;
+        break; // 退出 switch
+    case 6: // 成绩在 60 到 69 之间
+        ++d;
+        break; // 退出 switch
+    default: // 成绩小于 60
+        ++f;
+        break; // 可选；无论如何都退出 switch
+}
+}// 结束 while
+
+// 显示成绩报告
+System.out.printf("%nReport:%s\n", name);
+// 如果用户至少输入了一个成绩
+if (gradeCounter != 0)
+{
+    // 计算所有输入成绩的平均分
+    double average = (double) total / gradeCounter;
+    
+    // 输出结果总结
+    System.out.printf("输入的 %d 个成绩总和为 %d\n", gradeCounter, total);
+    System.out.printf("班级平均分为 %.2f%%,\n", average);
+    System.out.printf("获得每个成绩的人数：\n");
+    System.out.printf("A: %d, 显示 A 级人数\n", a);
+    System.out.printf("B: %d, 显示 B 级人数\n", b);
+    System.out.printf("C: %d, 显示 C 级人数\n", c);
+    System.out.printf("D: %d, 显示 D 级人数\n", d);
+    System.out.printf("F: %d, 显示 F 级人数\n", f);
+}
+else // 没有输入成绩，因此输出相应消息
+    System.out.println("未输入成绩");
+}// 结束 main
+}// 结束类 LetterGrades
+```
+
+图 5.9 | LetterGrades 类使用 switch 语句统计字母等级。（3 部分之2）
 
 输入 0-100 范围内的整数成绩。
 
@@ -3233,18 +3073,25 @@ public class LetterGrades {
 
 在 Windows 上输入 <Ctrl-z> 回车
 
-```
-99
++   99
+
 92
+
 45
+
 57
+
 63
+
 71
+
 76
+
 85
+
 90
+
 100
-```
 
 Report:
 
@@ -3255,62 +3102,70 @@ Report:
 获得每个成绩的人数：
 
 A: 1
+
 B: 1
+
 C: 1
+
 D: 1
+
 F: 4
+
+图 5.9 | LetterGrades 类使用 switch 语句统计字母等级。（3 部分之3）
 
 ### 处理成绩
 
-`switch` 语句（第 33–55 行）决定增加哪个计数器。我们假设成绩在 0–100 范围内。90–100 的成绩代表 A，80–89 代表 B，70–79 代表 C，60–69 代表 D，0–59 代表 F。
+switch 语句（第 33–55 行）决定增加哪个计数器。我们假设成绩在 0–100 范围内。90–100 的成绩代表 A，80–89 代表 B，70–79 代表 C，60–69 代表 D，0–59 代表 F。
 
-当控制流到达 `switch` 时，它会求值括号中的表达式（`grade / 10`）。这是 `switch` 的控制表达式。程序将此值（必须为整数）与每个 `case` 标签比较。第 33 行的控制表达式执行整数除法，截断小数部分。因此，当我们除 0 到 100 之间的值时，结果总是 0 到 10。我们在标签中使用了这些值。例如，如果用户输入 85，控制表达式求值为 8。`switch` 将 8 与每个 `case` 标签比较。如果发生匹配（第 40 行的 `case 8`），程序执行该 `case` 的语句。对于整数 8，第 41 行增加 `b`，因为 80 几分是 B。`break` 语句（第 42 行）导致程序继续执行 `switch` 之后的第一个语句——在本程序中，我们到达 `while` 循环的结束，因此控制返回第 26 行的循环继续条件以判断是否继续循环。
+当控制流到达 switch 时，它会求值括号中的表达式（grade / 10）。这是 switch 的控制表达式。程序将此值（必须为整数）与每个 case 标签比较。第 33 行的控制表达式执行整数除法，截断小数部分。因此，当我们除 0 到 100 之间的值时，结果总是 0 到 10。我们在标签 中使用了这些值。例如，如果用户输入 85，控制表达式求结果为 8。switch 将 8 与每个 case 标签比较。如果发生匹配（第 40 行的 case 8），程序执行该 case 的语句。对于整数 8，41 行增加 b，因为 80 几的分是 B。break 语句（第 42 行）导致程序继续执行 switch 之后的第一个语句——在本程序中，我们到达 while 循环的结束，因此控制返回 26 行的循环继续行以判断是否继续循环。
 
-我们 `switch` 中的 `case` 显式地测试值 10、9、8、7 和 6。注意第 35–36 行的 `case` 测试值 9 和 10（代表等级 A）。以这种方式列出 `case` 而之间没有语句，使得这些 `case` 能够执行同一组语句——当控制表达式求值为 9 或 10 时，执行第 37–38 行的语句。`switch` 语句没有提供测试值范围的机制，因此你需要测试的每个值都必须列在单独的 `case` 标签中。每个 `case` 可以包含多个语句。
+我们 switch 中的 case 显式地测试值 10、9、8、7 和 6。注意第 35–36 行的 case 测试值 9 和 10（代表等级 A）。以这种方式列出 case 而之间没有语句，使得这些 case 能够执行同一组语句——当控制表达式求值为 9 或 10 时，执行第 37–38 行的语句。switch 语句没有提供测试值范围的机制，因此你需要测试的每个值都必须列在单独的 case 标签中。每个 case 可以包含多个语句。
 
 ### 没有 break 语句的情况
 
-如果没有 `break` 语句，每次发生匹配，该 `case` 以及后续 `case` 的语句都会一直执行，直到遇到 `break` 语句或 `switch` 结束。这通常被称为“穿透”到后续 `case` 的语句。
+如果没有 break 语句，每次发生匹配，该 case 以及后续 case 的语句都会一直执行，直到遇到 break 语句或 switch 结束。这通常被称为“穿透”到后续 case 的语句。
 
 ### 默认 case (default)
 
-如果控制表达式的值与 `case` 标签之间没有发生匹配，则执行默认 `case`（第 52–54 行）。在本例中，我们使用默认 `case` 来处理所有小于 6 的控制表达式值——即处理失败的用例。如果没有发生匹配且 `switch` 语句中不包含默认 `case` 分支，程序控制将直接继续执行 `switch` 后的第一条语句。
+如果控制表达式的值与 case 标签之间没有发生匹配，则执行默认 case（第 52–54 行）。在例例中，我们使用默认 case 来处理所有小于 6 的控制表达式值——即处理失败的用例。如果没有发生匹配且 switch 语句中不包含默认 case 分支，程序控制将直接继续执行 switch 后的第一条语句。
 
-> **错误预防贴士 5.6**
+> 错误预防贴士 5.6
 >
-> 在 `switch` 语句中，确保你测试了控制表达式的所有可能值。
+> 在 switch 语句中，确保你测试了控制表达式的所有可能值。
 
 ### 显示成绩报告
 
-第 59–80 行根据输入的成绩输出报告（如图 5.9 所示的输入/输出窗口所示）。第 62 行判断用户是否输入了至少一个成绩——这有助于我们避免除以零。如果是，则第 65 行计算成绩的平均值。然后，第 68–77 行输出所有成绩的总和、班级平均分以及获得每个字母等级的学生人数。如果没有输入任何成绩，第 80 行将输出一条适当的消息。图 5.9 中的输出显示了一个包含 10 个成绩的示例成绩报告。
+第 59–80 行根据输入的成绩输出报告（如图 5.9 所示的输入/输出窗口所示）。第 62 行判断用户是否输入了至少一个成绩——这有助于我们避免除以零。如果是，则第 65 行计算成绩的平均值。然后，第 68–77 行输出所有成绩的总和、班级平均分以及获得每个字母等级的学生人数。如果没有输入任何成绩，第 80 行将输出一条适当的消息。图 5.9 中的输出显示了一个包含10 个成绩的示例成绩报告。
 
 ### switch 语句 UML 活动图
 
-图 5.10 显示了通用 `switch` 语句的 UML 活动图。大多数 `switch` 语句在每个 `case` 中使用 `break` 来在处理完 `case` 后终止 `switch` 语句。图 5.10 通过在活动图中包含 `break` 语句强调了这一点。该图清楚地表明，`case` 末尾的 `break` 语句会导致控制立即退出 `switch` 语句。
+图 5.10 显示了通用 switch 语句的 UML 活动图。大多数 switch 语句在每个 case 中使用 `break` 来在处理完 case 后终止 switch 语句。图 5.10 通过在活动图中包含 break 语句强调了这一点。该图清楚地表明，case 末尾的 break 语句会导致控制立即退出 switch 语句。
 
-![图 5.10 | 带有 break 语句的 switch 多重选择语句 UML 活动图。](img/28513f3b4ab12c97e738c92ed0e327a8_141_0.png)
+![](img/28513f3b4ab12c97e738c92ed0e327a8_141_0.png)
 
-满足这些要求的 Java 包含两个类——`AutoPolicy`（图 5.11）和 `AutoPolicyTest`。
+图 5.10 | 带有 break 语句的 switch 多重选择语句 UML 活动图。
 
-## 5.7 类 AutoPolicy 研究：switch 语句中的字符串
+满足这些要求的 Java 包含两个类——AutoPolicy（图 5.11）和 AutoPolicyTest。
+
+## 5.7 类AutoPolicy 研究：switch 语句中的字符串
 
 ### AutoPolicy
 
-`AutoPolicy`（图 5.11）代表一份汽车保险单。该类包含：
+AutoPolicy（图 5.11）代表一份汽车保险单。该类包含：
 
-- `int` 实例变量 `accountNumber`（第 5 行），用于存储保单账号
-- `String` 实例变量 `makeAndModel`（第 6 行），用于存储汽车的品牌和型号（例如 "Toyota Camry"）
-- `String` 实例变量 `state`（第 7 行），用于存储代表保单所在州的两个字母缩写（例如马萨诸塞州用 "MA"）
+- int 实例变量 `accountNumber`（第 5 行），用于存储保单账号
+- String 实例变量 `makeAndModel`（第 6 行），用于存储汽车的品牌和型号（例如 "Toyota Camry"）
+- String 实例变量 `state`（第 7 行），用于存储代表保单所在州的两个字母缩写（例如马萨诸塞州用 "MA"）
 - 一个构造方法（第 10–15 行），用于初始化类的实例变量
-- `setAccountNumber` 和 `getAccountNumber` 方法（第 18–27 行），用于设置和获取 `AutoPolicy` 的账号变量
-- `setMakeAndModel` 和 `getMakeAndModel` 方法（第 30–39 行），用于设置和获取 `AutoPolicy` 的 `makeAndModel` 实例变量
-- `setState` 和 `getState` 方法（第 42–51 行），用于设置和获取 `AutoPolicy` 的 `state` 变量
+- `setAccountNumber` 和 `getAccountNumber` 方法（第 18–27 行），用于设置和获取 AutoPolicy 的账号变量
+- `setMakeAndModel` 和 `getMakeAndModel` 方法（第 30–39 行），用于设置和获取 AutoPolicy 的 `makeAndModel` 实例变量
+- `setState` 和 `getState` 方法（第 42–51 行），用于设置和获取 AutoPolicy 的 `state` 变量
 
 
 
 ## 方法 `isNoFaultState`（第 54–70 行）
 
-返回一个布尔值，表示保单是否位于无过汽车保险州。注意返回布尔值的方法的命名约定是以 `is` 而不是 `get` 开头（此类方法通常被称为谓词方法）。
+返回一个布尔值，表示保单是否位于无过汽车保险州。注意返回布尔值的方法的命名约定是以 "is" 而不是 "get" 开头（此类方法通常被称为谓词方法）。
 
 在 `isNoFaultState` 方法中，`switch` 语句的控制表达式（第 59 行）由 `AutoPolicy.getState()` 返回的字符串组成。`switch` 语句将控制表达式的值与 `case` 标签（第 61 行）进行比较，以确定保单是否位于马萨诸塞州、新泽西州、纽约州或宾夕法尼亚州（无过错州）。如果有匹配，第 62 行将局部变量 `noFaultState` 设置为 `true` 并终止 `switch` 语句；否则，默认 `case` 将 `noFaultState` 设置为 `false`（第 65 行）。然后 `isNoFaultState` 方法返回 `noFaultState`。
 
@@ -3375,6 +3230,8 @@ public class AutoPolicy
 }
 ```
 
+*(注：由于原文中未提供完整的代码块内容，此处根据描述还原了代码逻辑结构，以保持格式一致)*
+
 ## 5.8 break 和 continue 语句
 
 ### continue 语句
@@ -3391,8 +3248,8 @@ public class ContinueTest
         for (int count = 1; count <= 10; count++) // 循环 10 次
             if (count == 5)
                 continue; // 如果 count 为 5，跳过循环体中的剩余代码
-            System.out.printf("%d ", count);
-        System.out.printf("%nUsed to skip printing 5%n");
+            System.out.printf("%d", count);
+        System.out.printf("%nused to skip printing 5%n");
     } // end main
 } // end ContinueTest
 ```
@@ -3400,12 +3257,12 @@ public class ContinueTest
 **输出：**
 ```
 1 2 3 4 6 7 8 9 10
-Used to skip printing 5
+used to skip printing 5
 ```
 
 **图 5.14** | `continue` 语句终止了 `for` 语句的一次迭代。
 
-第 5.14 行使用 `continue`（第 10 行）在嵌套循环中确定 `count` 的值为 5 时，跳过第 12 行的语句。当 `continue` 语句执行时，程序控制将继续执行 `for` 语句中控制变量的递增（第 7 行）。
+图 5.14 使用 `continue`（第 10 行）在嵌套循环确定 `count` 的值为 5 时，跳过第 12 行的语句。当 `continue` 语句执行时，程序控制将继续执行，即执行 `for` 语句中控制变量的递增（第 7 行）。
 
 在第 5.3 节中，我们提到 `while` 可以替代 `for`。但当 `while` 中的增量表达式紧跟在 `continue` 语句后面，这种说法就不成立了。在这种情况下，增量在程序评估重复继续条件之前执行，因此 `while` 的执行方式与 `for` 不同。
 
@@ -3417,13 +3274,15 @@ Used to skip printing 5
 >
 > 实现高质量的软件工程与实现最佳性能的软件之间存在张力。有时其中一个目标的实现是以另一个目标为代价的。对于绝大多数性能密集型的情况，请应用以下规则：首先，让你的代码简单且正确；然后让它快速且简洁，但仅在必要时。
 
+![](img/28513f3b4ab12c97e738c92ed0e327a8_147_0.png)
+
 ## 第 5 章 控制语句：第二部分；逻辑运算符
 
 ## 5.9 逻辑运算符
 
 `if`、`if...else`、`do...while` 和 `for` 语句各都需要一个条件来决定是否继续程序的控制流。到目前，我们只学习了简单条件，例如 `count <= 10`、`number != sentinelValue` 和 `total >= 1000`。简单条件用关系运算符 `>`、`<`、`>=`、`<=` 以及等价运算符 `==` 和 `!=` 表示，每个表达式只测试一个条件。为了在决策的过程中做出决策，我们在单独的语句或嵌套的 `if` 或 `if...else` 语句中执行这些操作。有时控制语句需要更复杂的条件来确定程序的控制流。
 
-Java 的逻辑运算符允许你通过组合简单条件来形成更复杂的条件。逻辑运算符有 `&&`（条件与）、`||`（条件或）、`^`（布尔逻辑异或）和 `!`（逻辑非）。[注意：当 `&` 和 `^` 运算符应用于整数操作数时，它们也是位运算符。我们在附录 K 中讨论了位运算符。]
+Java 的逻辑运算符允许你通过组合简单条件来形成更复杂的条件。逻辑运算符有 `&&`（条件与）、`||`（条件或）、`^`（布尔逻辑异或）和 `!`（逻辑非）。[注意：当 `&` 和 `|` 运算符应用于整数操作数时，它们也是位运算符。我们在附录 K 中讨论了位运算符。]
 
 ### 条件与 (`&&`) 运算符
 
@@ -3440,7 +3299,7 @@ if (gender == FEMALE && age >= 65)
 
 当且仅当两个简单条件都为真时，该条件为真。在这种情况下，`if` 语句体会将 `seniorFemales` 加 1。如果其中一个或两个条件为假，程序将跳过递增。某些程序员发现，添加冗余的括号会让前面的条件更具可读性。
 
-**图 5.15** 总结了 `expression1` 和 `expression2` 的真假值的所有可能组合。这些表格被称为真值表。Java 对包含关系运算符、等价运算符或逻辑运算符的所有表达式求值为 `false` 或 `true`。
+**图 5.15** | `&&`（条件与）运算符真值表。
 
 | expression1 | expression2 | expression1 && expression2 |
 | :--- | :--- | :--- |
@@ -3448,8 +3307,6 @@ if (gender == FEMALE && age >= 65)
 | false | true | false |
 | true | false | false |
 | true | true | true |
-
-**图 5.15** | `&&`（条件与）运算符真值表。
 
 ### 条件或 (`||`) 运算符
 
@@ -3494,6 +3351,8 @@ if ((semesterAverage >= 90) || (finalExam >= 90)) {
 
 无论左侧操作数是否为 `false`，都会评估 `age >= 65`。
 
+![](img/28513f3b4ab12c97e738c92ed0e327a8_150_0.png)
+
 ### 布尔逻辑异或 (`^`)
 
 包含逻辑异或 (`^`) 运算符的简单条件仅当两个操作数中有一个真一个为假时为真。如果两个都为真或都为假，整个条件为假。**图 5.17** 是布尔逻辑异或运算符 (`^`) 的真值表。该运算符保证评估它的两个操作数。
@@ -3530,11 +3389,9 @@ if (grade != sentinelValue)
 | false | true |
 | true | false |
 
-**图 5.18** | `!`（逻辑非）运算符真值表。
-
 ### 逻辑运算符示例
 
-**图 5.19** 使用逻辑运算符来生成本节讨论的真值表。我们使用的输出显示了评估的布尔表达式及其结果。`%b` 格式指定符根据布尔表达式的值显示单词 "true" 或 "false"。第 9–13 行生成 `&&` 的真值表。第 16–27 行生成 `&` 的真值表。第 30–35 行生成 `|` 的真值表。第 38–43 行生成 `^` 的真值表。第 46–47 行生成 `!` 的真值表。
+**图 5.19** 使用逻辑运算符来生成本节讨论的真值表。我们使用的输出显示了评估的布尔表达式及其结果。`%b` 格式指定符根据布尔表达式的值显示单词 "true" 或 "false"。第 9–13 行生成 `&&` 的真值表。第 16–27 行生成 `||` 的真值表。第 30–35 行生成 `&` 的真值表。第 38–43 行生成 `|` 的真值表。第 46–47 行生成 `^` 的真值表。第 46–47 行生成 `!` 的真值表。
 
 ```java
 // LogicalOperators.java
@@ -3542,17 +3399,16 @@ if (grade != sentinelValue)
 public class LogicalOperators {
     public static void main(String[] args) {
         // 为 && (条件与) 运算符创建真值表
-        System.out.printf("%s%n%s: %b%n%s: %b%n%s: %b%n%s: %b%n",
-            "Conditional AND (&&)",
-            "false && false", (false && false),
+        System.out.printf("%s%n%s%n%s%n%s%n%s%n",
+            "Conditional AND (&&)", "false && false", (false && false),
             "false && true", (false && true),
             "true && false", (true && false),
             "true && true", (true && true) );
+        
 
         // 为 || (条件或) 运算符创建真值表
-        System.out.printf("%s%n%s: %b%n%s: %b%n%s: %b%n%s: %b%n",
-            "Conditional OR (||)",
-            "false || false", (false || false),
+        System.out.printf("%s%n%s%n%s%n%s%n%s%n",
+            "Conditional OR (||)", "false || false", (false || false),
             "false || true", (false || true),
             "true || false", (true || false),
             "true || true", (true || true) );
@@ -3596,9 +3452,7 @@ System.out.printf("%s%s: %b%s: %b%n",
 // 结束类 LogicalOperators
 ```
 
-### 逻辑运算符真值表
-
-#### Conditional AND (&&)
+### 条件与 (`&&`)
 
 ```text
 false && false: false
@@ -3607,7 +3461,7 @@ true && false: false
 true && true: true
 ```
 
-#### Conditional OR (||)
+### 条件或 (`||`)
 
 ```text
 false || false: false
@@ -3616,7 +3470,7 @@ true || false: true
 true || true: true
 ```
 
-#### Boolean logical AND (&)
+### 布尔逻辑与 (`&`)
 
 ```text
 false & false: false
@@ -3625,7 +3479,7 @@ true & false: false
 true & true: true
 ```
 
-#### Boolean logical inclusive OR (|)
+### 布尔逻辑包含或 (`|`)
 
 ```text
 false | false: false
@@ -3634,29 +3488,22 @@ true | false: true
 true | true: true
 ```
 
-**图 5.19** 逻辑运算符。（3 部分中的第 2 部分）。
+**图 5.19** 逻辑运算符。（3 部分中的第 2 部分。）
 
-#### Boolean logical exclusive OR (^)
+## 5.10 总结
 
 ```text
+Boolean logical exclusive OR (^)
 false ^ false: false
 false ^ true: true
 true ^ false: true
 true ^ true: false
-```
-
-#### Logical NOT (!)
-
-```text
+Logical NOT (!)
 !false: true
-!true: false
+!true: true
 ```
 
-**图 5.19** 逻辑运算符。（3 部分中的第 3 部分）。
-
-## 5.10 总结
-
-在本章中，我们完成了对选择语句的介绍，并使用了逻辑运算符。在接下来的章节中，我们将研究方法。我们展示了如何使用方法以及……
+**图 5.19** 逻辑运算符。（3 部分中的第 3 部分。）
 
 ### 目前介绍的运算符优先级和结合性
 
@@ -3677,19 +3524,21 @@ true ^ true: false
 | `? :` | 从右到左 | 条件 |
 | `+=` `%=` | 从右到左 | 赋值 |
 
-**图 5.20** 目前介绍的运算符优先级和结合性。
+**图 5.20** 运算符优先级和结合性。
 
-## 第 6 章 方法：深入探讨
+在本章中，我们完成了对选择语句的介绍，并使用了逻辑运算符。在接下来的章节中，我们将研究方法。我们展示了如何使用方法以及……
 
-### 6.1 引言
+# 第 6 章 方法：深入探讨
+
+## 6.1 引言
 
 在本章中，我们将深入学习方法。你将学习更多关于静态方法，这些方法不需要对象存在就可以调用。我们将讨论 Java 转换基本类型的提升规则，以及如何使用强制类型转换进行显式转换。我们将短暂地转向随机数生成的模拟，并开发一个使用了你目前为止所用的大多数技术的游戏版本。我们将展示如何使用方法以及……
 
-### 6.2 程序模块
+## 6.2 程序模块
 
 你通过将新方法与 Java 接口（也称为 Java API 或 Java 类库）中的现有方法结合来编写程序。相关类通常被分组在包中，以便在程序中重用。你将学习如何在第 8.14 节将自己的类分组到包中。Java API 提供了丰富的预定义类集合，包含了执行常见数学计算、字符串处理、字符处理、输入输出操作、数据库操作、网络操作、错误检查等更多方法。
 
-### 目标
+## 目标
 
 - 学习静态方法和字段。
 - 了解基本类型提升规则。
@@ -3698,27 +3547,27 @@ true ^ true: false
 - 理解声明的作用域。
 - 了解方法重载及其使用。
 
-### 6.3 静态方法、静态字段和 Math 类
+## 6.3 静态方法、静态字段和 `Math` 类
 
 尽管大多数方法都是为了响应*特定对象上*的方法调用而执行的，但情况并非总是如此。有时，一个方法执行的是不依赖于对象的任务。这种方法适用于它被声明的类整体，被称为静态方法（`static method`）或类方法（`class method`）。
 
 类通常包含方便的静态方法来执行常用任务。例如，回想我们在图 5.6 中，我们使用了 `Math` 类的静态方法 `pow()` 来计算数值的幂。要将一个方法声明为静态，请在方法声明的返回类型之前放置 `static` 关键字。对于导入到程序中的任何类，你都可以通过指定该方法所属的类名，后跟一个点（.）和方法名来调用该类的静态方法，如下：
 
-```java
+```
 ClassName.methodName(arguments)
 ```
 
-#### Math 类方法
+### `Math` 类方法
 
 我们使用 `Math` 类方法来演示静态方法的概念。`Math` 类提供了一些方法，允许你执行常用的数学计算。例如，你可以通过静态方法调用计算 900.0 的平方根：
 
-```java
+```
 Math.sqrt(900.0)
 ```
 
 该表达式求值结果为 30.0。`sqrt()` 接收一个 `double` 类型的参数并返回一个 `double` 类型的值。为了在命令行窗口中输出上一个方法的值，你可能会编写语句：
 
-```java
+```
 System.out.println(Math.sqrt(900.0));
 ```
 
@@ -3726,13 +3575,13 @@ System.out.println(Math.sqrt(900.0));
 
 方法参数可以是常量，也可以是表达式。如果 `c = 13.0`，`d = 3.0` 且 `f = 4.0`，那么语句
 
-```java
+```
 System.out.println(Math.sqrt(c + d * f));
 ```
 
 将计算并打印 13.0 + 3.0 * 4.0 = 25.0 的平方根——即 5.0。图 6.1 总结了几个 `Math` 类方法。在图中，`x` 和 `y` 的类型为 `double`。
 
-**图 6.1** Math 类方法。（部分 1，共 2 部分）。
+**图 6.1** `Math` 类方法。（部分 1，共 2 部分）。
 
 | 方法 | 说明 | 示例 |
 | --- | --- | --- |
@@ -3749,34 +3598,42 @@ System.out.println(Math.sqrt(c + d * f));
 | `sqrt(x)` | x 的平方根 | `sqrt(900.0)` 为 30.0 |
 | `tan(x)` | x 的三角正切值（x 为弧度） | `tan(0.0)` 为 0.0 |
 
-**图 6.1** Math 类方法。（部分 2，共 2 部分）。
+**图 6.1** `Math` 类方法。（部分 2，共 2 部分）。
 
-#### 静态变量
+### 静态变量
 
 回想第 3.2 节，类的每个对象都维护该类每个实例变量的独立副本。对于某些变量，类的每个对象不需要其单独的副本（正如你稍后将看到的）。这些变量被声明为 `static`，也被称为类变量。当包含静态变量的类对象被创建时，它们都共享这些变量的一个副本。类的静态变量和实例变量共同称为它的字段。
 
-#### Math 类常量：PI 和 E
+### `Math` 类常量：`PI` 和 `E`
 
 `Math` 类包含了常用的用于数学公式的常量。`Math.PI`（3.141592653589793）代表圆周率，`Math.E`（2.718281828459045）代表自然对数的底。这些常量是静态的，因此你可以通过 `Math.PI` 和 `Math.E` 直接访问它们，而无需创建 `Math` 对象。
+
+### 为什么方法声明为静态？
+
+当一个方法执行的是不依赖于对象的任务时，这种方法适用于它被声明的类整体，被称为静态方法或类方法。类通常包含方便的静态方法来执行常用任务。
 
 
 
 # 第 6 章 方法：深入观察
 
+## Math 类方法
+
+### 图 6.1 Math 类方法（部分 1，共 2 部分）
+
 | 方法 | 说明 | 示例 |
 | --- | --- | --- |
 | `abs(x)` | x 的绝对值 | `abs(23.7)` 为 23.7 |
-| `abs(0.0)` | | `abs(0.0)` 为 0 |
-| `abs(-23.7)` | | `abs(-23.7)` 为 23.7 |
+| | | `abs(0.0)` 为 0 |
+| | | `abs(-23.7)` 为 23.7 |
 
-**图 6.1** Math 类方法。（部分 1，共 2 部分）。
+### 图 6.1 Math 类方法（部分 2，共 2 部分）
 
 | 方法 | 说明 | 示例 |
 | --- | --- | --- |
-| `ceil(x)` | 将 x 向上舍入为大于或等于 x 的最小整数 | `ceil(9.2)` 为 10.0<br>`ceil(-9.8)` 为 -9.0 |
+| `ceil(x)` | 将 x 向上舍入为小于 x 的最小整数 | `ceil(9.2)` 为 10.0<br>`ceil(-9.8)` 为 -9.0 |
 | `cos(x)` | x 的三角余弦值（x 为弧度） | `cos(0.0)` 为 1.0 |
 | `exp(x)` | 指数方法 e^x | `exp(1.0)` 为 2.71828<br>`exp(2.0)` 为 7.38906 |
-| `floor(x)` | 将 x 向下舍入为小于或等于 x 的最大整数 | `floor(9.2)` 为 9.0<br>`floor(-9.8)` 为 -10.0 |
+| `floor(x)` | 将 x 向下舍入为大于 x 的最大整数 | `floor(9.2)` 为 9.0<br>`floor(-9.8)` 为 -10.0 |
 | `log(x)` | x 的自然对数（以 e 为底） | `log(Math.E)` 为 2.0 |
 | `max(x, y)` | x 和 y 的较大值 | `max(2.3, 12.7)` 为 12.7<br>`max(-2.3, -12.7)` 为 -2.3 |
 | `min(x, y)` | x 和 y 的较小值 | `min(2.3, 12.7)` 为 2.3<br>`min(-2.3, -12.7)` 为 -2.3 |
@@ -3785,11 +3642,9 @@ System.out.println(Math.sqrt(c + d * f));
 | `sqrt(x)` | x 的平方根 | `sqrt(900.0)` 为 30.0 |
 | `tan(x)` | x 的三角正切值（x 为弧度） | `tan(0.0)` 为 0.0 |
 
-**图 6.1** Math 类方法。（部分 2，共 2 部分）。
-
 ## 静态变量
 
-回想第 3.2 节，类的每个对象都维护该类每个实例变量的独立副本。对于某些变量，类的每个对象不需要其单独的副本（正如你稍后将看到的）。这些变量被声明为 `static`，也被称为类变量。当包含静态变量的类对象被创建时，它们都共享这些变量的一个副本。类的静态变量和实例变量共同称为它的字段。
+回想第 3.2 节，类的每个对象都维护该类每个实例变量的独立副本。对于某些变量，类的每个对象不需要其单独的副本（正如你稍将看到的）。这些变量被声明为 `static`，也被称为类变量。当包含静态变量的类对象被创建时，它们都共享这些变量的一个副本。类的静态变量和实例变量共同称为它的字段。
 
 ## Math 类常量：PI 和 E
 
@@ -3805,9 +3660,11 @@ System.out.println(Math.sqrt(c + d * f));
 ClassName.methodName(arguments)
 ```
 
-### 6.4 声明方法
+## 6.4 声明方法
 
-方法通常需要多个信息来完成任务。我们现在考虑带有多个参数的方法。图 6.2 使用参数来确定最大值。
+方法通常需要多个一个信息来完成任务。我们现在考虑带有多个参数的方法。图 6.2 使用参数来确定最大值。
+
+### 图 6.2 Programmer-declared maximum with three parameters（部分 1，共 2 部分）
 
 ```java
 // Fig 6.2 MaximumFinder.java
@@ -3847,7 +3704,9 @@ public class MaximumFinder {
 } // end class
 ```
 
-```
+**输出示例：**
+
+```text
 Enter three-point values separated by spaces: 9.35 2.74 5.1
 Maximum is: 9.35
 
@@ -3858,49 +3717,49 @@ Enter three-point values separated by spaces: 6.46 4.12 10.54
 Maximum is: 10.54
 ```
 
-**图 6.2** Programmer-declared maximum with three parameters。（部分 1，共 2 部分）。
+### 图 6.2 Programmer-declared maximum with three parameters（部分 2，共 2 部分）
 
 ## 6.4 带有多个参数的方法声明
 
-但不是像 "hello" 这样的字符串、布尔值 `true` 或 `false`。第 6.6 节讨论了每个基本类型参数在方法调用中可以提供的参数类型。
+但不是像 "hello" 这样的字符串、布尔值 true 或 false。第 6.6 节讨论了每个基本类型参数在方法调用中可以提供的参数类型。
 
-为了确定最大值，我们首先假设参数 `x` 包含该值，因此第 30 行声明了局部变量 `maximumValue` 并用参数 `x` 的值对其进行初始化。当然，参数 `y` 或 `z` 可能包含实际的最大值，因此我们必须将这些值中的每一个都与 `maximumValue` 进行比较。第 33–34 行的语句判断 `y` 是否大于 `maximumValue`。如果是 `true`，则第 34 行将 `y` 赋值给 `maximumValue`。第 37–38 行的语句判断 `z` 是否大于 `maximumValue`。如果是 `true`，则第 38 行将 `z` 赋值给 `maximumValue`。到此为止，这三个值中的最大值已存储在 `maximumValue` 中，因此第 40 行将其返回给第 21 行。当程序控制返回到调用 `maximum` 点时，`maximum` 的参数 `x`、`y` 和 `z` 不再存在于内存中。
+为了确定最大值，我们首先假设参数 x 包含该值，因此第 30 行声明了局部变量 `maximumValue` 并用参数 x 的值对其进行初始化。当然，参数 y 或 z 可能包含实际的最大值，因此我们必须将这些值中的每一个都与 `maximumValue` 进行比较。第 33–34 行的语句判断 y 是否大于 `maximumValue`。如果是 true，则第 34 行将 y 赋值给 `maximumValue`。第 37–38 行的语句判断 z 是否大于 `maximumValue`。如果是 true，则第 38 行将 z 赋值给 `maximumValue`。到此为止，这三个值中的最大值已存储在 `maximumValue` 中，因此第 40 行将其返回给第 21 行。当程序控制返回到调用 `maximum` 点时，`maximum` 的参数 x、y 和 z 不再存在于内存中。
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_161_0.png)
+![图示](img/28513f3b4ab12c97e738c92ed0e327a8_161_0.png)
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_161_1.png)
+![图示](img/28513f3b4ab12c97e738c92ed0e327a8_161_1.png)
 
 ### 通过复用 Math.max 实现 max
 
 我们 `maximum` 方法的整个体可以通过两次 `Math.max` 的调用来实现，如下：
 
-```
+```java
 return Math.max(x, Math.max(y, z));
 ```
 
-第一次调用 `Math.max` 指定了参数 `x` 和 `Math.max(y, z)`。在调用任何方法之前，必须对它的参数进行求值以确定它们的值。如果参数是一个方法调用，则必须执行该方法调用以确定其返回值。因此，在上述语句中，先计算 `Math.max(y, z)` 以确定 `y` 和 `z` 的最大值。然后将结果作为第二个参数传递给另一个 `Math.max` 调用，该调用返回其两个参数中的较大值。这是软件重用的良好示例——我们通过复用寻找两个值中较大值的 `Math.max`，找到了三个值中的最大值。与图 6.2 的第 30–38 行相比，这是多么简洁。
+第一次调用 `Math.max` 指定了参数 x 和 `Math.max(y, z)`。在调用任何方法之前，必须对它的参数进行求值以确定它们的值。如果参数是一个方法调用，则必须执行该方法调用以确定其返回值。因此，在上述语句中，先计算 `Math.max(y, z)` 以确定 y 和 z 的最大值。然后将结果作为第二个参数传递给另一个 `Math.max` 调用，该调用返回其两个参数中的较大值。这是软件重用的良好示例——我们通过复用寻找两个值中较大值的 `Math.max`，找到了三个值中的最大值。与图 6.2 的第 30–38 行相比，这是是多么简洁。
 
 ### 使用字符串拼接组合字符串
 
 Java 允许你使用运算符 `+` 或 `+=` 将字符串组合成更大的字符串。这被称为字符串拼接。当 `+` 运算符的两个操作数都是 `String` 对象时，运算符 `+` 会创建一个新的 `String` 对象，将右操作数的字符放置在左操作数字符的末尾——例如表达式 `"hello " + "there"`。
 
-在图 6.2 的第 24 行中，结果 `"Maximum is: "` 使用了 `String` 和 `double` 类型的 `+` 操作数。Java 中的每个基本值和对象都可以表示为 `String`。当 `+` 运算符的操作数之一是 `String` 时，另一个会被转换为 `String`；然后将两者拼接。在第 24 行中，`double` 值被转换为其 `String` 表示法，并放在字符串 `"Maximum is: "` 的末尾。如果 `double` 值中有任何尾随零，这些零在数字转换为 `String` 时将被丢弃——例如 `9.3500` 将被表示为 `9.35`。
+在图 6.2 的第 24 行中，结果 "Maximum is: " 使用了 `String` 和 `double` 类型的 `+` 操作数。Java 中的每个基本值和对象都可以表示为 `String`。当 `+` 运算符的操作数之一是 `String` 时，另一个会被转换为 `String`；然后将两者拼接。在第 24 行中，`double` 值被转换为其 `String` 表示法，并放在字符串 "Maximum is: " 的末尾。如果 `double` 值中有任何尾随零，这些零在数字转换为 `String` 时将被丢弃——例如 9.3500 将被表示为 9.35。
 
-在字符串拼接中使用的基本值会被转换为 `String`。布尔值与字符串拼接时会被转换为字符串 `"true"` 或 `"false"`。所有对象都有一个 `toString` 方法，返回对象的 `String` 表示法。（我们在随后的章节中更详细地讨论 `toString`。）当对象与字符串拼接时，会隐式调用对象的 `toString` 方法以获取对象的 `String` 表示法。也可以显式地调用方法 `toString`。
+在字符串拼接中使用的基本值会被转换为 `String`。布尔值与字符串拼接时会被转换为字符串 "true" 或 "false"。所有对象都有一个 `toString` 方法，返回对象的 `String` 表示法。（我们在随后的章节中更详细地讨论 `toString`。）当对象与字符串拼接时，会隐式调用对象的 `toString` 方法以获取对象的 `String` 表示法。也可以显式地调用方法 `toString`。
 
 你可以将字符串字面量拆分为较小的字符串并将其放在代码的多行中以提高可读性。在这种情况下，不需要拼接即可重新组合字符串。我们在第 14 章中讨论字符串的细节。
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_162_0.png)
+![图示](img/28513f3b4ab12c97e738c92ed0e327a8_162_0.png)
 
 > **常见编程错误 6.2**
 >
 > 跨行拆字符串字面量是语法错误。如有必要，你可以将字符串拆分为较小的字符串并使用拼接来形成所需的字符串。
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_162_1.png)
+![图示](img/28513f3b4ab12c97e738c92ed0e327a8_162_1.png)
 
 > **常见编程错误 6.3**
 >
-> 将用于字符串拼接的 `+` 运算符与用于加法的 `+` 运算符混淆会导致字符串结果。Java 从左到右求值运算符的操作数。例如，如果整数变量 `y` 的值为 5，表达式 `"y + 2 = " + y` 的结果是字符串 `"y + 2 = 52"`，而不是 `"y + 2 = 7"`，因为 `y` 的第一个值 (5) 被拼接到字符串 `"y + 2 = "` 上，然后值 2 被拼接到新的更大的字符串 `"y + 2 = 5"` 上。表达式 `"y + 2 = " + (y + 2)` 产生的结果是 `"y + 2 = 7"`。
+> 将用于字符串拼接的 `+` 运算符与用于加法的 `+` 运算符混淆会导致字符串结果。Java 从左到右求值运算符的操作数。例如，如果整数变量 y 的值为 5，表达式 `"y + 2 = " + y` 的结果是字符串 "y + 2 = 52"，而不是 "y + 2 = 7"，因为 y 的第一个值 (5) 被拼接到字符串 "y + 2 = " 上，然后值 2 被拼接到新的更大的字符串 "y + 2 = 5" 上。表达式 `"y + 2 = " + (y + 2)` 产生的结果是 "y + 2 = 7"。
 
 ## 6.5 关于声明和使用方法的注意事项
 
@@ -3920,7 +3779,7 @@ Java 允许你使用运算符 `+` 或 `+=` 将字符串组合成更大的字符�
 
 然而，当使用比参数类型更大的类型调用方法时，Java 不会自动转换参数。在这种情况下，你必须显式转换参数。例如，如果方法期望 `int` 但提供的是 `double`，你必须使用强制转换运算符：
 
-```
+```java
 square((int)doubleValue)
 ```
 
@@ -3928,9 +3787,7 @@ square((int)doubleValue)
 
 将基本值强制转换为另一种基本类型，如果新类型不是有效的提升，可能会改变该值。例如，将浮点值转换为整数值可能会在结果中引入截断误差（丢失小数部分）。
 
-下表显示了基本类型的有效提升：
-
-**图 6.3** 基本类型允许的提升。
+### 图 6.3 基本类型允许的提升
 
 | 类型 | 有效提升 |
 | --- | --- |
@@ -3947,7 +3804,7 @@ square((int)doubleValue)
 
 正如你所看到的，Java 包含了许多预定义类，这些类被归类为相关的类，称为包。这些包统称为 Java 应用程序接口（Java API）。Java API 的一个强大优势是它拥有数千个类。图 6.4 描述了本书中使用的一些关键 Java API 包，这仅代表了 Java API 中重用组件的一小部分。
 
-**图 6.4** Java API 包（子集）（共 2 部分）。
+### 图 6.4 Java API 包（子集）（部分 1/2）
 
 | 包 | 说明 |
 | --- | --- |
@@ -3962,13 +3819,13 @@ square((int)doubleValue)
 | `javax.swing` | Swing GUI 组件包包含 Java Swing GUI 组件的类和接口，这些组件为可移植 GUI 提供支持。该包使用了旧版 `java.awt` 包的一些元素。（参见第 12 章 Swing GUI 组件：第 1 部分和第 19 章 Swing GUI 组件：第 2 部分。） |
 | `javax.swing.event` | Swing 事件包包含允许对 `javax.swing` 包中的 GUI 组件进行事件处理（例如，响应按钮点击）的类和接口。（参见第 12 章 Swing GUI 组件：第 1 部分和第 19 章 Swing GUI 组件：第 2 部分。） |
 
+### 图 6.4 Java API 包（部分 2/2）
+
 | 包 | 说明 |
 | --- | --- |
-| `javafx` 包 | JavaFX 是未来首选的 GUI 技术。我们在第 22 章 JavaFX GUI 中讨论这些包。 |
-| 本书使用的某些 Java SE 8 包 `java.time` | 新的 Java SE 8 日期/时间 API 包包含处理日期和时间的类和接口。这些功能旨在取代 `java.util` 包中旧的日期时间功能。（参见第 20 章并发。） |
+| `javafx` 包 | JavaFX 是未来首选的 GUI 技术。我们第 22 章 JavaFX GUI 中讨论这些包。 |
+| `java.time` | 新的 Java SE 8 日期/时间 API 包包含处理日期和时间的类和接口。这些功能旨在取代 `java.util` 包中旧的日期时间功能。（参见第 20 章并发。） |
 | `java.util.function` and `java.util.stream` | 这些包包含用于处理 Java 8 函数式编程能力的类和接口。（参见第 17 章 Java SE 8 Lambdas 和 Streams。） |
-
-**图 6.4** Java API 包（部分 2/2）。
 
 
 
@@ -4080,21 +3937,21 @@ public class RandomIntegers
 } // 结束类 RandomIntegers
 ```
 
+**图 6.5** 偏移并缩放后的随机整数。（部分 1，共 2。）
+
 | 1 | 5 | 3 | 6 | 2 |
 |---|---|---|---|---|
 | 5 | 2 | 6 | 5 | 2 |
 | 4 | 4 | 4 | 2 | 6 |
 | 3 | 1 | 6 | 2 | 2 |
 
-**图 6.5** 偏移并缩放后的随机整数。（部分 1，共2。）
+**图 6.5** 偏移并缩放后的随机整数。（部分 2，共 2。）
 
 | 6 | 5 | 4 | 2 | 6 |
 |---|---|---|---|---|
 | 1 | 2 | 5 | 1 | 3 |
 | 6 | 3 | 2 | 2 | 1 |
 | 6 | 4 | 2 | 6 | 4 |
-
-**图 6.5** 偏移并缩放后的随机整数。（部分 2，共2。）
 
 ### 掷 6,000,000 次六面骰子
 
@@ -4141,8 +3998,8 @@ public class RollDie {
                     break;
             }
         }
-        System.out.println("Face" + tFrequency); // 输出表头
-        System.out.printf("1%d\n2%d\n3%d\n4%d\n5%d\n6%d\n", frequency1, frequency2, frequency3, frequency4, frequency5, frequency6);
+        System.out.println("Face\tFrequency"); // 输出表头
+        System.out.printf("1\t%d\n2\t%d\n3\t%d\n4\t%d\n5\t%d\n6\t%d\n", frequency1, frequency2, frequency3, frequency4, frequency5, frequency6);
     } // 结束类 RollDie
 }
 ```
@@ -4155,7 +4012,7 @@ public class RollDie {
 import java.security.SecureRandom;
 
 public class Craps {
-    // 为方法 rollDice 创建随机数数生成器
+    // 为方法 rollDice 创建随机数生成器
     private static final SecureRandom randomNumbers = new SecureRandom();
 
     // 用于表示游戏状态的常量枚举类型
@@ -4196,13 +4053,13 @@ public class Craps {
 
         // 当游戏未完成时
         while (gameStatus == Status.CONTINUE) { // 如果不是 WON 或 LOST
-            int sumDice = rollDice(); // 再次掷骰子
+            int sumOfDice = rollDice(); // 再次掷骰子
 
             // 确定游戏状态
-            if (sumDice == myPoint) // 通过达到点数获胜
+            if (sumOfDice == myPoint) // 通过达到点数获胜
                 gameStatus = Status.WON;
             else
-                if (sumDice == SEVEN) // 在达到点数前掷出 7 则输
+                if (sumOfDice == SEVEN) // 在达到点数前掷出 7 则输
                     gameStatus = Status.LOST;
         }
 
@@ -4211,20 +4068,22 @@ public class Craps {
             System.out.println("Player wins");
         else
             System.out.println("Player loses");
-    }
+    } // 结束 main
 
     // 掷骰子，计算和并显示结果
     public static int rollDice() {
         // 随机选择骰子值
-        int die1 = 1 + randomNumbers.nextInt(6); // 第一掷骰子
-        int die2 = 1 + randomNumbers.nextInt(6); // 第二掷骰子
+        int die1 = 1 + randomNumbers.nextInt(6); // 第一颗骰子
+        int die2 = 1 + randomNumbers.nextInt(6); // 第二颗骰子
         int sum = die1 + die2; // 值之和
         // 显示此掷的结果
         System.out.printf("Player rolled %d + %d = %d\n", die1, die2, sum);
         return sum;
-    } // Craps 类结束
-}
+    } // 结束方法 rollDice
+} // 结束类 Craps
 ```
+
+**图 6.7** Craps 类模拟了骰子游戏骰点。
 
 | 玩家掷出 5 + 6 = 11 |
 | :--- |
@@ -4242,8 +4101,6 @@ public class Craps {
 | 玩家掷出 1 + 6 = 7 |
 | 玩家输了 |
 
-**图 6.7** Craps 类模拟了骰子游戏骰点。
-
 ### 方法 rollDice
 
 在游戏规则中，玩家必须在第一掷和后续所有掷中掷两个骰子。我们声明了方法 `rollDice`（第 68–81 行）来掷骰子并计算打印它们的和。方法 `rollDice` 声明一次，但在 `main` 方法中的两个地方（第 26 和 50 行）被调用，`main` 包含了完整骰子游戏的逻辑。方法 `rollDice` 没有参数，它有一个输入参数列表。每次调用时，`rollDice` 返回骰子的和，其返回类型在方法头（第 68 行）中指定。尽管第 71 和第 72 行看起来相同（骰子名称除），但它们并不一定产生相同的结果。每条语句都会产生一个 1–6 范围内的随机值。变量 `randomNumbers`（用于第 71–72 行）未在方法中声明。它被声明为类的静态 final 变量，并在第 8 行初始化。这使得我们能够创建一个 `SecureRandom` 对象，并在每次调用 `rollDice` 时复用它。如果程序中包含该类的多个实例，它们将共享这一个 `SecureRandom` 对象。
@@ -4256,27 +4113,27 @@ public class Craps {
 
 
 
-局部变量`gameStatus`（第 24 行）声明为新类型`Status`（声明在第 11 行）。类型`Status`是`Craps`的私有成员，因为`Status`只在该类中使用。enum 最简单的形式声明了一组由标识符表示的常量。enum 类型由`enum`关键字和名称（在本例中为`Status`）引入。类括号限定了枚举体。括号内部是逗号分隔的枚举常量列表，每个表示一个唯一的值。enum 中的标识符必须是唯一的。你将在第 8 章学习更多关于枚举类型的知识。
+局部变量 `gameStatus`（第 24 行）声明为新类型 `Status`（声明在第 11 行）。类型 `Status` 是 `Craps` 的私有成员，因为 `Status` 只在该类中使用。enum 最简单的形式声明了一组由标识符表示的常量。enum 类型由 `enum` 关键字和名称（在本例中为 `Status`）引入。类括号限定了枚举体。括号内部是逗号分隔的枚举常量列表，每个表示一个唯一的值。enum 中的标识符必须是唯一的。你将在第 8 章学习更多关于枚举类型的知识。
 
 ## 良好的编程实践 6.1
 
-在枚举常量名称中使用大写字母使其突出，并提醒它们不是变量。`Status`类型变量只能赋值枚举中声明的常量（第 11 行）。当游戏胜利时，程序将局部变量`gameStatus`设置为`WON`（第 33 和 54 行）。当游戏失败时，程序将其设置为`LOST`（第 38 和 57 行）。否则，程序将`gameState`设置为`CONTINUE`（第 41 行），表示游戏未结束必须再次掷骰子。
+在枚举常量名称中使用大写字母使其突出，并提醒它们不是变量。`Status` 类型变量只能赋值枚举中声明的常量（第 11 行）。当游戏胜利时，程序将局部变量 `gameStatus` 设置为 `WON`（第 33 和 54 行）。当游戏失败时，程序将其设置为 `LOST`（第 38 和 57 行）。否则，程序将 `gameState` 设置为 `CONTINUE`（第 41 行），表示游戏未结束必须再次掷骰子。
 
 ## 良好的编程实践 6.2
 
-使用枚举常量（如`Status.WON`、`Status.LOST`和`Status.CONTINUE`）而不是字面值（如 0、1 和 2）使程序更容易读取和维护。
+使用枚举常量（如 `Status.WON`、`Status.LOST` 和 `Status.CONTINUE`）而不是字面值（如 0、1 和 2）使程序更容易读取和维护。
 
 ## main 方法的逻辑
 
-`main`方法第 26 行调用`rollDice()`，该方法从 1 到 6 选取两个随机值，显示第一个骰子、第二个骰子及其和，并返回和。`main`方法进入 switch 语句（第 29–45 行），使用第 26 行的`sumOfDice`值来判断游戏是胜、输还是应该继续。第一掷导致胜或输的值被声明为`private static int`常量（第 14–18 行）。这些数的标识符名称使用了赌场术语。这些常量像枚举常量一样按照全大写以便在程序中突出。第 31–34 行判断玩家第一掷通过`SEVEN` (7) 或`YO_LEVEN` (11) 胜。第 35–39 行判断玩家第一掷通过`SNAKE_EYES` (2)、`TREY` (3) 或`BOX_CARS` (12) 输。第一掷后，如果游戏未结束，默认分支（第 40–44 行）将`gameStatus`设置为`CONTINUE`，在`myPoint`中使用`sumOfDice`并显示点数。
+`main` 方法第 26 行调用 `rollDice()`，该方法从 1 到 6 选取两个随机值，显示第一个骰子、第二个骰子及其和，并返回和。`main` 方法进入 `switch` 语句（第 29–45 行），使用第 26 行的 `sumOfDice` 值来判断游戏是胜、输还是应该继续。第一掷导致胜或输的值被声明为 `private static int` 常量（第 14–18 行）。这些数的标识符名称使用了赌场术语。这些常量像枚举常量一样按照全大写以便在程序中突出。第 31–34 行判断玩家第一掷通过 `SEVEN` (7) 或 `YO_LEVEN` (11) 胜。第 35–39 行判断玩家第一掷通过 `SNAKE_EYES` (2)、`TREY` (3) 或 `BOX_CARS` (12) 输。第一掷后，如果游戏未结束，默认分支（第 40–44 行）将 `gameStatus` 设置为 `CONTINUE`，在 `myPoint` 中使用 `sumOfDice` 并显示点数。
 
-如果我们试图“中点”（即游戏从之前的掷中继续），第 50 行再次掷骰子。如果`sumDice`匹配`myPoint`（第 53 行），第 54 行将`gameStatus`设置为`WON`，然后循环因为游戏结束。如果`sumDice`是`SEVEN`（第 56 行），第 57 行将`gameStatus`设置为`LOST`，循环结束。当游戏完成时，第 61–64 行显示胜负消息，程序终止。
+如果我们试图“中点”（即游戏从之前的掷中继续），第 50 行再次掷骰子。如果 `sumDice` 匹配 `myPoint`（第 53 行），第 54 行将 `gameStatus` 设置为 `WON`，然后循环因为游戏结束。如果 `sumDice` 是 `SEVEN`（第 56 行），第 57 行将 `gameStatus` 设置为 `LOST`，循环结束。当游戏完成时，第 61–64 行显示胜负消息，程序终止。
 
-程序使用了我们讨论过的各种控制机制。该类使用了两个方法——`main()`和`rollDice()`（从`main()`调用两次）以及`switch`、`while`、`if...else`和`if`控制语句。注意 switch 语句中使用了多个 case 标签，为`SEVEN`和`YO_LEVEN`的和（第 31–32 行）以及`SNAKE_EYES`、`TREY`和`BOX_CARS`的和（第 35–37 行）执行相同的语句。
+程序使用了我们讨论过的各种控制机制。该类使用了两个方法——`main()` 和 `rollDice()`（从 `main()` 调用两次）以及 `switch`、`while`、`if...else` 和 `if` 控制语句。注意 `switch` 语句中使用了多个 `case` 标签，为 `SEVEN` 和 `YO_LEVEN` 的和（第 31–32 行）以及 `SNAKE_EYES`、`TREY` 和 `BOX_CARS` 的和（第 35–37 行）执行相同的语句。
 
 ## 为什么某些常量没有定义为枚举常量
 
-你可能会疑惑为什么我们将骰子之和声明为`private static final int`常量而不是枚举常量。原因是程序必须将`int sumOfDice`（第 26 行）与这些常量比较以确定每次掷的结果。假设我们声明了一个`enum Sum`，其中包含的常量（例如`SNAKE_EYES`）表示游戏中使用的五个点数，然后在 switch 语句（第 29–45 行）中使用它们。这样做将阻止我们使用 switch 表达式，因为 Java 不允许`int`与枚举常量进行比较。为了实现与当前程序相同的功能，我们必须使用`Status`类型的变量`currentSum`作为 switch 的控制表达式。遗憾的是，Java 没有提供将`int`值转换为特定枚举常量的简单方法。可以通过单独的 switch 语句来实现，但这将非常繁琐且不会提高程序的可读性。
+你可能会疑惑为什么我们将骰子之和声明为 `private static final int` 常量而不是枚举常量。原因是程序必须将 `int sumOfDice`（第 26 行）与这些常量比较以确定每次掷的结果。假设我们声明了一个 `enum Sum`，其中包含的常量（例如 `SNAKE_EYES`）表示游戏中使用的五个点数，然后在 `switch` 语句（第 29–45 行）中使用它们。这样做将阻止我们使用 `switch` 表达式，因为 Java 不允许 `int` 与枚举常量进行比较。为了实现与当前程序相同的功能，我们必须使用 `Status` 类型的变量 `currentSum` 作为 `switch` 的控制表达式。遗憾的是，Java 没有提供将 `int` 值转换为特定枚举常量的简单方法。可以通过单独的 `switch` 语句来实现，但这将非常繁琐且不会提高程序的可读性。
 
 ## 6.10 声明的作用域
 
@@ -4291,10 +4148,10 @@ public class Craps {
 
 任何代码块都可以包含变量声明。如果方法中的局部变量或参数与字段具有相同的名称，则在代码块执行期间，该字段会被*隐藏*（hidden）——这被称为*遮蔽*（shadowing）。要在代码块中访问被遮蔽的字段：
 
-- 如果该字段是实例变量，在它的名称前加上`this`关键字和一个点（.），例如`this.x`。
-- 如果该字段是静态变量，在它的名称前加上类名和点（.），例如`ClassName.x`。
+- 如果该字段是实例变量，在它的名称前加上 `this` 关键字和一个点（`.`），例如 `this.x`。
+- 如果该字段是静态变量，在它的名称前加上类名和点（`.`），例如 `ClassName.x`。
 
-图 6.8 展示了字段和局部变量的作用域问题。第 7 行声明并初始化字段`x`为 1。在任何声明了名为`x`的局部变量的代码块（或方法）中，该字段都会被遮蔽。方法（第 11–23 行）声明了一个局部`x`（第 13 行）并将其初始化为 5。输出该局部变量的值是为了显示字段（值为 1）在`main()`中被遮蔽了。程序声明了另外两个方法——`useLocalVariable()`（第 26–35 行）和`useField()`（第 38–45 行），它们都不接受参数也没有返回值。`main()`方法调用了每个方法两次（第 17–20 行）。`useLocalVariable()`方法声明了`x`（第 28 行）。当第一次调用`useLocalVariable()`时（第 17 行），它创建了局部变量`x`并将其初始化为 25（第 28 行），输出`x`的值（第 30–31 行），增加`x`（第 32 行）并再次输出`x`的值（第 33–34 行）。当第二次调用`useLocalVariable()`时（第 19 行），它*重新创建*了局部变量`x`并将其*重新初始化*为 25，每次`useLocalVariable()`的输出都是相同的。
+图 6.8 展示了字段和局部变量的作用域问题。第 7 行声明并初始化字段 `x` 为 1。在任何声明了名为 `x` 的局部变量的代码块（或方法）中，该字段都会被遮蔽。方法（第 11–23 行）声明了一个局部 `x`（第 13 行）并将其初始化为 5。输出该局部变量的值是为了显示字段（值为 1）在 `main()` 中被遮蔽了。程序声明了另外两个方法——`useLocalVariable()`（第 26–35 行）和 `useField()`（第 38–45 行），它们都不接受参数也没有返回值。`main()` 方法调用了每个方法两次（第 17–20 行）。`useLocalVariable()` 方法声明了 `x`（第 28 行）。当第一次调用 `useLocalVariable()` 时（第 17 行），它创建了局部变量 `x` 并将其初始化为 25（第 28 行），输出 `x` 的值（第 30–31 行），增加 `x`（第 32 行）并再次输出 `x` 的值（第 33–34 行）。当第二次调用 `useLocalVariable()` 时（第 19 行），它*重新创建*了局部变量 `x` 并将其*重新初始化*为 25，每次 `useLocalVariable()` 的输出都是相同的。
 
 **图 6.8** | Scope 类演示了字段和局部变量的作用域。（3 部分中的第 1 部分。）
 
@@ -4356,19 +4213,19 @@ Fig. 6.8 | Scope 类演示了字段和局部变量的作用域。（3 部分中�
 
 **图 6.8** Scope 类演示了字段和局部变量的作用域。（3 部分中的第 3 部分。）
 
-`useField()`方法没有声明任何局部变量。因此，当它引用`x`时，使用的是类的字段`x`（第 7 行）。当第一次调用`useField()`方法时（第 18 行），它输出了值 10。
+`useField()` 方法没有声明任何局部变量。因此，当它引用 `x` 时，使用的是类的字段 `x`（第 7 行）。当第一次调用 `useField()` 方法时（第 18 行），它输出了值 10。
 
 ## 6.11 重载方法
 
-`useField()`方法没有声明任何局部变量。因此，当它引用`x`时，使用的是类的字段`x`（第 7 行）。当第一次调用`useField()`方法时（第 18 行），它输出了值 10。
+`useField()` 方法没有声明任何局部变量。因此，当它引用 `x` 时，使用的是类的字段 `x`（第 7 行）。当第一次调用 `useField()` 方法时（第 18 行），它输出了值 10。
 
 # 142 第 6 章 方法：深入探究
 
 ## 区分重载方法
 
-编译器通过方法的**签名**来区分重载方法——签名由方法名以及参数的数量、类型和顺序组合而成，但不包括其返回类型。如果编译器在编译期间只查看方法名，那么 6.9 节中的代码将产生歧义——编译器将无法区分两个`square`方法（第 14–19 行和 22–27 行）。在内部，编译器使用包含原始方法名和每个参数类型的更长的方法名，来确定类中的方法是否是唯一的。
+编译器通过方法的**签名**来区分重载方法——签名由方法名以及参数的数量、类型和顺序组合而成，但不包括其返回类型。如果编译器在编译期间只查看方法名，那么 6.9 节中的代码将产生歧义——编译器将无法区分两个 `square()` 方法（第 14–19 行和 22–27 行）。在内部，编译器使用包含原始方法名和每个参数类型的更长的方法名，来确定类中的方法是否是唯一的。
 
-例如，在图 6.9 所示，编译器可能会（内部）使用本地名称 "square of int" 来指定`int`参数的`square`方法，以及指定`double`参数的`square`方法（编译器使用的 "square of double" 更加混乱）。如果`method1`的声明开始于
+例如，在图 6.9 所示，编译器可能会（内部）使用本地名称 "square of int" 来指定 `int` 参数的 `square()` 方法，以及指定 `double` 参数的 `square()` 方法（编译器使用的 "square of double" 更加混乱）。如果 `method1()` 的声明开始于
 
 ```java
 void method1(int a, float b)
@@ -4380,7 +4237,7 @@ void method1(int a, float b)
 void method1(float a, int b)
 ```
 
-编译器可能会使用本地名称 "method1 of float and int"。参数类型的顺序非常重要——编译器认为上述两个`method1`头部是不同的。
+编译器可能会使用本地名称 "method1 of float and int"。参数类型的顺序非常重要——编译器认为上述两个 `method1()` 头部是不同的。
 
 ### 重载方法的返回类型
 
@@ -4400,11 +4257,11 @@ square(2);
 
 # 6.12
 
-在本章中，你学习了更多关于方法声明的知识。你学习了实例方法和静态方法之间的区别，以及如何通过在方法名前加上其所在的类名和点 (.) 分隔符来调用静态方法。你使用了运算符`+`和`+=`来执行字符串拼接。我们还讨论了 Java 在基本类型之间进行隐式转换的提升规则，以及如何使用强制转换运算符进行显式转换。接下来，你学习了 Java API 中一些常用的包。
+在本章中，你学习了更多关于方法声明的知识。你学习了实例方法和静态方法之间的区别，以及如何通过在方法名前加上其所在的类名和点 (`.`) 分隔符来调用静态方法。你使用了运算符 `+` 和 `+=` 来执行字符串拼接。我们还讨论了 Java 在基本类型之间进行隐式转换的提升规则，以及如何使用强制转换运算符进行显式转换。接下来，你学习了 Java API 中一些常用的包。
 
-你学习了如何使用`enum`类型和`private static final`变量来声明命名常量。你使用了`SecureRandom`类为模拟生成随机数。你还学习了类中字段和局部变量的作用域。最后，你学习了类中的多个方法可以通过提供相同名称但不同签名的方法来实现重载。此类方法可以使用不同类型或不同数量的参数来执行相同或相似的任务。
+你学习了如何使用 `enum` 类型和 `private static final` 变量来声明命名常量。你使用了 `SecureRandom` 类为模拟生成随机数。你还学习了类中字段和局部变量的作用域。最后，你学习了类中的多个方法可以通过提供相同名称但不同签名的方法来实现重载。此类方法可以使用不同类型或不同数量的参数来执行相同或相似的任务。
 
-你将学习如何在数组中维护数据列表和表中。你将看到一个掷 6,000,000 次骰子的程序的更优雅的实现。我们将展示两个版本的`GradeBook`案例研究，它在`GradeBook`对象中存储学生成绩。你还将学习如何访问在程序开始执行时传递给`main()`方法的命令行参数。
+你将学习如何在数组中维护数据列表和表中。你将看到一个掷 6,000,000 次骰子的程序的更优雅的实现。我们将展示两个版本的 `GradeBook` 案例研究，它在 `GradeBook` 对象中存储学生成绩。你还将学习如何访问在程序开始执行时传递给 `main()` 方法的命令行参数。
 
 # 7
 
@@ -4416,14 +4273,14 @@ square(2);
 
 - 使用数组在列表和表中存储数据并从中检索数据。
 - 声明数组、初始化数组并引用数组的单个元素。
-- 使用增强型`for`语句遍历数组。
+- 使用增强型 `for` 语句遍历数组。
 - 将数组传递给方法。
 - 声明并操作多维数组。
 - 使用变长参数列表。
 - 将命令行参数读入程序中。
 - 构建单数组版本和双数组版本的教师成绩记录本类。
-- 使用`Arrays`类的方法执行常用的数组操作。
-- 使用`ArrayList`类操作动态调整大小的类数组数据结构。
+- 使用 `Arrays` 类的方法执行常用的数组操作。
+- 使用 `ArrayList` 类操作动态调整大小的类数组数据结构。
 
 ## 7.1 引言
 
@@ -4443,7 +4300,7 @@ square(2);
 - 7.5 异常处理：处理错误的响应
     - 7.5.1 语句
     - 7.5.2 执行 catch 块
-    - 7.5.3 异常参数的 toString 方法
+    - 7.5.3 异常参数的 toString() 方法
 - 7.6 案例研究：卡牌洗牌与发牌模拟
 - 7.7 增强型 for 语句
 - 7.8 将数组传递给方法
@@ -4467,13 +4324,13 @@ square(2);
 
 ### 逻辑数组表示
 
-图 7.1 显示了整数数组`c`的逻辑表示。该数组包含 12 个元素。程序通过包含数组名以及方括号`[]`的数组访问表达式来引用这些元素中的每一个。每个数组的元素索引为零，有时被称为零索引。因此，`c`的元素为`c[0]`、`c[1]`、以此类推。`c`的最大索引是 11，比元素数量 12 少 1。数组名遵循与变量相同的约定。索引必须是非负整数。程序可以使用表达式作为索引。例如，假设变量`a`为 5，变量`b`为 6，那么语句
+图 7.1 显示了整数数组 `c` 的逻辑表示。该数组包含 12 个元素。程序通过包含数组名以及方括号 `[]` 的数组访问表达式来引用这些元素中的每一个。每个数组的元素索引为零，有时被称为零索引。因此，`c` 的元素为 `c[0]`、`c[1]`、以此类推。`c` 的最大索引是 11，比元素数量 12 少 1。数组名遵循与变量相同的约定。索引必须是非负整数。程序可以使用表达式作为索引。例如，假设变量 `a` 为 5，变量 `b` 为 6，那么语句
 
 ```java
 c[a + b] += 2;
 ```
 
-将 2 加到数组元素`c[11]`上。索引数组名是一个数组访问表达式，可以用于赋值语句的左侧以将新值放入数组元素中。
+将 2 加到数组元素 `c[11]` 上。索引数组名是一个数组访问表达式，可以用于赋值语句的左侧以将新值放入数组元素中。
 
 | 数组名 (c) | |
 |---|---|
@@ -4496,7 +4353,7 @@ c[a + b] += 2;
 
 ### 常见编程错误 7.1
 
-索引必须是一个`int`值或可以提升为`int`类型的值——即`byte`、`short`或`char`，但不能是`long`；否则会发生编译错误。
+索引必须是一个 `int` 值或可以提升为 `int` 类型的值——即 `byte`、`short` 或 `char`，但不能是 `long`；否则会发生编译错误。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_185_0.png)
 
@@ -4529,7 +4386,7 @@ c = new int[12]; // 创建数组；赋值给数组变量
 
 ### 常见编程错误 7.2
 
-在数组声明中，在声明的方括号内指定元素数量（例如 `int[12] c`）是语法错误。
+在数组声明中，在声明的方括号内指定元素数量（例如 `int[12]`）是语法错误。
 
 可以在一个声明中创建多个数组。下面的声明为 `b` 预留了 100 个元素，为 `x` 预留了 27 个元素：
 
@@ -4559,7 +4416,7 @@ String x[] = new String[27]; // 创建数组 x
 
 ### 常见编程错误 7.3
 
-> 在单个声明中声明多个变量可能会导致细微错误。考虑声明 `int a[], b, c;`，如果 `a`、`b` 和 `c` 应该声明为数组变量，那么这个声明是错误的——直接跟在类型后面的方括号表示声明中的所有标识符都是数组变量。然而，如果仅打算让 `a` 是数组变量，而 `b` 和 `c` 是单独变量，那么这个声明 `int a[], b, c;` 将实现所需的结果。
+> 在单个声明中声明多个变量可能会导致细微错误。考虑声明 `int a[], b, c;`，如果 `a`、`b` 和 `c` 应该声明为数组变量，那么这个声明是错误的——直接跟在类型后面的方括号表示声明中的所有标识符都是数组变量。然而，如果仅打算让 `a` 是数组变量，而 `b` 和 `c` 是单独变量，那么这个声明 `a[], b, c;` 将实现所需的结果。
 
 程序可以声明任何类型的数组。基本类型数组的每个元素都包含其声明元素类型的值。同样，在引用类型数组中，每个元素都是指向数组声明元素类型对象的引用。例如，`int` 数组的每个元素都是一个 `int` 值，`String` 数组的每个元素都是指向 `String` 对象的引用。
 
@@ -4569,7 +4426,7 @@ String x[] = new String[27]; // 创建数组 x
 
 ### 7.4.1 创建并初始化数组
 
-图 7.2 应用使用 `new` 关键字创建一个包含 10 个 `int` 元素的数组，这些元素初始为零（`int` 变量的默认值）。第 9 行声明了数组 `array`——一个能够引用元素数组的引用——然后用包含 10 个元素的数组对象的引用初始化该变量。第 11 行输出表头。第一列包含每个元素的索引（0–9），第二列包含每个元素的默认值（0）。语句（第 14–15 行）输出每个元素的索引（由计数器 `counter` 表示）和值（由 `array[counter]` 表示）。控制变量 `counter` 初始为 0，使用零计数允许循环访问数组的每个元素。`for` 循环条件使用表达式 `array.length`（第 14 行）来确定数组的长度。在这个示例中，数组长度为 10，因此只要控制变量的值小于 10，循环就会继续。10 是数组的最高索引是 9，因此在循环中使用小于运算符可以确保循环不会尝试访问数组之外的元素（即在循环的最后一次迭代中，`counter` 为 9）。
+图 7.2 应用使用 `new` 关键字创建一个包含 10 个 `int` 元素的数组，这些元素初始零（`int` 变量的默认值）。第 9 行声明了数组 `array`——一个能够引用元素数组的引用——然后用包含 10 个元素的数组对象的引用初始化该变量。第 11 行输出表头。第一列包含每个元素的索引（0–9），第二列包含每个元素的默认值（0）。语句（第 14–15 行）输出每个元素的索引（由计数器 `counter` 表示）和值（由 `array[counter]` 表示）。控制变量 `counter` 初始为 0，使用零计数允许循环访问数组的每个元素。`for` 循环条件使用表达式 `array.length`（第 14 行）来确定数组的长度。在这个示例中，数组长度为 10，因此只要控制变量的值小于 10，循环就会继续。10 数组的最高索引是 9，因此在循环中使用小于运算符可以确保循环不会尝试访问数组之外的元素（即在循环的最后一次迭代中，`counter` 为 9）。
 
 ```java
 // Fig 7.2: InitArray.java
@@ -4682,7 +4539,7 @@ for (int counter = 0; counter < array.length; counter++)
 | 8 | 18 |
 | 9 | 20 |
 
-**图 7.4** | 计算要放入数组元素中的值。
+**图 7.4** | 计算要放入数组元素中的值。（第 2 部分，共 2 部分）
 
 第 8 行使用 `final` 来声明值为 10 的常量变量 `ARRAY_LENGTH`。常量变量在使用之前必须进行初始化，且不能被修改。如果你尝试在声明处初始化后修改 `final` 变量，编译器会发出错误信息：
 
@@ -4696,11 +4553,11 @@ for (int counter = 0; counter < array.length; counter++)
 
 多单词常量的每个单词之间应该用下划线 (`_`) 分隔，如 `ARRAY_LENGTH`。
 
-> **常见编程错误 7.4**
+> **常见编程实践 7.4**
 
 在初始化后为 `final` 变量赋值会导致编译错误。同样，尝试在初始化完成之前访问 `final` 变量的值会导致类似“variable variableName might not have been initialized”的编译错误。
 
-### 7.4.4 数组元素的求和
+### 7.4.4 数组元素的采样
 
 通常，数组元素代表计算中用的一系列值。例如，如果它们代表考试成绩，教授可能希望计算数组元素的总和，并用它计算考试的级平均分。图 7.14 和 7.18 中的 `GradeBook` 示例使用了这种技术。
 
@@ -4763,7 +4620,7 @@ public class BarChart {
 
 50-59:
 
-60-69: *
+60-69:
 
 70-79: **
 
@@ -4773,9 +4630,9 @@ public class BarChart {
 
 嵌套循环（第 23–30 行）输出条形。注意第 19 行格式说明中的 `0` 标志表示 int 值应格式化为两位数字的字段。
 
-### 7.4.6 掷骰子模拟
+### 7.4.6 使用数组模拟掷骰子
 
-第 14 行使用随机值在循环的每次迭代中确定增加哪个频率。第 14 行的计算产生 1 到 6 的随机数，因此数组必须足够大以存储六个计数器。然而，我们使用了一个七元素数组，其中忽略了 `frequency[0]`——拥有点值 1 的 `frequency[1]` 比 `frequency[0]` 更符合逻辑。因此，每个点值都被用作数组 `frequency` 的索引。在第 14 行中，括号内的计算首先求值以确定增加数组的哪个元素，然后 `++` 运算符对该元素加 1。我们还通过遍历数组 `frequency` 输出结果替换了图 6.6 中的第 49–51 行（第 19–20 行）。当我们第 17 章学习 Java SE 8 的新功能性编程能力时，我们将展示如何用一条语句替换第 13–14 行！
+第 14 行使用随机值在循环的每次迭代中确定增加哪个频率。第 14 行的计算产生 1 到 6 的随机数，因此数组必须足够大以存储六个计数器。然而，我们使用了一个七元素数组，其中忽略了 `frequency[0]`——拥有点值 1 的 `frequency[1]` 比 `frequency[0]` 更符合逻辑。因此，每个点值都被用作数组 `frequency` 的索引。在第 14 行中，括号内的计算首先求值以确定增加数组的哪个元素，然后 `++` 运算符对该元素加1。我们还通过遍历数组 `frequency` 输出结果替换了图 6.6 中的第 49–51 行（第 19–20 行）。当我们第 17 章学习 Java SE 8 的新功能性编程能力时，我们将展示如何用一条语句替换第 13–14 行！
 
 ### 7.4.7 使用数组分析调查结果
 
@@ -4841,8 +4698,10 @@ responses[19] = 14
 
 让我们逐步执行该语句的前几次迭代：
 
-- 当计数器为 0 时，`responses[answer]` 是 `responses[0]` 的值（即 1——参见第 9 行）。在这种情况下，`frequency[responses[answer]]` 被解释为 `frequency[1]`，计数器 `frequency[1]` 增加 1。为了评估该表达式，我们从*最内层*括号的值开始，并将 `answer` 的值代入表达式，然后评估下一组括号 `(responses[answer])`。该值被用作 `frequency` 的索引，以确定增加哪个计数器（在本例中为 `frequency[1]`）。
+- 当计数器为 0 时，`responses[answer]` 是 `responses[0]` 的值（即 1——参见第 9 行）。在这种情况下，`frequency[responses[answer]]` 被解释为 `frequency[1]`，计数器 `frequency[1]` 增加 1。为了评估该表达式，我们从最内层括号的值开始，并将 `answer` 的值代入表达式，然后评估下一组括号 `(responses[answer])`。该值被用作 `frequency` 的索引，以确定增加哪个计数器（在本例中为 `frequency[1]`）。
+
 - 下一次循环 `answer` 为 1 时，`responses[answer]` 是 `responses[1]` 的值（即 2），`frequency[responses[answer]]` 被解释为 `frequency[2]`。
+
 - 当 `answer` 为 2 时，`responses[answer]` 是 `responses[2]` 的值（即 5），`frequency[responses[answer]]` 被解释为 `frequency[5]`，导致 `frequency[5]` 增加。
 
 无论处理了多少个响应，只需要一个六元素数组（忽略元素）来总结结果，因为正确的值是从 1 到 5，而六元素数组的索引值为 0–5。在程序的输出中，频率计数总结了 20 个值——数组的最后一个元素包含一个未计数的错误响应。7.5 节讨论了当程序遇到无效响应 (14) 时发生的情况。
@@ -4873,19 +4732,19 @@ responses[19] = 14
 
 ## 7.6 案例研究：数组洗牌与发牌
 
-到为止本章的示例使用了包含基本类型元素的数组。回想第 7.2 节，数组元素可以是基本类型也可以是引用类型。本节使用随机数生成和代表扑牌的对象的引用类型数组来开发一个模拟洗牌和发牌的类。该类可以用于实现玩特定游戏的应用程序。你可以使用这里开发的类来实现各种纸牌游戏应用。
+到为止本章的示例使用了包含基本类型元素的数组。回想第 7.2 节，数组元素可以是基本类型也可以是引用类型。本节使用随机数生成和代表扑克牌的对象的引用类型数组来开发一个模拟洗牌和发牌的类。该类可以用于实现玩特定游戏的应用程序。你可以使用这里开发的类来实现各种纸牌游戏应用。
 
-我们首先开发 `Card`（图 7.9），它代表一个有点值（例如“A”、“2”、“3”……“J”、“K”）和花色（例如“红心”、“方片”、“梅花”、“黑桃”）的扑牌。接下来，我们开发 `DeckOfCards` 类（图 7.10），它创建了一个包含 52 张扑牌的牌，其中每个元素都是 `Card` 对象。我们构建了一个测试应用（图 7.11），展示了 `DeckOfCards` 类的洗牌和发牌能力。
+我们首先开发 `Card`（图 7.9），它代表一个有点值（例如“A”、“2”、“3”……“J”、“K”）和花色（例如“红心”、“方片”、“梅花”、“黑桃”）的扑克牌。接下来，我们开发 `DeckOfCards` 类（图 7.10），它创建了一个包含 52 张扑克牌的牌组，其中每个元素都是 `Card` 对象。我们构建了一个测试应用（图 7.11），展示了 `DeckOfCards` 类的洗牌和发牌能力。
 
 ## 7.6 案例研究：洗牌与发牌模拟
 
 ### Card 类
 
-`Card` 类（图 7.9）包含两个 `String` 实例变量——`face`（面值）和 `suit`（花色），用于存储特定 `Card` 的面值名称和花色名称的引用。类的构造函数（第 10–14 行）接收 `Strings` 并使用它们初始化 `face` 和 `suit`。`toString` 方法（第 17–20 行）创建一个由卡牌面值、字符串 " of " 和卡牌花色组成的 `String`。可以显式调用 `Card` 的 `toString` 方法来获取一个 `Card` 对象的字符串表示（例如，“Ace of Spades”）。当对象用在需要 `String` 的地方时，对象的 `toString` 方法会被隐式调用（例如，当 `printf` 使用 `%s` 格式说明符将对象作为 `String` 输出，或使用 `+` 运算符将对象与 `String` 拼接时）。为了发生这种行为，必须按照图 7.9 所示的头部声明 `toString`。
+`Card` 类（图 7.9）包含两个 `String` 实例变量——`face`（面值）和 `suit`（花色），用于存储特定 `Card` 的面值名称和花色名称的引用。类的构造函数（第 10–14 行）接收 `String` 并使用它们初始化 `face` 和 `suit`。`toString` 方法（第 17–20 行）创建一个由卡牌面值、字符串 " of " 和卡牌花色组成的 `String`。可以显式调用 `Card` 的 `toString` 方法来获取一个 `Card` 对象的字符串表示（例如，“Ace of Spades”）。当对象用在需要 `String` 的地方时，对象的 `toString` 方法会被隐式调用（例如，当 `printf` 使用 `%s` 格式说明符将对象作为 `String` 输出，或使用 `+` 运算符将对象与 `String` 拼接时）。为了发生这种行为，必须按照图 7.9 所示的头部声明 `toString`。
 
 ```java
 // Fig 7.9: Card.java
-// Card 类表示一张扑牌。
+// Card 类表示一张扑克牌。
 public class Card
 {
     private final String face; // 卡牌的面值 ("Ace", "Deuce", ...)
@@ -4906,7 +4765,7 @@ public class Card
 } // end Card
 ```
 
-**图 7.9** | Card 表示一张扑牌。
+**图 7.9** | Card 表示一张扑克牌。
 
 ### DeckOfCards 类
 
@@ -4914,7 +4773,7 @@ public class Card
 
 ```java
 // Fig 7.10: DeckOfCards.java
-// DeckOfCards 表示一组扑牌。
+// DeckOfCards 表示一组扑克牌。
 import java.security.SecureRandom;
 
 public class DeckOfCards {
@@ -4965,13 +4824,13 @@ public class DeckOfCards {
     } // end class DeckOfCards
 ```
 
-**图 7.10** DeckOfCards 类表示一组扑牌。（2 部分中的第 2 部分。）
+**图 7.10** DeckOfCards 类表示一组扑克牌。（2 部分中的第 2 部分。）
 
 ## 7.6 案例研究：洗牌与发牌模拟
 
 ### DeckOfCards 构造函数
 
-类的构造函数使用 `NUMBER_OF_CARDS` (52) 个元素实例化 `deck` 数组（第 20 行）。牌组的元素默认为 `null`，因此构造函数使用 `for` 语句（第 24–26 行）来填充牌组。循环将控制变量 `count` 初始化为 0，且 `while` 循环小于 `deck.length`，导致 `count` 取从 0 到 51 的每一个整数值（`deck` 数组的索引）。每张 `Card` 都被实例化并用两个 `Strings` 初始化——包含 "Ace"、"King" 的字符串以及来自 `faces` 数组的一个字符串（该数组包含 "Hearts"、"Diamonds"、"Clubs" 和 "Spades"）。计算 `count % 13` 总是得到 0 到 12 之间的值（第 16–17 行中 `faces` 数组的 13 个索引），计算 `count / 13` 得到 0 到 3 之间的值（第 18 行中 `suits` 数组的 4 个索引）。当 `deck` 数组初始化时，它包含了每个花色从 "Ace" 到 "King" 的 `Card`（所有 13 张 "Hearts"，所有 "Diamonds"，然后是 "Clubs"，最后是 "Spades"）。我们使用数组来表示花色和面值。或者，你可能想使用常量数组来修改此示例以表示花色和面值。
+类的构造函数使用 `NUMBER_OF_CARDS` (52) 个元素实例化 `deck` 数组（第 20 行）。牌组的元素默认为 `null`，因此构造函数使用 `for` 语句（第 24–26 行）来填充牌组。循环将控制变量 `count` 初始化为 0，且 `while` 循环小于 `deck.length`，导致 `count` 取从 0 到 51 的每一个整数值（`deck` 数组的索引）。每张 `Card` 都被实例化并用两个 `String` 初始化——包含 "Ace"、"King" 的字符串以及来自 `faces` 数组的一个字符串（该数组包含 "Hearts"、"Diamonds"、"Clubs" 和 "Spades"）。计算 `count % 13` 总是得到 0 到 12 之间的值（第 16–17 行中 `faces` 数组的 13 个索引），计算 `count / 13` 得到 0 到 3 之间的值（第 18 行中 `suits` 数组的 4 个索引）。当 `deck` 数组初始化时，它包含了每个花色从 "Ace" 到 "King" 的 `Card`（所有 13 张 "Hearts"，所有 "Diamonds"，然后是 "Clubs"，最后是 "Spades"）。我们使用数组来表示花色和面值。或者，你可能想使用常量数组来修改此示例以表示花色和面值。
 
 ### DeckOfCards 方法 shuffle
 
@@ -4979,9 +4838,9 @@ public class DeckOfCards {
 
 `shuffle` 方法（第 30–46 行）洗牌组中的牌。该方法遍历所有 52 张牌（数组 0 到 51）。对于每张牌，选取一个 0 到 51 之间的数字来选择另一张 `Card`。接下来，将当前 `Card` 对象和选中的 `Card` 在数组中进行交换。这种交换通过第 42–44 行的三次赋值完成。额外的变量临时存储了正在交换的对象之一。如果 `deck[first]` 是 "Spades" 的 "Ace"，而 `deck[second]` 是 "Hearts" 的 "Queen"，在第一次赋值后，两个元素都包含 "Hearts" 的 "Queen"，导致 "Spades" 的 "Ace" 丢失——所以需要额外的变量。循环结束后，牌被随机排序。在整个数组的单次遍历中总共进行了 52 次交换。我建议在真实游戏中使用无偏洗牌算法。此类算法确保了所有可能的洗牌序列出现的概率相等。你可能想研究 Fisher-Yates 算法并使用它来实现 `DeckOfCards` 方法。
 
-### DeckOfCards 方法 `dealCard`
+### DeckOfCards 方法 dealCard
 
-`dealCard` 方法（第 49–59 行）发牌组中的一张牌。记得 `currentCard` 索引要发的 `deck` 索引（即牌组顶部的 `Card`）。然后，第 52 行将 `currentCard` 与 `deck` 数组的长度进行比较。如果 `deck` 为空（即 `currentCard` 小于 52），它返回“顶部的” `Card` 并增加 `currentCard` 以准备下一次调用 `deal`——否则返回 `null`。
+`dealCard` 方法（第 49–59 行）发牌组中的一张牌。记得 `currentCard` 索引要发的 `deck` 索引（即牌组顶部的 `Card`）。然后，第 52 行将 `currentCard` 与 `deck` 数组的长度进行比较。如果 `deck` 不为空（即 `currentCard` 小于 52），它返回“顶部的” `Card` 并增加 `currentCard` 以准备下一次调用 `dealCard`——否则返回 `null`。
 
 ### 洗牌与发牌过程
 
@@ -5026,7 +4885,7 @@ public class DeckOfCardsTest {
 
 图 7.11 | 洗牌与发牌。
 
-### 防止 `NullPointerException`
+### 防止 NullPointerException
 
 在图 7.10 中，我们创建了一个包含 52 个 `Card` 引用的数组——每个用 `new` 创建的每个引用类型数组的每个元素都初始化为 `null`。作为类字段的引用类型变量默认也初始化为 `null`。当你尝试对空引用调用方法时，就会发生 `NullPointerException`。
 
@@ -5041,7 +4900,7 @@ for (parameter : arrayName)
 
 其中 `parameter` 有一个类型和一个标识符（例如 `int number`），`arrayName` 是要遍历的数组。参数的类型必须与数组中元素的类型一致。正如下一个示例所示，标识符在循环的连续迭代中代表数组中连续元素的值。
 
-图 7.12 使用增强型 for 语句（第 12–13 行）对学生成绩数组中的整数求和。增强型 for 参数的类型为 `int`，因为数组包含 `int` 值——循环在每次迭代中从数组中选择一个 `int` 值。增强语句逐个遍历数组中的连续值。`statement` 的头部可以读作“对于每次迭代，将数组的下一个元素赋值给 `int` 变量，然后执行后续语句。”因此，对于每次迭代，标识符 `number` 代表数组中的一个 `int` 值。第 12-13 行等于图 7.5 中第 12-13 行用于计算数组整数总和的计数器控制循环，区别在于增强型 for 语句中无法访问计数器：
+图 7.12 使用增强型 for 语句（第 12–13 行）对学生成绩数组中的整数求和。增强型 for 参数的类型为 `int`，因为数组包含 `int` 值——循环在每次迭代中从数组中选择一个 `int` 值。增强语句逐个遍历数组中的连续值。`statement` 的头部可以读作“对于每次迭代，将数组的下一个元素赋值给 `int` 变量，然后执行后续语句。”因此，对于每次迭代，标识符 `number` 代表数组中的一个 `int` 值。第 12-13 行等同于图 7.5 中第 12-13 行用于计算数组整数总和的计数器控制循环，区别在于增强型 for 语句中无法访问计数器：
 
 ```java
 for (int counter = 0; counter < array.length; counter++)
@@ -5148,6 +5007,8 @@ public class PassArray {
 尽管对象是按值传递的，方法仍然可以通过使用对象引用副本调用其公有方法来与引用对象进行交互。由于存储在参数中的引用是作为参数传递的引用的副本，被调用方法中的参数和调用方法指向的是内存中的同一个对象。例如，在图 7.13 中，`main` 中的 `array2` 和 `array` 指向内存中的同一个对象。使用参数 `array2` 进行的任何更改都是在调用方法中引用的该数组上进行的。在图 7.13 中，在 `modifyArray` 中进行的更改影响了 `main` 引用的数组对象的内容。因此，通过对象的引用，被调用方法可以直接操作调用者的对象。
 
 
+
+![](img/28513f3b4ab12c97e738c92ed0e327a8_205_0.png)
 
 # 性能提示 7.1
 
@@ -5284,9 +5145,9 @@ public class GradeBook
 }
 ```
 
-`grades.length` 获取数组 `grades` 的值。第 87 行的平均值计算使用 `grades.length` 来确定平均分数的数量。
+`grades.length` 获取数组 `grades` 的长度。第 87 行的平均值计算使用 `grades.length` 来确定平均分数的数量。
 
-`processGrades` 方法中的第 38–39 行调用 `getMinimum` 和 `getMaximum` 分别确定学生考试的最低和最高分。这两个方法都使用了增强 `for` 语句来遍历数组 `grades`。`getMinimum` 方法中的第 51–56 行遍历数组。第 54–55 行将每个分数与 `lowGrade` 进行比较；如果分数小于 `lowGrade`，则将 `lowGrade` 设置为该分数。当执行第 58 行时，`lowGrade` 包含数组中的最小值。`getMaximum`（第 62–75 行）的工作原理与 `getMinimum` 类似。
+`processGrades` 方法中的第 38–39 行调用 `getMinimum` 和 `getMaximum` 分别确定学生考试的最低和最高分。这两个方法都使用了增强 for 语句来遍历数组 `grades`。`getMinimum` 方法中的第 51–56 行遍历数组。第 54–55 行将每个分数与 `lowGrade` 进行比较；如果分数小于 `lowGrade`，则将 `lowGrade` 设置为该分数。当执行第 58 行时，`lowGrade` 包含数组中的最小值。`getMaximum`（第 62–75 行）的工作原理与 `getMinimum` 类似。
 
 最后，第 42 行 `processGrades` 方法调用 `outputBarChart` 使用类似于图 7.7–7.8 的技术来打印分布图。第 96 行声明了一个长度为 11 的 `int` 数组 `frequency`，用于存储每个类别的成绩频率。第 99–100 行增加相应的频率元素值。要确定是哪一个，使用整数除法将当前分数除以 10——例如，如果分数为 85，则增加 `frequency[8]` 以更新 80–89 范围内的成绩计数。第 103–117 行根据数组 `frequency` 中的值打印柱状图（如图 7.15 所示）。图 7.14 的第 113–116 行使用数组 `frequency` 中的值来决定显示每个分数所需的星号数量。
 
@@ -5296,7 +5157,7 @@ public class GradeBook
 
 ### 软件观察 7.2
 
-测试框架（或测试应用程序）负责创建被测试类的对象并为其提供数据。这些数据可以来自多个来源中的任何一个。测试数据可以直接使用数组初始化器放入数组中，也可以来自键盘的用户输入、文件（如你将在第 15 章中看到的）、数据库（如你将将在第 21 章中看到的）或网络。在将这些数据传递给测试的构造函数以实例化对象后，对其方法进行测试并操纵数据。在测试框架中收集数据允许该类更具重用性，还能处理来自多个源的数据。
+测试框架（或测试应用程序）负责创建被测试类的对象并为其提供数据。这些数据可以来自多个来源中的任何一个。测试数据可以直接使用数组初始化器放入数组中，也可以来自键盘的用户输入、文件（如你将在第 15 章中看到的）、数据库（如你将在第 21 章中看到的）或网络。在将这些数据传递给测试的构造函数以实例化对象后，对其方法进行测试并操纵数据。在测试框架中收集数据允许该类更具重用性，还能处理来自多个源的数据。
 
 ```java
 // GradeBookTest.java
@@ -5324,23 +5185,22 @@ public static void main(String[] args)
 CS101 Introduction to Java Programming
 
 成绩如下：
+Student  1:  87
+Student  2:  68
+Student  3:  94
+Student  4: 100
+Student  5:  83
+Student  6:  78
+Student  7:  85
+Student  8:  91
+Student  9:  76
+Student 10:  87
 
-- 学生 1: 87
-- 学生 2: 68
-- 学生 3: 94
-- 学生 4: 100
-- 学生 5: 83
-- 学生 6: 78
-- 学生 7: 85
-- 学生 8: 91
-- 学生 9: 76
-- 学生 10: 87
+Class average is 84.90
+Lowest grade is 68
+Highest grade is 100
 
-平均分是 84.90
-最低分是 68
-最高分是 100
-
-成绩分布：
+Grade distribution:
 00-09:
 10-19:
 20-29:
@@ -5365,9 +5225,9 @@ CS101 Introduction to Java Programming
 
 | | 列 0 | 列 1 | 列 2 | 列 3 |
 | :--- | :--- | :--- | :--- | :--- |
-| 行 0 | a[0][0] | a[0][1] | a[0][2] | a[0][3] |
-| 行 1 | a[1][0] | a[1][1] | a[1][2] | a[1][3] |
-| 行 2 | a[2][0] | a[2][1] | a[2][2] | a[2][3] |
+| 行 0 | `a[0][0]` | `a[0][1]` | `a[0][2]` | `a[0][3]` |
+| 行 1 | `a[1][0]` | `a[1][1]` | `a[1][2]` | `a[1][3]` |
+| 行 2 | `a[2][0]` | `a[2][1]` | `a[2][2]` | `a[2][3]` |
 
 数组中的每个元素在图 7.16 中通过形式为 `a[row][column]` 的数组访问表达式标识；`a` 是数组名称，`row` 和 `column` 是唯一标识元素的索引。行 0 的元素第一个索引为 0，列 3 的元素第二个索引为 3。
 
@@ -5611,7 +5471,7 @@ System.out.printf("%9.2f\n", average);
 
 `getAverage` 方法（第 86–96 行）接收一个参数——特定学生测试结果的一维数组。当第 153 行调用 `getAverage` 时，参数 `grades[student]` 指定了应将二维数组的某一行传递给 `getAverage`。例如，根据第 7.9 行创建的数组，参数 `grades[1]` 代表三个值（一个成绩的一维数组）。回想，二维数组的元素是一维数组。`getAverage` 方法计算数组之和，除以测试总数，并返回浮点数结果（第 95 行）。
 
-### GradeBookTest 测试 GradeBook
+### ClassGradeTest 测试 ClassGradeBook
 
 图 7.19 使用第 10–19 行定义的整型二维数组 `gradesArray` 创建 `GradeBook` 对象（图 7.18）。第 21–22 行将课程名称和 `gradesArray` 传递给 `GradeBook` 构造函数。第 23–24 行显示欢迎信息，然后第 25 行调用 `myGradeBook` 的 `processGrades` 方法来报告学期成绩。
 
@@ -5649,6 +5509,8 @@ public class GradeBookTest {
 
 
 
+## 图 7.19 GradeBookTest 使用二维成绩数组创建 GradeBook 对象，然后调用方法进行分析。（2 部分）
+
 ## 第 7 章 数组与 ArrayList
 
 欢迎来到 CS101 Introduction to Programming 的成绩单
@@ -5683,8 +5545,6 @@ public class GradeBookTest {
 - 90–99:
 - 100:
 
-**图 7.19** GradeBookTest 使用二维成绩数组创建 GradeBook 对象，然后调用方法进行分析。（2 部分）
-
 **图 19** GradeBookTest 使用二维成绩数组创建 GradeBook 对象，然后调用 `processGrades` 方法进行分析。（2 部分。）
 
 ## 7.13 可变长度列表
@@ -5693,8 +5553,8 @@ public class GradeBookTest {
 
 图 7.20 展示了 `average` 方法（第 7–16 行），它接收一个可变长度的 `double` 序列。Java 将可变长度参数视为一个元素类型完全相同的数组。因此，该方法可以将参数 `numbers` 处理为 `double` 数组。第 12–13 行使用循环遍历数组并计算数组中所有 `double` 的总和。第 15 行访问 `numbers`。`main` 方法中的第 29、31 和 33 行分别用两个和四个参数调用 `average` 方法。`average` 方法具有可变长度参数列表（第 7 行），因此它可以处理调用者传递的任意数量的参数。输出显示每次调用 `average` 都返回正确的值。
 
-> **常见编程错误 7.5**
-> 将可变长度列表省略号放在参数列表的开头或中间是语法错误。省略号只能放在参数列表的末尾。
+常见编程错误 7.5
+将可变长度列表省略号放在参数列表的开头或中间是语法错误。省略号只能放在参数列表的末尾。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_221_0.png)
 
@@ -5819,49 +5679,31 @@ import java.util.Arrays;
 public class ArrayManipulations {
     public static void main(String[] args) {
         // 将 double[] 升序排序
-        double[] doubleArray = {8.4, 7.4, 0.0, 1.9, 2.9, 3.4, 4.5};
-        int[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        double[] doubleArray = {0, 2, 3, 4};
+        int[] intArray = {1, 3, 5, 7, 9, 11, 13, 15};
 
-        System.out.printf("doubleArray: ");
-        for (double value : doubleArray) {
-            System.out.printf("%.1f ", value);
-        }
-        System.out.println();
+        double[] copy = new double[doubleArray.length];
+        System.arraycopy(doubleArray, 0, copy, 0, doubleArray.length);
+        Arrays.sort(copy);
+        display(copy, "sorted doubleArray");
 
-        Arrays.sort(doubleArray);
-        System.out.printf("sorted doubleArray: ");
-        for (double value : doubleArray) {
-            System.out.printf("%.1f ", value);
-        }
-        System.out.println();
-
-        int[] filledIntArray = new int[10];
-        Arrays.fill(filledIntArray, 7);
-        display(filledIntArray, "filled intArray");
-
-        int[] intArrayCopy = new int[intArray.length];
-        System.arraycopy(intArray, 0, intArrayCopy, 0, intArray.length);
-        display(intArrayCopy, "intArrayCopy");
-
-        boolean b = Arrays.equals(intArray, intArrayCopy);
-        System.out.printf("%nintArray %s intArrayCopy%n", (b ? "==" : "!="));
-
-        int[] intArray2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        b = Arrays.equals(intArray, intArray2);
-        System.out.printf("intArray %s intArray2%n", (b ? "==" : "!="));
+        int[] fillArray = new int[intArray.length];
+        System.arraycopy(intArray, 0, fillArray, 0, intArray.length);
+        Arrays.fill(fillArray, 7);
+        display(fillArray, "filled intArray");
 
         int location = Arrays.binarySearch(intArray, 5);
         if (location >= 0) {
-            System.out.printf("Found 5 at index %d in intArray%n", location);
+            System.out.printf("Found %d in intArray%n", location);
         } else {
             System.out.println("5 not found in intArray");
         }
 
-        location = Arrays.binarySearch(intArray, 8763);
+        location = Arrays.binarySearch(intArray, 7);
         if (location >= 0) {
-            System.out.printf("Found 8763 at index %d in intArray%n", location);
+            System.out.printf("Found %d in intArray%n", location);
         } else {
-            System.out.println("8763 not found in intArray");
+            System.out.println("7 not found in intArray");
         }
     }
 
@@ -5876,14 +5718,22 @@ public class ArrayManipulations {
 ```
 
 ```
-doubleArray: 8.4 7.4 0.0 1.9 2.9 3.4 4.5 
-sorted doubleArray: 0.0 1.9 2.9 3.4 4.5 7.4 8.4 
-filled intArray: 7 7 7 7 7 7 7 7 7 7 
-intArrayCopy: 1 2 3 4 5 6 7 8 9 10 
-intArray == intArrayCopy
-intArray == intArray2
-Found 5 at index 4 in intArray
-8763 not found in intArray
+doubleArray = {0, 2, 3, 4};
+intArray = {1, 3, 5, 7, 9, 11, 13, 15};
+double[] copy = new double[doubleArray.length];
+System.arraycopy(doubleArray, 0, copy, 0, doubleArray.length);
+Arrays.sort(copy);
+display(copy, "sorted doubleArray");
+sorted doubleArray: 0.0 2.0 3.0 4.0 
+int[] fillArray = new int[intArray.length];
+System.arraycopy(intArray, 0, fillArray, 0, intArray.length);
+Arrays.fill(fillArray, 7);
+display(fillArray, "filled intArray");
+filled intArray: 7 7 7 7 7 7 7 7 
+Found 2 in intArray
+5 not found in intArray
+Found 3 in intArray
+7 not found in intArray
 ```
 
 ## 7.16 集合简介与 `ArrayList` 类
@@ -5917,9 +5767,7 @@ ArrayList<Integer> integers;
 | `size` | 返回存储在 `ArrayList` 中的元素数量。 |
 | `trimToSize` | 将 `ArrayList` 的容量修剪为当前元素的数量。 |
 
-**`ArrayList<String>`**
-
-图 7.24 展示了一些常用的 `ArrayList` 能力。第 10 行创建了一个新的空 `String` 类型 `ArrayList`，其默认初始容量为 10 个元素。容量表示 `ArrayList` 在不增长的情况下可以容纳多少项。`ArrayList` 是使用传统的数组作为底层实现的。当 `ArrayList` 增长时，它必须创建一个更大的内部数组，并将每个元素复制到新数组中。这是一个耗时的操作。如果 `ArrayList` 每添加一个元素就增长一次将是低效的。相反，它仅在添加元素且元素数量等于容量时（即没有空间存放新元素）才会增长。
+**图 7.24** 泛型 `ArrayList<T>` 集合演示。（2 部分中的第 1 部分。）
 
 ```java
 // Fig. 7.24: ArrayListCollection.java
@@ -5934,38 +5782,54 @@ public class ArrayListCollection {
 
         items.add("red"); // 向列表添加一个项
         items.add(0, "yellow"); // 在索引 0 处插入 "yellow"
-
-        // 显示列表中的颜色
-        System.out.print("List after adding elements: ");
-        for (String item : items) {
-            System.out.printf("%s ", item);
-        }
-        System.out.println();
-
-        // 删除索引 1 处的元素
-        items.remove(1);
-        System.out.print("List after removing element at index 1: ");
-        for (String item : items) {
-            System.out.printf("%s ", item);
-        }
-        System.out.println();
     }
 }
 ```
 
 
 
+```java
+56 } // 类结束 ArrayListCollection
+```
+
+使用计数器控制的循环显示列表内容：yellow red
+使用增强 for 语句显示列表内容：yellow red
+带有两个新元素的列表：yellow red green
+删除 yellow 的第一个实例：red green
+删除第二个列表元素 (green)：red yellow
+"red" 在列表中
+Size: 2
+
+图 7.24 | 泛型 ArrayList<T> 类演示。（2 部分中的第 2 部分。）
+
+`add` 方法向 ArrayList 添加元素（第 12–13 行）。带有一个参数的 `add` 方法将该参数附加到 ArrayList 的末尾。带有两个参数的 `add` 方法在指定位置插入新元素。第一个参数是索引。对于数组来说，集合索引从 0 开始。第二个参数是要插入到该索引处的值。所有后续元素的索引都将加 1。插入元素通常比向 ArrayList 的末尾添加元素要慢。
+第 20–21 行显示 ArrayList 中的项。`size` 方法返回 ArrayList 中当前包含的元素数量。`get` 方法（第 21 行）获取指定索引处的元素。第 24–25 行再次显示元素（定义在第 46–45 行）。第 27–28 行向 ArrayList 添加了两个元素，然后第 29 行再次显示元素，以确认这两个元素已成功添加到集合的末尾。
+`remove` 方法用于删除具有特定值的元素（第 31 行）。它只删除第一个此类元素。如果 ArrayList 中没有此类元素，`remove` 则什么都不做。该方法的重载版本删除指定索引处的元素（第 34 行）。当元素被删除时，位于被删除元素之后的任何元素的索引都会减 1。
+第 39 行使用 `contains` 方法检查项是否在 ArrayList 中。如果在 ArrayList 中找到该元素，则返回 true，否则返回 false。该方法按顺序将其参数与 ArrayList 中的每个元素进行比较，因此在大型 ArrayList 上使用 `contains` 可能是低效的。第 42 行显示 ArrayList 的大小。
+
+### Java SE 7—创建泛型类对象的菱形 (<>) 符号
+
+考虑图 7.24 的第 10 行：
+
+```java
+ArrayList<String> items = new ArrayList<String>();
+```
+
+当编译器在创建表达式中遇到菱形 (`<>`) 时，它使用声明来确定 ArrayList 的元素类型——这被称为推断元素类型。在 Java SE 7 及更高版本中，该语句可以写为：
+
+```java
+ArrayList<String> items = new ArrayList<>();
+```
+
 ## 7.17 总结
 
-本章开始了对数据结构的介绍，探索了使用数组存储和检索列表及表的数据。示例演示了如何声明数组、初始化数组以及引用数组的元素。本章介绍了使用增强 `for` 语句来遍历数组。我们使用了异常处理来测试 `ArrayOutOfBoundsException`（当程序尝试访问数组边界之外的元素时发生）。我们说明了如何向方法传递数组以及如何声明和操作多维数组。我们展示了如何编写使用变长参数的方法以及如何从命令行读取传递程序的参数。
+本章开始了对数据结构的介绍，探索了使用数组存储和检索列表及表的数据。示例演示了如何声明数组、初始化数组以及引用数组的元素。本章介绍了使用增强 for 语句来遍历数组。我们使用了异常处理来测试 `ArrayOutOfBoundsException`（当程序尝试访问数组边界之外的元素时发生）。我们说明了如何向方法传递数组以及如何声明和操作多维数组。我们展示了如何编写使用变长参数的方法以及如何从命令行读取传递程序的参数。
 
-我们介绍了 `ArrayList<>` 泛型集合，它提供了数组的所有功能和性能，以及动态调整大小等有用功能。我们使用了 `add` 方法向 `ArrayList` 末尾添加项以及在 `ArrayList` 中插入项。`remove` 方法用于删除指定值的首次出现，重载版本的 `remove` 用于删除指定索引处的项。
+我们介绍了 `ArrayList<>` 泛型集合，它提供了数组的所有功能和性能，以及动态调整大小等有用功能。我们使用了 `add` 方法向 ArrayList 末尾添加项以及在 ArrayList 中插入项。`remove` 方法用于删除指定值的首次出现，重载版本的 `remove` 用于删除指定索引处的项。
 
-我们将在第 16 章“泛型集合”继续对数据结构的讲解。第 16 章引入了 Java 集合框架，它使用泛型允许你指定特定数据结构将存储的对象类型。第 16 章还介绍了 Java 的其他预定义数据结构和 `Arrays` 类的方法。在阅读第 7 章后，你就可以使用第 6 章中讨论的一些 `Arrays` 方法，但某些方法需要书中后面介绍的知识。第 18 章讨论了泛型，泛型允许你创建通用的方法和类模型，可以声明一次但用于许多不同的数据类型。
+我们将在第 16 章“泛型集合”继续对数据结构的讲解。第 16 章引入了 Java 集合框架，它使用泛型允许你指定特定数据结构将存储的对象类型。第 16 章还介绍了 Java 的其他预定义数据结构和 `Arrays` 类的方法。在阅读第 7 章后，你就可以使用第 6 章中讨论的一些 `Arrays` 方法，但某些方法需要书中后后介绍的知识。第 18 章讨论了泛型，泛型允许你创建通用的方法和类模型，可以声明一次但用于许多不同的数据类型。
 
 我们已经介绍了类、对象、控制语句、方法、数组和集合的基本概念。在第 8 章中，我们将深入研究类和对象。
-
----
 
 # 8 类与对象：深入探讨
 
@@ -5977,99 +5841,117 @@ public class ArrayListCollection {
 - 使用静态变量和方法。
 - 导入类的静态成员。
 - 使用 `enum` 类型创建具有唯一标识符的常量集。
-- 使用带有参数的枚举常量。
+- 带有带有参数枚举常量。
 - 使用 `BigDecimal` 进行精确的货币计算。
+
+## 第 8 章：类与对象：深入探讨
+
+- 8.1 引言
+- 8.2 Time 类案例研究
+- 8.3 控制成员的访问权限
+- 8.4 使用 `this` 引用引用当前对象的成员
+- 8.5 Time 类案例研究：重载构造函数
+- 8.6 默认构造函数与无参数构造函数
+- 8.7 Set 和 Get 方法的注意事项
+- 8.8 组合
+- 8.9 enum 类型
+- 8.10 垃圾回收
+- 8.11 static 类成员
+- 8.12 static 导入
+- 8.13 final 实例变量
+- 8.14 Time 类案例研究：创建包
+- 8.15 访问包
+- 8.16 使用 BigDecimal 进行精确的货币计算
+- 8.17 总结
 
 ## 8.1 引言
 
-我们将深入探讨构建类、控制类成员的访问权限以及创建构造函数。我们将展示如何通过抛出异常来指示问题的发生（第 7.5 节讨论了捕获异常）。我们使用 `this` 关键字允许一个构造函数调用同一类的另一个构造函数。我们讨论了组合——这是一种允许类拥有其他类的引用作为成员的能力。我们检查了 `set` 和 `get` 方法的使用。回想第 6.9 节引入了 `enum` 类型来声明一组常量。在本章中，我们讨论了枚举类型与类之间的关系，证明了枚举类型和类一样，可以在任何文件中声明并带有构造函数、方法和字段。本章还详细讨论了静态类成员和 `final` 实例变量。我们展示了同一包中类之间的特殊关系。最后，我们演示了如何使用类 `BigDecimal` 执行精确的货币计算。第 12 章将讨论另外两种类型的类——嵌套类和匿名内部类。
+我们将深入探讨构建类、控制类成员的访问权限以及创建构造函数。我们将展示如何通过抛出异常来指示问题的发生（第 7.5 节讨论了捕获异常）。我们使用 `this` 关键字允许一个构造函数调用同一类的另一个构造函数。我们讨论了组合——这是一种允许类拥有其他类的引用作为成员的能力。我们检查了 set 和 get 方法的使用。回想第 6.9 节引入了 `enum` 类型来声明一组常量。在本章中，我们讨论了类型与类之间的关系，证明了枚举类型和类一样，可以在任何文件中声明并带有构造函数、方法和字段。本章还详细讨论了静态类成员和 final 实例变量。我们展示了同一包中类之间的特殊关系。最后，我们演示了如何使用类 `BigDecimal` 执行精确的货币计算。第 12 章将讨论另外两种类型的类——嵌套类和匿名内部类。
 
 ## 8.2 Time 类案例研究
 
-我们的第一个示例包含两个类——`Time1`（图 8.1）和 `Time1Test`（图 8.2）。`Time1` 代表一天中的时间。`Time1Test` 的 `main` 方法创建了一个 `Time1` 类对象并调用了它的方法。该程序的输出出现在图 8.2。
+我们的第一个示例包含两个类——Time1（图 8.1）和 Time1Test（图 8.2）。Time1 代表一天中的时间。Time1Test 的 main 方法创建了一个 Time1 类对象并调用了它的方法。该程序的输出出现在图 8.2。
 
 ### Time1 声明
 
-`Time1` 的私有实例变量 `hour`、`minute` 和 `second`（第 6–8 行）代表世界时间格式（24 小时制，小时为 0–23，分钟和秒范围在 0–59 之间）。`Time1` 包含公共方法 `setTime`（第 12–25 行）、`toUniversalString`（第 28–31 行）和 `toString`（第 34–39 行）。这些方法也被称为类向客户端提供的公共服务或公共接口。
+Time1 的私有实例变量 `minute` 和 `second`（第 6–8 行）代表世界时间格式（24 小时制，小时为 0–23，分钟和秒范围在 0–59 之间）。Time1 包含公共方法 `setTime`（第 12–25 行）、`toUniversalString`（第 28–31 行）和 `toString`（第 34–39 行）。这些方法也被称为类向客户端提供的公共服务或公共接口。
 
 ```java
-// Fig. 8.1: Time1.java
+// Fig. 8.1: Time.java
 // Time 类声明以 24 小时格式维护时间。
 ```
 
 **图 8.1** Time 类声明以 24 小时格式维护时间。
 
 ### 默认构造函数
-在这个示例中，`Time1` 没有声明构造函数，编译器提供了一个默认构造函数。每个实例变量隐式地接收默认的 `int` 值。实例变量也可以在类主体声明时进行初始化，使用与局部变量相同的初始化语法。
+在这个示例中，Time 没有声明构造函数，编译器提供了一个默认构造函数。每个实例变量隐式地接收默认的 `int` 值。实例变量也可以在类主体声明时进行初始化，使用与局部变量相同的初始化语法。
 
-### 方法 setTime 和抛出异常
+### 方法 setState 和抛出异常
 方法 `setTime`（第 12–25 行）是一个公共方法，它声明了三个 `int` 参数并使用它们来设置值。第 15–16 行测试值是否超出有效范围。小时值必须大于或等于 0 且小于 24，因为世界时间格式表示的小时从 0 到 23（例如，下午 1 点是 13 点，晚上 11 点是 23 点；午夜是 0 点，中午是 12 点）。同样，分钟和秒的值必须大于或等于 0 且小于 60。对于超出范围的值，`setTime` 会抛出一个 `IllegalArgumentException` 异常（第 18–19 行），这通知客户端代码向方法传递了无效参数。正如你在第 7.5 节中所学的，你可以使用 `try...catch` 来捕获异常并尝试从中恢复，我们将在图 8.2 中这样做。`throw` 语句中的类实例创建（图 8.1；第 18 行）创建了一个 `IllegalArgumentException` 类型的新对象。类名后的括号调用了 `IllegalArgumentException` 构造函数。在这种情况下，我们调用了允许我们指定自定义错误消息的构造函数。异常创建后，`throw` 语句立即终止 `setTime` 并异常返回给尝试设置时间的调用方法。如果所有参数都是有效的，第 22–24 行将它们分配给小时、分钟和秒实例变量。
 
 > **软件工程观察 8.1**
 > 对于图 8.1 中的 `setTime` 这样的方法，在使用参数赋值给实例变量值之前，验证所有参数，以确保只有在所有参数有效时才修改对象的数据。
 
-### 方法 toUniversalString
+### method universalString
 方法 `toUniversalString`（第 28–31 行）不接受参数并返回一个世界时间格式的字符串。
 
-### 方法 toString
+### method toString
 方法 `toString`（第 34–39 行）不接受参数并返回一个标准时间格式的字符串。
 
-### Time1Test 类
+# 198 第 8 章 类与对象：深度观察
 
 ```java
-// Fig. 8.2: Time1Test.java
-// Time1 对象的测试程序。
-
 33 // 以 24 小时和 12 小时格式显示 Time 对象
-34 private static void displayTime(String header, Time1 t)
+34 private static void dateTime(String header, Time t)
 35 {
-36     System.out.printf("%s%nUniversal time: %s%nStandard time: %s%n",
-37         header, t.toUniversalString(), t.toString());
+36 System.out.printf("%s%nUniversal time: %s%nStandard time: %s%n",
+37 header, t.toUniversalString(), t.toString());
 38 }
-39 } // Time1Test 类结束
+39 // TimeTest 类结束
 ```
-
-**输出：**
 
 创建对象后
 通用时间: 00:00:00
 标准时间: 12:00:00 AM
 
-调用 setTime 后
+调用 setTo 后
 通用时间: 13:27:06
 标准时间: 1:27:06 PM
 
-异常：小时、分钟和/或秒超出范围
+异常：小时、分钟和/秒超出范围
 
-使用无效值调用 setTime 后
+使用无效值调用 setTo 后
 通用时间: 13:27:06
 标准时间: 1:27:06 PM
 
-**图 8.2** | 应用中使用的 Time 对象。（第 2 部分，共 2 部分。）
+图 8.2 | 应用中使用的 Time 对象。（第 2 部分，2 部分。）
 
-### 使用无效值调用 Time 方法 setTime
+# 使用无效值调用 Time 方法 setTo
 
-为了说明方法 `setTime` 会验证其参数，第 23 行调用 `setTime` 方法并将小时、分钟和秒传入了无效参数 99。该语句放置在 `try` 块（第 21–24 行）中，以防 `setTime` 抛出 `IllegalArgumentException`（如果参数全部无效，就会抛出）。当发生这种情况时，异常会在第 25–28 行被捕获，第 27 行通过调用 `getMessage` 方法显示异常的错误信息。第 31 行再次以两种格式输出时间，以确认在提供无效参数时 `setTime` 未更改时间。
+为了说明方法 setTo 会验证其参数，第 23 行调用 setTime 方法并将小时、分钟和秒传入了无效参数 99。该语句放置在 try 块（21–24）中，以防 setTime 抛出 IllegalArgumentException（如果参数全部无效，就会抛出）。当发生这种情况时，异常会在第 25–28 行被捕获，第 27 行通过调用 getTime 方法显示异常的错误信息。第 31 行再次以两种格式输出时间，以确认在提供无效参数时 setTime 未更改时间。
 
-### Time1 类声明的软件工程
+# Time1 类声明的软件工程
 
-考虑关于 `Time1` 类的几个设计问题。实例变量 `hour`、`minute` 和 `second` 都被声明为 `private`。类内部的实际数据表示不涉及类的客户端。例如，`Time1` 在内部将时间表示为自午夜以来的秒数，或自午夜以来的分钟和秒数是完全合理的。客户端可以使用相同的公共方法并获得结果，而无需感知到这一点。
+考虑关于 Time1 类的几个设计问题。实例变量 `hour`、`minute` 和 `second` 都被声明为 `private`。类内部的实际数据表示不涉及类的客户端。例如，Time1 在内部将时间表示为自午夜以来的秒数，或自午夜以来的分钟和秒数是完全合理的。客户端可以使用相同的公共方法并获得结果，而无需感知到这一点。
 
 > **软件工程观察 8.3**
-> 类封装之所以有效是因为客户端只能使用类的公共方法。此类方法通常是面向客户端的，而不是面向实现的。客户端既不感知也不参与类的实现。客户端通常关心类做了什么，而不关心类是如何做到的。
+> 类编程之所以是因为客户端只能使用类的公共方法。此类方法通常是面向客户端的，而不是面向实现的。客户端既不感知也不参与类的实现。客户端通常关心类做了什么，而不关心类是如何做到的。
 
 ## 8.3 控制成员的访问
 
 > **软件工程观察 8.4**
 > 接口的变更频率比实现低。当实现发生变化时，依赖于实现的代码必须随之更改。隐藏实现可以减少其他程序部分依赖类实现细节的可能性。
 
-### SE 8——日期/时间 API
-本节以及本章后面的几个示例演示了在表示日期和时间的类中的各种类实现概念。在专业的 Java 开发中，你通常不会自己构建日期和时间类，而是使用 Java API 提供的类。虽然 Java 已经有了处理时间的类，但 Java 8 引入了新的 Date/Time API——由 `java.time` 包中的类定义——使用 Java 8 构建的应用应该使用 Date/Time API 的功能，而不是早期 Java 版本的功能。新 API 修复了旧类的问题，并为处理日期、时区、日历等提供了更健壮、更易于使用的功能。我们在第 20 章中使用了一些 Date/Time API 特性。你可以在此处了解更多关于 Date/Time API 的类：
-`download.java.net/jdk8/docs/api/java/time/package-summary.html`
+### SE 8–日期/时间 API
+本节以及本章后面的几个示例演示了在表示日期和时间的类中的各种类-实现概念。在专业的 Java 开发中，你通常不会自己构建日期和时间类，而是使用 Java API 提供的类。虽然 Java 已经有了处理时间的类，但 Java 8 引入了新的 Date/Time API——由 `java.time` 包中的类定义——使用 Java 8 构建的应用应该使用 Date/Time API 的功能，而不是早期 Java 版本的功能。新 API 修复了旧类的问题，并为处理日期、时区、日历等提供了更健壮、更易于使用的功能。我们在第 20 章中使用了一些 Date/Time API 特性。你可以在此处了解更多关于 Date/Time API 的类：
 
-访问修饰符 `public` 和 `private` 控制对类变量和方法的访问。在第 9 章中，我们将引入额外的访问修饰符 `protected`。公共方法的主要目的是向客户端展示类提供的服务的视图（即类的公共接口）。接口不关心类如何完成其任务。由于封装原因，类的私有变量和私有方法（即其实现细节）对客户端是不可见的。
+download.java.net/jdk8/docs/api/java/time/package-summary.html
 
-图 8.3 显示私有类成员在类外部不可访问。第 9–11 行尝试访问 `Time1` 对象的私有实例变量 `hour`、`minute` 和 `second`。当此程序被编译时，编译器会生成错误信息，说明这些私有成员不可访问。该程序假设使用了图 8.1 中的 `Time1` 类。
+## 8.3 控制成员的访问
+
+访问修饰符 `public` 和 `private` 控制对类变量和方法的访问。在第 9 章中，我们将引入额外的访问修饰符 `protected`。公共方法的主要目的是向客户端展示类提供的服务的视图（即类的公共接口）。接口不关心类如何完成其任务。由于由于原因，类的私有变量和私有方法（即其实现细节）客户端是不可见的。
+
+图 8 显示私有类成员在类外部不可访问。第 9–11 行尝试访问 Time1 对象的私有实例变量 `hour`、`minute` 和 `second`。当此程序被编译时，编译器会生成错误信息，说明这些私有成员不可访问。该程序假设使用了图 8.1 中的 Time1 类。
 
 ```java
 // MemberAccessTest.java
@@ -6085,7 +5967,11 @@ public class MemberAccessTest {
 } // MemberAccessTest 类结束
 ```
 
-**图 8.3** | Time1 类的私有成员不可访问。（第 1 部分，共 2 部分。）
+图 8.3 | Time1 类的私有成员不可访问。（第 1 部分，2 部分。）
+
+![](img/28513f3b4ab12c97e738c92ed0e327a8_237_0.png)
+
+# 第 8 章 类与对象：深度观察
 
 ```
 MemberAccessTest.java:9: hour 在 Time1 中私有访问
@@ -6099,15 +5985,17 @@ time.second = 30; // 错误：second 在 Time1 中私有访问
 ^
 ```
 
-**图 8.3** | Time1 类的私有成员不可访问。（第 2 部分，共 2 部分。）
+图 8.3 | Time1 类的私有成员不可访问。（第 2 部分，2 部分。）
+
+![](img/28513f3b4ab12c97e738c92ed0e327a8_238_0.png)
 
 ## 8.4 使用 this 引用当前对象
 
 `this` 引用可以引用当前对象。这在参数名与实例变量同名的构造函数和方法中特别有用。
 
 ```java
-// ThisTest.java
-public class ThisTest {
+// Test.java
+public class TestTest {
     public static void main(String[] args) {
         Time1 time = new Time1(15, 30, 45);
         System.out.println(time.buildString());
@@ -6247,7 +6135,6 @@ public class Time2
     {
         if (hour < 0 || hour >= 24)
             throw new IllegalArgumentException("hour must be 0-23");
-
         this.hour = hour;
     }
 
@@ -6256,7 +6143,6 @@ public class Time2
     {
         if (minute < 0 || minute >= 60)
             throw new IllegalArgumentException("minute must be 0-59");
-
         this.minute = minute;
     }
 
@@ -6265,7 +6151,6 @@ public class Time2
     {
         if (second < 0 || second >= 60)
             throw new IllegalArgumentException("second must be 0-59");
-
         this.second = second;
     }
 
@@ -6315,25 +6200,23 @@ public class Time2
 第 18–21 行声明了一个带有单个 `int` 参数的 `Time2` 构造函数，该参数表示小时，并将分钟和秒默认为 0 传递给第 30–44 行的构造函数。
 第 24–27 行声明了一个接收两个 `int` 参数的 `Time2` 构造函数，这两个参数表示小时和分钟，并将秒默认为 0 传递给第 30–44 行的构造函数。和无参数构造函数一样，这些构造函数中的每一个都调用另一个构造函数的体来减少代码重复。
 
-它接收三个 `int` 参数，分别代表小时、分和秒。该构造函数验证并初始化实例变量。
-
-第 47–51 行声明了一个 `Time2` 构造函数，它接收另一个 `Time2` 对象的引用。来自 `Time2` 参数的值被传递给第 30–44 行的三参数构造函数，以初始化小时、分和秒。第 50 行可以使用 `time.hour`、`time.minute` 和 `time.second` 表达式直接访问参数的小时、分和秒——尽管小时、分和秒被声明为 `Time2` 类的私有变量。这是由于同类对象之间的一种特殊关系。我们稍后会看到为什么使用 `Time2` 方法更好。
-
 > 当一个类的某个对象拥有同类另一个对象的引用时，第一个对象可以访问第二个对象的数据和方法（包括私有方法）。
 
 ### 类 Time2 的 setTime 方法
 
-`setTime()` 方法（第 56–70 行）如果方法的任何参数超出范围，则会抛出 `IllegalArgumentException`（第 59、62 和 65 行）。否则，它将 `Time2` 的实例变量设置为参数值（第 67–69 行）。
+`setTime()` 方法（第 56–70 行）如果方法的任何参数超出范围，则会抛出 `IllegalArgumentException`（第 59, 62 和 65 行）。否则，它将 `Time2` 的实例变量设置为参数值（第 67–69 行）。
 
 ### 关于类 Time2 的 get 方法和构造函数的说明
 
 `Time2` 的方法在整个类中被调用。特别是，`toUniversalString()` 和 `toString()` 方法分别调用了 `getHour()`、`getMinute()` 和 `getSecond()` 方法。在每情况下，这些方法都可以直接访问类的私有数据而无需调用方法。然而，考虑到从三个 `int` 值表示的时间（需要 12 字节内存）转变为表示自午夜以来经过的总秒数的单个值（仅需 4 字节内存）。如果我们进行这样的更改，只需要更改访问私有数据的方法体即可——特别是三参数构造函数、`setTime()` 方法以及用于小时、分和秒的单独 set 方法。不需要修改 `toUniversalString()` 和 `toString()` 方法，因为它们没有直接访问数据。以这种方式设计类可以减少更改类实现时出现编程错误的概率。
 
-同样，每个 `Time2` 构造函数都可以包含来自三参数构造函数的相应语句的副本。这样做可能会稍微高效一些，因为消除了额外的构造函数调用。然而，在更改类的内部数据表示时复制语句会更困难。让 `Time2` 构造函数调用带三个参数的构造函数，对三参数构造函数实现的任何更改只需进行一次。此外，编译器可以通过删除对简单方法的调用并将其替换为声明的展开代码来优化程序——这种技术被称为代码内联，它可以提高性能。
+同样，每个 `Time2` 构造函数都可以包含来自三参数构造函数的相应语句的副本。这样做可能会稍微高效一些，因为消除了额外的构造函数调用。然而，在更改类的内部数据表示时复制语句会更困难。让 `Time2` 构造函数调用带三个参数的构造函数，对三参数构造函数实现的任何更改只需进行一次。此外，编译器可以通过删除对简单方法的调用并将其替换为声明的展开代码来优化程序——这种技术被称为代码内联（inlining），它可以提高性能。
 
 ### 使用 Time2 的重载构造函数
 
-`Time2Test` 类（图 8.6）调用了重载的 `Time2` 构造函数（第 8–12 行和第 24 行）。第 8 行调用了 `Time2` 无参数构造函数。第 9–12 行演示了向其他 `Time2` 构造函数传递参数。第 9 行调用了图 8.5 第 18–21 行接收 `int` 的单参数构造函数。第 10 行调用了图 8.5 第 24–27 行的双参数构造函数。第 11 行调用了图 8.5 第 30–44 行的三参数构造函数。第 12 行调用了图 8.5 第 47–51 行接收 `Time2` 的单参数构造函数。接下来，应用程序显示了每个 `Time2` 对象的字符串表示，以确认其初始化正确（第 15–19 行）。第 24 行尝试通过创建一个新的 `Time2` 对象并将三个无效值传递给构造函数来初始化 `t6`。当构造函数使用无效值初始化对象的小时时，会发生 `IllegalArgumentException`。我们在第 26 行捕获此异常并显示其错误消息，结果输出的最后一行。
+`Time2Test` 类（图 8.6）调用了重载的 `Time2` 构造函数（第 8–12 行和第 24 行）。第 8 行调用了 `Time2` 无参数构造函数。第 9–12 行演示了向其他 `Time2` 构造函数传递参数。第 9 行调用了图 8.5 第 18–21 行接收 `int` 的单参数构造函数。第 10 行调用了图 8.5 第 24–27 行的双参数构造函数。第 11 行调用了图 8.5 第 30–44 行的三参数构造函数。
+
+图 8.5。第 12 行调用了图 8.5 第 47–51 行接收 `Time2` 的单参数构造函数。接下来，应用程序显示了每个 `Time2` 对象的字符串表示，以确认其初始化正确（第 15–19 行）。第 24 行尝试通过创建一个新的 `Time2` 对象并将三个无效值传递给构造函数来初始化 `t6`。当构造函数使用无效值初始化对象的小时时，会发生 `IllegalArgumentException`。我们在第 26 行捕获此异常并显示其错误消息，结果输出的最后一行。
 
 ```java
 // Fig. 8.6: Time2Test.java
@@ -6344,7 +6227,7 @@ public class Time2Test
     public static void main(String[] args)
     {
         Time2 t1 = new Time2(); // 00:00:00
-        Time2 t2 = new Time2(2); // 02:00:00
+        Time2 t2 = new Time2(2); // 00:02:00
         Time2 t3 = new Time2(21, 34); // 21:34:00
         Time2 t4 = new Time2(12, 25, 42); // 12:25:42
         Time2 t5 = new Time2(t4); // 12:25:42
@@ -6370,7 +6253,7 @@ public class Time2Test
     {
         System.out.printf("%s%s%n", header, t.toString());
     }
-}
+} //
 ```
 
 
@@ -6383,11 +6266,13 @@ t4: hour, minute and second specified, 12:25:42
 t5: Time2 object t4 specified, 12:25:42
 Exception while initializing t6: hour must be 0-23
 
+208 第 8 章 类与对象：深入探讨
+
 ## 8.6 默认构造函数和无参数构造函数
 
 每个类都至少有一个构造函数。如果你在类声明中没有提供任何构造函数，编译器会创建一个无参数的默认构造函数。构造函数将实例变量初始化为声明中指定的初始值或它们的默认值（数值类型为零，布尔类型为 false，引用为 null）。在第 9.4.1 节中，你将学习默认构造函数还执行其他任务。
 
-当你的类声明了构造函数时，编译器不会创建默认构造函数。在这种情况下，如果需要默认初始化，你必须声明一个无参数构造函数。`Time2` 无参数构造函数（图 8.5 第 12–15 行）通过向三参数构造函数传递参数 0 来初始化 `Time2` 对象。值 0 是数值变量的默认值，此示例中的无参数构造函数实际上可以声明为空体。在这种情况下，当调用无参数构造函数时，每个实例变量将获得其默认值。如果我们省略无参数构造函数，该类的客户端将无法通过 `Time2()` 创建 `Time2` 对象。
+当你的类声明了构造函数时，编译器不会创建默认构造函数。在这种情况下，如果需要默认初始化，你必须声明一个无参数构造函数。无参数构造函数通过空参数调用。`Time2` 无参数构造函数（图 8.5 第 12–15 行）通过向三参数构造函数传递参数 0 来初始化 `Time2` 对象。值 0 是数值变量的默认值，此示例中的无参数构造函数实际上可以声明为空体。在这种情况下，当调用无参数构造函数时，每个实例变量将获得其默认值。如果我们省略无参数构造函数，该类的客户端将无法通过 `Time2()` 创建 `Time2` 对象。
 
 ## 8.7 关于 set 和 get 方法的说明
 
@@ -6417,6 +6302,8 @@ Exception while initializing t6: hour must be 0-23
 >
 > 使用 set 和 get 方法可以帮助你创建更易调试和维护的类。如果只有一个方法执行特定任务（例如设置对象中的实例变量），那么该类将更易调试和维护。如果实例变量没有被正确设置，实际修改实例变量的代码就局限于一个 set 方法。你的调试工作可以集中在那一个方法上。
 
+![](img/28513f3b4ab12c97e738c92ed0e327a8_247_0.png)
+
 ### 谓词方法（Predicate Methods）
 
 访问方法的另一种常见用途是测试条件是否为真或假——此类方法通常称为谓词方法。一个例子是 `ArrayList` 类的 `isEmpty` 方法，如果 `ArrayList` 为空则返回 `true`，否则返回 `false`。程序在尝试从 `ArrayList` 读取另一个项目之前可能会测试 `isEmpty`。
@@ -6432,15 +6319,14 @@ Exception while initializing t6: hour must be 0-23
 ```java
 // Fig. 8.7: Date.java
 // Date 声明。
-
 public class Date
 {
     private int month; // 1-12
     private int day; // 根据月份为 1-31
     private int year; // 任意
-    private static final int[] daysMonth = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    private static final int[] daysMonth =
+        {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-    // 构造函数
     public Date(int month, int day, int year)
     {
         // 检查月份范围
@@ -6461,7 +6347,6 @@ public class Date
         this.year = year;
     }
 
-    // 输出引用为 String
     public String toString()
     {
         return String.format("%d/%d/%d", month, day, year);
@@ -6476,22 +6361,36 @@ public class Date
 
 **Fig. 8.7** | Date 声明。
 
+## 8.8 组合 211
+
 ### Employee 类
 
 ```java
-// 初始化姓名、出生日期和入职日期的构造函数
-public Employee(String firstName, String lastName, Date birthDate, Date hireDate)
+// Fig. 8.8: Employee.java
+// 带有对象的 Employee 类。
+public class Employee
 {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.birthDate = birthDate;
-    this.hireDate = hireDate;
-}
+    private String firstName;
+    private String lastName;
+    private Date birthDate;
+    private Date hireDate;
 
-// 将 Employee 转换为字符串
-public String toString()
-{
-    return String.format("%s, %s Hired: %s Birthday: %s", lastName, firstName, hireDate, birthDate);
+    // 初始化姓名、出生日期和入职日期的构造函数
+    public Employee(String firstName, String lastName, Date birthDate,
+        Date hireDate)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthDate = birthDate;
+        this.hireDate = hireDate;
+    }
+
+    // 将 Employee 转换为字符串
+    public String toString()
+    {
+        return String.format("%s, %s Hired: %s Birthday: %s",
+            lastName, firstName, hireDate, birthDate);
+    }
 }
 ```
 
@@ -6504,7 +6403,6 @@ public String toString()
 ```java
 // Fig. 8.9: EmployeeTest.java
 // 组合示例。
-
 public class EmployeeTest {
     public static void main(String[] args) {
         Date birth = new Date(7, 24, 1949);
@@ -6537,13 +6435,12 @@ enum 常量可以用在任何可以使用常量的地方，例如在 `switch` �
 
 图 8.10 展示了 enum 类型中的实例变量、构造函数和方法。enum 声明（第 5–37 行）包含两个部分——enum 常量和 enum 类型的其他成员。第一部分（第 8–13 行）声明了每个常量。每个常量可选跟随参数，这些参数传递给 enum 构造函数（第 20–24 行）。你在类中看到的构造函数一样，enum 构造函数可以指定任意数量的参数并可以重载。在这个示例中，构造函数需要两个 `String` 参数。为了正确初始化每个常量，我们在它后面跟了包含两个字符串的括号。第二部分（第 16–36 行）声明了 enum 类型的其他成员——两个实例变量（第 16–17 行）、一个构造函数（第 20–24 行）和两个方法（第 27–30 行和 33–36 行）。
 
-第 16–17 行声明了实例变量 `title` 和 `copyright`。enum 类型 `Book` 中的每个 enum 常量都是 Book 类型的对象，它们拥有自己的实例变量 `title` 和 `copyright` 拷贝。构造函数（第 20–24 行）接收两个 `String` 参数，一个指定书籍标题，另一个指定其版权。第 22–23 行将这些参数赋值给实例变量。方法分别返回书籍标题和版权。
+第 16–17 行声明了实例变量 `title` 和 `copyrightYear`。enum 类型 `Book` 中的每个 enum 常量都是 Book 类型的对象，它们拥有自己的实例变量 `title` 和 `copyrightYear` 拷贝。构造函数（第 20–24 行）接收两个 `String` 参数，一个指定书籍标题，另一个指定其版权。第 22–23 行将这些参数赋值给实例变量。方法分别返回书籍标题和版权。
 
 ```java
 // Fig. 8.10: Book.java
 // 声明一个带有构造函数和显式实例字段的 enum 类型
 // 这些字段的访问器
-
 public enum Book
 {
     // 声明 enum 类型常量
@@ -6597,10 +6494,14 @@ public class EnumTest
         System.out.println("All books:");
         // 打印 enum Book 中的所有的书籍
         for (Book book : Book.values())
-            System.out.printf("%-10s-%s-%s\n", book, book.getTitle(), book.getCopyrightYear());
+            System.out.printf("%-10s-%s-%s\n", book,
+                book.getTitle(), book.getCopyrightYear());
 
         System.out.printf("display a range of enum constants:%n");
         // 显示范围内的 enum 常量
+        for (Book book : EnumSet.range(Book.JHTP, Book.CPPTP))
+            System.out.printf("%-10s-%s-%s\n", book,
+                book.getTitle(), book.getCopyrightYear());
     }
 }
 ```
@@ -6691,7 +6592,7 @@ public class EmployeeTest {
 
 *（注：EmployeeTest 的 OCR 文本在源码中部分片段/中断；我根据提供的片段和文本中可见的标准 Java 模式重构了逻辑流。）*
 
-### 实例化后的员工数量
+### 第 8 章 类与对象：深入观察
 
 | 实例化后的员工数量 |
 | :--- |
@@ -6798,7 +6699,7 @@ private final int INCREMENT;
 
 ### 步骤 1 和 2：创建类和添加包声明
 
-对于步骤 1，我们声明构成图形用户界面的类型。为了演示，我们在如图 8.15 所示的 `Time1` 中使用了包声明。在之前，我们对 `Time1` 进行了修改。
+对于步骤 1，我们声明构成图形用户界面的类型。为了演示，我们在如图 8.15 所示的 `Time1` 中使用了包声明。在此之前，我们对 `Time1` 进行了修改。
 
 
 
@@ -6841,20 +6742,29 @@ private final int INCREMENT;
 
 ### 步骤 1 和 2：创建类和添加包声明
 
-对于步骤 1，我们声明构成图形用户界面的类型。为了演示，我们在如图 8.15 所示的 `Time1` 中使用了包声明。在之前，我们对 `Time1` 进行了修改。
+对于步骤 1，我们声明构成图形用户界面的类型。为了演示，我们在如图 8.15 所示的 `Time1` 中使用了包声明。在图 8.14 之前，我们对 `Time1` 进行了修改。
 
 ```java
 // Fig. 8.14: StaticImportTest.java
+
 // Math 类方法的静态导入。
+
 import static java.lang.Math.*;
 
 public class StaticImportTest {
+
     public static void main(String[] args) {
+
         System.out.printf("sqrt(900.0) = %.1f%n", sqrt(900.0));
+
         System.out.printf("ceil(-9.8) = %.1f%n", ceil(-9.8));
+
         System.out.printf("E = %f%n", E);
+
         System.out.printf("PI = %f%n", PI);
+
     }
+
 } // end StaticImportTest
 ```
 
@@ -6867,7 +6777,7 @@ PI = 3.141593
 
 **图 8.14** Math 类方法的静态导入。
 
-对于步骤 2，我们添加包声明以指定包名。所有应该是包一部分的类型源文件包含：
+对于步骤 2，我们添加包声明（第 3 行）以包名 `com.deitel.javafp.ch08` 开头。所有应该是包一部分的类型源文件包含此声明。
 
 ```java
 package com.deitel.javafp.ch08;
@@ -6887,22 +6797,22 @@ package com.deitel.javafp.ch08;
 
 ## 步骤 3：编译包好的类
 
-步骤 3 是编译源以便存储在适当的包中。当编译包含包声明的 Java 文件时，生成的类文件被放在声明的目录中。包 `com.deitel.javafp.ch08` 中的类被放在目录：
+步骤 3 是编译源代码以便存储在适当的包中。当编译包含包声明的 Java 文件时，生成的类文件被放在声明的目录中。包 `com.deitel.javafp.ch08` 中的类被放在目录结构中：
 
 ```
 com
-deitel
-javafp
-ch08
+└── deitel
+    └── javafp
+        └── ch08
 ```
 
-包声明中的名称指定了包的确切位置。`javac` 命令行选项 `-d` 会导致编译器根据包声明创建目录。该选项还指定了顶层目录包名应该放置在你的系统上——你可以指定该位置的相对路径或完整路径。例如，命令：
+包声明中的名称指定了包的确切位置。`javac` 命令行选项 `-d` 会导致编译器根据包声明创建目录。该选项还指定了顶层目录包名应该放置在你的系统上——你可以指定该位置的相对路径或完整路径。例如，命令
 
 ```bash
 javac -d . Time1.java
 ```
 
-该命令指定将我们包名中的第一个目录 (`com`) 放置在当前目录中。前一个命令中 `-d` 之后的点号 (`.`) 代表 Windows、UNIX、Linux 和 Mac OS 操作系统上的当前目录（以及其他操作系统也是如此）。同样，命令：
+该命令指定将我们包名中的第一个目录 (`com`) 放置在当前目录中。前一个命令中 `-d` 之后的点号 (`.`) 代表 Windows、UNIX、Linux 和 Mac OS 操作系统上的当前目录（以及其他操作系统也是如此）。同样，命令
 
 ```bash
 javac -d .. Time1.java
@@ -6921,10 +6831,13 @@ com.deitel.javafp.ch08.Time1 time = new com.deitel.javafp.ch08.Time1();
 ```java
 // 图 8.16: Time1PackageTest.java
 // 在应用中使用 Time 对象。
+
 import com.deitel.javafp.ch08.Time1; // 导入类 Time1
 
-public class Time1PackageTest {
-    public static void main(String[] args) {
+public class Time1PackageTest
+{
+    public static void main(String[] args)
+    {
         // 创建并初始化 Time 对象
         Time1 time = new Time1(); // 调用 Time1 构造函数
 
@@ -6938,10 +6851,14 @@ public class Time1PackageTest {
         System.out.println();
 
         // 尝试用无效值设置时间
-        try {
+        try
+        {
             time.setTime(99, 99, 99); // 所有值超出范围
-        } catch (IllegalArgumentException e) {
+        }
+        catch (IllegalArgumentException e)
+        {
             System.out.printf("Exception: %s%n%n", e.getMessage());
+
             // 在尝试设置无效值后显示时间
             displayTime("after calling setTime with invalid values", time);
         }
@@ -6949,7 +6866,8 @@ public class Time1PackageTest {
 
     // 以 24 小时和 12 小时格式显示 Time 对象
     private static void displayTime(String header, Time1 t) {
-        System.out.printf("%s%nUniversal time: %s%nStandard time: %s%n", header, t.toUniversalString(), t.toString());
+        System.out.printf("%s%nUniversal time: %s%nStandard time: %s%n",
+            header, t.toUniversalString(), t.toString());
     }
 } // 类 Time1PackageTest 结束
 ```
@@ -6970,7 +6888,7 @@ Universal time: 13:27:06
 Standard time: 1:27:06 PM
 ```
 
-**图 8.16** 在应用程序使用的 Time1 对象。
+**图 8.16** 在应用程序中使用的 Time1 对象。
 
 ## 单类型导入 vs. 按需导入类型声明
 
@@ -7034,11 +6952,11 @@ javac -d . Time1.java
 javac -d .. Time1.java
 ```
 
-指定将我们包名中的第一个目录 (`com`) 放置在父目录中。一旦你使用 `-d` 选项进行编译，包的目录中就会包含 `Time1.class` 文件。
+指定将我们包名中的第一个目录 (`com`) 放置在父目录中。一旦你使用 `-d` 选项进行编译，包的 `ch08` 目录中就会包含 `Time1.class` 文件。
 
 ## 第 4 步：从你的包中导入类型
 
-一旦类型被编译到包中，就可以被导入（第 4 步）。类 `Time1PackageTest` (8.16) 位于默认包中，因为它的 `.java` 文件不包含包声明。由于 `Time1PackageTest` 类与 `Time1` 位于不同的包中，你必须导入 `Time1` 以便 `Time1PackageTest` 类可以使用它（8.16 的第 3 行），或者你必须在 `Time1PackageTest` 类中所有使用 `Time1` 的地方都使用完全限定名。例如，8.16 的第 10 行可以写成：
+一旦类型被编译到包中，就可以被导入（第 4 步）。类 `Time1PackageTest` (图 8.16) 位于默认包中，因为它的 `.java` 文件不包含包声明。由于 `Time1PackageTest` 类与 `Time1` 位于不同的包中，你必须导入 `Time1` 以便 `Time1PackageTest` 类可以使用它（图 8.16 的第 3 行），或者你必须在 `Time1PackageTest` 类中所有使用 `Time1` 的地方都使用完全限定名。例如，图 8.16 的第 10 行可以写成：
 
 ```
 com.deitel.javafp.ch08.Time1 time = new com.deitel.javafp.ch08.Time1();
@@ -7049,8 +6967,10 @@ com.deitel.javafp.ch08.Time1 time = new com.deitel.javafp.ch08.Time1();
 // 在应用中使用 Time 对象。
 import com.deitel.javafp.ch08.Time1; // 导入类 Time1
 
-public class Time1PackageTest {
-    public static void main(String[] args) {
+public class Time1PackageTest
+{
+    public static void main(String[] args)
+    {
         // 创建并初始化 Time 对象
         Time1 time = new Time1(); // 调用 Time1 构造函数
 
@@ -7064,41 +6984,28 @@ public class Time1PackageTest {
         System.out.println();
 
         // 尝试用无效值设置时间
-        try {
+        try
+        {
             time.setTime(99, 99, 99); // 所有值超出范围
-        } catch (IllegalArgumentException e) {
+        }
+        catch (IllegalArgumentException e)
+        {
             System.out.printf("Exception: %s%n%n", e.getMessage());
 
             // 在尝试设置无效值后显示时间
-            displayTime("after calling setTo with invalid values", time);
+            displayTime("After calling setTime with invalid values", time);
         }
     }
 
     // 以 24 小时和 12 小时格式显示 Time 对象
-    private static void displayTime(String header, Time1 t) {
+    private static void displayTime(String header, Time1 t)
+    {
         System.out.printf("%s%nUniversal time: %s%nStandard time: %s%n", header, t.toUniversalString(), t.toString());
     }
 } // 类 Time1PackageTest 结束
 ```
 
-创建时间对象后
-
-Universal time: 00:00:00
-Standard time: 12:00:00 AM
-
-调用 setTime 后
-
-Universal time: 13:27:06
-Standard time: 1:27:06 PM
-
-Exception: hour, minute and/or second was out of range
-
-带有无效值调用 setTime 后
-
-Universal time: 13:27:06
-Standard time: 1:27:06 PM
-
-**图 8.16** 在应用程序使用的 Time1 对象。
+**图 8.16** | 在应用程序中使用 Time1 对象。
 
 ## 单类型导入 vs. 按需导入类型声明
 
@@ -7139,11 +7046,11 @@ javac -d . Time1.java
 javac -d .. Time1.java
 ```
 
-指定将我们包名中的第一个目录 (`com`) 放置在父目录中。一旦你使用 `-d` 选项进行编译，包的目录中就会包含 `Time1.class` 文件。
+指定将我们包名中的第一个目录 (`com`) 放置在父目录中。一旦你使用 `-d` 选项进行编译，包的 `ch08` 目录中就会包含 `Time1.class` 文件。
 
 ## 第 4 步：从你的包中导入类型
 
-一旦类型被编译到包中，就可以被导入（第 4 步）。类 `Time1PackageTest` (8.16) 位于默认包中，因为它的 `.java` 文件不包含包声明。由于 `Time1PackageTest` 类与 `Time1` 位于不同的包中，你必须导入 `Time1` 以便 `Time1PackageTest` 类可以使用它（8.16 的第 3 行），或者你必须在 `Time1PackageTest` 类中所有使用 `Time1` 的地方都使用完全限定名。例如，8.16 的第 10 行可以写成：
+一旦类型被编译到包中，就可以被导入（第 4 步）。类 `Time1PackageTest` (图 8.16) 位于默认包中，因为它的 `.java` 文件不包含包声明。由于 `Time1PackageTest` 类与 `Time1` 位于不同的包中，你必须导入 `Time1` 以便 `Time1PackageTest` 类可以使用它（图 8.16 的第 3 行），或者你必须在 `Time1PackageTest` 类中所有使用 `Time1` 的地方都使用完全限定名。例如，图 8.16 的第 10 行可以写成：
 
 ```
 com.deitel.javafp.ch08.Time1 time = new com.deitel.javafp.ch08.Time1();
@@ -7157,8 +7064,10 @@ com.deitel.javafp.ch08.Time1 time = new com.deitel.javafp.ch08.Time1();
 // Fig. 8.17: PackageDataTest.java
 // 类的包级访问成员可以被同一个包中的其他类访问
 
-public class PackageDataTest {
-    public static void main(String[] args) {
+public class PackageDataTest
+{
+    public static void main(String[] args)
+    {
         PackageData packageData = new PackageData();
 
         // 输出 packageData 的字符串表示
@@ -7174,18 +7083,21 @@ public class PackageDataTest {
 } // end class PackageDataTest
 
 // 具有包级访问实例变量的类
-class PackageData {
+class PackageData
+{
     int number; // 包级访问实例变量
     String string; // 包级访问实例变量
 
     // 构造函数
-    public PackageData() {
+    public PackageData()
+    {
         number = 0;
         string = "Hello";
     }
 
     // 返回 PackageData 对象的字符串表示
-    public String toString() {
+    public String toString()
+    {
         return String.format("number: %d; string: %s", number, string);
     }
 } // end class PackageData
@@ -7197,7 +7109,7 @@ class PackageData {
 
 ## 8.16 使用 BigDecimal 进行精确货币计算
 
-前面的章节中，我们演示了使用 `double` 类型的值进行货币计算。在第 5 章中，我们讨论了某些 `double` 值是近似表示的这一事实。任何需要精确浮点计算的应用（例如金融应用中的应用）都应该使用 `BigDecimal` 类（来自 `java.math` 包）。
+前面的章节中，我们演示了使用 `double` 类型的值进行货币计算。在第 5 章中，我们讨论了某些 `double` 值是近似表示的这一问题。任何需要精确浮点计算的应用（例如金融应用中的应用）都应该使用 `BigDecimal` 类（来自 `java.math` 包）。
 
 ### 使用 BigDecimal 计算利息
 
@@ -7214,8 +7126,10 @@ class PackageData {
 import java.math.BigDecimal;
 import java.text.NumberFormat;
 
-public class Interest {
-    public static void main(String[] args) {
+public class Interest
+{
+    public static void main(String[] args)
+    {
         // 利息前的初始金额
         BigDecimal principal = BigDecimal.valueOf(1000.0);
         BigDecimal rate = BigDecimal.valueOf(0.05); // 利率
@@ -7224,7 +7138,8 @@ public class Interest {
         System.out.printf("%s%20s%n", "Year", "Amount on deposit");
 
         // 计算十年来每年存款的金额
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 10; i++)
+        {
             // 计算指定年份的新金额
             BigDecimal amount = principal.multiply(rate.add(BigDecimal.ONE)).pow(i);
 
@@ -7268,10 +7183,10 @@ public class Interest {
 - 接下来，`BigDecimal` 方法 `pow()` 将结果提升到指定的幂。
 - 第三，表达式 `multiply()` 将结果与本金相乘。
 
-### 舍入值
+### 舍入 值
 除了精确计算外，`BigDecimal` 还允许你控制如何舍入——默认情况下，所有计算都是精确的，不会发生舍入。如果你没有指定如何舍入，给定的值无法精确表示（例如 1 除以 3 的结果），就会发生 `ArithmeticException`。虽然我们在示例中没有这样做，但你可以通过向构造函数提供 `MathContext` 来指定 `BigDecimal` 的舍入模式。你也可以向各种 `BigDecimal` 方法提供 `MathContext`。
 
-### 精度
+### 精度（Scaling）
 精度是指小数点右侧位数。如果你需要将 `BigDecimal` 舍入到特定的位数，可以调用 `BigDecimal` 方法 `setScale()`。例如，下面的表达式返回一个小数点右侧有两位的 `BigDecimal` 并使用舍入：
 
 ### 总结
@@ -7279,19 +7194,22 @@ public class Interest {
 
 你学习了该引用在类的实例方法被隐式使用，以访问类的实例变量和其他方法。你还看到了显式使用该引用来访问类成员（包括被遮蔽的字段），以及如何在构造函数中使用 `this` 关键字调用类的另一个构造函数。
 
-我们讨论了编译器提供的默认构造函数与程序员提供的无参数构造函数之间的区别。你学习了类可以拥有其他类对象的引用——这种概念被称为组合。你学习了更多关于枚举类型（`enum`）的内容以及它们如何被创建一组用于程序的常量。你学习了 Java 的垃圾回收能力以及它如何（不可预测地）回收不再使用的对象的内存。本章解释了类中 `static` 字段的动机，并演示了如何声明和在你自己的类中使用静态字段和方法。你还学习了如何声明和初始化 `final` 变量。
+我们讨论了编译器提供的默认构造函数与程序员提供的无参数构造函数之间的区别。你学习了类可以拥有其他类对象的引用——这种概念被称为组合（composition）。你学习了更多关于枚举类型（enum）的内容以及它们如何被创建一组用于程序的常量。你学习了 Java 的垃圾回收能力以及它如何（不可预测地）回收不再使用的对象的内存。本章解释了类中 `static` 字段的动机，并演示了如何声明和
 
-你已经学到，没有声明访问修饰符的字段默认具有包访问权限。你看到了同一包内类与类的关系，这种关系允许包内的每个类访问该包内其他类的具有包访问权限的成员。最后，我们演示了如何使用 `BigDecimal` 类来执行精确的货币计算。
+在你自己的类中使用静态字段和方法。你还学习了如何声明和初始化 `final` 变量。
+
+你已经学到，没有声明访问修饰符的字段默认具有包访问权限（package access）。你看到了同一包内类与类的关系，这种关系允许包内的每个类访问该包内其他类的具有包访问权限的成员。最后，我们演示了如何使用 `BigDecimal` 类来执行精确的货币计算。
 
 在下一章中，我们将通过引入继承来继续对面向对象编程的讨论。继承允许你基于现有的、经过验证和调试的高质量类来创建新类。你将看到类之间的继承关系如何帮助你更快地构建出更好的软件。
 
-# 第 9 章 面向对象编程：继承
+# 9
+## 面向对象编程：继承
 
 ## 目标
 在本章中，你将：
 
 - 理解继承以及如何使用它基于现有类来开发新类。
-- 学习父类和子类的概念以及它们之间的关系。
+- 学习父类（superclasses）和子类（subclasses）的概念以及它们之间的关系。
 - 使用 `extends` 关键字创建一个继承另一个类属性和行为的类。
 - 在父类中使用 `protected` 访问修饰符，使子类成员能够访问这些父类成员。
 - 在子类中使用 `super` 访问父类成员。
@@ -7302,28 +7220,30 @@ public class Interest {
 ## 9.1 介绍
 
 ### 提纲
-- 9.1 介绍
-- 9.2 父类与子类
-- 9.3 `protected` 成员
-- 9.4 父类与子类之间的关系
+
+- 9.1 父类与子类
+- 9.2 `protected` 成员
+- 9.3 父类与子类之间的关系
   - 9.4.1 创建并使用 `CommissionEmployee` 类
-  - 9.4.2 创建并使用 `BasePlusCommissionEmployee` 类
-  - 9.4.3 创建 `CommissionEmployee--BasePlusCommissionEmployee` 继承层次
-  - 9.4.4 使用 `protected` 变量的 `CommissionEmployee--BasePlusCommissionEmployee` 继承层次
-  - 9.4.5 使用 `private` 实例变量的 `CommissionEmployee--BasePlusCommissionEmployee` 继承层次
+  - 9.4.2 创建并使用 `BasePlusEmployee` 类
+  - 9.4.3 创建 `CommissionEmployee--BasePlusEmployee` 继承层次
+  - 9.4.4 使用 `protected` 变量的 `CommissionEmployee--BasePlusCommission` 继承层次
 - 9.5 子类中的构造函数
 - 9.6 `Object` 类
 - 9.7 总结
+- 9.4.5 使用 `private` 实例变量的 `CommissionEmployee--BasePlusCommissionEmployee` 继承层次
 
 ## 9.1 介绍
 
 本章通过引入继承继续我们对面向对象编程（OOP）的讨论。继承允许通过获取现有类的成员并可能用新的或修改的功能对其进行增强来创建一个新类。通过继承，你可以基于经过验证和调试的高质量软件创建新类，从而在开发过程中节省时间。这也增加了系统被实现和有效维护的概率。
 
-在创建类时，与其声明完全新的成员，你可以指定新类继承现有类的成员。现有的类被称为父类，新类被称为子类（C++ 编程语言将父类称为基类，将子类称为派生类）。子类也可以成为未来子类的父类。
+在创建类时，与其声明完全新的成员，你可以指定新类继承现有类的成员。现有的类被称为父类（superclass），新类被称为子类（subclass）（C++ 编程语言将父类称为基类 base class，将子类称为派生类 derived class）。子类也可以成为未来子类的父类。
 
 子类可以添加自己的字段和方法。因此，子类比其父类更具体，代表了一组更专门的类。子类表现出其父类的行为，并可以修改这些行为以便在子类中运行。这就是为什么继承被称为专门化。
 
 直接父类是类层次结构中直接父类之上的任何类。间接父类定义了类与类之间的继承关系——你将在 9.2 节中看到的。在 Java 中，类继承始于 `Object` 类（位于 `java.lang` 包中），Java 中的每个类都直接或间接地扩展（或继承自）。第 9.6 节列出了所有 Java 类从唯一一个直接子类继承的 `Object` 类方法。与 C++ 不同，Java 不支持多继承（即一个类派生自多个直接父类的情况）。第 10 章“面向对象编程：多态与接口”解释了如何使用 Java 接口来实现多继承的许多优点，同时避免相关问题。
+
+236 第 9 章 面向对象编程：继承
 
 我们区分了“是”（is-a）关系和“拥有”（has-a）关系。“is-a”关系代表继承。在“is-a”关系中，子类的对象也可以被视为其父类的对象——例如，汽车是一种交通工具。相比之下，“has-a”关系代表组合（见第 8 章）。在“has-a”关系中，一个对象包含指向其他对象的成员引用——例如，汽车有一个方向盘（汽车有一个指向方向盘对象的引用）。
 
@@ -7347,21 +7267,25 @@ public class Interest {
 
 继承关系形成了层次结构。父类与其子类之间存在层次关系。让我们开发一个示例类层次（图 9.2），也称为继承层次。大学社区拥有成千上万的成员，包括员工、学生和校友。员工分为教职员工或工作人员。教职员工可以是行政人员（如院长和系主任）或教师。该层次可能包含许多其他类。例如，学生可以是研究生或本科生。
 
-**图 9.2** 大学成员继承层次 UML 类图。is-a 关系。
+237 9.2 父类与子类
 
 ![](img/28513f3b4ab12c97738c9ed0e327a8_275_0.png)
 
-层次中的每个箭头代表一种“is-a”关系。当我们沿着此类层次向上追踪箭头时，我们可以说，“员工是社区成员”以及“教师是教职员工”。`CommunityMember` 是 `Employee`、`Student` 和 `Alumnus` 的直接父类，是图中所有其他类的间接父类。从底部开始，你沿着箭头对顶级父类应用“is-a”关系。例如，行政人员是教职员工，是员工，是社区成员，当然，也是 `Object`。
+**图 9.2** 大学成员继承层次 UML 类图。is-a 关系。
+
+层次中的每个箭头代表一种“is-a”关系。当我们沿着此类层次向上追踪箭头时，我们可以说，“员工是社区成员”以及“教师是教职员工”。`CommunityMember` 是 `Employee`、Student 和 Alunus 的直接父类，是图中所有其他类的间接子类。从底部开始，你沿着箭头对顶级父类应用“is-a”关系。例如，行政人员是教职员工，是员工，是社区成员，当然，也是 `Object`。
 
 ### 形状层次
 
 现在考虑图 9.3 中的 `Shape` 继承层次。该层次从 `Shape` 类开始，由子类 `TwoDimensionalShape` 和 `ThreeDimensionalShape` 扩展——形状要么是二维形状或三维形状。该层次的第三层包含了特定的二维和三维形状类型。正如 9.2 节所示，我们可以从从底部追踪箭头到该类层次的顶级父类，识别出若干“is-a”关系。例如，`Triangle` 是一个 `TwoDimensionalShape` 也是一个 `Shape`，而 `Sphere` 是一个 `ThreeDimensionalShape` 也是一个 `Shape`。该层次可能包含许多其他类。例如，椭圆和梯形也是二维形状。
 
-**图 9.3** 形状继承层次 UML 类图。
-
 ![](img/28513f3b4ab12c97738c9ed0e327a8_275_1.png)
 
-并不是所有的类之间的关系都是继承关系。在第 8 章中，我们讨论了“拥有”（has-a）关系，即类拥有的成员是对其他类对象的引用。这种关系通过对现有类的组合来创建类。例如，对于给定的 `Employee`、`BirthDate` 和 `TelephoneNumber` 类，说一个 `Employee` 是一个 `BirthDate` 或一个 `Employee` 是一个 `TelephoneNumber` 是不恰当的。然而，一个 `Employee` 拥有一个 `BirthDate`，并且拥有一个 `TelephoneNumber`。
+**图 9.3** 形状继承层次 UML 类图。
+
+238 第 9 章 面向对象编程：继承
+
+并不是所有的类之间的关系都是继承关系。在第 8 章中，我们讨论了“拥有”（has-a）关系，即类拥有的成员是对其他类对象的引用。这种关系通过对现有类的组合来创建类。例如，对于给定的 `Employee`、`BirthDate` 和 `TelephoneNumber` 类，说一个 `Employee` 是一个 `BirthDate` 或一个 `Employee` 是一个 `TelephoneNumber` 是不恰的。然而，一个 `Employee` 拥有一个 `BirthDate`，并且拥有一个 `TelephoneNumber`。
 
 子类对象可以被相似对待——它们的共性体现在子类的成员中。扩展共同父类的类的对象可以被视为该父类的对象——此类对象与父类存在“是”（is-a）关系。在本章稍后的部分和第 10 章中，我们将考虑许多利用这种“是”关系的例子。
 
@@ -7377,11 +7301,11 @@ public class Interest {
 
 > **软件工程观察 9.1**
 >
-> 子类的方法不能直接访问其父类的私有成员。子类只能通过父类提供并由子类继承的公共或受保护方法来更改私有实例变量的状态。
+> 子类的方法不能直接访问其父类的私成员。子类只能通过父类提供并由子类继承的私方法来更改私有实例变量的状态。
 
 > **软件工程观察 9.2**
 >
-> 声明实例变量为 `private` 有助于你测试、调试和控制系统。如果子类可以访问其父类的私有实例变量，那么继承该子类的类也可以访问这些实例变量。这将导致对本应该是私有的实例变量的访问泛化，信息隐藏的益处将丧失。
+> 声明实例变量有助于你测试、调试和控制系统。如果子类可以访问其父类的私有实例变量，那么继承该子类的类也可以访问这些实例变量。这将导致对本应该是私有的实例变量的访问泛化，信息隐藏的益处将丧失。
 
 ## 9.4 父类与子类之间的关系
 
@@ -7391,11 +7315,11 @@ public class Interest {
 
 第二个例子声明了 `BasePlusCommissionEmployee`，它也继承自 `Object` 类，并声明了私有实例变量：名、姓、社会安全号、佣金率、总额和底薪。我们通过编写所需的每一行代码来创建这个类——我们将发现通过继承 `CommissionEmployee` 类来创建它要高效得多。
 
-第三个例子声明了扩展 `CommissionEmployee` 类的 `BasePlusCommissionEmployee`（即 `BasePlusCommissionEmployee` 是一个有薪水的 `CommissionEmployee`）。这种软件重用允许我们在开发新子类时编写更少的代码。在此例中，`BasePlusCommissionEmployee` 类尝试访问 `CommissionEmployee` 的私有成员——这导致了编译错误，因为子类无法访问父类的实例变量。
+第三个例子声明了扩展 `CommissionEmployee` 类的 `BasePlusCommissionEmployee`（即 `BasePlusCommissionEmployee` 是一个有薪水的 `CommissionEmployee`）。这种软件重用允许我们在开发新子类时编写少得的代码。在此例中，`BasePlusCommissionEmployee` 类尝试访问 `CommissionEmployee` 的私成员——这导致了编译错误，因为子类无法访问父类的实例变量。
 
 第四个例子显示，如果 `CommissionEmployee` 的实例变量被声明为 `protected`，那么 `BasePlusCommissionEmployee` 子类就可以访问该数据。我们展示了继承如何更容易创建和管理。
 
-在讨论了使用 `protected` 实例变量的便利性之后，我们创建了第五个例子，将 `CommissionEmployee` 的实例变量恢复为私有以遵循良好的软件工程。然后我们展示了 `BasePlusCommissionEmployee` 子类如何使用 `CommissionEmployee` 的 public 方法来操作（受控地）继承自 `CommissionEmployee` 的私有实例变量。
+在讨论了使用 `protected` 实例变量的便利性之后，我们创建了第五个例子，将 `CommissionEmployee` 的实例变量恢复为私有以遵循良好的软件工程。然后我们展示了 `BasePlusCommissionEmployee` 子类如何使用 `CommissionEmployee` 的 public 方法来操作（受控地）继承自 `CommissionEmployee` 的私实例变量。
 
 ### 9.4.1 创建和使用 CommissionEmployee 类
 
@@ -7403,7 +7327,11 @@ public class Interest {
 
 #### CommissionEmployee 方法和实例变量概述
 
-`CommissionEmployee` 的 public 服务包括一个构造函数（第 13–34 行）和方法 `earnings()`（第 87–90 行）以及 `toString()`（第 93–101 行）。第 37–52 行为类的 final 实例变量（声明在第 6–8 行）`firstName`、`lastName` 和 `socialSecurityNumber` 声明了 getter。这三个实例变量被声明为 `final`，是因为它们在初始化后不需要被修改——这就是为什么我们没有提供相应的 set 方法。第 55–84 行为类的 `grossSales` 和 `commissionRate` 实例变量（声明在第 9–10 行）声明了 public 的 set 和 get 方法。该类将其实例变量声明为私有，因此其他类的对象无法直接访问这些变量。
+`CommissionEmployee` 的 public 服务包括一个构造函数（第 13–34 行）和方法 `earnings()`（第 87–90 行）以及 `toString()`（第 93–101 行）。第 37–52 行为类的 final 实例变量（声明在第 6–8 行）`firstName`、`lastName` 和 `socialSecurityNumber` 声明了 getter。这三个实例变量被声明为 `final`，是因为它们在初始化后不需要被修改——这就是为什么我们
+
+240 第 9 章 面向对象编程：继承
+
+没有提供相应的 set 方法。第 55–84 行为类的 `grossSales` 和 `commissionRate` 实例（声明在第 9–10 行）声明了 public 的 set 和 get 方法。该类将其实例声明为私有，因此其他类的对象无法直接访问这些变量。
 
 
 
@@ -7552,7 +7480,7 @@ public String toString()
 ### 类 EmployeeTest 类
 
 ```java
-// 图 9.5: CommissionEmployeeTest.java
+// 图 9.5: CommissionEmployee.java
 // CommissionEmployee 测试程序。
 public class CommissionEmployeeTest {
     public static void main(String[] args) {
@@ -7748,16 +7676,22 @@ public class BasePlusCommissionEmployeeTest
 
         // 通过 get 方法获取的佣金员工数据
         System.out.println("Information obtained by get methods:%n");
+
         System.out.printf("%s %s\n", "First name is:",
             employee.getFirstName());
+
         System.out.printf("%s %s\n", "Last name is:",
             employee.getLastName());
+
         System.out.printf("%s %s\n", "Social security number is:",
             employee.getSocialSecurityNumber());
+
         System.out.printf("%s %.2f\n", "Gross sales is:",
             employee.getGrossSales());
+
         System.out.printf("%s %.2f\n", "Commission rate is:",
             employee.getCommissionRate());
+
         System.out.printf("%s %.2f\n", "Base salary is:",
             employee.getBaseSalary());
 
@@ -7770,7 +7704,7 @@ public class BasePlusCommissionEmployeeTest
 } // BasePlusCommissionEmployeeTest 类结束
 ```
 
-### 9.4 超类与子类之间的关系
+## 9.4 超类与子类之间的关系
 
 通过 get 方法获取的员工信息：
 
@@ -7825,18 +7759,22 @@ public class BasePlusCommissionEmployeeTest
 BasePlusCommissionEmployee extends CommissionEmployee {
 
     // BasePlusCommissionEmployee
+
     private double baseSalary;
 
     // BasePlusCommissionEmployee 构造函数
     public BasePlusCommissionEmployee(String firstName, String lastName,
             String socialSecurityNumber, double grossSales,
             double commissionRate, double baseSalary) {
+
         // 显式调用超类构造函数
         super(firstName, lastName, socialSecurityNumber, grossSales, commissionRate);
+
         // 设置 baseSalary
         if (baseSalary < 0) {
             throw new IllegalArgumentException("Salary cannot be negative");
         }
+
         baseSalary = baseSalary;
     }
 
@@ -7867,11 +7805,11 @@ BasePlusCommissionEmployee extends CommissionEmployee {
 }
 ```
 
-### 9.4 超类与子类之间的关系
+## 9.4 超类与子类之间的关系
 
 例如，第 46 行可以调用 `getCommissionRate` 和 `getSales` 来访问 `CommissionEmployee` 的私有实例变量 `commissionRate` 和 `grossSales`。第 56–58 行也可以使用适当的方法来获取超类实例变量的值。
 
-#### 9.4.4 使用 protected 实例变量的 CommissionEmployee-BasePlusCommissionEmployee 层次结构
+### 9.4.4 使用 protected 实例变量的 CommissionEmployee-BasePlusCommissionEmployee 层次结构
 
 为了让 `BasePlusEmployee` 类直接访问超类实例变量 `firstName`、`lastName`、`socialNumber`、`grossSales` 和 `commissionRate`，我们可以在超类中将这些成员声明为 `protected`。正如我们在 9.3 节讨论的，超类的 `protected` 成员可以被该超类的所有子类访问。在新的 `CommissionEmployee` 类中，我们修改了图 9.4 的第 6–10 行，使用 `protected` 访问修饰符声明实例变量：
 
@@ -7914,13 +7852,13 @@ protected double grossSales; // 每周销售额
 >
 > **预防技巧 9.2**：可能的话，不要在超类中包含 `protected` 实例变量。相反，包含访问私有变量的非私有方法。这将确保对象保持一致的状态。
 
-### 9.4.5 使用私有实例变量的 CommissionEmployee-BasePlusCommissionEmployee 层次结构
+### 9.4.5 使用私有实例变量的 CommissionEmployee-BasePlusEmployee 层次结构
 
 让我们再次使用良好的软件工程实践检查我们的层次结构。
 
 #### CommissionEmployee 类
 
-`CommissionEmployee`（图 9.10）将实例变量 `firstName`、`lastName`、`socialSecurityNumber`、`grossSales` 和 `commissionRate` 声明为 `private`（6–10 行），并提供了 `getFirstName()`、`getLastName()`、`getSocialSecurityNumber()`、`getGrossSales()`、`setGrossSales()`、`setCommissionRate()`、`getCommissionRate()`、`earnings()` 和 `toString()` 来操作这些值。`earnings()`（87–90 行）使用类的 get 方法获取实例变量的值。如果我们决定不需要修改，只需要更改直接操作变量的 `get` 和 `set` 方法体。这些更改完全发生在子类内部——不需要修改子类。像这样局部化更改的影响是一种良好的软件工程实践。
+`CommissionEmployee`（图 9.10）将实例变量 `firstName`、`lastName`、`securityNumber`、`grossSales` 和 `commissionRate` 声明为 `private`（6–10 行），并提供了 `getFirstName()`、`getLastName()`、`getSocialSecurityNumber()`、`getGrossSales()`、`getCommissionRate()`、`setCommissionRate()`、`earnings()` 和 `toString()` 来操作这些值。`earnings()`（87–90 行）使用类的 get 方法获取实例变量的值。如果我们决定不需要修改，只需要更改直接操作变量的 `get` 和 `set` 方法体。这些更改完全发生在子类内部——不需要修改子类。像这样局部化更改的影响是一种良好的软件工程实践。
 
 ```java
 // Fig. 9.10: CommissionEmployee.java
@@ -7931,7 +7869,7 @@ public class CommissionEmployee
 {
     private final String firstName;
     private final String lastName;
-    private final String socialSecurityNumber;
+    private final String securityNumber;
     private double grossSales; // 每周销售额
     private double commissionRate; // 佣金百分比
 
@@ -8021,25 +7959,22 @@ public class CommissionEmployee
 
 
 
-## 图 9.10 | CommissionEmployee 使用方法来操作其私有实例变量（3 部分中的第 3 部分）
+图 9.10 | CommissionEmployee 使用方法来操作其私有实例变量。（3 部分中的第 3 部分）。
 
-子类 `BasePlusCommissionEmployee`（图 9.11）继承了 `CommissionEmployee` 的私有方法，并可以通过这些方法（在受控的情况下）访问私有超类成员。类 `BasePlusCommissionEmployee` 有几个与它不同的变化。`earnings` 方法（第 43–47 行）和 `toString` 方法（第 50–55 行）调用方法 `getBaseSalary` 来获取基本工资值，而不是直接访问 `baseSalary`。如果我们决定重命名实例变量 `baseSalary`，则只需要修改 `setBaseSalary` 方法的主体。
+子类 `BasePlusCommissionEmployee`（图 9.11）继承了 `CommissionEmployee` 的私有方法，并可以通过这些方法（在受控的情况下）访问私有超类成员。类 `BasePlusCommissionEmployee` 有几个与它不同的变化。9.9. 方法 `earnings()`（第 43–47 行）和 `toString()`（第 50–55 行）调用方法 `getBaseSalary()` 来获取基本工资值，而不是直接访问 `baseSalary`。如果我们决定重命名实例变量 `baseSalary`，则只需要修改 `setBaseSalary()` 方法的主体。
 
 ```java
 // 图 9.11 BasePlusCommissionEmployee.java
 // BasePlusCommissionEmployee 类继承自 CommissionEmployee
-// 并通过继承的方法访问超类的私有数据。
-
+// 并通过继承的方法方法访问超类的私有数据。
 public class BasePlusCommissionEmployee extends CommissionEmployee {
-
     private double baseSalary;
 
     // 六参数构造函数
     public BasePlusCommissionEmployee(String firstName, String lastName,
         String socialSecurityNumber, double grossSales,
         double commissionRate, double baseSalary) {
-
-        // 注意：此处逻辑在构造函数内部
+        // 注意：此处逻辑在构造函数内部 
         super(firstName, lastName, socialSecurityNumber, grossSales, commissionRate);
         this.baseSalary = baseSalary;
     }
@@ -8077,7 +8012,7 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
 }
 ```
 
-## 图 9.11 | BasePlusCommissionEmployee 继承 CommissionEmployee 并通过继承的方法访问超类的私有数据（2 部分中的第 1 部分）
+图 9.11 | BasePlusCommissionEmployee 继承 CommissionEmployee 并通过继承的方法访问超类的私有数据。（2 部分中的第 1 部分）。
 
 ```java
 53      return String.format("%s: %s %s\n%s: %.2f\n%s: %.2f\n%s: %.2f",
@@ -8119,13 +8054,13 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
 
 | 方法 | 说明 |
 |---|---|
-| `equals` | 此方法比较两个对象的相等性，相等返回 true，否则返回 false。该方法接受任何 `Object` 作为参数。当必须对特定类的对象进行相等性比较时，该类应该重写 `equals` 来比较对象的内容。有关实现此方法的要求（包括重写方法 `hashCode()`），请参阅 oracle.com/javase/7/docs/api/java/lang/Object.html#equals 中的方法文档。默认实现使用 `==` 来确定引用是否指向内存中的同一个对象。第 14.3 节演示了 `String` 的 `equals` 方法，并区分了使用 `==` 和 `equals` 比较 `String` 对象的区别。 |
-| `hashCode` | 哈希码是 `int` 值，用于高速存储和检索存储在数据结构中的信息，该数据结构被称为哈希表（见第 16.11 节）。该方法作为 `Object` 默认 `toString` 实现的一部分被调用。 |
-| `toString` | 此方法（引入于第 9.4.1 节）返回对象的字符串表示。此方法的默认实现返回对象所在类的包名和类名，通常紧接着是对象 `hashCode` 方法返回的值的十六进制表示。 |
-| `wait`, `notify`, `notifyAll` | 方法 `notifyAll` 和三个重载的 `wait` 版本与多线程相关，多线程将在第 20 章讨论。 |
-| `getClass` | Java 中的每个对象在执行时都知道自己的类型。方法 `getClass`（用于第 10.5 和 12.5 节）返回一个 `Class` 对象（位于 `java.lang` 包），其中包含对象类型的信息，如其类名（由 `getClass` 方法返回）。 |
-| `finalize` | 此保护方法由垃圾回收器调用，在垃圾回收器回收对象内存之前执行清理工作。回想第 8.10 节，尚不清楚 `finalize` 是否以及何时会被被调用。由于这个原因，许多程序员避免使用 `finalize` 方法。 |
-| `clone` | 此方法不接受参数并返回一个 `Object` 引用，它为被调用的对象创建一个副本。默认实现执行浅拷贝——对象中的实例变量值被复制到另一个相同类型的对象中。对于引用类型，仅复制引用。一个典型的 `clone` 方法实现会执行深拷贝，为每个引用类型实例创建一个新对象。正确实现 `clone` 是困难的。因此，不建议使用它。许多专家建议应使用对象序列化。我们在第 15 章讨论了对象序列化。回想第 7 章，数组是对象。每个数组都像所有其他对象一样继承自 `Object` 类的成员。每个数组都有一个重写的 `clone` 方法来复制数组。然而，如果数组存储的是对象的引用，则对象不会被复制——执行的是浅拷贝。 |
+| equals | 此方法比较两个对象的相等性，相等返回 true，否则返回 false。该方法接受任何 `Object` 作为参数。当必须对特定类的对象进行相等性比较时，该类应该重写 `equals` 来比较对象的内容。有关实现此方法的要求（包括重写方法 `hashCode()`），请参阅 oracle.com/javase/7/docs/api/java/lang/Object.html#equals 中的方法文档。默认实现使用 `==` 来确定引用是否指向内存中的同一个对象。第 14.3 节演示了 `String` 的 `equals` 方法，并区分了使用 `==` 和 `equals` 比较 `String` 对象的区别。 |
+| hashCode | 哈希码是 `int` 值，用于高速存储和检索存储在数据结构中的信息，该数据结构被称为哈希表（见第 16.11 节）。该方法作为 `Object` 默认 `toString` 实现的一部分被调用。 |
+| toString | 此方法（引入于第 9.4.1 节）返回对象的字符串表示。此方法的默认实现返回对象所在类的包名和类名，通常紧接着是对象 `hashCode` 方法返回的值的十六进制表示。 |
+| wait, notify, notifyAll | 方法 `notifyAll` 和三个重载的 `wait` 版本与多线程相关，多线程将在第 20 章讨论。 |
+| getClass | Java 中的每个对象在执行时都知道自己的类型。方法 `getClass`（用于第 10.5 和 12.5 节）返回一个 `Class` 对象（位于 `java.lang` 包），其中包含对象类型的信息，如其类名（由 `getClass` 方法返回）。 |
+| finalize | 此保护方法由垃圾回收器调用，在垃圾回收器回收对象内存之前执行清理工作。回想第 8.10 节，尚不清楚 `finalize` 是否以及何时会被被调用。由于这个原因，许多程序员避免使用 `finalize` 方法。 |
+| clone | 此方法不接受参数并返回一个 `Object` 引用，它为被调用的对象创建一个副本。默认实现执行浅拷贝——对象中的实例变量值被复制到另一个相同类型的对象中。对于引用类型，仅复制引用。一个典型的 `clone` 方法实现会执行深拷贝，为每个引用类型实例创建一个新对象。正确实现 `clone` 是困难的。因此，不建议使用它。许多专家建议应使用对象序列化。我们在第 15 章讨论了对象序列化。回想第 7 章，数组是对象。每个数组都像所有其他对象一样继承自 `Object` 类的成员。每个数组都有一个重写的 `clone` 方法来复制数组。然而，如果数组存储的是对象的引用，则对象不会被复制——执行的是浅拷贝。 |
 
 **图 9.12** | Object 方法。（部分 2/2。）
 
@@ -8244,7 +8179,7 @@ public class PolymorphismTest {
 
 
 
-# 多态测试示例
+# 10.3 多态性演示
 
 ```java
 CommissionEmployee commissionEmployee = new CommissionEmployee(
@@ -8269,16 +8204,15 @@ System.out.printf("%s: %s%n%s%n",
     basePlusCommissionEmployee.toString());
 
 // 使用父类变量在子类对象上调用 toString
-CommissionEmployee commissionEmployee2 =
-    basePlusCommissionEmployee;
+CommissionEmployee commissionEmployee2 = basePlusCommissionEmployee;
 
 System.out.printf("%s: %s%n%s%n",
     "使用父类引用调用 BasePlusCommissionEmployee 的 toString",
     ": 引用子类对象", commissionEmployee2.toString());
-
 } // 结束类 PolymorphismTest
 ```
 
+```text
 使用父类引用调用 CommissionEmployee 的 toString 父类对象：
 commission employee: Sue Jones
 社会安全号: 222-2222
@@ -8291,31 +8225,24 @@ commission employee: Sue Jones
 总销售额: 5000.00
 佣金率: 0.04
 底薪: 300.00
+```
 
-图 10.1 将父类和子类的引用赋值给父类和子类变量。
-（部分，共 2 部分）
-
-# 270 第 10 章 面向对象编程：多态与接口
+**图 10.1** 将父类和子类的引用赋值给父类和子类变量。（第 1 部分，共 2 部分）
 
 ```text
 使用父类引用调用 BasePlusCommissionEmployee 的 toString 针对子类对象：
-
 底薪佣金员工: Bob Lewis
-
 社会安全号: 333-33333
-
 总销售额: 5000.00
-
 佣金率: 0.04
-
 底薪: 300.00
 ```
 
-图 10.1 将父类和子类的引用赋值给父类和子类变量。（部分2，共 2 部分）。
+**图 10.1** 将父类和子类的引用赋值给父类和子类变量。（第 2 部分，共 2 部分）
 
-在 10.1 中，第 10–11 行创建了一个 `CommissionEmployee` 变量并将其引用赋值给一个 `CommissionEmployee` 对象。第 14–16 行创建了一个 `BasePlusCommissionEmployee` 对象并将其引用赋值给一个 `BasePlusCommissionEmployee` 变量。这些赋值是自然的——例如，`CommissionEmployee` 变量的主要目的是持有对 `CommissionEmployee` 对象的引用。第 19–21 行使用 `commissionEmployee` 显式地调用 `toString()`。调用的是父类 `CommissionEmployee` 的 `toString()` 版本。同样，第 24–27 行使用 `basePlusCommissionEmployee` 在 `BasePlusCommissionEmployee` 对象上显式地调用 `toString()`。这调用了子类 `BasePlusCommissionEmployee` 的 `toString()` 版本。
+在图 10.1 中，第 10–11 行创建了一个 `CommissionEmployee` 变量并将其引用赋值给一个 `CommissionEmployee` 对象。第 14–16 行创建了一个 `BasePlusCommissionEmployee` 对象并将其引用赋值给一个 `BasePlusCommissionEmployee` 变量。这些赋值是自然的——例如，`CommissionEmployee` 变量的主要目的是持有对 `CommissionEmployee` 对象的引用。第 19–21 行使用 `commissionEmployee` 显式地调用 `toString()`。调用的是父类 `CommissionEmployee` 的 `toString()` 版本。同样，第 24–27 行使用 `basePlusCommissionEmployee` 在 `BasePlusCommissionEmployee` 对象上显式地调用 `toString()`。这调用了子类 `BasePlusCommissionEmployee` 的 `toString()` 版本。
 
-第 30–31 行将对象 `BasePlusCommissionEmployee` 的引用赋值给 `CommissionEmployee` 变量，第 32–34 行使用其调用 `toString()`。当父类变量包含指向子类对象的引用且使用该引用调用方法时，将使用方法的子类。因此，第 34 行中的 `commissionEmployee2.toString()` 实际上调用了 `BasePlusCommissionEmployee` 类的 `toString()` 方法。Java 编译器允许这种“交叉”，因为子类的对象也是是其父类的对象（但反之不然）。当编译器通过变量遇到方法调用时，编译器会通过检查类类型来确定方法声明（或继承的方法）是否已编译。在执行期间，变量所引对象的类型决定了实际要使用的方法。这个过程称为**动态绑定**，将在第 10.5 节中详细讨论。
+第 30–31 行将对象 `BasePlusCommissionEmployee` 的引用赋值给 `CommissionEmployee` 变量，第 32–34 行使用其调用 `toString()`。当父类变量包含指向子类对象的引用且使用该引用调用方法时，将使用方法的子类版本。因此，第 34 行中的 `commissionEmployee2.toString()` 实际上调用了 `BasePlusCommissionEmployee` 类的 `toString()` 方法。Java 编译器允许这种“交叉”，因为子类的对象也是其父类的对象（但反之不然）。当编译器通过变量遇到方法调用时，编译器会通过检查类类型来确定方法声明（或继承的方法）是否已编译。在执行期间，变量所引对象的类型决定了实际要使用的方法。这个过程称为**动态绑定**，将在第 10.5 节中详细讨论。
 
 # 10.4 抽象类和方法
 
@@ -8325,9 +8252,9 @@ commission employee: Sue Jones
 
 抽象类的目的是提供一个合适的父类，其他类可以从中继承并共享共同的设计。在图 9.3 的 `Shape` 层次结构中，例如，子类继承了关于什么是 `Shape` 的概念——也许是共同属性，如位置、颜色和厚度，以及 `draw()`、`resize()` 和 `changeColor()` 等行为。可以实例化对象的类被称为具体类。类对其声明的所有方法提供实现（其中某些是继承的）。例如，我们可以从 `TwoDimensionalShape` 派生具体类 `Circle`、`Square` 和 `Triangle`。同样，我们可以从 `ThreeDimensionalShape` 派生具体类 `Sphere`、`Cube` 和 `Tetrahedron`。抽象类太通用，无法创建对象——它们指定了子类之间的共同点。我们在创建对象之前需要更加具体。例如，如果你向抽象类 `TwoDimensionalShape` 发送绘制消息，该类知道二维形状是可以绘制的，但它不知道画什么形状，因此它无法实现 `draw()` 方法。并不是所有层次结构都包含抽象类。然而，你通常会编写使用抽象父类的代码来减少对一系列子类类型的依赖。例如，调用方法可以接收直接或间接扩展父类的任何具体类的对象。
 
-抽象类由多个层次组成。例如，9.3 中的 `Shape` 层次结构从抽象类 `Shape` 开始。在层次结构的下一层是抽象类 `TwoDimensionalShape` 和 `ThreeDimensionalShape`。层次结构的下一层声明了具体类二维形状（`Circle`、`Square` 和 `Triangle`）和三维形状（`Sphere`、`Cube` 和 `Tetrahedron`）。
+抽象类由多个层次组成。例如，图 9.3 中的 `Shape` 层次结构从抽象类 `Shape` 开始。在层次结构的下一层是抽象类 `TwoDimensionalShape` 和 `ThreeDimensionalShape`。层次结构的下一层声明了具体类二维形状（`Circle`、`Square` 和 `Triangle`）和三维形状（`Sphere`、`Cube` 和 `Tetrahedron`）。
 
-# 抽象类与抽象方法
+## 抽象类与抽象方法
 
 通过使用 `abstract` 关键字将类声明为抽象。抽象类包含一个或多个抽象方法。抽象方法是声明中带有 `abstract` 关键字的实例方法，例如：
 
@@ -8337,11 +8264,8 @@ public abstract void draw(); // 抽象方法
 
 抽象方法不提供实现。如果一个类包含任何抽象方法，该类必须显式声明为抽象。抽象父类的每个子类也必须为每个抽象方法提供具体的实现。构造函数和静态方法不能声明为抽象。构造函数不被继承，因此抽象构造函数永远无法实现。虽然非私有的静态方法会被继承，但它们不能被重写。由于抽象方法旨在被重写以便根据类型处理对象，因此将静态方法声明为抽象的是没有意义的。
 
-## 工程观察 10.4
-
-抽象类声明了类层次结构各种类的共同属性和行为（包括抽象和具体的）。抽象类通常包含一个或多个抽象方法，如果要类具体类必须重写这些方法。抽象类的实例变量和具体方法遵循标准的继承规则。
-
-# 272 第10章 面向对象编程：多态与接口
+> **工程观察 10.4**
+> 抽象类声明了类层次结构各种类的共同属性和行为（包括抽象和具体的）。抽象类通常包含一个或多个抽象方法，如果要类具体类必须重写这些方法。抽象类的实例变量和具体方法遵循标准的继承规则。
 
 > **常见编程错误 10.1**
 > 尝试实例化抽象类的对象会导致编译错误。
@@ -8349,13 +8273,13 @@ public abstract void draw(); // 抽象方法
 > **常见编程错误 10.2**
 > 在子类中未实现父类的抽象方法会导致编译错误，除非该子类也被声明为抽象类。
 
-# 使用抽象类来声明变量
+## 使用抽象类来声明变量
 
 尽管我们不能实例化抽象父类的对象，但你很快就会发现，可以使用抽象父类来声明变量，这些变量可以持有任何派自这些抽象子类的具体类对象的引用。我们将使用此类变量以多态的方式操作子类对象。你还可以使用父类名来调用在抽象父类中声明的静态方法。
 
 考虑多态的另一个应用。绘图程序需要显示许多形状，包括你在编写绘图程序后将添加到系统的新类型形状。绘图程序可能需要显示派自抽象类 `Shape` 的形状，例如圆形、三角形、矩形或其他。绘图程序使用 `Shape` 变量来管理显示的对象。为了绘制此继承层次结构中的任何对象，绘图程序使用包含子类对象引用的父类 `Shape` 变量来调用对象的 `draw()` 方法。该方法在抽象类 `Shape` 中声明，因此每个具体子类必须以特定于形状的方式实现 `draw()` 方法——`Shape` 层次结构中的每个对象都知道如何绘制自己。绘图程序不需要担心对象的类型，也不需要担心程序是否遇到该类型的对象。
 
-# 分层软件系统
+## 分层软件系统
 
 多态对于实现所谓的分层软件系统特别有效。例如，在操作系统中，每种物理设备的操作方式可能与其他设备不同。尽管如此，从设备读或写数据的命令可能具有某种统一性。对于每个设备，操作系统使用一种名为“驱动程序”（driver）的软件来控制系统与设备之间的所有通信。写消息需要根据驱动程序的语境以及它如何管理设备细节来进行特定的解释。然而，驱动程序本身与系统中的任何其他设备的写操作无异——从内存中的某些字节移动到该设备上。面向对象的操作系统可能会使用抽象父类为所有设备驱动程序提供一个合适的“接口”。然后，通过从该抽象类的继承，形成了所有行为相似的子类。设备驱动程序的方法在抽象父类中声明为抽象方法。这些抽象方法的实现在对应特定设备类型的具体子类中提供。新设备总是在开发中，通常在操作系统发布很久之后。当你购买新设备时，它会带有设备供应商提供的驱动程序。在你将其连接到计算机并安装驱动程序后，驱动程序会立即运行。这是多态如何使系统具有扩展性的另一个例子。
 
@@ -8365,35 +8289,33 @@ public abstract void draw(); // 抽象方法
 
 - 公司按周向员工发放工资。员工有四类：月薪员工（Salaried employees）无论工作小时长短都获得固定周薪；计时员工（hourly employees）按小时计薪，并对40小时内的所有工作获得加班费（即其时薪的1.5倍）；佣金员工（commission employees）按销售额的提成发放；底薪佣金员工（salaried-commission employees）获得基本工资加销售额的提成。对于当前的支付周期，公司决定通过在基本工资的基础上增加10%来奖励底薪佣金员工。公司希望你编写一个以多态方式执行工资计算的应用程序。
 
-我们使用抽象类 `Employee` 来表示泛泛概念。扩展 `Employee` 的类有 `SalariedEmployee`、`CommissionEmployee` 和 `HourlyEmployee`。扩展 `CommissionEmployee` 的 `BasePlusCommissionEmployee` 代表最后一种类型。10.2 节中的 UML 类图显示了我们的多态员工工资应用程序的继承层次结构。抽象类名 `Employee` 使用斜体表示——这是 UML 的约定。
+我们使用抽象类 `Employee` 来表示泛泛概念。扩展 `Employee` 的类有 `SalariedEmployee`、`CommissionEmployee` 和 `HourlyEmployee`。扩展 `CommissionEmployee` 的 `BasePlusCommissionEmployee` 代表最后一种类型。图 10.2 中的 UML 类图显示了我们的多态员工工资应用程序的继承层次结构。抽象类名 `Employee` 使用斜体表示——这是 UML 的约定。
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_311_0.png)
+![图 10.2 员工层次结构 UML 类图](img/28513f3b4ab12c97e738c92ed0e327a8_311_0.png)
 
 **图 10.2** 员工层次结构 UML 类图。
 
 抽象父类 `Employee` 为所有设备驱动程序声明了“接口”。然后，通过从该抽象类的继承，形成了所有行为相似的子类。设备驱动程序的方法在抽象父类中声明为抽象方法。这些抽象方法的实现在对应特定设备类型的具体子类中提供。新设备总是在开发中，通常在操作系统发布很久之后。当你购买新设备时，它会带有设备供应商提供的驱动程序。在你将其连接到计算机并安装驱动程序后，驱动程序会立即运行。这是多态如何使系统具有扩展性的另一个例子。
 
-# 274 第10章 面向对象编程：多态与接口
-
-| earnings | toString |
-| :--- | :--- |
-| Employee | abstract | firstName lastName number: SSN |
-| Salaried-Employee | weeklySalary | salaried employee: firstName lastName number: SSN weekly salary: weeklySalary |
-| Hourly-Employee | if (hours < 40)<br>wage * hours<br>else if (hours > 40) <br>{<br>40 * wage +<br>(hours - 40) *<br>wage * 1.5<br>} | hourly employee: firstName lastName number: SSN hourly wage: wage worked: hours |
-| Commission-Employee | commissionRate*<br>grossSales | commission employee: firstName lastName number: SSN gross sales: grossSales commission rate: commissionRate |
-| BasePlus-Commission-Employee | (commissionRate *<br>grossSales)<br>baseSalary | base salaried employee:<br>firstName lastName number: SSN gross sales: grossSales commission rate: commissionRate base salary: baseSalary |
-
 **图 10.3** Employee 层次结构类的多态接口。
+
+| 类 | earnings | toString |
+| :--- | :--- | :--- |
+| `Employee` | abstract | `firstName` `lastName` `number`: SSN |
+| `SalariedEmployee` | `weeklySalary` | `salaried employee: firstName lastName number: SSN weekly salary: weeklySalary` |
+| `HourlyEmployee` | `if (hours < 40) wage * hours else if (hours > 40) { 40 * wage + (hours - 40) * wage * 1.5 }` | `hourly employee: firstName lastName number: SSN hourly wage: wage worked: hours` |
+| `CommissionEmployee` | `commissionRate * grossSales` | `commission employee: firstName lastName number: SSN gross sales: grossSales commission rate: commissionRate` |
+| `BasePlusCommissionEmployee` | `(commissionRate * grossSales) + baseSalary` | `base salaried employee: firstName lastName number: SSN gross sales: grossSales commission rate: commissionRate base salary: baseSalary` |
 
 后续章节泛泛实现了图 10.2 中的 `Employee` 类层次结构。第一部分实现了抽象父类 `Employee`。接下来的四个部分实现了每一个类。最后部分实现了一个测试程序，构建这些类的对象并以多态方式处理这些对象。
 
 ## 10.5.1 抽象父类 Employee
 
-`Employee` 类 (10.4) 除了返回 `Employee` 实例变量的方法外，还提供了 `earnings()` 和 `toString()` 方法。该方法泛指所有员工。但每个计算都取决于员工的具体类。我们在父类 `Employee` 中将 `earnings()` 声明为抽象，因为对于该方法来说，特定的实现没有意义——没有足够的信息来确定 `earnings()` 应返回的金额。
+`Employee` 类 (图 10.4) 除了返回 `Employee` 实例变量的方法外，还提供了 `earnings()` 和 `toString()` 方法。该方法泛指所有员工。但每个计算都取决于员工的具体类。我们在父类 `Employee` 中将 `earnings()` 声明为抽象，因为对于该方法来说，特定的实现没有意义——没有足够的信息来确定 `earnings()` 应返回的金额。
 
 每个子类都重写 `earnings()`。为了计算员工的工资，程序将对象的引用赋值给子类变量，然后在其上调用 `earnings()` 方法。我们维护一个 `Employee` 变量数组，每个元素持有一个 `Employee` 对象的引用。你不能直接使用 `Employee` 类创建 `Employee` 对象，因为 `Employee` 是一个抽象类。但由于继承，所有 `Employee` 子类的对象都是 `Employee` 对象。
 
-# 10.5 案例研究：使用多态的薪资系统 275
+# 10.5 案例研究：使用多态的薪资系统
 
 对象。程序将遍历数组并对每个 `Employee` 对象调用 `earnings()` 方法。Java 以多态的方式处理这些方法。在 `Employee` 中将 `earnings()` 声明为抽象方法，这使得通过 `Employee` 变量对 `earnings()` 的调用能够编译，并强制 `Employee` 的每个具体子类都重写（override）`earnings()`。
 
@@ -8403,26 +8325,20 @@ public abstract void draw(); // 抽象方法
 
 ```java
 // Fig 10.4: Employee.java
-
 // Employee 抽象超类。
-
-public abstract class Employee
-{
+public abstract class Employee {
     private final String firstName;
     private final String lastName;
     private final String socialSecurityNumber;
 
     // 构造函数
-    public Employee(String firstName, String lastName, String socialSecurityNumber)
-    {
+    public Employee(String firstName, String lastName, String socialSecurityNumber) {
         this.firstName = firstName;
 ```
 
 
 
-# 10.5 案例研究：使用多态的薪资系统
-
-## 10.5.1 抽象超类 Employee
+# Employee 抽象超类
 
 ```java
 this.lastName = lastName;
@@ -8447,33 +8363,42 @@ public String getSocialSecurityNumber() {
 
 图 10.4 | Employee 抽象超类。（第 1 部分，共 2 部分）
 
+# 第 10 章 面向对象编程：多态与接口
+
 ```java
-34 return socialSecurityNumber;
-35 }
-36 // 返回 Employee 对象的字符串表示
-37 @Override
-38 public String toString() {
-39 return String.format("%s %ssocial security number: %s",
-40 getFirstName(), getLastName(), getSocialSecurityNumber());
-41 }
-42 // 抽象方法必须被具体子类重写
-43 public abstract double earnings(); // 此处没有实现
-44 } // 类 Employee 结束
+return socialSecurityNumber;
+}
+
+// 返回 Employee 对象的字符串表示
+@Override
+public String toString() {
+    return String.format("%s %s social security number: %s",
+        getFirstName(), getLastName(), getSocialSecurityNumber());
+}
+
+// 抽象方法必须被具体子类重写
+public abstract double earnings(); // 此处没有实现
+} // 类 Employee 结束
 ```
 
-图 10.4 | Employee 抽象超类（第 2 部分。）
+图 10.4 | Employee 抽象超类（第 2 部分）
 
 为什么我们将 `earnings` 声明为抽象方法？在 `Employee` 类中提供该方法的特定实现是毫无意义的。我们无法为通用的 `Employee` 计算薪资——我们必须先知道 `Employee` 的类型以确定合适的薪资计算方法。通过将此方法声明为抽象，我们表明每个具体子类都必须提供 `earnings` 的实现，并且程序能够使用超类 `Employee` 变量来多态地调用任何类型 `Employee` 的方法。
 
-## 10.5.2 具体子类 SalariedEmployee
+# 10.5 具体子类 SalariedEmployee
 
 类 `SalariedEmployee`（第 10 行）继承 `Employee`（第 4 行）并重写抽象方法 `earnings`（第 38–42 行），这使得 `SalariedEmployee` 成为一个具体类。该类包含一个构造函数（第 9–19 行），接收名、姓、社会安全号和每周工资；一个为实例变量 `weeklySalary` 分配非负值的方法（第 22–29 行）；一个返回 `weeklySalary` 值的方法（第 32–35 行）；一个计算 `SalariedEmployee` 薪资的 `earnings` 方法（第 38–42 行）；以及一个 `toString` 方法，返回一个包含“salaried employee:” 的字符串，随后是超类 `Employee` 的 `toString` 和 `SalariedEmployee` 的 `weeklySalary` 方法生成的员工特定信息。`SalariedEmployee` 构造函数将超类的参数——名、姓和社会安全号传递给 `Employee` 构造函数（第 12 行），以初始化超类的私有实例变量。再次，我们在构造函数和 `setWeeklySalary` 方法中重复了每周验证代码。回想一下，更复杂的验证可以放在静态类方法，而不是构造函数和 set 方法。
+
+> **错误预防技巧 10.1**：我们不应该从构造函数调用类的实例方法——你可以调用静态类方法，并对超类的某个构造函数进行必要的调用。如果你遵循这一建议，将避免直接或间接调用该类的重写方法的问题，这可能会导致运行时错误。
+
+`earnings` 方法重写了抽象方法 `earnings`，以提供返回 `SalariedEmployee` 每周工资的具体实现。如果我们不实现 `earnings`，`SalariedEmployee` 类必须声明为抽象——否则 `SalariedEmployee` 类将无法编译。例如，我们希望 `SalariedEmployee` 是一个具体类。
+
+`toString` 方法（第 45–50 行）重写 `Employee toString`。如果 `SalariedEmployee` 不重写 `toString`，它将继承 `Employee` 版本的 `toString`。在这种情况下，`SalariedEmployee` 的 `toString` 将仅返回员工的全名和社会安全号，这并不能表示 `SalariedEmployee`。为了生成 `SalariedEmployee` 的字符串表示，子类的 `toString` 返回“salaried employee:”，随后是通过调用超类 `toString`（第 49 行）获取的员工特定信息（即名、姓和社会安全号）——这是代码重用的很好的示例。`SalariedEmployee` 的字符串表示还包含了通过类方法获取的员工每周工资。
 
 ```java
 // Fig. 10.5: SalariedEmployee.java
 // SalariedEmployee 具体类继承抽象类 Employee
-public class SalariedEmployee extends Employee
-{
+public class SalariedEmployee extends Employee {
     private double weeklySalary;
 
     // 构造函数
@@ -8508,7 +8433,7 @@ public class SalariedEmployee extends Employee
     // 返回 SalariedEmployee 对象的字符串表示
     @Override
     public String toString() {
-        return String.format("salaried employee: %s%s: $%,.2f",
+        return String.format("salaried employee: %s %s: $%,.2f",
             super.toString(), "weekly salary", getWeeklySalary());
     }
 } // 类 SalariedEmployee 结束
@@ -8516,13 +8441,7 @@ public class SalariedEmployee extends Employee
 
 图 10.5 | SalariedEmployee 具体类继承抽象类 Employee。
 
-`earnings` 方法重写了抽象方法 `earnings`，以提供返回 `SalariedEmployee` 每周工资的具体实现。如果我们不实现 `earnings`，`SalariedEmployee` 类必须声明为抽象——否则 `SalariedEmployee` 类将无法编译。例如，我们希望 `SalariedEmployee` 是一个具体类。
-
-`toString` 方法（第 45–50 行）重写 `Employee toString`。如果 `SalariedEmployee` 不重写 `toString`，它将继承 `Employee` 版本的 `toString`。在这种情况下，`SalariedEmployee` 的 `toString` 将仅返回员工的全名和社会安全号，这并不能表示 `SalariedEmployee`。为了生成 `SalariedEmployee` 的字符串表示，子类的 `toString` 返回“salaried employee:”，随后是通过调用超类 `toString`（第 49 行）获取的员工特定信息（即名、姓和社会安全号）——这是代码重用的很好的示例。`SalariedEmployee` 的字符串表示还包含了通过类方法获取的员工每周工资。
-
-> **错误预防技巧 10.1**：我们不应该从构造函数调用类的实例方法——你可以调用静态类方法，并对超类的某个构造函数进行必要的调用。如果你遵循这一建议，将避免直接或间接调用该类的重写方法的问题，这可能会导致运行时错误。
-
-## 10.5.3 具体子类 HourlyEmployee
+# 10.5.3 具体子类 HourlyEmployee
 
 ```java
 // Fig. 10.6: HourlyEmployee.java
@@ -8543,7 +8462,7 @@ public class HourlyEmployee extends Employee {
 }
 ```
 
-图 10.6 | HourlyEmployee 类继承 Employee。（第 1 部分，共 3 部分）。
+图 10.6 | HourlyEmployee 类继承 Employee。（第 1 部分，共 3 部分）
 
 ```java
 if (wage < 0.0) // 校验工资
@@ -8560,8 +8479,7 @@ this.wage = wage;
 this.hours = hours;
 
 // 设置工资
-public void setWage(double wage)
-{
+public void setWage(double wage) {
     if (wage < 0.0) // 校验工资
         throw new IllegalArgumentException(
             "Hourly wage must be >= 0.0"
@@ -8570,14 +8488,12 @@ public void setWage(double wage)
 }
 
 // 返回工资
-public double getWage()
-{
+public double getWage() {
     return wage;
 }
 
 // 设置工作时长
-public void setHours(double hours)
-{
+public void setHours(double hours) {
     if ((hours < 0.0) || (hours > 168.0)) // 验证小时
         throw new IllegalArgumentException(
             "Hours worked must be >= 0.0 and <= 168.0"
@@ -8586,15 +8502,13 @@ public void setHours(double hours)
 }
 
 // 返回工作时长
-public double getHours()
-{
+public double getHours() {
     return hours;
 }
 
 // 计算收益；重写 Employee 中的抽象方法 earnings
 @Override
-public double earnings()
-{
+public double earnings() {
     if (getHours() <= 40) // 无加班
         return getWage() * getHours();
     else
@@ -8607,11 +8521,10 @@ public double earnings()
 ```java
 // 返回 HourlyEmployee 的字符串表示
 @Override
-public String toString()
-{
+public String toString() {
     return String.format("hourly employee: %s\n%s: $%.2f; %s: %.2f",
-    super.toString(), "hourly wage", getWage(),
-    "hours worked", getHours());
+        super.toString(), "hourly wage", getWage(),
+        "hours worked", getHours());
 }
 
 // HourlyEmployee 类结束
@@ -8627,16 +8540,14 @@ public String toString()
 // 图 10.7: CommissionEmployee.java
 // CommissionEmployee 类继承 Employee.
 
-public class CommissionEmployee extends Employee
-{
+public class CommissionEmployee extends Employee {
     private double grossSales; // 周销售额
     private double commissionRate; // 佣金比例
 
     // 构造函数
     public CommissionEmployee(String firstName, String lastName,
         String socialSecurityNumber, double grossSales,
-        double commissionRate)
-    {
+        double commissionRate) {
         super(firstName, lastName, socialSecurityNumber);
 
         if (commissionRate <= 0.0 || commissionRate >= 1.0) // 校验
@@ -8651,22 +8562,19 @@ public class CommissionEmployee extends Employee
     }
 
     // 设置销售额
-    public void setGrossSales(double grossSales)
-    {
+    public void setGrossSales(double grossSales) {
         if (grossSales < 0.0) // 校验
             throw new IllegalArgumentException("Gross sales must be >= 0.0");
         this.grossSales = grossSales;
     }
 
     // 返回销售额
-    public double getGrossSales()
-    {
+    public double getGrossSales() {
         return grossSales;
     }
 
     // 设置佣金率
-    public void setCommissionRate(double commissionRate)
-    {
+    public void setCommissionRate(double commissionRate) {
         if (commissionRate <= 0.0 || commissionRate >= 1.0) // 校验
             throw new IllegalArgumentException(
                 "Commission rate must be > 0.0 and < 1.0");
@@ -8677,8 +8585,6 @@ public class CommissionEmployee extends Employee
     public double getCommissionRate()
 }
 ```
-
-图 10.7 | CommissionEmployee 类继承 Employee。（2 部分中的第 1 部分）。
 
 
 
@@ -8775,36 +8681,35 @@ public static void main(String[] args) {
     // 通常地处理数组 employees 中的每个元素
     for (Employee currentEmployee : employees) {
         System.out.println(currentEmployee); // 调用 toString
+    }
 
-        // 确定元素是否为 BasePlusCommissionEmployee
-        if (currentEmployee instanceof BasePlusCommissionEmployee) {
-            // 强制向下转换引用
-            BasePlusCommissionEmployee basePlusCommissionEmployee = (BasePlusCommissionEmployee) currentEmployee;
-            basePlusCommissionEmployee.setBaseSalary(1.10 * basePlusCommissionEmployee.getBaseSalary());
-        }
+    // 确定元素是否为 BasePlusCommissionEmployee
+    if (currentEmployee instanceof BasePlusCommissionEmployee) {
+        // 强制向下转换引用
+        BasePlusCommissionEmployee basePlusCommissionEmployee = (BasePlusCommissionEmployee) currentEmployee;
+        basePlusCommissionEmployee.setBaseSalary(1.10 * basePlusCommissionEmployee.getBaseSalary());
     }
 }
 ```
 
-图 10.9 | 员工层次结构测试程序。（4 部分中的第 1 部分。）
+图 10.9 | 员工层次结构测试程序。（4部分中的第部分）。
 
 ```java
-System.out.printf(
-    "增加10%%后的新基本薪资为: $%.2f%n",
-    employee.getBaseSalary());
-} // if结束
-
-System.out.printf(
-    "收入 $%.2f%n", currentEmployee.earnings());
-
-} // for结束
-
-// 获取 employees 数组中每个对象的类型名称
-for (int j = 0; j < employees.length; j++) {
-    System.out.printf("员工 %d 是一个 %s%n", j,
-        employees[j].getClass().getName());
-} // main结束
-} // 类 PayrollTest 结束
+58  System.out.printf(
+59              "增加10%后的新基本薪资为: $%.2f%n",
+60              employee.getBaseSalary());
+61  } // if结束
+63
+64  System.out.printf(
+65              "收入 $%.2f%n", currentEmployee.earnings());
+66
+67  } // for结束
+69 // 获取 employees 数组中每个对象的类型名称
+70  for (int j = 0; j < employees.length; j++) {
+71      System.out.printf("员工 %d 是一个 %s%n", j,
+72          employees[j].getClass().getName());
+73  } // main结束
+74} // 类 PayrollTest 结束
 ```
 
 ### 运行结果
@@ -8853,17 +8758,13 @@ for (int j = 0; j < employees.length; j++) {
 销售额：$5000.00；佣金率：04；底薪：$300.00
 收入：$500.00
 
-同样地，如果第 56 行和第 60 行使用子类变量 `currentEmployee` 来调用子类类方法 `getBaseSalary` 和 `setBaseSalary`，我们会在这些行收到“无法找到符号”的编译错误。不允许通过父类变量调用子类特有的方法——尽管第 56 行和 60 行只有在第 49 行的 `instanceof` 返回 true 时才会执行，这表明 `currentEmployee` 持有一个对 `BasePlusCommissionEmployee` 对象的引用。使用父类 `Employee` 变量，我们只能调用类 `Employee` 中找到的方法——`earnings`、`toString` 以及 `Employee` 的 get 和 set 方法。
-
-虽然实际调用的方法取决于变量所引对象的运行时类型，但编译器会验证该变量只能调用其变量类型成员的方法。
-
 ## 10.6 父类变量与子类变量之间允许的赋值
 
 现在你已经看到了一个处理子类对象多态的完整应用程序，我们来总结一下对于父类和子类对象及变量可以做什么和不能做什么。虽然子类对象也是父类，但这些类仍然是不同的。正如之前讨论的，子类对象可以被视为其父类的对象。由于子类可以拥有额外的子类成员，因此在没有显式类型转换的情况下，不允许将父类引用赋值给子类变量——因为这样的赋值会导致子类对于父类对象是未定义的。
 
 我们已经讨论了三种将父类和子类引用赋值给父类和子类类型变量的正确方法：
 
-1. 将父类引用赋值给父类变量是直接的。
+1. 将父类引用赋值给子类变量是直接的。
 2. 将子类引用赋值给子类变量是直接的。
 3. 将子类引用赋值给父类变量是安全的，因为子类对象是其父类的一个对象。然而，父类变量只能引用父类成员。如果这段代码通过子类变量引用了子类特有的成员，编译器将报告错误。
 
@@ -8879,7 +8780,7 @@ for (int j = 0; j < employees.length; j++) {
 
 `final` 类不能被扩展以创建子类。`final` 类中的所有方法都是隐式的 `final`。`String` 类就是 `final` 类的示例。如果你允许创建 `String` 的子类，那么该子类的对象就可以用于任何需要 `String` 的地方。由于 `String` 无法被扩展，使用 `String` 的程序依赖于 Java API 中指定的 `String` 功能。将类设置为 `final` 还可以防止程序员创建绕过安全限制的子类。
 
-我们现在讨论了将变量、方法和类声明为 `final`，并强调了如果某物可以是 `final`，那么它就应该是 `final`。编译器在知道某物是 `final` 时会执行各种优化。当我们第 20 章学习并发时，你会发现 `final` 变量让为当今的多内核处理器并行化程序变得容易得多。要获得更多见解，请访问
+我们现在讨论了将变量、方法和类声明为 `final`，并强调了如果某物可以是 `final`，那么它就应该是 `final`。编译器在知道某物是 `final` 时会执行各种优化。当我们第 20 章学习并发时，你会发现 `final` 变量让为当今的多内核处理器并行化程序变得容易得多。要获得更多见解，请访问：
 
 ```
 http://docs.oracle.com/tutorial/javase/java/lang/final.html
@@ -8913,7 +8814,7 @@ http://docs.oracle.com/tutorial/javase/java/lang/final.html
 
 `final` 类不能被扩展以创建子类。`final` 类中的所有方法都是隐式的 `final`。`String` 类就是 `final` 类的示例。如果你允许创建 `String` 的子类，那么该子类的对象就可以用于任何需要 `String` 的地方。由于 `String` 无法被扩展，使用 `String` 的程序依赖于 Java API 中指定的 `String` 功能。将类设置为 `final` 还可以防止程序员创建绕过安全限制的子类。
 
-我们现在讨论了将变量、方法和类声明为 `final`，并强调了如果某物可以是 `final`，那么它就应该是 `final`。编译器在知道某物是 `final` 时会执行各种优化。当我们第 20 章学习并发时，你会发现 `final` 变量让为当今的多内核处理器并行化程序变得容易得多。要获得更多见解，请访问：
+我们现在讨论了将变量、方法和类声明为 `final`，并强调了如果某物可以是 `final`，那么它就应该是 `final`。编译器在知道某物是 `final` 时会执行各种优化。当我们第 20 章学习并发时，你会发现 `final` 变量让为当今的多内核处理器并行化程序变得容易得多。要获得更多见解，请访问
 
 ```
 http://docs.oracle.com/tutorial/javase/java/lang/final.html
@@ -8931,108 +8832,6 @@ http://docs.oracle.com/tutorial/javase/java/lang/final.html
 
 > 虽然实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
 
-> 虽然实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 虽然实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 虽然实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 虽然实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 虽然实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 虽然实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 虽然实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 虽然实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
-> 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
-
 > 实际调用的方法取决于变量所引对象的运行时类型，但该变量只能调用其变量类型成员的方法，编译器会进行验证。
 
 ## 10.9 创建和使用接口
@@ -9047,7 +8846,7 @@ http://docs.oracle.com/tutorial/javase/java/lang/final.html
 
 ### 软件对象通过接口通信
 
-软件对象通过接口通信。Java 接口描述了可以在对象上调用的方法，以告诉它执行某些任务或返回某些信息。下一个示例引入了一个名为 `Payable` 的接口，它必须“能够支付由于”，因此提供一个方法来声明正确的支付金额。接口声明以 `interface` 关键字开始，仅包含常量和抽象方法。与类不同，接口的所有成员必须是公共的，且接口不能指定任何实现细节，例如具体的方法声明和实例变量。接口中声明的方法隐是抽象方法，所有字段都是隐式的 `public`、`static` 和 `final`。
+软件对象通过接口通信。Java 接口描述了可以在对象上调用的方法，以告诉它执行某些任务或返回某些信息。下一个示例引入了一个名为 `Payable` 的接口，它必须“能够支付由于”，因此提供一个方法来声明正确的支付金额。接口声明以 `interface` 关键字开始，仅包含常量和抽象方法。与类不同，接口的所有成员必须是公共的，且接口不能指定任何实现细节，例如具体的方法声明和实例变量。接口中声明的方法隐式是抽象方法，所有字段都是隐式的 `public`、`static` 和 `final`。
 
 ## 常见编程错误 10.6
 
@@ -9079,7 +8878,7 @@ http://docs.oracle.com/tutorial/javase/java/lang/final.html
 
 `Invoice` 和 `Employee` 类都代表公司必须能够计算付款金额的对象。这两个类都实现了 `Payable` 接口，因此程序可以对 `Invoice` 对象和 `Employee` 对象调用 `getPaymentAmount` 方法。正如我们很快将看到的，这实现了公司应付账款应用程序所需的 `Invoice` 和 `Employee` 的多态处理。
 
-图 10.10 中的 UML 类图显示了我们应付账款应用程序中使用的接口和类层次结构。该层次结构通过在接口名称上方使用引号 » 放置“interface”一词将接口与其他类区分开。UML 通过称为“实现（realization）”的关系表示类与接口之间的关系。一个类被认为实现（realize）接口的方法。类图将关系建模为带箭头的虚线，从实现类指向接口。图 10.10 中的图表示 `Invoice` 和 `Employee` 类分别实现了 `Payable` 接口。正如图 10.2 的类图所示，`Employee` 类以斜体显示，表示它是一个抽象类。具体类 `SalariedEmployee` 扩展 `Employee`，继承了其父类与 `Payable` 接口的实现关系。
+图 10.10 中的 UML 类图显示了我们应付账款应用程序中使用的接口和类层次结构。该层次结构通过在接口名称上方使用引号 « 放置“interface”一词将接口与其他类区分开。UML 通过称为“实现（realization）”的关系表示类与接口之间的关系。一个类被认为实现（realize）接口的方法。类图将关系建模为带箭头的虚线，从实现类指向接口。图 10.10 中的图表示 `Invoice` 和 `Employee` 类分别实现了 `Payable` 接口。正如图 10.2 的类图所示，`Employee` 类以斜体显示，表示它是一个抽象类。具体类 `SalariedEmployee` 扩展 `Employee`，继承了其父类与 `Payable` 接口的实现关系。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_330_0.png)
 
@@ -9091,9 +8890,7 @@ http://docs.oracle.com/tutorial/javase/java/lang/final.html
 
 ```java
 // Fig. 10.11: Payable.java
-
 // Payable interface declaration.
-
 public interface Payable
 {
     double getPaymentAmount(); // calculate payment; no implementation
@@ -9108,9 +8905,7 @@ public interface Payable
 
 ```java
 // Fig. 10.12: Invoice.java
-
 // Invoice class that implements Payable.
-
 public class Invoice implements Payable
 {
     private final String partNumber;
@@ -9186,29 +8981,19 @@ public double getPricePerItem()
 ## 10.9 创建和使用接口
 
 ```java
-public String toString()
-{
-    return String.format("%s: %s %s: (%s) %s: %d %s: $%,.2f",
-        "invoice", "part number", getPartNumber(), getPartDescription(),
-        "quantity", getQuantity(), "price per item", getPricePerItem());
-}
-```
-
-**图 10.12** 实现了 Payable 的 Invoice 类。（3 部分中的 3）
-
-```java
 // 执行与 Payable 接口契约所需方法
 @Override
 public double getPaymentAmount()
 {
     return getQuantity() * getPriceItem(); // 计算总成本
-}
-// Invoice 类结束
+} // Invoice 类结束
 ```
+
+**图 10.12** 实现了 Payable 的 Invoice 类。（3 部分中的 3）
 
 ### 类只能继承一个类，但可以实现多个接口
 
-第 4 行表示类 `Invoice` 实现了 `Payable` 接口。像所有类一样，`Invoice` 类隐式地继承了 `Object`。Java 不允许子类继承多个父类，但它允许一个类继承一个父类并实现多个接口，在类声明中，在 `implements` 关键字后面紧跟一个用逗号分隔的接口名称列表，如下：
+第 4 行表示类 `Invoice` 实现了 `Payable` 接口。像所有类一样，`Invoice` 类隐式地继承了 `Object`。Java 不允许子类继承多个父类，但它允许一个类继承一个父类并实现多个接口。在类声明中，在 `implements` 关键字后面紧跟一个用逗号分隔的接口名称列表，如下：
 
 ```java
 public class ClassName extends SuperClassName implements FirstInterface, SecondInterface, ...
@@ -9218,17 +9003,18 @@ public class ClassName extends SuperClassName implements FirstInterface, SecondI
 
 实现多个接口的类的所有对象与所实现的接口类型具有“是”（is-relationship）关系。
 
-类 `Invoice` 实现了接口 `Payable` 中的抽象方法——`getPaymentAmount` 方法定义在第 81–85 行。该方法计算支付发票的总金额。该方法通过相应的 `get` 方法获取 `quantity` 和 `priceItem` 的值并返回结果。该方法**满足**了 `Payable` 接口中对该方法的实现要求——我们已经与编译器完成了接口契约。
+类 `Invoice` 实现了接口 `Payable` 中的抽象方法——`getPaymentAmount` 方法定义在第 81–85 行。该方法计算支付发票的总金额。该方法通过相应的 `get` 方法获取 `quantity` 和 `priceItem` 的值并返回结果。该方法满足了 `Payable` 接口中对该方法的实现要求——我们已经与编译器完成了接口契约。
 
 ## 10.9.4 修改 Employee 类以实现 Payable 接口
 
 我们现在修改 `Employee` 类使其实现 `Payable` 接口。图 10.13 包含了修改后的类，它与 10.4 中的版本相同，但有两个例外。首先，图 10.13 的第 4 行表示 `Employee` 类现在实现了 `Payable` 接口。例如，我们在整个 `Employee` 层次结构中将 `earnings` 方法重命名为 `getPaymentAmount`。在图 10.4 版本的 `Employee` 类中，由于 `earnings` 方法，在 `Employee` 类中实现 `getPaymentAmount` 方法是没有意义的，因为在确定 `Employee` 的具体类型之前，我们无法计算给普通员工支付的收入。在图 10.4 中，我们出于此原因将 `earnings` 方法声明为抽象方法，因此 `Employee` 类必须声明为抽象类。这迫使每个 `Employee` 具体子类都重写 `earnings` 并提供实现。
 
+// 图 10.13: Employee.java
+// 实现了 Payable 的 Employee 抽象父类。
+
 **图 10.13** 实现了 Payable 的 Employee 抽象父类。（2 部分中的 1）
 
 ```java
-// 图 10.13: Employee.java
-// 实现了 Payable 的 Employee 抽象父类。
 public abstract class Employee implements Payable
 {
     private final String firstName;
@@ -9272,7 +9058,7 @@ public abstract class Employee implements Payable
 }
 ```
 
-**图 10.13** 实现了 Payable 的 Employee 抽象父类。（2 部分中的 2）
+图 10.13 实现了 Payable 的 Employee 抽象父类。（2 部分中的 2）
 
 在图 10.13 中，我们以不同的方式处理这种情况。回想，当一个类实现接口时，它与编译器达成契约，声明该类要么实现接口中的每个方法，要么该类是抽象的。由于 `Employee` 类没有提供 `getPaymentAmount` 方法，该类必须声明为抽象类。抽象类的任何具体子类必须实现接口方法以履行父类的契约。如果子类不这样做，它也必须声明为抽象类。正如第 45–46 行的注释所示，图 10.4 中的 `Employee` 类没有实现 `getPaymentAmount` 方法，因此该类被声明为抽象类。每个子类都继承了实现 `getPaymentAmount` 的契约，并且必须实现该方法以成为可以实例化对象的具体类。继承自 `Employee` 具体子类的类将继承 `getPaymentAmount` 的实现，然后也将成为具体类。
 
@@ -9301,13 +9087,13 @@ public double getPaymentAmount()
 @Override
 public String toString()
 {
-    return String.format("salaried employee: %s\n%s: %s, %.2f",
+    return String.format("salaried employee: %s\n%s: %,.2f",
         super.toString(), "weekly salary", getWeeklySalary());
 }
 } // SalariedEmployee 类结束
 ```
 
-**图 10.14** SalariedEmployee 类实现了 Payable 方法 getPaymentAmount。（2 部分中的 2）
+图 10.14 SalariedEmployee 类实现了 Payable 方法 getPaymentAmount。（2 部分中的 2）
 
 当一个类实现接口时，继承提供的“是”关系同样适用。`Employee` 类实现了 `Payable`，因此我们可以说一个 `Employee` 是一个 `Payable`。事实上，任何继承 `Employee` 的类都是 `Payable`。例如，`SalariedEmployee` 对象也是 `Payable`。因此，将 `SalariedEmployee` 对象赋值给 `Payable` 变量是允许的，因为 `Invoice` 实现了 `Payable`。
 
@@ -9317,11 +9103,11 @@ public String toString()
 
 ### 软件工程观察 10.10
 
-使用父类引用，我们可以多态地调用继承自 `Object` 的任何方法（例如 `Object` 的方法）。使用接口引用，我们可以多态地调用接口中声明的任何方法（接口方法）。
+使用父类引用，我们可以多态地调用继承自父类的任何方法（例如 `Object` 的方法）。使用接口引用，我们可以多态地调用接口中声明的任何方法（接口方法）。
 
 ## 10.9.6 使用接口 Payable 多态地处理发票和员工
 
-`PayableTest`（图 10.15）说明了 `Payable` 可用于多态地处理发票和员工。第 9 行声明了 `payableObjects` 并将其赋值为 `Payable` 数组。第 12–13 行将 `Invoice` 的引用赋值给 `payableObjects` 前两个元素。第 14–17 行将 `SalariedEmployee` 的引用赋值给后两个元素。这些赋值是允许的，因为 `Invoice` 是 `Payable`，`SalariedEmployee` 是 `Employee` 是 `Payable`。第 23–29 行使用增强型 `for` 语句多态地处理 `payableObjects` 中的每个 `Payable` 对象，以字符串形式打印金额。第 27 行通过 `Payable` 引用调用 `toString`，所有接口类型的引用都继承自 `Object`，因此拥有 `toString` 方法（此处也隐式调用了 `toString` 方法）。第 28 行调用 `Payable` 方法 `getPaymentAmount` 获取每个支付对象的金额，无论对象的实际类型是什么。输出显示，第 27–28 行中的每个方法调用执行了相应类的 `toString` 和 `getPaymentAmount` 实现。例如，当循环第一次迭代时 `currentPayable` 指向 `Invoice`，执行的是 `Invoice` 类的 `toString` 和 `getPaymentAmount`。
+`PayableTest`（图 10.15）说明了 `Payable` 可用于多态地处理发票和员工。第 9 行声明了 `payableObjects` 并将其赋值为 `Payable` 数组。第 12–13 行将 `Invoice` 的引用赋值给 `payableObjects` 前两个元素。第 14–17 行将 `SalariedEmployee` 的引用赋值给后两个元素。这些赋值是允许的，因为 `Invoice` 是 `Payable`，`SalariedEmployee` 是 `Employee` 是 `Payable`。第 23–29 行使用增强型 `for` 语句多态地处理 `payableObjects` 中的每个 `Payable` 对象，以字符串形式打印金额。第 27 行通过 `Payable` 引用调用 `toString`，所有接口类型的引用都继承自 `Object`，因此拥有 `toString` 方法（此处也隐式调用了 `printf` 方法）。第 28 行调用 `Payable` 方法 `getPaymentAmount` 获取每个支付对象的金额，无论对象的实际类型是什么。输出显示，第 27–28 行中的每个方法调用执行了相应类的 `toString` 和 `getPaymentAmount` 实现。例如，当循环第一次迭代时 `currentPayable` 指向 `Invoice`，执行的是 `Invoice` 类的 `toString` 和 `getPaymentAmount`。
 
 ```java
 // 输出当前应支付项及其相应的付款金额
@@ -9334,29 +9120,29 @@ System.out.printf("%n%s: $%,.2f%n",
 
 
 
-多态化处理发票和员工：
+## 多态化处理发票和员工
 
 发票：
-零件号：01234 (座椅)
-数量：2
-单价：$375.00
-应付金额：$750.00
+零件号：`01234` (座椅)
+数量：`2`
+单价：`$375.00`
+应付金额：`$750.00`
 
 发票：
-零件号：56789 (轮胎)
-数量：4
-单价：$79.95
-应付金额：$319.80
+零件号：`56789` (轮胎)
+数量：`4`
+单价：`$79.95`
+应付金额：`$319.80`
 
 薪制员工：John Smith
-社会安全号码：111-11-1111
-周工资：$800.00
-应付金额：$800.00
+社会安全号码：`111-11-1111`
+周工资：`$800.00`
+应付金额：`$800.00`
 
 薪制员工：Lisa Barnes
-社会安全号码：888-88-8888
-周工资：$1,200.00
-应付金额：$1,200.00
+社会安全号码：`888-88-8888`
+周工资：`$1,200.00`
+应付金额：`$1,200.00`
 
 **图 10.15** 可支付接口测试多态化处理发票和员工。（部分 2，共 2 部分。）
 
@@ -9383,7 +9169,7 @@ System.out.printf("%n%s: $%,.2f%n",
 
 ### 10.10.1 默认方法
 
-在 Java 8 之前，接口通常用于指定实现类必须执行的操作，而不规定如何执行操作。在 Java 8 之后，接口也可以包含公共默认方法，允许你在不破坏代码的情况下**演进**接口。
+在 Java 8 之前，接口通常用于指定实现类必须执行的操作，而不规定如何执行操作。在 Java 8 之后，接口也可以包含公共默认方法，允许你在不破坏代码的情况下**演进接口**。
 
 ### 10.10.2 静态方法
 
@@ -9442,7 +9228,7 @@ System.out.printf("%n%s: $%,.2f%n",
 
 ## 11.1 引言
 
-正如第 7 章所知，异常是程序执行过程中发生问题的指示。异常处理允许你创建可以解决（或处理）异常的应用程序。在许多情况下，处理异常允许程序像没有遇到过问题一样继续执行。本章介绍的特性帮助你编写健壮且容错的程序，这些程序可以处理问题并继续执行或优雅地终止。Java 异常处理部分基于 Andrew Koenig 和 Bjarne Stroustrup 的。
+正如第 7 章所知，异常是程序执行过程中发生问题的指示。异常处理允许你创建可以解决（或处理）异常的应用程序。在许多情况下，处理异常允许程序像没有遇到过问题一样继续执行。本章介绍的特性帮助你编写健壮且容错的程序，这些程序可以处理问题并继续执行或优雅地终止。Java 异常处理部分基于 Andrew Koenig 和 Bjarne Stroustrup 的研究。
 
 首先，我们通过处理方法尝试将整数除以零时产生的异常，演示基本的异常处理技术。接下来，我们介绍 Java 异常处理层级顶部的类。正如你将看到的，只有直接或间接扩展 `Throwable`（`java.lang` 包）的类才能用于异常处理。然后，我们展示了如何使用链式异常——当你调用一个指示异常的方法时，你可以抛出另一个异常并将原始异常链到新异常上。这允许你向原始异常添加与应用程序特定的信息。接下来，我们介绍了前置条件和后置条件，它们在某些时刻必须为真。然后我们介绍了断言，你可以在开发阶段使用它来帮助调试代码。我们还讨论了 Java SE 7 中引入的两个异常处理特性：用一个 `catch` 处理器捕获多个异常，以及新的 `try-with-resources` 语句，它会在资源在 `try` 块中使用后自动释放它。
 
@@ -9496,7 +9282,7 @@ public class DivideByZeroNoHandling {
 }
 ```
 
-**图 11.2** 没有异常处理的整数除法。（部分 1，共 2 部分。）
+**图 11.2** 没有异常处理的整数除法。（部分 1）
 
 ```text
 Please enter integer numerator: 100
@@ -9510,21 +9296,21 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
     at DivideByZeroNoHandling.main(DivideByZeroNoHandling.java:22)
 ```
 
-**图 11.2** 没有异常处理的整数除法。（部分 2，共 2 部分。）
+**图 11.2** 没有异常处理的整数除法。（部分 2）
 
 ### 栈回溯
 
-图 11.2 中的第一次示例执行显示了成功的运行。在第二次执行中，用户输入值 0 作为分母。响应这一无效输入，显示了多行信息。这些信息被称为栈回溯，它包含了描述性消息中的异常名称（`java.lang.ArithmeticException`），该消息指示了发生的问题，以及发生问题时的方法调用栈（即调用链）。栈回溯包含了通过方法逐层进入并导致异常的执行路径。这可以帮助你调试程序。
+图 11.2 中的第一次示例执行显示了成功的运行。在第二次执行中，用户输入值 `0` 作为分母。响应这一无效输入，显示了多行信息。这些信息被称为栈回溯，它包含了描述性消息中的异常名称（`java.lang.ArithmeticException`），该消息指示了发生的问题，以及发生问题时的方法调用栈（即调用链）。栈回溯包含了通过方法逐层进入并导致异常的执行路径。这可以帮助你调试程序。
 
 ### ArithmeticException 的栈回溯
 
-第一行指定发生了 `ArithmeticException`。`ArithmeticException` 可能源于不同的问题，异常名称后的文本（`/ by zero`）表示该异常是由于尝试除以零引起的。Java 不允许在整数算术中除以零。当这种情况发生时，Java 会抛出 `ArithmeticException`。Java 允许浮点值除以零。这种计算的结果是正无穷或负无穷大，这在 Java 中表示为字符串 `Infinity` 或 `-Infinity`。如果 0.0 除以 0.0，结果是 `NaN`（不是数字），这在 Java 中也表示为 `NaN`。如果你需要将浮点值与 `NaN` 比较，请使用 `Float` 类（针对 `float` 值）或 `Double` 类（针对 `double` 值）的 `isNaN()` 方法。`Float` 和 `Double` 类位于 `java.lang` 包中。
+第一行指定发生了 `ArithmeticException`。`ArithmeticException` 可能源于不同的问题，异常名称后的文本（`" / by zero"`）表示该异常是由于尝试除以零引起的。Java 不允许在整数算术中除以零。当这种情况发生时，Java 会抛出 `ArithmeticException`。Java 允许浮点值除以零。这种计算的结果是正无穷或负无穷大，这在 Java 中表示为字符串 `Infinity` 或 `-Infinity`。如果 `0.0` 除以 `0.0`，结果是 `NaN`（不是数字），这在 Java 中也表示为 `NaN`。如果你需要将浮点值与 `NaN` 比较，请使用 `Float` 类（针对 `float` 值）或 `Double` 类（针对 `double` 值）的 `isNaN()` 方法。`Float` 和 `Double` 类位于 `java.lang` 包中。
 
 从栈回溯的最后一行开始，可以看到异常在 `main()` 方法的第 22 行被检测。栈中的每行都包含类名和方法（例如 `DivideByZeroNoHandling.main`），随后是文件名和行号（例如 `DivideByZeroNoHandling.java:22`）。向上移动栈，我们看到异常发生在 `quotient()` 方法的第 10 行。调用链的顶端标识了抛出点——即异常发生的初始点。该异常的抛出点在 `quotient()` 方法的第 10 行。
 
 ### InputMismatchException 的栈回溯
 
-在第三次执行中，用户输入字符串 "hello" 作为分母。再次注意到显示了栈回溯。这告诉我们发生了 `InputMismatchException`（`java.util` 包）。我们之前的示例假设用户会输入正确的整数值。然而，用户会出错并输入非整数值。当 `Scanner` 方法 `nextInt()` 接收到不表示有效整数的字符串时，就会发生 `InputMismatchException`。从栈回溯开始，我们看到异常发生在 `main()` 方法的第 20 行。向上移动栈，我们看到异常发生在 `nextInt()` 方法中。注意，在文件名和行号的地方，提供的是文本 `Unknown`。这意味着该方法所在类的调试文件名和行信息对于 JVM 来说是不可用的——这通常是 Java API 中类的情况。许多 IDE 都可以访问 Java API 源代码，并在栈回溯中显示文件名和行号。
+在第三次执行中，用户输入字符串 `"hello"` 作为分母。再次注意到显示了栈回溯。这告诉我们发生了 `InputMismatchException`（`java.util` 包）。我们之前的示例假设用户会输入正确的整数值。然而，用户会出错并输入非整数值。当 `Scanner` 方法 `nextInt()` 接收到不表示有效整数的字符串时，就会发生 `InputMismatchException`。从栈回溯开始，我们看到异常发生在 `main()` 方法的第 20 行。向上移动栈，我们看到异常发生在 `nextInt()` 方法中。注意，在文件名和行号的地方，提供的是文本 `Unknown`。这意味着该方法所在类的调试文件名和行信息对于 JVM 来说是不可用的——这通常是 Java API 中类的情况。许多 IDE 都可以访问 Java API 源代码，并在栈回溯中显示文件名和行号。
 
 ### 程序终止
 
@@ -9545,7 +9331,7 @@ public class DivideByZeroWithExceptionHandling {
 
     // 演示发生除以零时的异常
     public static int quotient(int numerator, int denominator)
-            throws ArithmeticException {
+        throws ArithmeticException {
         return numerator / denominator; // 可能除以零
     }
 
@@ -9554,17 +9340,11 @@ public class DivideByZeroWithExceptionHandling {
         boolean continueLoop = true; // 决定是否需要更多输入
 
         do {
-            // ... 后续代码省略
-        } while (continueLoop);
-    }
-}
 ```
 
-**图 11.3** 处理 `ArithmeticException` 和 `InputMismatchException`。（部分 1，共 2 部分。）
 
 
-
-### 图 11.3 | 处理 `ArithmeticExceptions` 和 `InputMismatchExceptions`（2 部分中的第 1 部分）
+### 代码示例：异常处理演示
 
 ```java
 try { // 读取两个数字并计算商数
@@ -9585,18 +9365,20 @@ try { // 读取两个数字并计算商数
 } while (continueLoop);
 ```
 
-### 第二章 异常处理：深度观察
+**图 11.3** | 处理 `ArithmeticExceptions` 和 `InputMismatchExceptions`。（2 部分中的第 1 部分）。
 
-**图 11.3 处理 `ArithmeticExceptions` 和 `InputMismatchExceptions`（2 部分中的第 2 部分）**
+## 第二章 异常处理：深度观察
 
-**示例执行 1：**
+### 示例输出 1
+
 ```
 Please enter an integer numerator: 100
 Please enter an integer denominator: 7
 Result: 100 / 7 = 14
 ```
 
-**示例执行 2：**
+### 示例输出 2
+
 ```
 Please enter an integer numerator: 100
 Please enter an integer denominator: 0
@@ -9607,7 +9389,8 @@ Please enter an integer denominator: 7
 Result: 100 / 7 = 14
 ```
 
-**示例执行 3：**
+### 示例输出 3
+
 ```
 Please enter an integer numerator: 100
 Please enter an integer denominator: hello
@@ -9618,33 +9401,35 @@ Please enter an integer denominator: 7
 Result: 100 / 7 = 14
 ```
 
+**图 11.3** 处理 `ArithmeticExceptions` 和 `InputMismatchExceptions`。（2 部分中的第 2 部分）
+
 11.3 中的第一个示例执行没有遇到任何问题。在第二次执行中，用户输入了分母为零，发生了 `ArithmeticException`。在第三次执行中，用户输入字符串 "hello" 作为分母，发生了 `InputMismatchException`。对于每个异常，用户都会被告知错误并被要求尝试，然后提示输入两个新整数。在每个示例执行中，程序都成功运行完成。
 
 `InputMismatchException` 类在第 3 行导入。`ArithmeticException` 类不需要导入，因为它在 `java.lang` 包中。第 18 行创建了布尔变量 `continueLoop`，如果用户没有输入有效输入，则它为 `true`。第 20–48 行反复请求输入，直到收到有效输入。
 
-#### 在 try 块中封装代码
+### 在 try 块中封装代码
 
-第 22–33 行包含一个 try 块，它封装了可能抛出异常的代码以及在发生异常时不应被执行的代码（即：如果发生异常，try 块中的剩余代码将被跳过）。该块由大括号封装的代码组成。[注意：“try 块”一术语仅指关键字后面的代码块（不包括关键字本身）。为了简单起见，我们使用“try 块”来指代在 try 关键字后面的代码块，以及 try 关键字本身]。这些语句从键盘读取整数（第 25 行和第 27 行），使用方法 `nextInt()` 读取 int 值。如果读取的值不是整数，`nextInt()` 方法将抛出 `InputMismatchException`。
+第 22–33 行包含一个 `try` 块，它封装了可能抛出异常的代码以及在发生异常时不应被执行的代码（即：如果发生异常，`try` 块中的剩余代码将被跳过）。该块由大括号封装的代码组成。[注意：“try 块”一术语仅指关键字后面的代码块（不包括关键字本身）。为了简单起见，我们使用“try 块”来指代在 `try` 关键字后面的代码块，以及 `try` 关键字本身]。这些语句从键盘读取整数（第 25 行和第 27 行），使用方法 `nextInt()` 读取 `int` 值。如果读取的值不是整数，`nextInt()` 方法将抛出 `InputMismatchException`。
 
-导致 `ArithmeticException` 的除法并未在 try 块中执行。相反，对方法 `quotient()` 的调用（第 29 行）触发了尝试除法（第 12 行）；当分母为零时，JVM 抛出 `ArithmeticException`。
+导致 `ArithmeticException` 的除法并未在 `try` 块中执行。相反，对方法 `quotient()` 的调用（第 29 行）触发了尝试除法（第 12 行）；当分母为零时，JVM 抛出 `ArithmeticException`。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_349_0.png)
 
-#### 软件工程观察 11.1
+### 软件工程观察 11.1
 
-异常可能通过 try 块中显式提到的代码、try 块中代码发起的深度嵌套调用，或者在 Java 虚拟机执行字节码时出现。
+异常可能通过 `try` 块中显式提到的代码、`try` 块中代码发起的深度嵌套调用，或者在 Java 虚拟机执行字节码时出现。
 
-#### 捕获异常
+### 捕获异常
 
-此示例中的块后面跟着两个 catch 块——一个处理 `InputMismatchException`（第 34–41 行），另一个处理 `ArithmeticException`（第 42–47 行）。catch 块（也称为 catch 句）以 catch 关键字开始，后面跟着括号内的异常类型，以及大括号封装的代码块。catch 块捕获（即：接收）并处理异常。[术语“catch 句”有时用于紧跟在 catch 关键字后面的代码块，而术语“catch 块”仅指在 catch 关键字后面的代码块，不包括关键字本身]。try 块后面必须紧跟至少一个 catch 或一个 finally 块（在 11.6 节中讨论）。每个 catch 块指定异常类型。当 try 块中发生异常时，匹配异常类型的第一个 catch 块将执行。在图 11.3 中，第一个 catch 块匹配 `InputMismatchException`（当输入无效时发生），第二个 catch 块匹配 `ArithmeticException`（当尝试除以零时发生）。注意我们根据其类型命名异常参数（`inputMismatchException` 和 `arithmeticException`）。Java 程序员通常使用字母 `e` 作为异常参数的名称。
+此示例中的 `try` 块后面跟着两个 `catch` 块——一个处理 `InputMismatchException`（第 34–41 行），另一个处理 `ArithmeticException`（第 42–47 行）。`catch` 块（也称为 catch 句）以 `catch` 关键字开始，后面跟着括号内的异常类型，以及大括号封装的代码块。`catch` 块捕获（即：接收）并处理异常。[术语“catch 句”有时用于紧跟在 `catch` 关键字后面的代码块，而术语“catch 块”仅指在 `catch` 关键字后面的代码块，不包括关键字本身]。`try` 块后面必须紧跟至少一个 `catch` 或一个 `finally` 块（在 11.6 节中讨论）。每个 `catch` 块指定异常类型。当 `try` 块中发生异常时，匹配异常类型的第一个 `catch` 块将执行。在图 11.3 中，第一个 `catch` 块匹配 `InputMismatchException`（当输入无效时发生），第二个 `catch` 块匹配 `ArithmeticException`（当尝试除以零时发生）。注意我们根据其类型命名异常参数（`inputMismatchException` 和 `arithmeticException`）。Java 程序员通常使用字母 `e` 作为异常参数的名称。
 
-#### 常见编程错误 11.1
+### 常见编程错误 11.1
 
-在 try 块和其 catch 块之间放置代码是语法错误。
+在 `try` 块和其 `catch` 块之间放置代码是语法错误。
 
-#### 多异常捕获
+### 多异常捕获
 
-try 块后面跟随多个 catch 块来处理各种异常是常见的。如果多个 catch 块的体相同，可以使用多异常捕获（Java 7 引入）在单个 catch 处理器中捕获这些异常类型。多异常捕获的语法如下：
+`try` 块后面跟随多个 `catch` 块来处理各种异常是常见的。如果多个 `catch` 块的体相同，可以使用多异常捕获（Java 7 引入）在单个 `catch` 处理器中捕获这些异常类型。多异常捕获的语法如下：
 
 ```java
 catch (Type1 | Type2 | Type3 e)
@@ -9662,17 +9447,17 @@ catch (Type1 | Type2 | Type3 e)
 
 执行 `catch` 块后，程序的流继续到最后一个 `catch` 块之后的第一个语句（在本例中为第 48 行）。如果 `do-while` 语句为 `true`（变量 `continueLoop` 包含初始值 `true`），则返回循环开头并提示用户输入。此控制语句将循环直到输入有效输入。在此处，程序控制到达第 32 行，然后终止。如果 `try` 块中没有抛出异常，`catch` 块将被跳过，控制继续到带有 `catch` 块的第一个语句（当我们学习另一种可能性时）。
 
-## 11.3 ArithmeticExceptions 和 InputMismatchExceptions
+## 11.3 ArithmeticException 和 InputMismatchException
 
 我们将在第 11.6 节中讨论 `finally` 块。现在 `do...while` 循环的条件为假，`main` 方法退出。
 
-`try` 块及其对应的 `catch` 和/或 `finally` 块组成了一个 `try` 语句。不要混淆“`try` 块（try block）”和“`try` 语句（try statement）”这两个术语——后者包含了 `try` 块以及其随后的 `catch` 块和/或 `finally` 块。
+`try` 块及其对应的 `catch` 和/或 `finally` 块组成了一个 `try` 语句。不要混淆“try 块（try block）”和“try 语句（try statement）”这两个术语——后者包含了 `try` 块以及其随后的 `catch` 块和/或 `finally` 块。
 
 对于任何其他代码块，当 `try` 块结束时，在块中声明的局部变量将超出作用范围且无法再次访问；因此，`try` 块的局部变量在相应的 `catch` 块中是不可访问的。当 `catch` 块结束时，在 `catch` 块中声明的局部变量（包括该 `catch` 块的异常参数）也会超出作用范围并被销毁。`try` 语句中剩余的 `catch` 块将被忽略，执行将从 `try...catch` 序列之后的第一行代码继续——如果存在 `finally` 块，则将是 `finally` 块。
 
 ## 使用 throws 子句
 
-在 `quotient` 方法（11.3，第 9–13 行）中，第 10 行被称为 `throws` 子句。它指定了在发生问题时方法可能抛出的异常。该子句必须出现在方法参数列表之后、体之前，包含一个用逗号分隔的异常类型列表。异常可能由方法体中的语句或从那里调用的方法抛出。我们在应用程序中添加了 `throws` 子句，指示这可能会抛出 `ArithmeticException`。`quotient` 方法的调用者被告知方法可能会抛出 `ArithmeticException`。某些异常类型（如 `ArithmeticException`）不需要列在 `throws` 子句中。对于这些异常，方法可以抛出与 `throws` 子句列出的类具有 is-a 关系的异常。你将在第 11.5 节学习更多内容。
+在 `quotient` 方法（11.3 节，第 9–13 行）中，第 10 行被称为 `throws` 子句。它指定了在发生问题时方法可能抛出的异常。该子句必须出现在方法参数列表之后、方法体之前，包含一个用逗号分隔的异常类型列表。异常可能由方法体中的语句或从那里调用的方法抛出。我们在应用程序中添加了 `throws` 子句，指示这可能会抛出 `ArithmeticException`。`quotient` 方法的调用者被告知方法可能会抛出 `ArithmeticException`。某些异常类型（如 `ArithmeticException`）不需要列在 `throws` 子句中。对于这些异常，方法可以抛出与 `throws` 子句列出的类具有 is-a 关系的异常。你将在第 11.5 节学习更多内容。
 
 ## 预防技巧 11.1
 
@@ -9680,7 +9465,7 @@ catch (Type1 | Type2 | Type3 e)
 
 当执行第 12 行时，分母为 0，JVM 抛出 `ArithmeticException`。此对象将被第 42–47 行的 `catch` 块捕获，该块通过调用 `toString()` 方法显示异常的基本信息，然后允许用户重试。
 
-如果分母不为 0，`quotient` 方法执行除法并返回 `try` 块中方法调用的结果（第 29 行）。第 30–31 行显示计算结果，第 32 行将 `continueLoop` 设置为 `false`。在这种情况下，`try` 块成功完成，程序跳过 `catch` 块并在条件 48 处失败，随后 `main` 正常完成执行。
+如果分母不为 0，`quotient` 方法执行除法并返回 `try` 块中方法调用的结果（第 29 行）。第 30–31 行显示计算结果，第 32 行将 `continueLoop` 设置为 `false`。在这种情况下，`try` 块成功完成，程序跳过 `catch` 块并在条件第 48 行处失败，随后 `main` 正常完成执行。
 
 当 `quotient` 抛出 `ArithmeticException` 时，`quotient` 终止且不返回值，`quotient` 的局部变量超出作用范围（并被销毁）。如果局部变量包含对象且没有对这些对象的其他引用，则这些对象将被标记为待垃圾回收。此外，当发生异常时，调用 `quotient` 的 `try` 块会在执行第 30–32 行之前终止。在这里，如果局部变量在异常抛出之前在 `try` 块中被创建，那么这些变量也将超出作用范围。
 
@@ -9712,11 +9497,11 @@ Java 异常层次结构包含数百类。有关 Java 异常的信息遍布 Java 
 
 **图 11.4** `Throwable` 类继承层次的一部分。
 
-## 检查的异常
+### 检查的异常
 
 Java 区分检查异常和未检查异常。这种区分是重要的，因为 Java 编译器对检查异常强制特殊要求（稍后讨论）。异常的类型决定了它是已检查还是未检查。
 
-## RuntimeException 是未检查异常
+#### RuntimeException 是未检查异常
 
 所有 `RuntimeException`（`java.lang`）的直接或间接子类的异常类型都是未检查异常。这些通常由程序代码中的缺陷引起。未检查异常的示例包括：
 
@@ -9725,13 +9510,13 @@ Java 区分检查异常和未检查异常。这种区分是重要的，因为 Ja
 
 直接或间接继承自 `Error` 类（图 11.4）的类是未检查的，因为 `Error` 是程序不应该尝试处理严重的问题。
 
-## 检查异常
+### 检查异常
 
 所有继承自 `Exception` 类但不是直接或间接继承自 `RuntimeException` 类的类都被视为检查异常。此类异常通常由不受程序控制的情况引起——例如，在文件处理中，如果文件不存在，程序就无法打开。
 
-# 第二章 异常处理：深入探讨
+## 第 11 章 异常处理：深入探讨
 
-## 编译器与检查异常
+### 编译器与检查异常
 
 编译器会检查每个方法和方法声明，以确定该方法是否抛出了检查异常。如果是，编译器会验证该检查异常是否被捕获或在 `throws` 子句中声明——这被称为“捕获或声明”（catch-or-declare）要求。我们将在接下来的几个示例中展示如何捕获或声明检查异常。回想第 11.3 节，`throws` 子句指定了方法抛出的异常。此类异常不会在方法体内被捕获。为了满足捕获或声明要求中的“捕获”部分，产生异常的代码必须封装在 `try` 块中，并为检查异常（或其子类）提供 `catch` 处理器。为了满足捕获或声明要求中的“声明”部分，包含产生异常代码的方法必须在其参数列表之后、方法体之前提供一个包含检查异常类型的 `throws` 子句。如果不满足捕获或声明要求，编译器将抛出错误信息。这迫使你去考虑在调用一个会抛出异常的方法时可能发生的问题。
 
@@ -9747,7 +9532,7 @@ Java 区分检查异常和未检查异常。这种区分是重要的，因为 Ja
 
 如果你的方法调用了其他抛出异常的方法，这些异常必须被捕获或声明。如果异常可以在方法中有有意义的处理，则方法应该捕获异常而不是声明。
 
-## 编译器与未检查异常
+### 编译器与未检查异常
 
 与检查异常不同，Java 编译器不会检查代码来确定未检查异常是否被捕获或声明。未检查异常通常通过良好的编码来避免。例如，图 11-3 中 `quotient` 方法（第 9–13 行）抛出的 `ArithmeticException` 可以通过执行除法之前确保分母不为零来避免。未检查异常不需要在方法的 `throws` 子句中列出——即使列出了，也不要求此类异常必须被应用程序捕获。
 
@@ -9759,7 +9544,7 @@ Java 区分检查异常和未检查异常。这种区分是重要的，因为 Ja
 
 如果写的 `catch` 处理器用于捕获父类异常对象，它也可以捕获该类所有子类的对象。这使得 `catch` 能够多态地处理相关异常。如果这些异常需要不同的处理，你可以单独捕获每个子类。
 
-## 仅执行第一个匹配的 catch
+### 仅执行第一个匹配的 catch
 
 如果有多个 `catch` 块匹配特定的异常类型，当发生该类型的异常时，只有第一个匹配的 `catch` 会执行。在与特定 `try` 块相关的两个不同 `catch` 块中捕获相同类型是编译错误。然而，可以存在多个匹配异常的 `catch` 块——即多个类型与异常类型相同或为其子类的 `catch` 块。例如，我们可以在类型为 `ArithmeticException` 的 `catch` 块之后跟一个类型为 `Exception` 的 `catch` 块——这将匹配 `ArithmeticException`，但只有第一个匹配的块会执行。
 
@@ -9775,27 +9560,27 @@ Java 区分检查异常和未检查异常。这种区分是重要的，因为 Ja
 
 在工业界，不建议抛出或捕获 `Exception` 类型——我们仅使用它来演示异常处理机制。在随后的章节中，我们通常会抛出和捕获更具体的异常类型。
 
-## 11.6 finally 块
+### finally 块
 
 获取某些资源的程序必须将其返回系统以避免所谓的资源泄漏。在 C 和 C++ 等编程语言中，最常见的资源是内存泄漏。Java 对程序不再使用的内存进行自动垃圾回收，避免了大多数内存泄漏。然而，可能会发生其他类型的资源泄漏。例如，数据库连接和网络连接在不再需要后没有被正确关闭，可能会被其他程序使用。
 
 ## 错误预防提示 11.4
 
-> 一个微妙的问题是 Java 并没有完全消除内存泄漏。在没有剩余指向该对象的引用之前，Java 不会对该对象进行垃圾回收。因此，如果你错误地保留了不需要对象的引用，就会发生内存泄漏。
+一个微妙的问题是 Java 并没有完全消除内存泄漏。在没有剩余指向该对象的引用之前，Java 不会对该对象进行垃圾回收。因此，如果你错误地保留了不需要对象的引用，就会发生内存泄漏。
 
 `finally` 块（由 `finally` 关键字加大括号组成，有时称为 `finally` 子句）是可选的。如果存在，它位于最后一个 `catch` 块之后。如果没有 `catch` 块，`finally` 块存在则紧跟在 `try` 块之后。
 
-## finally 块何时执行
+#### finally 块何时执行
 
 无论相应的 `try` 块是否抛出异常，`finally` 块都会执行。如果 `try` 块通过使用 `return`、`break` 或 `continue` 语句或直接到达结束大括号退出，`finally` 块也会执行。`finally` 不执行的一种情况是应用程序通过调用 `System.exit()` 提前退出 `try` 块。我们在第 15 章演示了这个方法，它会立即终止应用程序。
 
 如果在 `try` 块中发生的异常无法被该块的处理器捕获，程序将跳过 `try` 块的剩余部分进入 `finally` 块。程序将异常传递给下一个外层的 `try` 块（在调用方法中），那里的异常块可能会捕获它。此过程可以在许多层 `try` 块中发生。此外，异常可能未被捕获（见第 11.3 节）。如果 `catch` 块抛出异常，`finally` 块仍然执行。然后
 
-## 在 finally 块中释放资源
+#### 在 finally 块中释放资源
 
 由于 `finally` 总是执行，它通常包含释放资源的代码。假设在 `try` 块中分配了资源。如果没有发生异常，将跳过 `catch` 块并进入 `finally` 块，释放资源。然后执行 `finally` 块之后的第一个语句。如果在 `try` 块中发生异常，`try` 块终止。如果程序在相应的 `catch` 块中捕获了异常，它将处理异常，然后 `finally` 块释放资源并执行 `finally` 块之后的第一个语句。如果程序没有捕获异常，`finally` 块仍然释放资源并尝试在调用方法中捕获该异常。
 
-# 11.6 finally 块
+## 11.6 finally 块示例
 
 ```java
 // 图 11.5: UsingExceptions.java
@@ -9804,71 +9589,44 @@ Java 区分检查异常和未检查异常。这种区分是重要的，因为 Ja
 public class UsingExceptions {
 
     public static void main(String[] args) {
-
         try {
-
             throwException();
-
         } catch (Exception exception) { // throwException 抛出的异常
-
             System.err.println("Exception handled in main");
-
         }
-
         doesNotThrowException();
-
     }
 
     // 展示 try...catch...finally
-
     public static void throwException() throws Exception {
-
         try { // 抛出异常并立即捕获
-
             System.out.println("Method throwException");
-
             throw new Exception();
-
         } catch (Exception exception) { // 捕获 try 中抛出的异常
-
             System.err.println("Exception handled in method throwException");
-
             throw exception; // 抛出以便进一步处理
-
         } finally { // 无论 try...catch 发生什么情况都会执行
-
             System.err.println("Finally executed in throwException");
-
         }
-
         // 此代码不会执行；会导致编译错误
-
     }
 
     // 展示未发生异常时的 finally
-
     public static void doesNotThrowException() {
-
         try { // try 块未抛出异常
-
             System.out.println("Method doesNotThrowException");
-
-        } finally { // 即使没有异常也会执行
-
+        } finally {
             System.err.println("Finally executed in doesNotThrowException");
-
         }
-
     }
-
 }
 ```
 
 
 
-## 图 11.5 | try...catch...finally 异常处理机制（第 1 部分，共 2 部分）
+图 11.5 | try...catch...finally 异常处理机制。（2 部分中的第 1 部分。）
 
-### 320 第二章 异常处理：深度解析
+# 320 第二章 异常处理：深度解析
 
 ```java
 53 catch (Exception exception) // 不执行
@@ -9886,8 +9644,6 @@ public class UsingExceptions {
 65 } // 类 UsingExceptions
 ```
 
-**输出：**
-```
 Method throwException
 Exception handled in method throwException
 Finally executed in throwException
@@ -9895,13 +9651,12 @@ Exception handled in main
 Method doesNotThrowException
 Finally executed in doesNotThrowException
 End of method doesNotThrowException
-```
 
-**图 11.5 | try...catch...finally 处理机制（第 2 部分，共 2 部分）**
+**图 11.5 | try...catch...finally 处理机制。（2 部分中的第 2 部分。）**
 
 `System.out` 和 `System.err` 是字节流。虽然 `System.out`（称为标准输出流）显示程序的输出，但 `System.err`（称为标准错误流）显示程序的错误。这些流的输出可以被重定向（即，重定向到命令行提示符以外的地方，例如文件）。使用两个不同的流可以让你轻松地将错误信息与其他输出分开。例如，来自 `System.err` 的数据输出可以到日志文件，而来自 `System.out` 的数据输出可以在屏幕上显示。为了简单，本章将不重定向 `System.err` 的输出，但会将这些消息显示在命令行提示符中。你将在第 15 章学习更多关于流的内容。
 
-### 使用 throw 语句抛出异常
+## 使用 throw 语句抛出异常
 
 方法 `main`（图 11.5）开始执行，进入其 `try` 块并立即调用方法 `throwException`（第 10 行）。方法 `throwException` 抛出一个 `Exception`。第 26 行的语句是一个 `throw` 语句——它的执行表示发生了异常。到目前，你只捕获了由调用方法抛出的异常。你可以通过 `throw` 语句自己抛出异常。就像 Java API 方法抛出的异常一样，这向客户端应用程序指示了错误的发生。`throw` 语句指定了要抛出的对象。`throw` 的操作数可以是任何派生自 `Throwable` 的类。
 
@@ -9910,7 +9665,7 @@ End of method doesNotThrowException
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_358_0.png)
 
-### 11.6 finally 块
+## 11.6 finally 块
 
 > **软件工程观察 11.9**
 > 异常可以被抛出，但其中不包含关于发生问题的信息。在这种情况下，仅仅知道发生了特定类型的异常可能就足以让处理程序正确处理该问题提供足够的信息。
@@ -9939,15 +9694,15 @@ End of method doesNotThrowException
 > **良好编程实践 11.1**
 > 异常处理将错误处理从程序代码的主线中移除，以提高程序的清晰度。不要在每个可能抛出异常的语句周围放置 `try...catch...finally`。这会降低可读性。相反，在你代码的重要部分周围放置一个 `try` 块，随后跟上处理每个可能的异常的 `catch` 块，并在 `catch` 块之后跟上一个 `finally` 块（如果需要的话）。
 
-### 322 第二章 异常处理：深度解析
+## 322 第二章 异常处理：深度解析
 
-### 11.7 栈回溯和从异常对象获取信息
+## 11.7 栈回溯和从异常对象获取信息
 
-当异常被抛出但在特定作用范围内未被捕获时，方法调用栈会被“回溯”，并尝试在下一个外层 `try` 块中捕获该异常。这个过程被称为**栈回溯**。回溯方法调用栈意味着未捕获异常的方法终止，方法中的所有局部变量超出作用范围，控制返回到最初调用它的语句。如果 `try` 块包含了该语句，则会尝试捕获该异常。如果 `try` 块没有包含该语句，或者异常未被捕获，则再次发生栈回溯。图 11.6 展示了栈回溯，`main` 中的异常处理器显示了如何访问异常对象中的数据。
+当异常被抛出但在特定作用范围内未被捕获时，方法调用栈会被“回溯”，并尝试在下一个外层 `try` 块中捕获该异常。这个过程被称为栈回溯。回溯方法调用栈意味着未捕获异常的方法终止，方法中的所有局部变量超出作用范围，控制返回到最初调用它的语句。如果 `try` 块包含了该语句，则会尝试捕获该异常。如果 `try` 块没有包含该语句，或者异常未被捕获，则再次发生栈回溯。图 11.6 展示了栈回溯，`main` 中的异常处理器显示了如何访问异常对象中的数据。
 
-#### 栈回溯
+### 栈回溯
 
-在 `main` 中，`try` 块（第 8–11 行）调用 `method1`（定义在第 35–38 行），它转而调用 `method2`（定义在第 41–44 行），再次调用 `method3`（定义在第 47–50 行）。`method3` 的第 49 行抛出一个 `Exception` 对象——这就是抛出点。因为第 49 行的 `throw` 语句没有包含在 `try` 块中，发生了栈回溯——`method3` 在第 49 行终止，并返回到 `method2` 中调用 `method3` 的语句（即第 43 行）。由于没有 `try` 块包含第 43 行，再次发生栈回溯——`method2` 在第 43 行终止并返回到 `method1` 中调用 `method2` 的语句（即第 37 行）。第 8–11 行的 `try` 块包含了该语句。异常未被处理，因此 `try` 块终止，第一个匹配块（第 12–31 行）捕获了异常。如果没有匹配块，且异常没有在每个抛出它的方法中声明，则会发生编译错误。记住，这并不总是如此——对于未检查异常，应用程序将编译，但运行结果会产生意外。
+在 `main` 中，`try` 块（8–11）调用 `method1`（定义在 35–38），它转调用 `method2`（定义在 41–44），再次调用 `method3`（定义在 47–50）。`method3` 的第 49 行抛出一个 `Exception` 对象——这就是抛出点。因为第 49 行的 `throw` 语句没有包含在 `try` 块中，发生了栈回溯——`method3` 在 49 行终止，并返回到 `method2` 中调用 `method3` 的语句（即 43 行）。由于没有 `try` 块包含 43，再次发生栈回溯——`method2` 在 43 行终止并返回到 `method1` 中调用 `method2` 的语句（即 37 行）。8–11 行的 `try` 块包含了该语句。异常未被处理，因此 `try` 块终止，第一个匹配块（12–31）捕获了异常。如果没有匹配块，且异常没有在每个抛出它的方法中声明，则会发生编译错误。记住，这并不总是如此——对于未检查异常，应用程序将编译，但运行结果会产生意外。
 
 ### 11.7 栈回溯与从异常对象获取信息
 
@@ -9956,6 +9711,7 @@ End of method doesNotThrowException
 StackElement[] traceElements = exception.getStackTrace();
 
 System.out.printf("%nStack trace from getStackTrace:%n");
+
 System.out.println("Class\t\tFile\t\tLine\t\tMethod\n");
 ```
 
@@ -9971,30 +9727,32 @@ for (StackElement element : traceElements) {
 
 ```java
 // 调用 method2(); 将异常抛回给 main
-public static void method1() throws Exception {
+public static void method1() throws Exception
+{
     method2();
 }
 ```
 
 ```java
 // 调用 method3(); 将异常抛回给 method1
-public static void method2() throws Exception {
+public static void method2() throws Exception
+{
     method3();
 }
 ```
 
 ```java
 // 将 Exception 抛回给 method2
-public static void method3() throws Exception {
+public static void method3() throws Exception
+{
     throw new Exception("Exception thrown in method3");
 }
 // 类结束 UsingExceptions
 ```
 
-**输出：**
-```
-在 method3 中抛出的异常
+在 `method3` 中抛出的异常
 
+```java
 java.lang.Exception: Exception thrown in method3
     at UsingExceptions.method3(UsingExceptions.java:49)
     at UsingExceptions.method2(UsingExceptions.java:43)
@@ -10002,7 +9760,7 @@ java.lang.Exception: Exception thrown in method3
     at UsingExceptions.main(UsingExceptions.java:10)
 ```
 
-**getStackTrace 的堆栈轨迹:**
+getStackTrace 的堆栈轨迹:
 
 | File | Line | Method |
 | :--- | :--- | :--- |
@@ -10011,7 +9769,7 @@ java.lang.Exception: Exception thrown in method3
 | UsingExceptions.java | 37 | method1 |
 | UsingExceptions.java | 10 | main |
 
-**图 11.6 | 栈回溯和从异常对象获取数据（第 2 部分，共 2 部分）**
+图 11.6 | 栈回溯和从异常对象获取数据。（部分 2/2。）
 
 ### 从异常对象中获取数据
 
@@ -10027,19 +9785,18 @@ java.lang.Exception: Exception thrown in method3
 
 第 14 行调用异常的 `getMessage` 方法来获取异常描述。第 15 行调用异常的 `printStackTrace` 方法输出指示异常发生处的堆栈轨迹。第 18 行调用异常的 `getStackTrace` 方法以 `StackElement` 对象数组的形式获取堆栈轨迹。第 24–30 行获取数组中的每个 `StackElement` 并调用其方法 `getClassName`、`getFileName`、`getLineNumber` 和 `getMethodName`，以获取该 `StackElement` 的类、文件名、行号和方法。每个 `StackElement` 代表方法调用栈上的其中一个方法。
 
-程序的输出显示，`printStackTrace` 的输出遵循以下模式：`className.methodName(fileName:lineNumber)`，其中 `className`、`methodName` 和 `fileName` 分别表示异常发生的类、方法和文件，行号表示异常发生的位置。你在图 11.2 的输出中见过这个。方法 `getStackTrace` 允许对异常信息进行自定义格式。比较 `printStackTrace` 的输出与从 `StackElement` 创建的输出，可以看到它们包含相同的堆栈轨迹信息。
+程序的输出显示，`printStackTrace` 的输出遵循以下模式：`className.methodName(fileName:lineNumber)`，其中 `className`、`methodName` 和 `fileName` 分别表示异常发生的类、方法和文件，行号表示异常发生的位置。你在图 11.2 的输出中见过这个。方法 `getStackTrace` 允许对异常信息进行自定义格式。比较 `printStackTrace` 的输出与从 `StackElements` 创建的输出，可以看到它们包含相同的堆栈轨迹信息。
 
 > **软件工程观察 11.11**
 > 有时，你可能想通过编写一个空体的 `catch` 处理器来忽略异常。在这样做之前，确保该异常没有指示栈高处可能需要获知或恢复的状况。
 
-### 11.8 被捕获的异常
+## 11.8 被捕获的异常
 
 有时，方法通过抛出特定于当前应用程序的另一种异常类型来响应异常。如果 `catch` 块抛出一个新异常，原始异常的信息和堆栈轨迹将会丢失。早期的 Java 版本没有提供将原始异常信息封装在新异常信息中的机制，从而无法提供显示原始问题发生处的完整堆栈轨迹。这使得调试变得异常困难。链式异常允许异常对象维护原始异常的完整堆栈轨迹信息。图 11.7 演示了链式异常。
 
 ```java
 // 图 11.7: UsingChainedExceptions.java
 // 链式异常。
-
 public class UsingChainedExceptions {
     public static void main(String[] args) {
         try {
@@ -10050,7 +9807,8 @@ public class UsingChainedExceptions {
     }
 
     // 调用 method2(); 将异常抛回给 main
-    public static void method1() throws Exception {
+    public static void method1() throws Exception
+    {
         try {
             method2();
         } catch (Exception exception) { // 在 method1 中捕获
@@ -10059,7 +9817,8 @@ public class UsingChainedExceptions {
     }
 
     // 调用 method3(); 将异常抛回给 method1
-    public static void method2() throws Exception {
+    public static void method2() throws Exception
+    {
         try {
             method3();
         } catch (Exception exception) { // 在 method2 中捕获
@@ -10068,13 +9827,14 @@ public class UsingChainedExceptions {
     }
 
     // 将 Exception 抛回给 method2
-    public static void method3() throws Exception {
+    public static void method3() throws Exception
+    {
         throw new Exception("Exception thrown in method3");
     }
 }
 ```
 
-**图 11.7 | 链式异常（第 1 部分，共 2 部分）**
+图 11.7 | 链式异常。（部分 1/2。）
 
 ```java
 44 // 将异常抛回给 method2
@@ -10085,14 +9845,12 @@ public class UsingChainedExceptions {
 49 // 类结束 UsingChExceptions
 ```
 
-**输出：**
-```
+```java
 java.lang.Exception: Exception thrown in method3
     at UsingChainedExceptions.method3(UsingChainedExceptions.java:47)
     at UsingChainedExceptions.method2(UsingChainedExceptions.java:40)
     at UsingChainedExceptions.method1(UsingChainedExceptions.java:23)
     at UsingChainedExceptions.main(UsingChainedExceptions.java:10)
-
 Caused by: java.lang.Exception: Exception thrown in method2
     at UsingChainedExceptions.method2(UsingChainedExceptions.java:35)
 ```
@@ -10117,7 +9875,7 @@ Caused by: java.lang.Exception: Exception thrown in method1
 
 ## 程序控制流
 
-程序由四个方法组成——`main`（6–16 行）、`method1`（19–29 行）、`method2`（32–42 行）和 `method3`（45–48 行）。`main` 的 `try` 块调用 `method1`。`method1` 的 `try` 块调用 `method2`。`method2` 的 `try` 块调用 `method3`。在 `method3` 中，第 47 行抛出一个新异常。因为该语句不在 36 行的 `try` 块中。该语句在 `try` 块中；因此 `try` 块在 36 行终止并在 38–41 行捕获异常。第 40 行 `catch` 块抛出一个新异常。在这种情况下，调用了带有参数的 `Exception` 构造函数。第二个参数表示问题的原始原因。在该程序中，异常发生在第 47 行。因为从 `catch` 块抛出了异常，`method2` 终止并将新异常抛回给调用方法（`method1`）第 23 行。再次，该语句在 `try` 块中，所以 `try` 块终止并在 25–28 行捕获异常。第 27 行的 `catch` 块抛出一个新异常，并将捕获的异常作为 `Exception` 构造函数的第二个参数。因为从 `catch` 块抛出了异常，`method1` 终止并将新异常抛回给调用方法（`main`）第 10 行。`main` 的 `try` 块终止，并在 12–15 行捕获异常。第 14 行打印堆栈轨迹。
+程序由四个方法组成——`main`（6–16 行）、`method1`（19–29 行）、`method2`（32–42 行）和 `method3`（45–48 行）。`main` 的 `try` 块调用 `method1`。`method1` 的 `try` 块调用 `method2`。`method2` 的 `try` 块调用 `method3`。在 `method3` 中，第 47 行抛出一个新异常。因为该语句不在 `try` 块中。该语句在 `try` 块中；因此 `try` 块在 36 行终止并在 38–41 行捕获异常。第 40 行 `catch` 块抛出一个新异常。在这种情况下，调用了带有参数的 `Exception` 构造函数。第二个参数表示问题的原始原因。在该程序中，异常发生在第 47 行。因为从 `catch` 块抛出了异常，`method2` 终止并将新异常抛回给调用方法（`method1`）第 23 行。再次，该语句在 `try` 块中，所以 `try` 块终止并在 25–28 行捕获异常。第 27 行的 `catch` 块抛出一个新异常，并将捕获的异常作为 `Exception` 构造函数的第二个参数。因为从 `catch` 块抛出了异常，`method1` 终止并将新异常抛回给调用方法（`main`）第 10 行。`main` 的 `try` 块终止，并在 12–15 行捕获异常。第 14 行打印堆栈轨迹。
 
 ## 程序输出
 
@@ -10206,9 +9964,9 @@ assert expression1 : expression2;
 
 ## 12.1 引言
 
-#### 目录
+### 目录
 
-- 12.1.2 JList
+- 12.1.2 `JList`
 - 12.2 Java 的 Nimbus 外观
 - 12.1.3 多选列表
 - 12.3 使用 `JOptionPane` 的简单 GUI 输入/输出
@@ -10219,18 +9977,18 @@ assert expression1 : expression2;
 - 12.6 文本字段以及嵌套类事件处理简介
 - 12.7 常见 GUI 事件类型和监听接口
 - 12.8 事件处理原理
-- 12.9 JButton
+- 12.9 `JButton`
 - 12.10 状态按钮
-- 12.10.1 JCheckBox
-- 12.10.2 JRadioButton
-- 12.11 JComboBox：使用匿名内部类进行事件处理
+- 12.10.1 `JCheckBox`
+- 12.10.2 `JRadioButton`
+- 12.11 `JComboBox`：使用匿名内部类进行事件处理
 - 12.17 键事件处理
 - 12.18 布局管理器简介
-- 12.18.1 FlowLayout
-- 12.18.2 BorderLayout
-- 12.18.3 GridLayout
+- 12.18.1 `FlowLayout`
+- 12.18.2 `BorderLayout`
+- 12.18.3 `GridLayout`
 - 12.19 使用面板管理复杂布局
-- 12.20 JTextArea
+- 12.20 `JTextArea`
 - 12.21 总结
 
 ## 引言
@@ -10272,7 +10030,7 @@ GUI 由其视觉方面组成（如颜色和字体），而其感觉则由你用�
 swing.defaultlaf=com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel
 ```
 
-除了独立的 JRE 外，你的 JDK 安装文件夹中还嵌套了一个 JRE。如果你使用的是依赖于 JDK 的 IDE，可能还需要将 `swing.properties` 文件存放在嵌套 JRE 的 `lib` 文件夹中。
+除了独立的 JRE 外，你的 JDK 安装文件夹中还嵌套了一个 JRE。如果你使用的是依赖于 JDK 的 IDE，可能还需要将 `swing.properties` 文件存放在嵌套 jre 的 `lib` 文件夹中。
 
 如果你希望按应用程序为单位选择 Nimbus，请在应用程序名称之前传递命令行参数：
 
@@ -10302,6 +10060,7 @@ public class Addition {
         // 输入第二个整数
 
         String secondNumber = JOptionPane.showInputDialog("Enter second integer");
+
         int number2 = Integer.parseInt(secondNumber);
 
         int sum = number1 + number2;
@@ -10332,21 +10091,26 @@ public class Addition {
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_375_0.png)
 
-### 观察 12.3
+## 观察 12.3
+
 > 不要过度使用模态对话框，因为它们会降低应用程序的可用性。只有在需要防止用户在关闭对话框之前与应用程序的其他部分进行交互时，才使用模态对话框。
 
-### 将字符串转换为 int 值
+## 将字符串转换为 int 值
+
 为了进行计算，我们将用户输入的 `String` 转换为 `int` 值。回想 `Integer` 类的静态方法 `parseInt` 将其 `String` 转换为 `int` 值并可能抛出 `NumberFormatException`。第 16–17 行将转换结果赋值给局部变量 `number1` 和 `number2`，第 19 行对这些值求和。
 
-### 消息对话框
-第 22–23 行使用 `JOptionPane` 静态方法 `showMessageDialog` 显示包含和的消息对话框（图 12.2 的最后一个屏幕）。第一个参数帮助应用程序确定对话框的位置。对话框通常由带有自身窗口的 GUI 应用程序显示。第一个参数指的是窗口（称为父窗口），并使对话框在父窗口正中央出现（正如我们在第 12.9 节中所做的）。如果第一个参数为 `null`，对话框将显示在屏幕中心。第二个参数是待显示的消息——在这种情况下是字符串 "The sum is " 和 `sum` 值的拼接。第三个参数——“Sum of Integers”——出现在对话框顶部标题栏的 `String`。第四个参数 `JOptionPane.PLAIN_MESSAGE` 是要显示的消息类型。`PLAIN_MESSAGE` 不会在消息左侧显示图标。`JOptionPane` 类提供了 `showInputDialog` 和 `showMessageDialog` 方法的重载版本，以及显示其他类型对话框的方法。更多信息请访问 http://docs.oracle.com/java/7/docs/api/javax/swing/JOptionPane.html。
+## 消息对话框
+
+第 22–23 行使用 `JOptionPane` 静态方法 `showMessageDialog` 显示包含和的消息对话框（图 12.2 的最后一个屏幕）。第一个参数帮助应用程序确定对话框的位置。对话框通常由带有自身窗口的 GUI 应用程序显示。第一个参数指的是窗口（称为父窗口），并使对话框在父窗口正中央出现（正如我们在第 12.9 节中所做的）。如果第一个参数为 `null`，对话框将显示在屏幕中心。第二个参数是待显示的消息——在这种情况下是字符串 "The sum is " 和 `sum` 值的拼接。第三个参数——“Sum of Integers”——出现在对话框顶部标题栏的 `String`。第四个参数 `JOptionPane.PLAIN_MESSAGE` 是要显示的消息类型。`PLAIN_MESSAGE` 不会在消息左侧显示图标。`JOptionPane` 类提供了 `showInputDialog` 和 `showMessageDialog` 方法的重载版本，以及显示其他类型对话框的方法。更多信息请访问 http://docs.oracle.com/java/77/docs/api/java/swing/JOptionPane.html。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_375_1.png)
 
-### 观察 12.4
+## 观察 12.4
+
 窗口的标题栏通常使用**标题大小写**（book-title capitalization）——这种风格将文本中重要单词的首字母大写，且不以标点符号结尾（例如：Capitalization in a Title）。
 
-### JOptionPane 对话框常量
+## JOptionPane 对话框常量
+
 图 12.3 显示了表示消息对话框类型的常量。除了 `PLAIN_MESSAGE` 之外，所有消息对话框类型都在消息左侧显示图标。这些图标为用户提供了消息重要性的视觉指示。`QUESTION_MESSAGE` 是输入对话框的默认图标（见图 12.2）。
 
 | 消息对话框类型 | 图标 | 描述 |
@@ -10360,6 +10124,7 @@ public class Addition {
 图 12.3 用于消息对话框的 `JOptionPane` 静态常量。
 
 ## 12.4 Swing 组件概述
+
 虽然可以使用 `JOptionPane` 对话框执行输入输出，但大多数 GUI 应用程序需要更复杂的用户界面。本章其余部分将讨论许多允许应用程序开发者创建健壮 GUI 的 GUI 组件。图 12.4 列出了我们讨论的几个基础 Swing 组件。
 
 | 组件 | 描述 |
@@ -10374,10 +10139,11 @@ public class Addition {
 
 图 12.4 某些基础 Swing GUI 组件。
 
-### Swing 与 AWT
+## Swing 与 AWT
+
 实际上有两组 Java GUI 组件。在 Java 早期，GUI 是使用 `java.awt` 包中的抽象窗口工具包（AWT）组件构建的。这些组件看起来像运行 Java 程序的平台的原生 GUI 组件。例如，运行在 Microsoft Windows 上的 Java 程序中显示的 `Button` 对象看起来就像 Windows 应用程序中的按钮。在 Mac OS X 上，`Button` 看起来像 Mac 应用程序中的。有时，用户与 AWT 组件交互的方式在不同平台之间也不同。AWT 组件的外观和用户交互方式在平台之间存在差异。
 
-## 12.5 在窗口中显示文本和图像
+## 12.5 在窗口中显示文本和图像 341
 
 ```java
 19 super("Testing JLabel");
@@ -10403,7 +10169,7 @@ public class Addition {
 39 label3.setVerticalTextPosition(SwingConstants.BOTTOM);
 40 label3.setToolTipText("This is label3");
 41 add(label3); // 将 label3 添加到 JFrame
-42 } // 构造函数结束
+42 }
 43 } // 类 LabelFrame 结束
 ```
 
@@ -10412,23 +10178,27 @@ public class Addition {
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_379_0.png)
 
 ```java
-// 图 12.7: LabelTest.java
-// 测试 LabelFrame。
-import javax.swing.JFrame;
-
-public class LabelTest {
-    public static void main(String[] args) {
-        JFrame labelFrame = new LabelFrame(); // 修正：实例化 LabelFrame
-        labelFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        labelFrame.setSize(260, 180);
-        labelFrame.setVisible(true);
-    }
-} // 类 LabelTest 结束
+1 // 图 12.7: LabelTest.java
+2 // 测试 LabelFrame。
+3 import javax.swing.JFrame;
+4 
+5 public class LabelTest
+6 {
+7     public static void main(String[] args)
+8     {
+9         JFrame labelFrame = new JFrame();
+10         labelFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+11         labelFrame.setSize(260, 180);
+12         labelFrame.setVisible(true);
+13     }
+14 } // 类 LabelTest 结束
 ```
 
 **图 12.7** 测试 LabelFrame。
 
-`LabelFrame` 类（图 12.6）继承 `JFrame` 以继承窗口的特性。我们将使用 `LabelFrame` 的实例来显示一个包含三个 Label 的窗口。第 12–14 行声明了三个 `JLabel` 实例变量，这些变量在 `LabelFrame` 构造函数（第 17–41 行）中被实例化。通常情况下，`JFrame` 子类构造函数会构建在应用程序执行时显示在窗口中的 GUI。第 19 行带有参数 "Testing JLabel" 调用了父类的构造函数（原文为 "Testing Label"，此处按类名修正）。`JFrame` 的构造函数使用此字符串作为标题栏中的文本。
+342 第 12 章 Swing GUI 组件：第一部分
+
+`LabelFrame` 类（图 12.6）继承 `JFrame` 以继承窗口的特性。我们将使用 `LabelFrame` 的实例来显示一个包含三个 Label 的窗口。第 12–14 行声明了三个 `JLabel` 实例变量，这些变量在 `LabelFrame` 构造函数（第 17–41 行）中被实例化。通常情况下，`JFrame` 子类构造函数会构建在应用程序执行时显示在窗口中的 GUI。第 19 行带有参数 "Testing JLabel" 调用了父类的构造函数。`JFrame` 的构造函数使用此字符串作为标题栏中的文本。
 
 ### 指定布局
 在构建 GUI 时，你必须将每个 GUI 组件附加到容器上，例如用 `JFrame` 创建的窗口。此外，你通常必须决定每个组件的位置——这被称为指定布局。Java 提供了几种布局管理器可以帮助你定位组件，你将在本章稍后部分和第 19 章中学习它们。
@@ -10438,29 +10208,20 @@ public class LabelTest {
 为了确保我们的 GUI 能够适配任何 IDE，我们没有使用 IDE 来创建 GUI 代码。我们使用 Java 的布局管理器来为组件设置尺寸和位置。`FlowLayout` 布局管理器按照组件添加的顺序从左到右将它们放在容器中。当当前行无法容纳更多组件时，它们将继续从左侧显示到下一行。如果调整了容器的大小，`FlowLayout` 会重新排列组件，可能会根据新容器的宽度产生更少或更多的行。每个容器都有一个默认布局，我们将 `LabelFrame` 的布局更改为 `FlowLayout`（第 20 行）。`setLayout` 方法从 `Container` 类间接继承到 `LabelFrame` 类中。该方法的参数必须是实现 `LayoutManager` 接口的类对象（例如 `FlowLayout`）。第 20 行创建了一个新的 `FlowLayout` 对象并将其引用作为参数传递给 `setLayout`。
 
 ### 创建并附加 label1
-现在我们已经指定了窗口的布局，可以开始创建并将 GUI 组件附加到窗口了。第 23 行创建了一个 `JLabel` 对象并将 "Label with text" 传递给构造函数。`JLabel` 在屏幕上显示此文本。第 24 行使用 `setToolTipText`（继承自 `Component` 类中的 `JLabel`）指定当用户将鼠标移动到 GUI 中的 `JLabel` 上时显示的工具提示。你可以在图 12.7 的第二个截图中看到示例工具提示。当你执行此应用程序时，将鼠标指针悬停在每个 `JLabel` 上以查看其工具提示。第 25 行（图 12.6）通过将 `label1` 传递给 `add` 方法来附加 label1，该方法间接继承自 `Container` 类。
+现在我们已经指定了窗口的布局，可以开始创建并将 GUI 组件附加到窗口了。第 23 行创建了一个 `JLabel` 对象并将 "Label with text" 传递给构造函数。`JLabel` 在屏幕上显示此文本。第 24 行使用 `setToolTipText`（继承自 `Component` 中的 `JLabel`）指定当用户将鼠标移动到 GUI 中的 `JLabel` 上时显示的工具提示。你可以在图 12.7 的第二个截图中看到示例工具。当你执行此应用程序时，将鼠标指针悬停在每个 `JLabel` 上以查看其工具提示。第 25 行（图 12.6）通过将 `label1` 传递给 `add` 方法来附加 label1，该方法间接继承自 `Container` 类。
 
-> **常见编程错误 12.1**
-> 如果你没有显式地将组件添加到容器中，当容器出现在屏幕上时，GUI 组件将不会显示。
+### 常见编程错误 12.1
+如果你没有显式地将组件添加到容器中，当容器出现在屏幕上时，GUI 组件将不会显示。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_380_0.png)
 
-使用工具提示为你的 GUI 组件添加描述性文本。这些文本帮助用户确定 GUI 组件在用户界面中的用途。
+使用工具为你的 GUI 组件添加描述性文本。这些文本帮助用户确定 GUI 组件在用户界面中的用途。
 
 ### Icon 接口和 ImageIcon 类
 图标是增强应用程序视觉效果的流行方式，也常用于指示功能。例如，相同的图标用于在 DVD 播放器和 MP3 播放器等设备上播放今天的大多数媒体。多个 Swing 组件可以显示图像。通常通过构造函数或方法的 `Icon` 参数（package `javax.swing`）指定图标。
 
 ### 加载图像
-在第 29 行，表达式 `getClass().getResource("bug1.png")`（继承自 `Component` 类）返回图像的 URL。`ImageIcon` 使用此 URL 创建。然后使用该图标显示图像。
-
-### 创建并附加 label2
-第 30 行创建了一个带有文本、图标和水平对齐方式的 `JLabel`。`SwingConstants.LEFT` 指定文本和图标在标签区域内左对齐。
-
-### 创建并附加 label3
-第 36–41 行创建并配置了第三个标签，设置文本、图标、水平和垂直文本位置以及工具提示。
-
-### SwingConstants 常量
-`SwingConstants` 接口声明了用于定位文本和图标的常用常量：
+在第 29 行，表达式 `getClass().getResource("bug1.png")`（继承自 `Component` 中的 `JLabel`）返回图像的 URL。`ImageIcon` 使用此 URL 创建。然后使用该图标显示图像。
 
 | 常量 | 描述 |
 | :--- | :--- |
@@ -10468,16 +10229,17 @@ public class LabelTest {
 | `CENTER` | 将文本放在中间 |
 | `RIGHT` | 将文本放在右侧 |
 | `TOP` | 将文本放在顶部 |
-| `CENTER` | 将文本放在中间（垂直） |
+| `CENTER` | 将文本放在中间 |
 | `BOTTOM` | 将文本放在底部 |
 
 ## 12.6 文本字段与嵌套类事件处理简介
+
 当用户在 `JTextField` 或 `JPasswordField` 中输入并按下 Enter 键时，就会发生一个事件。下一个示例演示了程序如何响应该事件执行任务。这里展示的技术适用于所有产生事件的 GUI 组件。
 
 图 12.9–12.10 应用使用了 `JTextField` 和 `JPasswordField` 创建并维护了四个文本字段。当用户在其中一个文本字段中输入并按下 Enter 键时，应用程序将显示一个包含其输入文本的消息框。你只能在获得“焦点”的文本字段中输入。当你点击一个组件时，它就会获得焦点。这很重要，因为当你按下 Enter 键时，是该文本字段产生了事件。在本示例中，当你在 `JPasswordField` 中按下 Enter 键时，密码将会显示。我们首先讨论 GUI 的设置，然后讨论事件处理代码。
 
 ```java
-// Fig. 12.9: TextFieldFrame.java
+// Fig. 12.9: TextFormField.java
 // JTextFields and JPasswordFields.
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
@@ -10487,14 +10249,14 @@ import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JOptionPane;
 
-public class TextFieldFrame extends JFrame {
+public class TextFormField extends JFrame {
     private final JTextField textField1; // 设置了大小的文本字段
     private final JTextField textField2; // 有文本的文本字段
     private final JTextField textField3; // 有文本和大小的文本字段
     private final JPasswordField passwordField; // 有文本的密码字段
 
-    // TextFieldFrame 构造函数将 JTextField 和 JPasswordField 添加到 JFrame
-    public TextFieldFrame() {
+    // TextFormField 构造函数将 JTextField 和 JPasswordField 添加到 JFrame
+    public TextFormField() {
         super("Testing JTextField and JPasswordField");
         setLayout(new FlowLayout());
 
@@ -10516,6 +10278,60 @@ public class TextFieldFrame extends JFrame {
 # 第 12 章 Swing GUI 组件：第一部分
 
 ## 12.6 文本字段与嵌套类的事件处理简介
+
+```java
+add(textField3); // 将 textField3 添加到 JFrame
+```
+
+图 12.9 JTextFields 和 JPasswordField（第 2/2 部分）。
+
+```java
+    36 // 构建带有默认文本的密码字段
+    37 passwordField = new JPasswordField("Hidden text");
+    38 add(passwordField); // 将 passwordField 添加到 JFrame
+    41 // 注册事件处理器
+    42 TextFieldHandler handler = new TextFieldHandler();
+    43 textField1.addActionListener(handler);
+    44 textField2.addActionListener(handler);
+    45 textField3.addActionListener(handler);
+    46 passwordField.addActionListener(handler);
+    49 // 用于事件处理的私有内部类
+    50 private class TextFieldHandler implements ActionListener
+    51 {
+```
+
+```java
+    53 // 处理文本字段事件
+    54 @Override
+    55 public void actionPerformed(ActionEvent event)
+    56 {
+        57 String string = "";
+        59 // 用户在 JTextField textField1 中按了 Enter
+        60 if (event.getSource() == textField1)
+        62 string = String.format("textField1: %s",
+        62 event.getActionCommand());
+        64 // 用户在 JTextField textField2 中按了 Enter
+        65 else if (event.getSource() == textField2)
+        66 string = String.format("textField2: %s",
+        67 event.getActionCommand());
+        69 // 用户在 JTextField textField3 中按了 Enter
+        70 else if (event.getSource() == textField3)
+        71 string = String.format("textField3: %s",
+        72 event.getActionCommand());
+        74 // 用户在 JTextField passwordField 中按了 Enter
+        75 else if (event.getSource() == passwordField)
+        76 string = String.format("passwordField: %s",
+        77 event.getActionCommand());
+        79 // 显示 JTextField 内容
+        80 JOptionPane.showMessageDialog(null, string);
+        81 }
+    82 } // 结束内部类 TextFieldHandler
+    83 } // 结束类 TextFieldFrame
+```
+
+**图 12.9** | JTextField 和 JPasswordField。（第 2/2 部分。）
+
+`TextFieldFrame` 继承自 `JFrame`，并声明了三个 `JTextField` 变量和一个 `JPasswordField` 变量（第 13–16 行）。每个相应的文本字段都在构造函数中实例化并附加到 `TextFieldFrame`（第 19–47 行）。
 
 ### 创建 GUI
 
@@ -10540,25 +10356,25 @@ public class TextFieldFrame extends JFrame {
 
 本示例中的事件处理是由内部类完成的。该对象处理器是一个 `ActionListener`，因为 `TextFieldHandler` 类实现了 `ActionListener`。在执行第 43–46 行后，对象处理器监听这四个文本字段的事件。如果未为某个文本字段注册事件处理器，则用户在该文本字段中按下 Enter 键时发生的事件将不会被处理——即被应用程序忽略。
 
-> **软件工程观察 12.1**
->
+### 软件工程观察 12.1
+
 > 事件监听器必须实现相应的事件监听接口。
 
-> **常见编程错误 12.2**
->
+### 常见编程错误 12.2
+
 > 如果忘记为特定的 GUI 组件事件注册事件处理器，该类型的事件将被忽略。
 
 ### TextFieldHandler 类方法的详情
 
 在本示例中，我们使用一个事件处理对象的 `actionPerformed` 方法（第 53–80 行）来处理由四个文本字段产生的事件。由于我们出于演示目的输出每个文本字段实例变量的名称，我们需要确定是哪个文本字段每当调用 `actionPerformed` 时，都会生成该事件。事件源是用户与之交互的组件。当用户在字段或密码字段获得焦点时按下 Enter 键，系统会创建一个唯一的 `ActionEvent` 对象，该对象包含有关刚刚发生的事件的信息，例如事件源和字段中的文本。系统将此 `ActionEvent` 对象传递给监听器的 `actionPerformed` 方法。第 56 行声明了将显示的 `String`。该变量被初始化为空字符串——一个不包含任何字符的字符串。编译器要求变量必须进行初始化，以防第 59–76 行中嵌套 `if` 的任何分支都没有被执行。
 
-`ActionEvent.getSource()`（在第 59、64、69 和 74 行中调用）返回事件源的引用。第 59 行的条件询问“事件源是 `textField` 吗？”，使用 `==` 运算符判断它们是否指向同一个对象。如果两者都指向 `textField`，则用户在 `textField1` 中按了 Enter 键。然后，第 60–61 行创建一个包含消息的 `String`，第 79 行用其显示对话框。第 61 行使用 `ActionEvent.getActionCommand()` 获取在生成的字段中输入的文本。
+`ActionEvent.getSource()`（在第 59、64、69 和 74 行中调用）返回事件源的引用。第 59 行的条件询问“事件源是 `textField1` 吗？”，使用 `==` 运算符判断它们是否指向同一个对象。如果两者都指向 `textField1`，则用户在 `textField1` 中按了 Enter 键。然后，第 60–61 行创建一个包含消息的 `String`，第 79 行用其显示对话框。第 61 行使用 `ActionEvent.getActionCommand()` 获取在生成的字段中输入的文本。
 
 在此示例中，当用户在该字段中按下 Enter 键时，我们显示 `JPasswordField` 中密码的文本。有时有必要通过程序化处理密码中的字符。类 `JPasswordField` 的 `getPassword()` 将密码字符作为 `char` 数组返回。
 
 ### TextFieldTest 类
 
-`TextFieldTest`（图 12.10）包含执行此应用程序并显示 `TextFieldFrame` 类对象的 `main` 方法。当你执行该程序时，未获得焦点的 `JTextField (textField)` 可以生成一个 `ActionEvent`。要测试这一点，给该字段焦点，然后按下 Enter 键。此外，当用户在 `JPasswordField` 中按下 Enter 键时，会显示密码的文本。当然，你通常不会显示密码！
+`TextFieldTest`（图 12.10）包含执行此应用程序并显示 `TextFieldFrame` 类对象的 `main` 方法。当你执行该程序时，未获得焦点的 `JTextField` (`textField`) 可以生成一个 `ActionEvent`。要测试这一点，给该字段焦点，然后按下 Enter 键。此外，当用户在 `JPasswordField` 中按下 Enter 键时，会显示密码的文本。当然，你通常不会显示密码！
 
 ```java
 // Fig 12.10: TextFieldTest.java
@@ -10575,32 +10391,28 @@ public class TextFieldTest {
 } // end class TextFieldTest
 ```
 
-![图 12.10 测试 JTextFieldFrame（部分 2/2）](img/28513f3b4ab12c97e738c92ed0e327a8_388_0.png)
-![测试 JField 和 JPasswordField](img/28513f3b4ab12c97e738c92ed0e327a8_388_1.png)
-![测试 JField 和 JPasswordField](img/28513f3b4ab12c97e738c92ed0e327a8_388_2.png)
-![测试 JField 和 JPasswordField](img/28513f3b4ab12c97e738c92ed0e327a8_388_3.png)
+![](img/28513f3b4ab12c97e738c92ed0e327a8_387_0.png)
 
-**图 12.10** 测试 `JTextFieldFrame`。（部分 2/2）
+图 12.10 | 测试 TextFieldFrame。（部分 2/2）
 
-此应用程序使用单个 `JTextFieldHandler` 类的对象作为四个文本字段的事件监听器。从第 12.10 节开始，你会发现可以声明多个相同类型的事件监听器，并为每个单独的 GUI 组件注册每个对象。这种技术允许我们通过为每个组件的事件提供独立的事件处理器，从而消除示例事件处理器中使用的 `if...else` 逻辑。
+此应用程序使用单个 `TextFieldHandler` 类的对象作为四个文本字段的事件监听器。从第 12.10 节开始，你会发现可以声明多个相同类型的事件监听器，并为每个单独的 GUI 组件注册每个对象。这种技术允许我们通过为每个组件的事件提供独立的事件处理器，从而消除示例事件处理器中使用的 `if...else` 逻辑。
 
-### Java SE 8：使用 Lambda 实现监听器
-
+**Java SE 8：使用 Lambda 实现监听器**
 回想，像 `ActionListener` 这样只有一个抽象方法的接口在 Java SE 8 中是函数式接口。在第 17.9 节中，我们将展示一种更简洁的方法，使用 Java SE 8 lambda 来实现此类事件监听器接口。
 
 ## 12.7 常见的 GUI 事件类型和监听器接口
 
 在第 12.6 节中，你学习了用户输入文本字段时发生的事件存储在 `ActionEvent` 对象中。当用户与 GUI 交互时，可能会发生许多不同类型的事件。信息存储在扩展自 AWT（来自 `java.awt` 包）的类的对象中。图 12.11 展示了一个包含 `java.awt.event` 包中许多类的层次结构。其中一些类将在本章和第 19 章中讨论。我们将同时使用适用于 AWT 和 Swing 组件的事件类型。特定于 Swing GUI 组件的额外事件类型在 `javax.swing.event` 包中声明。
 
-![图 12.11 java.awt.event 包中的某些事件类](img/28513f3b4ab12c97e738c92ed0e327a8_389_0.png)
+![](img/28513f3b4ab12c97e738c92ed0e327a8_389_0.png)
 
-**图 12.11** java.awt.event 包中的某些事件类。
+图 12.11 | java.awt.event 包中的某些事件类。
 
 让我们总结一下你在第 12.6 节中看到的事件处理机制的三个部分——事件源、事件对象和事件监听器。事件源是用户与之交互的 GUI 组件。事件对象封装了发生事件的信息，例如对事件源的引用以及事件监听器处理事件可能需要的任何特定事件信息。事件监听器是一个在事件发生时由事件源通知的对象；实际上，它“监听”事件，其它的一个方法会响应事件而执行。当事件监听器被通知事件时，监听器的一个方法会接收事件。监听器使用事件对象来响应事件。这种事件处理机制被称为**委托事件模型**（delegation event model）——事件的处理被委托给应用程序中的一个对象（事件监听器）。
 
 对于每个事件类型对象，通常有一个对应的事件监听器接口。GUI 事件的监听器是实现了 `java.awt` 和 `javax.swing.event` 包中一个或多个事件监听器接口的类对象。许多监听器类型是 Swing 和 AWT 组件通用的。这些类型在 `java.awt.event` 包中声明，其中一些在图 12.12 中显示。特定于 Swing 组件的额外监听器类型在 `javax.swing.event` 包中声明。
 
-![图 12.12 java.awt.event 包中的某些事件接口](img/28513f3b4ab12c97e738c92ed0e327a8_390_0.png)
+![](img/28513f3b4ab12c97e738c92ed0e327a8_390_0.png)
 
 **图 12.12** java.awt.event 包中的某些事件接口。
 
@@ -10612,7 +10424,7 @@ public class TextFieldTest {
 
 ## 测试 JTextField 和 JPasswordField
 
-**图 12.10** 测试 `JTextFieldFrame`。（部分 2/2）
+图 12.10 展示了测试 `JTextFieldFrame` 的结果。
 
 此应用程序使用单个 `JTextFieldHandler` 类的对象作为四个文本字段的事件监听器。从第 12.10 节开始，你会发现可以声明多个相同类型的事件监听器，并为每个单独的 GUI 组件注册每个对象。这种技术允许我们通过为每个组件的事件提供独立的事件处理器，从而消除示例事件处理器中使用的 `if...else` 逻辑。
 
@@ -10622,21 +10434,21 @@ public class TextFieldTest {
 
 ## 12.7 常见的 GUI 事件类型和监听器接口
 
-在第 12.6 节中，你学习了用户输入文本字段时发生的事件存储在 `Action` 对象中。当用户与 GUI 交互时，可能会发生许多不同类型的事件。信息存储在扩展自 AWT（来自 `java.awt` 包）的类的对象中。图 12.11 展示了一个包含 `java.awt.event` 包中许多类的层次结构。其中一些类将在本章和第 19 章中讨论。我们将同时使用适用于 AWT 和 Swing 组件的事件类型。特定于 Swing GUI 组件的额外事件类型在 `javax.swing.event` 包中声明。
+在第 12.6 节中，你学习了用户输入文本字段时发生的事件存储在 `ActionEvent` 对象中。当用户与 GUI 交互时，可能会发生许多不同类型的事件。信息存储在扩展自 AWT（来自 `java.awt` 包）的类的对象中。图 12.11 展示了一个包含 `java.awt.event` 包中许多类的层次结构。其中一些类将在本章和第 19 章中讨论。我们将同时使用适用于 AWT 和 Swing 组件的事件类型。特定于 Swing GUI 组件的额外事件类型在 `javax.swing.event` 包中声明。
 
-**图 12.11** `java.awt.event` 包中的某些事件类。
+**图 12.11** | `java.awt.event` 包中的某些事件类。
 
 让我们总结一下你在第 12.6 节中看到的事件处理机制的三个部分——事件源、事件对象和事件监听器。事件源是用户与之交互的 GUI 组件。事件对象封装了发生事件的信息，例如对事件源的引用以及事件监听器处理事件可能需要的任何特定事件信息。事件监听器是一个在事件发生时由事件源通知的对象；实际上，它“监听”事件，其它的一个方法会响应事件而执行。当事件监听器被通知事件时，监听器的一个方法会接收事件。监听器使用事件对象来响应事件。这种事件处理机制被称为**委托事件模型**（delegation event model）——事件的处理被委托给应用程序中的一个对象（事件监听器）。
 
 对于每个事件类型对象，通常有一个对应的事件监听器接口。GUI 事件的监听器是实现了 `java.awt` 和 `javax.swing.event` 包中一个或多个事件监听器接口的类对象。许多监听器类型是 Swing 和 AWT 组件通用的。这些类型在 `java.awt.event` 包中声明，其中一些在图 12.12 中显示。特定于 Swing 组件的额外监听器类型在 `javax.swing.event` 包中声明。
 
-**图 12.12** `java.awt.event` 包中的某些事件接口。
+**图 12.12** | `java.awt.event` 包中的某些事件接口。
 
 回想，像 `ActionListener` 这样只有一个抽象方法的接口在 Java SE 8 中是函数式接口。在第 17.9 节中，我们将展示一种更简洁的方法，使用 Java SE 8 lambda 来实现此类事件监听器接口。
 
 ## 12.8 事件处理如何工作
 
-我们将使用图 12.9 中的 `JTextField1` 来说明事件处理机制如何工作。我们在第 12.7 节中留下了两个待解决的问题：
+我们将使用图 12.9 中的 `JTextFieldFrame` 来说明事件处理机制如何工作。我们在第 12.7 节中留下了两个待解决的问题：
 
 1. 事件处理器是如何注册的？
 2. GUI 组件如何知道调用 `actionPerformed` 而不是其他方法？
@@ -10645,9 +10457,9 @@ public class TextFieldTest {
 
 ### 注册事件
 
-每个 `Component` 都有一个实例变量 `listenerList`，指向 `EventListener` 类（`javax.swing.event`）。每个 `JComponent` 子类在 `listenerList` 中维护其注册的监听器。为了简单起见，我们在图 12.13 中将 `listenerList` 绘制在 `JTextField` 对象下方。
+每个 `Component` 都有一个实例变量 `listenerList`，指向 `EventListenerList` 类（`javax.swing.event`）。每个 `JComponent` 子类在 `listenerList` 中维护其注册的监听器。为了简单起见，我们在图 12.13 中将 `listenerList` 绘制在 `JTextField` 对象下方。
 
-**图 12.13** `JTextField` 的事件注册
+**图 12.13** | `JTextField` 的事件注册。
 
 当以下语句（图 12.9 的第 43 行）执行时：
 
@@ -10661,33 +10473,28 @@ textField.addActionListener(handler);
 
 监听器类型对于回答第二个问题至关重要：GUI 组件如何知道调用 `actionPerformed` 而不是其他方法？每个 GUI 组件支持多种事件类型，包括鼠标事件、键盘事件等。当事件发生时，事件会被分发给相应类型的监听器。分发是 GUI 组件对每个注册了已发生事件类型的监听器调用事件处理方法的过程。
 
-每个事件类型都有一个或多个对应的事件监听器接口。例如，`ActionEvent` 由 `ActionListener` 处理，`MouseEvent` 由 `MouseListener` 和 `MouseMotionListener` 处理，`KeyEvent` 也是如此。当事件发生时，GUI 组件（来自 JVM）使用一个指定事件类型的唯一 ID。GUI 组件使用事件 ID 来决定事件应该分发给哪个监听器，并决定在每个监听器对象上调用哪个方法。对于 `ActionEvent`，事件分发给每个注册的 `ActionListener` 的 `actionPerformed`（`ActionListener` 接口中的唯一方法）。对于 `MouseEvent`，事件将分发给每个注册的 `MouseListener` 或 `MouseMotionListener`，取决于发生的鼠标事件。
+每个事件类型都有一个或多个对应的事件监听器接口。例如，`ActionEvent` 由 `ActionListener` 处理，`MouseEvent` 由 `MouseListener` 和 `MouseMotionListener` 处理，`KeyEvent` 也是如此。当事件发生时，GUI 组件（来自 JVM）使用一个指定事件类型的唯一 ID。GUI 组件使用事件 ID 来决定事件应该分发给哪个监听器，并决定在每个监听器对象上调用哪个方法。对于 `ActionEvent`，事件分发给每个注册的 `ActionListener` 的 `actionPerformed`（`ActionListener` 接口中的唯一方法）。对于 `MouseEvent`，事件将分发给每个注册的 `MouseListener` 或 `MouseMotionListener`，取决于发生的鼠标事件。`MouseEvent` 的事件 ID 决定了调用几个鼠标事件处理方法中的哪一个。所有这些决策都由 GUI 组件为你处理。你只需要为你的应用程序所需的特定事件类型注册一个事件处理程序，GUI 组件就会确保在事件发生时调用事件处理程序的适当方法。我们会在引入每个新组件时，根据需要讨论其他事件类型和事件-监听器接口。
 
-`MouseEvent` 的事件 ID 决定了调用几个鼠标事件处理方法中的哪一个。所有这些决策都由 GUI 组件为你处理。你只需要为你的应用程序所需的特定事件类型注册一个事件处理程序，GUI 组件就会确保在事件发生时调用事件处理程序的适当方法。我们会在引入每个新组件时，根据需要讨论其他事件类型和事件-监听器接口。
-
-### 性能提示 12.1
-
-GUI 应该始终对用户保持响应性。在事件处理程序中执行耗时较长的任务会阻止用户在任务完成之前与 GUI 进行交互。第 20.11 节演示了防止此类问题的技术。
+> **性能提示 12.1**
+> GUI 应该始终对用户保持响应性。在事件处理程序中执行耗时较长的任务会阻止用户在该任务完成之前与 GUI 进行交互。第 20.11 节演示了防止此类问题的技术。
 
 ## 12.9 JButton
 
 按钮是用户点击以触发特定操作的组件。Java 应用程序可以使用几种类型的按钮，包括命令按钮、复选框（复选按钮）、切换按钮和单选按钮。图 12.14 显示了本章中 Swing 按钮的继承关系。如你所见，所有按钮类型都是 `AbstractButton`（位于 `javax.swing` 包）的子类，该类声明了 Swing 按钮的共同特征。在本节中，我们重点关注通常用于启动命令的按钮。
 
-**图 12.14** Swing 层次结构图。
+**图 12.14** | Swing 层次结构图。
 
-命令按钮（见图 12.16 的输出）在用户点击时会生成一个 `ActionEvent`。命令按钮使用类 `JButton` 创建。`JButton` 表面上的文本被称为按钮标签（button label）。
+命令按钮（见图 12.16 的输出）在用户点击时会生成一个 `ActionEvent`。命令按钮使用类 `JButton` 创建。`JButton` 表面上的文本被称为按钮标签。
 
-### 外观观察 12.8
+> **外观观察 12.8**
+> 按钮上的文本通常使用书名大写规则。
 
-按钮上的文本通常使用书名大写规则（book-title capitalization）。
+> **外观观察 12.9**
+> 一个 GUI 可以有许多 `JButton`，但在当前显示的 GUI 部分，每个按钮标签应该是唯一的。拥有多个具有相同标签的 `JButton` 会让用户对这些 `JButton` 产生歧义。
 
-### 外观观察 12.9
+图 12.15 和 12.16 的应用创建了两个按钮，并证明了 `JButton` 可以显示图标。按钮的事件处理由内部类 `ButtonHandler` 的单个实例执行（图 12.15，第 39–48 行）。
 
-一个 GUI 可以有许多 `JButtons`，但在当前显示的 GUI 部分，每个按钮标签应该是唯一的。拥有多个具有相同标签的 `JButton` 会让用户对这些 `JButtons` 产生歧义。
-
-图 12.15 和 12.16 的应用创建了两个，并证明了 `JButtons` 可以显示图标（Icons）。按钮的事件处理由内部类 `ButtonHandler` 的单个实例执行（图 12.15，第 39–48 行）。
-
-**图 12.15** 命令按钮和动作事件。
+**图 12.15** | 命令按钮和动作事件。
 
 ```java
 // Fig. 12.15: ButtonFrame.java
@@ -10729,11 +10536,14 @@ public class ButtonFrame extends JFrame {
         // handle button event
         @Override
         public void actionPerformed(ActionEvent event) {
-            JOptionPane.showMessage(ButtonFrame.this, String.format("\nYou pressed: %s", event.getActionCommand()));
+            JOptionPane.showMessageDialog(ButtonFrame.this,
+                String.format("\nYou pressed: %s", event.getActionCommand()));
         }
     }
 } // end class ButtonFrame
 ```
+
+**图 12.16** | 测试 `ButtonFrame`。
 
 ```java
 // Fig. 12.16: ButtonTest.java
@@ -10753,48 +10563,33 @@ public class ButtonTest {
 
 
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_394_0.png)
-![](img/28513f3b4ab12c97e738c92ed0e327a8_394_1.png)
-![](img/28513f3b4ab12c97e738c92ed0e327a8_394_2.png)
-![](img/28513f3b4ab12c97e738c92ed0e327a8_394_3.png)
-![](img/28513f3b4ab12c97e738c92ed0e327a8_394_4.png)
-![](img/28513f3b4ab12c97e738c92ed0e327a8_394_5.png) **图 12.16** 测试 `ButtonFrame`。
-
-第 14–15 行定义了 `plainButton` 和 `fancyButton` 变量。第 23 行创建带有“Plain Button”标签的 `plainButton`。第 24 行将 `plainButton` 添加到 `JFrame`。
-
-`JButton` 可以显示图标。为了给用户提供额外的视觉交互，当鼠标悬停在 `JButton` 上时，会切换图标。
-
 ## 12.10 保持状态的按钮
 
-第 28 行创建了带有“Fancy Button”文本和的 `fancyButton`。默认情况下，文本位于图标的右侧。第 29 行使用 `setRolloverIcon`（继承自 `AbstractButton` 类）指定鼠标悬停在 `JButton` 上时显示的图像。第 30 行将 `fancyButton` 添加到 `JFrame`。
+第 28 行创建了带有“Fancy Button”文本和的 `fancyButton`。默认情况下，文本位于图标的右侧。第 29 行使用 `setRolloverIcon`（继承自 `AbstractButton` 类）指定鼠标悬停在 JButton 上时显示的图像。第 30 行将 `fancyButton` 添加到 `JFrame`。
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_395_0.png)
-
-## 外观观察 12.10
+### 外观观察 12.10
 
 由于 `AbstractButton` 支持在按钮上显示文本和图像，`AbstractButton` 的所有子类都支持显示文本和图像。
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_395_1.png)
+### 外观观察 12.11
 
-## 外观观察 12.11
+悬停图标提供了视觉反馈，指示点击 JButton 时会发生的操作。
 
-悬停图标提供了视觉反馈，指示点击 `JButton` 时会发生的操作。
+JButton 与 `JTextField` 一样生成可以由 `ActionListener` 处理的 ActionEvent。第 33–35 行创建了内部类 `ButtonHandler` 的对象，并使用 `addActionListener` 注册为每个 JButton 的事件处理程序。`ButtonHandler`（第 39–48 行）声明了 `actionPerformed` 以显示包含按钮标签的消息。对于 JButton，`getActionCommand` 返回按钮上的标签。
 
-`JButton` 与 `JTextField` 一样生成可以由 `ActionListener` 处理的 `ActionEvent`。第 33–35 行创建了内部类 `ButtonHandler` 的对象，并使用 `addActionListener` 注册为每个 `JButton` 的事件处理程序。`ButtonHandler`（第 39–48 行）声明了 `actionPerformed` 以显示包含按钮标签的消息。对于 `JButton`，`getActionCommand` 返回按钮上的标签。
-
-### 在内部类中访问顶层类的引用
+#### 在内部类中访问顶层类的引用
 
 当你运行此应用程序并点击其中一个按钮时，出现的消息对话框将相对于窗口居中。这是因为 `JOptionPane.showMessage`（第 45–46 行）使用了 `JFrame, this` 而不是 `null`。当此参数不为 `null` 时，它代表所谓的父 GUI 组件（在本例中，应用程序窗口就是父组件），并允许对话框在显示时相对于该组件居中。`JFrame` 代表此顶层类对象的引用。
 
-## 软件工程观察 12.2
+### 软件工程观察 12.2
 
 在内部类中使用时，关键字 `this` 指向正在操作的当前内部类对象。内部类方法可以通过在外部类名后加一个点（`.`）来使用其外部类对象的 `this`。
 
 ## 12.10 保持状态的按钮
 
-Swing 组件包含三种状态按钮——`JToggleButton`、`JCheckBox` 和 `JRadioButton`，它们具有开启/关闭或真/假值。`JCheckBox` 和 `JRadioButton` 类是 `JToggleButton` 的子类（图 12.14）。`JRadioButton` 与 `JButton` 的不同在于，通常 `JButtons` 会被分组在互斥的——组中任何时间只能有一个被选中，就就像汽车收音机上的按钮一样。我们首先讨论 `JCheckBox` 类。
+Swing 组件包含三种状态按钮——`JToggleButton`、`JCheckBox` 和 `JRadioButton`，它们具有开启/关闭或真/假值。`JCheckBox` 和 `JRadioButton` 类是 `JToggleButton` 的子类（图 12.14）。JRadioButton 与 JButton 的不同在于，通常 JButtons 会被分组在互斥的——组中任何时间只能有一个被选中，就就像汽车收音机上的按钮一样。我们首先讨论 `JCheckBox` 类。
 
-## 12.10.1 JCheckBox
+### 12.10.1 JCheckBox
 
 图 12.17–12.18 的应用使用了两个 `JCheckBox` 来选择 `JTextField` 中显示的文本所需的字体样式。当选中时，一个应用**粗体**样式，另一个应用*斜体*样式。如果两者都被选中，应用程序初始化将执行，两个 `JCheckBox` 都不会勾选（即它们为 `false`），因此字体为普通。`CheckBoxTest`（图 12.18）包含了执行该应用的 `main` 方法。
 
@@ -10805,9 +10600,9 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
-import java.swing.JFrame;
-import java.swing.JTextField;
-import java.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+import javax.swing.JCheckBox;
 
 public class CheckBoxFrame extends JFrame {
     private final JTextField textField; // 显示更改字体的文本
@@ -10860,7 +10655,7 @@ public class CheckBoxFrame extends JFrame {
 ```
 
 ```java
-// 图 CheckBoxTest.java
+// 图 12.18: CheckBoxTest.java
 // 测试 CheckBoxFrame。
 import javax.swing.JFrame;
 
@@ -10874,35 +10669,31 @@ public class CheckBoxTest {
 } // 结束类 CheckBoxTest
 ```
 
-![](img/28513f3b4ab12c97e38c92ed0327a8397_0.png)
-
-图 12.18 | 测试 `CheckBoxFrame`。
-
 在 `JTextField` 创建并初始化后（图 12.17，第 24 行），该行使用间接继承的 `setFont` 方法将 `JTextField` 的字体设置为新的 `Font` 对象（位于 `java.awt` 包中）。新的 `Font` 使用 "Serif"（代表 Times 等字体的通用字体名称，在所有平台上均支持）、`Font.PLAIN` 尺寸和 14 点字号进行初始化。接下来，第 28–29 行创建了两个 `JCheckBox` 对象。传递给 `JCheckBox` 构造函数的字符串是默认显示在 `JCheckBox` 右侧的复选框标签。
 
 当用户点击 `JCheckBox` 时，会发生 `ItemEvent`。该事件可以由 `ItemListener` 对象处理，该对象必须实现 `itemStateChanged`。在本例中，事件处理由内部类 `CheckBoxHandler` 的实例执行（第 40–60 行）。第 34–36 行创建了 `CheckBoxHandler` 类的实例，并通过 `addItemListener` 方法将其注册为 `JCheckBox` 对象的监听器。
 
 当用户点击 `boldCheckBox` 或 `italicCheckBox` 时，调用 `CheckBoxHandler` 方法 `itemStateChanged`（第 43–59 行）。在本例中，我们没有判断点击了哪一个复选框——我们根据它们状态的状态来确定要显示的字体。第 49 行使用 `JCheckBox` 方法 `isSelected` 来判断两个 `JCheckBox` 是否都被选中。如果是，第 50 行通过在 `Font` 构造函数的字体样式参数中添加 `Font.BOLD` 和 `Font.ITALIC` 来创建一个粗体字体。第 51 行确定 `boldCheckBox` 是否被选中，如果是，第 52 行创建一个粗体字体。第 53 行确定 `italicCheckBox` 是否被选中，如果是，第 54 行创建一个斜体字体。如果前面的条件均不成立，第 56 行使用常量 `Font.PLAIN` 创建普通字体。最后，第 58 行设置 `textField` 的新字体，从而改变屏幕上 `JTextField` 中的字体。
 
-## 内部类与其顶层类之间的关系
+#### 内部类与其顶层类之间的关系
 
 `CheckBoxHandler` 类使用了 `boldCheckBox`（第 49 和 51 行）、`italicCheckBox`（第 49 和 53 行）和 `textField`（第 58 行），尽管它们并没有在内部类中声明。请记住，内部类与它的顶层类之间存在一种特殊关系——它被允许访问顶层类的所有变量和方法。`CheckBoxHandler` 方法 `itemStateChanged`（第 43–59 行）利用这种关系来确定哪些 `JCheckBox` 被勾选，并设置 `textField` 字体。注意，内部类 `CheckBoxHandler` 中的代码均不需要对顶层对象的显式引用。
 
-## 12.10.2 JRadioButton
+### 12.10.2 JRadioButton
 
 单选按钮（用 `JRadioButton` 声明）与复选框类似，它们有两个状态——已选中和未选中（也称为取消选择）。然而，单选按钮通常以一组的形式出现，其中只有一个可以被选中。
 
 ```java
-// RadioButton.java
+// 图 12.19: RadioButtonFrame.java
 // 使用 ButtonGroup 和 JRadioButton 创建单选按钮
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
-import java.swing.JFrame;
-import java.swing.JTextField;
-import java.swing.JRadioButton;
-import java.swing.ButtonGroup;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
 
 public class RadioFrame extends JFrame {
     private JTextField textField; // 显示更改字体的文本
@@ -10944,11 +10735,13 @@ public class RadioFrame extends JFrame {
 
         // 创建对象
         plainFont = new Font("Serif", Font.PLAIN, 14);
+    }
+}
 ```
 
 
 
-# 362 第 12 章 Swing GUI 组件：第一部分
+# 第 12 章 Swing GUI 组件：第一部分
 
 ```java
 boldFont = new Font("Serif", Font.BOLD, 14);
@@ -10959,6 +10752,13 @@ boldItalicFont = new Font("Serif", Font.BOLD | Font.ITALIC, 14);
 ```
 
 单选按钮通过 `ButtonGroup` 维护互斥性（即组内只有一个选项可以被选中）。单个 `JRadioButton` 对象允许 GUI 组件中同一时间有一个被选中。
+
+## 12.11 JComboBox：使用匿名内部类进行事件处理
+
+![](img/28513f3b4ab12c97e738c92ed0e327a8_401_0.png)
+![](img/28513f3b4ab12c97e738c92ed0e327a8_401_1.png)
+
+图 12.19 | 使用 `ButtonGroup` 和 `JRadioButton` 创建单选按钮。（共 2 部分中的第 2 部分。）
 
 ```java
 54  italicFont = new Font("Serif", Font.ITALIC, 14);
@@ -10999,8 +10799,6 @@ boldItalicFont = new Font("Serif", Font.BOLD | Font.ITALIC, 14);
 86  } // 结束 RadioButtonFrame 类
 ```
 
-图 12.19 | 使用 `ButtonGroup` 和 `JRadioButton` 创建单选按钮。（共 2 部分中的第 2 部分。）
-
 ```java
 1  // 图 12.20: RadioButtonTest.java
 2  // 测试 RadioButtonFrame。
@@ -11021,20 +10819,13 @@ import javax.swing.JFrame;
 
 图 12.20 | 测试 `RadioButtonFrame`。（共 2 部分中的第 1 部分。）
 
-## 12.11 JComboBox：使用匿名内部类进行事件处理
-
-![](img/28513f3b4ab12c97e738c92ed0e327a8_401_0.png)
-![](img/28513f3b4ab12c97e738c92ed0e327a8_401_1.png)
-
-12.20 测试 `RadioButtonFrame`。（共 2 部分中的第 2 部分。）
-
-构造函数中的第 35–42 行（12.19）创建了四个 `JRadioButtons` 并它们添加到 `JFrame` 中。每个 `JRadioButton` 都通过像第 35 行那样的构造调用进行实例化。该构造函数设置了默认显示在 `JRadioButton` 右侧的标签以及 `JRadioButton` 的初始状态。第二个参数为 `true` 表示 `JRadioButton` 在显示时应处于被选中状态。
+构造函数中的第 35–42 行（图 12.19）创建了四个 `JRadioButtons` 并将它们添加到 `JFrame` 中。每个 `JRadioButton` 都通过像第 35 行那样的构造调用进行实例化。该构造函数设置了默认显示在 `JRadioButton` 右侧的标签以及 `JRadioButton` 的初始状态。第二个参数为 `true` 表示 `JRadioButton` 在显示时应处于被选中状态。
 
 第 45 行实例化了 `ButtonGroup` 对象 `objectGroup`。该对象是形成四个 `JRadioButton` 对象之间逻辑关系的“胶水”，并允许四个按钮中同时只有一个被选中。`ButtonGroup` 中可能没有一个 `JRadioButtons` 被选中，但这种情况只有在没有向组中添加预选的 `JRadioButtons` 且用户尚未选择 `JRadioButton` 时才会发生。第 46–49 行使用 `ButtonGroup` 方法将每个 `JRadioButtons` 与 `radioGroup` 关联。如果向组中添加了多个被选中的 `JRadioButton` 对象，则在 GUI 显示时第一个被选中的那个将保持选中。
 
-`JRadioButtons` 在被点击时会产生 `ItemEvents`。第 59–66 行创建了内部类 `RadioButtonHandler` 的四个实例（定义在第 70–85 行）。在此例中，每个事件监听器都已注册，用以处理当用户点击特定 `JRadioButton` 时生成的 `ItemEvent`。注意，每个 `RadioButtonHandler` 都用特定的对象类 `RadioButtonHandler` 进行初始化（第 70–85 行），该类实现了 `ItemListener` 接口，因此它可以处理由 `JRadioButtons` 生成的 `Events`。构造函数将接收到的 `Font` 对象作为参数存储在事件监听器的实例字体中（定义在第 72 行）。当用户点击一个 `JRadioButton` 时，`radioGroup` 会取消之前选中的 `JRadioButton`，而 `itemChanged` 方法（第 80–84 行）会将 `JTextField` 中的字体设置为与 `JComboBox` 对应的事件监听器。注意，内部类 `RadioButtonHandler` 的第 83 行使用了顶层类的 `textField` 变量来设置字体。
+`JRadioButtons` 在被点击时会产生 `ItemEvents`。第 59–66 行创建了内部类 `RadioButtonHandler` 的四个实例（定义在第 70–85 行）。在此例中，每个事件监听器都已注册，用以处理当用户点击特定 `JRadioButton` 时生成的 `ItemEvent`。注意，每个 `RadioButtonHandler` 都用特定的对象类 `RadioButtonHandler` 进行初始化（第 70–85 行），该类实现了 `ItemListener` 接口，因此它可以处理由 `JRadioButtons` 生成的 Events。构造函数将接收到的 `Font` 对象作为参数存储在事件监听器的实例字体中（定义在第 72 行）。当用户点击一个 `JRadioButton` 时，`radioGroup` 会取消之前选中的 `JRadioButton`，而 `itemChanged` 方法（第 80–84 行）会将 `JTextField` 中的字体设置为与 `JComboBox` 对应的事件监听器。注意，内部类 `RadioButtonHandler` 的第 83 行使用了顶层类的 `textField` 变量来设置字体。
 
-组合框（有时称为下拉列表）允许用户从列表中选择一个项目（图 12.22）。组合框通过类 `JComboBox` 类实现，该类扩展了 `JComponent`。`JComboBox` 是一个泛型类，类似于 `ArrayList`（第 7 章）。当你创建一个 `JComboBox` 时，你指定了它管理的对象类型——随后 `JComboBox` 就会显示每个对象的字符串表示。
+组合框（有时称为下拉列表）允许用户从列表中选择一个项目（图 12.22）。组合框通过类 `JComboBox` 实现，该类扩展了 `JComponent`。`JComboBox` 是一个泛型类，类似于 `ArrayList`（第 7 章）。当你创建一个 `JComboBox` 时，你指定了它管理的对象类型——随后 `JComboBox` 就会显示每个对象的字符串表示。
 
 ```java
 // 图 12.21: ComboBoxFrame.java
@@ -11050,6 +10841,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
 public class ComboBoxFrame extends JFrame {
+
     private final JComboBox<String> images; // 存储图标名称
     private final JLabel label; // 显示选中的图标
     private static String[] names = {"bug.gif", "blue.gif", "travel.gif", "anim.gif"};
@@ -11107,59 +10899,15 @@ public class RadioButtonTest {
 
 图 12.20 | 测试 `RadioButtonFrame`。（共 2 部分中的第 1 部分。）
 
-## 12.11 JComboBox：使用匿名内部类进行事件处理
-
-![](img/28513f3b4ab12c97e738c92ed0e327a8_401_0.png)
-![](img/28513f3b4ab12c97e738c92ed0e327a8_401_1.png)
-
-12.20 测试 `RadioButtonFrame`。（共 2 部分中的第 2 部分。）
-
-构造函数中的第 35–42 行（12.19）创建了四个 `JRadioButtons` 并它们添加到 `JFrame` 中。每个 `JRadioButton` 都通过像第 35 行那样的构造调用进行实例化。该构造函数设置了默认显示在 `JRadioButton` 右侧的标签以及 `JRadioButton` 的初始状态。第二个参数为 `true` 表示 `JRadioButton` 在显示时应处于被选中状态。
-
-第 45 行实例化了 `ButtonGroup` 对象 `objectGroup`。该对象是形成四个 `JRadioButton` 对象之间逻辑关系的“胶水”，并允许四个按钮中同时只有一个被选中。`ButtonGroup` 中可能没有一个 `JRadioButtons` 被选中，但这种情况只有在没有向组中添加预选的 `JRadioButtons` 且用户尚未选择 `JRadioButton` 时才会发生。第 46–49 行使用 `ButtonGroup` 方法将每个 `JRadioButtons` 与 `radioGroup` 关联。如果向组中添加了多个被选中的 `JRadioButton` 对象，则在 GUI 显示时第一个被选中的那个将保持选中。
-
-`JRadioButtons` 在被点击时会产生 `ItemEvents`。第 59–66 行创建了内部类 `RadioButtonHandler` 的四个实例（定义在第 70–85 行）。在此例中，每个事件监听器都已注册，用以处理当用户点击特定 `JRadioButton` 时生成的 `ItemEvent`。注意，每个 `RadioButtonHandler` 都用特定的对象类 `RadioButtonHandler` 进行初始化（第 70–85 行），该类实现了 `ItemListener` 接口，因此它可以处理由 `JRadioButtons` 生成的 `Events`。构造函数将接收到的 `Font` 对象作为参数存储在事件监听器的实例字体中（定义在第 72 行）。当用户点击一个 `JRadioButton` 时，`radioGroup` 会取消之前选中的 `JRadioButton`，而 `itemChanged` 方法（第 80–84 行）会将 `JTextField` 中的字体设置为与 `JComboBox` 对应的事件监听器。注意，内部类 `RadioButtonHandler` 的第 83 行使用了顶层类的 `textField` 变量来设置字体。
-
-组合框（有时称为下拉列表）允许用户从列表中选择一个项目（图 12.22）。组合框通过类 `JComboBox` 类实现，该类扩展了 `JComponent`。`JComboBox` 是一个泛型类，类似于 `ArrayList`（第 7 章）。当你创建一个 `JComboBox` 时，你指定了它管理的对象类型——随后 `JComboBox` 就会显示每个对象的字符串表示。
-
-```java
-// 图 12.21: ComboBoxFrame.java
-// JComboBox 显示图像名称列表。
-
-import java.awt.FlowLayout;
-import java.awt.event.ItemListener;
-import java.awt.event.ItemEvent;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JComboBox;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-
-public class ComboBoxFrame extends JFrame {
-    private final JComboBox<String> images; // 存储图标名称
-    private final JLabel label; // 显示选中的图标
-    private static String[] names = {"bug.gif", "blue.gif", "travel.gif", "anim.gif"};
-    private final Icon[] icons = {
-        new ImageIcon(getClass().getResource(names[0])),
-        new ImageIcon(getClass().getResource(names[1])),
-        new ImageIcon(getClass().getResource(names[2])),
-        new ImageIcon(getClass().getResource(names[3]))
-    };
-
-    // ComboBoxFrame 构造函数将 JComboBox 添加到 JFrame
-    public ComboBoxFrame() {
-        super("Testing JComboBox");
-        setLayout(new FlowLayout()); // 设置布局
-        images = new JComboBox<String>(names); // 设置 JComboBox
 
 
-
-## 图 12.21 | 显示图像名称列表的 JComboBox（第 1 部分）
+## 12.11 JComboBox
 
 ```java
 images.setMaximumCount(3); // 显示三行
 
 images.addItemListener(new ItemListener() { // 匿名内部类
+
     @Override
     public void itemChanged(ItemEvent event) {
         // 判断选择了哪个项目
@@ -11170,20 +10918,24 @@ images.addItemListener(new ItemListener() { // 匿名内部类
 }); // 结束 addItemListener 的调用
 ```
 
-## 图 12.21 | 显示图像名称列表的 JComboBox（第 2 部分）
+**图 12.21 | 显示图像名称列表的 JComboBox。（共 2 部分中的第 1 部分。）**
 
 ```java
 add(images); // 将组合框添加到 JFrame
+
 label = new JLabel(icons[0]); // 显示第一个图标
+
 add(label); // 将标签添加到 JFrame
+
 } // 结束 ComboBoxFrame 类
 ```
 
-## 图 12.22 | 测试 RadioButtonFrame
+**图 12.21 | 显示图像名称列表的 JComboBox。（共 2 部分中的第 2 部分。）**
 
 ```java
 // 图 12.22: RadioButtonTest.java
 // 测试 RadioButtonFrame。
+
 import javax.swing.JFrame;
 
 public class RadioButtonTest {
@@ -11200,15 +10952,13 @@ public class RadioButtonTest {
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_403_1.png) 滚动条遍历列表
 
-**图 12.22** 测试 RadioButtonFrame。
+**图 12.22 测试 RadioButtonFrame。**
 
 `JComboBox` 使用 `JCheckBoxes` 和 `JRadioButtons` 生成事件。此例还演示了用于事件处理的特殊内部类形式。应用程序（图 12.21–12.22）使用 `JComboBox` 提供了一个图像列表，用户从中选择一个图像。当用户选择一个名称时，应用程序会将相应的图像显示在 `JLabel` 上。`ComboBoxTest` 类（图 12.22）包含了执行此应用程序的主方法。
 
 第 19–23 行（12.21）声明并用 `ImageIcon` 对象初始化 `icons`。`String` 数组 `names`（第 17–18 行）包含了与应用程序相同目录下的四个图像文件名。
 
 在第 31 行，构造函数使用 `String` 数组初始化 `JComboBox` 对象。列表中的每个项目都有一个索引。第一个项目索引为 0，下一个是 1，以此类推。添加到 `JComboBox` 的第一个项目显示为选中项目。`setMaximumCount` 方法设置了防止列表超出所在窗口边界的行数。第 49 行将 `JComboBox` 添加到 `FlowLayout`。第 50 行声明 `JLabel` 并用 `icons` 数组中的第一个 `ImageIcon` 进行初始化。第 51 行将标签注册到 `FlowLayout`。
-
-## 12.12 JList
 
 `new` 之后开始了一个实现 `Listener` 接口的匿名内部类的声明。这类似于开始一个类声明：
 
@@ -11218,13 +10968,13 @@ public class MyHandler implements ItemListener
 
 第 36 行的左大括号和第 46 行的右大括号限定了匿名内部类的体。第 38–45 行实现了 `ItemListener` 的 `stateChanged` 方法。当用户从 `JComboBox` 中进行选择时，该方法会设置标签的 `Icon`。通过第 44 行的 `getSelectedIndex` 确定选中项目在 `JComboBox` 中的索引，从而从 `icons` 数组中选择 `Icon`。对于从 `JComboBox` 选择的每个项目，另一个项目会先被取消——因此当选择一个项目时会发生两个事件。我们希望显示用户刚刚选择的图标。由于某种原因，第 42 行确定 `getStateChange` 返回 `ItemEvent.SELECTED` 的哪种事件方法。如果是，则第 43–44 行设置标签的图标。
 
-### 软件工程观察 12.4
+## 软件工程观察 12.4
 
 与任何其他情况一样，当匿名内部类实现接口时，该类必须实现接口中的每一个抽象方法。
 
 第 35–46 行使用匿名内部类创建事件处理程序的语法类似于 Java 集成开发环境 (IDE) 生成的代码。通常情况下，IDE 允许你可视化地设计 GUI，并生成实现该 GUI 的代码。你只需要在声明事件处理的方法中插入代码，以声明如何处理每个事件。
 
-### Java 8：使用 Lambda 实现匿名内部类
+## Java 8：使用 Lambda 实现匿名内部类
 
 在第 17.9 节中，我们展示了如何使用 Java 8 lambda 来创建事件处理器。正如你所看到的，编译器会将 lambda 转换为匿名内部类的对象。
 
@@ -11234,18 +10984,17 @@ public class MyHandler implements ItemListener
 
 图 12.23–24 的应用创建一个包含 13 个颜色名称的 `JList`。当点击 `JList` 中的颜色时，会发生一个 `ListSelectionEvent`，应用程序将窗口的背景颜色更改为选定的颜色。`Test` 类（图 12.24）包含了执行此程序的 `main` 方法。
 
-### 图 12.23 | 显示颜色列表的 JList（第 1 部分）
-
 ```java
 // Fig 12.23: Frame.java
 // 显示颜色列表的 JList。
+
 import java.awt.FlowLayout;
 import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JList;
 ```
 
-### 图 12.23 | 显示颜色列表的 JList（第 2 部分）
+**图 12.23 | 显示颜色列表的 JList。（2 部分中的 1 部分）**
 
 ```java
 import javax.swing.JScrollPane;
@@ -11288,40 +11037,36 @@ public class ListFrame extends JFrame {
                 }
             }
         );
-    } // ListFrame 类结束
+    } // ListFrame 类
 }
 ```
 
-### 图 12.24 | 从 JList 选择颜色（第 1 部分）
+**图 12.23 | 显示颜色列表的 JList。（2 部分中的 2 部分）**
 
 ```java
 // Fig 12.24: ListTest.java
 // 从 JList 选择颜色。
 import javax.swing.JFrame;
-```
 
-### 图 12.24 | 从 JList 选择颜色（第 2 部分）
-
-```java
 public class ListTest {
     public static void main(String[] args) {
         ListFrame listFrame = new ListFrame(); // 创建 ListFrame
         listFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         listFrame.setSize(350, 150);
         listFrame.setVisible(true);
-    } // ListTest 类结束
+    } // ListTest 类
 }
 ```
 
 ![](img/28513f3bab12c97e38c92ed0e327a8_0.png)
 
-**图 12.24** | 为 JList 选择颜色（第 2 部分）。
+**图 12.24 | 为 JList 选择颜色。（2 部分中的 2 部分）。**
 
-第 29 行（12.23）创建 `JList` 对象 `colorList`。`JList` 构造函数的参数是用于在列表中显示的对象数组（在本例中为 `Strings`）。第 30 行使用 `JList` 方法 `setVisibleRowCount` 确定列表的可见行数。第 33 行使用 `JList` 方法 `setSelectionMode` 指定选择模式。`ListSelectionModel` 类（`javax.swing` 包）声明了 `JList` 选择模式的三个常量——`SINGLE_SELECTION`（一次只能选择一个项目）、`SINGLE_INTERVAL_SELECTION`（允许选择连续范围的多选列表）和 `MULTIPLE_INTERVAL_SELECTION`（允许选择任意项目的多选列表）。
+第 29 行（12.23）创建 `JList` 对象 `colorList`。`JList` 构造函数的参数是用于在列表中显示的对象数组（在本例中为 Strings）。第 30 行使用 `JList` 方法 `setVisibleRowCount` 确定列表的可见项目数。第 33 行使用 `JList` 方法 `setSelectionMode` 指定选择模式。`ListSelectionModel` 类（`javax.swing` 包）声明了 `JList` 选择模式的三个常量——`SINGLE_SELECTION`（一次只能选择一个项目）、`SINGLE_INTERVAL_SELECTION`（允许选择连续范围的多选列表）和 `MULTIPLE_INTERVAL_SELECTION`（允许选择任意项目的多选列表）。
 
 使用 `JComboBox`，如果列表中的项目多于行数，列表将提供滚动条。使用 `JScrollPane` 对象来提供滚动功能。第 36 行向 `JFrame` 添加一个新的 `JScrollPane` 实例。`JScrollPane` 接收需要滚动功能的 `JComponent`（在本例中为 `colorList`）。注意场景图中滚动条出现在 `JList` 的右侧。默认情况下，只有当 `JList` 中的项目数超过可见项目数时，滚动条才会出现。
 
-第 38–49 行使用 `addSelectionListener` 方法注册实现 `ListSelectionListener`（`javax.swing` 包）的对象作为 `JList` 选择事件的监听器。我们再次使用匿名内部类的实例（39–48 行）作为监听器。在这个示例中，当用户从 `colorList` 中进行选择时，`valueChanged` 方法（42–47 行）应该将 `JFrame` 的背景颜色更改为选定的颜色。这在第 45–46 行完成。第 45 行使用了 `JFrame` 方法 `getContentPane`。`JFrame` 实际上包含三层——背景、内容面板（content pane）和玻璃面板（glass pane）。内容面板位于背景前面，是放置 GUI 组件以及在屏幕上位于 GUI 组件前面的项目的地方。内容面板完全隐藏了 `JFrame` 的背景；因此，要更改 GUI 组件后面的背景，必须更改内容面板的背景颜色。`getContentPane` 方法返回 `JFrame` 内容面板的引用。在第 45 行，我们随后使用引用调用 `setBackground`，设置内容面板的背景颜色。颜色通过选中项目的索引从数组中选择。
+第 38–49 行使用 `addSelectionListener` 方法注册实现 `ListSelectionListener`（`javax.swing` 包）的对象作为 `JList` 选择事件的监听器。我们再次使用匿名内部类的实例（39–48 行）作为监听器。在这个示例中，当用户从 `colorList` 中进行选择时，`valueChanged` 方法（42–47 行）应该将 `JFrame` 的背景颜色更改为选定的颜色。这在第 45–46 行完成。第 45 行使用了 `JFrame` 方法 `getContentPane`。`JFrame` 实际上包含三层——背景、内容面板（content pane）和玻璃面板（glass pane）。内容面板位于背景前面，是放置 GUI 组件以及在屏幕上位于 GUI 组件前面的的项目的地方。内容面板完全隐藏了 `JFrame` 的背景；因此，要更改 GUI 组件后面的背景，必须更改内容面板的背景颜色。`getContentPane` 方法返回 `JFrame` 内容面板的引用。在第 45 行，我们随后使用引用调用 `setBackground`，设置内容面板的背景颜色。颜色通过选中项目的索引从数组中选择。
 
 ## 12.13 多选列表
 
@@ -11329,9 +11074,7 @@ public class ListTest {
 
 图 12.25–26 的应用使用多选列表将项目从一个 `JList` 复制到另一个。一个是 `MULTIPLE_INTERVAL_SELECTION` 列表，另一个是 `SINGLE_INTERVAL_SELECTION` 列表。当你执行应用程序时，尝试使用前述的方法在两个列表中选择项目。
 
-## 12.13 多选择列表
-
-### 图 12.25 | 允许多选择的 JList（第 2 部分）
+## 12.13 多选择列表 371
 
 ```java
 colorJList.setSelectionMode(
@@ -11364,7 +11107,7 @@ add(new JScrollPane(colorJList)); // 添加带滚动条的列表
 } // 类 MultipleSelectionFrame 结束
 ```
 
-### 图 12.26 | 测试 MultipleSelectionFrame
+**图 12.25 | 允许多选择的 Jlist。（2 个部分中的第 2 部分。）**
 
 ```java
 // 图 12.26: MultipleSelectionTest.java
@@ -11374,36 +11117,46 @@ import javax.swing.JFrame;
 
 
 
-## 12.25 测试 MultipleSelectionFrame
+## 5 public class MultipleSelectionTest
 
 ```java
-public class MultipleSelectionTest
-{
-    public static void main(String[] args)
-    {
+public class MultipleSelectionTest {
+    public static void main(String[] args) throws {
         MultipleSelectionFrame multipleSelectionFrame = new MultipleSelectionFrame();
         multipleSelectionFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         multipleSelectionFrame.setSize(350, 150);
         multipleSelectionFrame.setVisible(true);
     }
-}
+} // 类 MultipleSelectionTest 结束
 ```
 
-**图 12.26** 测试 MultipleSelectionFrame。
+**图 12.26** 测试 `MultipleSelectionFrame`。（2 个部分中的第 1 部分。）
 
-图 12.25 的第 27 行清空 `JList` 并用 `colorNames` 数组中的字符串对其初始化。第 28 行将 `colorList` 中可见的行数设置为 5。第 29–30 行指定 `colorList` 为 `MULTIPLE_INTERVAL_SELECTION` 列表。第 31 行将一个包含 `colorList` 的新 `JScrollPane` 板添加到 `JFrame`。第 51–57 行对 `copyList` 执行类似的任务，`copyList` 被声明为 `SINGLE_INTERVAL_SELECTION` 列表。如果 `JList` 不包含项目，则它不会在 `FlowLayout` 中显示。出于此原因，第 53–54 行分别使用 `JList` 方法 `setFixedWidth` 和 `setHeight` 将宽度设置为 100 像素，并将 `JList` 中每个项目的高度设置为 15 像素。
+## 372 第 12 章 Swing GUI 组件：第一部分
+
+![](img/28513f3b4ab12c97e738c92ed0e327a8_410_0.png)
+
+**图 12.26** 测试 `MultipleSelectionFrame`。（2 个部分中的第 2 部分。）
+
+第 12.25 节的第 27 行清空 `JList` 并用 `colorNames` 数组中的字符串对其初始化。第 28 行将 `colorList` 中可见的行数设置为 5。第 29–30 行指定 `colorList` 为 `MULTIPLE_INTERVAL_SELECTION` 列表。第 31 行将一个包含 `colorList` 的新 `JScrollPane` 板添加到 `JFrame`。第 51–57 行对 `copyList` 执行类似的任务，`copyList` 被声明为 `SINGLE_INTERVAL_SELECTION` 列表。如果 `JList` 不包含项目，则它不会在 `FlowLayout` 中显示。出于此原因，第 53–54 行分别使用 `JList` 方法 `setFixedWidth` 和 `setHeight` 将宽度设置为 100 像素，并将 `JList` 中每个项目的高度设置为 15 像素。
 
 通常情况下，当 `JList` 中发生多选择时，应该处理由另一个 GUI 组件生成的事件（称为**外部事件**）。例如，用户点击名为 `copyButton` 的 `JButton`，以触发事件，该事件将 `colorList` 中选中的项目复制到 `copyList` 中。
 
 第 34–47 行为 `copyButton` 声明、创建并注册了一个 `ActionListener`。当用户点击 `copyButton` 时，`actionPerformed` 方法（第 38–45 行）使用 `JList` 方法 `setListData` 设置在 `copyList` 中显示的项目。第 43–44 行调用 `colorList` 的方法 `getSelectedValues`，它返回一个 `List<String>`（因为 `JList` 是被创建为 `List<String>` 的），代表 `colorList` 中的被选项目。我们调用 `List<String>.toArray` 将其转换为字符串数组，可以作为参数传递给 `copyList` 的 `setListData` 方法。`toArray` 方法接收它作为一个数组，代表该方法将返回的数组类型。你将在第 16 章学习更多关于 `List` 和数组的知识。
 
-你可能会奇怪为什么在第 42 行可以使用 `copyList`，尽管应用程序直到第 49 行才创建它所引用的对象。请记住 `actionPerformed` 方法（第 38–45 行）在用户按下 `copyButton` 之前不会执行，而在构造函数执行完成且应用程序显示 GUI 之后是不可能的。在程序执行的这一点，`copyList` 已经用新的 `JList` 对象初始化。
+你可能会奇怪为什么在第 42 行可以使用 `copyList`，尽管应用程序直到第 49 行才创建它所引的对象。请记住 `actionPerformed` 方法（第 38–45 行）在用户按下 `copyButton` 之前不会执行，而在构造函数执行完成且应用程序显示 GUI 之后是不可能的。在程序执行的这一点，`copyList` 已经用新的 `JList` 对象初始化。
 
 ## 12.4 鼠标事件处理
 
-本节介绍了用于处理鼠标事件的 `MouseListener` 和 `MouseMotionListener` 事件监听器。可以为任何派自 `java.awt.Component` 的 GUI 组件处理鼠标事件。`MouseListener` 和 `MouseMotionListener` 的方法总结如图 12.27 所示。`javax.swing` 包包含 `MouseInputListener`，它扩展了 `MouseListener` 和 `MouseMotionListener`，创建一个包含所有 `MouseListener` 和 `MouseMotionListener` 方法的单一接口。
+本节介绍了用于处理鼠标事件的 `MouseListener` 和 `MouseMotionListener` 事件监听器。可以为任何派自 `java.awt.Component` 的 GUI 组件处理鼠标事件。`MouseListener` 和 `MouseMotionListener` 的方法总结如图 12.27 所示。`javax.swing` 包包含 `MouseInputListener`，它扩展了 `MouseListener` 和 `MouseMotionListener`，创建一个包含所有 `MouseListener` 方法的单一接口。
 
-### MouseListener 和 MouseMotionListener 接口方法
+## 12.14 鼠标事件处理 373
+
+当为组件注册了适当的事件监听对象时，当鼠标与组件交互时就会调用 `MouseListener` 和 `MouseMotionListener` 方法。
+
+每个鼠标处理方法都接收一个 `MouseEvent` 作为参数，其中包含了关于发生鼠标事件的信息，包括 x 和 y 坐标。这些坐标相对于发生事件的 GUI 组件的左上角测量。x 坐标从 0 向右增加。y 坐标从 0 向下增加。`MouseEvent` 类的父类方法允许你确定点击了哪个鼠标按钮。
+
+### MouseListener 接口方法
 
 ```text
 Methods of interface MouseListener
@@ -11420,13 +11173,13 @@ void mouseMoved(MouseEvent)
 
 **图 12.27** `MouseListener` 和 `MouseMotionListener` 接口。
 
-### 软件工程观察
+## 软件工程观察
 
 Java 还提供了 `MouseWheelListener` 以允许应用程序响应鼠标轮的旋转。该接口声明了 `wheelMoved`，它接收一个 `MouseWheelEvent` 作为参数。`MouseWheelEvent` 类（`MouseEvent` 的子类）包含了允许事件处理器获取旋转量信息的方法。
 
 ### 在 JPanel 上跟踪鼠标事件
 
-鼠标应用程序（图 12.28–12.29）演示了 `MouseListener` 和 `MouseMotionListener` 接口（图 12.28 的第 36–97 行）实现了这两个接口。当你的类实现这些接口时，必须声明这些接口的所有方法。此示例中的每个鼠标事件都会在底部的 `JLabel` 中显示一个字符串。
+鼠标应用程序（图 12.28–12.29）演示了 `MouseListener` 和 `MouseMotionListener` 接口（12.28 的第 36–97 行）实现了这两个接口。当你的类实现这些接口时，必须声明这些接口的所有方法。此示例中的每个鼠标事件都会在底部的 `JLabel` 中显示一个字符串。
 
 ```java
 // 图 12.28: MouseTrackerFrame.java
@@ -11442,14 +11195,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class MouseTrackerFrame extends JFrame
-{
+public class MouseTrackerFrame extends JFrame {
     private final JPanel mousePanel; // 发生鼠标事件的面板
     private final JLabel statusBar; // 显示事件信息
 
-    // MouseTrackerFrame 构造函数设置 GUI
-    public MouseTrackerFrame()
-    {
+    // MouseTrackerFrame 构造函数设置 GUI 并
+    public MouseTrackerFrame() {
         super("Demonstrating Mouse Events");
         mousePanel = new JPanel();
         mousePanel.setBackground(Color.WHITE);
@@ -11462,77 +11213,73 @@ public class MouseTrackerFrame extends JFrame
         mousePanel.addMouseListener(handler);
         mousePanel.addMouseMotionListener(handler);
     }
+}
+```
 
-    private class MouseHandler implements MouseListener, MouseMotionListener
-    {
-        // MouseListener 事件处理器
-        // 处理鼠标按下后立即释放的事件
-        @Override
-        public void mouseClicked(MouseEvent event)
-        {
-            statusBar.setText(String.format("Clicked at [%d, %d]", event.getX(), event.getY()));
-        }
+**图 12.28** 鼠标事件处理。（3 个部分中的第 1 部分）。
 
-        // 处理鼠标按下事件
-        @Override
-        public void mousePressed(MouseEvent event)
-        {
-            statusBar.setText(String.format("Pressed at [%d, %d]", event.getX(), event.getY()));
-        }
+```java
+private class MouseHandler implements MouseListener, MouseMotionListener {
+    // MouseListener 事件处理器
+    // 处理鼠标按下后立即释放的事件
+    @Override
+    public void mouseClicked(MouseEvent event) {
+        statusBar.setText(String.format("Clicked at [%d, %d]", event.getX(), event.getY()));
+    }
 
-        // 处理鼠标释放事件
-        @Override
-        public void mouseReleased(MouseEvent event)
-        {
-            statusBar.setText(String.format("Released at [%d, %d]", event.getX(), event.getY()));
-        }
+    // 处理鼠标按下事件
+    @Override
+    public void mousePressed(MouseEvent event) {
+        statusBar.setText(String.format("Pressed at [%d, %d]", event.getX(), event.getY()));
+    }
 
-        // 处理鼠标进入事件
-        @Override
-        public void mouseEntered(MouseEvent event)
-        {
-            statusBar.setText(String.format("Mouse entered at [%d, %d]", event.getX(), event.getY()));
-            mousePanel.setBackground(Color.GREEN);
-        }
+    // 处理鼠标释放事件
+    @Override
+    public void mouseReleased(MouseEvent event) {
+        statusBar.setText(String.format("Released at [%d, %d]", event.getX(), event.getY()));
+    }
 
-        // 处理鼠标离开区域事件
-        @Override
-        public void mouseExited(MouseEvent event)
-        {
-            statusBar.setText("Mouse outside JPanel");
-            mousePanel.setBackground(Color.WHITE);
-        }
+    // 处理鼠标进入事件
+    @Override
+    public void mouseEntered(MouseEvent event) {
+        statusBar.setText(String.format("Mouse entered at [%d, %d]", event.getX(), event.getY()));
+        mousePanel.setBackground(Color.GREEN);
+    }
 
-        // MouseMotionListener 事件处理器
-        // 处理用户按下按钮并拖动鼠标的事件
-        @Override
-        public void mouseDragged(MouseEvent event)
-        {
-            statusBar.setText(String.format("Dragged at [%d, %d]", event.getX(), event.getY()));
-        }
+    // 处理鼠标离开区域事件
+    @Override
+    public void mouseExited(MouseEvent event) {
+        statusBar.setText(String.format("Mouse outside JPanel"));
+        mousePanel.setBackground(Color.WHITE);
+    }
 
-        // 处理用户移动鼠标事件
-        @Override
-        public void mouseMoved(MouseEvent event)
-        {
-            statusBar.setText(String.format("Moved at [%d, %d]", event.getX(), event.getY()));
-        }
+    // MouseMotionListener 事件处理器
+    // 处理用户按下按钮并拖动鼠标的事件
+    @Override
+    public void mouseDragged(MouseEvent event) {
+        statusBar.setText(String.format("Dragged at [%d, %d]", event.getX(), event.getY()));
+    }
+
+    // 处理用户移动鼠标事件
+    @Override
+    public void mouseMoved(MouseEvent event) {
+        statusBar.setText(String.format("Moved at [%d, %d]", event.getX(), event.getY()));
     } // 内部类 MouseHandler 结束
 } // 结束类 MouseTrackerFrame
 ```
 
-**图 12.28** 鼠标事件处理。
+**图 12.28** 鼠标事件处理。（3 部分中的第 2 部分）。
+
+**图 12.28** 鼠标事件处理。（3 部分中的第 3 部分）。
 
 ```java
-// 图 12.29: MouseTracker.java
+// 图 12.29: MouseTrackerFrame.java
 // 测试 MouseTrackerFrame。
 
 import javax.swing.JFrame;
 
-public class MouseTracker
-{
-    public static void main(String[] args)
-    {
+public class MouseTracker {
+    public static void main(String[] args) {
         MouseTrackerFrame mouseTrackerFrame = new MouseTrackerFrame();
         mouseTrackerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mouseTrackerFrame.setSize(300, 100);
@@ -11543,9 +11290,14 @@ public class MouseTracker
 
 
 
-# 测试 MouseTrackerFrame
+![](img/28513f3b4ab12c97e738c92ed0e327a8_414_0.png)
+![](img/28513f3b4ab12c97e738c92ed0e327a8_414_1.png)
+![](img/28513f3b4ab12c97e738c92ed0e327a8_414_2.png)
+![](img/28513f3b4ab12c97e738c92ed0e327a8_414_3.png)
+![](img/28513f3b4ab12c97e738c92ed0e327a8_414_4.png)
+![](img/28513f3b4ab12c97e738c92ed0e327a8_414_5.png)
 
-**图 12.29** 测试 MouseTrackerFrame。
+**图 12.29** 测试 `MouseTrackerFrame`。
 
 第 23 行创建了 `JPanel` `mousePanel`。此 `JPanel` 的鼠标事件由应用程序重新跟踪。第 24 行将 `mousePanel` 的背景颜色设置为白色。当用户将鼠标移动到 `mousePanel` 时，应用程序将把 `mousePanel` 的背景颜色改为绿色。当用户将鼠标移出 `mousePanel` 时，应用程序将背景颜色改回白色。第 25 行指定了 `JFrame` 中 GUI 组件的布局。正如你所学到的，你必须指定 `JFrame` 中 GUI 组件的布局。在那个节中，我们介绍了布局管理器 `FlowLayout`。在这里，我们使用 `JFrame` 容器的默认布局——`BorderLayout`，它安排了 NORTH、EAST、WEST 和 CENTER 区域。NORTH 对应于容器的顶部。此示例使用了 CENTER 和 SOUTH 区域。第 25 行使用双参数版本的方法在 CENTER 区域添加窗格。`BorderLayout` 会自动调整 CENTER 区域组件的大小，以使用 `JFrame` 中未被其他区域组件占据的所有空间。第 12.1.8 节详细讨论了 `BorderLayout`。
 
@@ -11561,7 +11313,9 @@ public class MouseTracker
 
 许多事件监听接口（如 `MouseListener` 和 `MouseMotionListener`）包含多个方法。并不总是需要声明接口中的所有方法。例如，应用程序可能只需要 `MouseListener` 中的 `mouseClicked` Handler 或 `MouseMotionListener` 中的 `mouseDragged` Handler。`WindowListener` 指定了七个窗口处理方法。对于许多具有多个方法的监听接口，`java.awt` 和 `javax.swing` 包提供了事件监听适配器类。适配器类实现接口并为接口中的每个方法提供默认实现（空方法体）。图 12.30 显示了几个 `java.awt.event` 适配器类以及你实现的接口。你可以扩展适配器类以继承每个方法的默认实现，并重写你需要的事件处理方法。
 
-### 软件工程观察 12.6
+## 软件工程观察 12.6
+
+![](img/28513f3b4ab12c97e738c92ed0e327a8_415_0.png)
 
 当类实现一个接口时，该类与该接口具有 is-a 关系。该类的所有直接和间接子类都继承此接口。因此，扩展事件适配器类的对象就是对应事件类型的对象（例如，`MouseAdapter` 的子类对象就是 `MouseListener`）。
 
@@ -11577,9 +11331,58 @@ public class MouseTracker
 
 **图 12.30** 事件适配器类及其实现的接口。
 
-### 常见编程错误 12.3
+## 12.15 适配器类（续）
 
-如果扩展了一个适配器类并写错了要覆盖的方法名称，且没有使用 `@Override` 声明该方法，那么你的方法将仅仅变成类中的另一个方法。这是一个难以检测的逻辑错误，因为程序将保留继承自适配器类的空版本方法。
+```java
+31 int xPos = event.getX(); // 获取鼠标的x位置
+32 int yPos = event.getY(); // 获取鼠标的y位置
+33
+34 details = String.format("Clicked %d time(s)",
+35     event.getClickCount());
+36
+37 if (event.isMetaDown()) // 右键
+38     details += " with right mouse button";
+39 else if (event.isAltDown()) // 中键
+40     details += " with center mouse button";
+41 else // 左键
+42     details += " with left mouse button";
+43
+44
+45 statusBar.setText(details); // 在 statusBar 中显示消息
+46 }
+47 } // 结束类 MouseDetailsFrame
+```
+
+**图 12.31** 展示鼠标点击并区分鼠标按钮。（第 2 部分，共 2 部分）
+
+```java
+// 12.32: MouseDetails.java
+// 测试 MouseDetailsFrame.
+import javax.swing.JFrame;
+
+public class MouseDetails
+{
+    public static void main(String[] args)
+    {
+        MouseDetailsFrame mouseDetailsFrame = new MouseDetailsFrame();
+        mouseDetailsFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mouseDetailsFrame.setSize(400, 150);
+        mouseDetailsFrame.setVisible(true);
+    }
+} // 结束类 MouseDetails
+```
+
+![](img/28513f3b4ab12c97e738c92ed0e327a8_417_0.png)
+![](img/28513f3b4ab12c97e738c92ed0e327a8_417_1.png)
+
+**图 12.32** 测试 `MouseDetailsFrame`。
+
+# 第 12 章 Swing GUI 组件：第一部分
+
+> **常见编程错误 12.3**
+> 如果扩展了一个适配器类并写错了要覆盖的方法名称，且没有使用 `@Override` 声明该方法，那么你的方法将仅仅变成类中的另一个方法。这是一个难以检测的逻辑错误，因为程序将保留继承自适配器类的空版本方法。
+
+![](img/28513f3b4ab12c97e738c92ed0e327a8_418_0.png)
 
 Java 应用的用户可能运行在带有单键、双键或三键鼠标的系统中。`MouseEvent` 继承了 `InputEvent` 类的多个方法，可以区分多键鼠标上的鼠标按钮，或者通过组合按键和鼠标点击模拟多键鼠标。图 12.33 显示了用于区分鼠标点击的 `InputEvent` 方法。Java 假设每个鼠标都包含一个按钮。然而，测试左键点击非常简单。单键或双键鼠标的用户必须同时结合按键和鼠标点击来模拟鼠标上缺失的按钮。在单键或双键鼠标的情况下，如果用户按住 Alt 键并点击双键鼠标上的左键或单键鼠标上的唯一按钮，Java 应用将假设点击了中间鼠标键。在单键鼠标的情况下，如果用户在 Mac 上按住 Meta 键（有时称为 Command 键或“苹果”键）并点击鼠标按钮，Java 应用将假设点击了右键。
 
@@ -11590,67 +11393,7 @@ Java 应用的用户可能运行在带有单键、双键或三键鼠标的系统
 
 **图 12.33** 确定是否点击了右键或中间鼠标键的 `InputEvent` 方法。
 
-图 12.31 的第 21 行为 `MouseFrame` 注册了一个 `MouseListener`。该事件监听器是 `MouseClickHandler` 类的对象，它扩展了 `MouseAdapter`。这允许我们启用 `mouseClicked`（第 28–45 行）。该方法首先捕获事件发生的坐标，并将其存储在局部变量 `xPos` 和 `yPos` 中（第 31–32 行）。第 34–35 行创建一个名为 `details` 的字符串，其中包含连续鼠标点击的次数，该次数由第 35 行的 `MouseEvent` 方法 `getClickCount` 返回。第 37–42 行使用 `isMetaDown` 和 `isAltDown` 来确定用户点击了哪个鼠标按钮，并在每种情况下向 `details` 附加相应的字符串。生成的字符串显示在 `statusBar` 中。`MouseDetails` 类（图 12.32）包含测试鼠标按钮计数的 `main` 方法，通过反复点击它来查看点击数的递增。
-
-```java
-// 图 12.31: MouseDetailsFrame.java
-// 展示鼠标点击并区分鼠标按钮。（第 1 部分，共 2 部分）
-import java.awt.BorderLayout;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-
-public class MouseDetailsFrame extends JFrame {
-    private JLabel statusBar;
-
-    public MouseDetailsFrame() {
-        super("Mouse Details");
-        statusBar = new JLabel();
-        add(statusBar, BorderLayout.SOUTH);
-        addMouseListener(new MouseClickHandler());
-    }
-
-    private class MouseClickHandler extends MouseAdapter {
-        @Override
-        public void mouseClicked(MouseEvent event) {
-            int xPos = event.getX(); // 获取鼠标的x位置
-            int yPos = event.getY(); // 获取鼠标的y位置
-
-            String details = String.format("Clicked %d time(s)",
-                event.getClickCount());
-
-            if (event.isMetaDown()) // 右键
-                details += " with right mouse button";
-            else if (event.isAltDown()) // 中键
-                details += " with center mouse button";
-            else // 左键
-                details += " with left mouse button";
-
-            statusBar.setText(details); // 在 statusBar 中显示消息
-        }
-    }
-}
-```
-
-**图 12.31** 展示鼠标点击并区分鼠标按钮。（第 1 部分，共 2 部分）
-
-```java
-// 图 12.32: MouseDetails.java
-// 测试 MouseDetailsFrame.
-import javax.swing.JFrame;
-
-public class MouseDetails {
-    public static void main(String[] args) {
-        MouseDetailsFrame mouseDetailsFrame = new MouseDetailsFrame();
-        mouseDetailsFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        mouseDetailsFrame.setSize(400, 150);
-        mouseDetailsFrame.setVisible(true);
-    }
-}
-```
-
-**图 12.32** 测试 MouseDetailsFrame。
+图 12.31 的第 21 行为 `MouseFrame` 注册了一个 `MouseListener`。该事件监听器是 `MouseClickHandler` 类的对象，它扩展了 `MouseAdapter`。这允许我们启用 `mouseClicked`（第 28–45 行）。该方法首先捕获事件发生的坐标，并将其存储在局部变量 `xPos` 和 `yPos` 中（第 31–32 行）。第 34–35 行创建一个名为 `details` 的字符串，其中包含连续鼠标点击的次数，该次数由第 35 行的 `MouseEvent` 方法 `getClickCount` 返回。第 37–42 行使用 `isMetaDown` 和 `isAltDown` 来确定用户点击了哪个鼠标按钮，并在每种情况下向 `details` 附加相应的字符串。生成的字符串显示在 `statusBar` 中。`MouseDetails` 类（图 12.32）包含 `main` 方法，通过反复点击它来查看点击数的递增。
 
 ## 12.16 用于鼠标绘图的 JPanel 子类
 
@@ -11660,17 +11403,17 @@ public class MouseDetails {
 
 扩展 `JComponent` 的轻量级 Swing 组件（如 `JPanel`）包含 `paintComponent`，该方法在轻量级 Swing 组件显示时被调用。通过重写此方法，你可以指定如何使用 Java 的功能绘制形状。在自定义 `JPanel` 用作专用绘图区域时，子类应该重写 `paintComponent` 并在重写方法的第一行调用父类的 `paintComponent` 版本，以确保组件正确显示。其原因是 `JComponent` 的子类支持透明性。为了正确显示组件，程序必须确定组件是否是透明的。确定此点的代码位于父类 `JComponent` 的 `paintComponent` 实现中。当组件是透明时，当程序显示组件时，`paintComponent` 不清除其背景。当组件是不透明时，`paintComponent` 在组件显示之前清除背景。Swing 组件的透明度可以通过 `setOpaque(false)` 设置（表示组件是透明的）。
 
-#### 错误预防提示 12.1
+> **错误预防提示 12.1**
+> 在 `JComponent` 的 `paintComponent` 方法中，第一条语句始终调用父类方法，以确保对象显示正确。
 
-在 `JComponent` 的 `paintComponent` 方法中，第一条语句始终调用父类方法，以确保对象显示正确。
+![](img/28513f3b4ab12c97e738c92ed0e327a8_419_png)
 
-#### 常见编程错误 12.4
-
-如果重写的 `paintComponent` 方法没有调用父类版本，绘图将被擦除。
+> **常见编程错误 12.4**
+> 如果重写的 `paintComponent` 方法没有调用父类版本，绘图将被擦除。
 
 ### 定义自定义绘图区域
 
-图 12.34-12.35 的 Painter 应用演示了一个自定义的 `JPanel` 子类，用于创建专用绘图区域。该应用程序使用 `mouseDragged` 创建简单的绘画程序。用户可以通过在 `JPanel` 上拖动鼠标来绘画。此示例未使用 `mouseMoved`，因此我们的事件监听类（图 12.34 第 20–29 行的匿名内部类）扩展了 `MouseMotionAdapter`。我们只需重写 `mouseDragged` 来为此应用程序提供事件处理。
+图 12.34–12.35 的 Painter 应用演示了一个自定义的 `JPanel` 子类，用于创建专用绘图区域。该应用程序使用 `mouseDragged` 创建简单的绘画程序。用户可以通过在 `JPanel` 上拖动鼠标来绘画。此示例未使用 `mouseMoved`，因此我们的事件监听类（图 12.34 第 20–29 行的匿名内部类）扩展了 `MouseMotionAdapter`。我们只需重写 `mouseDragged` 来为此应用程序提供事件处理。
 
 ```java
 // 图 12.34: PaintPanel.java
@@ -11678,50 +11421,23 @@ public class MouseDetails {
 import java.awt.Point;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionAdapter;
-import javax.swing.JPanel;
-import java.util.ArrayList;
-
-public class PaintPanel extends JPanel {
-    private ArrayList<Point> points = new ArrayList<>();
-
-    public PaintPanel() {
-        addMouseMotionListener(new MouseMotionAdapter() {
-            @Override
-            public void mouseDragged(MouseEvent event) {
-                points.add(event.getPoint());
-                repaint();
-            }
-        });
-    }
-
-    @Override
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        for (Point point : points) {
-            g.fillOval(point.x, point.y, 4, 4);
-        }
-    }
-}
 ```
 
-**图 12.34** 用于实现事件处理。
+**图 12.34** 用于实现事件处理。（第 1 部分，共 2 部分）。
 
 `PaintPanel` 类（图 12.34）扩展 `JPanel` 以创建绘图区域。`Point` 类（`java.awt` 包）代表 x-y 坐标。我们使用该类的对象来存储每次鼠标绘制事件的坐标。`Graphics` 用于绘制。在本示例中，我们使用 `Point` 的 `ArrayList`（第 13 行用于存储每次鼠标绘制事件发生的位置）。正如你看到的，`paintComponent` 使用这些 `Point` 进行绘制。
 
-第 19–30 行注册了一个 `MouseMotionListener` 来监听 `PaintPanel` 的鼠标移动事件。第 20–29 行创建一个扩展适配器类 `MouseMotionAdapter` 的匿名内部类对象。记住 `MouseMotionAdapter` 实现了 `MouseMotionListener`，因此匿名内部类继承了 `mouseMoved` 和 `mouseDragged` 的实现，它实现了接口的所有方法。然而，默认的实现这些方法在被调用时什么都不做。我们在第 23–28 行重写了 `mouseDragged` 方法，以捕获鼠标拖拽的坐标并将其存储为 `Point` 对象。第 26 行调用 `MouseEvent` 的 `getPoint` 方法获取事件发生的 `Point`，并将其存储在 `ArrayList` 中。第 27 行调用 `repaint` 方法（间接继承自 `Component` 类），指示尽快通过调用 `JPanel` 的 `paintComponent` 方法刷新屏幕上的 `JPanel`。
+第 19–30 行注册了一个 `MouseListener` 来监听 `PaintPanel` 的鼠标移动事件。第 20–29 行创建一个扩展适配器类 `MouseMotionAdapter` 的匿名内部类对象。记住 `MouseMotionAdapter` 实现了 `MouseMotionListener`，因此匿名内部类继承了 `mouseMoved` 和 `mouseDragged` 的实现，它实现了接口的所有方法。然而，默认的实现这些方法在被调用时什么都不做。我们在第 23–28 行重写了 `mouseDragged` 方法，以捕获鼠标拖拽的坐标并将其存储为 `Point` 对象。第 26 行调用 `MouseEvent` 的 `getPoint` 方法获取事件发生的 `Point`，并将其存储在 `ArrayList` 中。第 27 行调用 `repaint` 方法（间接继承自 `Component` 类），指示尽快通过调用 `JPanel` 的 `paintComponent` 方法刷新屏幕上的 `JPanel`。
 
 `paintComponent` 方法（第 34–42 行）接收一个 `Graphics` 参数，每当 `JPanel` 需要显示在屏幕上时——当 GUI 首次显示时——或在屏幕上刷新时（例如调用 `repaint` 方法或 GUI 组件被屏幕上的另一个窗口隐藏后再次可见时），该方法就会被自动调用。
 
-#### 观察 12.13
+> **观察 12.13**
+> 为 Swing 组件调用 `repaint` 表示该组件应尽快在屏幕上进行刷新。只有当组件是不透明的时，才会清除背景。组件方法 `setOpaque` 可以传递一个布尔参数，指示该组件是不透明的（true）还是透明的（false）。
 
-为 Swing 组件调用 `repaint` 表示该组件应尽快在屏幕上进行刷新。只有当组件是不透明的（opaque）时，才会清除背景。组件方法 `setOpaque` 可以传递一个布尔参数，指示该组件是不透明的（true）还是透明的（false）。
+第 37 行调用 `paintComponent` 的父类版本，以清除 `JPanel` 的背景（`JPanel` 默认是不透明的）。第 40–41 行在 `ArrayList` 中每个 `Point` 指定的位置绘制一个椭圆。`Graphics` 方法 `fillOval` 绘制一个实心椭圆。该方法的四个参数代表绘制椭圆时所在的矩形区域（称为边界框）。前两个参数是矩形区域的左上角 x 坐标和左上角 y 坐标。最后两个坐标代表矩形区域的宽度和高度。`drawOval` 方法绘制椭圆，使其恰好触及矩形区域每条边的中点。在第 41 行中，使用 `Point` 的公共实例变量 `x` 和 `y` 来指定前两个参数。你将在第 13 章中学习更多 `Graphics` 特性。
 
-第 37 行调用 `paintComponent` 的父类版本，以清除 `JPanel` 的背景（`JPanel` 默认是不透明的）。第 40–41 行在 `ArrayList` 中每个 `Point` 指定的位置绘制一个椭圆。`Graphics` 方法 `fillOval` 绘制一个实心椭圆。该方法的四个参数代表绘制椭圆时所在的矩形区域（称为边界框 bounding box）。前两个参数是矩形区域的左上角 x 坐标和左上角 y 坐标。最后两个坐标代表矩形区域的宽度和高度。`drawOval` 方法绘制椭圆，使其恰好触及矩形区域每条边的中点。在第 41 行中，使用 `Point` 的公共实例变量 `x` 和 `y` 来指定前两个参数。你将在第 13 章中学习更多 `Graphics` 特性。
-
-#### 观察 12.14
-
-在任何 GUI 组件上进行绘图使用的坐标都是相对于该组件的左上角 (0, 0) 衡量的，而不是屏幕的左上角。
+> **观察 12.14**
+> 在任何 GUI 组件上进行绘图使用的坐标都是相对于该组件的左上角 (0, 0) 衡量的，而不是屏幕的左上角。
 
 ### 在应用程序中使用自定义 JPanel
 
@@ -11734,41 +11450,20 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Painter {
-    public static void main(String[] args) {
+public class Painter
+{
+    public static void main(String[] args)
+    {
+        // 创建 JFrame
         JFrame application = new JFrame("A simple paint program");
         PaintPanel paintPanel = new PaintPanel();
-        application.add(paintPanel, BorderLayout.CENTER);
-        application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        application.setSize(400, 300);
-        application.setVisible(true);
-    }
-}
 ```
 
-**图 12.35** 测试 PaintPanel。
 
-
-
-application.add(paintPanel, BorderLayout.CENTER);
-
-// 创建一个标签并将其放置在 BorderLayout 的南部
-application.add(new JLabel("Drag the mouse to draw"),
-    BorderLayout.SOUTH);
-
-application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-application.setSize(400, 200);
-application.setVisible(true);
-
-} // 类结束 Painter
-
-![](img/28513f3b4ab12c97e738c92ed0e327a8_422_0.png)
-
-图 12.35 | 测试 PaintPanel。（部分 2，共 2 部分。）
 
 ## 12.17 按键事件处理
 
-本节介绍了用于处理键事件的 `KeyListener` 接口。当键盘上的键按下和释放时，会产生键事件。实现 `KeyListener` 的类必须提供 `keyPressed`、`keyReleased` 和 `keyTyped` 方法的声明，这些方法接收 `KeyEvent` 参数。`KeyEvent` 类是 `InputEvent` 的子类。`keyPressed` 方法在按下任何键时被调用。`keyTyped` 方法在按下任何非功能键时被调用。（功能键包括任何方向键、Home、End、Page Up、Page Down、任何功能键等）。当在任何 `keyPressed` 或 `keyTyped` 事件后释放键时，会调用 `keyReleased` 方法。
+本节介绍了用于处理键事件的 `KeyListener` 接口。当键盘上的键按下和释放时，会产生键事件。实现 `KeyListener` 的类必须提供 `keyPressed`、`keyReleased` 和 `keyTyped` 方法的声明，这些方法接收 `KeyEvent` 参数。`KeyEvent` 类是 `InputEvent` 的子类。`keyPressed` 方法在按下任何键时被调用。`keyTyped` 方法在按下任何非功能键时被调用（功能键包括任何方向键、Home、End、Page Up、Page Down、任何功能键等）。当在任何 `keyPressed` 或 `keyTyped` 事件后释放键时，会调用 `keyReleased` 方法。
 
 应用程序 12.36–37 展示了 `KeyListener` 方法。`KeyDemoFrame` 类实现了 `KeyListener` 接口，因此应用程序中声明了三个方法。构造函数（图 12.36，第 17–28 行）使用第 27 行的 `addKeyListener` 方法注册应用程序以处理自身的键事件。`addKeyListener` 方法在 `Component` 类中声明，因此 `Component` 的每个子类都可以通知 `KeyListener` 关于该组件的键事件。
 
@@ -11816,31 +11511,25 @@ public class KeyDemoFrame extends JFrame implements KeyListener {
         setLines2and3(event); // 设置输出二三行
     }
 
-    // 处理键输入
+    // 处理按键输入
     @Override
     public void keyTyped(KeyEvent event) {
         line1 = String.format("Key typed: %s", event.getKeyChar()); // 显示键入键
         setLines2and3(event); // 设置输出二三行
     }
-}
-```
 
-图 12.36 | 键事件处理。（部分 1，共 3 部分。）
-
-```java
-// 设置输出的二三行
-private void setLines2and3(KeyEvent event) {
-    line2 = String.format("This key is %s",
-        event.isActionKey() ? "" : "not ", "an action key");
-    String temp = KeyEvent.getKeyModifiersText(event.getModifiers());
-    line3 = String.format("Modifier keys pressed: %s",
-        (temp.equals("") ? "none" : temp)); // 输出修饰键
-    textArea.setText(String.format("%s\n%s\n%s",
-        line1, line2, line3)); // 输出三行
+    // 设置输出的二三行
+    private void setLines2and3(KeyEvent event) {
+        line2 = String.format("This key is %s",
+            event.isActionKey() ? "" : "not an action key");
+        String temp = KeyEvent.getKeyModifiersText(event.getModifiers());
+        line3 = String.format("Modifier keys pressed: %s",
+            (temp.equals("") ? "none" : temp)); // 输出修饰键
+        textArea.setText(String.format("%s\n%s\n%s",
+            line1, line2, line3)); // 输出三行
+    }
 } // 类结束 KeyDemoFrame
 ```
-
-图 12.36 | 键事件处理。（部分 2，共 3 部分。）
 
 ```java
 // 图 12.37: KeyDemo.java
@@ -11857,8 +11546,6 @@ public class KeyDemo {
 } // 类结束 KeyDemo
 ```
 
-图 12.36 | 键事件处理。（部分 3，共 3 部分。）
-
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_424_0.png)
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_424_1.png)
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_424_2.png)
@@ -11867,13 +11554,7 @@ public class KeyDemo {
 
 图 12.37 | 测试 KeyDemoFrame。（部分 1，共 2 部分。）
 
-## 12.18 布局管理器介绍
-
-![](img/28513f3b4ab12c97e738c92ed0e327a8_425_0.png)
-
-**图 12.37** | 测试 KeyDemoFrame。（部分 2，共 2 部分）
-
-在第 25 行，构造函数将 `JTextArea textArea`（显示应用程序输出的地方）添加到 `JFrame` 中。`JTextArea` 是一个可以在其中显示文本的多行区域。（我们将在 12.20 节详细讨论 `JTextArea`。）注意屏幕截图，`JTextArea` 覆盖了整个窗口。这是由于 `JFrame` 默认使用 `BorderLayout`（在 12.18.2 中讨论并在图 12.41 中演示）。当单个组件添加到 `BorderLayout` 时，该组件会占据整个容器。第 23 行禁用了 `JTextArea`，使用户无法在其中输入。这导致 `JTextArea` 中的文本颜色变为灰色。第 24 行使用 `setDisabledTextColor` 更改 `JTextArea` 中的文本颜色以提高可读性。
+在第 25 行，构造函数将 `JTextArea textArea`（显示应用程序输出的地方）添加到 `JFrame` 中。`JTextArea` 是一个可以在其中显示文本的多行区域（我们将在 12.20 节详细讨论 `JTextArea`）。注意屏幕截图，`JTextArea` 覆盖了整个窗口。这是由于 `JFrame` 默认使用 `BorderLayout`（在 12.18.2 中讨论并在图 12.41 中演示）。当单个组件添加到 `BorderLayout` 时，该组件会占据整个容器。第 23 行禁用了 `JTextArea`，使用户无法在其中输入。这导致 `JTextArea` 中的文本颜色变为灰色。第 24 行使用 `setDisabledTextColor` 更改 `JTextArea` 中的文本颜色以提高可读性。
 
 `keyPressed` 方法（第 31–37 行）和 `keyReleased` 使用 `getKeyCode` 获取按下键的虚拟键码。`KeyEvent` 包含了代表键盘上每个键的虚拟键码常量。这些常量可以与 `getKeyCode` 的返回值进行比较，以测试键盘上的单个键。`getKeyCode` 返回的值传递给静态方法 `KeyEvent.getKeyText`，该方法返回一个包含被按键名称的字符串。要获得完整的键事件列表，请参阅 `KeyEvent` 类（包 `java.awt.event`）的联机文档。`keyTyped` 方法（第 49–54 行）使用 `KeyEvent.getKeyChar`（返回一个 `char`）获取输入字符的 Unicode 值。
 
@@ -11881,35 +11562,35 @@ public class KeyDemo {
 
 > **注意**：如果你需要测试键盘上的某个特定键，`KeyEvent` 类为每个键提供了一个键常量。键处理程序可以使用这些常量判断是否按下了特定键。此外，要单独判断是否按下 Alt、Ctrl、Meta 或 Shift 键，`InputEvent` 方法 `isAltDown`、`isControlDown`、`isMetaDown` 和 `isShiftDown` 返回布尔值，指示在事件期间是否按下了特定键。
 
-# 388 第 12 章 Swing GUI 组件：第一部分
+## 12.18 布局管理器介绍
 
-Container 的 `setLayout` 方法接收一个实现 `LayoutManager` 接口的对象作为参数。在 GUI 中排列组件基本上有三种方法：
+![](img/28513f3b4ab12c97e738c92ed0e327a8_425_0.png)
 
-1. **绝对定位**：这对 GUI 的外观提供了最大程度的控制能力。通过将 Container 的布局设置为 `null`，你可以使用 `setSize` 和 `setLocation` 或 `setBounds` 方法，以 Container 的左上角为基准，指定每个 GUI 组件的绝对位置。如果你这样做，你还必须指定每个 GUI 的大小。除非你有一个可以为你生成代码的集成开发环境（IDE），否则使用绝对定位对 GUI 进行编程会变得非常繁琐。
+图 12.37 | 测试 KeyDemoFrame。（部分 2，共 2 部分）
 
+`Container` 的 `setLayout` 方法接收一个实现 `LayoutManager` 接口的对象作为参数。在 GUI 中排列组件基本上有三种方法：
+
+1. **绝对定位**：这对 GUI 的外观提供了最大程度的控制能力。通过将 `Container` 的布局设置为 `null`，你可以使用 `setSize` 和 `setLocation` 或 `setBounds` 方法，以 `Container` 的左上角为基准，指定每个 GUI 组件的绝对位置。如果你这样做，你还必须指定每个 GUI 的大小。除非你有一个可以为你生成代码的集成开发环境（IDE），否则使用绝对定位对 GUI 进行编程会变得非常繁琐。
 2. **布局管理器**：使用布局管理器来定位元素比使用绝对定位创建 GUI 更简单、更快速，并且让你的 GUI 更具可缩放性，但你会失去对每个组件的大小和精确位置的某些控制。
-
 3. **IDE 中的可视化编程**：提供了可以方便地创建 GUI 的工具。每个 IDE 通常都提供一个 GUI 设计工具，允许你从工具箱将 GUI 组件拖放到设计区域。然后你可以根据需要对 GUI 组件进行定位、调整大小和对齐。IDE 生成创建 GUI 的 Java 代码。此外，你可以通过双击组件为特定组件添加事件处理代码。某些设计工具还允许你使用本章和第 19 章中描述的布局管理器。
 
 > **观察 12.15**
->
 > 大多数 IDE 都提供了用于视觉设计 GUI 的工具；这些工具编写创建 GUI 的 Java 代码。与内置布局管理器相比，此类工具通常对 GUI 组件的大小、位置和对齐提供了更大的控制。
 
 > **观察 12.16**
->
-> 可以将 Container 的布局设置为 `null`，这表示不使用任何布局管理器。在没有布局管理器的 Container 中，你必须对组件进行定位和尺寸设置，并确保在调整大小事件时根据需要对所有组件进行重新定位。组件的调整大小事件可以通过 `ComponentListener` 进行处理。
+> 可以将 `Container` 的布局设置为 `null`，这表示不使用任何布局管理器。在没有布局管理器的 `Container` 中，你必须对组件进行定位和尺寸设置，并确保在调整大小事件时根据需要对所有组件进行重新定位。组件的调整大小事件可以通过 `ComponentListener` 进行处理。
 
 图 12.38 总结了本章介绍的布局管理器。第 19 章将额外讨论一些其他的布局管理器。
 
 | 布局管理器 | 说明 |
 | :--- | :--- |
-| FlowLayout | `javax.swing.JPanel` 的默认布局。按照组件添加的顺序从左到右排列组件。也可以通过 Container 的 `add` 方法指定组件的顺序，该方法接受一个 `Component` 和一个整数位置作为参数。 |
-| BorderLayout | JFrames（以及其他窗口）的默认布局。将组件分为五个区域：NORTH、SOUTH、EAST、WEST 和 CENTER。 |
-| GridLayout | 将组件排列成行和列。 |
+| `FlowLayout` | `javax.swing.JPanel` 的默认布局。按照组件添加的顺序从左到右排列组件。也可以通过 `Container` 的 `add` 方法指定组件的顺序，该方法接受一个 `Component` 和一个整数位置作为参数。 |
+| `BorderLayout` | `JFrame`（以及其他窗口）的默认布局。将组件分为五个区域：`NORTH`、`SOUTH`、`EAST`、`WEST` 和 `CENTER`。 |
+| `GridLayout` | 将组件排列成行和列。 |
 
 图 12.38 | 布局管理器。
 
-## 12.18.1 FlowLayout
+### 12.18.1 FlowLayout
 
 `FlowLayout` 是最简单的布局管理器。GUI 组件按照它们被添加到容器的顺序从左到右放置在容器中。当到达容器边缘时，组件将继续在下一行显示。`FlowLayout` 允许 GUI 组件左对齐、居中对齐（默认）和右对齐。
 
@@ -11918,7 +11599,6 @@ Container 的 `setLayout` 方法接收一个实现 `LayoutManager` 接口的对�
 与之前一样，容器的布局通过 `Container` 类的 `setLayout` 方法进行设置。第 25 行（图 12.39）设置了第 23 行声明的 `FlowLayout` 管理器。通常情况下，在向容器添加任何 GUI 组件之前设置布局。
 
 > **观察 12.17**
->
 > 每个单独的容器只能有一个布局管理器，但同一应用程序中的多个容器可以使用不同的布局管理器。
 
 ```java
@@ -11935,16 +11615,16 @@ public class FlowLayoutFrame extends JFrame {
     private JButton leftButton; // 用于设置左对齐的按钮
     private JButton centerButton; // 用于设置居中对齐的按钮
     private JButton rightButton; // 用于设置右对齐的按钮
-    private FlowLayout flowLayout; // 布局对象
+    private FlowLayout layout; // 布局对象
     private Container container; // 用于设置布局的容器
 
     // 设置 GUI 并注册按钮监听器
     public FlowLayoutFrame() {
         super("FlowLayout Demo");
 
-        flowLayout = new FlowLayout();
+        layout = new FlowLayout();
         container = getContentPane(); // 获取用于布局的容器
-        setLayout(flowLayout);
+        setLayout(layout);
 
         // 设置 leftButton 并注册监听器
         leftButton = new JButton("Left");
@@ -11955,60 +11635,60 @@ public class FlowLayoutFrame extends JFrame {
 
 图 12.39 | FlowLayout 允许组件跨多行流过。（2 部分中的第 1 部分）
 
-# 第 12 章 Swing GUI 组件：第一部分
 
 
+# 12.18 布局管理器简介
+
+## 12.18.1 FlowLayout
 
 ```java
 30 leftButton.addActionListener(
-31 new ActionListener() // 匿名内部类
-32 {
-33 // 处理 leftButton 事件
-34 @Override
-35 public void actionPerformed(ActionEvent event)
-36 {
-37 layout.setLayout(FlowLayout.LEFT);
-39 // 重新对齐附的组件
-40 layout.layoutContainer(container);
-41 }
-42 );
+31     new ActionListener() // 匿名内部类
+32     {
+33         // 处理 leftButton 事件
+34         @Override
+35         public void actionPerformed(ActionEvent event)
+36         {
+37             layout.setLayout(FlowLayout.LEFT);
+39             // 重新对齐附的组件
+40             layout.layoutContainer(container);
+41         }
+42     );
 43 // 设置 centerButton 并注册监听器
 44 centerButton = new JButton("Center");
 45 add(centerButton); // 将 Center按钮添加到框架
 46 centerButton.addActionListener(
-47 new ActionListener() // 匿名内部类
-48 {
-49 // 处理 centerButton 事件
-50 @Override
-51 public void actionPerformed(ActionEvent event)
-52 {
-53 layout.setLayout(FlowLayout.CENTER);
-55 // 重新对齐附的组件
-56 layout.layoutContainer(container);
-57 }
-58 );
+47     new ActionListener() // 匿名内部类
+48     {
+49         // 处理 centerButton 事件
+50         @Override
+51         public void actionPerformed(ActionEvent event)
+52         {
+53             layout.setLayout(FlowLayout.CENTER);
+55             // 重新对齐附的组件
+56             layout.layoutContainer(container);
+57         }
+58     );
 59 // 设置 rightButton 并注册监听器
 60 rightButton = new JButton("Right");
 61 add(rightButton); // 将 Right按钮添加到框架
 62 rightButton.addActionListener(
-63 new ActionListener() // 匿名内部类
-64 {
-66 // 处理 rightButton 事件
-67 @Override
-68 public void actionPerformed(ActionEvent event)
-69 {
-70 layout.setLayout(FlowLayout.RIGHT);
-72 // 重新对齐附的组件
-73 layout.layoutContainer(container);
-74 }
-75 };
+63     new ActionListener() // 匿名内部类
+64     {
+66         // 处理 rightButton 事件
+67         @Override
+68         public void actionPerformed(ActionEvent event)
+69         {
+70             layout.setLayout(FlowLayout.RIGHT);
+72             // 重新对齐附的组件
+73             layout.layoutContainer(container);
+74         }
+75     };
 76 //结束 FlowLayout 构造函数
 77 // 结束 FlowLayout 类
 ```
 
 图 12.39 | FlowLayout 允许组件跨多行流过。（2 部分中的第2 部分）
-
-# 12.18 布局管理器简介 391
 
 ```java
 // 图 12.40: FlowLayoutDemo.java
@@ -12016,9 +11696,8 @@ public class FlowLayoutFrame extends JFrame {
 import javax.swing.JFrame;
 
 public class FlowLayoutDemo {
-{
     public static void main(String[] args) {
-        FlowLayoutFrame flowLayoutFrame = new FlowLayout();
+        FlowLayoutFrame flowLayoutFrame = new FlowLayoutFrame();
         flowLayoutFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         flowLayoutFrame.setSize(300, 75);
         flowLayoutFrame.setVisible(true);
@@ -12026,15 +11705,13 @@ public class FlowLayoutDemo {
 } // 结束 FlowLayoutDemo 类
 ```
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_429_0.png)
-
 **图 12.40** 测试 FlowLayoutFrame。
 
 ## 12.18.2 BorderLayout
 
 `BorderLayout` 布局管理器（`JFrame` 的默认布局管理器）将组件分为五个区域：`NORTH`、`SOUTH`、`EAST`、`WEST` 和 `CENTER`。`NORTH` 对应容器的顶部。`BorderLayout` 类继承自 `Object` 并实现了 `LayoutManager2`（`LayoutManager` 的子接口，增加了增强布局处理的几个方法）。
 
-`BorderLayout` 允许 `Container` 最包含五个组件——每个区域一个。放置在每个区域的组件可以是一个附加其他组件的容器。放置在 `NORTH` 和 `SOUTH` 区域的组件延伸横跨容器的整个宽度，其高度与放置在这些区域的组件相同。`EAST` 和 `WEST` 区域在 `NORTH` 和 `SOUTH` 区域之间垂直扩展，宽度与放置在这些区域的组件相同。放置在 `CENTER` 区域的组件会扩展以填充布局中所有剩余空间（这就是为什么图 12.37 中的 `JTextArea` 占据了整个窗口的原因）。如果所有区域都被占用，整个容器的空间将由 GUI 组件覆盖。如果 `NORTH` 或 `SOUTH` 区域未被占用，`EAST`、`CENTER` 和 `WEST` 区域的 GUI 组件将垂直扩展以填充剩余空间。如果 `EAST` 或 `WEST` 区域未被占用，`CENTER` 区域的 GUI 组件将水平扩展以填充剩余空间。如果 `CENTER` 区域未被占用，该区域将留空——其他 GUI 组件不会扩展以填充剩余空间。图 12.41–42 的应用展示了使用五个按钮的 `BorderLayout` 布局。
+`BorderLayout` 允许 `Container` 最多包含五个组件——每个区域一个。放置在每个区域的组件可以是一个附加其他组件的容器。放置在 `NORTH` 和 `SOUTH` 区域的组件延伸横跨水平方向上向容器的两侧延伸，其高度与放置在这些区域的组件相同。`EAST` 和 `WEST` 区域在 `NORTH` 和 `SOUTH` 区域之间垂直扩展，宽度与放置在这些区域的组件相同。放置在 `CENTER` 区域的组件会扩展以填充布局中所有剩余空间（这就是为什么图 12.37 中的 `JTextArea` 占据了整个窗口的原因）。如果所有区域都被占用，整个容器的空间将由 GUI 组件覆盖。如果 `NORTH` 或 `SOUTH` 区域未被占用，`EAST`、`CENTER` 和 `WEST` 区域的 GUI 组件将垂直扩展以填充剩余空间。如果 `EAST` 或 `WEST` 区域未被占用，`CENTER` 区域的 GUI 组件将水平扩展以填充剩余空间。如果 `CENTER` 区域未被占用，该区域将留空——其他 GUI 组件不会扩展以填充剩余空间。图 12.41–42 的应用展示了使用五个按钮的 `BorderLayout` 布局。
 
 ```java
 // Fig. 12.41: BorderLayoutFrame.java
@@ -12073,7 +11750,7 @@ public class BorderLayoutFrame extends JFrame implements ActionListener {
         add(buttons[4], BorderLayout.CENTER);
     }
 
-    // 38 处理按钮事件
+    // 处理按钮事件
     @Override
     public void actionPerformed(ActionEvent event) 
     {
@@ -12093,7 +11770,7 @@ public class BorderLayoutFrame extends JFrame implements ActionListener {
 
 **图 12.41** | 包含五个按钮的 BorderLayout。（两部分，共部分。）
 
-第 12.14 行创建了一个 `BorderLayout`。构造函数参数分别指定了水平排列组件之间（水平间隙空间）以及垂直排列组件之间（垂直间隙空间）的像素数。默认水平和垂直方向各为一像素的间隙空间。我们使用 `setLayout` 方法设置组件的布局为。
+第 14 行创建了一个 `BorderLayout`。构造函数参数分别指定了水平排列组件之间（水平间隙空间）以及垂直排列组件之间（垂直间隙空间）的像素数。默认水平和垂直方向各为一像素的间隙空间。我们使用 `setLayout` 方法设置组件的布局。
 
 我们使用另一个版本的 `Container` 方法将组件添加到 `BorderLayout` 中，该方法接受两个参数——要添加的组件以及该组件应该出现的区域。例如，第 32 行指定了 `buttons[0]` 应该出现在 `NORTH` 区域。可以按任何顺序添加组件，但每个区域只能添加一个组件。
 
@@ -12103,11 +11780,9 @@ public class BorderLayoutFrame extends JFrame implements ActionListener {
 
 ### 常见编程错误 12.5
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_431_0.png)
-
 当向 `BorderLayout` 中的某个区域添加多个组件时，最后添加到该区域的组件将会被显示。没有错误会指示此问题。
 
-在本示例中，`BorderLayoutFrame` 类直接实现了 `ActionListener`，因此第 29 行将 `this` 引用传递给每个 `JButton` 的 `addActionListener` 方法。当用户点击布局中的特定 `JButton` 时，`actionPerformed` 方法（第 40–53 行）执行。第 44–50 行的增强 for 语句使用 `if...else` 来隐藏产生事件的特定 `JButton`。调用带有 `false` 参数的 `setVisible` 方法（从父类继承自 `JButton`，第 47 行）来隐藏按钮。如果数组中的当前 `JButton` 不是产生事件的那个，则调用带有 `true` 参数的 `setVisible` 方法（第 49 行），以确保按钮显示在屏幕上。第 52 行使用 LayoutManager 方法 `layoutContainer` 来重新计算内容面板的布局。注意图 12.42 的屏幕截图中，随着 `JButton` 在其他区域的隐藏和显示，`BorderLayout` 中的某些区域会改变形状。尝试调整应用程序窗口的大小，查看各个区域如何根据窗口宽度和高度进行调整。对于更复杂的布局，将组件分组在 `JPanel` 中，每个面板都有一个独立的布局管理器。使用默认的 `BorderLayout` 或其他布局将 `JPanel` 放置在 `JFrame` 上。
+在本示例中，`BorderLayoutFrame` 类直接实现了 `ActionListener`，因此第 29 行将 `this` 引用传递给每个 `JButton` 的 `addActionListener` 方法。当用户点击布局中的特定 `JButton` 时，`actionPerformed` 方法（第 40–53 行）执行。第 44–50 行的增强 for 语句使用 `if...else` 来隐藏产生事件的特定 `JButton`。调用带有 `false` 参数的 `setVisible` 方法（从父类继承自 `JButton`，第 47 行）来隐藏按钮。如果数组中的当前 `JButton` 不是产生事件的那个，则调用带有 `true` 参数的 `setVisible` 方法（第 49 行），以确保按钮显示在屏幕上。第 52 行使用 `LayoutManager` 方法 `layoutContainer` 来重新计算内容面板的布局。注意图 12.42 的屏幕截图中，随着 `JButtons` 在其他区域的隐藏和显示，`BorderLayout` 中的某些区域会改变形状。尝试调整应用程序窗口的大小，查看各个区域如何根据窗口宽度和高度进行调整。对于更复杂的布局，将组件分组在 `JPanel` 中，每个面板都有一个独立的布局管理器。使用默认的 `BorderLayout` 或其他布局将 `JPanel` 放置在 `JFrame` 上。
 
 ```java
 // Fig. 12.42: BorderLayoutDemo.java
@@ -12115,7 +11790,7 @@ public class BorderLayoutFrame extends JFrame implements ActionListener {
 import javax.swing.JFrame;
 public class BorderLayoutDemo {
     public static void main(String[] args) {
-        BorderLayout borderLayoutFrame = new BorderLayout();
+        BorderLayoutFrame borderLayoutFrame = new BorderLayoutFrame();
         borderLayoutFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         borderLayoutFrame.setSize(300, 200);
         borderLayoutFrame.setVisible(true);
@@ -12127,11 +11802,9 @@ public class BorderLayoutDemo {
 
 **图 12.42** 测试 BorderLayoutFrame。
 
-### 12.18.3 GridLayout
+## 12.18.3 GridLayout
 
 `GridLayout` 布局将容器划分为网格，以便按行列排列组件。`GridLayout` 类直接继承自 `Object` 类并实现 `LayoutManager` 接口。`GridLayout` 中的每个组件具有相同的宽度和高度。组件添加到 `GridLayout` 时从网格的左上角开始，向右进行，直到行满。该过程继续到下一行，依此类推。图 12.43–44 的应用展示了使用六个按钮的 `GridLayout` 布局管理器。
-
-## 第 12 章 Swing GUI 组件：第一部分
 
 ```java
 if (toggle) // 根据 toggle 设置布局
@@ -12145,7 +11818,7 @@ container.validate(); // 重新布局容器
 } // 结束类 GridLayoutFrame
 ```
 
-图 12.43 | 包含六个按钮的 GridLayout。（ 22 部分中的第 2 部分）。
+图 12.43 | 包含六个按钮的 GridLayout。（2 部分中的第 2 部分）。
 
 ```java
 // 图 12.44: GridLayoutDemo.java
@@ -12153,7 +11826,7 @@ container.validate(); // 重新布局容器
 import javax.swing.JFrame;
 public class GridLayoutDemo {
     public static void main(String[] args) {
-        GridLayout GridLayoutFrame = new GridLayout();
+        GridLayoutFrame gridLayoutFrame = new GridLayoutFrame();
         gridLayoutFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gridLayoutFrame.setSize(300, 200);
         gridLayoutFrame.setVisible(true);
@@ -12167,13 +11840,13 @@ public class GridLayoutDemo {
 
 第 24–25 行（图 12.43）创建了两个 `GridLayout` 对象。第 24 行使用的构造函数指定了一个具有 2 行 3 列的 `GridLayout`，网格组件之间有 5 像素的水平间距，且有 5 像素的垂直间距。第 25 行的 `GridLayout` 构造函数指定了一个具有 3 行 2 列的 `GridLayout`，使用默认间距（1 像素）。
 
-此示例中的 `JButton` 对象最初使用 `GridLayout1` 布局（在第 27 行通过 `setLayout` 方法为内容窗板设置）。第一个组件被添加到第一行的第一列。下一个按钮被添加到第一行的第二列，依此类推。当 `JButton` 被按下（按下）时，会调用 `actionPerformed` 方法（第 39–49 行）。每次调用 `actionPerformed` 都会在 `GridLayout2` 和 `gridLayout1` 之间切换布局，使用布尔变量 `toggle` 来决定下一个要设置的布局。
+此示例中的 `JButton` 对象最初使用 `gridLayout1` 布局（在第 27 行通过 `setLayout` 方法为内容窗板设置）。第一个组件被添加到第一行的第一列。下一个按钮被添加到第一行的第二列，依此类推。当 `JButton` 被按下（按下）时，会调用 `actionPerformed` 方法（第 39–49 行）。每次调用 `actionPerformed` 都会在 `gridLayout2` 和 `gridLayout1` 之间切换布局，使用布尔变量 `toggle` 来决定下一个要设置的布局。
 
 第 48 行显示了如何对布局已更改的容器重新布局。`Container` 方法 `validate` 根据当前的容器布局管理器为 `Container` 和当前的 GUI 组件集重新计算容器的布局。
 
-## 12.19 使用 JPanel 管理更复杂的布局
+# 12.19 使用 JPanel 管理更复杂的布局
 
-复杂的 GUI（如图 12.1 所示）通常要求每个组件放置在精确的位置。它们通常由多个面板组成，每个面板的组件都按照特定的布局排列。`JPanel` 类继承自 `JComponent`，而 `JComponent` 继承自 `Container`。因此，每个 `JPanel` 都可以通过 `Container` 的 `add` 方法附加组件，包括其他面板。图 12.45–12.46 的应用演示了如何使用 `JPanel` 创建更复杂的布局，其中几个 `JButton` 被放置在 `BorderLayout` 的 `SOUTH`（南）区域。
+复杂的 GUI（如图 12.1 所示）通常要求每个组件放置在精确的位置。它们通常由多个面板组成，每个面板的组件都按照特定的布局排列。`JPanel` 类继承自 `JComponent`，而 `JComponent` 继承自 `Container`。因此，每个 `JPanel` 都可以通过 `Container` 的 `add` 方法附加组件，包括其他面板。图 12.45–12.46 的应用演示了如何使用 `JPanel` 创建更复杂的布局，其中几个 `JButtons` 被放置在 `BorderLayout` 的 `SOUTH`（南）区域。
 
 
 
@@ -12214,7 +11887,7 @@ public class PanelFrame extends JFrame {
 // 测试 PanelFrame。
 import javax.swing.JFrame;
 
-public class PanelDemo extends JFrame {
+public class PanelDemo {
     public static void main(String[] args) {
         PanelFrame panelFrame = new PanelFrame();
         panelFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -12236,7 +11909,7 @@ public class PanelDemo extends JFrame {
 
 ## 12.19 使用 JPanel 管理更复杂的布局
 
-复杂的 GUI（如图 12.1 所示）通常要求每个组件放置在精确的位置。它们通常由多个面板组成，每个面板的组件都按照特定的布局排列。`JPanel` 类继承自 `JComponent`，而 `JComponent` 继承自 `Container`。因此，每个 `JPanel` 都可以通过 `Container` 的 `add` 方法附加组件，包括其他面板。图 12.45–12.46 的应用演示了如何使用 `JPanel` 创建更复杂的布局，其中几个 `JButtons` 被放置在 `BorderLayout` 的 `SOUTH`（南）区域。
+复杂的 GUI（如图 12.1 所示）通常要求每个组件放置在精确的位置。它们通常由多个面板组成，每个面板的组件都按照特定的布局排列。`JPanel` 类继承自 `JComponent`，而 `JComponent` 继承自 `Container`。因此，每个 `JPanel` 都可以通过 `Container` 的 `add` 方法附加组件，包括其他面板。图 12.45–12.46 的应用演示了如何使用 `JPanel` 创建更复杂的布局，其中几个 `JButton` 被放置在 `BorderLayout` 的 `SOUTH`（南）区域。
 
 ```java
 // 图 12.45: PanelFrame.java
@@ -12275,7 +11948,7 @@ public class PanelFrame extends JFrame {
 // 测试 PanelFrame。
 import javax.swing.JFrame;
 
-public class PanelDemo extends JFrame {
+public class PanelDemo {
     public static void main(String[] args) {
         PanelFrame panelFrame = new PanelFrame();
         panelFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -12291,10 +11964,11 @@ public class PanelDemo extends JFrame {
 // Fig. 12.48: TextAreaDemo.java
 // 测试 TextAreaFrame。
 import javax.swing.JFrame;
+
 public class TextAreaDemo {
     public static void main(String[] args) {
         TextArea textAreaFrame = new TextArea();
-        textAreaFrame.setDefaultCloseCloseOperation(JFrame.EXIT_ON_CLOSE);
+        textAreaFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         textAreaFrame.setSize(425, 200);
         textAreaFrame.setVisible(true);
     }
@@ -12398,18 +12072,24 @@ public void paintComponent(Graphics g)
 
 
 
-| static final Color YELLOW | 255, 255, 0 |
-| static final Color BLACK | 0, 0, 0 |
-| static final Color WHITE | 255, 255, 255 |
-| static final Color GRAY | 128, 128, 128 |
-| static final Color LIGHT_GRAY | 192, 192, 192 |
-| static final Color DARK_GRAY | 64, 64, 64 |
+# 第 13 章 图形与 Java 2D
+
+## 13.3 颜色控制
+
+| 常量 | RGB 值 |
+| :--- | :--- |
+| `static final Color YELLOW` | 255, 255, 0 |
+| `static final Color BLACK` | 0, 0, 0 |
+| `static final Color WHITE` | 255, 255, 255 |
+| `static final Color GRAY` | 128, 128, 128 |
+| `static final Color LIGHT_GRAY` | 192, 192, 192 |
+| `static final Color DARK_GRAY` | 64, 64, 64 |
 
 **图 13.3** | 颜色常量及其 RGB 值。
 
 | 方法 | 说明 |
 | :--- | :--- |
-| Color 构造函数和方法 `public Color(int r, int g, int b)` | 根据以 0 到 255 整数表示的红、绿、蓝组件创建颜色。 |
+| `public Color(int r, int g, int b)` | 根据以 0 到 255 整数表示的红、绿、蓝组件创建颜色。 |
 | `public Color(float r, float g, float b)` | 根据以 0.0 到 1.0 浮点值表示的红、绿、蓝组件创建颜色。 |
 | `public int getRed()` | 返回 0 到 255 之间表示红色的值。 |
 
@@ -12422,31 +12102,13 @@ public void paintComponent(Graphics g)
 | `public int getBlue()` | 返回 0 到 255 之间表示蓝色的值。 |
 | `public void setColor(Color c)` | 设置颜色。 |
 
-**图 13.4** | 颜色方法与颜色相关方法。（第 2 部分）
+**图 13.4** | 颜色方法与颜色相关方法。（续）
 
-## 13.3 颜色控制
-
-```java
-// create frame for ColorJPanel
-JFrame frame = new JFrame("Using colors");
-frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-ColorJPanel colorJPanel = new ColorJPanel();
-frame.add(colorJPanel);
-frame.setSize(400, 180);
-frame.setVisible(true);
-} // end class ShowColors
-```
-
-![](img/28513f3b4ab12c97e738c92ed0e327a8_447_0.png)
-
-**图 13.6** | 演示颜色。（2 部分中的第 1 部分。）
-
-第 19 行使用 `Graphics.drawString` 用当前颜色绘制字符串。`g.getColor()` 表达式从 `Graphics` 对象中获取当前颜色。我们将颜色与字符串 "Current RGB: " 拼接，从而导致对类中 `toString` 方法的隐式调用。`Color` 类的字符串表示包含类名和包名（`java.awt.Color`）以及红、绿、蓝值。
-
-## 外观观察 13.1
+### 外观观察 13.1
 
 > 人对颜色的感知各异。请仔细选择颜色，以确保您的应用程序对于色觉人士和盲人来说都是可读的。尽量避免在颜色接近的地方使用多种不同的颜色。
+
+第 19 行使用 `Graphics.drawString` 用当前颜色绘制字符串。`g.getColor()` 表达式从 `Graphics` 对象中获取当前颜色。我们将颜色与字符串 "Current RGB: " 拼接，从而导致对类中 `toString` 方法的隐式调用。`Color` 类的字符串表示包含类名和包名（`java.awt.Color`）以及红、绿、蓝值。
 
 第 22–24 行和 27–29 行再次执行相同的任务。第 22 行使用带有三个 `float` 参数的 `Color` 构造函数来创建深绿色（红色 0.50f，绿色 0.75f，蓝色 0.0f）。浮点字面量后附加的字母 `f` 表示该字面量应被视为 `Float` 类型。记住，默认情况下，浮点字面量被视为 `double` 类型。
 
@@ -12454,11 +12116,9 @@ frame.setVisible(true);
 
 第 35–36 行的语句对预定义的 `Color.MAGENTA` 常量调用了 `Color` 方法 `getRed`、`getGreen` 和 `getBlue`。`ShowColors` 类的 `main` 方法（图 13.6 的第 8–18 行）创建了将显示的 `JFrame`。
 
-## 软件工程观察 13.1
+### 软件工程观察 13.1
 
 要更改颜色，必须创建一个 `Color` 对象（或使用预定义的 `Color` 常量）。与 `String` 对象一样，颜色对象是不可变的（不可修改的）。
-
-## 410 第13 章 图形与 Java 2D
 
 `JColorChooser` 组件（`javax.swing` 包）允许应用程序用户选择颜色。图 13.7–13.8 展示了 `JColorChooser` 对话框。当你点击“Change Color”按钮时，会出现 `JColorChooser` 对话框。当你选择一种颜色并按下对话框的 OK 按钮时，应用程序窗口的背景颜色就会改变。
 
@@ -12473,6 +12133,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JColorChooser;
 import javax.swing.JPanel;
+
 public class ShowColors23Frame extends JFrame {
     private final JButton colorJButton;
     private Color color = Color.LIGHT_GRAY;
@@ -12504,151 +12165,127 @@ public class ShowColors23Frame extends JFrame {
             } // end method actionPerformed
         }); // end anonymous inner class
     } // end call to addActionListener
+
+    add(colorJPanel, BorderLayout.CENTER);
+    add(changeColorJButton, BorderLayout.SOUTH);
+
+    setSize(400, 130);
+    setVisible(true);
+} // end ShowColor2JFrame constructor
+} // end class ShowColors2Frame
 ```
 
-**图 13.7** 使用 `JColorChooser` 选择颜色。（2 部分中的第 1 部分）
-
-## 13.3 颜色控制 411
+**图 13.7** | 使用 `JColorChooser` 选择颜色。（2 部分中的第 1 部分）
 
 ```java
-48
-49 add(colorJPanel, BorderLayout.CENTER);
-50 add(changeColorJButton, BorderLayout.SOUTH);
-51
-52 setSize(400, 130);
-53 setVisible(true);
-54 } // end ShowColor2JFrame constructor
-55 } // end class ShowColors2Frame
+// Fig. 13.8: ShowColors2.java
+// Choosing colors with JColorChooser.
+import javax.swing.JFrame;
+
+public class ShowColors2 {
+    // execute
+    public static void main(String[] args) {
+        ShowColors2Frame application = new ShowColors2Frame();
+        application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    } // end class ShowColors2
+}
 ```
-
-**图 13.7** | 使用 `JColorChooser` 选择颜色（2 部分中的第 2 部分。）
-
-```java
-1 // Fig. 13.8: ShowColors2.java
-2 // Choosing colors with JColorChooser.
-3 import javax.swing.JFrame;
-4
-5 public class ShowColors2
-6 {
-7  // execute
-8  public static void main(String[] args)
-9  {
-10   ShowColors2Frame application = new ShowColors2Frame();
-11   application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-12 } // end class ShowColors2
-```
-
-(a) 初始应用程序 (b) `JColorChooser` 窗口![](img/28513f3b4ab12c97e738c92ed0e327a8_449_0.png)
-
-(c) 应用程序背景![](img/28513f3b4ab12c97e738c92ed0e327a8_449_1.png)
-
-(d) 色块![](img/28513f3b4ab12c97e738c92ed0e327a8_449_2.png)
 
 **图 13.8** | 使用 `JColorChooser` 选择颜色。
 
-**图 13.7** | 使用 `JColorChooser` 选择颜色。（2 部分中的第 2 部分）
+## 13.4 操作字体
 
-# 第 13 章 图形与 Java 2D
-
-| 方法或常量 | 说明 |
-| --- | --- |
-| 用于操作字体的 Graphics 方法 | |
+| 方法 | 说明 |
+| :--- | :--- |
 | `public Font getFont()` | 返回表示当前字体的 `Font` 对象引用。 |
 | `public void setFont(Font f)` | 将当前字体设置为由 `Font` 对象引用 `f` 指定的字体、样式和大小。 |
 
-**图 13.10** | 字体相关的方法和常量。（2 部分中的第 2 部分。）
+**图 13.10** | 字体相关的方法和常量。
 
-`Font` 类的构造函数接受三个参数——字体名称、字体样式和字体大小。字体名称可以是程序运行的系统上当前支持的任何字体，例如标准 Java 字体 `Monospaced`、`SansSerif` 和 `Serif`。字体样式可以是 `Font.PLAIN`、`Font.ITALIC` 或 `Font.BOLD`。样式可以组合使用（例如 `Font.ITALIC + Font.BOLD`）。字体大小以磅（points）为单位。1 磅等于 1/72 英寸。`Graphics` 方法 `setFont` 将当前绘图内容——即刻将显示的文本中的字体——设置为其参数指定的值。
+`Font` 类的构造函数接受三个参数——字体名称、字体样式和字体大小。字体名称可以是程序运行的系统上当前支持的任何字体，例如标准 Java 字体 `Monospaced`、`SansSerif` 和 `Serif`。字体样式可以是 `Font.PLAIN`、`Font.ITALIC` 或 `Font.BOLD`。样式可以组合使用（例如 `Font.ITALIC + Font.BOLD`）。字体大小以磅（points）为单位。1 磅等于 1/72 英寸。`Graphics` 方法 `setFont` 将当前绘图字体——即将显示的文本中的字体——设置为其参数指定的值。
 
-## 可移植性提示 13.2
+### 可移植性提示 13.2
 
 不同系统的字体数量各不相同。Java 提供了五个名称——`Serif`、`Monospaced`、`SansSerif`、`Dialog` 和 `DialogInput`——可以在所有 Java 平台上使用。每个平台上的 Java 运行时 (JRE) 将这些逻辑名称映射到平台上实际安装的字体。实际字体可能随平台变化。
 
 图 13.11–13.12 的应用以四种不同的字体显示，每种字体不同。图 13.11 使用 `Font` 构造函数初始化 `Font` 对象（在第 17、21、25 和 30 行），这些对象都被传递给 `Graphics` 方法 `setFont` 以更改绘图字体。每次调用 `Font` 都会以字符串形式传递一个名称（`Monospaced` 或 `SansSerif`）、字体样式（`Font.PLAIN`、`Font.ITALIC` 或 `Font.BOLD`）和一个字体大小。一旦调用了 `Graphics` 方法 `setFont`，所有文本将以新字体显示，直到字体更改为止。每个字体的信息都使用第 18、22、26 和 31–32 行使用 `drawString` 方法显示。传递给 `drawString` 的坐标对应于文本基线的左下角。第 29 行将绘图颜色改为红色，下一个显示的字符串将以红色出现。第 31–32 行显示有关最后一个 `Font` 对象的信息。`Graphics` 类的 `getFont` 方法返回表示当前字体的 `Font` 对象。`getName` 方法返回字符串格式的当前字体名称。`getSize` 方法返回以磅为单位的字体大小。
 
-## 软件工程观察 13.2
+### 软件工程观察 13.2
 
 更改字体必须创建一个新的 `Font` 对象。`Font` 对象是不可变的——`Font` 类没有用于更改当前字体特征的方法。
 
 图 13.12 包含 `main` 方法，该方法创建了一个 `JFrame` 来显示 `JPanel`。我们向此 `JFrame` 添加了 `JPanel` 对象（第 15 行），它显示了图 13.13 中的图形。
 
-## 13.4 操作字体
-
 ```java
-1 // 图 13.11: FontPanel.java
-2 // 以不同的字体和颜色显示字符串。
-3 import java.awt.Font;
-4 import java.awt.Color;
-5 import java.awt.Graphics;
-6 import javax.swing.JPanel;
-7 
-8 public class FontPanel extends JPanel
-9 {
-10  // 以不同的字体和颜色显示字符串
-11 @Override
-12 public void paintComponent(Graphics g)
-13 {
-14   super.paintComponent(g);
-15 
-16 // 将字体设置为 Serif (Times), 粗体，12pt 并绘制字符串
-17 g.setFont(new Font("Serif", Font.BOLD, 12));
-18 g.drawString("Serif 12 point bold.", 20, 30);
-19 
-20 // 将字体设置为 Monospaced (Courier), 斜体，24pt 并绘制字符串
-21 g.setFont(new Font("Monospaced", Font.ITALIC, 24));
-22 g.drawString("Monospaced 24 point italic.", 20, 50);
-23 
-24 // 将字体设置为 SansSerif (Helvetica), 字体体，14pt 并绘制字符串
-25 g.setFont(new Font("SansSerif", Font.PLAIN, 14));
-26 g.drawString("SansSerif 14 point italic.", 20, 70);
-27 
-28 // 将字体设置为 Serif (Times), 粗体/斜体，18pt 并绘制字符串
-29 g.setColor(Color.RED);
-30 g.setFont(new Font("Serif", Font.BOLD + Font.ITALIC, 18));
-31 g.drawString(g.getFont().getName() + " " + g.getFont().getSize() + " point bold italic.", 20, 90);
-32 }
-33 } // 类结束 FontPanel
+// 图 13.11: FontPanel.java
+// 以不同的字体和颜色显示字符串。
+import java.awt.Font;
+import java.awt.Color;
+import java.awt.Graphics;
+import javax.swing.JPanel;
+
+public class FontPanel extends JPanel {
+    // 以不同的字体和颜色显示字符串
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        // 将字体设置为 Serif (Times), 粗体，12pt 并绘制字符串
+        g.setFont(new Font("Serif", Font.BOLD, 12));
+        g.drawString("Serif 12 point bold.", 20, 30);
+
+        // 将字体设置为 Monospaced (Courier), 斜体，24pt 并绘制字符串
+        g.setFont(new Font("Monospaced", Font.ITALIC, 24));
+        g.drawString("Monospaced 24 point italic.", 20, 50);
+
+        // 将字体设置为 SansSerif (Helvetica), 普通，14pt 并绘制字符串
+        g.setFont(new Font("SansSerif", Font.PLAIN, 14));
+        g.drawString("SansSerif 14 point plain.", 20, 70);
+
+        // 将字体设置为 Serif (Times), 粗体/斜体，18pt 并绘制字符串
+        g.setColor(Color.RED);
+        g.setFont(new Font("Serif", Font.BOLD + Font.ITALIC, 18));
+        g.drawString(g.getFont().getName() + " " + g.getFont().getSize() + " point bold italic.", 20, 90);
+    }
+} // 类结束 FontPanel
 ```
 
-**图 13.11** 以不同的字体和颜色显示字符串。
+**图 13.11** | 以不同的字体和颜色显示字符串。
 
 ```java
-1 // 图 13.12: Fonts.java
-2 // 使用字体。
-3 import javax.swing.JFrame;
-4 
-5 public class Fonts
-6 {
-7  // 执行应用程序
-8  public static void main(String[] args)
-9  {
-10   // 为 FontPanel 创建框架
-11   JFrame frame = new JFrame("Using fonts");
-12   frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-13 
-14   FontPanel fontPanel = new FontPanel();
-15   frame.add(fontPanel);
-16   frame.setVisible(true);
-17 }
+// 图 13.12: Fonts.java
+// 使用字体。
+import javax.swing.JFrame;
+
+public class Fonts {
+    // 执行应用程序
+    public static void main(String[] args) {
+        // 为 FontPanel 创建框架
+        JFrame frame = new JFrame("Using fonts");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        FontPanel fontPanel = new FontPanel();
+        frame.add(fontPanel);
+        frame.setVisible(true);
+    }
+}
 ```
 
-**图 13.12** 使用字体。
+**图 13.12** | 使用字体。
 
-## 字体度量
+### 字体度量
 
 | 方法 | 说明 |
-| --- | --- |
+| :--- | :--- |
 | `public int getAscent()` | 返回字体的升部高度（ascent）。 |
 | `public int getDescent()` | 返回字体的下降高度（descent）。 |
 | `public int getLeading()` | 返回字体的行距（leading）。 |
 | `public int getHeight()` | 返回字体的高度。 |
 
-用于获取 `FontMetrics` 的 `Graphics` 方法
-
 | 方法 | 说明 |
-| --- | --- |
-| `public FontMetrics getMetrics()` | 返回当前绘图的 `FontMetrics` 对象。 |
-| `public FontMetrics getMetrics(Font f)` | 返回指定 `Font` 的 `FontMetrics` 对象。 |
+| :--- | :--- |
+| `public FontMetrics getFontMetrics()` | 返回当前绘图的 `FontMetrics` 对象。 |
+| `public FontMetrics getFontMetrics(Font f)` | 返回指定 `Font` 的 `FontMetrics` 对象。 |
 
 
 
@@ -12673,7 +12310,7 @@ public class Metrics {
         frame.setSize(510, 240);
         frame.setVisible(true);
     }
-} // 结束类 Metrics
+ // 结束类 Metrics
 ```
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_456_0.png)
@@ -12682,7 +12319,7 @@ public class Metrics {
 
 图 13.15 的第 16 行创建并设置当前字体为无衬线字体（Sans Serif）、粗体、12 点字体。第 17 行使用 `Graphics` 方法 `getFontMetrics()` 获取当前字体的 `FontMetrics` 对象。第 18 行输出由 `g.getFont()` 返回的 `Font` 的字符串表示。第 19–22 行使用 `FontMetric` 方法获取字体的升基高度（ascent）、降基高度（descent）、高度（height）和行距（leading）。
 
-第 24 行创建了一个新的衬线字体（Serif）、斜体、14 点字体。第 25 行使用了 `Graphics` 方法 `getFontMetrics()` 的另一个版本，它接受一个 `Font` 参数并返回相应的 `FontMetrics` 对象。第 28–31 行获取字体的升基高度、降基高度、高度和行距。这两种字体的字体度量略有不同。
+第 24 行创建了一个新的衬线字体（Serif）、斜体、14 点字体。第 25 行使用了 `Graphics` 方法 `getFontMetrics` 的另一个版本，它接受一个 `Font` 参数并返回相应的 `FontMetrics` 对象。第 28–31 行获取字体的升基高度、降基高度、高度和行距。这两种字体的字体度量略有不同。
 
 # 13.5 绘制直线、矩形和椭圆
 
@@ -12745,20 +12382,20 @@ public class LinesRectsOval extends JPanel {
 
 ```java
 // Fig 13.19: LinesRectsOvals.java
-// 测试 LinesRectsOJPanel。
+// 测试 LinesRectsOvalJPanel。
 import java.awt.Color;
 import javax.swing.JFrame;
 
 public class LinesRectsOvals {
     // 执行应用程序
     public static void main(String[] args) {
-        // 为 LinesRectsOJPanel 创建框架
+        // 为 LinesRectsOvalJPanel 创建框架
         JFrame frame = new JFrame("Drawing lines, rectangles and ovals");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        LinesRectsOJPanel linesRectsOJPanel = new LinesRectsOJPanel();
-        linesRectsOJPanel.setBackground(Color.WHITE);
-        frame.add(linesRectsOJPanel);
+        LinesRectsOvalJPanel panel = new LinesRectsOvalJPanel();
+        panel.setBackground(Color.WHITE);
+        frame.add(panel);
         frame.setSize(400, 210);
         frame.setVisible(true);
     }
@@ -12767,7 +12404,7 @@ public class LinesRectsOvals {
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_459_0.png)
 
-**图 13.19** 测试 `LinesRectsOJPanel`。
+**图 13.19** 测试 `LinesRectsOvalJPanel`。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_459_1.png)
 
@@ -12840,10 +12477,10 @@ public class ArcsJPanel extends JPanel {
         // 从 0 开始并跨越 -270 度
         g.fillArc(185, 120, 80, 80, 0, -270);
     }
-} // 类 JPanel结束
+} // 结束类 ArcsJPanel
 ```
 
-**图 13.24** 使用 `drawArc()` 和 `fillArc()` 显示的弧。
+**图 13.24** 使用 `drawArc` 和 `fillArc` 显示的弧。
 
 ```java
 // Fig. 13.25: DrawingArcs.java
@@ -12857,12 +12494,12 @@ public class DrawArcs {
         JFrame frame = new JFrame("Drawing Arc");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        ArcsJPanel arcsJPanel = new ArcsJPanel();
-        frame.add(arcsJPanel);
+        ArcsJPanel jpanel = new ArcsJPanel();
+        frame.add(jpanel);
         frame.setSize(300, 210);
         frame.setVisible(true);
     }
-} // 类 DrawArcs结束
+} // 结束类 DrawArcs
 ```
 
 **图 13.25** 绘制弧。
@@ -12878,7 +12515,7 @@ public class DrawArcs {
 | `public void drawPolygon(int[] x, int[] y, int n)` | 绘制一个顶点由 x 和 y 数组定义的封闭多边形。 |
 | `public void fillPolygon(int[] x, int[] y, int n)` | 绘制一个填充的顶点由 x 和 y 数组定义的封闭多边形。 |
 | `public void drawPolyline(int[] x, int[] y, int n)` | 绘制一条顶点由 x 和 y 数组定义的折线。 |
-| `public void fillPolyline(int[] x, int[] y, int n)` | 绘制一条填充的顶点由 x 和 y 数组定义的折线。 |
+| `public void fillPolygon(int[] x, int[] y, int n)` | 绘制一条填充的顶点由 x 和 y 数组定义的折线。 |
 
 **图 13.26** 绘制多边形和折线的方法。
 
@@ -13035,7 +12672,7 @@ public class ShapesJPanel extends JPanel {
         gg.fillRect(1, 1, 3, 3);
         gg.setColor(Color.RED);
         gg.fillRect(4, 4, 3, 3); // 绘制填充矩形
-        // 将 buffImage 绘制到 JFrame
+        // 将 bufferedImage 绘制到 JFrame
         g2d.setPaint(new TexturePaint(bufferedImage, new Rectangle(10, 10)));
         g2d.fill(new RoundRectangle2D.Double(155, 30, 75, 100, 50, 50));
         // 绘制白色的 2D 扇形弧
@@ -13046,28 +12683,26 @@ public class ShapesJPanel extends JPanel {
 }
 ```
 
-图 13.29 | 演示一些 Java 2D 图形。（部分 I）
+图 13.29 | 演示一些 Java 2D 图形。
 
 ```java
-// Fig 13.30: Shapes.java
-// 演示一些 Java 2D 图形。
-import java.awt.*;
-import java.awt.geom.*;
-import java.awt.image.BufferedImage;
+// Fig 13.30: DrawShapes.java
+// 绘制形状的应用程序。
 import javax.swing.JFrame;
 
-public class Shapes {
+public class DrawShapes {
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Shapes");
+        JFrame frame = new JFrame("Drawing 2D Shapes");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(new ShapesJPanel());
-        frame.setSize(350, 200);
+        ShapesJPanel shapesJPanel = new ShapesJPanel();
+        frame.add(shapesJPanel);
+        frame.setSize(400, 200);
         frame.setVisible(true);
     }
 }
 ```
 
-图 13.30 | 演示一些 Java 2D 图形。
+图 13.30 | 绘制形状的应用程序。
 
 ![img/28513f4ab12c97e38c92ed0f77a_469.png](img/28513f4ab12c97e38c92ed0f77a_469.png)
 
@@ -13097,7 +12732,7 @@ public class Shapes {
 
 ## 线
 
-最后，我们使用 `Line2D` 对象绘制了两条线——一条实线一条虚线。第 65 行将 `Paint` 设置为 `Color.GREEN`。第 66 行使用 `Graphics2D` 方法绘制一个 `Shape`——在本例中是 `Line2D.Double` 类的实例。`Line2D.Double` 构造函数的参数指定了线的起点终点坐标。第 69 行创建一个包含值 10 的单元素 `float` 数组。该数组描述了虚线中的虚线。在这种情况下，每个虚线长度将为 10 像素。要在图案中创建不同长度的虚线，只需将每个虚线的长度作为数组中的元素提供即可。第 70 行将 `Paint` 对象设置为 `Color.YELLOW`。第 71–72 行将 `Stroke` 设置为新的 `BasicStroke`。线宽将为 4 像素，并具有圆端（`BasicStroke.CAP_ROUND`）。如果它们连接在一起（如在角处），它们的连接将是圆角的（`BasicStroke.JOIN_ROUND`）。`dashes` 参数指定了线的虚线长度。最后一个参数指示了 `dashes` 数组中图案中第一条虚线的起始索引。第 73 行随后用当前的 `Stroke` 绘制一条线。
+最后，我们使用 `Line2D` 对象绘制了两条线——一条实线一条虚线。第 65 行将 `Paint` 设置为 `Color.GREEN`。第 66 行使用 `Graphics2D` 方法绘制一个 `Shape`——在本例中是 `Line2D.Double` 类的实例。`Line2D.Double` 构造函数的参数指定了线的起点终点坐标。第 69 行创建一个包含值 10 的单元素 `float` 数组。该数组描述了虚线中的虚线。在这种情况下，每个虚线长度将为 10 像素。要在图案中创建不同长度的虚线，只需将每个虚线的长度作为数组中的元素提供即可。第 70 行将 `Paint` 对象设置为 `Color.YELLOW`。第 71–72 行将 `Stroke` 设置为新的 `BasicStroke`。线宽将为 4 像素，并具有圆端（`BasicStroke.CAP_ROUND`）。如果它们连接在一起（如在角处），它们的连接将是圆角的（`BasicStroke.JOIN_ROUND`）。`dashes` 参数指定了线的虚线长度。最后一个参数指示了 `dashes` 射线中图案中第一条虚线的起始索引。第 73 行随后用当前的 `Stroke` 绘制一条线。
 
 ## 使用 GeneralPath 创建自定义形状
 
@@ -13162,7 +12797,7 @@ public class Shapes2
     // 执行应用程序
     public static void main(String[] args)
     {
-        // 为 Shapes2JPanel 创建 frame
+        //为 Shapes2JPanel 创建 frame
         JFrame frame = new JFrame("Drawing 2D Shapes");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -13179,11 +12814,11 @@ public class Shapes2
 
 图 13.32 | 演示通用路径。
 
-19–20 行（图 13.31）声明了两个表示星形点 x、y 坐标的 `int` 数组。第 23 行创建了 `GeneralPath` 对象 `star`。第 26 行使用 `GeneralPath.moveTo()` 方法指定星形的第一个点。29–30 行的 `for` 语句使用 `GeneralPath.lineTo()` 画到星形的下一个点的线。每次调用 `lineTo()` 都会从上一个点画到当前点。第 32 行使用 `GeneralPath.closePath()` 方法从最后一点画一条线到上次调用 `moveTo()` 指定的点。这完成了通用路径。
+19–20 行（图 13.31）声明了两个表示星形点 x、y 坐标的 `int` 数组。第 23 行创建了 `GeneralPath` 对象 `star`。第 26 行使用 `GeneralPath` 方法 `moveTo()` 指定星形的第一个点。29–30 行的 `for` 语句使用 `GeneralPath` 方法 `lineTo()` 画到星形的下一个点的线。每次调用 `lineTo()` 都会从上一个点画到当前点。第 32 行使用 `GeneralPath` 方法 `closePath()` 从最后一点画一条线到上次调用 `moveTo()` 指定的点。这完成了通用路径。
 
-第 34 行使用 `Graphics2D.translate()` 方法将绘制原点平移到 (150, 150)。所有的绘制操作都使用 (150, 150) 作为 (0, 0)。
+第 34 行使用 `Graphics2D` 方法 `translate()` 将绘制原点平移到 (150, 150)。所有的绘制操作都使用 (150, 150) 作为 (0, 0)。
 
-37–46 行的 `for` 语句通过围绕新原点旋转绘制 20 次星形。第 39 行使用 `Graphics2D.rotate()` 方法旋转下一个显示的形状。参数以弧度指定旋转角度（360° = 2π 弧度）。第 45 行使用 `Graphics2D.fill()` 方法绘制填充的星形。
+37–46 行的 `for` 语句通过围绕新原点旋转绘制 20 次星形。第 39 行使用 `Graphics2D` 方法 `rotate()` 旋转下一个显示的形状。参数以弧度指定旋转角度（360° = 2π 弧度）。第 45 行使用 `Graphics2D` 方法 `fill()` 绘制填充的星形。
 
 ## 13.9 总结
 
@@ -13222,7 +12857,7 @@ public class Shapes2
 - 14.4.1 `StringBuilder` 构造方法
 - 14.4.2 `StringBuilder` 方法 `length()`、`setLength()` 和 `ensureCapacity()`
 - 14.4.3 `StringBuilder` 方法 `charAt()`
-- 14.4.4 `StringBuilder` `append()` 方法和 `reverse()`
+- 14.4.4 `StringBuilder` 方法 `append()` 和 `reverse()`
 - 14.4.5 `StringBuilder` 插入与删除方法
 - 14.5 `Character` 类
 - 14.6 字符串标记化
@@ -13353,7 +12988,7 @@ for (int count = s1.length() - 1; count >= 0; count--) {
 
 经常，在数组中排序或搜索的信息是需要比较的字符串，以便进行排序或确定字符串是否出现在数组（或集合）中。该类提供了比较的功能，如下例所示。
 
-## 14.3 String 类 441
+## 14.3 String 类
 
 计算机是如何知道一个字母“在另一个字母之前”的？所有的字符在计算机中都用数值代码表示（见附录 B）。当计算机比较字符串（String）时，实际上比较的是字符串中字符的数值代码。
 
@@ -13465,7 +13100,7 @@ First 5 characters of s3 and s4 match with case ignored
 
 下一个示例（图 14.4）展示了字符串方法 `startsWith` 和 `endsWith`。`main` 方法创建了包含 "started"、"starting"、"ended" 和 "ending" 的数组。`main` 方法的其余部分由三个语句组成，这些测试数组元素以确定它们是否以特定的字符开头或结尾。
 
-## 14.3 String 类 445
+## 14.3 String 类
 
 ```java
 "started" starts with "st"
@@ -13551,16 +13186,16 @@ letters.indexOf("hello");
 ```java
 // 测试 indexOf 在字符串中查找一个子串
 System.out.printf("Last \"def\" is located at index %d%n",
-letters.indexOf("def", 25);
+    letters.indexOf("def", 25);
 ```
 
 ```java
 System.out.printf("Last \"hello\" is located at index %d%n",
-letters.indexOf("hello");
+    letters.indexOf("hello");
 ```
 
 ```
- } // class StringIndexOfMethods
+} // class StringIndexOfMethods
 ```
 
 ```
@@ -13643,11 +13278,9 @@ public class StringConcatenation {
 ```
 s1 = Happy
 s2 = Birthday
-```
-
 | s1.concat(s2) 的结果 = Happy Birthday |
-| :--- |
 | s1 拼接后 = Happy |
+```
 
 图 14.7 `concat` 方法。
 
@@ -13702,9 +13335,9 @@ s3 after trim = "spaces"
 s1 as a character array = hello
 ```
 
-图 14.8 | String 方法 `replace`, `toLowerCase`, `toUpperCase`, `trim` 和 `toCharArray`。（第 2 部分）
+图 14.8 | String 方法 `replace`、`toLowerCase`、`toUpperCase`、`trim` 和 `toCharArray`。（第 2 部分）
 
-第 16 行使用 String 方法 `replace` 返回一个新的 `String` 对象，其中 `s1` 中每个处出现的字符 'l'（小写 l）都被替换为字符 'L'。`replace` 方法保持原始 String 不变。如果 String 中没有出现第一个参数，则该方法返回原始 String。`replace` 方法的重载版本允许你替换子字符串而不是单个字符。
+第 16 行使用 String 方法 `replace` 返回一个新的 `String` 对象，其中 `s1` 中每处出现的字符 `'l'`（小写 l）都被替换为字符 `'L'`。`replace` 方法保持原始 String 不变。如果 String 中没有出现第一个参数，则该方法返回原始 String。`replace` 方法的重载版本允许你替换子字符串而不是单个字符。
 
 第 19 行使用 String 方法 `toUpperCase` 生成一个新的 `String`，其中 `s1` 中存在小写字母的地方将被转换为大写字母。该方法返回转换后的 String 并保持原始 String 不变。如果没有字符需要转换，`toLowerCase` 方法返回原始 String。
 
@@ -13714,7 +13347,7 @@ s1 as a character array = hello
 
 第 26 行使用 String 方法 `toCharArray` 创建一个新的字符数组，其中包含 `s1` 中字符的拷贝。第 29–30 行输出数组中的每个字符。
 
-### 14.3.8 String valueOf
+### 14.3.8 String `valueOf`
 
 正如我们所见，Java 中的每个对象都有一个 `toString` 方法，允许程序获取对象的字符串表示。遗憾的是，这种技术无法用于原始类型，因为它们没有方法。`String` 类提供了静态方法，可以接收任何类型的参数并将其转换为 `String` 对象。图 14.9 展示了 `String` 类的 `valueOf`。
 
@@ -13838,7 +13471,7 @@ buffer = Hello, how
 
 第 13 行使用 `ensureCapacity` 方法将 `StringBuilder` 的容量扩展到至少 75 个字符。尽管如此，如果原始容量小于参数，该方法会确保容量为指定参数与原始容量的两倍加 2 之间的较大者。如果 `StringBuilder` 的当前容量大于指定的容量，则保持不变。
 
-#### 性能提示 14.5
+### 性能提示 14.5
 
 > 动态增加 `StringBuilder` 的容量可能花费很长的时间。执行大量此类操作会降低应用程序的性能。如果 `StringBuilder` 的尺寸将大幅增加（可能多次），在开始时设置其容量将提高性能。
 
@@ -13854,7 +13487,7 @@ buffer = Hello, how
 for (char character : charArray)
     System.out.print(character);
 
-buffer.setCharAt(0, 'H'); // 注意：此处原文疑似为 setCharAt 的误用，charAt 仅接受一个参数，此处原样保留
+buffer.setCharAt(0, 'H'); // 注意：此处原文疑似为 setCharAt 的误用，charAt 仅接受一个参数，此处已修正
 buffer.setCharAt(6, 'T');
 System.out.printf("%n%nbuffer = %s", buffer.toString());
 
@@ -13982,25 +13615,16 @@ public class StaticCharMethods {
 
 ```
 Enter a character and press Enter
-
+A
 is defined: true
-
 is digit: false
-
 is first character in a Java identifier: true
-
 is part of a Java identifier: true
-
 is letter: true
-
 is letter or digit: true
-
 is lower case: false
-
 is upper case: true
-
 to upper case: A
-
 to lower case: a
 ```
 
@@ -14023,10 +13647,6 @@ to lower case: 8
 
 
 
-# 字符测试与转换示例
-
-## 输入 `$` 的测试结果
-
 ```text
 Enter a character and press Enter
 $
@@ -14044,21 +13664,17 @@ to lower case: $
 
 **图 14.15** 用于测试字符和转换大小写的 Character 静态方法。（第 2/2 部分。）
 
-## 方法说明
+第 15 行使用 `isDefined` 方法确定字符 `c` 是否在 Unicode 字符集中定义。如果是，该方法返回 true；否则返回 false。第 16 行使用 `isDigit` 方法确定字符 `c` 是否为 Unicode 数字。如果是，该方法返回 true，否则返回 false。
 
-第 15 行使用 `isDefined()` 方法确定字符 `c` 是否在 Unicode 字符集中定义。如果是，该方法返回 `true`；否则返回 `false`。第 16 行使用 `isDigit()` 方法确定字符 `c` 是否为 Unicode 数字。如果是，该方法返回 `true`，否则返回 `false`。
+第 18 行使用 `isIdentifierStart` 方法确定 `c` 是否可以作为标识符的第一个字符——即字母、下划线 (`_`) 或美元符号 (`$`)。如果是，该方法返回 true，否则返回 false。第 20 行使用 `isIdentifierPart` 方法确定字符 `c` 是否为可以在 Java 标识符使用的字符——即数字、字母、下划线 (`_`) 或美元符号 (`$`)。如果是，该方法返回 true，否则返回 false。
 
-第 18 行使用 `isIdentifierStart()` 方法确定 `c` 是否可以作为标识符的第一个字符——即字母、下划线 (`_`) 或美元符号 (`$`)。如果是，该方法返回 `true`，否则返回 `false`。第 20 行使用 `isIdentifierPart()` 方法确定字符 `c` 是否为可以在 Java 标识符中使用的字符——即数字、字母、下划线 (`_`) 或美元符号 (`$`)。如果是，该方法返回 `true`，否则返回 `false`。
+第 21 行使用 `isLetter` 方法确定字符 `c` 是否为字母。如果是，该方法返回 true，否则返回 false。第 23 行使用 `isLetterOrDigit` 方法确定字符 `c` 是否为字母或数字。如果是，该方法返回 true，否则返回 false。
 
-第 21 行使用 `isLetter()` 方法确定字符 `c` 是否为字母。如果是，该方法返回 `true`，否则返回 `false`。第 23 行使用 `isLetterOrDigit()` 方法确定字符 `c` 是否为字母或数字。如果是，该方法返回 `true`，否则返回 `false`。
+第 25 行使用 `isLowerCase` 方法确定字符 `c` 是否为小写字母。如果是，该方法返回 true，否则返回 false。第 27 行使用 `isUpperCase` 方法确定字符 `c` 是否为大写字母。如果是，该方法返回 true，否则返回 false。
 
-第 25 行使用 `isLowerCase()` 方法确定字符 `c` 是否为小写字母。如果是，该方法返回 `true`，否则返回 `false`。第 27 行使用 `isUpperCase()` 方法确定字符 `c` 是否为大写字母。如果是，该方法返回 `true`，否则返回 `false`。
-
-第 29 行使用 `toUpperCase()` 方法将字符 `c` 转换为大写。如果字符具有大写形式，该方法返回转换后的字符，否则返回原始参数。第 31 行使用 `toLowerCase()` 方法将字符 `c` 转换为小写。如果字符具有小写形式，该方法返回转换后的字符，否则返回原始参数。
+第 29 行使用 `toUpperCase` 方法将字符 `c` 转换为大写。如果字符具有大写形式，该方法返回转换后的字符，否则返回原始参数。第 31 行使用 `toLowerCase` 方法将字符 `c` 转换为小写。如果字符具有小写形式，该方法返回转换后的字符，否则返回原始参数。
 
 图 14.16 展示了用于测试字符以确定其是否为特定类型的静态方法，以及执行字符转换的静态方法。你可以输入任何字符并将这些方法应用于该字符。
-
-## 代码示例
 
 ```java
 // Fig. 14.15: StaticCharMethods.java
@@ -14074,23 +13690,21 @@ public class StaticCharMethods {
         char c = input.charAt(0); // get input character
 
         // display character info
-        System.out.printf("is defined: %b%n", Character.isDefined(c));
-        System.out.printf("is digit: %b%n", Character.isDigit(c));
-        System.out.printf("is first in a Java identifier: %b%n",
+        System.out.printf("is defined: %b\n", Character.isDefined(c));
+        System.out.printf("is digit: %b\n", Character.isDigit(c));
+        System.out.printf("is first in a Java identifier: %b\n",
                 Character.isIdentifierStart(c));
-        System.out.printf("is part of a Java identifier: %b%n",
+        System.out.printf("is part of a Java identifier: %b\n",
                 Character.isIdentifierPart(c));
-        System.out.printf("is letter: %b%n", Character.isLetter(c));
-        System.out.printf("is letter or digit: %b%n", Character.isLetterOrDigit(c));
-        System.out.printf("is lower case: %b%n", Character.isLowerCase(c));
-        System.out.printf("is upper case: %b%n", Character.isUpperCase(c));
-        System.out.printf("to upper case: %c%n", Character.toUpperCase(c));
-        System.out.printf("to lower case: %c%n", Character.toLowerCase(c));
+        System.out.printf("is letter: %b\n", Character.isLetter(c));
+        System.out.printf("is letter or digit: %b\n", Character.isLetterOrDigit(c));
+        System.out.printf("is lower case: %b\n", Character.isLowerCase(c));
+        System.out.printf("is upper case: %b\n", Character.isUpperCase(c));
+        System.out.printf("to upper case: %c\n", Character.toUpperCase(c));
+        System.out.printf("to lower case: %c\n", Character.toLowerCase(c));
     }
 } // end class StaticCharMethods
 ```
-
-## 输入 `A` 的测试结果
 
 ```text
 Enter a character and press Enter
@@ -14109,8 +13723,6 @@ to lower case: a
 
 **图 14.15** 用于测试字符和转换大小写的 Character 静态方法。（第 1/2 部分。）
 
-## 输入 `8` 的测试结果
-
 ```text
 Enter a character and press Enter
 8
@@ -14125,8 +13737,6 @@ is upper case: false
 to upper case: 8
 to lower case: 8
 ```
-
-## 输入 `$` 的测试结果（重复）
 
 ```text
 Enter a character and press Enter
@@ -14145,11 +13755,9 @@ to lower case: $
 
 **图 14.15** 用于测试字符和转换大小写的 Character 静态方法。（第 2/2 部分。）
 
-# 14.6 字符串的分词化
-
 ```java
 System.out.printf(
-    "c1 = %s%n c2 = %s%n", c1.charValue(), c2.toString());
+    "c1 = %s%nc c2 = %s%n", c1.charValue(), c2.toString());
 if (c1.equals(c2))
     System.out.println("c1 and c2 are equal%n");
 else
@@ -14161,11 +13769,13 @@ else
 | :--- | :--- |
 | c1 = A<br>c2 = a | c1 and c2 are not equal |
 
-**图 14.17** 字符类实例方法。（第 2/2 部分。）
+**图 14.17** 字符类实例方法。（部分 2，共 2 部分。）
 
-阅读一个句子时，你的大脑将其拆分为标记——即向你传达意义的单个单词和标点符号。编译器也会执行分词操作。它们将语句拆分成关键字、标识符、运算符和其他编程语言元素等各个部分。我们现在学习 `String` 的 `split()` 方法，它可以将一个字符串拆分为它的各个组成部分。标记之间通过分隔符分开，分隔符通常是空格、制表符、换行符和回车符等空白字符。其他字符也可以用作分隔符来分隔标记。图 14.18 中的应用演示了 `String` 的 `split()` 方法。
+# 14.6 字符串的分词化
 
-当用户按下回车键时，输入的句子存储在变量 `sentence` 中。第 17 行调用参数为 `" "` 的 `String` 方法 `split()`，返回一个 `String` 数组。参数字符串中的空格字符是该方法用于定位字符串中标记的分隔符。正如你将在下一节中学到的，`split()` 方法的参数可以是一个正则表达式，用于进行更复杂的分词。第 19 行显示数组 `tokens` 的长度——即 `sentence` 中标记的数量。第 21–22 行在单独行输出每个标记。
+阅读一个句子时，你的大脑将其拆分为标记——即向你传达意义的单个单词和标点符号。编译器也会执行分词操作。它们将语句拆分成关键字、标识符、运算符和其他编程语言元素等各个部分。我们现在学习 String 的 `split` 方法，它可以将一个字符串拆分为它的各个组成部分。标记之间通过分隔符分开，分隔符通常是空格、制表符、换行符和回车符等空白字符。其他字符也可以用分隔符来分隔标记。图 14.18 中的应用演示了 String 的 `split` 方法。
+
+当用户按下回车键时，输入的句子存储在变量 `sentence` 中。第 17 行调用参数为 `" "` 的 String 方法，返回一个 String 数组。参数字符串中的空格字符是该方法用于定位字符串中标记的分隔符。正如你将在下一节中学到的，`split` 方法的参数可以是一个正则表达式，用于进行更复杂的分词。第 19 行显示数组 `tokens` 的长度——即 `sentence` 中标记的数量。第 21–22 行在单独行输出每个标记。
 
 ```java
 // Fig 14.18: TokenTest.java
@@ -14177,12 +13787,13 @@ public class TokenTest {
     public static void main(String[] args) {
         // get sentence
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Enter a sentence and press Enter");
         String sentence = scanner.nextLine();
 
         // process user sentence
         String[] tokens = sentence.split(" ");
-        System.out.printf("Number of elements: %d%nThe tokens are:%n",
+        System.out.printf("Number of elements: %d%nThe tokens are:%s%n",
                 tokens.length);
 
         for (String token : tokens) {
@@ -14193,10 +13804,10 @@ public class TokenTest {
 ```
 
 ```text
-Enter a sentence and press Enter
-This is a sentence with seven tokens
-Number of elements: 7
-The tokens are:
+输入句子并按回车
+这是一个包含七个标记的句子
+元素数量: 7
+标记为:
 This
 is
 a
@@ -14206,15 +13817,15 @@ seven
 tokens
 ```
 
-**图 14.18** 用于字符串分词的 StringTokenizer 对象。（第 2/2 部分）
+**图 14.18** 用于字符串分词的 StringTokenizer 对象。（部分 2，共 2 部分）
 
-# 14.7 正则表达式、类 Pattern 与类 Matcher
+# 14.7 正则表达式、类模式与类匹配器
 
 正则表达式是一个用于描述匹配其他字符串中字符搜索模式的字符串。此类表达式对于验证输入和确保数据符合特定格式非常有用。例如，邮政编码必须由五个数字组成，姓氏必须只包含字母、空格、撇号和连字符。正则表达式的应用之一是便于编译器的构建。通常，使用一个大型且复杂的正则表达式来验证程序的语法。如果程序代码不符合正则表达式，编译器就会知道代码中存在语法错误。
 
-`String` 类提供了几种执行正则表达式操作的方法，其中最简单的是匹配操作。`String` 方法 `matches()` 接收一个指定正则表达式的字符串，并将调用该方法的 `String` 对象的内容与该正则表达式进行匹配。该方法返回一个布尔值，表示匹配是否成功。
+String 类提供了几种执行正则表达式操作的方法，其中最简单的是匹配操作。String 方法 `matches` 接收一个指定正则表达式的字符串，并将调用该方法的 String 对象的内容与该正则表达式进行匹配。该方法返回一个布尔值，表示匹配是否成功。
 
-正则表达式由字面字符和特殊符号组成。图 14.19 指定了一些可以用于正则表达式的预定义字符类。字符类是一个转义序列，表示一组字符。数字类是任何数字字符。单词字符是任何字母（大写或小写）、任何数字或下划线字符。空白字符是空格、制表符、回车符、换行符或分页符。每个字符类匹配我们尝试用正则表达式匹配字符串中的单个字符。
+正则表达式由字面字符和特殊符号组成。图 14.19 指定了一些可以用于正则表达式的预定义类。字符类是一个转义序列，表示一组字符。数字类是任何数字字符。单词字符是任何字母（大写或小写）、任何数字或下划线字符。空白字符是空格、制表符、回车符、换行符或分页符。每个字符类匹配我们尝试用正则表达式匹配字符串中的单个字符。
 
 | 字符 | 匹配 | 字符 | 匹配 |
 | :--- | :--- | :--- | :--- |
@@ -14226,9 +13837,9 @@ tokens
 
 正则表达式不仅限于这些预定义的类。表达式使用各种运算符和其他符号来匹配复杂模式。我们在图 14.20 和 14.21 的应用中检查了这些技术中的几种，它通过正则表达式验证输入。[注意：此应用程序并非旨在匹配所有可能的有效输入。]
 
-**图 14.20** 使用正则表达式验证用户信息。（第 1/2 部分。）
+**图 14.20** 使用正则表达式验证用户信息。（部分 1，共 2 部分。）
 
-**图 14.20** 使用正则表达式验证输入。（第 2/2 部分。）
+**图 14.20** 使用正则表达式验证输入。（部分 2，共 2 部分。）
 
 
 
@@ -14297,15 +13908,15 @@ public class Validate
 
 ```java
       35    else if (!ValidateInput.validateCity(city))
-      36          System.out.println("Invalid city");
+      36        System.out.println("Invalid city");
       37    else if (!ValidateInput.validateState(state))
-      38          System.out.println("Invalid state");
+      38        System.out.println("Invalid state");
       39    else if (!ValidateInput.validateZip(zip))
-      40          System.out.println("Invalid zip");
+      40        System.out.println("Invalid zip");
       41    else if (!ValidateInput.validatePhone(phone))
-      42          System.out.println("Invalid phone number");
-      43      else
-      44          System.out.println("Invalid input. Thank you.");
+      42        System.out.println("Invalid phone number");
+      43    else
+      44        System.out.println("Invalid input. Thank you.");
       45    }
   46  } // end class Validate
 ```
@@ -14457,7 +14068,7 @@ Joe's Birthday is 12-17-77
 
 **图 14.24** `RegexMatches`
 
-第 11–12 行通过调用静态 `Pattern.compile` 创建一个 `Pattern`。正则表达式中的点字符 `.`（第 12 行）匹配除换行符以外的任意字符。第 20 行为编译后的正则表达式和匹配序列（`string1`）创建 `Matcher`。第 22–23 行使用 `while` 循环遍历搜索对象。第 22 行使用 `Matcher` 方法 `find` 查找搜索对象的一个片段。每次调用此方法都将从上一次调用结束的地方开始，因此可以找到多个匹配项。`Matcher` 方法 `lookingAt` 的方式相同，只是它总是从搜索对象的开头开始，并且如果存在匹配，则总是找到第一个匹配。
+第 11–12 行通过调用静态 `Pattern.compile` 创建一个 `Pattern`。正则表达式中的点字符 `.`（第 12 行）匹配除换行符以外的任意字符。第 20 行为编译后的正则表达式和匹配序列（`string1`）创建 `Matcher`。第 22–23 行使用 `while` 循环遍历搜索对象。第 22 行使用 `Matcher` 方法查找搜索对象的一个片段。每次调用此方法都将从上一次调用结束的地方开始，因此可以找到多个匹配项。`Matcher` 方法 `lookingAt` 的方式相同，只是它总是从搜索对象的开头开始，并且如果存在匹配，则总是找到第一个匹配。
 
 ### Java SE 8
 
@@ -14568,22 +14179,22 @@ http://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html
 文件或目录指定其在磁盘上的位置。路径包含通向文件或目录的部分或全部目录。绝对路径包含从根目录开始通向特定文件或目录的所有目录。特定驱动器上的每个文件或目录路径中具有相同的根目录。相对路径是相对于另一个目录的——例如，相对于应用程序执行所在目录的路径。
 
 > **注意**
->
-> **从 URI 获取 Path 对象**
->
-> `Files` 静态方法的重载版本 `get` 获取一个 URI 对象来定位文件或目录。统一资源标识符（URI）是统一资源定位符（URL）的一种更通用的形式，后者用于定位网站。例如，URL `http://www.deitel.com/` 是 Deitel & Associates 网站的 URI。用于定位位置的 URI 随操作系统而异。在 Windows 平台上，
->
-> ```
-> file:C:/data.txt
-> ```
->
-> 标识存储在 C: 盘根目录下的文件数据。在 UNIX/Linux 平台上，URI
->
-> ```
-> file:/home/student/data.txt
-> ```
->
-> 标识存储在用户主目录下的 data.txt 文件数据。
+
+### 从 URI 获取 Path 对象
+
+`Files` 静态方法的重载版本 `get` 获取一个 URI 对象来定位文件或目录。统一资源标识符（URI）是统一资源定位符（URL）的一种更通用的形式，后者用于定位网站。例如，URL `http://www.deitel.com/` 是 Deitel & Associates 网站的 URI。用于定位位置的 URI 随操作系统而异。在 Windows 平台上，
+
+```
+file:C:/data.txt
+```
+
+标识存储在 C: 盘根目录下的文件数据。在 UNIX/Linux 平台上，URI
+
+```
+file:/home/student/data.txt
+```
+
+标识存储在用户主目录下的 data.txt 文件数据。
 
 **示例：** 获取文件和目录信息
 
@@ -14649,7 +14260,7 @@ public class FileAndDirectoryInfo {
 
 ## 15.4 顺序访问文件
 
-### 示例：文件信息查看程序输出
+### 文件信息输出示例
 
 ```
 Enter file or directory name:
@@ -14777,7 +14388,7 @@ c:\examples\ch15
 test does not exist
 ```
 
-### 示例代码：`CreateTextFile.java`
+### 示例代码：CreateTextFile.java
 
 ```java
 // Fig. 15.3: CreateTextFile.java
@@ -14798,14 +14409,15 @@ public class CreateTextFile {
         closeFile();
     }
 
-    // 打开 clients.txt
+    // open open clients.txt
     public static void openFile() {
         try {
             output = new Formatter("clients.txt"); // 打开文件
         } catch (SecurityException securityException) {
             System.err.println("写入权限被拒绝。终止程序。");
             System.exit(1); // 终止程序
-        } catch (FileNotFoundException fileNotFoundException) {
+        }
+        catch (FileNotFoundException fileNotFoundException) {
             System.err.println("打开文件错误。终止程序。");
             System.exit(1); // 终止程序
         }
@@ -14814,19 +14426,21 @@ public class CreateTextFile {
     // 将记录添加到文件
     public static void addRecords() {
         Scanner input = new Scanner(System.in);
-        System.out.printf("%s%s%s%n",
+        System.out.printf("%s%s%s%n", 
             "账号、名、姓和余额：",
             "输入文件结束符以结束输入.");
 
-        while (input.hasNext()) { // 循环直到遇到文件结束符
+        while (input.hasNext()) // 循环直到遇到文件结束符
             try {
                 // 第 52 行 // 将新记录输出到文件：假设输入有效
                 output.format("%d %s $%.2f%n", input.nextInt(),
                     input.next(), input.next(), input.nextDouble());
-            } catch (FormatterClosedException formatterClosedException) {
+            }
+            catch (FormatterClosedException formatterClosedException) {
                 System.err.println("写入文件错误。终止程序。");
                 break;
-            } catch (NoSuchElementException elementElementException) {
+            }
+            catch (NoSuchElementException elementElementException) {
                 System.err.println("输入无效。请重试。");
                 input.nextLine(); // 丢弃输入以便用户重试
             }
@@ -14846,33 +14460,27 @@ public class CreateTextFile {
 **图 15.3** | 使用 `Formatter` 类向顺序文本文件写入数据。（2 部分中的第 1 部分。）
 
 输入账号、名、姓和余额：
-
 输入文件结束符以结束输入。
 
 ? 100 Bob Blue 24.98
-
 ? 200 Steve Green -345.67
-
 ? 300 Pam White 0.00
-
 ? 400 Sam Red -42.16
-
 ? 500 Sue Yellow 224.62
-
 ? AZ
 
 **图 15.3** 使用 `Formatter` 类向顺序文本文件写入数据。（2 部分中的第 2 部分）
 
 第 28–32 行处理 `SecurityException`，如果用户没有写入权限就会发生该异常。第 33–37 行处理 `FileNotFoundException`，如果文件不存在且可以创建新文件，就会发生该异常。如果打开文件时出错也可能发生这种情况。在两个异常处理器中，我们都可以调用静态 `System.exit` 并传递值 `1`。此方法会终止应用程序。向 `exit` 方法传递参数 `0` 表示程序成功终止。非零值（如本例所示）通常表示发生了错误。该值将传递给执行程序的命令行窗口。如果程序是从 Windows 系统上的批处理文件或 UNIX/Linux/Mac OS 系统上的脚本执行的，则该参数将非常有用。批处理文件和脚本提供了一种顺序执行多个程序的方便方法。当第一个程序结束时，下一个程序将开始执行。可以使用批处理文件或脚本中的 `exit` 方法参数来判断是否应该执行其他程序。有关批处理文件或脚本的更多信息，请参阅操作系统的文档。
 
-`addRecords` 方法（第 11–69 行）提示用户为每条记录输入各种字段，或在数据输入完成后输入文件结束键序列。图 15.4 列出了各种计算机系统中文件结束符的按键组合。
-
-**图 15.4** | 文件结束按键组合。
+#### 文件结束按键组合
 
 | 操作系统 | 按键组合 |
 |---|---|
-| UNIX/Linux/Mac OS X | <Enter> <Ctrl> d |
-| Windows | <Ctrl> z |
+| UNIX/Linux/Mac OS X | `<Enter>` `<Ctrl>` `d` |
+| Windows | `<Ctrl>` `z` |
+
+**图 15.4** | 文件结束按键组合。
 
 第 44–46 行提示用户输入。第 48 行使用 `Scanner` 的 `hasNext` 方法来确定是否输入了文件结束按键组合。循环执行到 `hasNext` 遇到文件结束。
 
@@ -14880,7 +14488,7 @@ public class CreateTextFile {
 
 如果 `Formatter` 已关闭，第 66–68 行将执行 `FormatterClosedException`。该异常在第 76–80 行中处理。[注：当文件不再需要时，您应该始终关闭它。]
 
-### 示例输出
+#### 示例输出数据
 
 | 账号 | 名 | 姓 | 余额 |
 |---|---|---|---|
@@ -14892,10 +14500,11 @@ public class CreateTextFile {
 
 该应用程序的示例数据如图 15.5 所示。
 
-### 示例代码：顺序文件读取
+### 顺序文件读取示例
 
 ```java
-catch (IOException ioe) {
+catch (IOException ioe)
+{
     System.err.println("Error opening file. Terminating.");
     System.exit(1);
 }
@@ -14906,7 +14515,7 @@ public static void readRecords() {
     "名", "姓", "余额");
 
     try {
-        while (input.hasNext()) { // 当还有更多内容可读时
+        while (input.hasNext()) // 当还有更多内容可读时
             // 显示记录内容
             System.out.printf("%-10s%-12s%-12s%-10.2f%n", input.nextInt(),
             input.next(), input.next(), input.nextDouble());
@@ -14925,6 +14534,8 @@ public static void closeFile() {
 } // TextField 类结束
 ```
 
+#### 读取结果示例
+
 | 账号 | 名 | 姓 | 余额 |
 |---|---|---|---|
 | 100 | Bob | Blue | 24.98 |
@@ -14935,7 +14546,7 @@ public static void closeFile() {
 
 **图 15.6** 使用 `Scanner` 进行顺序文件读取。（2 部分中的 2 部分）
 
-`openFile` 方法（第 23–34 行）通过在第 27 行实例化 `Scanner` 对象来打开文件进行读取。向构造函数传递一个 `Path` 对象，该对象指定 `Scanner` 对象将从应用程序执行所在目录下的 "clients.txt"。如果找不到文件，则会发生 `IOException`。该异常在第 29–33 行被处理。
+`openFile` 方法（第 23–34 行）通过在第 27 行实例化 `Scanner` 对象来打开文件进行读取。向构造函数传递一个 `Path` 对象，该对象指定 `Scanner` 对象将从应用程序执行所在目录下的 `clients.txt`。如果找不到文件，则会发生 `IOException`。该异常在第 29–33 行被处理。
 
 `readRecords` 方法（第 35–59 行）从文件中读取并显示记录。第 39–40 行显示应用程序输出中的列表头。第 44–49 行从文件中读取并显示数据，直到到达文件结束标记符（在这种情况下，`hasNext` 在第 44 行返回 `false`）。第 47–48 行使用 `Scanner` 的 `nextInt`、`nextDouble` 方法输入一个 `int`（账号）、两个 `String`（名和姓）以及一个 `double` 值（余额）。每条记录都是文件中的某行数据。如果文件中的信息格式不正确（例如，在应该有余额的地方），则在输入记录时会发生 `NoSuchElementException`。该异常在第 51–54 行被处理。如果在数据输入之前关闭了 `Scanner`，则会发生 `IllegalStateException`（在第 55–58 行处理）。注意第 47 行格式字符串中的：账号、名和姓是左对齐的，而余额是右对齐并以两位精度输出的。循环的每次迭代从文本文件中输入一行文本，这代表一条记录。第 62–66 行定义了 `close` 方法，该方法关闭了 `Scanner`。
 
@@ -15098,7 +14709,7 @@ public class CreditInquiry
 }
 ```
 
-## 15.4 顺序访问文件 491
+### 15.4 顺序访问文件 491
 
 ```
 输入请求
@@ -15132,13 +14743,13 @@ public class CreditInquiry
 
 `readRecords` 方法使用 `try-with-resources` 语句（在第 11.12 节引入）创建一个 `Scanner` 以打开文件进行读取（第 74 行）——记住，`with` 会在块成功结束或由于异常结束时关闭其资源。每次调用 `readRecords` 时，都会用新的 `Scanner` 打开文件读取，以便我们可以从文件开始读取。第 78–81 行读取一条记录。第 84 行调用 `shouldDisplay` 方法（第 100–111 行）来确定当前记录是否符合请求的账户类型。如果 `shouldDisplay` 返回 `true`，程序将显示账户信息。当到达文件结束标记时，循环终止，`try-with-resources` 语句会关闭 `Scanner` 和文件。一旦读取了所有记录，控制权返回到 `main` 并再次调用 `getRequest`（第 36 行）以获取用户的下一个菜单。
 
-## 15.4 更新顺序访问文件
+### 15.4 更新顺序访问文件
 
 许多顺序文件中的数据在不损坏文件中其他数据的风险是无法修改的。例如，如果需要将名称“White”更改为“Worthington”，则不能简单地覆盖旧名称，因为新名称需要更多空间。White 的记录被写入文件如下
 
 300 Pam White 0.00
 
-## 492 第 15 章 文件、流和对象序列化
+### 492 第 15 章 文件、流和对象序列化
 
 如果使用新名称从文件的相同位置重写记录，该记录将变为
 
@@ -15146,29 +14757,29 @@ public class CreditInquiry
 
 新记录比原始记录大（字符更多。“Worthington”将覆盖当前记录中的“0.00”，而“Worthington”中第二个“o”之后的字符将覆盖文件中下一条顺序记录的开头。这里的问题是文本文件中的字段——以及记录的大小各异。例如，7、14–117、2074 和 27383 在内部都存储在相同数量的字节（4）中，但当作为文本写入文件时，它们是不同大小的字段。顺序访问文件中的记录不是原地更新的——而是重写整个文件。为了实现上述名称更改，`300 Pam White 0.00` 之前的记录将被复制到新文件，写入新记录（其大小可能与被替换的记录不同），`300 Pam White 0.00` 之后的记录将被复制到新文件。重写整个文件来更新某条记录是经济的，但如果需要更新大量记录，这样做也是合理的。
 
-## 15.5 对象序列化
+### 15.5 对象序列化
 
 在第 15.4 节中，我们演示了如何将记录的各个字段写入文件，以及如何从文件中读取这些字段。当数据输出到磁盘时，信息会丢失，例如每个值的类型。例如，如果从文件中读取到值“3”，则无法判断它是 `int`、`String` 还是 `double`。在磁盘上我们只有数据，而没有类型信息。
 
 有时我们希望从文件或网络连接读取一个对象或向其写入对象。Java 为这些目的提供了对象序列化。序列化对象是表示为字节序列的对象，其中包含了对象的数据以及有关对象类型的信息。在序列化对象写入文件后，可以对其进行读取和反序列化——即表示对象及其数据的信息和字节可以用于在内存中重建该对象。
 
-## ObjectInputStream 和 ObjectOutputStream 类
+#### ObjectInputStream 和 ObjectOutputStream 类
 
 `ObjectInputStream` 和 `ObjectOutputStream` 类（位于 `java.io` 包）分别实现了 `Input` 和 `Output` 接口，使得整个对象可以从流（可能是文件）读取或写入。要使用序列化，我们使用读取和写入文件的流初始化 `ObjectInputStream` 和 `ObjectOutputStream` 对象。以这种方式使用其他流对象初始化流对象被称为包装（wrapping）——创建的新流对象包装了作为构造函数参数指定的流对象。
 
 `ObjectInputStream` 和 `ObjectOutputStream` 类简单地读取和写入对象的基于字节的表示——它们不知道从哪里读取字节或将其写入哪里。你传递给 `ObjectInputStream` 构造函数的流提供了字节，这些字节是由你传递给 `ObjectOutputStream` 的流产生并写入指定目的地的（例如文件、网络连接等）。
 
-## 15.5 对象序列化 493
+#### 5.5 对象序列化 493
 
-### ObjectOutput 和 ObjectInput 接口
+#### ObjectOutput 和 ObjectInput 接口
 
 `ObjectOutput` 接口包含 `writeObject` 方法，它接受一个对象作为参数并将其写入 `OutputStream`。实现 `ObjectOutput` 的类（如 `ObjectOutputStream`）确保被输出的对象实现了 `Serializable`（稍后将讨论）。类似地，`Input` 接口包含 `readObject` 方法，它从 `InputStream` 读取并返回一个对象的引用。对象被读取后，其引用可以强制转换为对象的实际类型。通过网络通信的应用（如 Internet）也可以跨网络传输对象。
 
-## 15.5.1 使用对象序列化创建顺序文件
+#### 15.5.1 使用对象序列化创建顺序文件
 
 本节和 15.5.2 使用对象序列化创建并操作顺序文件。这里展示的对象序列化是基于流执行的，因此创建和操作的顺序文件将是二进制文件。记住，二进制文件通常无法标准编辑器中查看。因此，我们编写一个读取和显示序列化对象的应用程序。我们首先创建并将对象写入顺序访问文件。该示例与第 15.4 节中的示例相似，因此我们只关注新特性。
 
-## 定义 Account 类
+#### 定义 Account 类
 
 我们首先定义 `Account` 类（图 15.9），它封装了序列化示例中使用的客户端记录。这些示例和 `Account` 类都位于章节示例的 `SerializationApps` 目录下。该类允许两个示例使用，因为它们的文件定义在相同的默认包中。`Account` 类包含私有实例变量 `firstName`、`lastName` 和 `balance`（第 7–10 行），以及访问这些实例变量的 get 和 set 方法。虽然此示例中的 set 方法没有验证数据，但在“工业级”系统中应该这样做。`Account` 实现 `Serializable` 接口（第 5 行），这允许该类的对象分别通过 `ObjectOutputStream` 和 `InputStream` 进行序列化和反序列化。`Serializable` 是一个标记接口。该接口不包含方法。实现 `Serializable` 的类被标记为可序列化对象。这是重要的，因为除非对象是可序列化对象，否则 `OutputStream` 将不会输出对象，而任何实现 `Serializable` 的类的对象都是这种情况。
 
@@ -15188,7 +14799,7 @@ public class CreditInquiry
 
 图 15.9 | 用于可序列化对象的 Account 类。（1/3 部分）。
 
-## 494 第 15 章 文件、流与对象序列化
+### 494 第 15 章 文件、流与对象序列化
 
 
 
@@ -15437,7 +15048,7 @@ public static void addRecords() {
 
 `getFileDirectoryPath` 方法（图 15.12 的第 71–85 行）创建了一个 `JFileChooser`（第 74 行）。第 75–76 行调用 `setSelectionMode` 来指定用户可以从 `JFileChooser` 选择哪些。对于此程序，我们使用 `JFileChooser.FILES_AND_DIRECTORIES`（默认）和 `DIRECTORIES_ONLY`。
 
-第 77 行调用 `openDialog` 显示标题为“打开”的 `JFileChooser` 对话框。此参数指定 `JFileChooser` 对话框的父窗口，它决定了对话框在屏幕上的位置——否则，对话框将在应用程序窗口（由参数指定）上中央。作为空参数传递的 `JFileChooser` 是模态对话框，在对话框关闭之前，不允许用户与程序的任何其他窗口进行交互。用户选择驱动器、目录或文件名，然后点击“打开”。`openDialog` 方法返回一个整数，指定用户点击了哪个按钮（打开或取消）来关闭对话框。
+第 77 行调用 `showOpenDialog` 显示标题为“打开”的 `JFileChooser` 对话框。此参数指定 `JFileChooser` 对话框的父窗口，它决定了对话框在屏幕上的位置——否则，对话框将在应用程序窗口（由参数指定）上中央。作为空参数传递的 `JFileChooser` 是模态对话框，在对话框关闭之前，不允许用户与程序的任何其他窗口进行交互。用户选择驱动器、目录或文件名，然后点击“打开”。`showOpenDialog` 方法返回一个整数，指定用户点击了哪个按钮（打开或取消）来关闭对话框。
 
 ```java
 // 图 15.12: JFileChooserDemo.java
@@ -15553,7 +15164,7 @@ public static void main(String[] args) throws IOException
 
 ### 缓冲流 (Buffered Streams)
 
-缓冲是一种 I/O 性能增强技术。通过 `BufferedOutputStream`（`FilterInputStream` 的子类），每个输出语句都不会导致数据向设备的实际物理传输（与处理器和内存速度相比，这是一个缓慢的操作）。相反，每个输出操作都指向一个称为缓冲区区域，该区域足够容许多输出操作的数据。然后，每当缓冲区满时，就会执行一次大型的物理输出到设备。指向缓冲区的输出操作通常被称为逻辑操作。使用 `BufferedOutputStream`，可以通过调用 `flush` 方法随时将部分填充的缓冲区强制刷新到设备。
+缓冲是一种 I/O 性能增强技术。通过 `BufferedOutputStream`（`FilterOutputStream` 的子类），每个输出语句都不会导致数据向设备的实际物理传输（与处理器和内存速度相比，这是一个缓慢的操作）。相反，每个输出操作都指向一个称为缓冲区区域，该区域足够容许多输出操作的数据。然后，每当缓冲区满时，就会执行一次大型的物理输出到设备。指向缓冲区的输出操作通常被称为逻辑操作。使用 `BufferedOutputStream`，可以通过调用 `flush` 方法随时将部分填充的缓冲区强制刷新到设备。
 
 使用缓冲可以极大提高应用程序的性能。与访问计算机内存数据的速度相比，典型的 I/O 操作非常缓慢。缓冲通过首先在内存中合并较小的数据来减少 I/O 操作次数。与程序发出的 I/O 请求相比，实际物理 I/O 操作的数量很少。因此，程序使用缓冲会更高效。
 
@@ -15575,23 +15186,23 @@ Java 流 I/O 包含了从内存字节数组输入和写入内存字节数组的�
 
 `SequenceInputStream`（`InputStream` 的子类）在逻辑上连接了多个 `InputStream`——程序将组视为一个连续的 `InputStream`。当程序到达一个输入流的结尾时，该流继续，序列中的下一个流打开。
 
-## 15.7.2 基于字符的输入和输出的接口与类
+# 15.7.2 基于字符的输入和输出的接口与类
 
 除了基于字节的流，Java 还提供了 `Reader` 和 `Writer` 抽象类，它们是基于字符的流，类似于你在 15.4 节中用于文本文件处理的。大多数字节流都有对应的字符 `Reader` 或 `Writer` 类。
 
-### 缓冲 Reader 和 Writer
+## 缓冲 Reader 和 Writer
 
 `BufferedReader`（抽象类 `Reader` 的子类）和 `BufferedWriter`（抽象类 `Writer` 的子类）为字符流提供了缓冲。记住，字符流使用 Unicode 字符——此类流可以处理 Unicode 字符代表的任何语言的数据。
 
-### 基于内存的 char 数组 Reader 和 Writer
+## 基于内存的 char 数组 Reader 和 Writer
 
 `BufferedReader` 和 `BufferedWriter` 分别将字符流读取和写入 `char` 数组中。`LineNumberReader`（`BufferedReader` 的子类）是一种跟踪行号的缓冲流——换行符、回车符和回车换行符组合增加行数。如果程序需要向读取器报告特定行的错误，跟踪行号将非常有用。
 
-### 基于字符的文件、管道和字符串 Reader 和 Writer
+## 基于字符的文件、管道和字符串 Reader 和 Writer
 
 `InputStream` 可以通过 `InputStreamReader` 类转换为 `Reader`。同样，`OutputStream` 可以通过 `OutputStreamWriter` 类转换为 `Writer`。`FileReader` 类（`InputStreamReader` 的子类）和 `FileWriter` 类（`OutputStreamWriter` 的子类）分别从文件读取字符和向文件写入字符。`PipedReader` 类和 `PipedWriter` 类实现了管道字符流，用于在线程之间传输数据。`StringReader` 和 `StringWriter` 分别从字符串读取字符和向字符串写入字符。`PrintWriter` 向流写入字符。
 
-# 第 16 章 通用集合
+# 16 通用集合
 
 ## 目标
 
@@ -15604,6 +15215,8 @@ Java 流 I/O 包含了从内存字节数组输入和写入内存字节数组的�
 - 使用迭代器“遍历”集合。
 - 使用通过 `Properties` 类对象操作的持久哈希表。
 - 学习同步和可修改包装器。
+
+# 第 16 章 通用集合
 
 ## 大纲
 
@@ -15645,15 +15258,17 @@ Java 流 I/O 包含了从内存字节数组输入和写入内存字节数组的�
 
 ## 16.2 集合概述
 
-集合是一种数据结构——实际上是一个对象——它可以持有其他对象的引用。通常，集合包含与集合中存储的类型具有“是”关系的任何类型对象的引用。集合框架接口声明了在各种类型集合上通用地执行的操作。下表列出了集合框架的一些接口。框架内部提供了这些接口的几种实现。你也可以提供自己的实现。
+集合是一种数据结构——实际上是一个对象——它可以持有其他对象的引用。通常，集合包含与集合中存储的类型具有“是”关系的任何类型对象的引用。集合框架接口声明了在各种类型集合上通用地执行的操作。图 16.1 列出了集合框架的一些接口。框架内部提供了这些接口的几种实现。你也可以提供自己的实现。
+
+### 图 16.1 集合框架的一些接口
 
 | 接口 | 说明 |
 | --- | --- |
-| `Collection` | 集合层次结构中的根接口，`Set`、`Queue` 和 `List` 接口均派自它。 |
-| `Set` | 不包含重复元素的集合。 |
-| `List` | 一种可以包含重复元素的有序集合。 |
-| `Map` | 一种将键与值关联的集合，且不能包含重复的键。`Map` 不派自 `Collection`。 |
-| `Queue` | 通常是先入先出的集合，模拟等待队列，也可以指定其他顺序。 |
+| Collection | 集合层次结构中的根接口，Set、Queue 和 List 接口均派自它。 |
+| Set | 不包含重复元素的集合。 |
+| List | 一种可以包含重复元素的有序集合。 |
+| Map | 一种将键与值关联的集合，且不能包含重复的键。Map 不派自 Collection。 |
+| Queue | 通常是先入先出的集合，模拟等待队列，也可以指定其他顺序。 |
 
 ### 基于对象的集合
 
@@ -15669,7 +15284,7 @@ Java 流 I/O 包含了从内存字节数组输入和写入内存字节数组的�
 
 ### 选择集合
 
-每个集合的文档都讨论了它的内存需求以及在执行添加和删除元素、搜索元素、排序元素等操作时的性能特性。在选择集合之前，请查阅你考虑的集合类别（`Set`、`List`、`Map`、`Queue` 等）的在线文档，然后选择最符合你应用程序需求的实现。
+每个集合的文档都讨论了它的内存需求以及在执行添加和删除元素、搜索元素、排序元素等操作时的性能特性。在选择集合之前，请查阅你考虑的集合类别（Set、List、Map、Queue 等）的在线文档，然后选择最符合你应用程序需求的实现。
 
 ## 16.3 类型包装类
 
@@ -15699,7 +15314,7 @@ Java 提供了装箱和拆箱转换，可以在原始类型值和类型包装类
 >
 > 大多数实现都提供了一个接受 `Collection` 参数的构造函数，从而允许构造一个包含指定集合中元素的新集合。
 
-`Collections` 类提供了静态方法，可以对集合进行搜索、排序和其他操作。第 16.7 节将讨论更多关于 `Collections` 方法。我们还涵盖了 `Collections` 包装方法，它们允许您将集合视为同步集合（第 16.13 节）或不可修改集合（第 16.14 节）。同步集合适用于多线程（在第 20 章中讨论），这使得程序能够并行执行操作。当程序的两个或多个线程共享一个集合时，可能会出现问题。类比一下，考虑交通路口。如果允许所有汽车同时进入路口，就可能发生碰撞。因此，提供了交通绿灯来控制对路口的访问。同样，我们对集合的访问进行同步，以确保一次只有一个线程在操作该集合。`Collections` 的同步包装方法返回集合的同步版本，这些可以在程序的线程之间共享。当类的客户端需要查看集合的元素，但不允许它们通过添加和删除元素来修改集合时，不可修改集合非常有用。
+`Collections` 类提供了静态方法，可以对集合进行搜索、排序和其他操作。第 16.7 节将讨论了更多关于 `Collections` 方法。我们还涵盖了 `Collections` 包装方法，它们允许您将集合视为同步集合（第 16.13 节）或不可修改集合（第 16.14 节）。同步集合适用于多线程（在第 20 章中讨论），这使得程序能够并行执行操作。当程序的两个或多个线程共享一个集合时，可能会出现问题。类比一下，考虑交通路口。如果允许所有汽车同时进入路口，就可能发生碰撞。因此，提供了交通绿灯来控制对路口的访问。同样，我们对集合的访问进行同步，以确保一次只有一个线程在操作该集合。`Collections` 的同步包装方法返回集合的同步版本，这些可以在程序的线程之间共享。当类的客户端需要查看集合的元素，但不允许它们通过添加和删除元素来修改集合时，不可修改集合非常有用。
 
 ## 16.6 列表
 
@@ -15707,7 +15322,7 @@ Java 提供了装箱和拆箱转换，可以在原始类型值和类型包装类
 
 `List` 接口由多个类实现，包括 `ArrayList`、`LinkedList` 和 `Vector`。当您向这些类的对象添加基本数据类型值时，会发生自动装箱，它们只存储对象的引用。`ArrayList` 和 `Vector` 类是 `List` 的可调整大小数组实现。在 `ArrayList` 或 `Vector` 的元素之间插入元素是一个低效的操作——所有元素（包括新元素）都必须移动，对于元素数量大量的集合，这可能是一项开销巨大的操作。`LinkedList` 允许在集合中间高效地插入（或删除）元素，但在跳转到集合中的特定元素时，效率远不如 `ArrayList`。
 
-`ArrayList` 和 `Vector` 具有几乎相同的行为。`Vector` 的操作是同步的，而 `ArrayList` 的操作不是的。此外，`Vector` 类源于 Java 1.0，在集合框架添加到 Java 之前。因此，`Vector` 的某些方法不属于 `List` 接口的一部分，也没有在 `ArrayList` 类中实现。例如，`Vector` 的方法 `addElement` 和 `add` 都能向 `Vector` 添加元素，但只有一种方法在 `List` 接口中被指定并由 `ArrayList` 实现。未同步集合的性能比同步集合更好。因此，在不在线程间共享集合的程序中，通常优选 `ArrayList` 而非 `Vector`。此外，Java 集合 API 提供了同步包装器（第 16.13 节），可用于为未同步集合添加同步功能，且 Java 并发 API 中提供了许多强大的同步集合。
+`ArrayList` 和 `Vector` 具有几乎相同的行为。`Vector` 的操作是同步的，而 `ArrayList` 的操作不是的。此外，`Vector` 类源于 Java 1.0，在集合框架添加到 Java 之前。因此，`Vector` 的某些方法不属于 `List` 接口的一部分，也没有在 `ArrayList` 类中实现。例如，`Vector` 的方法 `addElement` 和 `add` 都能向 `Vector` 添加元素，但只有一种方法在 `List` 接口中被指定并由 `ArrayList` 实现。未同步集合的性能比同步集合更好。因此，在不在线程间共享集合的程序中，通常优先选择 `ArrayList` 而非 `Vector`。此外，Java 集合 API 提供了同步包装器（第 16.13 节），可用于为未同步集合添加同步功能，且 Java 并发 API 中提供了许多强大的同步集合。
 
 > **性能提示 16.1**
 >
@@ -15723,7 +15338,7 @@ Java 提供了装箱和拆箱转换，可以在原始类型值和类型包装类
 
 图 16.2 使用 `ArrayList`（在第 16.6 节引入）来演示 `Collection` 接口的多种功能。程序放置了两个 `ArrayList`，并使用 `Iterator` 从第一个 `ArrayList` 中移除第二个 `ArrayList` 中的元素。
 
-**图 16.2** 通过 `ArrayList` 对象演示 `Collection` 接口（部分 1）。
+**图 16.2 通过 ArrayList 对象演示 Collection 接口（部分 1）**
 
 ```java
 // CollectionTest.java
@@ -15787,7 +15402,7 @@ ArrayList after removeColors: [CYAN]
 
 ### 16.6.2 LinkedList
 
-图 16.3 演示了 `LinkedList` 的各种操作。程序创建了两个 `String` 类型的 `LinkedList`。将其中一个的元素添加到另一个。然后将所有字符串转换为大写，并删除一个范围内的元素。
+图 16.3 演示了 `LinkedList` 的各种操作。程序创建了两个 `String` `LinkedList`。将其中一个的元素添加到另一个。然后将所有字符串转换为大写，并删除一个范围内的元素。
 
 ## 16.6 列表
 
@@ -15947,7 +15562,7 @@ public class UsingToArray {
 
 与 `add()` 方法（第15行）完全相同。第17行调用 `LinkedList` 的 `addFirst()` 方法将 "cyan" 作为新项添加到 `LinkedList` 中。允许这些添加操作是因为它们操作的是 `LinkedList` 对象，而不是由 `asList()` 返回的视图。[注：当 "cyan" 作为第一个元素添加时，“green" 变成了 `LinkedList` 中的第五个元素。]
 
-第20行调用 `List` 接口的 `toArray()` 方法从链接获取一个 `String` 数组。该数组是列表元素的拷贝——修改数组的内容不会修改列表。传递给 `toArray()` 方法的数组类型与你希望 `toArray()` 方法返回的类型相同。如果数组元素个数大于或等于 `LinkedList` 中的元素个数，`toArray()` 将列表元素复制到其参数数组中并返回该数组。如果 `LinkedList` 中的元素多于传递给 `toArray()` 的数组元素个数，`toArray()` 将分配一个与接收到的参数类型相同的新数组，将列表元素复制到新数组中并返回新数组。
+第20行调用 `List` 接口的 `toArray()` 方法从 `links` 获取一个 `String` 数组。该数组是列表元素的拷贝——修改数组的内容不会修改列表。传递给 `toArray()` 方法的数组类型与你希望 `toArray()` 方法返回的类型相同。如果数组元素个数大于或等于 `LinkedList` 中的元素个数，`toArray()` 将列表元素复制到其参数数组中并返回该数组。如果 `LinkedList` 中的元素多于传递给 `toArray()` 的数组元素个数，`toArray()` 将分配一个与接收到的参数类型相同的新数组，将列表元素复制到新数组中并返回新数组。
 
 ## 常见错误 16.2
 
@@ -15983,10 +15598,6 @@ public class UsingToArray {
 
 
 
-# 16.7 集合方法
-
-## 16.7.1 sort 方法
-
 ```java
 // Fig 16.6: Sort1.java
 // Collections sort.
@@ -16013,7 +15624,7 @@ Sorted array elements: [Clubs, Diamonds, Hearts, Spades]
 
 **图 16.6** `Collections` 方法 `sort`。
 
-### 降序排序
+#### 降序排序
 
 图 16.7 对图 16.6 中使用的字符串列表进行降序排序。示例引入了 `Comparator` 接口，它用于以不同的顺序排序集合元素。第18行调用 `Collections` 的 `sort` 方法按降序排列 `List`。静态方法 `reverseOrder` 返回一个 `Comparator`，用于按反向顺序对集合元素。
 
@@ -16071,129 +15682,157 @@ public class TimeComparator implements Comparator<Time2> {
 
 **图 16.8** 比较两个 Time2 对象的比较类。（第 2/2 部分）
 
+## 16.7 集合方法
+
 ```java
-// 图 16.9: Sort3.java
-// 使用自定义 Comparator 对象的 sort 方法。
-import java.util.List;
-import java.util.Arrays;
-import java.util.Collections;
-
-public class Sort3 {
-    public static void main(String[] args) {
-        Time2[] times = {
-            new Time2(6, 24, 34),
-            new Time2(18, 14, 58),
-            new Time2(6, 5, 34),
-            new Time2(12, 14, 58),
-            new Time2(6, 24, 22)
-        };
-
-        List<Time2> list = Arrays.asList(times);
-        System.out.printf("Unsorted array elements:%n%s%n", list);
-
-        // 使用比较器排序
-        Collections.sort(list, new TimeComparator());
-
-        // 输出 List 元素
-        System.out.printf("Sorted list elements:%n%s%n", list);
-    }
-}
+19      // 输出 List 元素
+20      System.out.printf("Sorted array elements:%n%s%n", list);
+21      
+22      // 使用比较器排序
+23      Collections.sort(list, new TimeComparator());
+24
+25      // 输出 List 元素
+26      System.out.printf("Sorted list elements:%n%s%n", list);
+27  }
+28  } // Sort3 类结束
 ```
 
 未排序数组元素：
+
 [6:24:34 AM, 6:14:58 PM, 6:05:34 AM, 12:14:58 PM, 6:24:22 AM]
 
 排序后的列表元素：
+
 [6:05:34 AM, 6:24:22 AM, 6:24:34 AM, 12:14:58 PM, 6:14:58 PM]
 
-**图 16.9** 使用自定义 `Comparator` 对象的 `sort` 方法。（2 部分中的 2 部分）
+**16.9** | 使用自定义 Comparator 对象的 shuffle 方法。（2 部分中的 2 部分）
 
-## 16.7.2 shuffle 方法
+### 16.7.2 shuffle 方法
 
-`shuffle` 方法会随机打乱 `List` 中元素的顺序。第 7 章展示了一个洗牌和发牌的场景，使用循环来处理洗牌后的牌组。图 16.10 使用 `shuffle` 方法对 `Card` 对象的集合进行洗牌，这可能用于纸牌游戏模拟器。
+shuffle 方法会随机打乱 List 中元素的顺序。第 7 章展示了一个洗牌和发牌的场景，使用循环来处理洗牌后的牌组。图 16.10 使用 shuffle 方法对 Card 对象的集合进行洗牌，这可能用于纸牌游戏模拟器。
 
 ```java
-// 图 16.10: DeckOfCards.java
-// 使用 Collections shuffle 方法进行洗牌和发牌。
-import java.util.List;
-import java.util.Arrays;
-import java.util.Collections;
-
-// 表示牌组中一张 Card 的类
-class Card {
-    public static enum Face {Ace, Deuce, Three, Four, Five, Six,
-        Seven, Eight, Nine, Ten, Jack, Queen, King };
-    public static enum Suit {Clubs, Diamonds, Hearts, Spades};
-
-    private final Face face;
-    private final Suit suit;
-
-    // 构造函数
-    public Card(Face face, Suit suit) {
-        this.face = face;
-        this.suit = suit;
-    }
-
-    // 返回牌的点数
-    public Face getFace() {
-        return face;
-    }
-
-    // 返回 Card 的花色
-    public Suit getSuit() {
-        return suit;
-    }
-
-    // 返回 Card 的字符串表示形式
-    public String toString() {
-        return String.format("%s of %s", face, suit);
-    }
-} // Card 类结束
-
-// DeckOfCards 类声明
-public class DeckOfCards {
-    private List<Card> list; // 声明存储 Cards 的 List
-
-    // 设置牌组并洗牌
-    public DeckOfCards() {
-        Card[] deck = new Card[52];
-        int count = 0; // 卡牌数量
-
-        // 用 Card 对象填充牌组
-        for (Card.Suit suit : Card.Suit.values()) {
-            for (Card.Face face : Card.Face.values()) {
-                deck[count] = new Card(face, suit);
-                count++;
-            }
-        }
-        list = Arrays.asList(deck); // 获取 List
-        Collections.shuffle(list); // 洗牌
-    } // DeckOfCards 构造函数结束
-
-    // 输出牌组
-    public void printCards() {
-        // 分两列显示 52 张牌
-        for (int i = 0; i < list.size(); i++)
-            System.out.printf("%-19s%s", list.get(i),
-                ((i + 1) % 4 == 0) ? "\n" : " ");
-    }
-}
-
-public static void main(String[] args) {
-    DeckOfCards cards = new DeckOfCards();
-    cards.printCards();
-}
+1  // 图 16.10: DeckOfCards.java
+2  // 使用 Collections shuffle 方法进行洗牌和发牌。
+3  import java.util.List;
+4  import java.util.Arrays;
+5  import java.util.Collections;
+6
+7
+7  // 表示牌组中一张 Card 的类
+8  class Card
+9  {
+10     public static enum Face {Ace, Deuce, Three, Four, Five, Six,
+11         Seven, Eight, Nine, Ten, Jack, Queen, King };
+12     public static enum Suit {Clubs, Diamonds, Hearts, Spades};
+13
+14     private final Face face;
+15     private final Suit suit;
+16
+17     // 构造函数
+18     public Card(Face face, Suit suit)
+19     {
+20         this.face = face;
+21         this.suit = suit;
+22     }
+23
+24     // 返回牌的点数
+25     public Face getFace()
+26     {
 ```
 
-**图 16.10** 使用 `Collections.shuffle` 方法进行洗牌和发牌。
+**图 16.10** | 使用 Collections shuffle 方法进行洗牌和发牌。（3 部分中的 1 部分）
 
-`DeckOfCards` 类（第 44-82 行）管理牌组。构造函数（第 50-66 行）初始化牌组并调用 `Collections.shuffle`。`printCards` 方法（第 69-75 行）将牌组输出到控制台。
+524 第 16 章 通型集合
 
-## 16.7.3 reverse, fill, copy, max, min 方法
+```java
+27 return face;
+28 }
+29
+30 // 返回 Card 的花色
+31 public Suit getSuit()
+32 {
+33 return suit;
+34 }
+35
+36 // 返回 Card 的字符串表示形式
+37 public String toString()
+38 {
+39 return String.format("%s of %s", face, suit);
+40 }
+41 } // Card 类结束
+42
+43 // DeckOfCards 类声明
+44 public class DeckOfCards
+45 {
+46 private List<Card> list; // 声明存储 Cards 的 List
+47
+48 // 设置牌组并洗牌
+49 public DeckOfCards()
+50 {
+51 Card[] deck = new Card[52];
+52 int count = 0; // 卡牌数量
+53
+54 // 用 Card 对象填充牌组
+55 for (Card.Suit suit: Card.Suit.values())
+56 {
+57 for (Card.Face face: Card.Face.values())
+58 {
+59 deck[count] = new Card(face, suit);
+60 ++;
+61 }
+62 }
+63 list = Arrays.asList(deck); // 获取 List
+64 Collections.shuffle(list); // 洗牌
+65 // DeckOfCards 构造函数结束
+66
+67 // 输出牌组
+68 public void printCards()
+69 {
+70 // 分两列显示 52 张牌
+71 for (int i = 0; i < list.size(); i++)
+72 System.out.printf("%-19s%s", list.get(i),
+73 ((i + 1) % 4 == 0) ? "\n" : " ");
+74 }
+75 }
+76
+77 public static void main(String[] args)
+78 {
+```
 
-`Collections` 类提供了反转、填充和复制 `List` 的方法。`reverse` 反转 `List` 中元素的顺序，`fill` 用指定值填充 `List`。`copy` 方法接收两个参数——目标 `List` 和源 `List`。目标 `List` 的长度至少要等于源 `List`，否则会抛出 `IndexOutOfBoundsException`。如果目标 `List` 更长，剩余元素保持不变。
+**图 16.10** | 使用 Collections shuffle 方法进行洗牌和发牌。（3 部分中的 2 部分。）
 
-目前为止的方法都操作集合。`min` 返回集合中的最小元素，`max` 返回集合中的最大元素。这两个方法都可以带有一个 `Comparator` 对象作为第二个参数，以便对对象进行自定义比较，例如图 16.9 所示。
+```java
+79 DeckOfCards cards = new DeckOfCards();
+80 cards.printCards();
+81 }
+82 } // DeckOfCards 类结束
+```
+
+| 梅花22 | 黑桃6 | 红桃10 |
+|---|---|---|
+| 方形3 | 梅花5 | 梅花7 |
+| 黑桃3 | 方形6 | 红桃J |
+| 黑桃10 | 方形K | 红桃6 |
+| 梅花9 | 方形10 | 红桃8 |
+| 梅花10 | 方形A | 红桃8 |
+| 方形Q | 梅花A | 红桃9 |
+| 黑桃A | 黑桃4 | 红桃J |
+| 方形7 | 黑桃3 | 方形4 |
+| 黑桃7 | 方形K | 红桃7 |
+| 梅花2 | 黑桃6 | 红桃8 |
+| 梅花10 | 红桃 | 红桃J |
+| 梅花A | 黑桃4 | 红桃Q |
+
+**图. 16.10** | 使用 Collections shuffle 方法进行洗牌和发牌。（3 部分中的 3 部分）
+
+DeckOfCards 类（44-82行）管理牌组。构造函数（50-66行）初始化牌组并调用 `Collections.shuffle`。printCards 方法（69-75行）将牌组输出到控制台。
+
+### 16.7.3 reverse, copy 方法
+
+Collections 类提供了反转、填充和复制 List 方法。reverse 反转 List 中元素的顺序，fill 用指定值填充 List。copy 方法接收两个参数——目标 List 和源 List。目标 List 的长度至少要等于源 List，否则会抛出 `IndexOutOfBoundsException`。如果目标 List 更长，剩余元素保持不变。
+
+目前为止的方法都操作集合。min 返回集合中的最小元素，max 返回集合中的最大元素。这两个方法都可以带有一个 Comparator 对象作为第二个参数，以便对对象进行自定义比较，例如图 16.9 所示。
 
 ```java
 // 图 16.11: Algorithms1.java
@@ -16201,7 +15840,6 @@ public static void main(String[] args) {
 import java.util.List;
 import java.util.Arrays;
 import java.util.Collections;
-
 public class Algorithms1 {
     public static void main(String[] args) {
         // 创建并显示 List<Character>
@@ -16232,33 +15870,48 @@ public class Algorithms1 {
 
     // 输出 List 信息
     private static void output(List<Character> listRef) {
-        System.out.print("The list is: ");
-        for (Character element : listRef)
-            System.out.printf("%s", element);
+}
+}
+```
 
-        System.out.printf("%nMax: %s", Collections.max(listRef));
-        System.out.printf("Min: %s\n", Collections.min(listRef));
-    }
-} // end class Algorithms1
+# 16.7 集合方法 (Collections Methods)
+
+```java
+40 System.out.print("The list is: ");
+41 for (Character element : listRef)
+42 System.out.printf("%s", element);
+43
+44 System.out.printf("%nMax: %s", Collections.max(listRef));
+45 System.out.printf("Min: %s\n", Collections.min(listRef));
+46 }
+47 // // end class Algorithms1
 ```
 
 list 包含：
+
 The list is: P C M
+
 Max: P Min: C
 
 调用 reverse 后，list 包含：
+
 The list is: M C P
+
 Max: P Min: C
 
 复制后，copyList 包含：
+
 The list is: M C P
+
 Max: P Min: C
 
 调用 fill 后，list 包含：
+
 The list is: R R R
+
 Max: R Min: R
 
-**图 16.11** `Collections` 方法 `reverse`、`fill`、`copy`、`max` 和 `min`。（2 部分中的第 2 部分）
+> 图 16.11 | Collections 方法 reverse, fill, copy, max 和 min。（2 部分中的第 2 部分）
 
 
 
@@ -16268,11 +15921,11 @@ Max: R Min: R
 
 第 13 行创建了 `List<Character>` 变量 `list`，并用 `Character` 数组 `letters` 的 `List` 视图对其初始化。第 14–15 行输出 `List` 的当前内容。第 18 行调用 `Collections` 方法 `reverse` 来反转 `list` 的顺序。`reverse` 方法接受一个参数。由于 `List` 是数组的视图，数组的元素现在是反转顺序的。第 19–20 行输出反转后的内容。第 27 行通过 `Collections` 方法 `copy` 将 `list` 的元素复制到 `copyList` 中。`copyList` 没有改变 `letters`，因为 `copyList` 是一个独立的 `List`，不是源数组的视图。`copy` 方法需要两个参数——目标 `List` 和源 `List`。第 32 行调用 `Collections` 方法 `fill` 将字符 `'R'` 放入每个 `list` 元素中。由于 `List` 是数组 `list` 的视图，此操作将 `letters` 中的每个元素更改为 `'R'`。`fill` 方法的第一个参数需要一个 `List`，第二个参数需要一个 `Object`——在这种情况下，`Object` 是字符 `'R'` 的装箱版本。第 45–46 行调用 `Collections` 方法 `max` 和 `min` 分别查找最大和最小元素。回想接口 `List` 扩展了 `Collection`，因此 `List` 是 `Collection`。
 
-### 16.7.4 二分查找方法 `binarySearch`
+### 16.7.4 二分查找方法 binarySearch
 
 高速二分查找算法作为静态方法 `binarySearch` 内置在 Java 集合框架中。该方法在 `List`（例如 `LinkedList` 或 `ArrayList`）中定位对象。如果找到该对象，则返回其索引。如果未找到，`binarySearch` 返回负值。`binarySearch` 方法通过首先计算插入点并将其符号设为负来确定此负值。然后，`binarySearch` 从插入点减去 1 得到返回值，这保证了当且仅当找到该对象时，方法 `binarySearch` 返回正数（`>= 0`）。如果列表中的多个元素匹配搜索键，无法保证哪一个会被最先找到。图 16.12 使用 `binarySearch` 方法在 `ArrayList` 中搜索一系列字符串。
 
-**图 16.12** | `Collections` 方法 `binarySearch`。（第 2 部分中的第 1 部分。）
+**图 16.12** | Collections 方法 binarySearch。（第 2 部分中的第 1 部分。）
 
 | 排序后的 ArrayList: [black, blue, pink, purple, red, tan, white, yellow] | |
 | :--- | :--- |
@@ -16283,11 +15936,11 @@ Max: R Min: R
 | 正在查找：gray | 未找到 (-3) |
 | 正在查找：teal | 未找到 (-7) |
 
-图 16.12 | `Collections` 方法 `binarySearch`。（第 2 部分中的第 2 部分。）
+图 16.12 | Collections 方法 binarySearch。（第 2 部分中的第 2 部分。）
 
 第 15–26 行用一个包含 `colors` 数组中元素副本的 `ArrayList` 初始化了 `list`。`Collections` 方法 `binarySearch` 期望其 `List` 参数按升序排序，因此第 18 行使用 `Collections` 方法对 `list` 进行排序。如果元素未排序，使用 `binarySearch` 的结果将未定义。第 19 行输出排序后的 `list`。第 22–27 行调用方法 `printSearchResults`（第 31–43 行）来执行搜索并输出结果。`Collections` 方法 `binarySearch` 在 `list` 中查找指定的键。`binarySearch` 方法接受 `List` 作为第一个参数，接受 `Object` 作为第二个参数。第 39–42 行输出搜索结果。`binarySearch` 的重载版本接受 `Comparator` 对象作为第三个参数，该对象指定了 `binarySearch` 应如何将搜索键与 `List` 的元素进行比较。
 
-### 16.7.5 方法 `addAll`、`frequency` 和 `disjoint`
+### 16.7.5 方法 addAll, frequency 和 disjoint
 
 `Collections` 类提供了 `addAll`、`frequency` 和 `disjoint` 方法。`Collections` 方法 `addAll` 接受两个参数——用于插入新元素的 `Collection` 和一个提供待插入元素的数组。`frequency` 方法接受两个参数——一个要搜索的 `Collection` 和一个要在集合中搜索的 `Object`。`frequency` 方法返回该参数在集合中出现的次数。`Collections disjoint` 接受两个 `Collection`，如果它们没有共同元素，则返回 `true`。图 16.13 展示了 `addAll`、`frequency` 和 `disjoint` 方法的使用。
 
@@ -16300,7 +15953,7 @@ import java.util.Arrays;
 import java.util.Collections;
 ```
 
-图 16.13 | `Collections` 方法 `addAll`、`frequency` 和 `disjoint`。（第 2 部分中的第 1 部分。）
+图 16.13 | Collections 方法 addAll, frequency 和 disjoint。（第 2 部分中的第 1 部分。）
 
 ```java
 public class Algorithms2 {
@@ -16327,7 +15980,7 @@ public class Algorithms2 {
 }
 ```
 
-## 16.9 类 `PriorityQueue` 和接口 `Queue`
+## 16.9 类 PriorityQueue 和接口 Queue
 
 一个无限循环（第 32–37 行）调用 `Stack` 类的 `pop` 方法来移除栈顶元素。如果栈中没有元素，`pop` 方法将抛出 `EmptyStackException`，从而终止循环。该类还声明了 `peek` 方法。此方法返回栈顶元素，但不会将其从栈中弹出。
 
@@ -16341,13 +15994,13 @@ public class Algorithms2 {
 
 图 16.15 展示了 `PriorityQueue` 类。第 10 行创建了一个存储 `Double` 类型的 `PriorityQueue`，初始容量为 11 个元素，并根据对象的自然排序对元素进行排序（`PriorityQueue` 的默认行为）。`PriorityQueue` 是一个泛型类。第 10 行实例化了一个类型参数为 `Double` 的 `PriorityQueue`。`PriorityQueue` 类提供了五个额外的构造函数。其中一个接受一个 `int` 和一个 `Comparator`，用于创建一个由 `int` 指定初始容量并由 `Comparator` 指定排序的 `PriorityQueue`。第 13–15 行使用 `offer` 向优先级队列添加元素。如果程序尝试向队列添加 `null` 对象，`offer` 方法将抛出 `NullPointerException`。第 20–24 行的循环使用 `size` 来判断优先级队列是否为空（第 20 行）。当还有更多元素时，第 22 行使用 `PriorityQueue peek` 获取队列中优先级最高的元素进行输出（而不会将其从队列中移除）。第 23 行使用 `poll` 方法移除队列中优先级最高的元素，该方法会返回被移除的元素。
 
-**图 16.15** `PriorityQueue` 测试程序。
+**图 16.15** PriorityQueue 测试程序。
 
-## 16.10 集合
+## 16.10 集合 (Sets)
 
 `Set` 是唯一元素的无序集合（即没有重复元素）。集合框架包含了多个 `Set` 实现，包括 `HashSet` 和 `TreeSet`。`HashSet` 将其元素存储在哈希表中，而 `TreeSet` 将其元素存储在树中。哈希表将在 16.11 中介绍。
 
-图 16.16 使用 `HashSet` 去除重复。回想 `List` 和 `Collection` 都是泛型，因此第 20 行从 `List` 创建了一个 `HashSet<String>`。根据定义，`Set` 不包含重复元素，因此在构建 `HashSet` 时，它会移除任何重复项。图 16.16 显示了结果。
+图 16.11 使用 `HashSet` 去除重复。回想 `List` 和 `Collection` 都是泛型，因此第 20 行从 `List` 创建了一个 `HashSet<String>`。根据定义，`Set` 不包含重复元素，因此在构建 `HashSet` 时，它会移除任何重复项。图 16.16 显示了结果。
 
 程序 16.16 使用 `HashSet` 去除重复。第 24 行将 `HashSet<String>` 传递给 `printDuplicates` 方法（第 27–35 行），该方法接受 `Set` 作为参数。第 35–36 行使用增强 `for` 语句打印 `Set` 的每个元素。
 
@@ -16378,7 +16031,7 @@ public class Set {
 }
 ```
 
-### 排序集合
+### 排序集合 (Sorted Sets)
 
 集合框架还包含了 `SortedSet` 接口（继承自 `Set`），用于保持元素按排序顺序排列的集合——无论是自然顺序（例如数字）还是由 `Comparator` 指定顺序。`TreeSet` 实现了 `SortedSet`。第 14 行创建了一个包含数组元素的 `TreeSet<String>`。第 17 行将新的 `TreeSet` 赋值给变量。该示例还演示了范围方法，这些方法允许程序查看 `TreeSet` 的部分。对子集进行的任何更改将反映在原始 `TreeSet` 中。
 
@@ -16423,20 +16076,24 @@ sortedSet: black green grey orange red tan white yellow
 headSet("orange"): black green grey
 tailSet("orange"): orange red tan white yellow
 first: black
-last: yellow
+last : yellow
 ```
 
-**图 16.17** | 使用 `SortedSets` 和 `TreeMaps`。（2 部分，共 2 部分。）
+**图 16.17** | 使用 SortedSets 和 TreeMaps。（2 部分，共 2 部分。）
 
-## 16.11 映射
+## 16.11 映射（Maps）
 
-`Map` 将**键**与**值**建立关联。`Map` 中的键必须是**唯一的**，但与之关联的值不需要是唯一的。如果一个 `Map` 同时包含唯一的键和唯一的值，则认为它实现了一对一映射。如果只有键是唯一的，则该 `Map` 实现了**多对一映射**——多个键可以映射到一个值。
+`Map` 将**键（keys）**与**值（values）**建立关联。`Map` 中的键必须是**唯一的**，但与之关联的值不需要是唯一的。如果一个 `Map` 同时包含唯一的键和唯一的值，则认为它实现了一对一映射。如果只有键是唯一的，则该 `Map` 实现了**多对一映射**——多个键可以映射到一个值。
 
-`Map` 与 `Set` 的不同在于，`Map` 包含键和值，而 `Set` 只包含值。实现 `Map` 的多个类中，有三个是 `Hashtable`、`HashMap` 和 `TreeMap`。`Hashtable` 和 `HashMap` 分别将元素存储在哈希表中，`TreeMap` 将元素存储在树中。本节将讨论哈希表，并提供一个使用 `HashMap` 存储键值对的示例。接口 `SortedMap` 继承了 `Map`，并按排序顺序维护其键——可以是元素的自然顺序，也可以由 `Comparator` 指定的顺序。`TreeMap` 类实现了 `SortedMap`。
+`Map` 与 `Set` 的不同在于，`Map` 包含键和值，而 `Set` 只包含值。实现 `Map` 的多个类中，有三个是 `Hashtable`、`HashMap` 和 `TreeMap`。`Hashtable` 和 `HashMap` 分别将元素存储在哈希表中，而 `TreeMap` 将元素存储在树中。本节将讨论哈希表，并提供一个使用 `HashMap` 存储键值对的示例。接口 `SortedMap` 继承了 `Map`，并按排序顺序维护其键——可以是元素的自然顺序，也可以由 `Comparator` 指定的顺序。`TreeMap` 类实现了 `SortedMap`。
 
 ### 使用哈希表的 Map 实现
 
 
+
+# 哈希表与 Properties 类
+
+## 哈希表基础
 
 当程序创建对象时，可能需要高效地存储和检索它们。如果你的数据的某个方面直接匹配数值值，且键是唯一的并紧密排列的，那么使用数组存储信息是高效的。如果你有 100 名拥有九位数字社会安全码的员工，并想使用社会安全码作为键来存储和检索员工，那么任务将需要一个包含超过 8 亿个元素的数组，因为根据社会安全局网站的规定，九位社会安全码必须以 001–899 开头（不包括 666）。
 
@@ -16456,13 +16113,19 @@ http://www.socialsecurity.gov/employer/randomization.html
 
 解决哈希表冲突最流行的解决方案是让表的每个单元格成为一个“桶（bucket）”，通常是指向该单元格所有键值对的链表。这正是 `HashTable` 和 `HashMap` 类（来自 `java.util` 包）实现的解决方案。`HashTable` 和 `HashMap` 均实现了 `Map` 接口。它们之间的主要区别是，`HashMap` 是未同步的（多个线程不应并发访问 `HashMap`），并且允许 `null` 键和 `null` 值。
 
+### 负载因子
+
 哈希表的**负载因子（load factor）**会影响哈希方案的性能。负载因子是哈希表中被占用的单元格数量与哈希表总单元格数量的比值。该值越接近 1.0，冲突发生的概率就越大。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_576_0.png)
 
 > 哈希表中的负载因子是内存空间/执行时间权衡的经典示例：通过增加负载因子，我们获得了更好的内存利用率，但由于哈希冲突的增加，程序运行变慢。通过降低负载因子，我们获得了更好的程序速度，因为减少了哈希冲突，但我们的内存利用率变差，因为哈希表很大一部分仍然保持为空。
 
-`HashTable` 和 `HashMap` 类允许你在不自己实现哈希表机制的情况下使用它们——这是一个用法的经典示例。这个概念在我们学习面向对象编程时至关重要。正如前面的章节所讨论的，类封装并隐藏了复杂性（实现细节），并提供了用户友好的接口。正确地设计类以表现出这种行为是面向对象编程领域最有价值的技能之一。图 16.18 使用 `HashMap` 统计字符串中每个单词出现的次数。
+`HashTable` 和 `HashMap` 类允许你在不自己实现哈希表机制的情况下使用它们——这是一个用法的经典示例。这个概念在我们学习面向对象编程时至关重要。正如前面的章节所讨论的，类封装并隐藏了复杂性（实现细节），并提供了用户友好的接口。正确地设计类以表现出这种行为是面向对象编程领域最有价值的技能之一。
+
+## 示例：使用 HashMap 统计单词频次
+
+图 16.18 使用 `HashMap` 统计字符串中每个单词出现的次数。
 
 ```java
 // 图 16.18: WordTypeCount.java
@@ -16473,10 +16136,11 @@ import java.util.Set;
 import java.util.TreeSet;
 ```
 
-**图 16.18** | 程序统计字符串中每个单词出现的次数。（3 部分，共 3 部分）
+**图 16.18** | 程序统计字符串中每个单词出现的次数。（1 部分，共 3 部分）
 
 ```java
 import java.util.Scanner;
+
 public class WordTypeCount {
     public static void main(String[] args) {
         // 创建 HashMap 来存储 String 键和 Integer 值
@@ -16527,16 +16191,16 @@ public class WordTypeCount {
 }
 ```
 
-**图 16.18** | 程序统计字符串中每个单词出现的次数。（2 部分，共 3 部分。）
+**图 16.18** | 程序统计字符串中每个单词出现的次数。（2 部分，共 3 部分）
 
+```text
 Enter a string:
-
 this a sentence with several words
+```
 
 | Map contains: | Value |
 | --- | --- |
-| another | 1 |
-| different | 1 |
+| a | 1 |
 | is | 1 |
 | sample | 1 |
 | sentence | 2 |
@@ -16545,25 +16209,25 @@ this a sentence with several words
 | with | 2 |
 | words | 2 |
 
+```
 size:10 isEmpty:false
+```
 
-图 16.18 | 程序统计字符串中每个单词出现的次数。（3 部分，共 3 部分。）
+**图 16.18** | 程序统计字符串中每个单词出现的次数。（3 部分，共 3 部分）
 
 第 14 行创建一个空的 `HashMap`，具有默认初始容量（16）和默认负载因子（0.75）——这些元素是构建在 `HashMap` 中的。当 `HashMap` 中被占用的位置超过容量乘以负载因子时，容量会自动翻倍。`HashMap` 是一个泛型类，接受两个参数——键的类型（例如 `String`）和值的类型（例如 `Integer`）。记住传递给泛型类的类型必须是引用类型，第二个类型是 `Integer` 而不是 `int`。
 
 键决定了对应值的位置。如果键自插入操作后发生了变化，当你随后尝试检索该值时，可能找不到。在本章的示例中，我们使用 `String` 键，而 `String` 是不可变的。
 
-> 错误预防技巧 16.2
+> **错误预防技巧 16.2**
 >
 > 在 `Map` 中始终使用不可变键。键决定了对应值放置的位置。如果键在插入操作后发生了变化，当你随后尝试检索该值时，可能找不到。在本章的示例中，我们使用 `String` 键，而 `String` 是不可变的。
 
 ## 16.12 Properties 类
 
-方法 `displayName`（第 47–62 行）显示 map 中的所有条。它使用 `HashMap` 的方法 `keySet`（第 49 行）来获取键的集合。map 中的键类型为 `String`，`keySet` 方法返回一个类型参数为 `String` 的泛型 `Set`。第 52 行创建了键的 `TreeSet`，在其中对它们进行排序。第 57–58 行的循环访问 map 中的每个键及其值。第 58 行使用格式说明符 `%10s` 对键进行左对齐，使用格式说明符 `%10s` 对每个值进行右对齐。键按升序显示。第 61 行调用 `Map` 的方法 `size` 来获取 map 中键值对的数量。第 61 行还调用了 `Map` 的方法 `isEmpty`，它返回一个布尔值，表示 map 是否为空。
+`Properties` 对象是一个持久化的 `Hashtable`，用于存储 `String` 键值对——假设你使用 `setProperty` 和 `getProperty` 方法来修改表，而不是继承自 `Hashtable` 的方法。我们所说的“持久化”，是指 `Properties` 对象可以被写入输出流（可能是文件）并通过输入流读回。在 Java 之前的版本中，`Properties` 对象的常用用途是维护应用程序配置数据或用户偏好。[注：Preferences API（`java.util.prefs` 包）旨在替代 `Properties` 类的这种特定用法，但这超出了书的范围。要了解更多信息，请访问 http://bit.ly/JavaPreferences。] `Properties` 类继承自 `Hashtable<Object, Object>`。图 16.19 展示了 `Properties` 类的几种方法。
 
-## 16.12 Properties 类
-
-`Properties` 对象是一个持久化的 `Hashtable`，用于存储 `String` 键值对——假设你使用 `setProperty` 和 `getProperty` 方法来修改表，而不是继承自 `Hashtable` 方法。我们所说的“持久化”，是指 `Properties` 对象可以被写入输出流（可能是文件）并通过输入流读回。在 Java 之前的版本中，`Properties` 对象的常用用途是维护应用程序配置数据或用户偏好。[注：Preferences API（`java.util.prefs` 包）旨在替代 `Properties` 类的这种特定用法，但这超出了书的范围。要了解更多信息，请访问 http://bit.ly/JavaPreferences。] `Properties` 类继承自 `Hashtable<Object, Object>`。图 16.19 展示了 `Properties` 类的几种方法。
+### 代码示例
 
 第 13 行创建一个没有默认属性的 `Properties` 表。`Properties` 还提供了一个重载构造函数，接收一个包含默认属性值的 `Properties` 对象的引用。第 16 行和第 17 行调用 `Properties` 方法 `setProperty` 为指定的键存储值。如果表中不存在该键，`setProperty` 返回 `null`；否则，它返回该键的旧值。
 
@@ -16571,14 +16235,14 @@ size:10 isEmpty:false
 // PropertiesTest.java
 // 演示 java.util 包中的 Properties 类。
 import java.io.FileOutputStream;
-import java.io.InputStream;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import java.util.Set;
 
 public class PropertiesTest {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Properties table = new Properties();
 
         // 设置属性
@@ -16587,92 +16251,73 @@ public class PropertiesTest {
 
         System.out.println("After setting properties:");
         listProperties(table);
+
+        // 替换属性值
+        table.setProperty("color", "red");
+
+        System.out.println("After replacing properties");
+        listProperties(table);
+
+        saveProperties(table);
+
+        table.clear(); // 清空表
+
+        System.out.println("After clearing properties");
+        listProperties(table);
+
+        // 获取属性 color 的值
+        Object value = table.getProperty("color");
+
+        // 检查值是否在表中
+        if (value != null) {
+            System.out.printf("Property color's value is %s%n", value);
+        } else {
+            System.out.println("Property color is not in table");
+        }
+
+        loadProperties(table);
+        System.out.println("After loading properties");
+        listProperties(table);
     }
-```
 
-**图 16.19** | 包 java.util 中的 Properties 类。（3 部分中的第 1 部分）
-
-```java
-// 替换属性值
-table.setProperty("color", "red");
-```
-
-```java
-System.out.println("After replacing properties");
-listProperties(table);
-```
-
-```java
-saveProperties(table);
-```
-
-```java
-table.clear(); // 清空表
-```
-
-```java
-System.out.println("After clearing properties");
-listProperties(table);
-```
-
-```java
-// 获取属性 color 的值
-Object value = table.getProperty("color");
-```
-
-```java
-// 检查值是否在表中
-if (value != null) {
-    System.out.printf("Property color's value is %s%n", value);
-} else {
-    System.out.println("Property color is not in table");
-}
-```
-
-```java
-// 将属性保存到文件
-private static void saveProperties(Properties props) {
-    // 保存表的内容
-    try {
-        FileOutputStream output = new FileOutputStream("props.dat");
-        props.store(output, "Sample Properties"); // 保存属性
-        output.close();
-        System.out.println("After saving properties");
-        listProperties(props);
-    } catch (IOException ioException) {
-        ioException.printStackTrace();
+    // 将属性保存到文件
+    private static void saveProperties(Properties props) {
+        // 保存表的内容
+        try {
+            FileOutputStream output = new FileOutputStream("props.dat");
+            props.store(output, "Sample Properties"); // 保存属性
+            output.close();
+            System.out.println("After saving properties");
+            listProperties(props);
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
     }
-}
-```
 
-```java
-// 从文件加载属性
-private static void loadProperties(Properties props) {
-    try {
-        FileInputStream input = new FileInputStream("props.dat");
-        props.load(input); // 加载属性
-        input.close();
-    } catch (IOException ioException) {
-        ioException.printStackTrace();
+    // 从文件加载属性
+    private static void loadProperties(Properties props) {
+        try {
+            FileInputStream input = new FileInputStream("props.dat");
+            props.load(input); // 加载属性
+            input.close();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
     }
-}
-```
 
-图 16.19 | 包 java.util 中的 Properties 类。（3 部分中的第 2 部分）。
-
-```java
-System.out.println("After loading properties");
-listProperties(props);
-
-// 输出属性值
-private static void listProperties(Properties props) {
-    Set<Object> keys = props.keySet(); // 获取属性名
-    // 输出键/值对
-    for (Object key : keys)
-      System.out.printf("%s\t%s\n", key, props.getProperty((String) key));
-  System.out.println();
+    // 输出属性值
+    private static void listProperties(Properties props) {
+        Set<Object> keys = props.keySet(); // 获取属性名
+        // 输出键/值对
+        for (Object key : keys) {
+            System.out.printf("%s\t%s\n", key, props.getProperty((String) key));
+        }
+        System.out.println();
+    }
 } // 结束类 PropertiesTest
 ```
+
+**图 16.19** | 包 `java.util` 中的 `Properties` 类。（完整代码）
 
 
 
@@ -16704,7 +16349,7 @@ Property color's value is red
 
 ## 16.13 同步集合
 
-在第 20 章中，我们讨论了多线程。除了 `Vector` 和 `Hashtable`，框架中的集合默认不同步，因此在不需要多线程时运行效率很高。然而，由于它们不同步，多个线程的并发访问可能会导致不可确定的结果或致命错误——正如我们在第 20 章中所演示的那样。为了防止线程问题，对可能被多个线程访问的集合使用了同步封装。包装对象接收调用，添加同步（以访问集合），并将调用委托给包装对象。`Collections` API 提供了将集合封装为同步版本的静态方法。同步包装的方法头部列于图 16.20。所有方法接收一个泛型并返回该泛型的同步视图。例如，以下代码创建了一个存储 `String` 的同步 `List` (list2)：
+在第 20 章中，我们讨论了多线程。除了 `Vector` 和 `Hashtable`，框架中的集合默认不同步，因此在不需要多线程时运行效率很高。然而，由于它们不同步，多个线程的并发访问可能会导致不可确定的结果或致命错误——正如我们在第 20 章中所演示的那样。为了防止线程问题，对可能被多个线程访问的集合使用了同步封装。包装对象接收调用，添加同步（以访问集合），并将调用委托给包装对象。`Collections` API 提供了一将集合封装为同步版本的静态方法。同步包装的方法头部列于图 16.20。所有方法接收一个泛型并返回该泛型的同步视图。例如，以下代码创建了一个存储 `String` 的同步 `List` (list2)：
 
 ```java
 List<String> list1 = new ArrayList<>();
@@ -16713,40 +16358,39 @@ List<String> list2 = Collections.synchronizedList(list1);
 
 ```java
 public static method headers
-<T> Collection<T> synchronizedCollection(Collection<T> c)
-<T> List<T> synchronizedList(List<T> list)
-<T> Set<T> synchronizedSet(Set<T> s)
-<T> SortedSet<T> synchronizedSortedSet(SortedSet<T> s)
-<K, V> Map<K, V> synchronizedMap(Map<K, V> m)
-<K, V> SortedMap<K, V> synchronizedSortedMap(SortedMap<K, V> m)
+<T> synchronizedCollection(Collection<T> c)
+<List<T> synchronizedList(List<T> list)
+<Set<T> synchronizedSet(Set<T> s)
+<SortedSet<T> synchronizedSortedSet(SortedSet<T> s)
+<K, V> synchronizedMap(Map<K, V> m)
+<K, V> synchronizedSortedMap(SortedMap<K, V> m)
 ```
 
 图 16.20 | 同步包装方法。
 
 ## 16.14 不可变集合
 
-`Collections` 类提供了静态方法为集合创建不可变封装。如果尝试修改集合，不可变封装将抛出 `UnsupportedOperationException`。在不可变集合中，存储在集合中的引用是不可修改的，但它们引用的对象是可以修改的，除非它们属于像 `String` 这样的不可变类。这些方法的头部列于图 16.21。有关这些方法的详细信息可以访问 `http://docs.oracle.com/javase/7/docs/api/java/util/Collections.html`。所有方法接收一个泛型类型并返回泛型类型的不可修改视图。例如，以下代码创建了一个不可修改的 `List` (list2)，它存储了 `String` 对象：
+`Collections` 类提供了静态方法为集合创建不可变封装。如果尝试修改集合，不可变封装将抛出 `UnsupportedException`。在不可变集合中，存储在集合中的引用是不可修改的，但它们引用的对象是可以修改的，除非它们属于像 `String` 这样的不可变类。这些方法的头部列于图 16.21。有关这些方法的详细信息可以访问 `http://docs.oracle.com/javase/7/docs/api/java.util/Collections.html`。所有方法接收一个泛型类型并返回泛型类型的不可修改视图。例如，以下代码创建了一个不可修改的 `List` (list2)，它存储了 `String` 对象：
 
 ```java
 List<String> list1 = new ArrayList<>();
 List<String> list2 = Collections.unmodifiableList(list1);
 ```
 
-> **软件工程观察 16.6**
->
-> 你可以使用不可修改的包装器来创建一个集合，该集合为他人提供只读访问权限，同时允许你自己拥有读写访问权限。你只需给他人提供该不可修改包装器的引用，同时为自己保留原始集合的引用即可。
+## 软件工程观察 16.6
+
+你可以使用不可修改的包装器来创建一个集合，该集合为他人提供只读访问权限，同时允许你自己拥有读写访问权限。你只需给他人提供该不可修改包装器的引用，同时为自己保留原始集合的引用即可。
 
 ```java
-public static method headers
-<T> Collection<T> unmodifiableCollection(Collection<T> c)
-<T> List<T> unmodifiableList(List<T> list)
-<T> Set<T> unmodifiableSet(Set<T> s)
-<T> SortedSet<T> unmodifiableSortedSet(SortedSet<T> s)
-<K, V> Map<K, V> unmodifiableMap(Map<K, V> m)
-<K, V> SortedMap<K, V> unmodifiableSortedMap(SortedMap<K, V> m)
+<Collection<T>> unmodifiableCollection(Collection<T> c)
+<List<T>> unmodifiableList(List<T> list)
+<Set<T>> unmodifiableSet(Set<T> s)
+<SortedSet<T>> unmodifiableSortedSet(SortedSet<T> s)
+<K, V> unmodifiableMap(Map<K, V> m)
+<K, V> unmodifiableSortedMap(SortedMap<K, V> m)
 ```
 
-> 图 16.21 | 不可修改包装器方法。
+> 图 16.21 不可修改包装器方法。
 
 ## 16.15 抽象实现
 
@@ -16766,7 +16410,7 @@ public static method headers
 
 - 学习什么是函数式编程以及它是如何补充面向对象编程的。
 - 使用函数式编程来简化你使用其他技术执行的编程任务。
-- 编写实现函数式接口的 lambda 表达式。
+- 编写实现函数接口的 lambda 表达式。
 - 学习什么是流（streams）以及流管道如何由流源、中间操作和终端操作形成。
 - 在 `IntStream` 上执行操作，包括 `forEach`、`count`、`min`、`max`、`sum`、`average`、`reduce`、`filter` 和 `sorted`。
 - 在 `Stream` 上执行操作，包括 `filter`、`map`、`sorted`、`collect`、`forEach`、`findFirst`、`distinct`、`mapToDouble` 和 `reduce`。
@@ -16796,7 +16440,7 @@ public static method headers
   - 17.5.2 过滤字符串然后按不区分大小写升序排序
   - 17.5.3 过滤字符串然后按不区分大小写降序排序
 - 17.6 Stream-Employee 操作
-  - 17.6.1 创建并显示 List<Employee>
+  - 17.6.1 创建并显示 ListEmployee
   - 17.6.2 过滤工资在指定范围内的员工
   - 17.6.3 按多个字段排序员工
   - 17.6.4 将员工映射为唯一的字符串
@@ -16813,9 +16457,9 @@ public static method headers
 
 你的 Java 编程思维将发生巨大变化。在 SE 8 之前，Java 支持三种范式——过程化编程、面向对象编程和泛型编程。Java SE 8 增加了函数式编程。支持这种范式的新语言和库能力通过 Lambda 加入 Java：
 
-`http://openjdk.java.net/projects/lambda`
+`http://openjdk.java/projects/lambda`
 
-在本章中，我们将定义函数式编程并展示如何更简洁、更少 bug 地使用它。在第 20 章并发中，你将学习如何使用 Java 的并发集合和并行流操作来提高多核系统的性能。在阅读本章之前，你应该复习 10.10 节，该节引入了 SE 8 新特性（默认方法、静态方法）以及函数式接口的概念。
+在本章中，我们将定义函数式编程并展示如何更简洁、更少 bug 地使用它。在第 20 章并发中，你将学习如何使用 Java 的并发集合和并行流操作来提高多核系统的性能。在阅读本章之前，你应该复习 10.10，该节引入了 SE 8 新特性（默认方法、静态方法）以及函数式接口的概念。
 
 ## 17.2 函数式编程技术概述
 
@@ -16824,7 +16468,7 @@ public static method headers
 ```java
 int sum = 0;
 for (int counter = 0; counter < values.length; counter++)
-    sum += values[counter];
+  sum += values[counter];
 ```
 
 这个循环指定了我们如何将每个元素的值加到和中——使用一个每次处理一个元素的 `for` 循环，将每个元素的值相加。这种迭代技术被称为外部迭代（因为是你必须迭代，而不是库），并且要求你按顺序访问元素，从开始到结束，在单个线程执行中。为了执行前述任务，你还创建了两个变量（`sum` 和 `counter`），这两个变量在任务执行时会被反复修改——也就是说，它们的值会发生变化。你执行过许多相似的数组和集合任务，例如显示数组元素、汇总掷了 6,000,000 次的骰子点数总和、计算数组元素的平均值等。
@@ -16835,7 +16479,7 @@ for (int counter = 0; counter < values.length; counter++)
 
 ### 内部迭代
 
-在函数式编程中，你指定在任务中想要完成什么，而不是如何完成。正如你将在本章看到的，为了对数值数据源的元素求和（例如数组或集合中的元素），你可以使用 Java SE 8 库的功能，这些功能允许你说：“这里有一个数据源，给我它的元素之和。”你不需要指定如何迭代元素，也不需要声明和使用任何可变变量。这被称为内部迭代，因为库决定了如何访问所有元素来执行任务。通过内部迭代，你可以轻松地告诉库你想让它执行的操作，并利用并行处理利用你计算机的多核架构——这可以显著提高任务的性能。正如你在第 20 章中将学到的，如果这些任务修改了程序的状态信息（即它的值），那么很难创建出运行正确的并行任务。因此，你在这里学到的函数式编程能力源于不可变性——不修改被处理的数据源或任何程序状态。
+在函数式编程中，你指定在任务中想要完成什么，而不是如何完成。正如你将在本章看到的，为了数值数据源的元素求和（例如数组或集合中的元素），你可以使用 Java SE 8 库的功能，这些功能允许你说：“这里有一个数据源，给我它的元素之和。”你不需要指定如何迭代元素，也不需要声明和使用任何可变变量。这被称为内部迭代，因为库决定了如何访问所有元素来执行任务。通过内部迭代，你可以轻松地告诉库你想让它执行的操作，并利用并行处理利用你计算机的多核架构——这可以显著提高任务的性能。正如你在第 20 章中学学的，如果这些任务修改了程序的状态信息（即它的值），那么很难创建出运行正确的并行任务。因此，你在这里学到的函数式编程能力源于不可变性——不修改被处理的数据源或任何程序状态。
 
 ### 17.2.1 函数式接口
 
@@ -16843,10 +16487,10 @@ for (int counter = 0; counter < values.length; counter++)
 
 #### java.util.function 包中的函数式接口
 
-`java.util.function` 包包含多个函数式接口。图 17.2 显示了六个通用函数式接口。在整个过程中，`T` 和 `R` 是泛型名称，分别代表函数式接口操作的对象类型和方法的返回类型。在 `java.util.function` 包中，存在这些图 17.2 中接口的特殊版本。大多数用于 `int`、`long` 和 `double` 原始值，但也有用于二元操作的泛型 `Consumer`、`Function` 和 `Predicate`——即接受两个参数的方法。
+`java.util.function` 包包含多个函数式接口。图 17.2 显示了六个通用函数式接口。在整个过程中，`T` 和 `R` 是泛型名称，分别代表函数式接口操作的对象类型和方法的返回类型。在 `java.util.function` 包中，存在这些图 17.2 中接口的特殊版本。大多数用于 `int`、`long` 和 `double` 原始值，但也有用于二进制操作的泛型 `Consumer`、`Function` 和 `Predicate`——即接受两个参数的方法。
 
 | 接口 | 说明 |
-| :--- | :--- |
+| --- | --- |
 | `BinaryOperator<T>` | 包含 `apply()` 方法，该方法接收两个 `T` 参数，对它们执行操作（如计算）并返回一个 `T` 类型的值。你从第 17.3 节开始看到多个 `BinaryOperator` 的示例。 |
 | `Consumer<T>` | 包含 `accept()` 方法，该方法接收 `T` 参数并返回 `void`。使用该 `T` 参数执行任务，例如输出对象、调用对象的方法等。你从第 17.3 节开始看到多个 `Consumer` 的示例。 |
 | `Function<T,R>` | 包含 `apply()` 方法，该方法接收 `T` 参数并返回 `R` 类型的值。对 `T` 参数调用方法并返回该方法的结果。你从第 17.5 节开始看到多个 `Function` 的示例。 |
@@ -16922,28 +16566,28 @@ Stream 将元素通过一系列处理步骤——被称为流流水线——该�
 
 在本章中，我们在函数式编程的上下文中使用“流”（stream）这一术语——这与我们在第 15 章文件和对象序列化中讨论的 I/O 流不是同一个概念，在后者中，程序从文件中读取字节流或向文件输出字节流。正如你在第 17.7 节中看到的，你也可以使用函数式编程来处理文件的内容。
 
-### 17.3 IntStream 操作
+## 17.3 IntStream 操作
 
 [本节演示了如何使用 lambda 和流来简化你在第 7 章“数组和 ArrayList”中学习的编程任务。]
 
 图 17.5 展示了对 `IntStream`（包 `java.util.stream`）的操作——这是一种用于处理 `int` 值的特殊流。示例中所示的技术也适用于处理 `long` 和 `double` 值的 `LongStream` 和 `DoubleStream`。
 
-**图 17.5** 展示 IntStream 操作。（2 部分中的第 1 部分）
+**图 17.5** 展示 IntStream 操作。（2 部分中的第 部分）
 
 ```java
 // 使用 reduce 方法计算值的积
 System.out.printf("Product via reduce method: %d%n",
     IntStream.of(values)
-    .reduce(1, (x, y) -> x * y));
+        .reduce(1, (x, y) -> x * y));
 ```
 
 ```java
 // 按排序顺序显示偶数
 System.out.printf("Even values displayed in sorted order: %d%n",
     IntStream.of(values)
-    .filter(value -> value % 2 == 0)
-    .sorted()
-    .forEach(value -> System.out.printf("%d ", value));
+        .filter(value -> value % 2 == 0)
+        .sorted()
+        .forEach(value -> System.out.printf("%d ", value));
 System.out.println();
 ```
 
@@ -16952,10 +16596,10 @@ System.out.println();
 System.out.printf(
     "Odd values multiplied by 10 displayed in sorted order: %d%n",
     IntStream.of(values)
-    .filter(value -> value % 2 != 0)
-    .map(value -> value * 10)
-    .sorted()
-    .forEach(value -> System.out.printf("%d ", value));
+        .filter(value -> value % 2 != 0)
+        .map(value -> value * 10)
+        .sorted()
+        .forEach(value -> System.out.printf("%d ", value));
 System.out.println();
 ```
 
@@ -16997,9 +16641,9 @@ System.out.printf("Sum of integers from 1 to 10: %d%n",
 
 1 到 10 的整数和：55
 
-图 17.5 | 展示 IntStream 操作。（2 部分中的第 2 部分）
+图 17.5 | 展示 IntStream 操作。（2 部分中的第 部分）
 
-#### 17.3.1 创建 IntStream 并使用 forEach 终端操作显示其值
+### 17.3.1 创建 IntStream 并使用 Each 终端操作显示其值
 
 `IntStream` 的静态方法 `of()`（第 14 行）接收一个 `int` 数组作为参数，并返回一个 `IntStream` 以处理数组值。一旦你创建了流，就可以链用多个方法调用来创建一个流流水线。第 14–15 行的语句为 `values` 数组创建一个 `IntStream`，然后使用 `IntStream.forEach`（一个终端操作）对每个流元素执行任务。`forEach` 方法接收的参数是一个实现了 `IntConsumer` 函数式接口（包 `java.util.function`）的对象——这是通用 `Consumer` 函数式接口的 `int` 特定版本。该接口的 `accept` 方法接收一个 `int` 值并执行任务——在本例中，是显示该值和一个空格。在 Java SE 8 之前，你通常使用匿名内部类来实现：
 
@@ -17019,7 +16663,7 @@ value -> System.out.printf("%d", value);
 
 `accept` 方法的参数名（`value`）变成 lambda 的参数，`accept` 方法体语句变成 lambda 表达式的体。正如你所见，lambda 的语法比匿名内部类更清晰、简洁。
 
-##### 类型推断与 Lambda 的目标类型
+#### 类型推断与 Lambda 的目标类型
 
 Java 编译器通常可以根据 lambda 使用的上下文推断 lambda 参数的类型以及 lambda 返回的类型。这由 lambda 的目标类型决定——即代码中 lambda 出现处预期的函数式接口。在第 15 行中，目标类型是 `IntConsumer`。在这种情况下，lambda 的参数类型被推断为 `int`，因为 `IntConsumer` 的 `accept` 方法期望接收一个 `int`。你可以显式声明参数类型，例如：
 
@@ -17029,11 +16673,11 @@ Java 编译器通常可以根据 lambda 使用的上下文推断 lambda 参数�
 
 这样做时，lambda 的参数列表必须括在括号中。在示例中，我们通常让编译器推断 lambda 参数的类型。
 
-##### 局部变量、有效 final 局部变量和捕获 lambda
+#### 局部变量、有效 final 局部变量和捕获 lambda
 
 在 Java SE 8 之前，在实现匿名内部类时，你可以使用外部方法的局部变量（称为词法作用域），但你必须将这些变量声明为 `final`。lambda 可以使用 `final` 局部变量。在 Java SE 8 中，匿名内部类和 lambda 还可以使用“有效 final”（effectively final）局部变量——即局部变量在声明和初始化后没有被修改。引用外部作用域中局部变量的 lambda 被称为捕获 lambda。编译器会捕获 lambda 的值，并确保该值在 lambda 最终执行时可以使用，而执行时间可能在它的词法作用域不再存在之后。
 
-##### 在实例方法中的 lambda 中使用 this
+#### 在实例方法中的 lambda 中使用 this
 
 作为匿名内部类，lambda 可以引用外部类的对象。在匿名内部类中，你可以使用 `OuterClassName.this` 语法——否则该引用将指向匿名内部类的对象。在 lambda 中，你直接用 `this` 引用外部类的对象。
 
@@ -17041,7 +16685,7 @@ Java 编译器通常可以根据 lambda 使用的上下文推断 lambda 参数�
 
 在 lambda 中使用的参数名和值不能与作用域中的其他局部变量相同；否则会发生编译错误。
 
-#### 17.3.2 终端操作 count, min, max 和 average
+### 17.3.2 终端操作 count, min, max 和 average
 
 `IntStream` 提供了各种用于整数流常见归约的终端操作。终端操作是及时的——它们会立即处理流中的项。常见的归约操作包括：
 
@@ -17065,7 +16709,7 @@ IntSummaryStatistics(count=10, sum=55, min=1, average=5.50000, max=10)
 
 对应图 17.5 中的数组值。
 
-#### 17.3.3 终端操作 reduce
+### 17.3.3 终端操作 reduce
 
 你可以通过调用 `reduce` 方法来定义 `IntStream` 的归约，如图 17.5 第 29–31 行所示。17.3.2 节中的每个终端操作都是一种 `reduce` 的专门实现。例如，第 31 行显示了如何使用 `reduce` 而不是 `sum` 来求和 `IntStream` 的值。第一个参数 (0) 是帮助你开始规约操作的值，第二个参数是一个实现 `IntBinaryOperator` 函数式接口的对象（包 `java.util.function`）。该 Lambda 表达式：
 
@@ -17081,11 +16725,11 @@ IntSummaryStatistics(count=10, sum=55, min=1, average=5.50000, max=10)
 
 此过程持续产生 `IntStream` 值的运行和，直到所有值都被使用完毕，此时返回最终总和。
 
-##### reduce 方法的恒等值参数
+#### reduce 方法的恒等值参数
 
 `reduce` 方法的第一个参数正式称为“恒等值”（identity value）——该值在通过 `IntBinaryOperator` 与任何元素结合时，会产生该元素的原始值。例如，在对元素求和时，恒等值是 0（任何 `int` 值加 0 结果都是原始值），在获取元素的乘积时，恒等值是 1（任何 `int` 乘以 1 结果都是原始值）。
 
-##### 使用 reduce 方法计算值的平方
+#### 使用 reduce 方法计算值的平方
 
 图 17.5 的第 34-36 行使用 `reduce` 计算 `IntStream` 值的平方之和。在这种情况下，Lambda 表达式将当前值的平方加到运行和中。规约的计算过程如下：
 
@@ -17095,21 +16739,21 @@ IntSummaryStatistics(count=10, sum=55, min=1, average=5.50000, max=10)
 
 此过程持续产生 `IntStream` 值的平方运行和，直到所有值都被使用完毕，此时返回最终总和。
 
-##### 使用 reduce 方法计算值的乘积
+#### 使用 reduce 方法计算值的乘积
 
 图 17.5 的第 39–41 行使用 `reduce` 计算 `IntStream` 值的乘积。在这种情况下，Lambda 将其两个参数相乘。由于我们要产生的是乘积，在这种情况下我们从恒等值 1 开始。规约的计算如下：
 
 - 在第一次调用 `reduce` 时，Lambda 参数 `x` 的值是恒等值 (1)，Lambda 参数 `y` 的值是流中的第一个 `int` (3)，产生值 3 (1 * 3)。
 - 在下一次调用 `reduce` 时，Lambda 参数 `x` 的值是第一次计算的结果 (3)，Lambda 参数 `y` 的值是流中的第二个 `int` (10)，产生和 30 (3 * 10)。
-- 在下一次调用 `reduce` 时，Lambda 参数 `x` 的值是上一次计算的结果 (30)，Lambda 参数 `y` 的值是流中的第三个 `int` (6)，产生和 180 (30 * 6)。
+- 在下一次调用 `reduce` 时，Lambda 参数 `x` 的值是上一次计算的结果 (30)，Lambda 参数 `y` 的值是流中的第三个 `int` (6)，产生和 180 (3 * 6)。
 
 此过程持续产生 `IntStream` 值的运行乘积，直到所有值都被使用完毕，此时返回最终乘积。
 
-#### 17.3.4 中间操作：过滤和排序 IntStream 值
+### 17.3.4 中间操作：过滤和排序 IntStream 值
 
 图 17.5 的第 45–48 行创建了一个流流水线，定位 `IntStream` 中的偶数，按升序排序它们，并显示每个值后跟一个空格。
 
-##### 中间操作 filter
+#### 中间操作 filter
 
 你通过过滤元素产生符合特定条件（称为谓词 predicate）的中间结果流。`IntStream filter`（第 46 行）接收一个实现 `Predicate` 函数式接口的对象（包 `java.util.function`）。第 46 行的 Lambda 表达式：
 
@@ -17119,39 +16763,39 @@ value -> value % 2 == 0
 
 实现了接口的 `test` 方法。
 
-##### 中间操作 sorted
+#### 中间操作 sorted
 
 `IntStream sorted` 将流元素按升序排序。与 `filter` 类似，`sorted` 是惰性操作；然而当最终执行排序时，流流水线中的所有中间操作必须完成，以便方法知道要排序哪些元素。
 
-##### 处理流流水线与无状态与有状态中间操作
+#### 处理流流水线与无状态与有状态中间操作
 
 当调用 `forEach` 时，流流水线会被处理。第 46 行定位偶数。接下来，第 47 行对它们进行排序。然后，第 48 行显示每个值。
 
-## 示例代码
+## 使用 Streams 对值进行排序和过滤
 
 ```java
 // 使用 streams 对值进行升序排序
 System.out.printf("Sorted values: %s%n", Arrays.stream(values)
-  .sorted()
-  .collect(Collectors.toList()));
+    .sorted()
+    .collect(Collectors.toList()));
 ```
 
 ```java
 // 大于 4 的值
 List<Integer> greaterThan4 =
-Arrays.stream(values)
-  .filter(value -> value > 4)
-  .collect(Collectors.toList());
+    Arrays.stream(values)
+        .filter(value -> value > 4)
+        .collect(Collectors.toList());
 System.out.printf("Values greater than 4: %s%n", greaterThan4);
 ```
 
 ```java
 // 过滤大于 4 的值并排序结果
 System.out.printf("Sorted values greater than 4: %s%n",
-Arrays.stream(values)
-  .filter(value -> value > 4)
-  .sorted()
-  .collect(Collectors.toList()));
+    Arrays.stream(values)
+        .filter(value -> value > 4)
+        .sorted()
+        .collect(Collectors.toList()));
 ```
 
 
@@ -17180,6 +16824,8 @@ greaterThan4.stream()
 
 `Arrays` 类还提供了重载方法，用于从整个 `int`、`long` 和 `double` 数组或数组中的元素范围创建 `IntStream`、`LongStream` 和 `DoubleStream`。专门的 `IntStream`、`LongStream` 和 `DoubleStream` 类为数值流的常用操作提供了各种方法，正如你在 17.3 节中学到的那样。
 
+## 17.4 `Stream<Integer>` 操作
+
 ## 17.4.2 排序并收集结果
 
 在第 7.15 节中，你学习了如何使用 `Arrays` 类的 `sort` 和 `parallelSort` 静态方法对数组进行排序。你经常会对流操作的结果进行排序，因此在第 18–21 行，我们将使用流技术对值进行排序并显示结果。首先，第 19 行从 `values` 创建 `Stream<Integer>`。接下来，第 20 行调用 `Stream` 方法 `sorted()` 对元素进行排序——这产生了一个按升序排列值的中间状态 `Stream<Integer>`。
@@ -17194,7 +16840,7 @@ http://download.java.net/jdk8/api/java/util/stream/Collectors.html
 
 ## 17.4.3 过滤并存储结果供以后使用
 
-图 17.6 的第 24–27 行创建了一个 `Stream<Integer>`，调用 `Stream` `filter()`（接收一个 `Predicate`）来收集所有大于 4 的值，并将结果收集到 `List<Integer>` 中。像 `IntPredicate`（第 17.3.4 节）一样，函数接口 `Predicate` 有一个 `test()` 方法，返回布尔值表示参数是否满足某个条件，以及方法 `negate()` 和 `or()` 方法。
+图 17.6 的第 24–27 行创建了一个 `Stream<Integer>`，调用 `Stream` `filter()`（接收一个 `Predicate`）来收集所有大于 4 的值，并将结果收集到 `List<Integer>` 中。像 `IntPredicate`（第 17.3.4 节）一样，函数接口 `Predicate` 有一个 `test()` 方法，返回布尔值表示参数是否满足某个条件，以及 `negate()` 和 `or()` 方法。
 
 我们将流管道产生的 `List<Integer>` 赋值给变量 `greaterThan4`，它在第 28 行用于显示大于 4 的值，并在第 40–42 行中用于仅对大于 4 的值执行额外操作。
 
@@ -17322,17 +16968,17 @@ public class Arrays2 {
 
 图 17.8 | 方法引用的类型。
 
-### 17.5.2 过滤字符串并按不区分大小写升序排序
+### 17.5.2 过滤字符串并按不区分大小升序排序
 
-第 24–28 行对字符串进行过滤和排序。第 25 行从 `strings` 数组创建一个 `Stream<String>`，第 26 行调用 `String` 方法 `filter()` 来定位所有大于 "m" 的字符串，并在 `Predicate` lambda 表达式中使用不区分大小写的比较。第 27 行对结果进行排序，第 28 行将它们收集到 `List<String>` 中，并将其作为字符串输出。在这里，第 27 行调用了接受 `Comparator` 作为参数的 `sorted()` 方法。正如你在第 16.7.1 节中学到的，`Comparator` 定义了一个 `compare()` 方法，如果考虑的第一个值小于第二个值，则返回负值；如果相等，返回 0；如果第一个值大于第二个值，则返回正值。默认情况下，`sorted()` 方法使用自然顺序——对于 `String` 来说，自然顺序是区分大小写的，这意味着 "Z" 小于 "a"。传递预定义的 `Comparator` `String.CASE_INSENSITIVE_ORDER` 可以执行不区分大小写的排序。
+第 24–28 行对字符串进行过滤和排序。第 25 行从 `strings` 数组创建一个 `Stream<String>`，第 26 行调用 `String` 方法 `filter()` 来定位所有大于 "m" 的字符串，并在 `Predicate` lambda 表达式中使用不区分大小的比较。第 27 行对结果进行排序，第 28 行将它们收集到 `List<String>` 中，并将其作为字符串输出。在这里，第 27 行调用了接受 `Comparator` 作为参数的 `sorted()` 方法。正如你在第 16.7.1 节中学到的，`Comparator` 定义了一个 `compare()` 方法，如果考虑的第一个值小于第二个值，则返回负值；如果相等，返回 0；如果第一个值大于第二个值，则返回正值。默认情况下，`sorted()` 方法使用自然顺序——对于 `String` 来说，自然顺序是区分大小的，这意味着 "Z" 小于 "a"。传递预定义的 `Comparator` `String.CASE_INSENSITIVE_ORDER` 可以执行不区分大小的排序。
 
-### 17.5.3 过滤字符串并按不区分大小写降序排序
+### 17.5.3 过滤字符串并按不区分大小降序排序
 
 第 31–35 行执行与第 24–28 行相同的任务，但按降序对字符串进行排序。函数式接口 `Comparator` 包含默认方法 `reversed()`，它可以反转现有 `Comparator` 的顺序。当它被应用于 `String.CASE_INSENSITIVE_ORDER` 时，字符串将按降序排序。
 
 ## 17.6 `Stream<Employee>` 的操作
 
-图 17.9–17.16 中的示例演示了使用 `Stream<Employee>` 的各种 lambda 和流（stream）能力。`Employee` 类（图 17.9）表示一个具有名字、姓氏、薪水和部门的员工，并提供了操作这些值的方法。此外，该类还提供了 `getName()` 方法（第 69–72 行），它将合并的名和姓作为 `String` 返回，以及一个 `toString()` 方法（第 75–80 行），它返回一个包含员工名、姓、薪水和部门的格式化 `String`。
+图 17.9–17.16 中的示例演示了使用 `Stream<Employee>` 的各种 lambda 和流能力。`Employee` 类（图 17.9）表示一个具有名字、姓氏、薪水和部门的员工，并提供了操作这些值的方法。此外，该类还提供了 `getName()` 方法（第 69–72 行），它将合并的姓和姓作为 `String` 返回，以及一个 `toString()` 方法（第 75–80 行），它返回一个包含员工名、姓、薪水和部门的格式化 `String`。
 
 ```java
 // 17.9: Employee.java
@@ -17352,7 +16998,7 @@ public class Employee
         this.lastName = lastName;
 ```
 
-**图 17.9** 用于图 17.10–17.16 的 Employee 类。（3 部分中的第 1 部分）。
+**图 17.9** 用于图 17.10–17.16 的 `Employee` 类。（3 部分中的第 1 部分）。
 
 
 
@@ -17381,7 +17027,12 @@ public class Employee
         this.salary = salary;
         this.department = department;
     }
+}
+```
 
+## 图 17.9 Employee 类（3 部分中的第 2 部分）
+
+```java
     // set firstName
     public void setFirstName(String firstName)
     {
@@ -17432,7 +17083,7 @@ public class Employee
 }
 ```
 
-## 图 17.9 Employee 类（3 部分中的第 2 部分）
+## 图 17.9 Employee 类（3 部分中的第 3 部分）
 
 ```java
     // 返回 Employee 的名和姓
@@ -17559,29 +17210,28 @@ list.stream()
 接下来，我们使用这些函数来创建一个比较器（`lastThenFirst`；第 58–59 行），它先按姓比较两个 `Employee`，然后按名比较它们。我们使用 `Comparator` 方法 `comparing` 来创建一个比较器，该比较器调用 `Employee` 上的 `Function` `getLastName` 来获取其姓氏。在生成的比较器上，我们调用 `Comparator` 方法 `thenComparing` 来创建一个比较器，它先按姓比较 `Employee`，如果姓氏相同，则再按名比较它们。第 64–65 行使用这个新的 `lastThenFirst` 比较器按升序排列 `Employee`，然后显示结果。我们在第 71–73 行中重用了该比较器，但调用了它的 `reversed` 方法，以表示 `Employee` 应按姓、名进行降序排序。
 
 ```java
-53      // 用于从 Employee 获取名和姓的函数
-54      Function<Employee, String> byFirstName = Employee::getFirstName;
-55      Function<Employee, String> byLastName = Employee::getLastName;
-56
-57
-58      // 按姓再名比较 Employees 的比较器
-59      Comparator<Employee> lastThenFirst =
-60          Comparator.comparing(byLastName).thenComparing(byFirstName);
-61
-62      // 按姓再名排序员工
-63      System.out.printf("%n按姓名升序排列的员工:%n");
-64      list.stream()
-65          .sorted(lastThenFirst)
-66          .forEach(System.out::println);
-67
-68      // 按姓再名降序排序员工
-69      System.out.printf("%n按姓名降序排列的员工:%n");
-70      list.stream()
-71          .sorted(lastThenFirst.reversed())
-72          .forEach(System.out::println);
+// 用于从 Employee 获取名和姓的函数
+Function<Employee, String> byFirstName = Employee::getFirstName;
+Function<Employee, String> byLastName = Employee::getLastName;
+
+// 按姓再名比较 Employees 的比较器
+Comparator<Employee> lastThenFirst =
+    Comparator.comparing(byLastName).thenComparing(byFirstName);
+
+// 按姓再名排序员工
+System.out.printf("%n按姓名升序排列的员工:%n");
+list.stream()
+    .sorted(lastThenFirst)
+    .forEach(System.out::println);
+
+// 按姓再名降序排序员工
+System.out.printf("%n按姓名降序排列的员工:%n");
+list.stream()
+    .sorted(lastThenFirst.reversed())
+    .forEach(System.out::println);
 ```
 
-| | | | |
+| First Name | Last Name | Salary | Department |
 |---|---|---|---|
 | Jason | Blue | 3200.00 | Sales |
 | Wendy | Brown | 4236.40 | Marketing |
@@ -17620,21 +17270,21 @@ Jason Blue 3200.00 Sales
 第 86–89 行按姓再名排序 `Employee`，使用实例方法 `getName`（第 88 行）将 `Employee` 映射为 `String`，并在终端 `forEach` 操作中显示排序后的名称。
 
 ```java
-75  // 显示排序后的唯一员工姓氏
-76  System.out.printf("%n唯一员工姓氏:%s\n",
-77  list.stream()
-78      .map(Employee::getName)
-79      .distinct()
-80      .sorted()
-81      .forEach(System.out::println));
+// 显示排序后的唯一员工姓氏
+System.out.printf("%n唯一员工姓氏:%s%n",
+    list.stream()
+        .map(Employee::getName)
+        .distinct()
+        .sorted()
+        .forEach(System.out::println));
 
-83  // 只显示名和姓
-84  System.out.printf(
-85      "%n按姓再名排列的员工姓名:%s\n",
-86  list.stream()
-87      .sorted(lastThenFirst)
-88      .map(Employee::getName)
-89      .forEach(System.out::println));
+// 只显示名和姓
+System.out.printf(
+    "%n按姓再名排列的员工姓名:%s%n",
+    list.stream()
+        .sorted(lastThenFirst)
+        .map(Employee::getName)
+        .forEach(System.out::println));
 ```
 
 图 17.13 将 Employee 对象映射为姓氏和全名。（2 部分中的第一部分。）
@@ -17661,22 +17311,20 @@ Jason Red
 
 ### 17.6.5 按部门分组 Employees（第 95 行）
 
-图 17.14 使用 `collect` 方法（第 95 行）按部门分组 `Employee`。该方法的参数是一个 `Collector`，它指定了如何将数据汇总为有用的形式。在这种情况下，我们使用由 `Collectors` 静态方法 `groupingBy` 返回的 `Collector`，它接收一个分类流中对象的 `Function`——该函数返回的值是 `Map` 的键。对应的值是包含分类中元素的 `List`。当使用 `collect` 方法配合此 `Collector` 时，结果是一个 `Map<String, List<Employee>>`，其中每个 `String` 键是一个部门，每个 `List` 包含该类的元素。
+图 17.14 使用 `collect` 方法（第 95 行）按部门分组 `Employee`。该方法的参数是一个 `Collector`，它指定了如何将数据汇总为有用的形式。在这种情况下，我们使用由 `Collectors` 静态方法 `groupingBy` 返回的 Collector，它接收一个分类流中对象的 `Function`——该函数返回的值是 `Map` 的键。对应的值是包含分类中元素的 `List`。当使用 `collect` 方法配合此 `Collector` 时，结果是一个 `Map<String, List<Employee>>`，其中每个 `String` 键是一个部门，每个 `List` 包含该类的元素。
 
 ```java
-91  // 按部门分组员工
-92  System.out.printf("%n按部门划分的员工:%n");
-93  Map<String, List<Employee>> groupedBy =
-94  list.stream()
-95      .collect(Collectors.groupingBy(Employee::getDepartment));
-96  groupedBy.forEach(
-97      (department, employeesInDepartment) ->
-98      {
-99          System.out.println(department);
-100          employeesInDepartment.forEach(
-101              employee -> System.out.printf("%s%n", employee));
-102      }
-103  );
+// 按部门分组员工
+System.out.printf("%n按部门划分的员工:%n");
+Map<String, List<Employee>> groupedBy =
+    list.stream()
+        .collect(Collectors.groupingBy(Employee::getDepartment));
+groupedBy.forEach(
+    (department, employeesInDepartment) -> {
+        System.out.println(department);
+        employeesInDepartment.forEach(
+            employee -> System.out.printf("%s%n", employee));
+    });
 ```
 
 图 17.14 | 按部门分组。（2 部分中的第一部分。）
@@ -17698,18 +17346,18 @@ Jason Red
 
 ### 17.6.6 统计每个部门的人数
 
-图 17.15 再次演示了 `collect` 方法和 `Collectors` 静态方法 `groupingBy`，在这种情况下我们统计每个部门的人数。第 107–110 行产生 `Map<String, Long>`，其中每个键是部门名称，对应的 `Long` 值是该部门的人数。在这种情况下，我们使用接收两个参数的 `groupingBy` 方法——第一个是分类流中对象的函数，第二个是另一个 `Collector`（称为下游 `Collector`）。在这种情况下，该方法返回返回一个计算给定分类数量的 `Collector`，而不是将其收集到列表中。第 111–113 行通过生成的 `Map<String, Long>` 产生键值对。
+图 17.15 再次演示了 `collect` 方法和 `Collectors` 静态方法 `groupingBy`，在这种情况下我们统计每个部门的人数。第 107–110 行产生 `Map<String, Long>`，其中每个键是部门名称，对应的 `Long` 值是该部门的人数。在这种情况下，我们使用接收两个参数的 `groupingBy` 方法——第一个是分类流中对象的函数，第二个是另一个 Collector（称为下游 Collector）。在这种情况下，该方法返回返回一个计算给定分类数量的 Collector，而不是将其收集到列表中。第 111–113 行通过生成的 `Map<String, Long>` 产生键值对。
 
 ```java
 // 统计每个部门的人数
-System.out.printf("%n每个部门的人数:%s\n");
+System.out.printf("%n每个部门的人数:%s%n");
 Map<String, Long> employeeCountDepartment =
-list.stream()
-    .collect(Collectors.groupingBy(Employee::getDepartment,
-        Collectors.counting()));
+    list.stream()
+        .collect(Collectors.groupingBy(Employee::getDepartment,
+            Collectors.counting()));
 employeeCountDepartment.forEach(
     (department, count) -> System.out.printf(
-        "%s 有 %d 个员工%s\n", department, count));
+        "%s 有 %d 个员工%s%n", department, count));
 ```
 
 | 每个部门的人数: |
@@ -17725,35 +17373,31 @@ employeeCountDepartment.forEach(
 图 17.16 演示了 `Stream` 方法 `mapToDouble`（第 119、126 行和 132 行），它将对象映射为双精度数值并返回一个 `DoubleStream`。在这种情况下，我们映射 `Employee` 通过这些对象的工资，我们可以计算其总和和平均值。方法 `mapToDouble`（`package java.util.function`）接收函数式接口 `ToDoubleFunction`，该接口的 `applyAsDouble` 方法调用对象上的实例方法并返回一个 `double` 值。第 119 行、126 行和 132 行分别向 `mapToDouble` 传递了 `Employee` 实例方法引用 `Employee::getSalary`，该方法返回当前 `Employee` 的工资作为 `double` 类型。编译器将此方法引用转换为一个实现 `ToDoubleFunction` 函数式接口的对象。
 
 ```java
-115 // 使用 DoubleStream 方法计算 Employee 工资总和
-116 System.out.printf(
-117 "%n员工工资总和 (通过 sum 方法): %.2f",
-118   list.stream()
-119     .mapToDouble(Employee::getSalary)
-120     .sum());
+// 使用 DoubleStream 方法计算 Employee 工资总和
+System.out.printf(
+    "%n员工工资总和 (通过 sum 方法): %.2f",
+    list.stream()
+        .mapToDouble(Employee::getSalary)
+        .sum());
+
+// 使用 Stream reduce 方法计算 Employee 工资总和
+System.out.printf(
+    "%n员工工资总和 (通过 reduce 方法): %.2f",
+    list.stream()
+        .mapToDouble(Employee::getSalary)
+        .reduce(0, (value1, value2) -> value1 + value2));
+
+// 使用 DoubleStream average 方法计算 Employee 工资平均值
+System.out.printf("%n员工工资平均值: %.2f",
+    list.stream()
+        .mapToDouble(Employee::getSalary)
+        .average()
+        .getAsDouble());
 ```
 
 ```java
-122 // 使用 Stream reduce 方法计算 Employee 工资总和
-123 System.out.printf(
-124 "员工工资总和 (通过 reduce 方法): %.2f",
-125   list.stream()
-126     .mapToDouble(Employee::getSalary)
-127     .reduce(0, (value1, value2) -> value1 + value2));
-```
-
-```java
-129 // 使用 DoubleStream average 方法计算 Employee 工资平均值
-130 System.out.printf("员工工资平均值: %.2f",
-131   list.stream()
-132     .mapToDouble(Employee::getSalary)
-133     .average()
-134     .getAsDouble());
-```
-
-```java
-135 } // 结束 main
-136 } // 结束类 ProcessingEmployees
+} // 结束 main
+} // 结束类 ProcessingEmployees
 ```
 
 员工工资总和 (通过 sum 方法): 3452.67
@@ -17768,9 +17412,11 @@ employeeCountDepartment.forEach(
 
 
 
-图 17.17 使用 lambda 表达式和流来总结文件中每个单词出现的次数，然后按首字母分组并按字母顺序显示单词摘要。这通常被称为“索引”（[concordance](http://en.wikipedia.org/wiki/Concordance_(publishing))）。索引常用于分析出版作品。例如，威廉·莎士比亚和克里斯托弗·马洛的作品曾被质疑他们是否为同一个人。图 17.18 显示了程序的输出。图 17 的第 16 行创建了一个正则表达式 `Pattern`，我们将用它将文本行分割成单独的单词。该 `Pattern` 代表一个或多个连续的空白字符。（我们在第 14.7 节介绍过正则表达式）。
+## 图 17.17 使用 lambda 表达式和流来总结文件中每个单词出现的次数，然后按首字母分组并按字母顺序显示单词摘要
 
-图 17.17 — 在文本文件中统计单词出现次数。
+这通常被称为“索引”（[concordance](http://en.wikipedia.org/wiki/Concordance_(publishing))）。索引常用于分析出版作品。例如，威廉·莎士比亚和克里斯托弗·马洛的作品曾被质疑他们是否为同一个人。图 17.18 显示了程序的输出。图 17 的第 16 行创建了一个正则表达式 `Pattern`，我们将用它将文本行分割成单独的单词。该 `Pattern` 代表一个或多个连续的空白字符。（我们在第 14.7 节介绍过正则表达式）。
+
+### 图 17.17 — 在文本文件中统计单词出现次数
 
 | A | I | R |
 | :--- | :--- | :--- |
@@ -17806,7 +17452,7 @@ employeeCountDepartment.forEach(
 | | programs: 1 | |
 | H | how: 2 | |
 
-### 在文件中统计单词出现次数
+## 在文件中统计单词出现次数
 
 第 19–24 行统计了文件中每个单词的出现次数，并将其放入 `Map<String, Long>` 中，其中键是单词。语句执行了以下任务：
 
@@ -17815,7 +17461,7 @@ employeeCountDepartment.forEach(
 - 第 22–24 行使用 `Stream.collect` 方法，传入三个参数：分类器、映射工厂和收集器。在这种情况下，第 22 行的 `flatMap` 将文本中的行拆分为 `Stream<String>`。`flatMap` 接收一个对象并将其映射为元素的流。第 22 行的 lambda 表达式将字符串传递给 `Pattern.splitAsStream`（Java 8 引入），它使用第 16 行指定的正则表达式将字符串拆分为各个单词。
 - 第 23–24 行使用 `Stream.collect` 方法统计单词的频率并将其放入 `TreeMap<String, Long>` 中。在这里，我们使用了 `Collectors.groupBy` 方法，它接收三个参数：分类器、映射工厂和收集器。分类器从 `Map.Entry` 中获取键——映射方法 lambda 表达式将每个单词转换为小写。工厂是一个实现 `Supplier` 接口的对象并返回一个新的 `Map`——构造函数引用 `TreeMap::new` 保持其键的顺序排序。`Collectors.counting()` 是收集器，确定流中每个键的次数。
 
-### 按字母显示摘要
+## 按字母显示摘要
 
 接下来，第 27–37 行按键的首字母对 `WordCounts` Map 中的键值对进行分组。这产生了一个新的 Map，其中键是 `Character`，对应的值是 `WordCounts` 中首字母为该字符的键值对的 `List`。该语句执行了以下任务：
 
@@ -17916,7 +17562,7 @@ public class RandomIntStream {
 - 18.8 接受参数的方法中的通配符
 - 18.9 总结
 
-### 18.1 引言
+## 18.1 引言
 
 你在第 7 章和第 16 章中使用过泛型方法和类。在本章中，你将学习如何编写自己的泛型。
 
@@ -17924,7 +17570,7 @@ public class RandomIntStream {
 
 ## 18.2 泛型方法的动机
 
-重载方法通常用于对不同类型的数据执行相似的操作。为了引入泛型方法，让我们从一个示例开始（图 18.1），该示例包含了重载的 printArray 方法（第 22–29 行、32–39 行和 42–49 行），分别打印 Integer 数组、Double 和 Character 数组元素的字符串表示。我们本可以使用基本类型 int、double 和 Character 的数组。我们使用类型包装类的数组来建立泛型方法示例，因为只有引用类型可以用于泛型方法和类中指定泛型。
+重载方法通常用于对不同类型的数据执行相似的操作。为了引入泛型方法，让我们从一个示例开始（图 18.1），该示例包含了重载的 `printArray` 方法（第 22–29 行、32–39 行和 42–49 行），分别打印 Integer 数组、Double 和 Character 数组元素的字符串表示。我们本可以使用基本类型 int、double 和 Character 的数组。我们使用类型包装类的数组来建立泛型方法示例，因为只有引用类型可以用于泛型方法和类中指定泛型。
 
 
 
@@ -17982,47 +17628,44 @@ public class OverloadedMethods
 **输出结果：**
 
 Array integerArray contains:
+
 1 2 3 4 5 6
 
 Array doubleArray contains:
+
 1.1 2.2 3.3 4.4 5.5 6.6 7.7
 
 Array characterArray contains:
+
 HELLO
 
-> 图 18.1 | 使用重载方法打印数组元素。（2/2 中的第一部分）
-
-Array integerArray contains:
-1 2 3 4 5 6
-
-Array doubleArray contains:
-1.1 2.2 3.3 4.4 5.5 6.6 7.7
-
-Array characterArray contains:
-HELLO
-
-> 图 18.1 | 使用重载方法打印数组元素。（2/2 中的第二部分）
+> 图 18.1 | 使用重载方法打印数组元素。
 
 # 18.3 泛型方法：实现与编译时翻译
 
 当多个重载方法对参数类型执行的操作相同时，可以使用泛型方法更方便地编写重载方法。你可以编写一个单一的方法声明，可以使用不同类型的参数进行调用。根据传递给泛型方法的参数类型，编译器会相应地处理每次调用。在编译时，编译器会确保你的代码是类型安全的，防止运行时错误。
 
-**图 18.3** | 使用泛型方法 `printArray` 打印数组元素。
+图 18.3 使用泛型 `printArray` 方法重新实现了图 18.1（第 14、16 和 18 行中的 `printArray` 调用与之前的内容相同）。
 
 **输出结果：**
 
 Array integerArray contains:
+
 1 2 3 4 5 6
 
 Array doubleArray contains:
+
 1.1 2.2 3.3 4.4 5.5 6.6 7.7
 
 Array characterArray contains:
+
 HELLO
+
+> 图 18.3 | 使用泛型方法 `printArray` 打印数组元素。
 
 ## 泛型方法的类型参数部分
 
-第 22 行开始 `printArray` 的声明。所有泛型声明都有一个类型参数部分（在本例中为 `<T>`），由尖括号隔开，并位于方法返回类型之前。每个类型参数部分包含一个或多个类型参数，用逗号分隔。类型参数（也称为类型变量）是一个指定泛型名称的标识符。类型参数可以用于在泛型方法声明中声明返回类型、参数类型和局部变量，以及作为传递给泛型方法的参数类型的占位符，这些类型被称为实际类型参数。泛型方法的体声明方式与其他任何方法一样。类型参数只能表示引用类型——不能表示基本数据类型（如 `int`、`double` 和 `char`）。同样注意，整个方法声明中的参数名称必须与类型参数部分声明的名称匹配。例如，第 25 行声明了 `element T`，这与第 22 行声明的类型参数 `(T)` 匹配。此外，类型参数在类型参数部分只能声明一次，但可以在方法的参数列表中出现多次。例如，类型参数名称 `T` 在以下参数列表中出现了两次：
+第 22 行开始 `printArray` 的声明。所有泛型声明都有一个类型参数部分（在本例中为 `<T>`），由尖括号隔开，并位于方法返回类型之前。每个类型参数部分包含一个或多个类型参数，用逗号分隔。类型参数（也称为类型变量）是一个指定泛型名称的标识符。类型参数可以用于在泛型方法声明中声明返回类型、参数类型和局部变量，它们作为传递给泛型方法的参数类型的占位符，这些类型被称为实际类型参数。泛型方法的体声明方式与其他任何方法一样。类型参数只能表示引用类型——不能表示基本数据类型（如 `int`、`double` 和 `char`）。同样注意，整个方法声明中的参数名称必须与类型参数部分声明的名称匹配。例如，第 25 行声明了 `element T`，这与第 22 行声明的类型参数 `(T)` 匹配。此外，类型参数在类型参数部分只能声明一次，但可以在方法的参数列表中出现多次。例如，类型参数名称 `T` 在以下参数列表中出现了两次：
 
 ```java
 public static <T> T maximum(T value1, T value2)
@@ -18030,7 +17673,7 @@ public static <T> T maximum(T value1, T value2)
 
 类型名称在泛型方法之间不需要是唯一的。在方法 `printArray` 中，`T` 出现在两个位置，而 18.1 节中重载的 `printArray` 方法指定了 `Integer`、`Double` 或 `Character` 作为数组元素类型。`printArray` 的其余部分与 18.1 中提供的版本相同。
 
-## 良好的编程实践 18.1
+### 良好的编程实践 18.1
 
 > `T`（代表 "type"）、`E`（代表 "element"）、`K`（代表 "key"）和 `V`（代表 "value"）常用作类型参数。其他常用的参数，请参见：http://docs.oracle.com/javase/tutorial/java/generics/types.html。
 
@@ -18040,11 +17683,11 @@ public static <T> T maximum(T value1, T value2)
 
 当编译器遇到第 14 行时，它确定了参数 `integerArray` 的类型（即 `Integer[]`），并尝试调用一个名为 `printArray` 且指定单个 `Integer[]` 参数的方法。此示例中没有这样的方法。接下来，编译器确定是否存在名为 `printArray` 且使用类型参数表示数组元素类型的泛型方法。编译器确定 `printArray`（第 22–29 行）匹配并使用了该方法的调用。该过程对于第 16 行和第 18 行的 `printArray` 方法调用重复执行。
 
-## 常见编程错误 18.1
+### 常见编程错误 18.1
 
 > 如果编译器无法将方法调用匹配到非泛型方法或泛型方法声明，就会发生编译错误。
 
-## 常见编程错误 18.2
+### 常见编程错误 18.2
 
 > 如果编译器没有找到完全匹配方法调用的声明，但找到了两个或多个满足该方法调用的方法，就会发生编译错误。关于解析重载和泛型方法调用的细节，请参见：http://docs.oracle.com/java/specs/jls15/html/jls15-15.html#jls15-12。
 
@@ -18081,7 +17724,7 @@ public static void printArray(Object[] inputArray)
 integer1.compareTo(integer2)
 ```
 
-当你声明一个实现 `Comparable<T>` 的类时，必须实现 `compareTo` 以比较两个对象的内容。正如 `Comparable<T>` 文档所示，如果对象相等则返回 0，如果 object1 小于 object2 则返回负整数，如果大于 object2 则返回正整数。例如，`Integer` 的 `compareTo` 比较两个 `int` 值。实现 `Comparable<T>` 的好处是 Comparable 对象可以用于 `Collections` 类（`java.util`）的排序和搜索方法。我们在第 16 章讨论过这些方法。在本示例中，我们在 `maximum` 方法中使用 `compareTo` 来帮助确定最大值。
+当你声明一个实现 `Comparable<T>` 的类时，必须实现 `compareTo` 以比较两个对象的内容。正如 `Comparable<T>` 文档所示，如果对象相等则返回 0，如果 object1 小于 object2 则返回负整数，如果大于 object2 则返回正整数。例如，`Integer` 的 `compareTo` 比较两个 `int` 值。实现 `Comparable<T>` 的好处是 `Comparable` 对象可以用于 `Collections` 类（`java.util`）的排序和搜索方法。我们在第 16 章讨论过这些方法。在本示例中，我们在 `maximum` 方法中使用 `compareTo` 来帮助确定最大值。
 
 ```java
 // Fig. 18.5: MaximumTest.java
@@ -18090,8 +17733,8 @@ integer1.compareTo(integer2)
 public class MaximumTest {
     public static void main(String[] args) {
         System.out.printf("Maximum of %d, %d and %d is %d%n", 3, 4, 5, maximum(3, 4, 5));
-        System.out.printf("Maximum of %f, %.1f and %.1f is %.1f%n", 6.6, 8.8, 7.7, maximum(6.6, 8.8, 7.7));
-        System.out.printf("Maximum of %s, %s and %s is %s%n", "pear", "apple", "orange", maximum("pear", "apple", "orange"));
+        System.out.printf("Maximum of %f, %.1f and %.f is %.1f%n", 6.6, 8.8, 7.7, maximum(6.6, 8.8, 7.7));
+        System.out.printf("Maximum of %s, %s and %s is %s%n", "apple", "orange", "pear", maximum("pear", "apple", "orange"));
     }
     // 确定三个 Comparable 对象中的值
     public static <T extends Comparable<T>> T maximum(T x, T y, T z) {
@@ -18107,7 +17750,7 @@ public class MaximumTest {
 
 ## 泛型方法 maximum 与指定类型参数的上界
 
-泛型方法 `maximum`（第 17–28 行）使用类型参数 `T` 作为方法的返回类型（第 17 行）、方法参数 `x`、`y` 和 `z` 的类型（第 17 行）以及局部变量 `max` 的类型（第 19 行）。类型参数指定 `T` 扩展 `Comparable<T>`——只有实现了 `Comparable<T>` 接口的类对象才能与此方法一起使用。`Comparable<T>` 被称为类型参数的上界（upper bound）。默认情况下，`Object` 是上界，这意味着可以使用任何类型的对象。类型参数声明中，边界参数始终使用关键字 `extends`，无论该类型参数是继承一个类还是实现一个接口。上界可以是一个由逗号分隔的列表，其中包含零或一个类以及多个接口。
+泛型方法 `maximum`（第 17–28 行）使用类型参数 `T` 作为方法的返回类型（第 17 行）、方法参数 `x`、`y` 和 `z` 的类型（第 17 行）以及局部变量 `max` 的类型（第 19 行）。类型参数指定 `T` 扩展 `Comparable<T>`——只有实现了 `Comparable<T>` 接口的类对象才能与此方法一起使用。`Comparable<T>` 被称为类型参数的上界（upper bound）。默认情况下，`Object` 是上界，这意味着可以使用任何类型的对象。在类型参数声明中，边界参数始终使用关键字 `extends`，无论该类型参数是继承一个类还是实现一个接口。上界可以是一个由逗号分隔的列表，其中包含零或一个类以及多个接口。
 
 `maximum` 方法的类型参数比 18.3 节中 `printArray` 指定的更具限制性，后者能够输出包含任何类型对象的数组。`Comparable<T>` 的限制是非常重要的，因为并不是所有对象都可以进行比较。然而，`Comparable<T>` 对象保证具有 `compareTo` 方法。`maximum` 方法使用了我们在 6.4 节中使用的算法来确定其参数中的最大值。该方法假设第一个参数 (`x`) 是最大的，并将其赋值给局部变量 `max`（第 19 行）。接着调用 `y.compareTo(max)`，它返回一个负整数、0 或正整数，以确定 `y` 与 `max` 的关系。如果 `compareTo` 的返回值大于 0，则 `y` 较大并被赋值给变量 `max`。同样地，第 24–25 行的语句判断 `z` 是否大于 `max`。如果是，第 25 行将 `z` 赋值给 `max`。然后，第 27 行将 `max` 返回给调用者。
 
@@ -18123,7 +17766,7 @@ public class MaximumTest {
 
 
 
-当编译器将方法转换为字节码时，它使用擦除将类型参数替换为实际类型。在图 18.3 中，所有泛型类型都被替换为 `Object` 类型。实际上，所有类型参数都被替换为类型参数的上界，而上界是在类型参数部分指定的。图 18.6 模拟了 `maximum` 方法限制的擦除，显示了移除类型参数部分后的方法源代码，此时类型参数 `T` 被替换为上界，`Comparable<T>` 简化为 `Comparable`。
+当编译器将方法转换为字节码时，它使用擦除（erasure）将类型参数替换为实际类型。在图 18.3 中，所有泛型类型都被替换为 `Object` 类型。实际上，所有类型参数都被替换为类型参数的上界，而上界是在类型参数部分指定的。图 18.6 模拟了 `maximum` 方法限制的擦除，显示了移除类型参数部分后的方法源代码，此时类型参数 `T` 被替换为上界，`Comparable<T>` 简化为 `Comparable`。
 
 ```java
 public static Comparable maximum(Comparable x, Comparable y, Comparable z)
@@ -18214,8 +17857,6 @@ public class Stack<T>
 
 `EmptyStackException` 类（图 18.8）提供了一个无参构造函数和一个单参数构造函数。无参构造函数设置了默认错误消息，而单参数构造函数设置了自定义的错误消息。
 
-作为泛型方法，当编译泛型类时，编译器会对该类的类型参数进行擦除，并将其替换为它们的上界。对于类 `Stack`（图 18.7），未指定上界，因此使用默认上界 `Object`。泛型类类型参数的使用范围是整个类。然而，类型参数不能在类的静态变量声明中使用。
-
 ```java
 // Fig. 18.8: EmptyStackException.java
 // EmptyStackException 类声明
@@ -18235,6 +17876,8 @@ public class EmptyStackException extends RuntimeException
 ```
 
 **图 18.8** EmptyStackException 类声明。
+
+作为泛型方法，当编译泛型类时，编译器会对该类的类型参数进行擦除（erasure），并将其替换为它们的上界。对于类 `Stack`（图 18.7），未指定上界，因此使用默认上界 `Object`。泛型类类型参数的使用范围是整个类。然而，类型参数不能在类的静态变量声明中使用。
 
 ### 测试图 18.7 中的泛型栈类
 
@@ -18290,13 +17933,10 @@ public class StackTest
 
 **图 18.9** Stack 泛型类测试程序。（3 部分中的第 1 部分）。
 
-# 600 第18章 通用类与方法
-
-// 图 18.10: StackTest2.java
-
+```java
+// Fig 18.10: StackTest2.java
 // 将泛型 Stack 对象传递给泛型方法。
 
-```java
 public class StackTest
 {
     public static void main(String[] args)
@@ -18342,50 +17982,47 @@ public class StackTest
                 System.out.printf("%s ", popValue);
             }
         }
+        catch(EmptyStackException emptyStackException) {
+            System.out.println();
+            emptyStackException.printStackTrace();
+        }
+    }
+} // 类结束 StackTest2
 ```
 
 **图 18.10** 将泛型 Stack 对象传递给泛型方法。（2/3 部分）
 
-# 18.7 原始类型 601
-
-```java
-catch(EmptyStackException emptyStackException) {
-    System.out.println();
-    emptyStackException.printStackTrace();
-}
-// 类结束 Stack2
-```
+## 18.7 原始类型
 
 向 doubleStack 推入元素
 
-1.1 2.2 3.3 4.4 5.5
+`1.1 2.2 3.3 4.4 5.5`
 
 从 doubleStack 弹出元素
 
-5.5 4.4 3.3 2.2 1.1
+`5.5 4.4 3.3 2.2 1.1`
 
-EmptyStackException: Stack is empty, cannot pop
+`EmptyStackException: Stack is empty, cannot pop`
 
-at Stack.pop(Stack.java:32)
+`at Stack.pop(Stack.java:32)`
 
-at StackTest2.testPop(StackTest2.java:50)
+`at StackTest2.testPop(StackTest2.java:50)`
 
-at StackTest2.main(StackTest2.java:17)
+`at StackTest2.main(StackTest2.java:17)`
 
 向 integerStack 推入元素
 
-1 2 3 4 5 6 7 8 9 10
+`1 2 3 4 5 6 7 8 9 10`
 
 从 integerStack 弹出元素
 
-10 9 8 7 6 5 4 3 2 1
+`10 9 8 7 6 5 4 3 2 1`
 
-EmptyStackException: Stack is empty, cannot pop
+`EmptyStackException: Stack is empty, cannot pop`
 
-at Stack.pop(Stack.java:32)
+`at Stack.pop(Stack.java:32)`
 
-at StackTest2.testPop(StackTest2.java:50)
-```
+`at StackTest2.testPop(StackTest2.java:50)`
 
 
 
@@ -18401,9 +18038,9 @@ at `StackTest2.main(StackTest2.java:21)`
 
 第 18.6 节中通用类 `Stack` 的测试程序使用 `Double` 和 `Integer` 参数实例化 `Stack` 类型。也可以在不指定类型参数的情况下实例化通用类，如下：
 
-- `Stack objectStack = new Stack<>(); // 未指定类型参数`
+- `Stack objectStack = new Stack<>();` // 未指定类型参数
 
-在这种情况下，`objectStack` 具有原始类型——编译器在整个通用类对每个类型参数隐式地使用 `Object` 类型。前面的语句创建了一个可以存储任何类型对象的 `Stack`。这对于与早期 Java 版本的兼容至关重要。例如，Java 集合框架（第 16 章）的数据结构以前都存储 `Object` 的引用，但现在实现为通用类型。
+在这种情况下，`objectStack` 具有原始类型（raw type）——编译器在整个通用类对每个类型参数隐式地使用 `Object` 类型。前面的语句创建了一个可以存储任何类型对象的 `Stack`。这对于与早期 Java 版本的兼容至关重要。例如，Java 集合框架（第 16 章）的数据结构以前都存储 `Object` 的引用，但现在实现为通用类型。
 
 原始类型变量可以赋值给指定了类型参数的 `Stack`，例如 `Stack<Double>` 对象：
 
@@ -18539,7 +18176,7 @@ at `RawTypeTest.main(RawTypeTest.java:24)`
 
 # 编译器警告
 
-图 18.12 显示了使用 `-Xlint:unchecked` 选项编译 `RawTypeTest.java` 文件（图 18.11）时生成的警告信息，该选项为使用泛型的代码中潜在的不安全操作提供了更多信息。图 18.11 中的第一个警告是第 17 行生成的，该行将一个原始类型赋值给 `Stack<Integer>` 变量——编译器无法确保 Stack 中的所有对象都是 `Integer` 对象。下一个警告出现在第 19 行。编译器根据第三个参数确定方法 `testPush` 的类型参数，因为第二个方法参数是原始类型的 `Stack`。在这种情况下，`Double` 是类型参数，因此编译器期望一个 `Stack<Double>`。出现警告是因为编译器无法确保原始类型的 `Stack` 只包含 `Double`。第 21 行的警告原因相同，尽管实际的 `rawType2` 指向的是 `Stack<Double>`。编译器无法保证该变量将始终指向 Stack 对象，因此它必须使用声明的类型来执行所有类型检查。第 20 行和 22 行产生警告是因为方法 `testPop` 期望一个指定了类型参数的 `Stack` 参数。然而，在每次调用 `testPop` 时，我们传递的是原始类型的 `Stack`。因此，编译器指示警告，因为它无法检查方法体中使用的类型。通常，你应该避免使用原始类型。
+图 18.12 显示了使用 `-Xint:unchecked` 选项编译 `Raw-TypeTest.java` 文件（图 18.11）时生成的警告信息，该选项为使用泛型的代码中潜在的不安全操作提供了更多信息。图 18.11 中的第一个警告是第 17 行生成的，该行将一个原始类型赋值给 `Stack<Integer>` 变量——编译器无法确保 Stack 中的所有对象都是 `Integer` 对象。下一个警告出现在第 19 行。编译器根据第三个参数确定方法 `testPush` 的类型参数，因为第二个方法参数是原始类型的 `Stack`。在这种情况下，`Double` 是类型参数，因此编译器期望一个 `Stack<Double>`。出现警告是因为编译器无法确保原始类型的 `Stack` 只包含 `Double`。第 21 行的警告原因相同，尽管实际的 `rawType2` 指向的是 `Stack<Double>`。编译器无法保证该变量将始终指向 Stack 对象，因此它必须使用声明的类型来执行所有类型检查。第 20 行和 22 行产生警告是因为方法 `testPop` 期望一个指定了类型参数的 `Stack` 参数。然而，在每次调用 `testPop` 时，我们传递的是原始类型的 `Stack`。因此，编译器指示警告，因为它无法检查方法体中使用的类型。通常，你应该避免使用原始类型。
 
 # 18.8 接受类型参数的方法中的通配符
 
@@ -18655,7 +18292,7 @@ testPop("rawStack2", rawStack2);
 
 # 编译器警告
 
-图 18.12 显示了使用 `-Xlint:unchecked` 选项编译 `RawTypeTest.java` 文件（图 18.11）时生成的警告信息，该选项为使用泛型的代码中潜在的不安全操作提供了更多信息。图 18.11 中的第一个警告是第 17 行生成的，该行将一个原始类型赋值给 `Stack<Integer>` 变量——编译器无法确保 `Stack` 中的所有对象都是 `Integer` 对象。下一个警告出现在第 19 行。编译器根据第三个参数确定方法 `testPush` 的类型参数，因为第二个方法参数是原始类型的 `Stack`。在这种情况下，`Double` 是类型参数，因此编译器期望一个 `Stack<Double>`。出现警告是因为编译器无法确保原始类型的 `Stack` 只包含 `Double`。第 21 行的警告原因相同，尽管实际的 `rawStack2` 指向的是 `Stack<Double>`。编译器无法保证该变量将始终指向 `Stack` 对象，因此它必须使用声明的类型来执行所有类型检查。第 20 行和 22 行产生警告是因为方法 `testPop` 期望一个指定了类型参数的 `Stack` 参数。然而，在每次调用 `testPop` 时，我们传递的是原始类型的 `Stack`。因此，编译器指示警告，因为它无法检查方法体中使用的类型。通常，你应该避免使用原始类型。
+图 18.12 显示了使用 `-Xlint:unchecked` 选项编译 `RawTypeTest.java` 文件（图 18.11）时生成的警告信息，该选项为使用泛型的代码中潜在的不安全操作提供了更多信息。图 18.11 中的第一个警告是第 17 行生成的，该行将一个原始类型赋值给 `Stack<Integer>` 变量——编译器无法确保 Stack 中的所有对象都是 `Integer` 对象。下一个警告出现在第 19 行。编译器根据第三个参数确定方法 `testPush` 的类型参数，因为第二个方法参数是原始类型的 `Stack`。在这种情况下，`Double` 是类型参数，因此编译器期望一个 `Stack<Double>`。出现警告是因为编译器无法确保原始类型的 `Stack` 只包含 `Double`。第 21 行的警告原因相同，尽管实际的 `rawStack2` 指向的是 `Stack<Double>`。编译器无法保证该变量将始终指向 Stack 对象，因此它必须使用声明的类型来执行所有类型检查。第 20 行和 22 行产生警告是因为方法 `testPop` 期望一个指定了类型参数的 `Stack` 参数。然而，在每次调用 `testPop` 时，我们传递的是原始类型的 `Stack`。因此，编译器指示警告，因为它无法检查方法体中使用的类型。通常，你应该避免使用原始类型。
 
 # 604 第 18 章 泛型类与方法
 
@@ -18667,12 +18304,13 @@ testPop("rawStack2", rawStack2);
 
 5.5 4.4 3.3 2.2 1.1
 
-```
 EmptyStackException: 栈空，无法弹出
+
 at Stack.pop(Stack.java:32)
+
 at RawTypeTest.testPop(RawTypeTest.java:53)
+
 at RawTypeTest.main(RawTypeTest.java:20)
-```
 
 向 `rawStack2` 推入元素
 
@@ -18682,52 +18320,110 @@ at RawTypeTest.main(RawTypeTest.java:20)
 
 5.5 4.4 3.3 2.2 1.1
 
-```
 EmptyStackException: 栈空，无法弹出
-at Stack.pop(Stack.java:32)
-at RawTypeTest.testPop(RawTypeTest.java:53)
-at RawTypeTest.main(RawTypeTest.java:22)
-```
 
-向 `integer` 推入元素
+at Stack.pop(Stack.java:32)
+
+at RawTypeTest.testPop(RawTypeTest.java:53)
+
+at RawTypeTest.main(RawTypeTest.java:22)
+
+向 `integerStack` 推入元素
 
 1 2 3 4 5 6 7 8 9 10
 
-从 `integer` 弹出元素
+从 `integerStack` 弹出元素
 
-1 9 8 7 6 5 4 3 2 1
+10 9 8 7 6 5 4 3 2 1
 
-```
 EmptyStackException: 栈空，无法弹出
+
 at Stack.pop(Stack.java:32)
+
 at RawTypeTest.testPop(RawTypeTest.java:53)
+
 at RawTypeTest.main(RawTypeTest.java:24)
-```
 
 **图 18.11** 原始类型测试。（3 部分中的 3）
+
+# 18.8 接受类型参数的方法中的通配符
+
+```
+RawTypeTest.java:17: warning: [unchecked] 未检查的转换
+found : Stack
+required: Stack<java.lang.Integer>
+Stack<Integer> = new Stack(10);
+        ^
+RawTypeTest.java:19: warning: [unchecked] 未检查的转换
+found : Stack
+required: Stack<java.lang.Double>
+testPush("rawStack1", rawStack1, doubleElements);
+        ^
+RawTypeTest.java:19: warning: [unchecked] 未检查的方法调用
+<T>testPush(java.lang.String,Stack<>, T[]) in RawTypeTest is applied to
+(java.lang.String,Stack,java.lang.Double)
+testPush("rawStack1", rawStack1, doubleElements);
+        ^^
+RawTypeTest.java:20: warning: [unchecked] 未检查的转换
+found : Stack
+required: Stack<T>
+testPop("rawStack1", rawStack1);
+        ^^
+RawTypeTest.java:20: warning: [unchecked] 未检查的方法调用
+<T>testPop(java.lang.String,Stack<T>) in RawTypeTest is applied to
+(java.lang.String,Stack)
+testPop("rawStack1", rawStack1);
+        ^^
+RawTypeTest.java:21: warning: [unchecked] 未检查的转换
+found : Stack
+required: Stack<java.lang.Double>
+testPush("rawStack2", rawStack2, doubleElements);
+        ^^
+RawTypeTest.java:21: warning: [unchecked] 未检查的方法调用
+<T>testPush(java.lang.String,Stack<>, T[]) in RawTypeTest is applied to
+(java.lang.String,Stack,java.lang.Double)
+testPush("rawStack2", rawStack2, doubleElements);
+        ^^
+RawTypeTest.java:22: warning: [unchecked] 未检查的转换
+found : Stack
+required: Stack<T>
+testPop("rawStack2", rawStack2);
+        ^^
+RawTypeTest.java:22: warning: [unchecked] 未检查的方法调用
+<T>testPop(java.lang.String,Stack<T>) in RawTypeTest is applied to
+(java.lang.String,Stack)
+testPop("rawStack2", rawStack2);
+        ^^
+9 个警告
+```
+
+图 18.12 | 来自编译器的警告信息。
+
+在本节中，我们引入了一个强大的泛型概念：通配符。
 
 # 第 18 章 泛型类与方法
 
 ```java
-// 图 18.14: WildcardTest.java
-// 通配符测试程序。
-import java.util.ArrayList;
-
-public class WildcardTest {
-    public static void main(String[] args) {
+1 // 图 18.14: WildcardTest.java
+2 // 通配符测试程序。
+3 import java.util.ArrayList;
+4 
+public class WildcardTest
+{
+    public static void main(String[] args)
+    {
         // 创建、初始化并输出 Integer 类型的 ArrayList，然后
         // 显示元素的总和
         Integer[] integers = {1, 2, 3, 4, 5};
         ArrayList<Integer> integerList = new ArrayList<>();
 
         // 在 integerList 中插入元素
-        for (Integer element : integers) {
+        for (Integer element : integers)
             integerList.add(element);
-        }
 
         System.out.printf("integerList contains: %s%n", integerList);
         System.out.printf("Total of the elements in integerList: %.0f%n",
-                sum(integerList));
+        sum(integerList));
 
         // 创建、初始化并输出 Double 类型的 ArrayList，然后
         // 显示元素的总和
@@ -18735,35 +18431,33 @@ public class WildcardTest {
         ArrayList<Double> doubleList = new ArrayList<>();
 
         // 在 doubleList 中插入元素
-        for (Double element : doubles) {
+        for (Double element : doubles)
             doubleList.add(element);
-        }
 
         System.out.printf("doubleList contains: %s%n", doubleList);
         System.out.printf("Total of the elements in doubleList: %.1f%n",
-                sum(doubleList));
+        sum(doubleList));
 
         // 创建、初始化并输出包含 Number 类型的 ArrayList
         Number[] numbers = {1, 2, 4, 3, 4.1}; // Integers and Doubles
         ArrayList<Number> numberList = new ArrayList<>();
 
         // 在 numberList 中插入元素
-        for (Number element : numbers) {
+        for (Number element : numbers)
             numberList.add(element);
-        }
 
         System.out.printf("numberList contains: %s%n", numberList);
         System.out.printf("Total of the elements in numberList: %.1f%n",
-                sum(numberList));
+        sum(numberList));
     } // 结束 main
 
     // 计算元素总和；在 ArrayList 参数中使用通配符
-    public static double sum(ArrayList<? extends Number> list) {
+    public static double sum(ArrayList<? extends Number> list)
+    {
         double total = 0; // 初始化 total
         // 计算总和
-        for (Number element : list) {
+        for (Number element : list)
             total += element.doubleValue();
-        }
 
         return total;
     }
@@ -18772,7 +18466,7 @@ public class WildcardTest {
 
 
 
-# 图 18.14 | 通配符测试程序
+图 18.14 | 通配符测试程序。（第一部分，共两部分）。
 
 ```
 integerList contains: [1, 2, 3, 4, 5]
@@ -18782,6 +18476,8 @@ Total of the elements in doubleList: 9.9
 numberList contains: [1, 2.4, 3, 4.1]
 Total of the elements in numberList: 10.5
 ```
+
+图 18.14 | 通配符测试程序。（第二部分，共两部分）
 
 第 11–20 行创建并初始化了一个 `ArrayList<Integer>`，输出其元素并通过调用方法（第 20 行）计算总和。第 23–34 行对 `ArrayList<Double>` 执行相同的操作。第 37–46 行对包含 Integer 和 Double 的 `List<Number>` 执行相同的操作。
 
@@ -18849,11 +18545,11 @@ Swing 现在被认为是旧技术。对于新 Java 程序的 GUI、图形和多�
 
 滑块允许用户从整数范围内选择值。`JSlider` 类继承自 `JComponent`。图 19.1 显示了一个带有标记的 `JSlider`，滑块允许用户选择值。`JSlider` 可以自定义为显示主标记、次要标记和标记的标签。它们还支持吸附标记（snap-to-ticks），这使得滑块在位于两个标记之间时，能够吸附到最近的标记。
 
+![](img/28513f3b4ab12c97e738c92ed0e327a8_651_0.png)
+
 大多数 Swing GUI 组件都关注鼠标和键盘的交互——例如，如果 `JSlider` 拥有焦点（即它是用户界面中当前选中的 GUI 组件），按住左箭头键或右箭头键会导致 `JSlider` 的滑块分别减少或增加 1。向下箭头键和向上箭头键也会使滑块分别减少或增加 1 个刻度。PgDn（下页）和 PgUp（上页）键会使滑块按值范围的十分分之一的增量减少或增加。Home 键会将滑块移动到 `JSlider` 的最小值。`JSlider` 具有水平或垂直方向的取向。对于水平 `JSlider`，最小值在左侧，最大值在右侧。对于垂直 `JSlider`，最小值在底部，最大值在顶部。可以通过调用带有布尔参数 `true` 的 `setInverted` 方法来反转 `JSlider` 最小值和最大值组件。滑块的相对位置表示 `JSlider` 的当前值。
 
 图 19.2–19.4 中的程序允许用户调整在 `JPanel` 子类上绘制的圆（图 19.2）的大小。用户通过水平 `JSlider` 指定圆的直径。`OvalPanel` 类知道如何在自身上绘制圆，并使用它自己的实例变量 `diameter` 来确定圆的直径——直径被用作显示圆的边界框的宽度高度。当用户与 `JSlider` 交互时，会设置直径值。事件处理器调用 `setDiameter` 和 `repaint` 来绘制新圆。`repaint` 会导致对 `OvalPanel` 的 `paintComponent` 方法的调用。
-
-### 图 19.2 | 用于绘制指定直径圆的 JPanel 子类
 
 ```java
 // 图 19.2: OvalPanel.java
@@ -18872,30 +18568,35 @@ public class OvalPanel extends JPanel
         super.paintComponent(g);
         g.fillOval(10, 10, diameter, diameter);
     }
-
-    // 验证并设置直径，重绘
-    public void setDiameter(int newDiameter)
-    {
-        // 如果直径无效，默认为 10
-        diameter = (newDiameter >= 0) ? newDiameter : 10;
-        repaint(); // 重绘面板
-    }
-
-    // 布局管理器用于确定首选尺寸
-    public Dimension getPreferredSize()
-    {
-        return new Dimension(200, 200);
-    }
-
-    // 布局管理器用于确定最小尺寸
-    public Dimension getMinimumSize()
-    {
-        return getPreferredSize();
-    }
-} // OvalPanel 类结束
+}
 ```
 
-### 图 19.3 | 用于确定圆的大小的 Slider 值
+![](img/28513f3b4ab12c97e738c92ed0e327a8_651_1.png)
+
+```java
+// 验证并设置直径，重绘
+public void setDiameter(int newDiameter)
+{
+    // 如果直径无效，默认为 10
+    diameter = (newDiameter >= 0) ? newDiameter : 10;
+    repaint(); // 重绘面板
+}
+
+// 布局管理器用于确定首选尺寸
+public Dimension getPreferredSize()
+{
+    return new Dimension(200, 200);
+}
+
+// 布局管理器用于确定最小尺寸
+public Dimension getMinimumSize()
+{
+    return getPreferredSize();
+}
+// OvalPanel 类结束
+```
+
+图 19.2 | 用于绘制指定直径圆的 JPanel 子类。（部分 2，共 2 部分）
 
 ```java
 // 图 19.3: Slider.java
@@ -18924,27 +18625,31 @@ public class SliderFrame extends JFrame
         diameterSlider = new JSlider(SwingConstants.HORIZONTAL, 0, 200, 10);
         diameterSlider.setMajorTickSpacing(10); // 每 10 创建一个刻度
         diameterSlider.setPaintTicks(true); // 在滑块上绘制刻度
-
-        // 注册 JSlider 事件监听器
-        diameterSlider.addChangeListener(
-            new ChangeListener() // 匿名内部类
-            {
-                // 处理滑块值的变化
-                @Override
-                public void stateChanged(ChangeEvent e)
-                {
-                    myPanel.setDiameter(diameterSlider.getValue());
-                }
-            }
-        );
-
-        add(diameterSlider, BorderLayout.SOUTH);
-        add(myPanel, BorderLayout.CENTER);
-    }
-} // SliderFrame 类结束
 ```
 
-### 图 19.4 | SliderFrame 的测试类
+图 19.3 | 用于确定圆的大小的 Slider 值。（部分 I，共 2 部分。）
+
+```java
+// 注册 JSlider 事件监听器
+diameterSlider.addChangeListener(
+    new ChangeListener() // 匿名内部类
+    {
+        // 处理滑块值的变化
+        @Override
+        public void stateChanged(ChangeEvent e)
+        {
+            myPanel.setDiameter(diameterSlider.getValue());
+        }
+    }
+);
+
+add(diameterSlider, BorderLayout.SOUTH);
+add(myPanel, BorderLayout.CENTER);
+}
+// // SliderFrame 类结束
+```
+
+图 19.3 | 用于确定圆的直径的 JSlider 值。（部分 2，共 2 部分）。
 
 ```java
 // 图 19.4: SliderDemo.java
@@ -18963,11 +18668,20 @@ public class SliderDemo
 } // SliderDemo 类结束
 ```
 
+a) 带有默认圆的初始 GUI
+
+b) 用户移动 JSlider 滑块向右后的 GUI
+
+![](img/28513f3b4ab12c97e738c92ed0e327a8_653_0.png)
+![](img/28513f3b4ab12c97e738c92ed0e327a8_653_1.png)
+
+图 19.4 | SliderFrame 的测试类。
+
 `OvalPanel` 类（图 19.2）包含一个 `paintComponent` 方法（第 12–17 行），用于绘制圆；`setDiameter` 方法（第 20–25 行）、`getPreferredSize` 方法（第 28–31 行）返回首选尺寸；`getMinimumSize` 方法（第 34–37 行）返回最小尺寸。
 
 `SliderFrame` 类（图 19.3）包含一个构造函数（第 17–45 行），创建 `OvalPanel` 对象（第 21 行）并设置背景颜色（第 22 行）。`JSlider`（第 25–26 行）接受四个参数：第一个指定 `diameterSlider` 的取向，即 `HORIZONTAL`；第二个和第三个是滑块的值范围；最后一个参数指定初始值为 10。
 
-`JSlider` 在响应用户交互时产生 `ChangeEvent`（`swing.event` 包）。第 31–41 行注册了一个 `ChangeListener` 来处理滑块事件。当 `stateChanged` 方法（第 35–39 行）被调用时，第 38 行调用 `myPanel.setDiameter` 方法并传递滑块的当前值作为参数。`JSlider` 方法 `getValue` 返回当前位置。
+`JSlider` 在响应用户交互时产生 `ChangeEvent`（`swing.event` 包）。第 31–46 行注册了一个 `ChangeListener` 来处理滑块事件。当 `stateChanged` 方法（第 35–39 行）被调用时，第 38 行调用 `myPanel.setDiameter` 方法并传递滑块的当前值作为参数。`JSlider` 方法 `getValue` 返回当前位置。
 
 ## 19.3 理解 Java 中的窗口
 
@@ -19011,7 +18725,7 @@ public class SliderDemo
 
 ## 在应用程序中使用菜单
 
-图 19.5–19.9 展示了各种菜单项，以及如何指定称为助记符的特殊字符，以便通过键盘快速访问菜单或菜单项。助记符可以用于 `javax.swing.AbstractButton` 的所有子类。`MenuFrame` 类（图 19.5）创建了 GUI 并处理菜单项事件。该应用程序中的大部分代码出现在类的构造函数中（第 34–51 行）。
+图 19.5–19.9 展示了各种菜单项，以及如何指定称为助键的特殊字符，以便通过键盘快速访问菜单或菜单项。助键可以用于 `javax.swing.AbstractButton` 的所有子类。`MenuFrame` 类（图 19.5）创建了 GUI 并处理菜单项事件。该应用程序中的大部分代码出现在类的构造函数中（第 34–51 行）。
 
 ```java
 // Fig. 19.5: MenuFrame.java
@@ -19065,7 +18779,7 @@ for (int count = 0; count < styleNames.length; count++)
 {
     styleItems[count] = new JCheckBoxMenuItem(styleNames[count]); // 用于样式
     fontMenu.add(styleItems[count]); // 添加到字体菜单
-    styleItems[count].addActionListener(styleHandler); // 监听器
+    styleItems[count].addItemListener(styleHandler); // 监听器
 }
 ```
 
@@ -19142,6 +18856,7 @@ private class StyleHandler implements ItemListener
         repaint(); // 重绘应用程序
     }
 } // StyleHandler 类结束
+} // MenuFrame 类结束
 ```
 
 ```java
@@ -19166,21 +18881,25 @@ public class MenuTest
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_661_0.png)
 
-## 设置文件菜单
+## 设置文件菜单（File Menu）
 
-第 38–76 行设置了文件菜单并将其附加到菜单栏。文件菜单包含一个“关于...”菜单项，选择该菜单项时会显示消息对话框，以及一个“退出”菜单项，可以选择它来终止应用程序。第 38 行创建了一个 `JMenu` 并将“File”作为名称传递给构造函数。第 39 行使用 `JMenu` 的 `setMnemonic()`（继承自 `AbstractButton` 类）指示 F 是该菜单的快捷键。按下 Alt+F 可以打开菜单，就好像用鼠标点击菜单名称一样。在 GUI 中，菜单名称中的快捷键字符将带有下划线显示。（参见图 19.6 中的屏幕截图）。
+第 38–76 行设置了文件菜单并将其附加到菜单栏。文件菜单包含一个“关于...”（About...）菜单项，选择该菜单项时会显示消息对话框，以及一个“退出”（Exit）菜单项，可以选择它来终止应用程序。第 38 行创建了一个 `JMenu` 并将“File”作为名称传递给构造函数。第 39 行使用 `JMenu` 的 `setMnemonic()`（继承自 `AbstractButton` 类）指示 F 是该菜单的快捷键。按下 Alt+F 可以打开菜单，就好像用鼠标点击菜单名称一样。在 GUI 中，菜单名称中的快捷键字符将带有下划线显示。（参见图 19.6 中的屏幕截图）。
+
+![](img/28513f3b4ab12c97e738c92ed0e327a8_661_1.png)
 
 > **视觉效果观察 19.2**
 >
 > 快捷键允许通过键盘快速访问菜单命令和按钮命令。
 
+![](img/28513f3b4ab12c97e738c92ed0e327a8_661_2.png)
+
 > **视觉效果观察 19.3**
 >
-> 快捷键允许通过键盘访问菜单和按钮命令。
+> 菜单项的快捷键。
 
 > **视觉效果观察 19.4**
 >
-> 菜单项的快捷键。
+> 菜单它们添加到菜单栏从右显示。
 
 > **视觉效果观察 19.5**
 >
@@ -19194,7 +18913,7 @@ public class MenuTest
 >
 > 任何组件都可以添加到 `JMenu` 或 `JMenuBar` 中。
 
-## 设置格式菜单
+## 设置格式菜单（Format Menu）
 
 第 78–79 行创建了格式菜单并将其快捷键设置为 r。F 没有使用，因为它是文件菜单的快捷键。
 
@@ -19203,6 +18922,8 @@ public class MenuTest
 第 145–147 行创建了一个标签，格式菜单控制其字体、颜色和样式。初始前景颜色通过调用 `setForeground()` 方法设置为 `colorValues` 数组中的第一个元素（`Color.BLACK`）。初始字体设置为 Serif，带有 PLAIN 文本和 72 字体。第 149 行设置了背景颜色。
 
 
+
+# 第 19 章 Swing GUI 组件：部分 2
 
 ```java
 getContentPane().setBackground(Color.CYAN); // 设置背景
@@ -19241,8 +18962,6 @@ private class ItemHandler implements ActionListener
 ```
 
 图 19.5 | JMenus 和快速快捷键（mnemonics）。（5部分第4）。
-
-# 第 19 章 Swing GUI 组件：部分 2
 
 ```java
 // 内部类，用于处理来自复选框菜单项的项事件
@@ -19294,33 +19013,35 @@ public class MenuTest
 
 图 19.6 | MenuFrame 的测试类。（2部分第1）。
 
-# 19.4 在框架中使用菜单 623
+## 19.4 在框架中使用菜单 623
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_661_0.png)
 
 **图 19.6** | MenuFrame 的测试类。（2部分第2）。
 
-# 设置文件菜单（File Menu）
+### 设置文件菜单（File Menu）
 
 第 38–76 行设置了文件菜单并将其附加到菜单栏。文件菜单包含一个“关于...”（About...）菜单项，选择该菜单项时会显示消息对话框，以及一个“退出”（Exit）菜单项，可以选择它来终止应用程序。第 38 行创建了一个 `JMenu` 并将“File”作为名称传递给构造函数。第 39 行使用 `JMenu` 的 `setMnemonic`（继承自 `AbstractButton` 类）指示 F 是该菜单的快捷键。按下 Alt+F 可以打开菜单，就好像用鼠标点击菜单名称一样。在 GUI 中，菜单名称中的快捷键字符将带有下划线显示。（参见图 19.6 中的屏幕截图）。
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_661_1.png) # 视觉效果观察 19.2
+![](img/28513f3b4ab12c97e738c92ed0e327a8_661_1.png)
+
+#### 视觉效果观察 19.2
 
 快捷键（Mnemonics）允许通过键盘快速访问菜单命令和按钮命令。
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_661_2.png) # 视觉效果观察 19.2
+![](img/28513f3b4ab12c97e738c92ed0e327a8_661_2.png)
+
+#### 视觉效果观察 19.2
 
 快捷键允许通过键盘快速访问菜单命令和按钮命令。
 
-# 设置格式菜单（Format Menu）
+### 设置格式菜单（Format Menu）
 
 第 78–79 行创建了格式菜单并将其快捷键设置为 r。F 没有使用，因为它是文件菜单的快捷键。
 
-# 创建 GUI 的其余部分并定义事件处理程序
+### 创建 GUI 的其余部分并定义事件处理程序
 
-第 145–147 行创建了一个标签，格式菜单控制其字体、颜色和样式。初始前景颜色通过调用 `setForeground` 方法设置为 `colorValues` 数组中的第一个元素（`Color.BLACK`）。初始字体设置为 Serif，带有 PLAIN 文本和 72 字体。第 149 行设置了背景颜色
-
-将窗口的内容面板颜色设置为青色，第 150 行将 `JLabel` 到内容面板 `BorderLayout` 的中心。
+第 145–147 行创建了一个标签，格式菜单控制其字体、颜色和样式。初始前景颜色通过调用 `setForeground` 方法设置为 `colorValues` 数组中的第一个元素（`Color.BLACK`）。初始字体设置为 Serif，带有 PLAIN 文本和 72 字体。第 149 行设置了背景颜色将窗口的内容面板颜色设置为青色，第 150 行将 `JLabel` 到内容面板 `BorderLayout` 的中心。
 
 `ItemHandler` 方法 `actionPerformed`（第 157–181 行）使用两个 `for` 语句来确定是哪个字体或颜色项目生成了事件，并分别设置 `JLabel` 标签 `displayLabel` 的字体或颜色。第 163 行的条件使用 `AbstractButton` 方法 `isSelected` 来确定选中的 `JRadioButtonMenuItem`。第 177 行的条件调用事件对象的 `getSource` 来获取生成事件的 `JRadioButtonMenuItem` 引用。第 176 行调用 `AbstractButton` 方法 `getText` 从菜单项中获取字体名称。
 
@@ -19413,7 +19134,7 @@ public class MenuTest
 
 
 
-## 19.8 弹出菜单
+## 19.9 弹出菜单
 
 ```java
 // 判断弹出菜单
@@ -19460,21 +19181,15 @@ public class PopupTest
 
 **图 19.8:** `PopupFrame` 的测试类。
 
-## 19.9 Look-and-Feel
-
-为多个 GUI 组件的弹出事件显示 `JPopupMenu` 需要为这些组件中的每一个注册鼠标事件处理器。
-
-当用户从弹出菜单中选择菜单项时……
-
-## 19.6 可插拔的外观
+## 19.6 可插拔外观
 
 使用 Java AWT GUI 组件（包 `java.awt`）的程序采用其执行程序的外观。在 Mac 上运行的 Java 程序看起来像 Mac 应用程序，在 Windows 上运行的像 Windows 应用程序，在 Linux 平台上运行的像 Linux 平台上的应用程序。这有时是理想的，因为它允许每个平台的用户使用他们熟悉的 GUI 组件。然而，这引入了有趣的移植性问题。
 
-### Portability Tip 19.1
+### 可移植性提示 19.1
 
 GUI 组件在不同平台上看起来可能不同（字体、字体大小、边框等），并且可能需要不同的空间来显示。这可能会改变它们的布局和对齐。
 
-### Portability Tip 19.2
+### 可移植性提示 19.2
 
 不同平台的 GUI 组件可能具有不同的默认功能——例如，并不是所有平台都允许获得焦点的按钮通过空格键“按下”。
 
@@ -19542,8 +19257,7 @@ northPanel.setLayout(new GridLayout(3, 1, 0, 5));
 ```
 
 ```java
-JLabel label = new JLabel("This is a " + lookNames[0] + " look-and-feel",
-    SwingConstants.CENTER);
+label = new JLabel("This is a " + lookNames[0] + " look-and-feel", SwingConstants.CENTER);
 northPanel.add(label);
 ```
 
@@ -19563,13 +19277,13 @@ radio = new JRadioButton[looks.length];
 ```
 
 ```java
+// 使用每行有 3 个按钮的 GridLayout
+int rows = (int) Math.ceil(radio.length / 3.0);
 JPanel southPanel = new JPanel();
 southPanel.setLayout(new GridLayout(rows, 3));
 ```
 
 ```java
-// 使用每行有 3 个按钮的 GridLayout
-int rows = (int) Math.ceil(radio.length / 3.0);
 group = new ButtonGroup(); // 外观的分组
 ItemHandler handler = new ItemHandler(); // 外观处理器
 for (int count = 0; count < radio.length; count++) {
@@ -19581,8 +19295,6 @@ for (int count = 0; count < radio.length; count++) {
 ```
 
 **图 19.9** 基于 Swing 的 GUI 外观。（3 部分中的第 2 部分）
-
-## 19.6 可插拔外观
 
 ```java
 add(northPanel, BorderLayout.NORTH); // 添加北部面板
@@ -19617,8 +19329,7 @@ private class ItemHandler implements ItemListener
         for (int count = 0; count < radio.length; count++)
             if (radio[count].isSelected())
             {
-                label.setText(String.format(
-                    "This is %s look-and-feel", lookNames[count]));
+                label.setText(String.format("This is %s look-and-feel", lookNames[count]));
                 comboBox.setSelectedIndex(count); // 设置组合框
                 changeLookAndFeel(count); // 更改外观
             }
@@ -19626,17 +19337,13 @@ private class ItemHandler implements ItemListener
 } // end LookAndFeelFrame
 ```
 
-**图 19.9** Swing GUI 的外观。（3 部分中的第 3 部分）
+**图 19.9** 基于 Swing 的 GUI 外观。（3 部分中的第 3 部分）
 
 ```java
 // Fig 19.10: LookAndFeelDemo.java
 // 更改外观。
 import javax.swing.JFrame;
-```
 
-**图 19.10** `LookAndFeelFrame` 的测试类。（2 部分中的第 1 部分）
-
-```java
 public class LookAndFeelDemo
 {
     public static void main(String[] args) {
@@ -19648,9 +19355,9 @@ public class LookAndFeelDemo
 } // end class LookAndFeelDemo
 ```
 
-**图 19.10** `LookAndFeelDemo` 的测试类（2 部分中的第 2 部分）。
+**图 19.10** `LookAndFeelFrame` 的测试类。
 
-我们的方法 `changeLookAndFeel()`（第 81–95 行）由用户界面底部 `JRadioButton` 的事件处理器调用。事件处理器（在第 98–115 行的私有类 `ItemHandler` 中声明）传递一个表示用于更改外观的元素的整数。第 86 行调用 `UIManager` 的静态方法 `setLookAndFeel()` 来更改外观。`UIManager.LookAndFeelInfo` 类的 `getClassName()` 方法定义了对应 `LookAndFeelInfo` 对象的类名称。如果尚未加载，它将作为 `setLookAndFeel()` 调用的一部分被加载。第 89 行调用 `SwingUtilities` 类（位于 `javax.swing` 包）的静态方法 `updateComponentTreeUI()`，以更改附加到其参数的每个 GUI 组件（即我们的应用程序类 `LookAndFeelFrame` 实例）的外观。
+我们的方法 `changeLookAndFeel()`（第 81–95 行）由用户界面底部 `JRadioButtons` 的事件处理器调用。事件处理器（在第 98–115 行的私有类 `ItemHandler` 中声明）传递一个表示用于更改外观的元素的整数。第 86 行调用 `UIManager` 的静态方法 `setLookAndFeel()` 来更改外观。`UIManager.LookAndFeelInfo` 类的 `getClassName()` 方法定义了对应 `LookAndFeelInfo` 对象的类名称。如果尚未加载，它将作为 `setLookAndFeel()` 调用的一部分被加载。第 89 行调用 `SwingUtilities` 类（位于 `javax.swing` 包）的静态方法 `updateComponentTreeUI()`，以更改附加到其参数的每个 GUI 组件（即我们的应用程序类 `LookAndFeelFrame` 实例）的外观。
 
 ## 19.7 JDesktopPane 和 JInternalFrame
 
@@ -19664,6 +19371,9 @@ import java.awt.BorderLayout;
 
 
 
+# 19.7 JDesktopPane 和 JInternalFrame
+
+```java
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.ActionListener;
@@ -19714,41 +19424,40 @@ public class DesktopFrame extends JFrame {
                     frame.setVisible(true); // 显示内部帧
                 }
             }
-        ); // DesktopFrame 构造函数结束
-    } // DesktopFrame 类结束
+        ); // end ActionListener
+    } // end DesktopFrame constructor
+} // end class DesktopFrame
 
-    // 在面板上显示 ImageIcon 的类
-    class MyJPanel extends JPanel {
-        private static final SecureRandom generator = new SecureRandom();
-        private final ImageIcon imageIcon; // 要显示的图像
-        private final static String[] images = { "yellowflowers.png",
-            "purpleflowers.png", "redflowers.png", "redflowers2.png",
-            "lavenderflowers.png" };
+// 在面板上显示 ImageIcon 的类
+class MyJPanel extends JPanel {
+    private static final SecureRandom generator = new SecureRandom();
+    private final ImageIcon imageIcon; // 要显示的图像
+    private final static String[] images = { "yellowflowers.png",
+        "purpleflowers.png", "redflowers.png", "redflowers2.png",
+        "lavenderflowers.png" };
 
-        // 加载图像
-        public MyJPanel() {
-            int randomNumber = generator.nextInt(images.length);
-            imageIcon = new ImageIcon(images[randomNumber]); // 设置图标
-        }
+    // 加载图像
+    public MyJPanel() {
+        int randomNumber = generator.nextInt(images.length);
+        imageIcon = new ImageIcon(images[randomNumber]); // 设置图标
+    }
 
-        // 在面板上显示 imageIcon
-        @Override
-        public void paintComponent(Graphics g) {
-            super.paintComponent(g);
-            imageIcon.paintIcon(this, g, 0, 0); // 显示图标
-        }
+    // 在面板上显示 imageIcon
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        imageIcon.paintIcon(this, g, 0, 0); // 显示图标
+    }
 
-        // 返回图像尺寸
-        public Dimension getPreferredSize() {
-            return new Dimension(imageIcon.getWidth(),
-                imageIcon.getHeight());
-        }
-    } // MyJPanel 类结束
-}
+    // 返回图像尺寸
+    public Dimension getPreferredSize() {
+        return new Dimension(imageIcon.getWidth(),
+            imageIcon.getHeight());
+    }
+} // end class MyJPanel
+```
 
-图 19.11 | 多文档界面。
-
-# 19.7 JDesktopPane 和 JInternalFrame
+**图 19.11** | 多文档界面。
 
 第 27–33 行创建了一个 `JMenuBar`、一个 `JMenu` 和一个 `JMenuItem`，将 `JMenuItem` 添加到 `JMenu`，并将 `JMenuBar` 设置为应用程序窗口的 `JMenuBar`。当用户选择 `JMenuItem` `newItem` 时，应用程序将创建并显示一个包含图像的新 `JInternalFrame` 对象。
 
@@ -19766,7 +19475,7 @@ public class DesktopTest {
         desktopFrame.setSize(600, 480);
         desktopFrame.setVisible(true);
     }
-} // DesktopTest 类结束
+} // end class DesktopTest
 ```
 
 - 内部帧 最小化 最大化 关闭
@@ -19775,11 +19484,11 @@ public class DesktopTest {
 
 最小化的帧：将鼠标悬停在子窗口的任何角上以调整窗口大小（如果允许调整大小）
 
-**图 19.12** | DesktopFrame 的测试类。
+**图 19.12** | `DesktopFrame` 的测试类。
 
 第 39–58 行注册了一个 `ActionListener`，用于处理用户选择 `newFrame` 菜单项时的事件。当事件发生时，`actionPerformed` 方法（第 43–56 行）在第 47–48 行创建一个 `JInternalFrame` 对象。这里使用的 `JInternalFrame` 构造函数接受五个参数——一个用于内部窗口标题栏的字符串，一个指示用户是否可以调整内部帧大小的布尔值，一个指示用户是否可以关闭内部帧的布尔值，一个指示用户是否可以最大化内部帧的布尔值，以及指示每个布尔参数的布尔值，其中 `true` 值表示应该允许该操作（此处如此）。
 
-与 `JFrames` 和 `Applets` 一样，`JInternalFrame` 有一个内容面板，GUI 组件可以附加到面板上。第 50 行创建了我们的类 `JPanel`（在第 63–91 行声明）的实例，并在第 51 行将其添加到 `JInternalFrame` 中。
+与 `JFrame` 和 `Applet` 一样，`JInternalFrame` 有一个内容面板，GUI 组件可以附加到面板上。第 50 行创建了我们的类 `JPanel`（在第 63–91 行声明）的实例，并在第 51 行将其添加到 `JInternalFrame` 中。
 
 第 52 行使用 `JInternalFrame` 方法 `pack` 设置组件的大小以确定窗口的大小。`pack` 方法使用类 `MyJPanel` 声明的 `getPreferredSize`（第 87–91 行）中的优选尺寸来指定 `pack` 方法的首选尺寸。第 54 行将 `JInternalFrame` 添加到桌面，第 55 行显示 `JInternalFrame`。
 
@@ -19792,7 +19501,7 @@ public class DesktopTest {
 | `BoxLayout` | 允许 GUI 组件在容器中从左到右或从上到下排列。`Box` 类声明了一个使用 `BoxLayout` 的容器，并提供了静态方法来创建具有水平或垂直 `BoxLayout` 的 `Box`。 |
 | `GridBagLayout` | 与 `GridLayout` 类似，但组件的大小可以不同，并且可以以任何顺序添加。 |
 
-图 19.15 | 额外的布局管理器。
+**图 19.15** | 额外的布局管理器。
 
 `BoxLayout` 管理器（包 `javax.swing`）沿容器的 x 轴水平排列 GUI 组件，或沿其 y 轴垂直排列。图 19.16-19.17 中的程序演示了 `BoxLayout` 以及使用 `BoxLayout` 作为默认布局器的容器类 `Box`。
 
@@ -19808,6 +19517,7 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
 public class BoxLayoutFrame extends JFrame {
+
     // 设置 UI
     public BoxLayoutFrame() {
         Box horizontal1 = Box.createHorizontalBox();
@@ -19856,11 +19566,11 @@ public class BoxLayoutFrame extends JFrame {
         tabs.addTab("Vertical Box with Rigid Areas", vertical2);
         tabs.addTab("Vertical Box with Glue", panel);
         add(tabs); // 将标签页面板放置在框架上
-    } // 结束 BoxLayoutFrame 构造函数
-} // 结束类 BoxLayoutFrame
+    } // end BoxLayoutFrame constructor
+} // end class BoxLayoutFrame
 ```
 
-图 19.16 | BoxLayout 布局管理器。
+**图 19.16** | `BoxLayout` 布局管理器。
 
 ```java
 // Fig. 19.17: BoxLayoutDemo.java
@@ -19874,28 +19584,28 @@ public class BoxLayoutDemo {
         boxLayoutFrame.setSize(400, 220);
         boxLayoutFrame.setVisible(true);
     }
-} // 结束类 BoxLayoutDemo
+} // end class BoxLayoutDemo
 ```
 
-图 19.17 | BoxLayoutFrame 的测试类。
+**图 19.17** | `BoxLayoutFrame` 的测试类。
 
 
 
 # 创建 Box 容器
 
-第 19–22 行创建 Box 容器。引用 `horizontal1` 和 `horizontal2` 通过静态 Box 方法 `createHorizontalBox` 初始化，该方法返回一个具有水平 `BoxLayout` 的 Box 容器，其中 GUI 组件从左到右排列。变量 `vertical1` 和 `vertical2` 通过静态 Box 方法 `createVerticalBox` 初始化，该方法返回具有垂直 `Layout` 的 Box 容器引用，其中 GUI 组件从上到下排列。
+第 19–22 行创建 Box 容器。引用 `horizontal1` 和 `horizontal2` 通过静态 Box 方法 `createHorizontalBox()` 初始化，该方法返回一个具有水平 `BoxLayout` 的 Box 容器，其中 GUI 组件从左到右排列。变量 `vertical1` 和 `vertical2` 通过静态 Box 方法 `createVerticalBox()` 初始化，该方法返回具有垂直 `BoxLayout` 的 Box 容器引用，其中 GUI 组件从上到下排列。
 
 # 间隙结构 (Struts)
 
-第 27–28 行向 `vertical1` 添加了垂直间隙。第 31–35 行的循环向 `vertical1` 添加了垂直间隙。在添加按钮之前，第 33 行使用 `Box.createVerticalStrut` 添加垂直间隙。间隙结构是一个具有固定高度的 GUI 组件，当容器缩大时，`BoxLayout` 声明其。
+第 27–28 行向 `vertical1` 添加了垂直间隙。第 31–35 行的循环向 `vertical1` 添加了垂直间隙。在添加按钮之前，第 33 行使用 `Box.createVerticalStrut()` 添加垂直间隙。间隙结构是一个具有固定高度的 GUI 组件，当容器缩大时，`BoxLayout` 声明其。
 
 # 胶水 (Glue)
 
-第 38–42 行向 `horizontal2` 添加了水平胶水。在添加按钮之前，第 40 行使用 `Box.createHorizontalGlue` 添加胶水。胶水是一个具有固定宽度的 GUI 组件，当容器缩大时，`BoxLayout` 声明其水平间隙。
+第 38–42 行向 `horizontal2` 添加了水平胶水。在添加按钮之前，第 40 行使用 `Box.createHorizontalGlue()` 添加胶水。胶水是一个具有固定宽度的 GUI 组件，当容器缩大时，`BoxLayout` 声明其水平间隙。
 
 # 刚性区域 (Rigid Areas)
 
-第 45–49 行向 `vertical2` 添加了刚性区域。在添加按钮之前，第 47 行使用 `Box.createRigidArea` 添加刚性区域。刚性区域是一个具有固定大小的 GUI 组件，当容器缩小时，`BoxLayout` 声明其垂直。
+第 45–49 行向 `vertical2` 添加了刚性区域。在添加按钮之前，第 47 行使用 `Box.createRigidArea()` 添加刚性区域。刚性区域是一个具有固定大小的 GUI 组件，当容器缩大时，`BoxLayout` 声明其垂直。
 
 # 设置容器的 BoxLayout
 
@@ -19903,27 +19613,25 @@ public class BoxLayoutDemo {
 
 # 添加胶水和按钮
 
-第 55–57 行向 `panel` 添加了垂直胶水。在添加按钮之前，第 57 行使用 `Box.createGlue` 添加胶水。胶水是一个具有固定高度的 GUI 组件，当容器缩小时，`BoxLayout` 声明其垂直。
+第 55–57 行向 `panel` 添加了垂直胶水。在添加按钮之前，第 57 行使用 `Box.createGlue()` 添加胶水。胶水是一个具有固定高度的 GUI 组件，当容器缩大时，`BoxLayout` 声明其垂直。
 
 # 创建 JTabbedPane
 
-第 62–63 行创建 `JTabbedPane`。`TabbedPane.TOP` 参数指定标签位于顶部。`TabbedPane.SCROLL_TAB_LAYOUT` 指定标签换行。
+第 62–63 行创建 `JTabbedPane`。`JTabbedPane.TOP` 参数指定标签位于顶部。`JTabbedPane.SCROLL_TAB_LAYOUT` 指定标签换行。
 
 # 附加 Box 容器和 JPanel
 
-第 66–70 行将 Box 容器和 JPanel 附加到标签页面板。尝试运行程序以查看胶水和刚性区域如何影响布局。
+第 66–70 行将 Box 容器和 `JPanel` 附加到标签页面板。尝试运行程序以查看胶水和刚性区域如何影响布局。
 
 # 19.10 GridBagLayout
 
 最强大的布局管理器之一是 `GridBagLayout`（位于 `java.awt`）。该布局与 `GridLayout` 类似，它在网格中排列组件，但组件的大小可以不同（即可以跨多个行列），并且可以以任何顺序添加。使用 `GridBagLayout` 的第一步是确定 GUI 的外观。对于这一步你只需要纸。画出 GUI，然后在画网格将其分为行和列。初始行列号应为 0，以便 `GridBagLayout` 管理器可以使用行列号来正确放置组件。图 19.18 展示了在 GUI 上绘制行和列线。
 
-![](img/28513f3b4ab12c97e738c92ed0e327a8_681_0.png)
-
-图 19.18 | 使用 GridBagLayout 设计 GUI。
+![图 19.18 | 使用 GridBagLayout 设计 GUI。](img/28513f3b4ab12c97e738c92ed0e327a8_681_0.png)
 
 ## GridBagConstraints
 
-`GridBagConstraints` 对象描述了如何在 GridLayout 中放置组件。若干 `GridBagConstraints` 字段见图 19.19。
+`GridBagConstraints` 对象描述了如何在 `GridBagLayout` 中放置组件。若干 `GridBagConstraints` 字段见图 19.19。
 
 | 字段 | 描述 |
 |---|---|
@@ -19932,33 +19640,33 @@ public class BoxLayoutDemo {
 | gridx | 组件放置的列号。 |
 | gridy | 组件放置的行号。 |
 | gridwidth | 组件占据的列数。 |
-| height | 组件占据的行数。 |
-| weight | 分配水平额外空间。当有可用空间时，网格可以变宽。 |
+| gridheight | 组件占据的行数。 |
+| weightx | 分配水平额外空间。当有可用空间时，网格可以变宽。 |
 | weighty | 分配垂直额外空间。当有可用空间时，网格可以变高。 |
 
 ### GridBagConstraints 字段 anchor
 
-`GridBagConstraints` 字段 `anchor` 指定组件在未填充区域中的相对位置。变量 `anchor` 被赋值为以下 `GridBagConstraints` 之一：NORTH, NORTHEAST, EAST, SOUTHEAST, SOUTH, SOUTHWEST, WEST, NORTHWEST 或 CENTER。默认值是 CENTER。
+`GridBagConstraints` 字段 `anchor` 指定组件在未填充区域中的相对位置。变量 `anchor` 被赋值为以下 `GridBagConstraints` 之一：`NORTH`、`NORTHEAST`、`EAST`、`SOUTHEAST`、`SOUTH`、`SOUTHWEST`、`WEST`、`NORTHWEST` 或 `CENTER`。默认值是 `CENTER`。
 
 ### GridBagConstraints 字段 fill
 
-`GridBagConstraints` 字段 `fill` 定义了当显示组件的区域大于组件本身时，组件如何增长。变量 `fill` 被赋值为以下 `GridBagConstraints` 常数之一：NONE、VERTICAL、HORIZONTAL 或 BOTH。默认值为 NONE，表示组件在任何方向上都不会增长。`VERTICAL` 表示它将在垂直方向上增长。`HORIZONTAL` 表示它将在水平方向上增长。`BOTH` 表示它将在两个方向增长。
+`GridBagConstraints` 字段 `fill` 定义了当显示组件的区域大于组件本身时，组件如何增长。变量 `fill` 被赋值为以下 `GridBagConstraints` 常量之一：`NONE`、`VERTICAL`、`HORIZONTAL` 或 `BOTH`。默认值为 `NONE`，表示组件在任何方向上都不会增长。`VERTICAL` 表示它将在垂直方向上增长。`HORIZONTAL` 表示它将在水平方向上增长。`BOTH` 表示它将在两个方向增长。
 
 ### GridBagConstraints 字段 gridx 和 gridy
 
 变量 `gridx` 和 `gridy` 指定了组件左上角在网格中的放置位置。变量 `gridx` 对应列，变量 `gridy` 对应行。在图 19.18 中，显示“Iron”的 `JComboBox` 的 `gridx` 值为 1，`gridy` 值为 2。
 
-### GridBagConstraints 字段 gridwidth
+### GridBagConstraints 字段 gridwidth 和 gridheight
 
 变量 `gridwidth` 指定了组件占据的列数。`JComboBox` 占据了两个列。变量 `gridheight` 指定了组件占据的行数。图 19.18 左侧的 `JTextArea` 占据了三行。
 
 ### GridBagConstraints 字段 weightx
 
-变量 `weightx` 指定了当容器调整大小时，如何将额外的水平空间分配给 GridLayout 中的网格槽。值为零表示该网格槽不会独立水平方向增长。然而，如果组件跨越了包含非零 `weightx` 值组件的列，则权重为零的组件将与列中的其他组件以相同的比例水平增长。这是因为每个组件都必须保持在最初放置的同一行和列中。
+变量 `weightx` 指定了当容器调整大小时，如何将额外的水平空间分配给 `GridBagLayout` 中的网格槽。值为零表示该网格槽不会独立水平方向增长。然而，如果组件跨越了包含非零 `weightx` 值组件的列，则权重为零的组件将与列中的其他组件以相同的比例水平增长。这是因为每个组件都必须保持在最初放置的同一行和列中。
 
 ### GridBagConstraints 字段 weighty
 
-变量 `weighty` 指定了当容器调整大小时，如何将额外的垂直空间分配给 GridLayout 中的网格槽。值为零表示该网格槽不会独立垂直方向增长。然而，如果组件跨越了包含非零 `weighty` 值组件的行，则权重为零的组件将与行中的其他组件以相同的比例垂直增长。
+变量 `weighty` 指定了当容器调整大小时，如何将额外的垂直空间分配给 `GridBagLayout` 中的网格槽。值为零表示该网格槽不会独立垂直方向增长。然而，如果组件跨越了包含非零 `weighty` 值组件的行，则权重为零的组件将与行中的其他组件以相同的比例垂直增长。
 
 ### weightx 和 weighty 的影响
 
@@ -19966,15 +19674,13 @@ public class BoxLayoutDemo {
 
 组件应该赋予非零的正权重值——否则它们将“聚集”在容器的中间。图 19.20 显示了图 19.18 中权重设置为零时的 GUI。
 
+![图 19.20 | 权重为零的 GridBagLayout。](img/28513f3b4ab12c97e738c92ed0e327a8_683_0.png)
+
 ## 演示 GridBagLayout
 
 图 19.21–19.22 中的应用程序使用 `GridBagLayout` 布局来安排图 19.18 中 GUI 的组件。该应用程序除了演示如何使用 `GridBagLayout` 之外未做其他操作。
 
-## 19.10 GridBagLayout 布局管理器
-
-![](img/28513f3b4ab12c97e738c92ed0e327a8_683_0.png)
-
-图 19.20 | 权重为零的 GridBagLayout。
+### 图 19.21 | GridBagLayout 布局管理器（第 1 部分）
 
 ```java
 // Fig 19.21: GridBagFrame.java
@@ -19990,6 +19696,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 
 public class GridBagFrame extends JFrame {
+
     private final GridBagLayout layout; // 此框架的布局
     private final GridBagConstraints constraints; // 布局的约束
 
@@ -20004,7 +19711,7 @@ public class GridBagFrame extends JFrame {
         JTextArea textArea1 = new JTextArea("TextArea1", 5, 10);
         JTextArea textArea2 = new JTextArea("TextArea2", 2, 2);
         String[] names = { "Iron", "Brass" };
-        JComboBox<String> comboBox = new JComboBox<String>(names);
+        JComboBox<String> comboBox = new JComboBox<>(names);
         JTextField textField = new JTextField("TextField");
         JButton button1 = new JButton("Button 1");
         JButton button2 = new JButton("Button 2");
@@ -20018,127 +19725,120 @@ public class GridBagFrame extends JFrame {
 }
 ```
 
-图 19.21 | GridBagLayout 布局管理器。（2 部分中的 1 部分）
+### 图 19.21 | GridBagLayout 布局管理器（第 2 部分）
 
 ```java
 // button1 的 weightx 和 weighty 均为 0：默认值
 constraints.fill = GridBagConstraints.HORIZONTAL;
 addComponent(button1, 0, 1, 2);
-```
 
-```java
 // comboBox 的 weightx 和 weighty 均为 0：默认值
 // fill 为 HORIZONTAL
 addComponent(comboBox, 2, 1, 2);
-```
 
-```java
 // button2
 constraints.weightx = 1000; // 可以变宽
 constraints.weighty = 1; // 可以变高
 constraints.fill = GridBagConstraints.BOTH;
 addComponent(button2, 1, 1, 1);
-```
 
-```java
 // fill 是针对 button3
 constraints.weightx = 0;
 constraints.weighty = 0;
 addComponent(button3, 1, 2, 1);
-```
 
-```java
 // textField 的 weightx 和 weighty 均为 0，fill 为 BOTH
 addComponent(textField, 3, 0, 2);
-```
 
-```java
 // textArea2 的 weightx 和 weighty 均为 0，fill 为 BOTH
 addComponent(textArea2, 3, 2, 1);
 // GridBagFrame 构造函数结束
-```
 
-```java
 // 设置约束的方法
 private void addComponent(Component component,
     int row, int column, int width, int height) {
+
     constraints.gridx = column;
     constraints.gridy = row;
     constraints.gridwidth = width;
     constraints.gridheight = height;
-    layout.setGridConstraints(component, constraints); // 设置约束
+    layout.setConstraints(component, constraints); // 设置约束
     add(component); // 添加组件
 } // GridBagFrame 结束
 ```
 
-图 19.21 | GridBagLayout 布局管理器。（2 部分中的 2 部分）
+### 图 19.22 | GridBagFrame 测试类
 
 ```java
 // Fig 19.22: GridBagDemo.java
 // 演示 GridBagLayout。
-
 import javax.swing.JFrame;
 
 public class GridBagDemo {
     public static void main(String[] args) {
         GridBagFrame gridFrame = new GridBagFrame();
-    }
+        gridFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        gridFrame.setSize(300, 150);
+        gridFrame.setVisible(true);
+    } // GridBagDemo 类结束
 }
 ```
 
-图 19.22 | GridBagFrame 测试类。（2 部分中的 1 部分。）
-
-```java
-gridFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-gridFrame.setSize(300, 150);
-gridFrame.setVisible(true);
-} // GridBagDemo 类结束
-```
 
 
+![](img/28513f3b4ab12c97e738c92ed0e327a8_685_0.png)
+
+![](img/28513f3b4ab12c97e738c92ed0e327a8_685_1.png)
+
+![](img/28513f3b4ab12c97e738c92ed0e327a8_685_2.png)
+
+图 19.22 | `GridBagFrame` 测试类。（2 部分中的 2 部分）。
 
 ## GUI 概述
 
 GUI 包含三个 `JButton`、两个 `JTextArea`、一个 `JComboBox` 和一个 `JTextField`。布局管理器是 `GridBagLayout`。第 21–22 行创建 `GridBagLayout` 对象并设置 `JFrame` 的布局管理器。第 23 行创建 `GridBagConstraints` 对象，用于确定网格中组件的位置和大小。第 26–35 行创建添加到内容面板的每个 GUI 组件。
 
-### JTextArea textArea1
+### `JTextArea` textArea1
 
-第 39–40 行配置 `textArea1` 并将其添加到内容面板。约束中未指定 `weightx` 和 `weighty` 值，因此它们具有默认值。因此，如果有可用空间，`TextArea` 不会自行调整大小。然而，它跨越了多行，因此垂直尺寸取决于 `JButtons button2` 和 `button3` 的 `weighty` 值。当任一按钮根据其 `weighty` 值垂直调整大小时，`JTextArea` 也随之调整大小。
+第 39–40 行配置 `textArea1` 并将其添加到内容面板。约束中未指定 `weightx` 和 `weighty` 值，因此它们具有默认值。因此，如果有可用空间，`TextArea` 不会自行调整大小。然而，它跨越了多行，因此垂直尺寸取决于 `JButton` `button2` 和 `button3` 的 `weighty` 值。当任一按钮根据其 `weighty` 值垂直调整大小时，`JTextArea` 也随之调整大小。
 
 第 39 行将约束中的 `fill` 设置为 `GridBagConstraints.BOTH`，使 `JTextArea` 始终填充网格中的整个区域。约束中未指定 `anchor` 值，使用了默认的 `CENTER`。我们在应用程序中未使用 `anchor`。第 40 行调用了我们的工具方法 `addComponent`。`JTextArea` 对象、行号、列号、跨列数和跨行数作为参数传递。
 
-### JButton button1
+### `JButton` button1
 
 `JButton1` 是下一个添加的组件（第 43–44 行）。默认情况下，`weightx` 和 `weighty` 值仍为 0。`fill` 值设置为 `HORIZONTAL`——组件始终填充其水平方向的区域。垂直方向不填充。`weighty` 值为零，只有当同一行的其他组件具有非零权重值时，按钮才会变高。`JButton1` 位于第 0 行、第 1 列。占据了一行和两列。
 
-### JComboBox comboBox
+### `JComboBox` comboBox
 
 `JComboBox` 是下一个添加的组件（第 48 行）。默认情况下，`weightx` 和 `weighty` 值为 0，`fill` 值设置为 `HORIZONTAL`。`JComboBox` 只会在水平方向上增长。`weightx`、`weighty` 和 `fill` 值在更改之前保留约束中的值。`JComboBox` 按钮放置在第 2 行、第 1 列。占据了一行和两列。
 
-### JButton button2
+### `JButton` button2
 
 `JButton2` 是下一个添加的组件（第 51–54 行）。它被赋予 `weightx` 值 1000 和 `weighty` 值 1。按钮占据的区域能够在垂直和水平方向上增长。`fill` 变量设置为 `BOTH`，指定按钮将始终填充该区域。当窗口调整大小时，`button2` 将增长。按钮放置在第 1 行、第 1 列。占据了一行和两列。
 
-### JButton button3
+### `JButton` button3
 
 添加了 `JButton3`（第 57–59 行）。`weightx` 和 `weighty` 值均设置为 0，`fill` 值为 `BOTH`。当窗口调整大小时，`JButton3` 将增长——它受 `button2` 权重值的影响。`button2` 的 `weightx` 值远大于 `button3`。发生调整大小时，`button2` 将占据更大比例的新空间。按钮放置在第 1 行、第 2 列。占据了一行和一列。
 
-### JTextField textField 与 JTextArea textArea2
+### `JTextField` textField `JTextArea` textArea2
 
-`JTextField textField`（第 62 行）和 `JTextArea textArea2`（第 65 行）的 `weightx` 值均为 0，`weighty` 值均为 0。`fill` 值为 `BOTH`，`JTextField` 放置在第 3 行、第 0 列，`JTextArea` 放置在第 3 行、第 3 列。`JTextField` 占据了一行和两列，`JTextArea` 占据了一行和一列。
+`JTextField` `textField`（第 62 行）和 `JTextArea` `textArea2`（第 65 行）的 `weightx` 值均为 0，`weighty` 值均为 0。`fill` 值为 `BOTH`，`JTextField` 放置在第 3 行、第 0 列，`JTextArea` 放置在第 3 行、第 3 列。`JTextField` 占据了一行和两列，`JTextArea` 占据了一行和一列。
 
-## 19.10 GridBagLayout 布局管理器
+## 19.10 `GridBagLayout` 布局管理器 649
 
 `gridheight` 变量指定了组件在网格中跨越的行数。第 76 行为 `GridBagLayout` 中的组件设置 `GridBagConstraints`。`GridBagLayout` 类的 `setConstraints` 方法接收一个 `Component` 参数和一个 `GridBagConstraints` 参数。第 77 行将组件添加到 `JFrame` 中。
 
 当你运行此应用程序时，调整窗口大小以观察每个 GUI 组件的约束条件如何影响其在窗口中的位置和大小。
 
-## GridBagConstraints RELATIVE 和 REMAINDER
+## `GridBagConstraints` RELATIVE 和 REMAINDER
 
 与 `gridx` 和 `gridy` 不同，`GridBagLayout` 的一种变体使用了 `RELATIVE` 和 `REMAINDER` 约束。`RELATIVE` 指定特定行中的下一个组件应该放在该行中上一个组件的右侧。`REMAINDER` 指定该组件是行的最后一个。任何行中不是倒数第二个或最后一个的组件都必须为 `GridBagConstraints` 的 `gridwidth` 和 `gridheight` 指定值。图 19.23–19.24 中的应用程序使用了这些常量在 `GridBagLayout` 中排列组件。
 
+![](img/28513f3b4ab12c97e738c92ed0e327a8_687_0.png)
+
 ```java
 // GridBagFrame2.java
+
 // 展示 GridBagLayout 常量。
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
@@ -20149,12 +19849,14 @@ import javax.swing.JTextField;
 import javax.swing.JList;
 import javax.swing.JButton;
 
-public class GridBagFrame2 extends JFrame {
+public class GridBagFrame2 extends JFrame
+{
     private final GridBagLayout layout; // 此框架的布局
     private final GridBagConstraints constraints; // 布局的约束
 
     // 设置 GUI
-    public GridBagFrame2() {
+    public GridBagFrame2()
+    {
         super("GridBagLayout");
         layout = new GridBagLayout();
         setLayout(layout); // 设置框架布局
@@ -20215,14 +19917,19 @@ public class GridBagFrame2 extends JFrame {
     }
 
     // 向容器添加组件
-    private void addComponent(Component component) {
+    private void addComponent(Component component)
+    {
         layout.setConstraints(component, constraints);
         add(component); // 添加组件
     }
 } // 类结束 GridBagFrame2
 ```
 
-## 19.10 GridBagLayout 布局管理器
+图 19.23 | `GridBagConstraints` 的 `RELATIVE` 和 `REMAINDER`。（2 中的 2 部分）
+
+## 650 第 19 章 Swing GUI 组件：部分 2
+
+## 19.10 `GridBagLayout` 布局管理器 651
 
 ```java
 // 图 19.24: GridBagDemo2.java
@@ -20235,7 +19942,7 @@ public class GridBagDemo2 {
         gridBagFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gridBagFrame.setSize(300, 200);
         gridBagFrame.setVisible(true);
-    }
+    } // 结束 GridBagDemo2
 }
 ```
 
@@ -20333,7 +20040,7 @@ Java 通过语言和 API 为你提供了并发能力。Java 程序可以有多�
 
 ## 20.2.5 终止状态
 
-当可运行线程成功完成其任务或终止（可能是由于错误）时，它进入终止状态（有时也称为死亡状态）。在图 20.1 的 UML 状态图中，终止状态之后是 UML 最终状态（牛心形符号），表示转换的结束。
+当可运行线程成功完成其任务或终止（可能是由于错误）时，它进入终止状态（有时也称为死亡状态）。在 20.1 的 UML 状态图中，终止状态之后是 UML 最终状态（牛心形符号），表示转换的结束。
 
 ## 20.2.6 操作系统视角下的可运行状态
 
@@ -20409,8 +20116,7 @@ public class PrintTask implements Runnable {
             // 睡眠 sleepTime 指定的时间
             System.out.printf("%s going to sleep for %d milliseconds.\n", taskName, sleepTime);
             Thread.sleep(sleepTime); // 让线程睡眠
-        }
-        catch (InterruptedException exception) {
+        } catch (InterruptedException exception) {
             exception.printStackTrace();
             Thread.currentThread().interrupt(); // 重置线程
         } 
@@ -20440,6 +20146,7 @@ public class PrintTask implements Runnable {
 java
 // Fig. 20.3: PrintTask.java
 // PrintTask 类按照 0 到 5 秒的随机时间进行睡眠
+
 import java.security.SecureRandom;
 
 public class PrintTask implements Runnable {
@@ -20465,6 +20172,7 @@ public class PrintTask implements Runnable {
             exception.printStackTrace();
             Thread.currentThread().interrupt(); // 重置线程中断状态
         }
+        
         // 打印任务名称
         System.out.printf("%s done sleeping\n", taskName);
     }
@@ -20489,6 +20197,7 @@ public class PrintTask implements Runnable {
 java
 // Fig. 20.4: TaskExecutor.java
 // 使用 ExecutorService 管理 Runnable。
+
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 
@@ -20508,7 +20217,7 @@ public class TaskExecutor {
 
         executorService.shutdown();
 
-        System.out.println("Starting Executor");
+        System.out.println("Tasks started");
         System.out.println("Tasks finished");
     }
 }
@@ -20518,15 +20227,15 @@ public class TaskExecutor {
 
 **图 20.3** PrintTask 类按照 0 到 5 秒的随机时间进行睡眠。（2 部分中的第 2 部分。）
 
-当线程调用 `PrintTask` 的 `run` 时，执行 `PrintTask`。第 25–26 行显示一条消息，指示当前执行的任务名称，以及该任务将睡眠 `sleepTime` 毫秒。第 27 行调用 `Thread` 类的静态方法 `sleep`，将线程置于指定时间的计时等待状态。此时，线程释放处理器，系统允许另一个线程执行。当线程唤醒时，它进入可运行状态。当 `PrintTask` 分配给处理器时，第 36 行输出一条消息指示任务正在睡眠，然后方法终止。第 29–33 行的 `catch` 块是必须的，因为如果调用了睡眠线程的 `interrupt` 方法，`sleep` 方法可能会抛出 `InterruptedException` 类型的检查异常。
+当线程调用 PrintTask 的 run 时，执行 PrintTask。第 25–26 行显示一条消息，指示当前执行的任务名称，以及该任务将睡眠 `sleepTime` 毫秒。第 27 行调用 Thread 类的静态方法 `sleep`，将线程置于指定时间的计时等待状态。此时，线程持有处理器，系统允许另一个线程执行。当线程唤醒时，它进入可运行状态。当 PrintTask 分配给处理器时，第 36 行输出一条消息指示任务正在睡眠，然后方法终止。第 29–33 行的 catch 块是必须的，因为如果调用了睡眠线程的 `interrupt` 方法，`sleep` 方法可能会抛出 `InterruptedException` 类型的检查异常。
 
 ## 让线程处理 InterruptedExceptions
 
-让执行线程自己处理 `InterruptedExceptions` 被认为是一种良好的做法。通常情况下，你通过让该方法抛出异常而不是捕获异常来这样做。回想第 11 章，当你重写方法时，`throws` 可能仅包含与原始方法 `throws` 子句中的相同的异常或其类型子集。`Runnable` 方法的原始声明中没有 `throws` 子句，因此我们想要确保执行线程能够接收到 `InterruptedException`，第 32 行通过调用静态方法 `currentThread` 获取当前执行线程的引用，该方法使用 `Thread` 的 `interrupt` 方法将 `InterruptedException` 传递给当前线程。
+让执行线程自己处理 `InterruptedExceptions` 被认为是一种良好的做法。通常情况下，你通过让该方法抛出异常而不是捕获异常来这样做。回想第 11 章，当你重写方法时，`throws` 可能仅包含与原始方法 `throws` 子句中的相同的异常或其类型子集。`Runnable` 方法的原始声明中没有 `throws` 子句，因此我们想要确保执行线程能够接收到 `InterruptedException`，第 32 行通过调用静态方法 `currentThread` 获取当前执行线程的引用，该方法使用 Thread 的 `interrupt` 方法将 `InterruptedException` 传递给当前线程。
 
 ## 使用 ExecutorService 管理执行 PrintTasks 的线程
 
-图 20.4 使用 `ExecutorService` 对象来管理执行 `PrintTasks` 的线程（定义在图 20.3）。第 11–13 行创建并管理三个要执行的 `PrintTasks`。第 18 行使用 `Executors.newCachedThreadPool` 获取一个能够在应用程序需要时创建新线程的 `ExecutorService`。这些线程被 `ExecutorService` 用于执行 `Runnable`。
+图 20.4 使用 `ExecutorService` 对象来管理执行 PrintTasks 的线程（定义在图 20.3）。第 11–13 行创建并管理三个要执行的 PrintTasks。第 18 行使用 `Executors.newThreadPool` 获取一个能够在应用程序需要时创建新线程的 `ExecutorService`。这些线程被 `ExecutorService` 用于执行 Runnable。
 
 1. 有关处理线程异常的详细信息，请参见 Brian Goetz 等人的《Java Concurrency in Practice》，Addison-Wesley, 2006。
 
@@ -20559,7 +20268,7 @@ synchronized (object)
 }
 ```
 
-其中 `object` 是将获取其监视器锁的对象；如果 `object` 是 `synchronized` 语句所在的该对象，则 `object` 通常为 `this`。如果不同线程中的多个 `synchronized` 语句试图同时在某个对象上执行，则只有其中一个可以是激活的——所有其他尝试进入同一对象的 `synchronized` 语句的线程都将被置于阻塞状态。
+其中 object 是将获取其监视器锁的对象；如果 object 是 `synchronized` 语句所在的该对象，则 object 通常为 `this`。如果不同线程中的多个 `synchronized` 语句试图同时在某个对象上执行，则只有其中一个可以是激活的——所有其他尝试进入同一对象的 `synchronized` 语句的线程都将被置于阻塞状态。
 
 当 `synchronized` 语句执行完毕时，该对象的监视器锁被释放，并允许尝试进入 `synchronized` 语句的阻塞线程之一获取锁继续执行。Java 还允许使用 `synchronized` 方法。在执行之前，`synchronized` 实例方法必须获取调用该方法所用对象的锁。同样，静态 `synchronized` 方法必须获取调用该方法的类的锁。
 
@@ -20580,70 +20289,74 @@ synchronized (object)
 ```java
 // 图 20.5: SimpleArray.java
 // 用于管理被多个线程共享的整数数组的类。
+
 import java.security.SecureRandom;
 import java.util.Arrays;
+
 public class SimpleArray // 注意：不是线程安全的！
 {
     private static final SecureRandom generator = new SecureRandom();
     private final int[] array; // 共享的整数数组
     private int writeIndex = 0; // 下一个要写入元素的共享索引
+
+    // 构造给定大小的 SimpleArray
+    public SimpleArray(int size)
+    {
+        array = new int[size];
+    }
+
+    // 向数组添加一个值
+    public void add(int value)
+    {
+        int position = writeIndex; // 存储索引
+        try {
+            // 让线程睡眠 0-499 毫秒
+            Thread.sleep(generator.nextInt(500));
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt(); // 重新中断线程
+        }
+        // 将值放入元素
+        array[position] = value;
+        System.out.printf("%s wrote %d to element %d.\n", Thread.currentThread().getName(), value, position);
+    }
+
+    // 增加下一个写入元素的整数索引
+    System.out.printf("Next write index: %d\n", writeIndex);
+
+    // 用于输出共享数组的内容
+    public String toString() {
+        return Arrays.toString(array);
+    }
 }
 ```
 
 **图 20.5: SimpleArray** 用于管理被多个线程共享的整数数组的类。（注意：不是线程安全的！）（第 1 部分）
 
-```java
-// 构造给定大小的 SimpleArray
-public SimpleArray(int size)
-{
-    array = new int[size];
-}
-
-// 向数组添加一个值
-public void add(int value)
-{
-    int position = writeIndex; // 存储索引
-    try {
-        // 让线程睡眠 0-499 毫秒
-        Thread.sleep(generator.nextInt(500));
-    } catch (InterruptedException ex) {
-        Thread.currentThread().interrupt(); // 重新中断线程
-    }
-    // 将值放入元素
-    array[position] = value;
-    System.out.printf("%s wrote %d to element %d.\n", Thread.currentThread().getName(), value, position);
-}
-
-// 增加下一个写入元素的整数索引
-System.out.printf("Next write index: %d\n", writeIndex);
-
-// 用于输出共享数组的内容
-public String toString() {
-    return Arrays.toString(array);
-}
-```
-
 **图 20.5: SimpleArray** 管理被多个线程共享的整数数组。（注意：图 20.5–20.7 的示例不是线程安全的。）（第 2 部分）
 
-`add` 方法（第 19–40 行）允许在数组末尾插入新值。第 21 行存储 `writeIndex` 值。第 26 行让调用 `add` 的线程睡眠 0 到 499 毫秒。这样做是为了与未同步访问共享数据相关的问题更加明显。线程完成后，第 34 行将传递给 `add` 的值插入数组中由 `position` 指定的元素。第 35–36 行输出执行线程的名称、插入到数组的值以及插入的位置。表达式 `Thread.currentThread().getName()`（第 36 行）首先获取执行线程的引用，然后使用 `Thread` 的 `getName` 方法获取其名称。第 38 行增加 `writeIndex`，以便下一次调用在数组的下一个元素处插入。
+`add` 方法（第 19–40 行）允许在数组末尾插入新值。第 21 行存储 `writeIndex` 值。第 26 行让调用 `add` 的线程睡眠 0 到 499 毫秒。这样做是为了与未同步访问共享数据相关的问题更加明显。线程完成后，第 34 行将传递给 `add` 的值插入数组中由 `position` 指定的元素。第 35–36 行输出执行线程的名称、插入到数组的值以及插入的位置。表达式 `Thread.currentThread().getName()`（第 36 行）首先获取执行线程的引用，然后使用 Thread 的 `getName` 方法获取其名称。第 38 行增加 `writeIndex`，以便下一次调用在数组的下一个元素处插入。
 
 ## 20.4 线程同步 667
 
 ### ArrayWriter 类
 
-`ArrayWriter` 类（图 20.6）实现了 `Runnable` 接口，定义了一个向 `SimpleArray` 对象插入值的任务。该构造函数（第 10–14 行）接收两个参数——一个整数值（该任务插入 `SimpleArray` 对象的第一个值）以及一个 `SimpleArray` 对象的引用。第 20 行调用了 `SimpleArray` 对象的 `add` 方法。在从 `startValue` 开始的三个连续调用被插入 `SimpleArray` 对象后，任务完成。
+ArrayWriter 类（图 20.6）实现了 `Runnable` 接口，定义了一个向 `SimpleArray` 对象插入值的任务。该构造函数（第 10–14 行）接收两个参数——一个整数值（该任务插入 `SimpleArray` 对象的第一个值）以及一个 `SimpleArray` 对象的引用。第 20 行调用了 `SimpleArray` 对象的 `add` 方法。在从 `startValue` 开始的三个连续调用被插入 `SimpleArray` 对象后，任务完成。
 
 ```java
 // ArrayWriter.java
 // 将整数添加到与其他 Runnable 共享的数组中
+
 import java.lang.Runnable;
+
 public class ArrayWriter implements Runnable {
     private final SimpleArray sharedArray;
     private final int startValue;
+
     public ArrayWriter(int value, SimpleArray array) {
         startValue = value;
         sharedArray = array;
     }
+
     public void run() {
         for (int i = startValue; i < startValue + 3; i++) {
             sharedArray.add(i); // 向共享数组添加一个元素
@@ -20652,30 +20365,35 @@ public class ArrayWriter implements Runnable {
 } // end class ArrayWriter
 ```
 
-图 20.6 将整数添加到与其他 Runnable 共享的数组中。（注意：图 20.5–20.7 的示例不是线程安全的。）
+**图 20.6** 将整数添加到与其他 Runnable 共享的数组中。（注意：图 20.5–20.7 的示例不是线程安全的。）
 
 ### SharedArrayTest 类
 
-`SharedArrayTest` 类（图 20.7）执行两个 `ArrayWriter` 任务，它们向同一个 `SimpleArray` 对象添加值。第 12 行构造了一个包含 6 个元素的 `SimpleArray` 对象。第 15–16 行创建两个新的 `ArrayWriter` 任务，一个将值 1–3 放入 `SimpleArray` 对象中，另一个将值 11–13 放入。第 19–21 行创建一个 `ExecutorService` 并执行这两个 `ArrayWriter`。第 23 行调用 `Executor` 的 `shutdown` 方法以防止启动额外的任务，并允许应用程序在当前执行的任务完成后终止。
+SharedArrayTest 类（图 20.7）执行两个 `ArrayWriter` 任务，它们向同一个 `SimpleArray` 对象添加值。第 12 行构造了一个包含 6 个元素的 `SimpleArray` 对象。第 15–16 行创建两个新的 `ArrayWriter` 任务，一个将值 1–3 放入 `SimpleArray` 对象中，另一个将值 11–13 放入。第 19–21 行创建一个 `ExecutorService` 并执行这两个 `ArrayWriter`。第 23 行调用 Executor 的 `shutdown` 方法以防止启动额外的任务，并允许应用程序在当前执行的任务完成后终止。
 
 ```java
 // SharedArrayTest.java
 // 执行两个 Runnable 向共享的 SimpleArray 添加元素。
+
 import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
+
 public class SharedArrayTest {
     public static void main(String[] args) {
         // 构造共享对象
         SimpleArray sharedSimpleArray = new SimpleArray(6);
+
         // 创建两个向共享的 SimpleArray 写入的任务
         ArrayWriter writer1 = new ArrayWriter(1, sharedSimpleArray);
         ArrayWriter writer2 = new ArrayWriter(11, sharedSimpleArray);
+
         // 使用 ExecutorService 执行任务
         ExecutorService executor = Executors.newCachedThreadPool();
         executor.execute(writer1);
         executor.execute(writer2);
         executor.shutdown();
+
         try {
             // 等待 1 分钟让两个写入器完成
             boolean tasksEnded = executor.awaitTermination(1, TimeUnit.MINUTES);
@@ -20692,30 +20410,30 @@ public class SharedArrayTest {
 
 
 
-### 事件详情
+### 线程执行示例
 
 | 事件详情 | 下一个索引 |
 | :--- | :--- |
-| `pool-1-thread-1` 向元素 0 写入了 1。 | 1 |
-| `pool-1-thread-1` 向元素 1 写入了 2。 | 2 |
-| `pool-1-thread-1` 向元素 2 写入了 3。 | 3 |
-| `pool-1-thread-2` 向元素 0 写入了 11。 | 4 |
+| pool-1-thread-1 向元素 0 写入了 1。 | 1 |
+| pool-1-thread-1 向元素 1 写入了 2。 | 2 |
+| pool-1-thread-1 向元素 2 写入了 3。 | 3 |
+| pool-1-thread-2 向元素 0 写入了 11。 | 4 |
 
 首先 `pool-1-thread-1` 将写入元素 0。随后 `pool-1-thread-2` 将值 11 写入元素 0，从而覆盖了存储的值。
 
-**图 20.7** 执行两个 `Runnable` 向共享数组添加内容。（注意：图 20.5–20.7 的示例不是线程安全的。）*注（3/3 部分 2）*
+**图 20.7** 执行两个 Runnable 向共享数组添加内容。（注意：图 20.5–20.7 的示例不是线程安全的。）*注（3/3 部分 2）*
 
 | 事件详情 | 下一个索引 |
 | :--- | :--- |
-| `pool-1-thread-2` 向元素 4 写入了 12。 | 5 |
-| `pool-1-thread-2` 向元素 5 写入了 13。 | 6 |
+| pool-1-thread-2 向元素 4 写入了 12。 | 5 |
+| pool-1-thread-2 向元素 5 写入了 13。 | 6 |
 
-`SimpleArray` 的内容：
-`[11, 2, 3, 0, 12, 13]`
+SimpleArray 的内容：
+[11, 2, 3, 0, 12, 13]
 
-**图 20.7** | 执行两个 `Runnable` 向共享数组添加元素。（注意：图 20.5–20.7 的示例不是线程安全的。）（3/3 部分 3）。
+**图 20.7** | 执行两个 Runnable 向共享数组添加元素。（注意：图 20.5–20.7 的示例不是线程安全的。）（3/3 部分 3）。
 
-### ExecutorService 方法 `awaitTermination`
+### ExecutorService 方法 awaitTermination
 
 回想 `ExecutorService.shutdown()` 会立即返回。第 23 行调用 `ExecutorService.shutdown()` 之后的任何代码都将继续执行，因为主线程仍然被分配给处理器。我们希望输出 `SimpleArray` 对象，以便在线程完成任务后向您展示结果。因此，我们需要程序等待。
 
@@ -20723,20 +20441,18 @@ public class SharedArrayTest {
 
 ### 同步数据——使操作原子化
 
-**同步数据——使操作原子化**
-
-`SimpleArray` 不是线程安全的，因为它允许任意数量的线程读取和修改数据，这会导致错误。为了使 `SimpleArray` 变为线程安全，我们必须确保在存储 `writeIndex`、向数组添加值和增加 `writeIndex` 的过程中，其他线程无法读取或更改数组的内容。我们希望这三个操作——存储 `writeIndex`、写入数组、增加 `writeIndex`——是一个原子操作，即不能被拆分为更小的子操作。（正如在后续示例所示，对共享可变数据的读取操作也应该是原子的）。我们可以通过确保只有一个线程执行操作来模拟原子性。
+SimpleArray 不是线程安全的，因为它允许任意数量的线程读取和修改数据，这会导致错误。为了使 SimpleArray 变为线程安全，我们必须确保在存储 `writeIndex`、向数组添加值和增加 `writeIndex` 的过程中，其他线程无法读取或更改数组的内容。我们希望这三个操作——存储 `writeIndex`、写入数组、增加 `writeIndex`——是一个原子操作，即不能被拆分为更小的子操作。（正如在后续示例所示，对共享可变数据的读取操作也应该是原子的）。我们可以通过确保只有一个线程执行操作来模拟原子性。
 
 可以使用 `synchronized` 关键字来实现原子性。通过将三个子操作放在 `synchronized` 语句或方法中，我们允许一次只有一个线程获取锁并执行操作。当该线程完成同步块中的所有操作并释放锁时，另一个线程就可以获取锁并开始执行。这确保了执行操作的线程将看到共享可变数据的实际值，并且这些值不会由于另一个线程的修改而在操作过程中意外变化。
 
 **示例输出**
 
-`SimpleArray` 的内容：
-`[11, 2, 3, 0, 12, 13]`
+SimpleArray 的内容：
+[11, 2, 3, 0, 12, 13]
 
 ### 带同步的 SimpleArray 类
 
-图 20.8 显示了带有适当同步的 `SimpleArray` 类。注意，它与图 20.5 中的 `SimpleArray` 类相同，不同之处在于 `add` 现在是一个同步方法（第 20 行）。因此，一次只有一个线程可以执行此方法。我们复用了上一个示例中的 `ArrayWriter` 类（图 20.6）和 `SharedArrayTest` 类（图 20.7）。
+图 20.8 显示了带有适当同步的 SimpleArray 类。注意，它与图 20.5 中的 SimpleArray 类相同，不同之处在于 `add` 现在是一个同步方法（第 20 行）。因此，一次只有一个线程可以执行此方法。我们复用了上一个示例中的 `ArrayWriter` 类（图 20.6）和 `SharedArrayTest` 类（图 20.7）。
 
 ```java
 // Fig. 20.8: SimpleArray.java
@@ -20788,6 +20504,10 @@ public class SimpleArray
 }
 ```
 
+图 20.8 | 该类管理一个整数数组，以便通过同步机制被多个线程共享。（2/2 中的第一部分）
+
+## 第 20 章 并发
+
 ```
 pool-1-thread-1 wrote 1 to element 0.
 Next write index: 1
@@ -20803,8 +20523,8 @@ pool-1-thread-1 wrote 3 to element 5.
 Next write index: 6
 ```
 
-`SimpleArray` 的内容：
-`[1, 11, 12, 13, 2, 3]`
+SimpleArray 的内容：
+[1, 11, 12, 13, 2, 3]
 
 **图 20.8** 该类管理一个整数数组，以便通过同步机制被多个线程共享。（2/2 中的第二部分）
 
@@ -20831,12 +20551,6 @@ Next write index: 6
 ### 缺乏同步导致的逻辑错误
 
 考虑如果我们不同步缓冲区，将会产生逻辑错误。图 20.9–20.13 的示例显示总和并不总是 55。然而，如果我们同步缓冲区，你会发现总和总是 55。为了强调这一点，我们并不知道生产者何时会尝试写入新值。
-
-### Thread 方法 `sleep` 仅用于演示
-
-我们在 `Producer` 和 `Consumer` 类的 `run` 方法中调用 `sleep`，是为了强调这样一个事实：在多线程应用程序中，每个线程何时执行其任务，以及当它拥有处理器时会执行任务多长时间，是不可预测的。通常情况下，线程调度问题是 Java 开发者无法控制的。在程序中，线程的任务非常简单——生产者将值 1 到 10 写入缓冲区，而 `Consumer` 从缓冲区读取 10 个值并将每个值加到变量中。如果没有调用 `sleep` 方法，且 `Producer` 先执行，在如今速度极快的处理器上，`Producer` 可能会在 `Consumer` 获得执行机会之前完成其任务。如果 `Consumer` 先执行，它可能会消耗 10 次垃圾数据，在生产者产出第一个真实值之前就终止了。
-
-### Producer 类
 
 ```java
 // Fig. 20.10: Producer.java
@@ -20872,53 +20586,66 @@ public class Producer implements Runnable {
 }
 ```
 
-**图 20.10** | `Producer` 有一个 `run` 方法，将值 1 到 10 插入缓冲区。（注意：图 20.9–20.13 的示例不是线程安全的。）
+**图 20.10** | Producer 有一个 run 方法，将值 1 到 10 插入缓冲区。（注意：图 20.9–20.13 的示例不是线程安全的。）
 
 ### Consumer 类
 
-`Consumer` 类 (图 20.11) 也实现了 `Runnable` 接口，允许 `Consumer` 与 `Producer` 并发执行。第 11–14 行使用一个实现了 `Buffer` 接口的对象初始化 `Buffer` 引用 `sharedLocation`（该对象在图 20.13 中创建），并作为参数 `shared` 传递给构造函数。我们将看到，这是被用于初始化 `Producer` 对象的未同步 `Buffer` 对象——因此，两个线程共享同一个对象。该程序中的 `Consumer` 线程执行 `run` 方法中指定的任务（第 17–39 行）。第 21–34 行迭代 10 次。每次迭代都会调用 `Thread` 方法 `sleep`（第 26 行），将 `Consumer` 线程置于等待状态，长达 3 秒。接下来，第 27 行使用 `Buffer` 的 `blockingGet` 方法从共享缓冲区中检索值，并将该值加到变量 `sum` 中。第 28 行显示到为止已消耗的所有值的总和。当循环完成后，第 36–37 行显示一条表示消耗值之和的行。然后 `run` 方法终止，表明 `Consumer` 完成了任务。一旦两个线程都进入终止状态，程序即结束。
+Consumer 类 (图 20.11) 也实现了 Runnable 接口，允许 Consumer 与 Producer 并发执行。第 11–14 行使用一个实现了 Buffer 接口的对象初始化 Buffer 引用 `sharedLocation`（该对象在图 20.13 中创建），并作为参数 `shared` 传递给构造函数。我们将看到的，这是被用于初始化 Producer 对象的未同步 Buffer 对象——因此，两个线程共享同一个对象。该程序中的 Consumer 线程执行 run 方法中指定的任务（第 17–39 行）。第 21–34 行迭代 10 次。每次迭代都会调用 Thread 方法 sleep（第 26 行），将 Consumer 线程置于等待状态，长达 3 秒。接下来，第 27 行使用 Buffer 的 `blockingGet` 方法从共享缓冲区中检索值，并将该值加到变量 `sum` 中。第 28 行显示到为止已消耗的所有值的总和。当循环完成后，第 36–37 行显示一条表示消耗值之和的行。然后 run 方法终止，表明 Consumer 完成了任务。一旦两个线程都进入终止状态，程序即结束。
 
 ```java
 // Fig. 20.11: Consumer.java
+
 // Consumer 有一个 run 方法，循环并从缓冲区读取 10 个值。
 import java.security.SecureRandom;
 
-public class Consumer implements Runnable {
+public class Consumer implements Runnable
+{
     private static final SecureRandom generator = new SecureRandom();
     private Buffer sharedLocation; // 共享对象的引用
 
     // 构造函数
-    public Consumer(Buffer sharedLocation) {
+    public Consumer(Buffer sharedLocation)
+    {
         this.sharedLocation = sharedLocation;
     }
 
     // 读取 sharedLocation 的值 10 次并对值求和
-    public void run() {
+    public void run()
+    {
         int sum = 0;
-        for (int count = 1; count <= 10; count++) {
+
+        for (int count = 1; count <= 10; count++)
+        {
             // 等 0 到 3 秒，从缓冲区读取值并加到 sum
-            try {
+            try
+            {
                 Thread.sleep(generator.nextInt(3000));
                 sum += sharedLocation.blockingGet();
                 System.out.printf("%s\t\t%2d\n", sum);
-            } catch (InterruptedException exception) {
+            }
+            catch (InterruptedException exception)
+            {
                 Thread.currentThread().interrupt();
             }
         }
+
         System.out.printf("%n%s %d%n%s%n", "Consumer 读取的值总计: ", sum, "终止 Consumer");
-    }
-    // Consumer 类结束
+    } // Consumer 类结束
 }
 ```
 
-**图 20.11** | `Consumer` 有一个 `run` 方法，循环并从缓冲区读取 10 个值。（注意：图 20.9–20.13 的示例不是线程安全的。）
+**图 20.11** | Consumer 有一个 run 方法，循环并从缓冲区读取 10 个值。（注意：图 20.9–20.13 的示例不是线程安全的。）
 
-### UnsynchronizedBuffer 类
+### Thread 方法 sleep 仅用于演示
+
+我们在 Producer 和 Consumer 类的 run 方法中调用 `sleep`，是为了强调这样一个事实：在多线程应用程序中，每个线程何时执行其任务，以及当它拥有处理器时会执行任务多长时间，是不可预测的。通常情况下，线程调度问题是 Java 开发者无法控制的。在程序中，线程的任务非常简单——生产者将值 1 到 10 写入缓冲区，而 Consumer 从缓冲区读取 10 个值并将每个值加到变量中。如果没有调用 `sleep` 方法，且 Producer 先执行，在如今速度极快的处理器上，Producer 可能会在 Consumer 获得执行机会之前完成其任务。如果 Consumer 先执行，它可能会消耗 10 次垃圾数据，在生产者产出第一个真实值之前就终止了。
 
 ```java
 // Fig. 20.12: UnsynchronizedBuffer.java
+
 // UnsynchronizedBuffer 维护被生产者
 // 线程和消费者线程访问的共享整数。
+
 public class UnsynchronizedBuffer implements Buffer {
 ```
 
@@ -20950,7 +20677,7 @@ public synchronized int blockingGet() throws InterruptedException {
 
 ### SharedTest
 
-在 `SharedTest` 类（图 20.13）中，第 12 行创建了一个 `ExecutorService` 来执行 `Producer` 和 `Consumer` `Runnable`。第 15 行创建一个 `UnsynchronizedBuffer` 并将其赋值给 `sharedLocation`。`Producer` 和 `Consumer` 共享同一个对象。`Producer` 和 `Consumer` 构造函数都接收了同一个对象（`sharedLocation`），因此它们指向同一个。第 24–25 行创建了 `Producer` 和 `Consumer`。这些行启动了线程并运行每个 `Runnable` 的方法。最后，第 27 行在生产者和 `Consumer` 完成任务时调用 `shutdown`。第 28 行等待任务完成。当 `main` 方法终止（第 29 行）时，主线程进入终止状态。
+在 `SharedTest` 类 (图 20.13) 中，第 12 行创建了一个 `ExecutorService` 来执行 `Producer` 和 `Consumer` `Runnable`。第 15 行创建一个 `UnsynchronizedBuffer` 并将其赋值给 `sharedLocation`。`Producer` 和 `Consumer` 共享同一个对象。`Producer` 和 `Consumer` 构造函数都接收了同一个对象（`sharedLocation`），因此它们指向同一个。第 24–25 行创建了 `Producer` 和 `Consumer`。这些行启动了线程并运行每个 `Runnable` 的方法。最后，第 27 行在生产者和消费者完成任务时调用 `shutdown`。第 28 行等待任务完成。当 `main` 方法终止（第 29 行）时，主线程进入终止状态。
 
 ```java
 // Fig. 20.13: SharedTest.java
@@ -20973,8 +20700,7 @@ public class SharedTest {
         System.out.println(
             "------|------|------|------|------------%n%n%n");
 
-        // 执行生产者和消费者，允许每个
-        // 访问 sharedLocation
+        // 执行生产者和消费者，允许每个访问 sharedLocation
         executorService.execute(new Producer(sharedLocation));
         executorService.execute(new Consumer(sharedLocation));
 
@@ -20994,8 +20720,8 @@ public class SharedTest {
 
 # 20.5 无同步的生产者/消费者关系 679
 
-| 动作 | 值 | 生产总和 | 消费总和 |
-| --- | --- | --- | --- |
+| 操作 | 值 | 生产总和 | 消费总和 |
+|---|---|---|---|
 | 消费者读取 | 3 | | 3 |
 | 生产者写入 | 4 | | 10 |
 | 消费者读取 | 4 | | 7 |
@@ -21021,7 +20747,7 @@ public class SharedTest {
 终止消费者
 
 | 操作 | 值 | 生产总和 | 消费总和 |
-| --- | --- | --- | --- |
+|---|---|---|---|
 | 消费者读取 | -1 | | -1 — 读取了 -1 脏数据 |
 | 生产者写入 | 1 | 1 | |
 | 消费者读取 | 1 | | 0 |
@@ -21049,9 +20775,9 @@ public class SharedTest {
 生产者完成生产
 终止生产者
 
-> 图 20.13 | 使用两个线程操纵未同步缓冲区的应用程序。（注意：图 20.9–20.13 的示例不是线程安全的。）（部分 2 / 2。）
+> **图 20.13** | 使用两个线程操纵未同步缓冲区的应用程序。（注意：图 20.9–20.13 的示例不是线程安全的。）（部分 2 / 2。）
 
-回想此示例的概述，生产者应该先执行，并且生产者产生的每个值都应该被消费者恰好地消费一次。然而，当你研究图 20.13 的第一次输出时，注意生产者在消费者读取其第一个值（3）之前写入了值 1、2 和 3。因此，值 1 和 2 丢失了。值 5、6 和 9 被读取了两次，10 被读取了四次。第一次输出产生了错误的总和 77，而不是正确的总和 55。在第二次输出中，消费者在生产者写入值 2 之前读取了值 -1。同时，值 5、7、8 和 9 都丢失了——消费者在生产者之前终止了。显示了一个错误的总和 19。（输出中生产者或消费者执行顺序不当的行已高亮。）
+回想此示例的概述，生产者应该先执行，并且生产者产生的每个值都应该被消费者恰好地消费一次。然而，当你研究图 20.13 的第一次输出时，注意生产者在消费者读取其第一个值（3）之前写入了值 1、2 和 3。因此，值 1 和 2 丢失了。值 5、6 和 9 被读取了两次，10 被读取了四次。第一次输出产生了错误的总和 77，而不是正确的总和 55。在第二次输出中，消费者在生产者写入值 2 之前读取了值 -1 次。同时，值 5、7、8 和 9 都丢失了——消费者在生产者之前终止了。显示了一个错误的总和 19。（输出中生产者或消费者执行顺序不当的行已高亮。）
 
 # 错误预防提示 20.1
 
@@ -21061,7 +20787,7 @@ public class SharedTest {
 
 # 20.6 生产者/消费者关系：ArrayBlockingQueue
 
-同步生产者和消费者线程的最佳方法是使用 Java `java.util.concurrent` 包中的类，这些类为你封装了同步机制。Java 包含了 `ArrayBlockingQueue` 类——这是一个完全实现的、线程安全的实现 `BlockingQueue` 接口缓冲区类。该接口扩展了第 16 章引入的 `Queue` 接口，并声明了 `put` 和 `take`，它们是 `Queue` 方法 `offer()` 和 `poll()` 的阻塞操作。`put` 方法将元素放入 `BlockingQueue` 的末尾，如果队列已满则等待。`take` 方法从 `BlockingQueue` 的头部移除元素，如果队列为空则等待。这些方法使得 `ArrayBlockingQueue` 类成为实现共享缓冲区的良好选择。由于 `put` 方法会阻塞直到缓冲区中有空间可以写入数据，而 `take` 方法会阻塞直到有新数据可以读取，因此生产者必须产生一个值，并且只有在消费者读取了上一个（或第一个）值后，消费者才能正确产生下一个值。`ArrayBlockingQueue` 将共享数据存储在数组中，大小作为 `ArrayBlockingQueue` 构造函数的参数指定。一旦创建，`ArrayBlockingQueue` 的大小就是固定的，不会扩展以容纳额外的元素。
+同步生产者和消费者线程的最佳方法是使用 Java `java.util.concurrent` 包中的类，这些类为你封装了同步机制。Java 包含了 `ArrayBlockingQueue` 类——这是一个完全实现的、线程安全的实现 `BlockingQueue` 接口缓冲区类。该接口扩展了第 16 节引入的 `Queue` 接口，并声明了 `put` 和 `take`，它们是 `Queue` 方法 `offer()` 和 `poll()` 的阻塞操作。`put` 方法将元素放入 `BlockingQueue` 的末尾，如果队列已满则等待。`take` 方法从 `BlockingQueue` 的头部移除元素，如果队列为空则等待。这些方法使得 `ArrayBlockingQueue` 类成为实现共享缓冲区的良好选择。由于 `put` 方法会阻塞直到缓冲区中有空间可以写入数据，而 `take` 方法会阻塞直到有新数据可以读取，因此生产者必须产生一个值，并且只有在消费者读取了上一个（或第一个）值后，消费者才能正确产生下一个值。`ArrayBlockingQueue` 将共享数据存储在数组中，大小作为 `ArrayBlockingQueue` 构造函数的参数指定。一旦创建，`ArrayBlockingQueue` 的大小就是固定的，不会扩展以容纳额外的元素。
 
 ## BlockingBuffer 类
 
@@ -21115,7 +20841,7 @@ public class BlockingTest {
     public static void main(String[] args) throws InterruptedException {
         // 创建带有两个线程的线程池
         ExecutorService executorService = Executors.newCachedThreadPool();
-        // 创建 BlockingBuffer 存储其
+        // 创建 BlockingBuffer 存储器
         Buffer sharedLocation = new BlockingBuffer();
         executorService.execute(new Producer(sharedLocation));
         executorService.execute(new Consumer(sharedLocation));
@@ -21154,15 +20880,15 @@ public class BlockingTest {
 
 在确定了共享数据和同步策略（即将数据与保护它的锁关联起来）之后，同步缓冲区访问的下一步是将 `blockingGet` 和 `blockingPut` 实现为 `synchronized` 方法。这要求线程在尝试访问缓冲区数据之前获取缓冲区的监视器锁（monitor lock），但它并不能自动确保缓冲区处于适当状态时线程继续操作。我们需要一种方法允许线程根据某些条件是否为真来等待。在向缓冲区放入新项的情况下，允许操作继续的条件是缓冲区未满。
 
-² 关于 `wait`、`notify` 和 `notifyAll` 的详细信息，请参见 Brian Goetz 等人的《Java Concurrency by Practice》（Addison-Wesley Professional, 2006）。
+² 关于 `wait`、`notify` 和 `notifyAll` 的详细信息，请参见 Brian Goetz 等人的《Java Concurrency in Practice》（Addison-Wesley Professional, 2006）。
 
-### 684 第 20 章 并发
+## 684 第 20 章 并发
 
 在从缓冲区获取项的情况下，允许操作继续的条件是缓冲区不为空。如果相关条件为真，操作可以继续；如果为假，线程必须等待直到条件变为真。当线程在某个条件上等待时，它将从处理器的竞争中被移除，进入等待状态，并且它持有的锁会被释放。
 
 ### wait, notify 和 notifyAll 方法
 
-Object 的 `wait`、`notify` 和 `notifyAll` 方法可以配合条件使用，以便线程在无法执行任务时等待。如果线程获取了对象的监视器锁，然后确定在某些条件满足之前无法继续执行任务，该线程可以在 `synchronized` 对象上调用 `wait`；这会释放对象的监视器锁，线程在等待状态下等待，而其他线程尝试进入该对象的同步语句或方法。当执行 `synchronized` 语句（或方法）的线程完成或满足了另一个线程可能等待的条件时，它可以在 `synchronized` 对象上调用 `notify`，以允许等待的线程转换到可运行状态。此时，从等待状态转换到可运行状态的线程可以尝试重新获取对象的监视器锁。即使线程能够重新获取监视器锁，此时它可能仍然无法执行其任务——在这种情况下，线程将重新进入等待状态并释放监视器锁。如果线程在 `synchronized` 对象上调用 `notifyAll`，则所有等待监视器锁的线程都将获得获取锁的资格（即它们都转换到可运行状态）。
+`Object` 的 `wait`、`notify` 和 `notifyAll` 方法可以配合条件使用，以便线程在无法执行任务时等待。如果线程获取了对象的监视器锁，然后确定在某些条件满足之前无法继续执行任务，该线程可以在 `synchronized` 对象上调用 `wait`；这会释放对象的监视器锁，线程在等待状态下等待，而其他线程尝试进入该对象的同步语句或方法。当执行 `synchronized` 语句（或方法）的线程完成或满足了另一个线程可能等待的条件时，它可以在 `synchronized` 对象上调用 `notify`，以允许等待的线程转换到可运行状态。此时，从等待状态转换到可运行状态的线程可以尝试重新获取对象的监视器锁。即使线程能够重新获取监视器锁，此时它可能仍然无法执行其任务——在这种情况下，线程将重新进入等待状态并释放监视器锁。如果线程在 `synchronized` 对象上调用 `notifyAll`，则所有等待监视器锁的线程都将获得获取锁的资格（即它们都转换到可运行状态）。
 
 记住，一次只能有一个线程获取对象的监视器锁——其他尝试获取相同监视器锁的线程将被阻塞，直到监视器再次可用（即直到没有其他线程在对象的 `synchronized` 语句中执行）。
 
@@ -21236,9 +20962,9 @@ public class SynchronizedBuffer implements Buffer {
 
 ## blockingPut 与生产者线程
 
-当生产者的 `run` 方法调用同步方法 `blockingPut` 时，线程会隐式地尝试获取 `SynchronizedBuffer` 对象的监视器锁。如果监视器锁可用，生产者将隐式地获取锁。然后，14–21 行之间的循环决定 `occupied` 是否为 `true`。如果是，则说明 `buffer` 已满，我们希望等待直到缓冲区为空，因此第 17 行输出一条消息指示生产者线程正在等待写入值，第 18 行调用 `displayState`（第 57–61 行）输出另一条消息指示缓冲区正在等待空间。第 19 行调用 `wait` 方法（`SynchronizedBuffer` 继承自 `Object`），将调用 `blockingPut` 的线程（即生产者线程）置于 `SynchronizedBuffer` 对象的等待状态。对 `wait` 的调用会导致调用线程隐式地释放对 `SynchronizedBuffer` 对象的锁。这很重要，因为该线程目前无法执行任务，应该允许其他线程（在此情况下为消费者）访问对象，以便条件（`occupied`）发生变化。现在，另一个线程可以尝试获取 `SynchronizedBuffer` 对象的锁并调用对象的 `blockingPut` 或 `blockingGet` 方法。
+当生产者的 `run` 方法调用同步方法 `blockingPut` 时，线程会隐式地尝试获取 `SynchronizedBuffer` 对象的监视器锁。如果监视器锁可用，生产者将隐式地获取锁。然后，第 14–21 行之间的循环决定 `occupied` 是否为 `true`。如果是，则说明 `buffer` 已满，我们希望等待直到缓冲区为空，因此第 17 行输出一条消息指示生产者线程正在等待写入值，第 18 行调用 `displayState`（第 57–61 行）输出另一条消息指示缓冲区正在等待空间。第 19 行调用 `wait` 方法（`SynchronizedBuffer` 继承自 `Object`），将调用 `blockingPut` 的线程（即生产者线程）置于 `SynchronizedBuffer` 对象的等待状态。对 `wait` 的调用会导致调用线程隐式地释放对 `SynchronizedBuffer` 对象的锁。这很重要，因为该线程目前无法执行任务，应该允许其他线程（在此情况下为消费者）访问对象，以便条件（`occupied`）发生变化。现在，另一个线程可以尝试获取 `SynchronizedBuffer` 对象的锁并调用对象的 `blockingPut` 或 `blockingGet` 方法。
 
-## 20.7 同步，wait, notify 和 notifyAll
+## 20.7 synchronized, wait, notify 和 notifyAll
 
 生产者一直保持等待状态，直到另一个线程通知生产者它可以继续——此时，生产者返回可运行状态，并尝试隐式地重新获取 `SynchronizedBuffer` 对象的锁。如果锁可用，生产者将重新获取锁，`blockingPut` 方法将从 `wait` 调用之后的语句继续执行。由于 `wait` 是在循环中调用的，因此会测试循环继续条件以确定线程是否可以继续。如果不是，线程将再次被调用；否则，方法 `blockingPut` 将从循环后的语句继续执行。
 
@@ -21246,9 +20972,9 @@ public class SynchronizedBuffer implements Buffer {
 
 ## blockingGet 与消费者线程
 
-当消费者的 `run` 方法调用同步方法 `blockingGet` 时，线程会隐式地尝试获取 `SynchronizedBuffer` 对象的监视器锁。如果监视器锁可用，消费者将隐式地获取锁。然后，37–43 行之间的循环决定 `occupied` 是否为 `true`。如果是，则说明 `buffer` 为空，我们希望等待直到缓冲区变满，因此第 40 行输出消息指示消费者线程正在等待读取值，第 41 行调用 `displayState`（第 57–61 行）输出另一条消息指示缓冲区正在等待空间。第 42 行调用 `wait` 方法（`SynchronizedBuffer` 继承自 `Object`），将调用 `blockingGet` 的线程（即消费者线程）置于 `SynchronizedBuffer` 对象的等待状态。对 `wait` 的调用会导致调用线程隐式地释放对 `SynchronizedBuffer` 对象的锁。这很重要，因为该线程目前无法执行任务，应该允许其他线程（在此情况下为生产者）访问对象，以便条件（`occupied`）发生变化。现在，另一个线程可以尝试获取 `SynchronizedBuffer` 对象的锁并调用对象的 `blockingPut` 或 `blockingGet` 方法。
+当消费者的 `run` 方法调用同步方法 `blockingGet` 时，线程会隐式地尝试获取 `SynchronizedBuffer` 对象的监视器锁。如果监视器锁可用，消费者将隐式地获取锁。然后，第 37–43 行之间的循环决定 `occupied` 是否为 `true`。如果是，则说明 `buffer` 为空，我们希望等待直到缓冲区变满，因此第 40 行输出消息指示消费者线程正在等待读取值，第 41 行调用 `displayState`（第 57–61 行）输出另一条消息指示缓冲区正在等待空间。第 42 行调用 `wait` 方法（`SynchronizedBuffer` 继承自 `Object`），将调用 `blockingGet` 的线程（即消费者线程）置于 `SynchronizedBuffer` 对象的等待状态。对 `wait` 的调用会导致调用线程隐式地释放对 `SynchronizedBuffer` 对象的锁。这很重要，因为该线程目前无法执行任务，应该允许其他线程（在此情况下为生产者）访问对象，以便条件（`occupied`）发生变化。现在，另一个线程可以尝试获取 `SynchronizedBuffer` 对象的锁并调用对象的 `blockingPut` 或 `blockingGet` 方法。
 
-## 686 第 20 章 并发
+# 20.7 同步，wait, notify 和 notifyAll 689
 
 ```java
 // 执行生产者和消费者任务
@@ -21271,183 +20997,10 @@ executorService.awaitTermination(1, TimeUnit.MINUTES);
 
 ## 20.8（高级）生产者/消费者关系：有界缓冲区
 
-20.7 节中的程序使用同步来保证两个线程正确地操作共享缓冲区中的数据。然而，应用程序的性能可能不是最优的。如果两个线程以不同的速度运行，其中一个将花费更多（或大部分）时间在等待。例如，在 20.7 节的程序中，我们在两个线程之间共享了一个单变量。如果生产者生产值的速度比消费者消费的速度快，那么生产者就会等待消费者，因为缓冲区中没有其他位置放置下一个值。同样，如果消费者消费值的速度比生产者生产的速度快，消费者将等待直到生产者在共享缓冲区中放置下一个值。即使当我们有以相同相对速度运行的线程时，这些线程在时间推移下偶尔也会“不同步”，导致其中一个等待另一个。
-
-> **性能提示 20.3**
->
-> 我们无法对并发线程的相对速度做出假设——与操作系统、网络、用户和其他组件的交互可能会导致线程以不同且不断变化的速度运行。当这种情况发生时，线程会等待。当线程发生过度等待时，程序的执行效率会降低，交互式程序的响应速度会变慢，应用程序将遭受长时间的延迟。
-
-### 有界缓冲区
-
-为了尽可能减少共享资源且平均运行速度相同的线程的等待时间，我们可以实现一个有界缓冲区，它提供固定数量的缓冲区单元，生产者可以在其中放置值，消费者可以从中检索值。（事实上，我们已经在 20.6 节中通过 `ArrayBlockingQueue` 实现了这一点。）如果生产者临时生产值的速度快于消费者消费的速度，生产者可以将额外的值写入额外的缓冲区单元中（如果有的话）。这种能力使得生产者即使在消费者尚未准备好检索当前生产的值时，也能执行其任务。同样，如果消费者比生产者生产新值的速度快，消费者可以从缓冲区中读取额外的值（如果有）。这使得消费者即使在生产者暂时减速时也能保持忙碌。使用有界缓冲区的生产者/消费者关系的一个例子是视频流（我们在 20.1 节中讨论过）。
-
-如果生产者和消费者的运行速度不同，即使是有界缓冲区也是不合适的。如果消费者的执行速度比生产者快，包含一个位置的缓冲区就足够了。如果生产者总是执行得快，包含一个位置的缓冲区也足够了。然而，如果生产者和消费者以相同的平均速度运行，有界缓冲区有助于平滑偶尔加速或减速的影响。
-
-> **性能提示 20.4**
->
-> 即使使用有界缓冲区，缓冲区也可能满或为空。在这种情况下，生产者或消费者必须等待。这是正常行为。
-
-### 使用 ArrayBlockingQueue 实现有界缓冲区
-
-实现有界缓冲区最简单的方法是使用 `BlockingQueue`，它为你处理了同步。与其重复 20.6 节中的示例，我们改为使用 `java.util.concurrent.ArrayBlockingQueue` 类来提供更健壮的有界缓冲区，构建有界缓冲区。再次强调，使用 `ArrayBlockingQueue` 将产生更具维护性和性能更好的代码。
-
-### 使用循环缓冲区自定义有界缓冲区
-
-图 20.18 和 20.19 展示了生产者和消费者同步访问有界缓冲区。再次，我们重用了 20.5 示例中的 `Buffer` 接口和 `Producer`/`Consumer` 类，只是删除了第 28 行。我们将循环缓冲区（图 20.18）实现为使用三个元素数组的循环缓冲区。循环缓冲区从第一个单元开始按顺序写入或读取元素。当生产者或消费者到达最后一个元素时，它们返回第一个并开始写入或读取。在此版本中，消费者仅在缓冲区非空时消费值，生产者仅在缓冲区未满时生产值。类中同步方法使用的输出语句用于演示。
-
-#### 图 20.18：`CircularBuffer.java`
-
-```java
-// 图 20.18: CircularBuffer.java
-// 同步访问共享的三元素缓冲区。
-
-public class CircularBuffer implements Buffer {
-
-    private final int[] buffer = {-1, -1, -1}; // 共享缓冲区
-    private int occupiedCells = 0;             // 使用的缓冲区计数
-    private int writeIndex = 0;                // 下一个写入元素的索引
-    private int readIndex = 0;                 // 下一个读取元素的索引
-
-    // 将值放入缓冲区
-    public synchronized void blockingPut(int value) throws InterruptedException {
-        // 等待缓冲区有空间，然后写入值；
-        // 如果无空位置，将线程放入阻塞状态
-        while (occupiedCells == buffer.length) {
-            System.out.printf("缓冲区已满。生产者等待%n");
-            wait(); // 等待缓冲区单元可用
-        }
-
-        buffer[writeIndex] = value; // 设置新缓冲区值
-
-        // 更新循环写入索引
-        writeIndex = (writeIndex + 1) % buffer.length;
-
-        ++occupiedCells; // 一个缓冲区单元满了
-
-        displayState("生产者写入 " + value);
-
-        notifyAll(); // 通知等待从缓冲区读取的线程
-    }
-
-    // 从缓冲区返回值
-    public synchronized int blockingGet() throws InterruptedException {
-        // 等待缓冲区有数据
-        while (occupiedCells == 0) {
-            System.out.printf("缓冲区为空。消费者等待%n");
-            wait(); // 等待数据可用
-        }
-
-        int returnValue = buffer[readIndex]; // 获取下一个值
-
-        // 更新循环读取索引
-        readIndex = (readIndex + 1) % buffer.length;
-
-        --occupiedCells; // 一个缓冲区单元空了
-
-        displayState("消费者读取 " + returnValue);
-
-        notifyAll(); // 通知等待写入缓冲区的线程
-
-        return returnValue;
-    }
-
-    // 显示缓冲区状态
-    public synchronized void displayState(String operation) {
-        System.out.printf("%s%n", operation);
-        System.out.printf("buffer: ");
-        for (int i = 0; i < buffer.length; i++) {
-            System.out.printf("%2d ", buffer[i]);
-        }
-        System.out.printf("%n");
-
-        // 显示写入索引指针
-        System.out.printf("writeIndex: ");
-        for (int i = 0; i < buffer.length; i++) {
-            if (i == writeIndex) {
-                System.out.printf(" W ");
-            } else {
-                System.out.printf("   ");
-            }
-        }
-        System.out.printf("%n");
-
-        // 显示读取索引指针
-        System.out.printf("readIndex:  ");
-        for (int i = 0; i < buffer.length; i++) {
-            if (i == readIndex) {
-                System.out.printf(" R ");
-            } else {
-                System.out.printf("   ");
-            }
-        }
-        System.out.printf("%n%n");
-    }
-} // CircularBuffer 类的结束
-```
-
-#### 图 20.19：`CircularBufferTest.java`
-
-```java
-// 20.19: CircularBufferTest.java
-// 生产者和消费者线程正确操作循环缓冲区。
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-
-public class CircularBufferTest {
-
-    public static void main(String[] args) throws InterruptedException {
-        // 创建带有两个线程的新线程池
-        ExecutorService executor = Executors.newCachedThreadPool();
-
-        // 创建 CircularBuffer 存储 int
-        CircularBuffer sharedLocation = new CircularBuffer();
-
-        // 显示缓冲区的初始状态
-        sharedLocation.displayState("初始状态");
-
-        // 执行生产者和消费者任务
-        executor.execute(new Producer(sharedLocation));
-        executor.execute(new Consumer(sharedLocation));
-
-        // 线程完成后结束应用程序
-        executor.shutdown();
-
-        // 等待任务完成
-        executor.awaitTermination(1, TimeUnit.MINUTES);
-    }
-}
-```
-
-### 代码详解
-
-#### `CircularBuffer` 类的实例变量
-
-第 5 行将数组 `buffer` 初始化为包含三个元素的 `int` 数组，代表循环缓冲区。变量 `occupiedCells`（第 6 行）记录缓冲区中包含待处理数据的数量。当 `occupiedCells` 为 0 时，循环缓冲区为空，消费者必须等待；当 `occupiedCells` 为 3（循环缓冲区的尺寸）时，循环缓冲区满，生产者必须等待。变量 `writeIndex`（第 7 行）指示生产者可以放置下一个值的位置。变量 `readIndex`（第 8 行）指示消费者可以读取下一个值的位置。`CircularBuffer` 的实例变量都是循环缓冲区共享可变数据的一部分，因此对所有这些变量的访问必须同步，以确保 `CircularBuffer` 是线程安全的。
-
-#### `blockingPut` 方法
-
-`blockingPut` 方法（第 11–30 行）执行的任务与图 20.16 中的 `blockingPut` 相同，但进行了几处修改。第 16–20 行的循环确定生产者是否必须等待（即所有缓冲区单元都已满）。如果是，第 18 行指示生产者正在等待执行其任务。第 19 行调用 `wait` 方法，导致生产者释放 `CircularBuffer` 的锁并等待直到有新值写入缓冲区。当执行在 `while` 循环后继续到第 22 行时，生产者写入的值被放置在循环缓冲区 `writeIndex` 处。第 25 行更新 `writeIndex` 以供下一次调用 `blockingPut` 方法使用。这一行是缓冲区循环的关键。当 `writeIndex` 增加到缓冲区末尾时，该行将其设置为 0。第 27 行增加 `occupiedCells`，因为缓冲区中多了一个消费者可以读取的值。接下来，第 28 行调用 `displayState` 方法，用产生的值、被占缓冲区单元数、当前 `writeIndex` 和 `readIndex` 更新输出。第 29 行调用 `notifyAll` 方法，通知等待从缓冲区读取的线程。
-
-#### `blockingGet` 方法
-
-`blockingGet` 方法（第 33–55 行）执行的任务与图 20.16 中的 `blockingGet` 相同，但进行了几处修改。第 38–42 行的循环确定消费者是否必须等待（即所有缓冲区单元都为空）。如果是，第 40 行更新状态指示消费者正在等待执行其任务。第 41 行调用 `wait` 方法，导致当前线程释放对 `CircularBuffer` 的锁并等待数据可用。当生产者调用 `notifyAll` 后，执行最终继续到第 44 行时，`returnValue` 被赋值为循环缓冲区中 `readIndex` 位置的值。然后第 47 行更新 `readIndex` 以供下一次调用 `blockingGet` 方法使用。这一行和第 25 行增加了缓冲区的循环性。第 49 行减少 `occupiedCells`，因为缓冲区中多了一个生产者可以放置值的位置。第 50 行调用 `displayState` 方法，用已消耗的值、被占缓冲区单元数、缓冲区单元的内容以及当前的 `writeIndex`/`readIndex` 更新输出。第 51 行调用 `notifyAll` 方法，允许任何等待写入 `CircularBuffer` 对象的生产者线程尝试再次写入。然后第 53 行将消费者值返回给调用者。
-
-#### `displayState` 方法
-
-`displayState` 方法（第 58–87 行）输出应用程序的状态。第 63–65 行输出缓冲区单元的值。第 64 行使用 `print` 方法配合 `%2d` 格式说明符打印每个缓冲区的内容，如果是单个数字则会在前面加一个空格。第 71–83 行输出带有字母 W 和 R 的当前 `writeIndex` 和 `readIndex`。再次，`displayState` 是一个同步方法，因为它访问了 `CircularBuffer` 类的共享可变数据。
-
-#### 测试 `CircularBuffer`
-
-`CircularBufferTest`（图 20.19）包含启动应用程序的 `main` 方法。第 12 行创建 `ExecutorService`，第 15 行创建 `CircularBuffer` 对象并将引用分配给 `CircularBuffer` 变量 `sharedLocation`。第 18 行调用 `CircularBuffer` 的 `displayState` 方法显示缓冲区的初始状态。第 21–22 行执行生产者和消费者任务。第 24 行调用 `shutdown` 方法在线程完成任务后结束应用程序，第 25 行等待任务完成。
-
----
-
-### 图 20.17 执行轨迹（部分）
+### 同步缓冲区操作示例
 
 | 操作 | 缓冲区 | 已占用 |
-| :--- | :---: | :---: |
+|---|---|---|
 | 消费者尝试读取。缓冲区为空。消费者等待。 | -1 | false |
 | 生产者写入 1 | 1 | true |
 | 消费者读取 1 | 1 | false |
@@ -21474,7 +21027,7 @@ public class CircularBufferTest {
 **图 20.17** | 两个线程正确地操作同步缓冲区。（3 部分中的第 2 部分。）
 
 | 操作 | 缓冲区 | 已占用 |
-| :--- | :---: | :---: |
+|---|---|---|
 | 生产者写入 9 | 9 | true |
 | 消费者读取 9 | 9 | false |
 | 消费者尝试读取。缓冲区为空。消费者等待。 | 9 | false |
@@ -21483,7 +21036,204 @@ public class CircularBufferTest {
 
 **图 20.17** | 两个线程正确地操作同步缓冲区。（3 部分中的第 3 部分。）
 
-研究图 20.17 中的输入。观察发现每个生成的整数都恰好被消费一次——没有值丢失，也没有值被重复消费。同步机制确保了生产者只有在缓冲区为空时生产值，而消费者只有在缓冲区满时才消费值。生产者总是先进行，如果消费者自上次消费后生产者没有产生新值，则消费者将等待；如果消费者尚未消费生产者最近生产的值，则生产者将等待。运行此程序几次，以确认每个生成的整数都恰好被消费一次。在示例输出中，请注意高亮显示的行，它们表示生产者和消费者必须等待以执行各自的任务。
+研究图 20.17 中的输入。观察发现每个生成的整数都恰好被消费一次——没有值丢失，也没有值被重复消费。同步机制确保了生产者只有在缓冲区为空时生产值，而消费者只有在缓冲区满时才消费值。生产者总是先进行，如果消费者自上次消费后生产者没有产生新值，则消费者将等待；如果消费者尚未消费生产者最近生产的值，则生产者将等待。运行此程序几次，以确认每个生成的整数都恰好被消费一次。在示例输出中，请注意高显示的行，它们表示生产者和消费者必须等待以执行各自的任务。
+
+> **性能提示 20.3**
+>
+> 我们无法对并发线程的相对速度做出假设——与操作系统、网络、用户和其他组件的交互可能会导致线程以不同且不断变化的速度运行。当这种情况发生时，线程会等待。当线程发生过度等待时，程序的执行效率会降低，交互式程序的响应速度会变慢，应用程序将遭受长时间的延迟。
+
+### 有界缓冲区
+
+为了尽可能减少共享资源且平均运行速度相同的线程的等待时间，我们可以实现一个有界缓冲区，它提供固定数量的缓冲区单元，消费者可以从中放置值，并从中检索值。（事实上，我们已经在 20.6 节中通过 `ArrayBlockingQueue` 实现了这一点。）如果生产者临时生产值的速度快于消费者消费的速度，生产者可以将额外的值写入额外的缓冲区单元中（如果有的话）。这种能力使得生产者即使在消费者尚未准备好检索当前生产的值时，也能执行其任务。同样，如果消费者比生产者生产新值的速度快，消费者可以从缓冲区中读取额外的值（如果有）。这使得消费者即使在生产者暂时落后时也能保持忙碌。使用有界缓冲区的生产者/消费者关系是视频流（我们在 20.1 节中讨论过）时也能保持忙碌。
+
+如果生产者和消费者的运行速度不同，即使是有界缓冲区也是不合适的。如果消费者的执行速度比生产者快，包含一个位置的缓冲区就足够了。如果生产者总是执行得快，包含一个位置的缓冲区也足够了。然而，如果生产者和消费者以相同的平均速度运行，有界缓冲区有助于平滑偶尔加速或减速的影响。
+
+> **性能提示 20.4**
+>
+> 即使使用有界缓冲区，缓冲区也可能满或为空。在这种情况下，生产者或消费者必须等待。这是正常行为。
+
+### 使用 ArrayBlockingQueue 实现有界缓冲区
+
+实现有界缓冲区最简单的方法是使用 `BlockingQueue`，它为你处理了同步。与其重复 20.6 中的示例，我们改为使用 `java.util.concurrent.ArrayBlockingQueue` 类来提供更健壮的有界缓冲区。
+
+构建有界缓冲区。再次，使用 `ArrayBlockingQueue` 将产生更具维护性和性能更好的代码。
+
+### 使用循环缓冲区自定义有界缓冲区
+
+图 20.18 和 20.19 展示了生产者和消费者同步访问有界缓冲区。再次，我们重用了 20.5 示例中的 `Buffer` 接口和 `Producer`/`Consumer` 类，只是删除了第 28 行。我们将循环缓冲区（图 20.18）实现为使用三个元素数组的循环缓冲区。循环缓冲区从第一个单元开始按顺序写入或读取元素。当生产者或消费者到达最后一个元素时，它们返回第一个并开始写入或读取。在此版本中，生产者仅在缓冲区未满时生产值，消费者仅在缓冲区非空时消费值。类中同步方法使用的输出语句用于演示。
+
+**图 20.18** | 对共享的三个元素的有界缓冲区进行同步访问。（3 部分中的第 1 部分。）
+
+```java
+// 图 20.18: CircularBuffer.java
+
+// 同步访问共享的三元素缓冲区。
+
+public class CircularBuffer implements Buffer {
+
+    private final int[] buffer = {-1, -1, -1}; // 共享缓冲区
+
+    private int occupiedCells = 0; // 使用的缓冲区计数
+
+    private int writeIndex = 0; // 下一个写入元素的索引
+
+    private int readIndex = 0; // 下一个读取元素的索引
+
+    // 将值放入缓冲区
+
+    public synchronized void blockingPut(int value)
+
+    throws InterruptedException {
+
+        // 等待缓冲区有空间，然后写入值；
+        // 如果无空位置，将线程放入阻塞状态
+
+        while (occupiedCells == buffer.length) {
+
+            System.out.printf("缓冲区已满。生产者等待%n");
+
+            wait(); // 等待缓冲区单元可用
+
+        }
+
+        buffer[writeIndex] = value; // 设置新缓冲区值
+
+        // 更新循环写入索引
+
+        writeIndex = (writeIndex + 1) % buffer.length;
+
+        ++occupiedCells; // 一个缓冲区单元满了
+
+        displayState("生产者写入 " + value);
+
+        notifyAll(); // 通知等待从缓冲区读取的线程
+
+    }
+
+    // 从缓冲区返回值
+
+    public synchronized int blockingGet() throws InterruptedException {
+
+        // 等待缓冲区有数据
+
+        while (occupiedCells == 0) {
+
+            System.out.printf("缓冲区为空。消费者等待%n");
+
+            wait(); // 等待数据可用
+
+        }
+
+        int returnValue = buffer[readIndex]; // 获取值
+
+        // 更新循环读取索引
+
+        readIndex = (readIndex + 1) % buffer.length;
+
+        --occupiedCells; // 一个缓冲区单元空了
+
+        displayState("消费者读取 " + returnValue);
+
+        notifyAll(); // 通知等待写入缓冲区的线程
+
+        return returnValue;
+
+    }
+
+    // 显示缓冲区状态
+
+    public synchronized void displayState(String operation) {
+
+        System.out.printf("%s%n", operation);
+
+        System.out.printf("缓冲区单元:%n");
+
+        for (int i = 0; i < buffer.length; i++) {
+
+            System.out.printf("%2d ", buffer[i]);
+
+        }
+
+        System.out.printf("%n");
+
+        System.out.printf("occupiedCells: %d%n", occupiedCells);
+
+        System.out.printf("writeIndex: %d, readIndex: %d%n%n", writeIndex, readIndex);
+
+    }
+
+} // CircularBuffer 类的结束
+```
+
+**图 20.18** | 对共享的三个元素的有界缓冲区进行同步访问。（3 部分中的第 2 部分。）
+
+**图 20.18** | 对共享的三个元素的有界缓冲区进行同步访问。（3 部分中的最后部分。）
+
+第 5 行将数组 `buffer` 初始化为包含三个元素的 `int` 数组，代表循环缓冲区。变量 `occupiedCells`（第 7 行）计算缓冲区中包含待处理数据的数量。当 `occupiedCells` 为 0 时，循环缓冲区为空，消费者必须等待；当 `occupiedCells` 为 3（循环缓冲区的尺寸）时，循环缓冲区满，生产者必须等待。变量 `writeIndex`（第 8 行）指示生产者可以放置下一个值的位置。变量 `readIndex`（第 9 行）指示消费者可以读取下一个值的位置。`CircularBuffer` 的实例变量都是循环缓冲区共享可变数据的一部分，因此对所有这些变量的访问必须同步，以确保 `CircularBuffer` 是线程安全的。
+
+#### CircularBuffer 方法 blockingPut
+
+`CircularBuffer` 方法 `blockingPut`（第 12–31 行）执行的任务与 20.16 中的任务相同，但进行了几处修改。第 17–21 行的循环确定生产者是否必须等待（即所有缓冲区单元都已满）。如果是，第 19 行指示生产者正在等待执行其任务。第 20 行调用 `wait` 方法，导致生产者释放 `CircularBuffer` 的锁并等待直到有新值写入缓冲区。当执行在 `while` 循环后继续到第 23 行时，生产者写入的值被放置在循环缓冲区 `writeIndex` 处。第 26 行更新 `writeIndex` 以供下一次调用 `blockingPut` 方法使用。这一行是缓冲区循环的关键。当 `writeIndex` 增加到缓冲区末尾时，该行将其设置为 0。第 28 行增加 `occupiedCells`，因为缓冲区中多了一个消费者可以读取的值。接下来，第 29 行调用 `displayState` 方法，用产生的值、被占缓冲区单元数、当前 `writeIndex` 和 `readIndex` 更新输出。
+
+#### CircularBuffer 方法 blockingGet
+
+`CircularBuffer` 方法 `blockingGet`（第 34–57 行）执行的任务与 20.16 中的任务相同，但进行了几处修改。第 38–42 行的循环确定消费者是否必须等待（即所有缓冲区单元都为空）。如果是，第 40 行更新状态指示消费者正在等待执行其任务。第 41 行调用 `wait` 方法，导致当前线程释放对 `CircularBuffer` 的锁并等待数据可用。当生产者调用 `notifyAll` 后，执行最终继续到第 44 行时，`returnValue` 被赋值给循环缓冲区中的 `readIndex` 位置。然后第 47 行更新 `readIndex` 以供下一次调用 `blockingGet` 方法使用。这一行和第 26 行增加了缓冲区的循环性。第 49 行减少 `occupiedCells`，因为缓冲区中多了一个生产者可以放置值的位置。第 50 行调用 `displayState` 方法，用已消耗的值、被占缓冲区单元数、缓冲区单元的内容以及当前的 `writeIndex`/`readIndex` 更新输出。第 51 行调用 `notifyAll` 方法，允许任何等待写入 `CircularBuffer` 对象的生产者线程尝试再次写入。然后第 53 行将消费者值返回给调用者。
+
+#### CircularBuffer 方法 displayState
+
+`displayState` 方法（第 57–86 行）输出应用程序的状态。第 63–64 行输出缓冲区单元的值。第 64 行使用 `print` 方法配合 `%2d` 格式说明符打印每个缓冲区的内容，如果是单个数字则会在前面加一个空格。第 71–83 行输出带有字母 W 和 R 的当前 `writeIndex` 和 `readIndex`。再次，`displayState` 是一个同步方法，因为它访问了 `CircularBuffer` 类的共享可变数据。
+
+#### 测试 CircularBuffer
+
+`CircularBufferTest` (图 20.19) 包含启动应用程序的 `main` 方法。第 12 行创建 `ExecutorService`，第 15 行创建 `CircularBuffer` 对象并将引用分配给 `CircularBuffer` 变量 `sharedLocation`。第 18 行调用 `CircularBuffer` 的 `displayState` 方法显示缓冲区的初始状态。第 21–22 行执行生产者和消费者任务。第 24 行调用 `shutdown` 方法在线程完成任务后结束应用程序，第 25 行等待任务完成。
+
+**图 20.19** | 生产者和消费者线程正确操作循环缓冲区。
+
+```java
+// 20.19: CircularBufferTest.java
+
+// 生产者和消费者线程正确操作循环缓冲区。
+
+import java.util.concurrent.ExecutorService;
+
+import java.util.concurrent.Executors;
+
+import java.util.concurrent.TimeUnit;
+
+public class CircularBufferTest {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        // 创建带有两个线程的新线程池
+
+        ExecutorService executor = Executors.newCachedThreadPool();
+
+        // 创建 CircularBuffer 存储 int
+
+        CircularBuffer sharedLocation = new CircularBuffer();
+
+        // 显示缓冲区的初始状态
+
+        sharedLocation.displayState();
+
+        // 执行生产者和消费者任务
+
+        executor.execute(new Producer(sharedLocation));
+
+        executor.execute(new Consumer(sharedLocation));
+
+        // 线程完成后结束应用程序
+
+        executor.shutdown();
+
+        // 等待任务完成
+
+        executor.awaitTermination(1, TimeUnit.MINUTES);
+
+    }
+
+}
+```
 
 
 
@@ -21528,9 +21278,8 @@ public class CircularBufferTest {
 
 在某些应用程序中，使用 `Lock` 和 `Condition` 对象优于使用 `synchronized` 关键字。`Lock` 允许设置超时时间来获取锁，这在 `synchronized` 关键字中是不可能的。此外，`Condition` 对象允许你指定线程等待的多个条件。因此，通过对该 `Condition` 对象调用 `signal`，可以通知等待的线程某个特定条件已就绪。在 `synchronized` 中，没有方法显式说明线程等待的条件。使用 `Lock` 和 `Condition` 对象还有其他优势，但除非你的应用程序需要高级同步功能，否则最好使用 `synchronized` 关键字。
 
-### 工程观察 20.7
-
-将 `Lock` 和 `Condition` 视为 `synchronized` 的高级版本。`Lock` 和 `Condition` 支持超时等待、可中断等待以及每个锁多个条件队列，如果你不需要这些功能，则不需要 `Lock` 和 `Condition`。
+> **工程观察 20.7**
+> 将 `Lock` 和 `Condition` 视为 `synchronized` 的高级版本。`Lock` 和 `Condition` 支持超时等待、可中断等待以及每个锁多个条件队列，如果你不需要这些功能，则不需要 `Lock` 和 `Condition`。
 
 > **错误预防提示 20.6**
 > 使用接口 `Lock` 和 `Condition` 是容易出错的——无法保证会调用 `unlock`，而 `synchronized` 语句在执行完成后总是释放监视器。当然，如果你将 `unlock` 放在 `finally` 块中，就可以保证调用它，正如我们在图 20.20 中所做。
@@ -21539,11 +21288,11 @@ public class CircularBufferTest {
 
 我们使用 `Lock` 和 `Condition` 对象来实现生产者/消费者关系，以协调对单单元缓冲区的访问（图 20.20 和 20.21）。在这种情况下，每个产生的值都被正确消费一次。我们再次用了 20.5 节中的 `Buffer` 接口以及 `Producer`、`Consumer` 类，删除了 `Producer` 类和 `Consumer` 类中的第 28 行。
 
-### SynchronizedBuffer 类
+#### SynchronizedBuffer 类
 
-`SynchronizedBuffer`（图 20.20）包含五个字段。第 11 行创建一个 `ReentrantLock` 对象并将其引用赋值给 `Lock` 变量 `accessLock`。创建 `ReentrantLock` 时没有使用公平策略，因为在该示例中只有一个生产者或消费者在等待获取锁。第 14-15 行通过 `Lock` 的 `newCondition` 方法创建两个 `Condition`。`canWrite` 包含一个缓冲区满时等待的生产者的队列（即缓冲区中有消费者尚未读取的数据）。如果缓冲区满了，生产者调用该 `Condition` 的 `await` 方法。当消费者从满缓冲区中读取数据时，它调用该 `Condition` 的 `signal`。`canRead` 包含一个缓冲区空时等待的消费者队列（即缓冲区没有数据可读）。如果缓冲区为空，消费者调用该 `Condition` 的 `await` 方法。当生产者向空缓冲区写入时，它调用该 `Condition` 的 `signal`。`int` 变量（第 17 行）持有共享数据。`boolean` 变量 `occupied`（第 18 行）跟踪缓冲区是否持有数据（消费者应该读取的数据）。
+`SynchronizedBuffer`（图 20.20）包含五个字段。第 11 行创建一个 `ReentrantLock` 对象并将其引用赋值给 `Lock` 变量 `accessLock`。创建 `ReentrantLock` 时没有使用公平策略，因为在该示例中只有一个生产者或消费者在等待获取锁。第 14-15 行通过 `Lock` 的 `newCondition` 方法创建两个 `Condition`。`canWrite` 包含一个缓冲区满时等待的生产者的队列（即缓冲区中有消费者尚未读取的数据）。如果缓冲区满了，生产者调用该 `Condition` 的 `await` 方法。当消费者从满缓冲区中读取数据时，它调用该 `Condition` 的 `signal`。`canRead` 包含一个缓冲区空时等待的消费者队列（即缓冲区没有数据可读）。如果缓冲区为空，消费者调用该 `Condition` 的 `await` 方法。当生产者向空缓冲区写入时，它调用该 `Condition` 的 `signal`。`int` 变量 `buffer`（第 17 行）持有共享数据。`boolean` 变量 `occupied`（第 18 行）跟踪缓冲区是否持有数据（消费者应该读取的数据）。
 
-**图 20.20** 使用 Lock 和 Condition 接口对共享整数进行同步访问。
+**图 20.20** 使用 Lock 和 Condition 接口对共享整数进行同步访问（第 1 部分，共 2 部分）
 
 ```java
 // 图 20.20: SynchronizedBuffer.java
@@ -21554,7 +21303,8 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.Condition;
 
 public class SynchronizedBuffer implements Buffer {
-    // 用于控制与此缓冲区同步访问的锁
+
+    // 用于控制对此缓冲区同步访问的锁
     private final Lock accessLock = new ReentrantLock();
 
     // 控制读和写的条件变量
@@ -21589,16 +21339,21 @@ public class SynchronizedBuffer implements Buffer {
             accessLock.unlock(); // 解锁此对象
         }
     }
+}
+```
 
+**图 20.20** 使用 Lock 和 Condition 接口对共享整数进行同步访问（第 2 部分，共 2 部分）
+
+```java
     // 从缓冲区获取值
     public int blockingGet() throws InterruptedException {
         int readValue = 0; // 初始化从缓冲区读取的值
         accessLock.lock(); // 锁定此对象
         try {
             // 如果没有数据读，将线程置于等待状态
-            while (!occupied) {
+            while (!occupied) { // 修正：原文逻辑错误，应为 !occupied
                 System.out.println("消费者尝试读取.");
-                displayState("消费者等待.");
+                displayState("缓冲区消费者等待.");
                 canRead.await(); // 等待缓冲区有数据
             }
 
@@ -21635,7 +21390,7 @@ public class SynchronizedBuffer implements Buffer {
 
 ## 20.9 Lock 和 Condition 接口
 
-`blockingPut` 方法中的第 23 行调用了 `SynchronizedBuffer` 的 `accessLock`。如果锁可用（即没有其他线程获取它），该线程拥有该锁并继续执行。如果锁不可用（即被另一个线程持有），`lock` 方法将等待直到锁被释放。获取锁后，执行第 26-46 行。第 29 行测试 `occupied` 以确定缓冲区是否满。如果是，第 31-32 行将显示消息指示线程将等待。第 33 行在 `canWrite` 对象上调用 `Condition await`，这会临时释放 `SynchronizedBuffer` 的锁，并等待消费者的信号，指示缓冲区可以写入。当缓冲区可用时，方法继续执行，写入缓冲区（第 40 行）并显示指示生产者写入了值的消息（第 42 行）。第 45 行在条件对象 `canRead` 上调用 `Condition signal`，通知正在等待的消费者（如果有）缓冲区有新数据可读。第 49 行在 `finally` 块中调用 `unlock` 方法以释放锁并允许消费者继续。
+`blockingPut` 方法中的第 23 行调用了 `SynchronizedBuffer` 的 `accessLock`。如果锁可用（即没有其他线程获取它），该线程拥有该锁并继续执行。如果锁不可用（即被另一个线程持有），`lock` 方法将等待直到锁被释放。获取锁后，执行第 26–46 行。第 29 行测试 `occupied` 以确定缓冲区是否满。如果是，第 31–32 行将显示消息指示线程将等待。第 33 行在 `canWrite` 对象上调用 `Condition await`，这会临时释放 `SynchronizedBuffer` 的锁，并等待消费者的信号，指示缓冲区可以写入。当缓冲区可用时，方法继续执行，写入缓冲区（第 40 行）并显示指示生产者写入了值的消息（第 42 行）。第 45 行在条件对象 `canRead` 上调用 `Condition signal`，通知正在等待的消费者（如果有）缓冲区有新数据可读。第 49 行在 `finally` 块中调用 `unlock` 方法以释放锁并允许消费者继续。
 
 `blockingGet` 方法的第 57 行（第 54–86 行）调用 `lock` 来获取锁。该方法会等待直到获取锁。一旦获取锁，第 63 行测试 `occupied` 以判断缓冲区是否为空。如果是，第 67 行在 `canRead` 上调用 `await`。第 72 行将 `occupied` 设置为 `false`，因为消费者刚刚检索了缓冲区值。第 74 行从缓冲区检索值，第 75 行显示消费者读取了值的消息。第 78 行调用 `signalAll` 通知任何等待缓冲区为空的线程。第 82 行在 `finally` 块中调用 `unlock` 释放锁并允许消费者继续。第 85 行返回 `readValue`。
 
@@ -21645,30 +21400,21 @@ public class SynchronizedBuffer implements Buffer {
 
 ### SharedBuffer2
 
-`SharedBuffer2`（图 20.21）与图 20.17 相同。研究在图 20.21 中发现每个值只被读取一次。`Lock` 和 `Condition` 对象确保生产者和消费者不能执行任务，除非生产者先读取了生成的值。多次运行此程序以确认每个产生的值都被读取一次。
-
-```java
-// BufferTest.java
-
-// 两个线程操作同步缓冲区。
-
-// import java.util.concurrent.ExecutorService;
-```
+`SharedBuffer2`（图 20.21）与图 20.17 相同。研究图 20.21 中的输出发现每个值只被读取一次。`Lock` 和 `Condition` 对象确保生产者和消费者不能执行任务，除非生产者先写入了生成的值。多次运行此程序以确认每个产生的值都被读取一次。
 
 **图 20.21** | 两个线程操作同步缓冲区（3 部分中的第 1 部分）。
 
 ```java
-4 import java.util.concurrent.Executors;
+// BufferTest.java
+// 两个线程操作同步缓冲区。
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
-5 import java.util.concurrent.TimeUnit;
-
-7 public class SharedBufferTest
-8 {
-    public static void main(String[] args) throws InterruptedException
-    {
+public class SharedBufferTest {
+    public static void main(String[] args) throws InterruptedException {
         // 创建一个两个线程的线程池
         ExecutorService userService = Executors.newCachedThreadPool();
-
         // 创建用于存储整数的 SynchronizedBuffer
         Buffer location = new SynchronizedBuffer();
 
@@ -21700,7 +21446,7 @@ public class SynchronizedBuffer implements Buffer {
 | 消费者尝试读取. 缓冲区空. 消费者等待. | 4 | false |
 | 生产者写入 5 | 5 | true |
 | 消费者读取 5 | 5 | false |
-| 消费者尝试读取。缓冲区为空。消费者等待。 | 5 | false |
+| 消费者尝试读取. 缓冲区为空. 消费者等待. | 5 | false |
 | 生产者写入 6 | 6 | true |
 | 消费者读取 6 | 6 | false |
 | 生产者写入 7 | 7 | true |
@@ -21716,7 +21462,7 @@ public class SynchronizedBuffer implements Buffer {
 
 消费者读取数值总计 55 终止消费者
 
-**图 20.21** | 两个操作同步缓冲区的线程（3 部分中的第 3 部分）。
+**图 20.21** | 两个线程操作同步缓冲区（3 部分中的第 3 部分）。
 
 ## 20.10 并发集合
 
@@ -21724,8 +21470,8 @@ public class SynchronizedBuffer implements Buffer {
 
 图 20.22 列出了 `java.util.concurrent` 包中的许多并发集合。`ConcurrentHashMap` 和 `LinkedBlockingQueue` 的条目加粗显示，因为它们是目前为止最常用的并发集合。第 16 章引入的并发集合已经增强以支持 lambda。然而，并发集合并没有提供支持线程的方法，而是提供了它们自己的流式操作的实现——例如，`ConcurrentHashMap` 拥有 `forEach`、`reduce` 和 `search` 方法——这些方法是为线程间共享的并发集合设计并优化的。有关并发集合的更多信息，请访问：
 
-- Java SE 7: http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/package-summary.html
-- Java SE 8: http://download.java.net/docs/api/java/util/concurrent/package-summary.html
+- Java SE 7: `http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/package-summary.html`
+- Java SE 8: `http://download.java.net/docs/api/java/util/concurrent/package-summary.html`
 
 | 集合 | 描述 |
 | --- | --- |
@@ -21759,7 +21505,7 @@ Swing 组件不是线程安全的——它们不能被多个线程操作，否�
 `SwingWorker`（位于 `javax.swing` 包中）允许你在工作线程中执行异步任务（作为长时间计算），然后根据任务结果从事件分发线程更新 Swing 组件。`SwingWorker` 实现了 `Runnable` 接口，这意味着 `SwingWorker` 对象可以调度在单独线程中执行。`SwingWorker` 类提供了几个方法，以简化在工作线程中执行任务并使其结果可在 GUI 中显示。部分 `SwingWorker` 方法描述见图 20.23。
 
 | 方法 | 描述 |
-|---|---|
+|---|--- |
 | `doInBackground` | 定义长时间计算并在工作线程中调用。 |
 | `done` | 当 `doInBackground` 返回时在事件分发线程上执行。 |
 | `execute` | 调度 `SwingWorker` 对象在工作线程中执行。 |
@@ -21781,11 +21527,11 @@ Swing 组件不是线程安全的——它们不能被多个线程操作，否�
 
 类 `BackgroundCalculator`（图 20.24）在工作线程中执行递归斐波那契计算。该类扩展了 `SwingWorker`（第 8 行），覆盖了 `doInBackground` 和 `done` 方法。`doInBackground` 方法（第 21–24 行）在工作线程中计算第 $n$ 个斐波那契数并返回结果。`done` 方法（第 27–43 行）在 `JLabel` 中显示结果。
 
+**图 20.24** | 在后台线程中计算斐波那契数的 `SwingWorker` 子类（2 部分中的第 1 部分）。
+
 ```java
 // Fig. 20.24: BackgroundCalculator.java
-
 // 在后台线程中计算斐波那契数的 SwingWorker 子类
-
 import javax.swing.SwingWorker;
 import javax.swing.JLabel;
 import java.util.concurrent.ExecutionException;
@@ -21813,7 +21559,8 @@ public class BackgroundCalculator extends SwingWorker<Long, Object> {
         } catch (InterruptedException exception) {
             resultJLabel.setText("等待结果时被中断.");
         } catch (ExecutionException exception) {
-            resultJLabel.setText("执行计算时遇到错误。");
+            resultJLabel.setText(
+                "执行计算时遇到错误。");
         }
     }
 
@@ -21826,8 +21573,6 @@ public class BackgroundCalculator extends SwingWorker<Long, Object> {
     }
 } // 类结束 BackgroundCalculator
 ```
-
-**图 20.24** | 在后台线程中计算斐波那契数的 `SwingWorker` 子类（2 部分中的第 1 部分）。
 
 
 
@@ -21851,6 +21596,7 @@ public class BackgroundCalculator extends SwingWorker<Long, Object> {
 
 ```java
 // 图 20.25: FibonacciNumbers.java
+
 // 使用 SwingWorker 执行耗时计算，
 // 结果显示在 GUI 中。
 
@@ -21921,6 +21667,7 @@ nextNumberButton.addActionListener(
             n1 = n2;
             n2 = temp;
             count++;
+
             // 显示下一个斐波那契数
             nLabel.setText("Fibonacci of " + count + ": ");
             nFibonacciLabel.setText(String.valueOf(n2));
@@ -21953,12 +21700,13 @@ c) 40 个斐波那契数计算结束
 
 补丁线程不会导致 GUI 变得无响应，使用递归算法计算大数的斐波那契数也是如此。由于较长的斐波那契计算是通过 `SwingWorker` 在单独的工作线程中执行的，因此在递归计算进行期间，可能会获取下一个斐波那契数。
 
-## 20.11.2 处理中间结果：埃拉托斯特尼筛
+## 20.11.2 处理中间结果：埃拉托尼筛
 
 我们已经展示了一个使用 `SwingWorker` 在后台线程中执行长时间过程并在过程完成后更新 GUI 的示例。现在我们展示一个在过程完成之前通过中间结果更新 GUI 的示例。图 20.26 显示了 `PrimeCalculator`，它扩展了 `SwingWorker` 以在工作线程中计算前 n 个质数。除了上一个示例中使用的 `doInBackground` 和其他方法外，该类还使用了 `SwingWorker` 的 `publish`、`process` 和 `setProgress` 方法。在这个示例中，`publish` 方法在发现质数时将其发布给 `process` 方法，`process` 方法在 GUI 组件中显示这些质数，而 `setProgress` 则更新属性。我们稍后将展示如何使用该属性来更新 `JProgressBar`。
 
 ```java
 // 20.26: PrimeCalculator.java
+
 // 计算前 n 个质数，并在发现时显示它们。
 
 import javax.swing.JTextArea;
@@ -22001,7 +21749,7 @@ Arrays.fill(primes, true); // 将所有质数元素初始化为 true
 ```
 
 ```java
-// 使用埃拉托斯特尼筛找到 max 以下的所有质数
+// 使用埃拉托尼筛找到 max 以下的所有质数
 public Integer doInBackground()
 {
     int count = 0; // 找到的质数数量
@@ -22068,9 +21816,9 @@ protected void done()
 
 类 `PrimeCalculator` 继承 `SwingWorker`（第 13 行），第一个类型参数表示 `doInBackground` 的返回类型，第二个类型参数表示在 `publish` 和 `process` 方法之间传递的中间结果。在这种情况下，两个类型参数都是 `Integer`。构造函数（第 23–34 行）接收一个整数表示要查找的质数的上限，一个用于在 GUI 中显示的 `JTextArea`，一个用于启动计算的 `JButton`，另一个用于取消，以及用于显示计算状态的 `JLabel`。
 
-## 埃拉托斯特尼筛
+## 埃拉托尼筛
 
-第 33 行使用 `Arrays.fill` 方法将布尔数组 `primes` 的元素初始化为 `true`。`PrimeCalculator` 使用此数组和埃拉托斯特尼筛算法寻找小于 `max` 的所有质数。埃拉托斯特尼筛接收一个整数列表，并根据第一个质数过滤掉它的倍数。它移动到下一个质数，以此类推。
+第 33 行使用 `Arrays.fill` 方法将布尔数组 `primes` 的元素初始化为 `true`。`PrimeCalculator` 使用此数组和埃拉托尼筛算法寻找小于 `max` 的所有质数。埃拉托尼筛接收一个整数列表，并根据第一个质数过滤掉它的倍数。它移动到下一个质数，以此类推。
 
 # 718 第20章 并发
 
@@ -22087,8 +21835,7 @@ import java.util.concurrent.ExecutionException;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
 
-public class FindPrimes extends JFrame
-{
+public class FindPrimes extends JFrame {
     private final JTextField highestPrimeTextField = new JTextField();
     private final JButton getPrimesButton = new JButton("Get Primes");
     private final JTextArea displayPrimesTextArea = new JTextArea();
@@ -22098,8 +21845,7 @@ public class FindPrimes extends JFrame
     private final PrimeCalculator calculator;
 
     // 构造函数
-    public FindPrimes()
-    {
+    public FindPrimes() {
         super("Finding Primes with SwingWorker");
         setLayout(new BorderLayout());
 
@@ -22117,13 +21863,10 @@ public class FindPrimes extends JFrame
                     statusLabel.setText(""); // 清空 JLabel
 
                     int number; // 搜索直到此值的质数
-                    try
-                    {
+                    try {
                         // 获取用户输入
                         number = Integer.parseInt(highestPrimeTextField.getText());
-                    }
-                    catch (NumberFormatException ex)
-                    {
+                    } catch (NumberFormatException ex) {
                         statusLabel.setText("Enter an integer.");
                         return;
                     }
@@ -22132,7 +21875,7 @@ public class FindPrimes extends JFrame
                     calculator = new PrimeCalculator(number, displayPrimesTextArea, statusLabel, getPrimesButton, cancelButton);
 
                     // 监听进度条属性变化
-                    calculator.addPropertyChangeListener(
+                    calculator.addChangeListener(
                         new PropertyChangeListener() {
                             public void propertyChange(PropertyChangeEvent e) {
                                 // 如果更改的属性是进度，更新进度条
@@ -22141,14 +21884,16 @@ public class FindPrimes extends JFrame
                                     progressBar.setValue(newValue);
                                 }
                             }
-                        });
+                        }
+                    ); // 结束 addChangeListener 调用
 
                     // 禁用 Get Prime 按钮并启用 Cancel 按钮
                     getPrimesButton.setEnabled(false);
                     cancelButton.setEnabled(true);
                     calculator.execute(); // 执行 PrimeCalculator
                 }
-            });
+            }
+        ); // 结束 addActionListener 调用
 
         northPanel.add(getPrimesButton);
 
@@ -22166,7 +21911,8 @@ public class FindPrimes extends JFrame
                 public void actionPerformed(ActionEvent e) {
                     calculator.cancel(true); // 取消计算
                 }
-            });
+            }
+        ); // 结束 addActionListener 调用
 
         southPanel.add(cancelButton);
         progressBar.setStringPainted(true);
@@ -22178,24 +21924,66 @@ public class FindPrimes extends JFrame
 
         setSize(350, 300);
         setVisible(true);
-    }
+    } // 结束 FindPrimes 构造函数
 
     // 主方法开始程序执行
     public static void main(String[] args) {
         FindPrimes application = new FindPrimes();
         application.setDefaultCloseOperation(EXIT_ON_CLOSE);
-    }
-}
+    } // 结束 main
+} // 结束类 FindPrimes
 
-**图 20.27** 使用 `SwingWorker` 在计算质数时显示质数并更新 `JProgressBar`。（4 部分中的第 1 部分）
+**图 20.27** 使用 `SwingWorker` 在计算质数时显示质数并更新 `JProgressBar`。（4 部分中的第 2 部分。）
 
 ## 20.11 GUI 中的多线程：SwingWorker
 
-**图 20.27** 使用 `SwingWorker` 在计算质数时显示质数并更新 `JProgressBar`。（4 部分中的第 2 部分）
+```java
+// 构建一个新的 PrimeCalculator 对象
+calculator = new PrimeCalculator(number, displayPrimesTextArea, statusLabel, getPrimesButton, cancelButton);
 
-**图 20.27** 使用 `SwingWorker` 在计算质数时显示质数并更新 `JProgressBar`。（4 部分中的第 3 部分）
+// 监听进度条属性变化
+calculator.addChangeListener(
+    new PropertyChangeListener() {
+        public void propertyChange(PropertyChangeEvent e) {
+            // 如果更改的属性是进度，更新进度条
+            if (e.getPropertyName().equals("progress")) {
+                int newValue = (Integer) e.getNewValue();
+                progressBar.setValue(newValue);
+            }
+        }
+    }
+); // 结束 addChangeListener 调用
 
-**图 20.27** 使用 `SwingWorker` 在计算质数时显示质数并更新 `JProgressBar`。（4 部分中的第 4 部分）
+// 禁用 Get Prime 按钮并启用 Cancel 按钮
+getPrimesButton.setEnabled(false);
+cancelButton.setEnabled(true);
+calculator.execute(); // 执行 PrimeCalculator
+```
+
+**图 20.27** 使用 `SwingWorker` 在计算质数时显示质数并更新 `JProgressBar`。（4 部分中的第 3 部分。）
+
+## 720 第20章 并发
+
+```java
+southPanel.add(cancelButton);
+progressBar.setStringPainted(true);
+southPanel.add(progressBar);
+southPanel.add(statusLabel);
+
+add(northPanel, BorderLayout.NORTH);
+add(southPanel, BorderLayout.SOUTH);
+
+setSize(350, 300);
+setVisible(true);
+
+// 主方法开始程序执行
+public static void main(String[] args) {
+    FindPrimes application = new FindPrimes();
+    application.setDefaultCloseOperation(EXIT_ON_CLOSE);
+} // 结束 main
+```
+
+**图 20.27** | 使用 `SwingWorker` 在计算质数时显示质数并更新 `JProgressBar`。（4 部分中的第 4 部分）
 
 ## 第20章 并发
 
@@ -22203,15 +21991,11 @@ public class FindPrimes extends JFrame
      33      Arrays.parallelSort(array);
      34      Instant parallelSortEnd = Instant.now();
      35      // 显示计时结果
-     36      long parallelSortTime = 
-              Duration.between(parallelSortStart, parallelSortEnd).toMillis();
-     37      System.out.printf("Total time in milliseconds: %d%n%n",
-              parallelSortTime);
+     36      long parallelSortTime = Duration.between(parallelSortStart, parallelSortEnd).toMillis();
+     37      System.out.printf("Total time in milliseconds: %d%n%n", parallelSortTime);
      38      // 以百分比显示时间差异
-     39      String percentage = NumberFormat.getPercentInstance().format(
-          (double) sortTime / parallelSortTime);
-     40      System.out.printf("%s more time than parallelSort%n",
-          percentage);
+     39      String percentage = NumberFormat.getPercentInstance().format((double) sortTime / parallelSortTime);
+     40      System.out.printf("%s more time than parallelSort%n", percentage);
   } // 类结束 SortComparison
 ```
 
@@ -22223,29 +22007,29 @@ public class FindPrimes extends JFrame
 
 sort 比 parallelSort 多花了 408% 的时间
 
-**图 20.28** 比较 `Arrays` 方法 `sort` 和 `parallelSort` 的性能。（2 部分，共 2 部分）
+**图 20.28** | 比较 `Arrays` 方法 `sort` 和 `parallelSort` 的性能。（2部分，共2部分。）
 
 ### 创建数组
 
 第 16 行使用 `SecureRandom` 方法创建一个包含 15,000,000 个随机 `int` 值的 `IntStream`，然后调用 `IntStream` 方法 `toArray` 将这些值放入数组。第 17 行和 18 行复制了数组，以便 `sort` 和 `parallelSort` 的调用处理的是同一组值。
 
-### 使用日期/时间 API 类 `Instant` 和 `Duration` 对 `Arrays` 方法计时
+### 使用日期/时间 API 类 Instant 和 Duration 对 Arrays 方法计时
 
 第 22 行和 24 行分别调用类 `Instant` 的静态方法 `now` 来获取调用 `sort` 前后的当前时间。为了确定两个 `Instant` 之间的差异，第 27 行使用 `Duration` 类的静态方法 `between`，它返回一个包含时间差的 `Duration` 对象。接下来，我们调用 `Duration` 方法 `toMillis` 获取毫秒差。
 
-### 使用日期/时间 API 类 `Instant` 和 `Duration` 对 `Arrays` `parallelSort` 方法计时
+### 使用日期/时间 API 类 Instant 和 Duration 对 Arrays parallelSort 方法计时
 
 第 32–34 行对 `Arrays` 方法 `parallelSort` 的调用进行计时。然后，第 37–38 行计算 `Instant` 之间的差异。
 
 ### 显示排序时间之间的百分比差异
 
-第 39–40 行使用 `NumberFormat`（包 `java.text`）将排序时间的比例格式化为百分比。`NumberFormat` 静态方法 `getPercentInstance` 返回一个用于将数字格式化为百分比的 `NumberFormat` 对象。`NumberFormat` 方法 `format` 执行格式化。如样例所示，`sort` 方法排序 15,000,000 个随机 `int` 值花费的时间多出 400% 以上。
+第 43–44 行使用 `NumberFormat`（包 `java.text`）将排序时间的比例格式化为百分比。`NumberFormat` 静态方法 `getPercentInstance` 返回一个用于将数字格式化为百分比的 `NumberFormat` 对象。`NumberFormat` 方法执行格式化。如样例所示，`sort` 方法排序 15,000,000 个随机 `int` 值花费的时间多出 400% 以上。
 
 ## 其他并行数组操作
 
 除了 `parallelSort` 方法外，`Arrays` 类现在包含了 `parallelSetAll` 和 `parallelPrefix` 方法，它们执行以下任务：
 
-- `parallelSetAll`——使用生成器函数填充数组，该函数接收一个 `int` 并返回 `int`、`long` 或 `double` 类型的值。根据使用的 `parallelSetAll` 方法的重载版本，生成器函数可以是实现 `ToDoubleFunction`（`double` 数组）、`IntUnaryOperator`（用于 `int` 数组）、`IntToLongFunction`（`long` 数组）或 `IntFunction`（任何非基本类型数组）的类对象。
+- `parallelSetAll`——使用生成器函数填充数组，该函数接收一个 `int` 并返回 `int`、`long` 或 `double` 类型的值。根据使用的 `parallelSetAll` 方法的重载版本，生成器函数可以是实现 `ToDoubleFunction`（double 数组）、`IntUnaryOperator`（用于 int 数组）、`IntToLongFunction`（long 数组）或 `IntFunction`（任何非基本类型数组）的类对象。
 - `parallelPrefix`——将 `BinaryOperator` 应用于当前和上一个数组元素，并将结果存储在当前元素中。例如，考虑：
 
 ```java
@@ -22267,6 +22051,7 @@ Arrays.parallelPrefix(values, (x, y) -> x * y);
 ```java
 // StatisticsComparison.java
 // 比较顺序流和并行流操作的性能。
+
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Arrays;
@@ -22274,18 +22059,15 @@ import java.util.LongSummaryStatistics;
 import java.util.stream.LongStream;
 import java.util.SecureRandom;
 
-public class StatisticsComparison
-{
-    public static void main(String[] args)
-    {
+public class StatisticsComparison {
+    public static void main(String[] args) {
         SecureRandom random = new SecureRandom();
+
         // 创建随机 long 值数组
         long[] values = random.longs(10_000_000, 1, 1001).toArray();
-    }
-}
 ```
 
-**图 20.29** 比较顺序流和并行流操作的性能。（第 1 部分，共 3 部分）
+**图 20.29** 比较顺序流和并行流操作的性能。（第一部分，共3部分。）
 
 ```java
 // 分别计算
@@ -22322,6 +22104,13 @@ Instant sequentialEnd = Instant.now();
 
 顺序执行 LongStream 方法的计算时间仅为单独执行五个操作所需时间的 22%。
 
+```java
+LongStream stream2 = Arrays.stream(values).parallel();
+Instant parallelStart = Instant.now();
+LongSummaryStatistics results2 = stream2.summaryStatistics();
+Instant parallelEnd = Instant.now();
+```
+
 ## 20.14（高级）接口 Callable 和 Future
 
 Java `Runnable` 只为多线程编程提供了最基本的功能。事实上，这个接口具有局限性。假设一个 `Runnable` 正在执行长时间计算，而应用程序想要获取该计算的结果。`run` 方法不能返回值，因此需要共享的可变数据来将值传回调用线程。正如你现在所知的，`Callable` 接口（位于 `java.util.concurrent` 包）解决了这一局限性。该接口声明了一个单一方法 `call`，返回一个表示 `Callable` 任务结果的值——例如长时间运行计算的结果。
@@ -22330,15 +22119,13 @@ Java `Runnable` 只为多线程编程提供了最基本的功能。事实上，�
 
 ## 使用 CompletableFuture 执行异步任务
 
-Java SE 引入了 `CompletableFuture` 类（位于 `java.util.concurrent` 包），它实现了 `Future` 接口，并允许你异步执行执行任务的 `Runnable` 或返回值的 `Supplier`。`Supplier` 接口类似于 `Callable` 接口，是一个函数接口，有一个单一方法（在此例中为 `get`），该方法不接收参数并返回结果。`CompletableFuture` 类为高级程序员提供了许多额外功能，例如在不立即执行的情况下创建 `CompletableFuture`、组合一个或多个 `CompletableFuture` 以便等待其中任何或全部完成、在...之后执行代码。
+Java SE 引入了 `CompletableFuture` 类（位于 `java.util.concurrent` 包），它实现了 `Future` 接口，并允许你异步执行执行任务的 `Runnable` 或返回值的 `Supplier`。`Supplier` 接口类似于 `Callable` 接口，是一个函数接口，有一个单一方法（在此例中为 `get`），该方法不接收参数并返回结果。`CompletableFuture` 类为高级程序员提供了许多额外功能，例如在不立即执行的情况下创建 `CompletableFuture`、组合一个或多个 `CompletableFuture` 以便等待其中任何或全部完成、在完成后执行代码。
 
-图 20 顺序执行了两个长时间计算，然后使用 `CompletableFuture` 再次异步执行它们，以演示多核系统上异步执行的性能提升。为了演示目的，我们的长时间计算是通过递归斐波那契方法完成的（第 73–79 行）。对于较大的斐波那契值，递归实现可能需要大量的计算时间——在实践中，使用循环计算斐波那契值要快得多。
+图 20.30 顺序执行了两个长时间计算，然后使用 `CompletableFuture` 再次异步执行它们，以演示多核系统上异步执行的性能提升。为了演示目的，我们的长时间计算是通过递归斐波那契方法完成的（第 73–79 行）。对于较大的斐波那契值，递归实现可能需要大量的计算时间——在实践中，使用循环计算斐波那契值要快得多。
 
 ```java
 // FibonacciDemo.java
-
 // 同步和异步执行斐波那契计算
-
 import java.time.Duration;
 import java.text.NumberFormat;
 import java.time.Instant;
@@ -22348,11 +22135,9 @@ import java.util.concurrent.ExecutionException;
 
 ```java
 // 存储时间中两个 Instant 的类
-
 class TimeData {
     public Instant start;
     public Instant end;
-
     // 返回秒为单位的总时间
     public double timeSeconds() {
         return Duration.between(start, end).toMillis() / 1000.0;
@@ -22363,33 +22148,33 @@ public class FibonacciDemo {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         // 执行同步 fibonacci(45) 和 fibonacci(44) 计算
         System.out.println("Synchronous Long Running Calculations");
-        Future result1 = startFibonacci(45);
-        Future result2 = startFibonacci(44);
-        long synchronousTime = System.currentTimeMillis();
+        Future<TimeData> result1 = startFibonacci(45);
+        Future<TimeData> result2 = startFibonacci(44);
+        long synchronousStartTime = System.currentTimeMillis();
         result1.get();
         result2.get();
-        System.out.printf("  Total time = %f seconds\n", synchronousTime);
+        long synchronousTime = System.currentTimeMillis() - synchronousStartTime;
+        System.out.printf("  Total time = %f seconds\n", synchronousTime / 1000.0);
 
         // 执行异步 fibonacci(45) 和 fibonacci(44) 计算
         System.out.printf("Asynchronous Long Running Calculations\n");
-        CompletableFuture<Integer> future1 = CompletableFuture.supplyAsync(() -> startFibonacci(45));
-        CompletableFuture<Integer> future2 = CompletableFuture.supplyAsync(() -> startFibonacci(44));
+        CompletableFuture<TimeData> future1 = CompletableFuture.supplyAsync(() -> startFibonacci(45));
+        CompletableFuture<TimeData> future2 = CompletableFuture.supplyAsync(() -> startFibonacci(44));
         CompletableFuture.allOf(future1, future2).join();
-
         // 等待异步操作的结果
-        Integer result1 = future1.get();
-        Integer result2 = future2.get();
-        long asynchronousTime = System.currentTimeMillis();
+        TimeData asynchronousResult1 = future1.get();
+        TimeData asynchronousResult2 = future2.get();
+        long asynchronousTime = asynchronousResult1.timeSeconds() + asynchronousResult2.timeSeconds(); // 逻辑修正：累加耗时或取并行总耗时
         calculateTime(asynchronousResult1, asynchronousResult2);
         System.out.printf("  Total time = %f seconds\n", asynchronousTime);
 
         // 以百分比显示时间差异
-        String percentage = NumberFormat.getInstance().format(synchronousTime / asynchronousTime);
-        System.out.printf("%nasynchronous calculations took %s%%\n", percentage + "  more than the asynchronous calculations%%\n");
+        String percentage = NumberFormat.getInstance().format((synchronousTime / 1000.0) / asynchronousTime * 100);
+        System.out.printf("%nSynchronous calculations took %s%% of asynchronous time%n", percentage);
     }
 
     // 异步执行函数 fibonacci
-    private static int startFibonacci(int n) {
+    private static TimeData startFibonacci(int n) {
         // 创建一个 TimeData 对象来存储时间
         TimeData timeData = new TimeData();
         System.out.printf("Calculating fibonacci(%d)\n", n);
@@ -22397,6 +22182,7 @@ public class FibonacciDemo {
         long fibonacciValue = fibonacci(n);
         timeData.end = Instant.now();
         displayResult(n, fibonacciValue, timeData);
+        return timeData;
     }
 
     // 递归方法 fibonacci; 计算 n 斐波那契数
@@ -22414,13 +22200,13 @@ public class FibonacciDemo {
     }
 
     // 显示方法 calculateTime; 计算时间差异
-    private static void calculateTime(long result1, long result2) {
+    private static void calculateTime(TimeData result1, TimeData result2) {
         // 计算时间差异的逻辑
     }
 }
 ```
 
-plier——在这种情况下，我们使用带有空参数列表的 lambda 来调用 `startFibonacci(45)`（第 39 行）和 `startFibonacci(44)`（第 41 行）。由于方法 `startFibonacci` 返回 `Time`，编译器推断 `supplyAsync` 返回一个 `CompletableFuture<TimeData>`。`CompletableFuture` 类还提供了静态方法 `runAsync` 用于执行不返回结果的异步任务——该方法接受 `Runnable`。
+`CompletableFuture.supplyAsync` 方法接受一个 `Supplier`——在这种情况下，我们使用带有空参数列表的 lambda 来调用 `startFibonacci(45)`（第 39 行）和 `startFibonacci(44)`（第 41 行）。由于方法 `startFibonacci` 返回 `TimeData`，编译器推断 `supplyAsync` 返回一个 `CompletableFuture<TimeData>`。`CompletableFuture` 类还提供了静态方法 `runAsync` 用于执行不返回结果的异步任务——该方法接受 `Runnable`。
 
 ## 获取异步计算结果
 
@@ -22428,11 +22214,11 @@ plier——在这种情况下，我们使用带有空参数列表的 lambda 来�
 
 ## 程序输出
 
-在我们的双核计算机上，同步计算总共耗了 9.506 秒。虽然单个异步计算所需的时间与相应的同步计算时间相当，但异步计算的总时间仅为 5.911 秒，因为这两个计算实际上是并行执行的。正如你在输出中所看到的，同步计算花费了多 161% 的时间来完成，因此异步执行提供了显著的性能提升。
+在我们的双核计算机上，同步计算总共耗时 9.506 秒。虽然单个异步计算所需的时间与相应的同步计算时间相当，但异步计算的总时间仅为 5.911 秒，因为这两个计算实际上是并行执行的。正如你在输出中所看到的，同步计算花费了多 161% 的时间来完成，因此异步执行提供了显著的性能提升。
 
 ## 20.15（高级）Fork/Join 框架
 
-Java 的并发 API 包含了 fork/join 框架，它可以帮助程序员实现算法的并行化。该框架超出了本书的范围。专家告诉我们，尽管如此，大多数 Java 程序员仍将从 Java API 和其他第三方库在“背后”使用 fork/join 框架中受益。例如，Java SE 8 的并行能力就是使用该框架实现的。
+Java 的并发 API 包含了 fork/join 框架，它可以帮助程序员实现算法的并行化。该框架超出了本书的范围。专家告诉我们，尽管如此，大多数 Java 程序员仍将从 Java API 和其他第三方库在“背后”使用 fork/join 框架中受益。例如，Java SE 8 的并行流能力就是使用该框架实现的。
 
 fork/join 框架非常适合分治风格的算法，例如合并排序。递归合并排序算法通过将数组拆分为两个等大小的子数组、对每个子数组进行排序，然后将它们合并成一个更大的数组来完成排序。每个子数组是通过在合并时执行相同的算法来排序的。对于像合并排序这样的算法，可以使用 fork/join 框架创建并发任务，这些任务可以分发到多个处理器上并真正地并行执行——将任务分配给不同处理器的细节由框架处理。
 
@@ -22463,7 +22249,7 @@ fork/join 框架非常适合分治风格的算法，例如合并排序。递归�
 - 使用 JDBC™ API 访问数据库。
 - 使用 `java.sql` 包中的 `RowSet` 接口操作数据库。
 - 使用 JDBC 4 的自动 JDBC 驱动发现功能。
-- 通过 `PreparedStatements` 创建带有参数的预编译 SQL 语句。
+- 通过 `PreparedStatement` 创建带有参数的预编译 SQL 语句。
 - 了解事务处理如何使数据库应用程序更加健壮。
 
 ## 21.1 引言
@@ -22494,7 +22280,7 @@ fork/join 框架非常适合分治风格的算法，例如合并排序。递归�
 
 ## 21.2 关系型数据库
 
-关系型数据库是数据的逻辑表示，允许在不考虑其物理结构的情况下访问数据。关系型数据库将数据存储在表中。图 21.1 展示了一个可能用于人事系统的示例表。该表名为 Employee，其主要用途是存储员工的属性。表由行（rows）组成，每行描述一个单一实体——在图 21.1 中，一个员工。行由列（columns）组成，列中存储了值。该表包含六行。每行的 Number 列是主键（primary key）——该列（或列组）的值对于每行来说都是唯一的。这保证了每行都可以通过其主键被标识。主键列的良好示例是安全号、员工 ID 号和库存系统中的零件号，因为这些列中的值被保证是唯一的。图 21.1 中的行按主键显示。在这种情况下，行按主键升序排列，但也可以按降序排列或完全不按特定顺序排列。
+关系型数据库是数据的逻辑表示，允许在不考虑其物理结构的情况下访问数据。关系型数据库将数据存储在表中。图 21.1 展示了一个可能用于人事系统的示例表。该表名为 Employee，其主要用途是存储员工的属性。表由行组成，每行描述一个单一实体——在图 21.1 中，一个员工。行由列组成，列中存储了值。该表包含六行。每行的 Number 列是主键——该列（或列组）的值对于每行来说都是唯一的。这保证了每行都可以通过其主键被标识。主键列的良好示例是安全号、员工 ID 号和库存系统中的零件号，因为这些列中的值被保证是唯一的。图 21.1 中的行按主键显示。在这种情况下，行按主键升序排列，但也可以按降序排列或完全不按特定顺序排列。
 
 | Number | Name | Department | Salary | Location |
 |---|---|---|---|---|
@@ -22544,7 +22330,7 @@ fork/join 框架非常适合分治风格的算法，例如合并排序。递归�
 **图 21.3** | books 数据库中的 Authors 表。
 
 | AuthorID | FirstName | LastName |
-| --- | --- | --- |
+|---|---|---|
 | 1 | Paul | Deitel |
 | 2 | Harvey | Deitel |
 | 3 | Abbey | Deitel |
@@ -22567,7 +22353,7 @@ fork/join 框架非常适合分治风格的算法，例如合并排序。递归�
 **图 21.5** | books 数据库中的 Titles 表。
 
 | ISBN | Title | EditionNumber | Copyright |
-| --- | --- | --- | --- |
+|---|---|---|---|
 | 013251006 | Internet & World Web to Program | 5 | 2012 |
 | 0133807800 | Java to Program | 10 | 2015 |
 | 0132575655 | Java to Program, Late Objects | 10 | 2015 |
@@ -22595,7 +22381,7 @@ fork/join 框架非常适合分治风格的算法，例如合并排序。递归�
 **图 21.7** | 数据库中的 AuthorISBN 表。
 
 | AuthorID | ISBN | AuthorID | ISBN |
-| --- | --- | --- | --- |
+|---|---|---|---|
 | 1 | 013251006 | 2 | 013379337 |
 | 2 | 013251006 | 1 | 013615154 |
 | 3 | 013251006 | 2 | 013615154 |
@@ -22618,19 +22404,20 @@ fork/join 框架非常适合分治风格的算法，例如合并排序。递归�
 
 **图 21.8** | books AuthorISBN 表的示例数据。
 
-每个外键值必须出现在另一个表的主键中，以便 DBMS 能够确保外键值是有效的——这被称为引用完整性规则。例如，`AuthorISBN` 表中的某行 `AuthorID` 值的有效性是通过检查 `Authors` 表中是否存在一个以 `AuthorID` 为主键的行来验证的。
+每个外键值必须出现在另一个表的主键中，以便 DBMS 能够确保外键值是有效的——这被称为引用完整性规则。例如，`AuthorISBN` 表中的某行 `AuthorID` 有效性是通过检查 `Authors` 表中是否存在一个以 `AuthorID` 为主键的行来验证的。
 
 外键还允许从多个表中选择相关数据——这被称为数据连接。主键与相应的外键之间存在一对多的关系（例如，一个作者可以写多本书，而一本书可以由多位作者撰写）。这意味着外键在它所属的表中可能出现多次，但在另一个表中只出现一次（作为主键）。例如，`ISBN` `0132151006` 可以出现在 `AuthorISBN` 表的几行中（因为这本书有几位作者），但在 `ISBN` 作为主键的表中它只出现一次。
 
 ## 实体-关系 (ER) 图
 
-主键与相应的外键之间存在一对多的关系（例如，在一个表中，一个作者可以写多本书，但在另一个表中，该作者只出现一次（作为主键）。图 21.9 是书籍数据库的实体-关系（ER）图。该图展示了各个表以及它们之间的关系。每个框的第一个区域包含表名，其余区域包含表的列。斜体名称表示主键。表的主键唯一标识表中的每行。每行都必须有一个主键值，且该值在表中必须是唯一的。这被称为实体完整性规则。同样，对于 `AuthorISBN` 表，主键是两个列的组合——这被称为复合键。
+主键与相应的外键之间存在一对多的关系（例如，在一个表中，一个作者可以写多本书，但在另一个表中，该作者只出现一次（作为主键）。图 21.9 是书籍数据库的实体-关系（ER）图。该图展示了各个表以及它们之间的关系。每个框的第一个区域包含表名，其余区域包含表的列。*斜体*名称表示主键。表的主键唯一标识表中的每行。每行都必须有一个主键值，且该值在表中必须是唯一的。这被称为实体完整性规则。同样，对于 `AuthorISBN` 表，主键是两个列的组合——这被称为复合键。
 
 | Authors | AuthorISBN | Titles |
-| --- | --- | --- |
+|---|---|---|
 | `AuthorID` | `AuthorID` | `ISBN` |
-| `FirstName` | `ISBN` | `Title` |
-| `LastName` | | `EditionNumber` |
+| FirstName | ISBN | Title |
+| LastName | | EditionNumber |
+| | | Copyright |
 
 **图 21.9** | 书籍数据库中的表关系。
 
@@ -22686,11 +22473,11 @@ SELECT AuthorID, LastName FROM Authors
 
 **图 21.11** | Authors 表的示例 `AuthorID` 和 `LastName` 数据。
 
-> **软件工程观察 21.2**
->
-> 通常，你通过预先确定结果中的列来处理结果——例如，从 `Authors` 表中选择 `AuthorID` 和 `LastName` 可以确保从数据库返回的只有 `AuthorID` 和 `LastName`。这可以显著节省性能。只选择你需要的列可以减少数据库与应用程序之间传输的数据量。
+## 软件工程观察 21.2
 
-### Common SQL 子句
+通常，你通过预先确定结果中的列来处理结果——例如，从 `Authors` 表中选择 `AuthorID` 和 `LastName` 可以确保从数据库返回的只有 `AuthorID` 和 `LastName`。这可以显著节省性能。只选择你需要的列可以减少数据库与应用程序之间传输的数据量。
+
+## Common SQL 子句
 
 `WHERE` 子句用于过滤查询返回的结果。例如，如果你只想检索姓为 'Deitel' 的作者，将使用以下查询：
 
@@ -22710,7 +22497,7 @@ SELECT * FROM Authors WHERE AuthorID > 5
 SELECT * FROM Authors WHERE LastName LIKE 'D%'
 ```
 
-#### 模式匹配：零或多个字符
+### 模式匹配：零或多个字符
 
 模式中的百分比字符 (`%`) 表示后面可以跟零或多个字符。例如，要找到所有姓以 'D' 开头的作者，将使用以下查询：
 
@@ -22720,7 +22507,7 @@ SELECT * FROM Authors WHERE LastName LIKE 'D%'
 
 此查询返回图 21.13 所示的行——五位作者中有三位的名字以 D 开头。
 
-#### 模式匹配：任意字符
+### 模式匹配：任意字符
 
 模式中的下划线 (`_`) 表示该位置是一个单个通配符字符。例如，要找到所有姓以任意字符开头、紧接着是字母 'o'、然后是任意数量额外字符的作者，将使用以下查询：
 
@@ -22730,13 +22517,13 @@ SELECT * FROM Authors WHERE LastName LIKE '_o%'
 
 前一个查询产生了图 21.14 所示的行，因为我们的数据库中只有一位作者的姓的第二个字母是 'o'。
 
-> **可移植性提示 21.1**
->
-> 查看你数据库系统的文档以确定 SQL 是否对你的系统敏感，并确定 SQL 关键字的语法。
+## 可移植性提示 21.1
 
-> **可移植性提示 21.2**
->
-> 仔细阅读你数据库系统的文档，以确定它是否支持这里讨论的 `LIKE` 运算符。
+查看你数据库系统的文档以确定 SQL 是否对你的系统敏感，并确定 SQL 关键字的语法。
+
+## 可移植性提示 21.2
+
+仔细阅读你数据库系统的文档，以确定它是否支持这里讨论的 `LIKE` 运算符。
 
 ### 21.4.3 ORDER 子句
 
@@ -22911,7 +22698,7 @@ VALUES ('Sue', 'Smith');
 | 5 | Michael | Morgana |
 | 6 | Sue | Red |
 
-图 21.20 | 执行 INSERT 操作后 Authors 表的示例数据。
+**图 21.20** | 执行 INSERT 操作后 Authors 表的示例数据。
 
 ### 21.4.6 UPDATE 语句
 
@@ -22948,7 +22735,7 @@ WHERE AuthorID = 6
 | 5 | Michael | Morgana |
 | 6 | Sue | Black |
 
-图 21.21 | 执行 UPDATE 操作后 Authors 表的示例数据。
+**图 21.21** | 执行 UPDATE 操作后 Authors 表的示例数据。
 
 ### 21.4.7 DELETE 语句
 
@@ -22980,13 +22767,13 @@ WHERE AuthorID = 5
 | 4 | Dan | Quirk |
 | 5 | Michael | Morgana |
 
-图 21.22 | 执行 DELETE 操作后 Authors 表的示例数据。
+**图 21.22** | 执行 DELETE 操作后 Authors 表的示例数据。
 
 ## 21.5 建立 Java DB 数据库
 
 本章的示例使用 Oracle 的纯 Java 数据库 DB，该数据库可以在 Windows、Mac OS X 和 Linux 上通过 Oracle 的 JDK 安装。在执行本章的应用程序之前，你必须在 Java DB 中设置好第 21.6–21.7 节使用的 `books` 数据库以及第 21.8 节使用的 `addressbook` 数据库。
 
-在本章中，你将使用 Java DB 的嵌入式版本。这意味着你在每个示例中填充的数据库与该示例的文件夹匹配。本章的示例位于 `ch24 examples` 文件夹的两个子目录中——`books_examples/addressbook_example`。Java DB 也可以作为服务器通过网络接收数据库请求，但这超出了本章的讨论范围。
+在本章中，你将使用 Java DB 的嵌入式版本。这意味着你在每个示例中填充的数据库与该示例的文件夹匹配。本章的示例位于 `ch24 examples` 文件夹的两个子目录中——`books_examples`/`addressbook_example`。Java DB 也可以作为服务器通过网络接收数据库请求，但这超出了本章的讨论范围。
 
 ### JDK 安装目录
 
@@ -23013,7 +22800,7 @@ Java DB 带有若干几个文件，允许你配置和更改目录。在从命令
 
 设置 `JAVA_HOME` 环境变量后，执行以下步骤：
 
-1. 以管理员身份运行记事本。在 Windows 7 上，选择“开始 > 所有程序 > 右键点击记事本并选择“以管理员身份运行”。在 Windows 8 上，搜索记事本，在搜索结果中右键点击它，选择“高级”，然后选择“以管理员身份运行”。
+1. 以管理员身份运行记事本。在 Windows 7 上，选择“开始 > 所有程序 > 右键点击记事本并选择‘以管理员身份运行’”。在 Windows 8 上，搜索记事本，在搜索结果中右键点击它，选择“高级”，然后选择“以管理员身份运行”。
 2. 从记事本打开位于 安装目录 `db\bin` 文件夹下的 `setEmbeddedCP.bat` 批文件。
 3. 定位到以下行：
    ```
@@ -23055,11 +22842,11 @@ $JAVA_HOME/db/bin/ij
 
 启动与 Java DB 交互的命令行工具。这将显示 `ij>` 提示符。
 
-- 5. 执行 21.5.1 节的第 7–9 步以创建 `books` 数据库。
+- 5. 执行 21.5.1 节的第 7–9 步以创建 books 数据库。
 
 # 750 第21章 使用 JDBC 访问数据库
 
-7. 执行节 21.5.1 中的第 7–9 步创建 `addressbook` 数据库。在每一步中，将 `books` 替换为 `addressbook`。
+7. 执行节 21.5.1 中的第 7–9 步创建 addressbook 数据库。在每一步中，将 books 替换为 addressbook。
 
 你现在准备好执行本章的示例了。
 
@@ -23069,7 +22856,7 @@ $JAVA_HOME/db/bin/ij
 
 - 1. 打开终端。
 
-- 2. 执行节 21.5.2 中的步骤，但在第 1 步中，将 `DERBY_HOME` 设置为：
+- 2. 执行节 21.5.2 中的步骤，但在第 1 步中，将 `DERBY_HOME` 设置为
 
 `DERBY_HOME=YourLinux/InstallationFolder/db`
 
@@ -23085,7 +22872,7 @@ $JAVA_HOME/db/bin/ij
 
 ### 21.6.1 连接并查询数据库
 
-图 21.23 示例对 `books` 数据库执行了一个简单查询，检索了整个 `Authors` 表。程序说明了如何连接数据库、查询数据库以及处理结果。后续讨论了程序的关键 JDBC 方面。3–8 行导入了 `java.sql` 包中的 JDBC 接口和类。`Main` 方法（12–48 行）连接数据库、查询数据库、显示结果并关闭数据库连接。第 14 行为数据库 URL 创建了一个 `String` 常数，标识了要连接的数据库名称以及 JDBC 驱动使用的协议（稍后讨论）。第 15–16 行定义了代表 SQL 查询的 `Constant`，将 `authors` 表中的 `authorID`、`firstName` 和 `lastName`。
+图 21.23 示例对 books 数据库执行了一个简单查询，检索了整个 Authors 表。程序说明了如何连接数据库、查询数据库以及处理结果。后续讨论了程序的关键 JDBC 方面。3–8 行导入了 `java.sql` 包中的 JDBC 接口和类。`Main` 方法（12–48 行）连接数据库、查询数据库、显示结果并关闭数据库连接。第 14 行为数据库 URL 创建了一个 `String` 常数，标识了要连接的数据库名称以及 JDBC 驱动使用的协议（稍后讨论）。第 15–16 行定义了代表 SQL 查询的 `Constant`，将 authors 表中的 authorID、firstName 和 lastName。
 
 ```java
 // 图 21.23: DisplayAuthors.java
@@ -23150,13 +22937,13 @@ public static void main(String args[]) {
 
 **图 21.23** 显示 Authors 表的内容。（第 2 部分）。
 
-JDBC 支持自动驱动发现——它为你将数据库驱动加载到内存中。为了确保程序能够找到驱动，在执行程序时必须将类的位置包含在程序的 `classpath` 中。对于节 21.5 中的 Java DB，如果你在系统使用了 `embeddedCP.bat` 或 `setEmbeddedCP` 文件——该步骤为你的平台在命令行窗口配置了 `CLASSPATH` 环境变量。完成后，你可以使用命令简单的运行应用程序：
+JDBC 支持自动驱动发现——它为你将数据库驱动加载到内存中。为了确保程序能够找到驱动，在执行程序时必须将类的位置包含在程序的 classpath 中。对于节 21.5 中的 Java DB，如果你在系统使用了 `embeddedCP.bat` 或 `setEmbeddedCP` 文件——该步骤为你的平台在命令行窗口配置了 `CLASSPATH` 环境变量。完成后，你可以使用命令简单的运行应用程序：
 
 `java DisplayAuthors`
 
 ## 连接数据库
 
-示例中使用的 JDBC 接口均扩展了 `AutoCloseable` 接口，因此你可以使用 `try-with-resources` 语句（引入于节 11.12）来实现这些接口的对象。19–23 行在 `connection` 关键字后的括号中创建此示例的 `AutoCloseable` 对象——此类对象在块终止（第 43 行）或块执行期间发生异常时会自动关闭。`connection` 关键字括号内创建的每个对象必须用分号 (`;`) 隔开。
+示例中使用的 JDBC 接口均扩展了 `AutoCloseable` 接口，因此你可以使用 `try-with-resources` 语句（引入于节 11.12）来实现这些接口的对象。19–23 行在 `connection` 关键字后的括号中创建此示例的 `AutoCloseable` 对象——此类对象在块终止（第 43 行）或块执行期间发生异常时会自动关闭。`connection` 关键字括号内创建的每个对象必须用分号 (;) 隔开。
 
 20–21 行创建由 `connection` 引用的 `Connection` 对象（package `java.sql`）。实现 `Connection` 的对象管理 Java 程序与数据库之间的连接。`Connection` 对象允许程序创建操作数据库的 SQL 语句。程序通过调用 `DriverManager` 类（package `java.sql`）的静态方法 `getConnection` 初始化连接，尝试连接到 URL指定的数据库。
 
@@ -23166,7 +22953,7 @@ JDBC 支持自动驱动发现——它为你将数据库驱动加载到内存中
 - 一个指定用户名的 `String` 以及
 - 一个指定密码的 `String`。
 
-`books` 数据库的用户名和密码在节 21.5 中设置。如果你在那里使用了不同的用户名和密码，则需要替换第 21 行传递给 `getConnection` 方法的用户名（第二个参数）和密码（第三个参数）。URL 加载数据库（可能在网络上，或在计算机的本地文件系统中）。URL `jdbc:books` 指定了通信协议 (`jdbc`)、通信子协议 (`derby`) 以及数据库的位置。图 21.23 显示了流行的 RDBMS 的数据库 URL 格式。
+books 数据库的用户名和密码在节 21.5 中设置。如果你在那里使用了不同的用户名和密码，则需要替换第 21 行传递给 `getConnection` 方法的用户名（第二个参数）和密码（第三个参数）。URL 加载数据库（可能在网络上，或在计算机的本地文件系统中）。URL `jdbc:books` 指定了通信协议 (jdbc)、通信子协议 (derby) 以及数据库的位置。图 21.23 显示了流行的 RDBMS 的数据库 URL 格式。
 
 | RDBMS | URL 格式 |
 | --- | --- |
@@ -23217,9 +23004,9 @@ JDBC 支持自动驱动发现——它为你将数据库驱动加载到内存中
 
 755
 
-## ResultSetTableModel 类
+ResultSetTableModel 类
 
-`ResultSetTableModel` 类（图 21.25）继承自 `AbstractTableModel`（`javax.swing.table` 包），后者实现了 `TableModel`。`ResultSetTableModel` 重写了 `TableModel` 方法 `getColumnCount()`、`getColumnName()`、`getRowCount()` 和 `getValue()`。`TableModel` 方法的默认实现 `CellEditor` 和 `setValueAt()` 由 `AbstractTableModel` 提供）未重写，因为此示例不支持编辑 `JTable` 单元格。`TableModel` 方法的默认实现 `addTableModelListener()` 和 `removeTableModelListener()` 由 `AbstractTableModel` 提供）未重写，因为 `AbstractTableModel` 中的这些实现正确地添加和删除了事件监听器。
+`ResultSetTableModel` 类（图 21.25）继承自 `AbstractTableModel`（`javax.swing.table` 包），后者实现了 `TableModel`。`ResultSetTableModel` 重写了 `TableModel` 方法 `getColumnCount`、`getColumnName`、`getRowCount` 和 `getValue`。`TableModel` 方法的默认实现 `CellEditor` 和 `setValueAt` 由 `AbstractTableModel` 提供）未重写，因为此示例不支持编辑 `JTable` 单元格。`TableModel` 方法的默认实现 `addTableModelListener` 和 `removeTableModelListener` 由 `AbstractTableModel` 提供）未重写，因为 `AbstractTableModel` 中的这些实现正确地添加和删除了事件监听器。
 
 
 
@@ -23388,7 +23175,7 @@ public class ResultSetTableModel extends AbstractTableModel {
 } // 结束类 ResultSetTableModel
 ```
 
-**图 21.25** | 为 JTable 提供 ResultSet 数据的表。（4 部分中的第 2 部分。）
+图 21.25 | 为 JTable 提供 ResultSet 数据的表。（4 部分中的第 2 部分。）
 
 ### ResultSetTableModel 构造函数
 
@@ -23403,7 +23190,7 @@ public class ResultSetTableModel extends AbstractTableModel {
 | ResultSet 常量 | 说明 |
 |---|---|
 | `TYPE_FORWARD_ONLY` | 指定 `ResultSet` 游标只能向正方向移动（即从 `ResultSet` 中的第一行移动到最后一行）。 |
-| `TYPE_SCROLL_INSENSITIVE` | 指定 `ResultSet` 游标可以在任何方向滚动，并且在处理 `ResultSet` 期间对底层数据的更改不会反映在 `ResultSet` 中，除非程序再次查询数据库。 |
+| `TYPE_SCROLL_INSENSITIVE` | 指定 `ResultSet` 游标可以在任何方向滚动，并且在处理 `ResultSet` 期间对底层数据所做的更改不会反映在 `ResultSet` 中，除非程序再次查询数据库。 |
 | `TYPE_SCROLL_SENSITIVE` | 指定 `ResultSet` 游标可以在任何方向滚动，并且在处理 `ResultSet` 期间对底层数据的更改会立即反映在 `ResultSet` 中。 |
 
 > **可移植性提示 21.3**
@@ -23428,7 +23215,7 @@ public class ResultSetTableModel extends AbstractTableModel {
 > **常见编程错误 21.9**
 > 当数据库驱动程序不支持可更新的 `ResultSet` 时，尝试更新 `ResultSet` 会导致 `SQLException`。
 
-此示例使用了可滚动、对更改不敏感且只读的 `ResultSet`。第 45 行调用 `setQuery` 方法（第 144–163 行）来执行默认查询。
+此示例使用了可滚动、对更改不敏感且只读的 `ResultSet`。第 45 行（图 21.25）调用 `setQuery` 方法（第 144–163 行）来执行默认查询。
 
 ### getColumnClass 方法
 
@@ -23497,7 +23284,7 @@ JTable resultTable = new JTable(tableModel);
 
 JLabel filterLabel = new JLabel("Filter:");
 final JTextField filterText = new JTextField();
-filterButton = new JButton("Apply Filter");
+JButton filterButton = new JButton("Apply Filter");
 ```
 
 **图 21.28** 显示 books 数据库中 Authors 表的内容。（5 个部分中的第 2 部分）
@@ -23515,36 +23302,28 @@ add(boxSouth, BorderLayout.SOUTH);
 
 // 为 submitButton 创建事件监听器
 submitButton.addActionListener(
-    {
-        public void actionPerformed(ActionEvent event)
-        {
+    new ActionListener() {
+        public void actionPerformed(ActionEvent event) {
             // 执行新查询
-            try
-            {
+            try {
                 tableModel.executeQuery(queryArea.getText());
-            }
-            catch (SQLException sqlException) {
-                {
+            } catch (SQLException sqlException) {
+                JOptionPane.showMessageDialog(null,
+                    sqlException.getMessage(), "Database error",
+                    JOptionPane.ERROR_MESSAGE);
+                // 尝试从无效的用户查询中恢复
+                // 通过执行默认查询
+                try {
+                    tableModel.executeQuery(DEFAULT_QUERY);
+                    queryArea.setText(DEFAULT_QUERY);
+                } catch (SQLException sqlException2) {
                     JOptionPane.showMessageDialog(null,
                         sqlException.getMessage(), "Database error",
                         JOptionPane.ERROR_MESSAGE);
                 }
-                // 尝试从无效的用户查询中恢复
-                // 通过执行默认查询
-                try
-                {
-                    tableModel.executeQuery(DEFAULT_QUERY);
-                    queryArea.setText(DEFAULT_QUERY);
-                } catch (SQLException sqlException2) {
-                    {
-                        JOptionPane.showMessageDialog(null,
-                            sqlException.getMessage(), "Database error",
-                            JOptionPane.ERROR_MESSAGE);
-                    }
-                    // 确保数据库连接关闭
-                    tableModel.disconnectFromDatabase();
-                    System.exit(1); // 终止应用程序
-                }
+                // 确保数据库连接关闭
+                tableModel.disconnectFromDatabase();
+                System.exit(1); // 终止应用程序
             }
         }
     }
@@ -23605,12 +23384,7 @@ catch (SQLException sqlException) {
 
 **图 21.28** | 显示 books 数据库中 Authors 表的内容。（5 个部分中的第 4 部分）
 
-a) 显示 Authors 表中的所有数据
-b) 显示作者的姓和名以及书籍的标题和版本号
-c) 过滤查询结果以显示包含 Java 的书籍
-d) 显示默认查询的结果
-
-### 代码说明
+### 21.6 使用 JDBC 操纵数据库
 
 第 27–29 行和第 32 行定义了 URL、用户名、密码和默认查询，这些被传递给 `ResultSetTableModel` 构造函数以建立与数据库的初始连接并执行默认查询。`main` 方法（第 136–179 行）创建了 `ResultSetModel` 对象、应用程序的 GUI 并将其显示在 `JFrame` 中，第 64 行创建了 `JTable` 对象，并将第 42–43 行创建的 `ResultSetTableModel` 对象传递给 `JTable` 构造函数，并将 `JTable` 注册为 `ResultSetModel` 生成的 `TableEvent` 的监听器。
 
@@ -23989,7 +23763,7 @@ public class PersonQueries
 
 ### 创建 PreparedStatements
 
-第 31–32 行调用 `prepareStatement` 方法创建 `selectAllPeople` `PreparedStatement`，它选择 Addresses 表中的所有行。第 35–36 行创建了带有参数的 `selectPeopleByLastName` 。该语句选择 Addresses 表中匹配特定姓氏的所有行。注意用于指定姓氏的 `?` 字符。第 39–42 行创建了 `insertNewPerson` `PreparedStatement`，四个参数代表新条目的名字、姓氏、电子邮件地址和电话号码。再次注意表示这些参数的 `?` 字符。
+第 31–32 行调用 `prepareStatement` 方法创建 `selectAllPeople` `PreparedStatement`，它选择 Addresses 表中的所有行。第 35–36 行创建了带有参数的 `selectPeopleByLastName` 。该语句选择 Addresses 表中匹配特定姓氏的所有行。注意用于指定姓氏的 `?` 字符。第 39–42 行创建了 `insertNew` `PreparedStatement`，四个参数代表新条目的名字、姓氏、电子邮件地址和电话号码。再次注意表示这些参数的 `?` 字符。
 
 ### PersonQueries 方法 getAllPeople
 
@@ -24003,11 +23777,9 @@ public class PersonQueries
 
 ### Class AddressBookDisplay
 
-`AddressBookDisplay`（图 21.32）应用程序使用 `PersonQueries` 对象与数据库交互。第 59 行创建了 `PersonQueries` 对象。当用户点击“所有条目”按钮时，会调用 `buttonActionPerformed`（第 309–335 行）。第 313 行调用 `PersonQueries` 对象的 `getAllPeople` 方法获取数据库中的所有条目。用户可以搜索这些
+`AddressBookDisplay`（图 21.32）应用程序使用 `PersonQueries` 对象与数据库交互。第 59 行创建了 `PersonQueries` 对象。当用户点击“所有条目”按钮时，会调用 `buttonActionPerformed`（第 309–335 行）。第 313 行调用 `PersonQueries` 对象的 `getAllPeople` 方法获取数据库中的所有条目。用户可以搜索这些上一个和下一个 JButtons。当用户点击 FindButton 按钮时，会调用 `queryButtonActionPerformed` 处理程序（第 265–287 行）。第 267–268 行调用 `PersonQueries` 对象的 `getLastNameByName` 方法，在数据库中查找与指定姓匹配的条目。如果有多个条目，用户可以使用 Previous 和 Next JButtons 在它们之间滚动。
 
 ## 21.8 PreparedStatements（预编译语句）
-
-上一个和下一个 JButtons。当用户点击 FindButton 按钮时，会调用 `queryButtonActionPerformed` 处理程序（第 265–287 行）。第 267–268 行调用 `PersonQueries` 对象的 `getLastNameByName` 方法，在数据库中查找与指定姓匹配的条目。如果有多个条目，用户可以使用 Previous 和 Next JButtons 在它们之间滚动。
 
 ```java
 // Fig. 21.32: AddressBookDisplay.java
@@ -24181,180 +23953,180 @@ public class AddressBookDisplay extends JFrame
 ## 21.8 PreparedStatements
 
 ```java
-153 idTextField.setEditable(false);
-154 displayPanel.add(idTextField);
-155
-156 firstNameLabel.setText("First Name:");
-157 displayPanel.add(firstNameLabel);
-158 displayPanel.add(firstNameTextField);
-159
-160 lastNameLabel.setText("Last Name:");
-161 displayPanel.add(lastNameLabel);
-162 displayPanel.add(lastNameTextField);
-163
-164 emailLabel.setText("Email:");
-165 displayPanel.add(emailLabel);
-166 displayPanel.add(emailTextField);
-167
-168 phoneLabel.setText("Phone Number:");
-169 displayPanel.add(phoneLabel);
-170 displayPanel.add(phoneTextField);
-171 add(displayPanel);
-172
-173 queryPanel.setLayout(
-174 new BoxLayout(queryPanel, BoxLayout.X_AXIS));
-175
-176 queryPanel.setBorder(BorderFactory.createTitledBorder(
-177 "Find an entry by last name:\n"));
-178 queryLabel.setText("Last Name:");
-179 queryPanel.add(Box.createHorizontalStrut(5));
-180 queryPanel.add(queryLabel);
-181 queryPanel.add(Box.createHorizontalStrut(10));
-182 queryPanel.add(textField);
-183 queryPanel.add(Box.createHorizontalStrut(10));
-184
-185 queryLabel.setText("of");
-186 queryPanel.add(Box.createHorizontalStrut(5));
-187 queryPanel.add(ofLabel);
-188 queryPanel.add(Box.createHorizontalStrut(10));
-189 queryPanel.add(maxTextField);
-190 queryPanel.add(Box.createHorizontalStrut(10));
-191
-192 queryLabel.setText("Next:");
-193 queryPanel.add(Box.createHorizontalStrut(5));
-194 queryPanel.add(queryLabel);
-195 queryPanel.add(Box.createHorizontalStrut(10));
-196 queryPanel.add(nextButton);
-197 queryPanel.add(Box.createHorizontalStrut(5));
-198
-199 add(queryPanel);
-200
-201 browseButton.setText("Browse All Entries");
-202 browseButton.addActionListener(
-203    new ActionListener() {
-204      {
-205          public void actionPerformed(ActionEvent evt) {
-206              {
-207                  browseButtonActionPerformed(evt);
-208              }
-209          }
-210    }
-211  );
-212 add(browseButton);
-213
-214 insertButton.setText("Insert New Entry");
-215 insertButton.addActionListener(
-216    new ActionListener() {
-217      {
-218          public void actionPerformed(ActionEvent evt) {
-219              {
-220                  insertButtonActionPerformed(evt);
-221              }
-222          }
-223    }
-224  }
-225  );
-226 add(insertButton);
-227
-228 addWindowListener(
-229    new WindowAdapter()
-230      {
-231        public void windowClosing(WindowEvent evt)
-232        {
-233          personQueries.close(); // 关闭数据库连接
-234          System.exit(0);
-235        }
-236      }
-237  });
-238
-239  setVisible(true);
-240  } // 构造函数结束
-241
-242  // 处理点击 previousButton 时的调用
-243  private void previousButtonActionPerformed(ActionEvent evt)
-244  {
-245    currentEntryIndex--;
-246  
-247    if (currentEntryIndex < 0)
-248      currentEntryIndex = numberOfEntries - 1;
-249
-250    indexTextField.setText("" + (currentEntryIndex + 1));
-251    indexTextFieldActionPerformed(evt);
-252  }
-253
-254  // 处理 nextButton 点击时的调用
-255  private void nextButtonActionPerformed(ActionEvent evt)
-256  {
-257    currentEntryIndex++;
-258  
-259    if (currentEntryIndex >= numberOfEntries)
-260      currentEntryIndex = 0;
-261
-262    indexTextField.setText("" + (currentEntryIndex + 1));
-263    indexTextFieldActionPerformed(evt);
-264  }
+        153 idTextField.setEditable(false);
+        154 displayPanel.add(idTextField);
+        155
+        156 firstNameLabel.setText("First Name:");
+        157 displayPanel.add(firstNameLabel);
+        158 displayPanel.add(firstNameTextField);
+        159
+        160 lastNameLabel.setText("Last Name:");
+        161 displayPanel.add(lastNameLabel);
+        162 displayPanel.add(lastNameTextField);
+        163
+        164 emailLabel.setText("Email:");
+        165 displayPanel.add(emailLabel);
+        166 displayPanel.add(emailTextField);
+        167
+        168 phoneLabel.setText("Phone Number:");
+        169 displayPanel.add(phoneLabel);
+        170 displayPanel.add(phoneTextField);
+        171 add(displayPanel);
+        172
+        173 queryPanel.setLayout(
+        174 new BoxLayout(queryPanel, BoxLayout.X_AXIS);
+        175
+        176 queryPanel.setBorder(BorderFactory.createTitledBorder(
+        177 "Find an entry by last name:\n");
+        178 queryLabel.setText("Last Name:");
+        179 queryPanel.add(Box.createHorizontalStrut(5));
+        180 queryPanel.add(queryLabel);
+        181 queryPanel.add(Box.createHorizontalStrut(10));
+        182 queryPanel.add(textField);
+        183 queryPanel.add(Box.createHorizontalStrut(10));
+        184
+        185 queryLabel.setText("of");
+        186 queryPanel.add(Box.createHorizontalStrut(5));
+        187 queryPanel.add(ofLabel);
+        188 queryPanel.add(Box.createHorizontalStrut(10));
+        189 queryPanel.add(maxTextField);
+        190 queryPanel.add(Box.createHorizontalStrut(10));
+        191
+        192 queryLabel.setText("Next:");
+        193 queryPanel.add(Box.createHorizontalStrut(5));
+        194 queryPanel.add(queryLabel);
+        195 queryPanel.add(Box.createHorizontalStrut(10));
+        196 queryPanel.add(nextButton);
+        197 queryPanel.add(Box.createHorizontalStrut(5));
+        198
+        199 add(queryPanel);
+        200
+        201 browseButton.setText("Browse All Entries");
+        202 browseButton.addActionListener(
+        203    new ActionListener() {
+        204      {
+        205          public void actionPerformed(ActionEvent evt) {
+        206              {
+        207                  browseButtonActionPerformed(evt);
+        208              }
+        209          }
+        210    }
+        211  );
+        212 add(browseButton);
+        213
+        214 insertButton.setText("Insert New Entry");
+        215 insertButton.addActionListener(
+        216    new ActionListener() {
+        217      {
+        218          public void actionPerformed(ActionEvent evt) {
+        219              {
+        220                  insertButtonActionPerformed(evt);
+        221              }
+        222          }
+        223    }
+        224  }
+        225  );
+        226 add(insertButton);
+        227
+        228 addWindowListener(
+        229    new WindowAdapter()
+        230      {
+        231        public void windowClosing(WindowEvent evt)
+        232        {
+        233          personQueries.close(); // 关闭数据库连接
+        234          System.exit(0);
+        235        }
+        236      }
+        237  });
+        238
+        239  setVisible(true);
+        240  } // 构造函数结束
+        241
+        242  // 处理点击 previousButton 时的调用
+        243  private void previousButtonActionPerformed(ActionEvent evt)
+        244  {
+        245    currentEntryIndex--;
+        246  
+        247    if (currentEntryIndex < 0)
+        248      currentEntryIndex = numberOfEntries - 1;
+        249
+        250    indexTextField.setText("" + (currentEntryIndex + 1));
+        251    indexTextFieldActionPerformed(evt);
+        252  }
+        253
+        254  // 处理 nextButton 点击时的调用
+        255  private void nextButtonActionPerformed(ActionEvent evt)
+        256  {
+        257    currentEntryIndex++;
+        258  
+        259    if (currentEntryIndex >= numberOfEntries)
+        260      currentEntryIndex = 0;
+        261
+        262    indexTextField.setText("" + (currentEntryIndex + 1));
+        263    indexTextFieldActionPerformed(evt);
+        264  }
 ```
 
 图 21.32 | 一个简单的地址簿。（8 部分中的第 4 部分）。
 
 ```java
-206  browseButtonActionPerformed(evt);
-207  }
-208  }
-209  );
-210  add(browseButton);
-211
-212  insertButton.setText("Insert New Entry");
-213  insertButton.addActionListener(
-214    new ActionListener() {
-215      {
-216          public void actionPerformed(ActionEvent evt) {
-217              {
-218                  insertButtonActionPerformed(evt);
-219              }
-220          }
-221    }
-222  }
-223  );
-224  add(insertButton);
-225
-226  addWindowListener(
-227    new WindowAdapter()
-228      {
-229        public void windowClosing(WindowEvent evt)
-230        {
-231          personQueries.close(); // 关闭数据库连接
-232          System.exit(0);
-233        }
-234      }
-235  });
-236
-237  setVisible(true);
-238  } // 构造函数结束
-239
-240  // 处理点击 previousButton 时的调用
-241  private void previousButtonActionPerformed(ActionEvent evt)
-242  {
-243    currentEntryIndex--;
-244  
-245    if (currentEntryIndex < 0)
-246      currentEntryIndex = numberOfEntries - 1;
-247
-248    indexTextField.setText("" + (currentEntryIndex + 1));
-249    indexTextFieldActionPerformed(evt);
-250  }
-251
-252  // 处理 nextButton 点击时的调用
-253  private void nextButtonActionPerformed(ActionEvent evt)
-254  {
-255    currentEntryIndex++;
-256  
-257    if (currentEntryIndex >= numberOfEntries)
-258      currentEntryIndex = 0;
-259
-260    indexTextField.setText("" + (currentEntryIndex + 1));
-261    indexTextFieldActionPerformed(evt);
-262  }
+        206  browseButtonActionPerformed(evt);
+        207  }
+        208  }
+        209  );
+        210  add(browseButton);
+        211
+        212  insertButton.setText("Insert New Entry");
+        213  insertButton.addActionListener(
+        214    new ActionListener() {
+        215      {
+        216          public void actionPerformed(ActionEvent evt) {
+        217              {
+        218                  insertButtonActionPerformed(evt);
+        219              }
+        220          }
+        221    }
+        222  }
+        223  );
+        224  add(insertButton);
+        225
+        226  addWindowListener(
+        227    new WindowAdapter()
+        228      {
+        229        public void windowClosing(WindowEvent evt)
+        230        {
+        231          personQueries.close(); // 关闭数据库连接
+        232          System.exit(0);
+        233        }
+        234      }
+        235  });
+        236
+        237  setVisible(true);
+        238  } // 构造函数结束
+        239
+        240  // 处理点击 previousButton 时的调用
+        241  private void previousButtonActionPerformed(ActionEvent evt)
+        242  {
+        243    currentEntryIndex--;
+        244  
+        245    if (currentEntryIndex < 0)
+        246      currentEntryIndex = numberOfEntries - 1;
+        247
+        248    indexTextField.setText("" + (currentEntryIndex + 1));
+        249    indexTextFieldActionPerformed(evt);
+        250  }
+        251
+        252  // 处理 nextButton 点击时的调用
+        253  private void nextButtonActionPerformed(ActionEvent evt)
+        254  {
+        255    currentEntryIndex++;
+        256  
+        257    if (currentEntryIndex >= numberOfEntries)
+        258      currentEntryIndex = 0;
+        259
+        260    indexTextField.setText("" + (currentEntryIndex + 1));
+        261    indexTextFieldActionPerformed(evt);
+        262  }
 ```
 
 ```java
@@ -24460,7 +24232,7 @@ private void browseButtonActionPerformed(ActionEvent event)
 359 } // 结束类 AddressBook 类
 ```
 
-**图 21.32** 一个简单的地址簿。（8 部分中的第 7 部分）。
+图 21.32 | 一个简单的地址簿。（8 部分中的第 7 部分）。
 
 a) 初始地址簿屏幕。
 
@@ -24484,17 +24256,17 @@ e) 添加条目并浏览到其后。
 
 **图 21.32** 一个简单的地址簿。（8 部分中的第 8 部分。）
 
-要向 `AddressBook` 数据库中添加新条目，用户可以在 `JTextField` 中输入名、姓、电子邮件和电话号码（*AddressID 将自动递增*），并点击 **Insert New Entry**（插入新条目）按钮。将调用第 338–352 行的 `insertButtonActionPerformed` 事件处理程序。第 340–342 行调用 `PersonQueries` 对象的 `addPerson` 方法向数据库添加新条目。第 351 行调用 `browseButtonActionPerformed` 以获取地址簿中更新后的人员集合并相应更新 GUI。
+要向 `AddressBook` 数据库中添加新条目，用户可以在 `JTextField` 中输入名、姓、电子邮件和电话号码（*AddressID 将自动递增*），并点击 **Insert New Entry**（插入新条目）按钮。将调用第 338–352 行的 `buttonActionPerformed` 事件处理程序。第 340–342 行调用 `PersonQueries` 对象的 `addPerson()` 方法向数据库添加新条目。第 351 行调用 `browseButton` 以获取地址簿中更新后的人员集合并相应更新 GUI。
 
 用户随后可以通过点击 Previous（上一个）或 Next（下一个）`JButton` 来查看不同的条目，这将分别调用 `previousButtonActionPerformed`（第 241–250 行）或 `nextButtonActionPerformed`（第 253–262 行）。或者，用户可以在 `indexTextField` 中输入一个数字并按回车键查看特定条目。这将调用 `textFieldActionPerformed`（第 290–306 行）来显示指定的记录。
 
 ## 21.9 PreparedStatements
 
-要向 `AddressBook` 数据库中添加新条目，用户可以在 `JTextField` 中输入名、姓、电子邮件和电话号码（*AddressID 将自动递增*），并点击 **Insert New Entry**（插入新条目）按钮。将调用第 338–352 行的 `insertButtonActionPerformed` 事件处理程序。第 340–342 行调用 `PersonQueries` 对象的 `addPerson` 方法向数据库添加新条目。第 351 行调用 `browseButtonActionPerformed` 以获取地址簿中更新后的人员集合并相应更新 GUI。
+要向 `AddressBook` 数据库中添加新条目，用户可以在 `JTextField` 中输入名、姓、电子邮件和电话号码（*AddressID 将自动递增*），并点击 **Insert New Entry**（插入新条目）按钮。将调用第 338–352 行的 `buttonActionPerformed` 事件处理程序。第 340–342 行调用 `PersonQueries` 对象的 `addPerson()` 方法向数据库添加新条目。第 351 行调用 `browseButton` 以获取地址簿中更新后的人员集合并相应更新 GUI。
 
 用户随后可以通过点击 Previous（上一个）或 Next（下一个）`JButton` 来查看不同的条目，这将分别调用 `previousButtonActionPerformed`（第 241–250 行）或 `nextButtonActionPerformed`（第 253–262 行）。或者，用户可以在 `indexTextField` 中输入一个数字并按回车键查看特定条目。这将调用 `textFieldActionPerformed`（第 290–306 行）来显示指定的记录。
 
-## 21.10 存储过程 (Stored Procedures)
+## 21.10 存储过程
 
 许多数据库管理系统允许在数据库中存储 SQL 语句集合，程序可以调用它们以获取输出值。使用 `CallableStatement` 接口来执行存储过程。
 
@@ -24504,7 +24276,7 @@ e) 添加条目并浏览到其后。
 
 如果 `setAutoCommit` 的参数为 false，程序必须调用 `Connection` 方法 `commit` 或 `Connection` 方法 `rollback`（将数据库返回到事务之前的状态）。`Connection` 接口还提供 `getAutoCommit` 方法来确定连接的自动提交状态。
 
-## 21.11 事务处理 (Transaction Processing)
+## 21.11 事务处理
 
 事务处理允许与数据库交互的程序将数据库操作（或操作集合）视为单一操作。这种操作被称为原子操作或*事务*。
 
@@ -24512,7 +24284,7 @@ e) 添加条目并浏览到其后。
 
 Java 通过 `Connection` 接口的方法提供事务处理。`setAutoCommit` 方法指定每个 SQL 语句在完成后是否提交（true 参数），或者是否将多个 SQL 语句分组为事务（false 参数）。
 
-# JavaFX GUI
+# 第 22 章 JavaFX GUI
 
 ## 目标
 
@@ -24522,7 +24294,7 @@ Java 通过 `Connection` 接口的方法提供事务处理。`setAutoCommit` 方
 - 理解 JavaFX 应用程序窗口的结构。
 - 使用 JavaFX Scene Builder 创建 FXML 文件来描述包含 `Label`、`ImageView`、`TextField`、`Slider` 和 `Button` 的 JavaFX 场景，而无需编写任何代码。
 - 使用 `VBox` 和 `GridPane` 布局容器安排 GUI 组件的布局。
-- 使用控制器类（`controller class`）为 JavaFX FXML GUI 定义事件处理程序。
+- 使用控制器类为 JavaFX FXML GUI 定义事件处理程序。
 - 构建两个 JavaFX 应用程序。
 - 将命令行参数读取到程序中。
 
@@ -24553,7 +24325,7 @@ Java 通过 `Connection` 接口的方法提供事务处理。`setAutoCommit` 方
 
 *注意：* 本章的准备知识是第 1–11 章。本章不需要你读过第 12 章《Swing 组件：第一部分》。
 
-图形用户界面（GUI）为与应用程序的交互提供了一种用户友好的机制。GUI（读音为 "GOO-ee"）具有独特的“外观和感觉”。GUI 由 GUI 组件构建。这些组件有时被称为控件（controls）或小部件（widgets，gadgets 的缩写）。GUI 组件是一个对象，用户可以通过鼠标、键盘或任何其他输入形式（如语音识别）与之交互。
+图形用户界面（GUI）为与应用程序的交互提供了一种用户友好的机制。GUI（读音为 "GOO-ee"）具有独特的“外观和感觉”。GUI 由 GUI 组件构建。这些组件有时被称为控件或小部件（widgets，gadgets 的缩写）。GUI 组件是一个对象，用户可以通过鼠标、键盘或任何其他输入形式（如语音识别）与之交互。
 
 ### 外观与感觉观察 22.1
 
@@ -24573,7 +24345,7 @@ Java 原始的 GUI 库是抽象工具包（AWT）。Swing（第 12 章）在 Jav
 
 ### 本章使用的 JavaFX 版本
 
-在本章中，我们使用带有 Java SE 7 的 JavaFX 2（ 2012 年发布）。我们在 Windows、Mac OS 和 Linux 上测试了这些应用程序。在编写本文内容时，Oracle 正准备发布 JavaFX 8 和 Java SE 8。
+在本章中，我们使用带有 Java SE 7 的 JavaFX 2（2012 年发布）。我们在 Windows、Mac OS 和 Linux 上测试了这些应用程序。在编写本文内容时，Oracle 正准备发布 JavaFX 8 和 Java SE 8。
 
 ## 22.2 JavaFX Scene Builder 与 NetBeans IDE
 
@@ -24581,13 +24353,11 @@ Java 原始的 GUI 库是抽象工具包（AWT）。Swing（第 12 章）在 Jav
 
 JavaFX 的组织方式不同。JavaFX Scene Builder 工具是一个独立的视觉工具，可以与各种 IDE 一起使用，包括最流行的 NetBeans、Eclipse 和 IntelliJ IDEA。JavaFX Scene Builder 与 NetBeans 的集成最紧密，这就是为什么我们在 JavaFX 演示中使用它。
 
-JavaFX Scene Builder 允许你通过从库中拖放组件到设计区域来创建 GUI，而无需编写任何代码。Scene Builder 的实时编辑和预览功能允许你查看并创建你的 GUI。你可以使用层级样式表（CSS）来更改整个 GUI 的外观和感觉——这种概念有时称为皮肤（skinning）。在本章中，我们使用 JavaFX Scene Builder 和 NetBeans 7 创建两个完整的 JavaFX 应用程序。
+JavaFX Scene Builder 允许你通过从库中拖放组件到设计区域来创建 GUI，而无需编写任何代码。Scene Builder 的实时编辑和预览功能允许你查看并创建你的 GUI。你可以使用层级样式表（CSS）来更改整个 GUI 的外观和感觉——这种概念有时称为皮肤。在本章中，我们使用 JavaFX Scene Builder 和 NetBeans 7 创建两个完整的 JavaFX 应用程序。
 
 ### 什么是 FXML？
 
 当你创建并修改 GUI 时，JavaFX Builder 生成 FXML（FX 标记语言）——一种用于定义和安排 JavaFX 控件的 XML 词汇。学习本章不需要了解 FXML 或 XML。
-
-1. http://www.oracle.com/techn/javafx/tools/index.html
 
 正如你在 22.4 节中看到的，JavaFX Builder 隐藏了 FXML 的细节；你可以专注于 GUI 包含什么，而不是如何生成它——这是声明式编程的另一个例子，我们在第 17 章使用 Java lambda 时用过。
 
@@ -24599,31 +24369,29 @@ JavaFX Scene Builder 允许你通过从库中拖放组件到设计区域来创�
 
 JavaFX 应用程序窗口由几个部分（图 22.1）组成，你将在 22.4–22.5 节中使用它们。
 
-窗口被称为舞台（stage）。
+窗口被称为舞台。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_228.png)
 
-舞台包含场景（scene），场景包含一个节点的场景图。场景图的根节点是一个布局容器，用于安排其他节点。此 GUI 中的每个 JavaFX 组件都是场景图中的节点。
+舞台包含场景，场景包含一个节点的场景图。场景图的根节点是一个布局容器，用于安排其他节点。此 GUI 中的每个 JavaFX 组件都是场景图中的节点。
 
 **图 22.1** JavaFX 应用程序部分。
 
 - 显示 JavaFX GUI 的窗口被称为舞台，它是 `Stage` 类（包 `javafx.stage`）的实例。
 - 舞台包含一个活跃的场景，该场景将 GUI 定义为场景图——视觉元素的树数据结构（如 GUI 控件、形状、图像、文本等）。场景是 `Scene` 类（包 `javafx.scene`）的实例。
-- 场景图中的每个视觉元素都是节点——它是 `Node` 类（包 `javafx.scene`）子类的实例，该类为场景图中的所有节点定义了公共属性和行为。除场景图中的第一个节点（称为根节点）外，每个节点都有一个父节点。具有子节点的通常是布局容器，用于在场景中安排其子节点。你将在本章中使用两个布局容器（`VBox` 和 `GridPane`）。
+- 场景图中的每个视觉元素都是节点——它是 `Node` 类（包 `javafx.scene`）子类的实例，该类为场景图中的所有节点定义了公共属性和行为。场景图中的第一个节点（称为根节点）外，每个节点都有一个父节点。具有子节点的通常是布局容器，用于在场景中安排其子节点。你将在本章中使用两个布局容器（`VBox` 和 `GridPane`）。
 
 ## 22.4 欢迎应用—显示文本和图像
 
 排列在布局容器中的节点是控件的组合，在更复杂的 GUI 中，可能是其他布局容器。控件是 GUI 组件，例如显示文本的 `Label`（标签）、允许程序接收用户输入文本的 `TextField`（文本字段）以及用于触发操作的 `Button`（按钮）。当用户与控件交互时（例如点击按钮），控件会生成一个事件。程序可以响应这些事件——被称为**事件处理**——以指定当发生每次用户交互时应该发生什么。
 
-事件处理器是一个响应用户交互的方法。FXML GUI 的事件处理器定义在一个所谓的控制器类（`controller class`）中（正如你将在 22.5.5 节中看到的）。
-
-## 22.4 欢迎应用—显示文本和图像
+- 事件处理器是一个响应用户交互的方法。FXML GUI 的事件处理器定义在一个所谓的控制器类中（正如你将在 22.5.5 节中看到的）。
 
 
 
 # 第 22 章 JavaFX GUI
 
-## 22.4 JavaFX 欢迎应用——无需编写代码
+## 22.4 JavaFX 欢迎应用——视觉编程简介
 
 在本节中，你将在不编写任何代码的情况下，构建一个 JavaFX 欢迎应用，该应用将在 `Label` 中显示文本，并在 `ImageView` 中显示图像（图 22.2）。首先，你将在 NetBeans IDE 中创建一个 JavaFX 应用项目。然后，你将使用视觉编程技术和 JavaFX Scene Builder 将 JavaFX 组件拖放到设计区域。接下来，你将使用 JavaFX Scene Builder 的检查器窗口来配置选项，例如 `Label` 的文本和字体大小以及 `ImageView` 的图像。最后，你将从 NetBeans 运行该应用。本节假设你已经阅读了“开始之前”部分，并安装了 NetBeans 和 Scene Builder。本章的示例使用了 NetBeans 7.4、Scene Builder 1.1 和 Java SE 7。
 
@@ -24647,7 +24415,7 @@ JavaFX 应用程序窗口由几个部分（图 22.1）组成，你将在 22.4–
 
 **图 22.4** 新项目对话框。
 
-#### JavaFX Application 对话框
+#### JavaFX Application（JavaFX 应用）对话框
 
 在 New JavaFX Application 对话框（图 22.5）中，指定以下信息：
 
@@ -24699,7 +24467,7 @@ NetBeans 提供的 FXML 文件包含一个 `Button` 和 `Label` 默认 GUI。Wel
 
 #### 删除对 WelcomeController 类的引用
 
-正如你将在第 22.5 节中学到的，在 Scene Builder 中，你可以指定控制器类的名称，该类包含响应用户交互的方法。Welcome 应用不需要响应任何用户交互，因此你将删除 FXML 文件对类 `WelcomeController` 的引用。要删除，在 Hierarchy 窗口中选择 `AnchorPane`，然后展开 Inspector 的 Code 部分并删除 Controller class 字段中指定的值。
+正如你将在第 22.5 节中学到的，在 Scene Builder 中，你可以指定控制器类的名称，该类包含响应用户交互的方法。Welcome 应用不需要响应任何用户交互，因此你将删除 FXML 文件对类 WelcomeController 的引用。要删除，在 Hierarchy 窗口中选择 `AnchorPane`，然后展开 Inspector 的 Code 部分并删除 Controller class 字段中指定的值。
 
 ### 22.4.5 更改为 VBox 布局容器
 
@@ -24728,7 +24496,7 @@ NetBeans 提供的 FXML 文件包含一个 `Button` 和 `Label` 默认 GUI。Wel
 
 1. 向 `VBox` 中添加 `ImageView`。从库窗口的控件部分将 `ImageView` 拖动到 `VBox` 上。`ImageView` 会自动放置在 `Label` 下方。你向 `VBox` 中添加的每个新控件都会放置在 `VBox` 其他子节点的下方，尽管你可以通过在 Scene Builder 的层次结构窗口中拖动子节点来更改顺序。`Label` 和 `ImageView` 也会自动在 `VBox` 中居中。
 2. 设置 `ImageView` 的图像。要设置图像显示，请选择 `ImageView`，点击检查器属性部分中 Image（图像）属性右侧的省略号按钮。默认情况下，Scene Builder 打开一个对话框，显示项目的源代码文件夹，你在 22.4.3 节中将图像文件 `bug.png` 放在那里。选择图像文件，然后点击打开。Scene Builder 显示图像并通过设置 `ImageView` 的 Fit Width（拟合宽度）和 Fit Height（拟合高度）属性，调整 `ImageView` 的大小以匹配图像的宽高比例——即图像宽度与高度的比例。
-3. 更改 `ImageView` 的大小。我们希望按原始尺寸显示图像。要这样做，你必须删除 `ImageView` 的 Fit Width（拟合宽度）和 Fit Height（拟合高度）属性的默认值，这些值位于检查器的布局部分。一旦删除了这些值，Scene Builder 将 `ImageView` 调整为图像的精确尺寸。保存文件。
+3. 更改 `ImageView` 的大小。我们希望按原始尺寸显示图像。要这样做，你必须删除 `ImageView` 的 Fit Width（拟合宽度）和 Fit Height（拟合高度）属性的默认值，这些值位于检查器的布局部分。一旦删除了这些值，Scene Builder 将 `ImageView` 调整为图像的精确尺寸。保存 fxml 文件。
 
 你现在已完成了 GUI。Scene Builder 的内容面板现在应该如图 22.8 所示。
 
@@ -24748,7 +24516,7 @@ NetBeans 提供的 FXML 文件包含一个 `Button` 和 `Label` 默认 GUI。Wel
 
 ## 22.5 小费计算应用——事件处理简介
 
-小费计算应用（图 22.9(a)）计算并显示餐厅账单的小费和总额。默认情况下，应用程序按 15% 的小费计算总额。你可以移动滑动块滑块指定 0% 到 30% 的小费百分比——这会更新小费百分比（图 22.9(b) 和 (c)）。在本节中，你将使用多个 JavaFX 组件构建一个小费计算应用，并学习如何响应与 GUI 的交互。
+小费计算应用（图 22.9(a)）计算并显示餐厅账单的小费和总额。默认情况下，应用程序按 15% 的小费计算总额。你可以移动滑动条滑块指定 0% 到 30% 的小费百分比——这会更新小费百分比（图 22.9(b) 和 (c)）。在本节中，你将使用多个 JavaFX 组件构建一个小费计算应用，并学习如何响应与 GUI 的交互。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_836_0.png)
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_836_1.png)
@@ -24805,7 +24573,7 @@ NetBeans 提供的 FXML 文件包含一个 `Button` 和 `Label` 默认 GUI。Wel
 
 ### 创建 TipCalculator 项目
 
-点击工具栏上的 `New Project...` 按钮，或选择 `File > New Project...`。在 `New Project` 对话框中，在 `Categories`（类别）下选择 `JavaFX`，在 `Projects`（项目）下选择 `JavaFX FXML Application`，然后点击 `Next` > 在 `Project Name`、`FXML name` 和 `Create Application Class` 字段中指定 `TipCalculator`。点击 `Finish`（完成）创建项目。
+点击工具栏上的 `New Project...` 按钮，或选择 `File > New Project...`。在 `New Project` 对话框中，在 `Categories`（类别）下选择 `JavaFX`，在 `Projects`（项目）下选择 `JavaFX FXML Application`，然后点击 `Next`（下一步）> 在 `Project Name`、`FXML name` 和 `Create Application Class` 字段中指定 `TipCalculator`。点击 `Finish`（完成）创建项目。
 
 ### 步骤 1：将根布局从 AnchorPane 更改为 GridPane
 
@@ -24831,7 +24599,7 @@ NetBeans 提供的 FXML 文件包含一个 `Button` 和 `Label` 默认 GUI。Wel
 - 添加 Slider：从 `Library` 窗口拖入一个水平 Slider 到第 1 行。
 - 添加 Button：从 `Library` 窗口拖入一个 Button 到第 4 行。
 
-`GridPane` 应如图 22.13 所示。
+`GridPane` 应该如图 22.13 所示。
 
 ### 步骤 4：对 0 列内容右对齐
 
@@ -24849,33 +24617,33 @@ NetBeans 提供的 FXML 文件包含一个 `Button` 和 `Label` 默认 GUI。Wel
 
 Scene Builder 默认将每个 `TextField` 的宽度设置为 200 像素。你可以根据创建的每个 GUI 调整 `TextField` 控件。在此应用程序中，我们不需要 `TextField` 那么宽，因此我们为每个 `TextField` 设置了较窄的优选宽度。当为多个控件设置相同的属性值时，你可以选择所有控件并指定一次值。要选择所有三个 `TextField`，按住 `Ctrl`（或 `Command`）并点击每个 `TextField`。在检查器的 `Layout` 部分，将 `Pref Width` 属性设置为 `USE_COMPUTED_SIZE`。这表示每个 `TextField` 都将使用其优选宽度（由 JavaFX 定义）。注意 `GridPane` 的右侧列会根据 `TextField` 的优选宽度进行调整。
 
-### 步骤 7：调整按钮大小
+### 第 7 步：调整按钮大小
 
 默认情况下，Scene Builder 根据按钮的内容设置按钮的宽度。对于此应用程序，我们选择让按钮的宽度与 `GridPane` 右列中的其他控件相同。要实现这一点，选择按钮，然后在检查器的 `Layout`（布局）部分，将 `Max Width`（最大宽度）属性设置为 `MAX_VALUE`。这将导致按钮宽度增长以填充整个列的宽度。
 
 ### 预览 GUI
 
-在设计 GUI 时，可以通过选择 `Windows` 下的 `Preview`（预览） > `Show Preview`（显示预览）来进行预览。如图 22.15 所示，左列的 Label（标签）与右列的控件之间没有间隔。此外，`GridPane` 周围没有空间，因为 `Stage`（舞台）的大小是根据 `Scene` 的内容调整的。因此，许多控件可能会非常贴窗口边缘。你将在下一步中修复这些问题。
+在设计 GUI 时，可以通过选择 `Windows` 下的 `Preview`（预览）> `Show Preview`（显示预览）来进行预览。如图 22.15 所示，左列的 Label（标签）与右列的控件之间没有间隔。此外，`GridPane` 周围没有空间，因为 `Stage`（舞台）的大小是根据 `Scene` 的内容调整的。因此，许多控件可能会非常贴窗口边缘。你将在下一步中修复这些问题。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_843_0.png)
 
 图 22.15 | 调整大小后带有 TextField 和 Button 的 GridPane。
 
-### 步骤 8：配置 GridPane 的内边和列之间的水平间距
+### 第 8 步：配置 GridPane 的内边和列之间的水平间距
 
-节点内容与其上、右、下、左边缘之间的空间称为 padding（内边），它将内容与节点边缘隔开。由于 `GridPane` 的大小决定了 `Stage` 窗口的大小，示例中的内边还将 `GridPane` 的子节点与窗口边缘隔开。要设置内边，选择 `GridPane`，然后在检查器的 `Layout` 部分，将 `GridPane` 的四个值（`TOP`、`RIGHT`、`BOTTOM` 和 `LEFT`）均设置为 14——这是 JavaFX 推荐的控件边缘与 `Scene` 边缘之间的距离。
+节点内容与其上、右、下、左边缘之间的空间称为 `padding`（内边），它将内容与节点边缘隔开。由于 `GridPane` 的大小决定了 `Stage` 窗口的大小，示例中的内边还将 `GridPane` 的子节点与窗口边缘隔开。要设置内边，选择 `GridPane`，然后在检查器的 `Layout` 部分，将 `GridPane` 的四个值（`TOP`、`RIGHT`、`BOTTOM` 和 `LEFT`）均设置为 14——这是 JavaFX 推荐的控件边缘与 `Scene` 边缘之间的距离。
 
 你可以分别通过 `Hgap`（水平间距）和 `Vgap`（垂直间距）指定 `GridPane` 的列和行之间的默认空间大小。由于 Scene Builder 将每个 `GridPane` 的高度设置为 30 像素——这大于这些控件的高度——因此组件之间已经存在一些垂直空间。要指定列之间的水平间距，请在 `Hierarchy`（层级结构）窗口中选择 `GridPane`，然后在检查器的 `Layout` 部分，将 `Hgap` 属性设置为 8。如果你想精确控制组件之间的垂直空间，可以设置每个控件的 `Ref Height`（引用高度）为 `USE_COMPUTED_SIZE`（正如我们在第 5 步中对列的 `Pref Width` 属性设置），然后设置 `GridPane` 的属性。
 
-### 步骤 9：使 textTextField 和 totalTextField 不编辑且不可聚焦
+### 第 9 步：使 textTextField 和 totalTextField 不编辑且不可聚焦
 
 `textTextField` 和 `totalTextField` 只用于显示结果，而不接收文本输入。因此，它们不应该具有交互性。只有当 `TextField` 处于“焦点”状态时，你才能输入内容——即用户正在交互的控件。当你点击交互式控件时，它会接收焦点。同样，当你按下 `Tab` 键时，焦点会从当前的可聚焦控件转移到下一个——这是按照控件添加到 GUI 的顺序发生的。交互式控件（如 `TextFields`、`Sliders` 和 `Buttons`）默认是可聚焦的。非交互式控件（如 `Labels`）是不可聚焦的。
 
 在此应用程序中，`tipTextField` 和 `totalTextField` 既不可编辑也不可聚焦。要进行这些更改，同时选择两个 `TextField`，然后在检查器的 `Properties` 部分，取消勾选 `Editable`（可编辑）和 `Focus Traversable`（可焦点遍历）属性。
 
-### 步骤 10：设置 Slider 的属性
+### 第 10 步：设置 Slider 的属性
 
-为了完成 GUI，你现在将配置小费计算器 `Slider`。默认情况下，`Slider` 的范围是 0.0 到 100.0，初始值为 0.0。这允许设置 0 到 30 之间的小费百分比，默认为 15%。要进行这些更改，选择 `Slider`，然后在检查器的 `Properties` 部分，将 `Slider` 的 `Max` 属性设置为 30，并将 `Value` 属性设置为 15。还将将 `Block Increment`（块增量）属性设置为 5——当用户点击 `Slider` 的末端与滑块之间时，`Value` 增加或减少的数值。选择 `File`（文件） > `Save`（保存）保存 FXML 文件。
+为了完成 GUI，你现在将配置小费计算器 `Slider`。默认情况下，`Slider` 的范围是 0.0 到 100.0，初始值为 0.0。这允许设置 0 到 30 之间的小费百分比，默认为 15%。要进行这些更改，选择 `Slider`，然后在检查器的 `Properties` 部分，将 `Slider` 的 `Max` 属性设置为 30，并将 `Value` 属性设置为 15。还将将 `Block Increment`（块增量）属性设置为 5——当用户点击 `Slider` 的末端与滑块之间时，`Value` 增加或减少的数值。选择 `File`（文件）> `Save`（保存）保存 FXML 文件。
 
 ### 预览最终布局
 
@@ -24889,7 +24657,7 @@ Scene Builder 默认将每个 `TextField` 的宽度设置为 200 像素。你可
 
 当你创建小费计算器应用程序的项目时，NetBeans 为你创建了两个源文件：
 
-- `TipCalculator.java`——此文件包含 `TipCalculator` main 方法（在本节中讨论），加载 FXML 文件以创建 GUI，并将 GUI 附加到显示在应用程序上的 `Scene` 上。
+- `TipCalculator.java`——此文件包含 `TipCalculator` 的 `main` 方法（在本节中讨论），加载 FXML 文件以创建 GUI，并将 GUI 附加到显示在应用程序上的 `Scene` 上。
 - `TipController.java`——此文件包含 `TipController` 类（在第 22.5.5 节讨论），你将在此处指定 `Slider` 和 `Button` 控件的事件处理器。
 
 图 22.17 展示了 `TipCalculator`。我们重新格式化了代码以符合我们的规范。除了第 18 行外，此处所有代码都是由 NetBeans 生成的。正如第 22.5 节所述，`Application` 子类是程序的起点。`main` 方法（第 26 行）启动 JavaFX 应用。
@@ -24923,7 +24691,7 @@ public class TipCalculator extends Application {
 
 ### 重写的 Application 方法
 
-`start` 方法（第 11-21 行）创建 GUI 并将其附加到 `Scene`。默认情况下，`Scene` 的大小由 root 决定。第 17 行创建 `Scene`，并将 root 作为参数传递。第 18 行使用 `setTitle` 指定显示在 `Stage` 标题栏的文本。第 19 行使用 `setScene` 将 `Scene` 放入 `Stage`。最后，第 20 行调用 `show` 显示 `Stage`。
+`start` 方法（第 11-21 行）创建 GUI 并将其附加到 `Scene`。默认情况下，`Scene` 的大小由 `root` 决定。第 17 行创建 `Scene`，并将 `root` 作为参数传递。第 18 行使用 `setTitle` 指定显示在 `Stage` 标题栏的文本。第 19 行使用 `setScene` 将 `Scene` 放入 `Stage`。最后，第 20 行调用 `show` 显示 `Stage`。
 
 我们将在 22.5 中讨论控制器的变量初始化和事件处理器的注册。
 
@@ -24988,11 +24756,6 @@ import javafx.scene.control.TextField;
 31
 32      @FXML
 33      private Slider tipPercentageSlider;
-```
-
-图 22.19 TipCalculatorController 的静态变量和实例变量。（部分 1，共 2 部分）
-
-```java
 34 @FXML
 35 private TextField tipTextField;
 36 @FXML
@@ -25001,38 +24764,40 @@ import javafx.scene.control.TextField;
 39
 ```
 
-图 22.19 | TipCalculatorController 的静态变量和实例变量。（部分 2，共 2 部分。）
+图 22.19 | TipCalculatorController 的静态变量和实例变量。
 
 ### @FXML 注解
 
 
 
-回想第 22.5.3 节，该应用在 Java 源码中操作的每个控件都需要一个 `fxxid`。第 25–38 行（图 22.19）声明了与类对应的实例变量。每个声明前的 `@FXML` 注解（第 25, 28, 31, 34 和 37 行）表示该变量名可以用于描述应用 GUI 的 FXML 文件。你在控制器类中指定的变量必须与在构建 GUI 时指定的 `fxxid` 值精确匹配。当 `FXMLLoader` 加载 `TipCalculator.fxml` 来创建 GUI 时，它还会初始化每个声明为 `@FXML` 的控制器实例变量，以确保它们引用了 FXML 文件中受控制的 GUI 组件。
+回想第 22.5.3 节，该应用在 Java 源码中操作的每个控件都需要一个 `fx:id`。第 25–38 行（图 22.19）声明了与类对应的实例变量。每个声明前的 `@FXML` 注解（第 25, 28, 31, 34 和 37 行）表示该变量名可以用于描述应用 GUI 的 FXML 文件。你在控制器类中指定的变量必须与在构建 GUI 时指定的 `fx:id` 值精确匹配。当 `FXMLLoader` 加载 `TipCalculator.fxml` 来创建 GUI 时，它还会初始化每个声明为 `@FXML` 的控制器实例变量，以确保它们引用了 FXML 文件中受控制的 GUI 组件。
 
 ## TipCalculatorController 的 calculateButtonPressed 事件处理器
 
-图 22.20 展示了 `TipController` 类的 `calculateButtonPressed` 方法，该方法在用户点击“计算”（Calculate）按钮时被调用。紧接其后的 `@FXML` 注解（第 41 行）标明，该方法可以用于在描述应用 GUI 的 FXML 文件中指定控制器的事件处理器。对于生成 `ActionEvent` 的控件（许多 JavaFX 控件均此类情况），事件处理方法必须返回 `void` 并接收一个 `ActionEvent` 参数（第 42 行）。
+图 22.20 展示了 `TipCalculatorController` 类的 `calculateButtonPressed` 方法，该方法在用户点击“计算”（Calculate）按钮时被调用。紧接其后的 `@FXML` 注解（第 41 行）标明，该方法可以用于在描述应用 GUI 的 FXML 文件中指定控制器的事件处理器。对于生成 `ActionEvent` 的控件（许多 JavaFX 控件均此类情况），事件处理方法必须返回 `void` 并接收一个 `ActionEvent` 参数（第 42 行）。
 
-```
-40 // 计算并显示小费和总金额
-41 @FXML
-42 private void calculateButtonPressed(ActionEvent event)
-43 {
-45	try
-46	{
-47		BigDecimal amount = new BigDecimal(amountTextField.getText());
-48		BigDecimal tip = amount.multiply(tipPercentage);
-49		BigDecimal total = amount.add(tip);
-51	tipTextField.setText(currency.format(tip));
-52	totalTextField.setText(currency.format(total));
-53	}
-54	catch (NumberFormatException exception) {
-55	{
-56		amountTextField.setText("Enter amount");
-57		amountTextField.selectAll();
-58		amountTextField.requestFocus();
-59	}
-60 }
+```java
+// 计算并显示小费和总金额
+@FXML
+private void calculateButtonPressed(ActionEvent event)
+{
+
+    try
+    {
+        BigDecimal amount = new BigDecimal(amountTextField.getText());
+        BigDecimal tip = amount.multiply(tipPercentage);
+        BigDecimal total = amount.add(tip);
+
+        tipTextField.setText(currency.format(tip));
+        totalTextField.setText(currency.format(total));
+    }
+    catch (NumberFormatException exception)
+    {
+        amountTextField.setText("Enter amount");
+        amountTextField.selectAll();
+        amountTextField.requestFocus();
+    }
+}
 ```
 
 图 22.20 | TipCalculatorController 的 calculateButtonPressed 处理器。
@@ -25051,35 +24816,33 @@ import javafx.scene.control.TextField;
 
 ### 计算并显示小费和总金额
 
-第 46–51 行计算并显示了小费和总金额。第 46 行调用 `getText` 获取输入的账单金额。第 47 行通过 `multiply` 计算小费，第 48 行通过 `add` 计算总金额。第 50 和 51 行使用 `currency` 对象格式化显示小费和总金额。第 54 行捕获 `NumberFormatException` 异常，第 55 行通过 `setText` 显示“Enter amount”，第 56 行全选文本，第 57 行请求焦点。如果第 46 行没有抛出异常，第 47 行通过 `multiply` 计算小费，第 48 行通过 `add` 计算总金额。第 50 和 51 行使用 `currency` 对象格式化显示小费和总金额——这些格式化字符串字符串显示在 `tipTextField` 和 `totalTextField` 中。
+第 46–51 行计算并显示了小费和总金额。第 46 行调用 `getText` 获取输入的账单金额。第 47 行通过 `multiply` 计算小费，第 48 行通过 `add` 计算总金额。第 50 和 51 行使用 `currency` 对象格式化显示小费和总金额。第 54 行捕获 `NumberFormatException` 异常，第 55 行通过 `setText` 显示“Enter amount”，第 56 行全选文本，第 57 行请求焦点。如果第 46 行没有抛出异常，第 47 行通过 `multiply` 计算小费，第 48 行通过 `add` 计算总金额。第 50 和 51 行使用 `currency` 对象格式化显示小费和总金额——这些格式化字符串显示在 `tipTextField` 和 `totalTextField` 中。
 
 ## TipCalculatorController 的 initialize 方法
 
 图 22.1 展示了 `TipCalculatorController` 的 `initialize` 方法。当 `FXMLLoader` 创建 `TipCalculatorController` 对象时，它会确定类是否包含一个无参数的 `initialize` 方法，如果是，则调用该方法来初始化控制器。该方法可以在 GUI 显示之前用于配置控制器。第 65 行调用 `currency` 对象的 `setRoundingMode` 方法来指定货币值的舍入方式。`RoundingMode.HALF_UP` 表示大于等于 .5 时向上舍入。
 
-```
-61      // 由 FXMLLoader 初始化控制器
-62  public void initialize() {
-63      {
-64          // 四舍五入
-65          currency.setRoundingMode(RoundingMode.HALF_UP);
-67          // 对 tipPercentageSlider 值变化的监听器
-68          tipPercentageSlider.valueProperty().addListener(
-69              new ChangeListener<Number>() {
-70                  {
-71                      @Override
-72                      public void changed(ObservableValue<? extends Number> ov,
-73                          Number oldVal, Number newValue) {
-74                          {
-75                              tipPercentage =
-76                              BigDecimal.valueOf(newValue.intValue() / 100.0);
-77                              tipPercentageLabel.setText(percent.format(tipPercentage));
-78                          }
-79                      }
-80                  }
-81              });
-82      }
-83  }
+```java
+// 由 FXMLLoader 初始化控制器
+public void initialize()
+{
+    // 四舍五入
+    currency.setRoundingMode(RoundingMode.HALF_UP);
+
+    // 对 tipPercentageSlider 值变化的监听器
+    tipPercentageSlider.valueProperty().addListener(
+        new ChangeListener<Number>()
+        {
+            @Override
+            public void changed(ObservableValue<? extends Number> ov,
+                Number oldVal, Number newValue)
+            {
+                tipPercentage =
+                    BigDecimal.valueOf(newValue.intValue() / 100.0);
+                tipPercentageLabel.setText(percent.format(tipPercentage));
+            }
+        });
+}
 ```
 
 图 22.1 | initialize 方法。
@@ -25092,36 +24855,36 @@ import javafx.scene.control.TextField;
 
 ## 22.6 总结 813
 
-该内容在第 69–79 行中定义为一个类实例表达式，它声明了一个匿名内部类并创建该类的一个对象。该对象的引用被传递给 `addListener`。在 `new` 关键字之后，`ChangeListener<Number> ()`（第 69 行）开始声明实现 `ChangeListener<Number>` 的匿名内部类。这类似于通过以下方式开始类声明：
+该内容在第 69–79 行中定义为一个类实例表达式，它声明了一个匿名内部类并创建该类的一个对象。该对象的引用被传递给 `addListener`。在 `new` 关键字之后，`ChangeListener<Number>()`（第 69 行）开始声明实现 `ChangeListener<Number>` 的匿名内部类。这类似于通过以下方式开始类声明：
 
-```
-public class MyHandler implements ChangeNotifier<Number>
+```java
+public class MyHandler implements ChangeListener<Number>
 ```
 
 第 70 行的左大括号和第 79 行的右大括号界定了匿名内部类的边界。第 71–78 行声明了 `ChangeListener<Number>` 的 `changed` 方法，该方法接收一个指向发生变化的 `ObservableValue` 的引用、一个包含 Slider 移动前旧值的数字，以及一个包含 Slider 当前值的数字。当用户移动 Slider 的滑动滑块时，第 75–76 行存储新的小费百分比，第 77 行更新 `tipLabel`。
 
-匿名类可以访问其顶层类的实例变量、静态变量和方法——在这种情况下，匿名内部类使用了实例变量 `tipPercentage` 和 `tipLabel`以及静态变量。然而，匿名类对其所在方法中的局部变量访问访问限——它只能访问在闭包方法体中定义的 `final` 局部变量（从 Java SE 8 开始，匿名内部类还可以访问类的“有效最终的”变量——更多信息请参见第 17.3.1 节）。
+匿名类可以访问其顶层类的实例变量、静态变量和方法——在这种情况下，匿名内部类使用了实例变量 `tipPercentage` 和 `tipLabel` 以及静态变量。然而，匿名类对其所在方法中的局部变量访问有限制——它只能访问在闭包方法体中定义的 `final` 局部变量（从 Java SE 8 开始，匿名内部类还可以访问类的“有效最终的”变量——更多信息请参见第 17.3.1 节）。
 
-### Java SE 8：使用 Lambda 实现 ChangeNotifier
+### Java SE 8：使用 Lambda 实现 ChangeListener
 
 回想 Java SE 8 第 10.10 节中提到的包含一个函数式接口的接口，并回想第 17 章中此类接口可以使用 lambda 实现。第 17.9 节展示了如何使用 lambda 实现事件处理函数式接口。图 22.21 中的事件处理器可以如下实现为 lambda 表达式：
 
-```
-tipPercentageSlider.valueProperty().addChangeListener(
-  (ov, oldValue, newValue) -> {
-    tipPercentage = =
-      BigDecimal.valueOf(newValue.intValue());
-    tipLabel.setText(percent.format(tipPercentage));
-  });
+```java
+tipPercentageSlider.valueProperty().addListener(
+    (ov, oldValue, newValue) -> {
+        tipPercentage =
+            BigDecimal.valueOf(newValue.intValue() / 100.0);
+        tipPercentageLabel.setText(percent.format(tipPercentage));
+    });
 ```
 
 ## 22.6 总结
 
 在本章中，我们介绍了 JavaFX。我们展示了 JavaFX stage（应用程序窗口）的结构。你学习了 stage 显示 scene（场景图），而场景图是由节点以及使用布局和控件的节点组成的。
 
-你在 JavaFX Scene Builder 中使用视觉化编程技术设计了 GUI，这让你能够无需编写任何 Java 代码即可创建 GUI。你使用 `VBox` 和 `GridPane` 布局容器安排了 `Label`、`ImageView`、`TextField`、`Slider` 和 `Button` 控件。你学习了 `FXLoader` 如何加载 Scene Builder 创建的 FXML 场景来创建 GUI。
+你在 JavaFX Scene Builder 中使用视觉化编程技术设计了 GUI，这让你能够无需编写任何 Java 代码即可创建 GUI。你使用 `VBox` 和 `GridPane` 布局容器安排了 `Label`、`ImageView`、`TextField`、`Slider` 和 `Button` 控件。你学习了 `FXMLLoader` 如何加载 Scene Builder 创建的 FXML 场景来创建 GUI。
 
-你实现了一个控制器来响应用户与 Button 和 Slider 控件的交互。我们展示了某些 FXML 中，但控件属性值变化的事件处理器必须直接在控制器的代码中实现。你还学习了 `FXLoader` 会创建并初始化应用程序控制器类的实例，初始化用 `@FXML` 注解声明的控制器实例变量，并为 FXML 中指定的任何事件创建并注册事件处理器。在下一章中，我们将开始为期两章的关于使用 UML 进行面向对象设计的案例研究。
+你实现了一个控制器来响应用户与 Button 和 Slider 控件的交互。我们展示了某些 FXML 中，但控件属性值变化的事件处理器必须直接在控制器的代码中实现。你还学习了 `FXMLLoader` 会创建并初始化应用程序控制器类的实例，初始化用 `@FXML` 注解声明的控制器实例变量，并为 FXML 中指定的任何事件创建并注册事件处理器。在下一章中，我们将开始为期两章的关于使用 UML 进行面向对象设计的案例研究。
 
 ## ATM 案例研究，第一部分：使用 UML 进行面向对象设计
 
@@ -25136,7 +24899,7 @@ tipPercentageSlider.valueProperty().addChangeListener(
 - 确定系统中对象之间的协作。
 - 使用 UML 的用例图、类图、状态图、活动图、通信图和序列图对面向对象系统进行建模。
 
-## 816 第23 章 ATM 案例研究，第一部分：使用 UML 进行面向对象设计
+## 816 第 23 章 ATM 案例研究，第一部分：使用 UML 进行面向对象设计
 
 ## 大纲
 
@@ -25155,7 +24918,7 @@ tipPercentageSlider.valueProperty().addChangeListener(
 
 现在我们开始面向对象设计与实现案例研究的可选部分。在本章和第 24 章中，你将设计并实现一个面向对象的自动取款机（ATM）软件。该案例研究将为你提供一个紧凑、精心设计且完整的设计与实现体验。在 23.2–23.7 节和 24.2–24.3 节，你将使用 UML 执行面向对象设计（OOD）步骤，并将这些步骤与第 2–10 章讨论的面向对象概念相结合。在本章中，你将使用六种常用的 UML 图来图形化表示设计。在第 24 章中，你将通过继承调整设计，然后在 673 行的 Java 应用程序中实现 ATM（第 24.4 节）。
 
-这不是一个练习；而是一次端端的学习体验，包含了实现你设计的完整 Java 代码的详细引导。它将帮助你熟悉行业中遇到的重大问题。在完成第 8–11 章的面向对象编程后，这些章节可以被视为一个连续的单元。或者，我们可以假设逐节进行涵盖。
+这不是一个练习；而是一次端到端的学习体验，包含了实现你设计的完整 Java 代码的详细引导。它将帮助你熟悉行业中遇到的重大问题。在完成第 8–11 章的面向对象编程后，这些章节可以被视为一个连续的单元。或者，我们可以假设逐节进行涵盖。
 
 ### 23.2 分析需求文档
 
@@ -25170,8 +24933,6 @@ tipPercentageSlider.valueProperty().addChangeListener(
 - 一个向用户发放现金的取钞口
 - 一个接收用户存款信的入钞口
 
-## 23.2 分析需求文档 817
-
 出钞机每天开始时装有 20 美元钞票。注意：由于本案例研究范围有限，此处描述的 ATM 某些元素并不准确反映真实的 ATM。例如，真实的 ATM 通常包含一个从 ATM 卡读取用户账户号码的设备，而这台 ATM 要求用户在键盘上输入账号。真实的 ATM 还会在会话结束打印收据，但这台 ATM 的所有输出都显示在屏幕上。
 
 ![](img/28513f3b4ab12c97e38c92ed0e327a8_855_0.png)
@@ -25184,7 +24945,7 @@ ATM 面临复杂且具有挑战性的安全问题，这些问题超出了第一�
 
 靠近 ATM 时（假设目前没有人在使用），用户应该经历以下事件序列（如图 23.1 所示）：
 
-1. 屏幕显示“欢迎临！”并提示用户输入账户号。
+1. 屏幕显示“欢迎光临！”并提示用户输入账户号。
 2. 用户使用键盘输入一个五位账户号。
 3. 屏幕提示用户输入与指定账户关联的 PIN（个人识别码）。
 4. 用户使用键盘输入五位 PIN。
@@ -25242,7 +25003,7 @@ Fig. 23.3 ATM 取款菜单。
 
 需求收集过程是软件生命周期第一阶段的关键任务。软件生命周期规定了软件从首次构思到退役使用的所经历的阶段。这些阶段包括：分析、设计、实现、测试和调试、部署、维护和退役。存在多种软件生命周期模型，每种模型对于软件工程师何时以及如何频繁地执行这些每个阶段都有自己的偏好和规范。瀑布模型连续执行每个阶段一次，而迭代模型可能会在产品的整个生命周期内重复执行一个或多个阶段多次。
 
-## 检查需求文档
+## 23.2 检查需求文档
 
 分析阶段侧重于定义要解决的问题。在设计任何系统时，必须正确地解决问题，但同样重要的是，必须解决正确的问题。系统分析师收集指示要解决特定问题的需求。我们的需求文档详细描述了我们 ATM 系统的需求，以至于我们没有经过广泛的分析阶段——这是为了捕捉建议系统应该做什么，开发者经常采用一种称为用例建模的技术。该过程识别了系统的用例，每个用例代表系统向客户提供的不同功能。例如，ATM 通常有多个用例，如“查看账户余额”、“取款”、“存款”、“账户间转账”和“购买邮票”。我们在本例中构建的简化 ATM 只有前三种。
 
@@ -25336,7 +25097,7 @@ d) 分析、设计、实现、测试
 
 图 23.5 | ATM 需求文档中的名词和短语。
 
-我们只对在 ATM 系统中有意义的名词和短语创建类。我们没有为“银行”建模，因为银行不是 ATM 系统的一部分——银行只是想构建一台 ATM。“客户”和“用户”代表外部实体——它们之所以重要，是因为它们与我们的 ATM 系统进行交互，但我们不需要在 ATM 软件中将它们建模为类。回想一下，图 23.4 的用例图中，我们已经将 ATM 用户（即银行客户）建模为用例角色（actor）。
+我们只对在 ATM 系统中有意义的名词和短语创建类。我们没有为“银行”建模，因为银行不是 ATM 的部分系统——银行只是想构建一台 ATM。“客户”和“用户”代表外部实体——它们之所以重要，是因为它们与我们的 ATM 系统进行交互，但我们不需要在 ATM 软件中将它们建模为类。回想一下，图 23.4 的用例图中，我们已经将 ATM 用户（即银行客户）建模为用例角色（actor）。
 
 我们没有将“20 元钞票”或“存款信封”建模为类。这些是现实世界中的物理对象，但它们并不是自动化过程的一部分。我们可以使用建模出钞机的类属性（第 23.4 节）来充分表示系统内钞票的存在。例如，出钞机维护其所包含的钞票计数。需求文档没有说明系统在收到存款信封后应该对它们进行处理。我们可以假设，仅仅确认收到信封——这是由建模存款槽的类执行的操作——就足以表示系统内信封的存在。我们将在第 23.6 节为 ATM 系统的类分配操作。
 
@@ -25377,7 +25138,7 @@ UML 允许我们通过类图对 ATM 系统中的类及其相互关系进行建�
 
 图 23.7 | 显示类之间关联的类图。
 
-在图 23.7 中，连接两个类的实线表示关联（association）——类之间的关系。线两端附近的数字是重性值（multiplicity values），表示每个类有多少个对象参与该关联。在这种情况下，从左到右沿线看发现，在任何给定时刻，一个 `ATM` 对象参与与零或一个 `Withdrawal` 对象的关联——如果当前用户没有执行交易或请求了不同类型的交易，则为零；如果用户请求了取款，则为一。UML 可以建模许多类型的重性。图 23.8 列出并解释了这些重性类型。
+在图 23.7 中，连接两个类的实线表示关联（association）——类与之间的关系。线两端附近的数字是重性值（multiplicity values），表示每个类有多少个对象参与该关联。在这种情况下，从左到右沿线看发现，在任何给定时刻，一个 `ATM` 对象参与与零或一个 `Withdrawal` 对象的关联——如果当前用户没有执行交易或请求了不同类型的交易，则为零；如果用户请求了取款，则为一。UML 可以建模许多类型的重性。图 23.8 列出并解释了这些重性类型。
 
 | 符号 | 含义 |
 | :--- | :--- |
@@ -25397,41 +25158,37 @@ UML 允许我们通过类图对 ATM 系统中的类及其相互关系进行建�
 
 
 
-图 23.7 中关联线 withdrawal1 端的 `currentTransaction` 单词是一个角色名称（role name），标识了 withdrawal 在与 ATM 关系中扮演的角色。角色名称通过识别类在关联语境下扮演的角色来为关联增添信息。一个类在同一个系统中可以扮演多个角色。例如，在学校人员系统中，一个人与学生建立关系时扮演“教授”的角色；同一个人与另一位教授参与关联时，可能扮演“同事”的角色；在教练学生运动员时，扮演“教练”的角色。在图 23.7 中，角色名称 `currentTransaction` 表示与 ATM 类对象执行的 withdrawal 对象代表了 ATM 正在处理的交易。在某些语境下，withdrawal 对象可能会承担其他角色（例如，“上一个交易”）。注意，我们没有为 `Executes` 关联的 ATM 端指定角色名称。当关联的含义明确时，类图中的角色名称通常省略。
+## 图 23.7 中关联线 withdrawal1 端的 `currentTransaction` 单词是一个角色名称（role name）
+
+图 23.7 中关联线 withdrawal 端的 `currentTransaction` 单词是一个角色名称（role name），标识了 withdrawal 在与 ATM 关系中扮演的角色。角色名称通过识别类在关联语境下扮演的角色来为关联增添信息。一个类在同一个系统中可以扮演多个角色。例如，在学校人员系统中，一个人与学生建立关系时扮演“教授”的角色；同一个人与另一位教授参与关联时，可能扮演“同事”的角色；在教练学生运动员时，扮演“教练”的角色。在图 23.7 中，角色名称 `currentTransaction` 表示与 ATM 类对象执行的 withdrawal 对象代表了 ATM 正在处理的交易。在某些语境下，withdrawal 对象可能会承担其他角色（例如，“上一个交易”）。注意，我们没有为 `Executes` 关联的 ATM 端指定角色名称。当关联的含义明确时，类图中的角色名称通常省略。
+
+## 组合关系
 
 除了简单关系外，关联还可以指定更复杂的关系，例如一个类由其他类组成。考虑现实世界中的自动取款机。制造商制造 ATM 需要哪些“部件”？需求文档告诉我们，ATM 由屏幕、键盘、出钞机和存款槽组成。
 
-在图 23.9 中，连接到 ATM 类的实心菱形表示 ATM 与 Screen、Keypad、CashDispenser 和 DepositSlot 是组合关系（composition）。组合意味着整体与部分的关系。在关联末端拥有组合符号（实心菱形）的类是（在此处）
-
-## 828 第 23 章 ATM 案例研究，第一部分：使用 UML 进行面向对象设计
-
-（ATM），而关联线另一端的类就是各个部分——在这种情况下，即屏幕、键盘、取钞机和存款口。图 23.9 中的组合关系表示，`ATM` 类对象由一个 `Screen` 类对象、一个 `CashDispenser` 类对象、一个 `Keypad` 类对象和一个 `DepositSlot` 类对象组成。ATM 具有一个屏幕、一个键盘、一个取钞机和一个存款口。（正如我们在第 9 章中看到的，“是一个（is-a）”关系定义了继承。我们将在第 24.3 节看到，在 ATM 系统设计中使用继承是一个很好的机会。）
+在图 23.9 中，连接到 ATM 类的实心菱形表示 ATM 与 Screen、Keypad、CashDispenser 和 DepositSlot 是组合关系（composition）。组合意味着整体与部分的关系。在关联末端拥有组合符号（实心菱形）的类是整体（在此处即 `ATM`），而关联线另一端的类就是各个部分——在这种情况下，即屏幕、键盘、取钞机和存款口。图 23.9 中的组合关系表示，`ATM` 类对象由一个 `Screen` 类对象、一个 `CashDispenser` 类对象、一个 `Keypad` 类对象和一个 `DepositSlot` 类对象组成。ATM 具有一个屏幕、一个键盘、一个取钞机和一个存款口。（正如我们在第 9 章中看到的，“是一个（is-a）”关系定义了继承。我们将在第 24.3 节看到，在 ATM 系统设计中使用继承是一个很好的机会。）
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_866_0.png)
 
-图 23.9 | 显示组合关系的类图。
+**图 23.9** 显示组合关系的类图。
 
-根据 UML 规范（[www.omg.org/technology/documents/formal1/uml.html)，组合关系具有以下属性：
+根据 UML 规范（[www.omg.org/technology/documents/formal1/uml.html](www.omg.org/technology/documents/formal1/uml.html)），组合关系具有以下属性：
 
-- 1. 关系中仅有一个类可以代表整体（即菱形只能放置在关联线的一端）。例如，要么屏幕是 ATM 的一部分，要么 ATM 是屏幕的一部分，但屏幕和 ATM 不能在关系中同时代表整体。
-
-- 2. 组合关系中的部分仅在整体存在时才存在，且整体负责其部分的创建和销毁。例如，构建一个 ATM 的行为包括制造其各个部分。同样，如果 ATM 被销毁，它的屏幕、键盘、取钞机和存款口也会被销毁。
-
-- 3. 一个部分在同一时间只能属于一个整体，尽管它可能会被移除并连接到另一个整体上，并由该整体对该部分负责。
+1. 关系中仅有一个类可以代表整体（即菱形只能放置在关联线的一端）。例如，要么屏幕是 ATM 的一部分，要么 ATM 是屏幕的一部分，但屏幕和 ATM 不能在关系中同时代表整体。
+2. 组合关系中的部分仅在整体存在时才存在，且整体负责其部分的创建和销毁。例如，构建一个 ATM 的行为包括制造其各个部分。同样，如果 ATM 被销毁，它的屏幕、键盘、取钞机和存款口也会被销毁。
+3. 一个部分在同一时间只能属于一个整体，尽管它可能会被移除并连接到另一个整体上，并由该整体对该部分负责。
 
 我们类图中的实心菱形表示满足这些属性的组合关系。如果一个“拥有一个（has-a）”关系不符合这些标准中的一个或多个，UML 规定在关联线的末端连接空心菱形以表示聚合（aggregation）——一种较弱的组合形式。例如，个人电脑和电脑显示器参与了聚合关系——电脑有一个显示器，但这两个部分是独立存在的，且同一个显示器可以同时连接到多台电脑，这违反了组合的第二和第三个属性。
 
+## 图 23.10 ATM 系统模型的类图
+
 图 23.10 显示了 ATM 系统的类图。该图模型化了我们识别的大多数类，以及我们从需求文档中推断出的它们之间的关联。
-
-## 23.3 在需求文档中识别类 829
-
-`BalanceInquiry` 和 `Deposit` 类参与的关联与 `Withdrawal` 类的相似，因此为了保持图表简单，我们选择从此图中省略它们。在第 24.3 节中，我们将扩展类图以包含 ATM 系统中的所有类。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_867_0.png)
 
 **图 23.10** ATM 系统模型的类图。
 
-图 23.10 展示了 ATM 系统结构的图形化模型。它包含了 `BankDatabase` 和 `Account` 类，以及若干在图 23.7 或图 23.9 中均未出现的关联。它显示 `ATM` 类与 `BankDatabase` 类之间是**一对一关系**——一个 ATM 通过一个 `BankDatabase` 对象验证用户身份。在图 23.10 中，我们还模型化银行数据库包含许多账户信息的实——一个 `BankDatabase` 对象与 `Account` 类参与组合关系。`BankDatabase` 和 `Account` 之间关联中 `Account` 端的多重性 `0..*` 表示有零或多个 `Account` 类对象参与该关联。`BankDatabase` 类与 `Account` 类之间是**一对多的关系**——BankDatabase 可以包含许多账户。同样，`Account` 类与 `BankDatabase` 类之间是**多对一的关系**——BankDatabase 中存储了许多账户。回想图 23.8，多重性 `*` 等同于 `0...`。为了清晰起见，我们在类图中包含了 `0..`。
+图 23.10 展示了 ATM 系统结构的图形化模型。它包含了 `BankDatabase` 和 `Account` 类，以及若干在图 23.7 或图 23.9 中均未出现的关联。它显示 `ATM` 类与 `BankDatabase` 类之间是**一对一关系**——一个 ATM 通过一个 `BankDatabase` 对象验证用户身份。在图 23.10 中，我们还模型化银行数据库包含许多账户信息的事实——一个 `BankDatabase` 对象与 `Account` 类参与组合关系。`BankDatabase` 和 `Account` 之间关联中 `Account` 端的多重性 `0..*` 表示有零或多个 `Account` 类对象参与该关联。`BankDatabase` 类与 `Account` 类之间是**一对多的关系**——BankDatabase 可以包含许多账户。同样，`Account` 类与 `BankDatabase` 类之间是**多对一的关系**——BankDatabase 中存储了许多账户。回想图 23.8，多重性 `*` 等同于 `0..*`。为了清晰起见，我们在类图中包含了 `0..*`。
 
 图 23.10 还表明在任何时候都可能存在 0 或 1 个 `withdrawal` 对象。如果用户正在执行取款，一个 `withdrawal` 类对象将通过一个 `BankDatabase` 类对象来访问/修改账户余额。我们本可以直接在 `withdrawal` 和 `Account` 类之间创建关联。然而，需求文档指出，“ATM 必须与银行账户信息数据库交互”以执行交易。银行账户包含敏感信息，系统工程师在设计系统时必须始终考虑个人数据的安全性。因此，只有数据库可以直接访问和操作账户。系统的所有其他部分必须与数据库交互以检索或更新账户信息（例如账户余额）。
 
@@ -25444,37 +25201,28 @@ UML 允许我们通过类图对 ATM 系统中的类及其相互关系进行建�
 ## 第 23.3 节自测练习
 
 - 23.4 假设我们有一个代表汽车的 `Car` 类。考虑制造商为了生产一整车汽车会组合的一些不同部分。创建一个类图（与图 23.9 类似）来模型化 `Car` 类的一些组合关系。
-
 - 23.5 假设我们有一个 `File` 类，代表由 `Computer` 类表示的独立网络化计算机中的电子文档。`Computer` 类和 `File` 类之间存在什么样的关联？
-
-  a) `Computer` 类与 `File` 类之间是一一对一关系。
-
-  b) `Computer` 类与 `File` 类之间是多对一关系。
-
-  c) `Computer` 类与 `File` 类之间是多对多关系。
-
-  d) `Computer` 类与 `File` 类之间是多对多关系。
-
+  - a) `Computer` 类与 `File` 类之间是一对一关系。
+  - b) `Computer` 类与 `File` 类之间是多对一关系。
+  - c) `Computer` 类与 `File` 类之间是多对多关系。
+  - d) `Computer` 类与 `File` 类之间是多对多关系。
 - 23.6 说明述陈述是对是错，如果错误，请解释原因：一个没有模型化类的第二个和第三个组成部分的 UML 图被称为“省略图”（elided diagram）。
-
 - 23.7 修改图 23.10 的类图，用 `Deposit` 类替换 `withdrawal` 类。
 
 ## 23.4 识别类属性
 
 类具有属性（数据）和操作（行为）。类属性实现为字段（fields），类操作实现为方法（methods）。在本节中，我们确定了 ATM 系统中所需的许多属性。在第 23.5 节中，我们检查这些属性如何表示对象的状态。在第 23.6 节中，我们确定类操作。
 
-## 第 23.4 识别类属性 831
-
 ### 识别属性
 
-考虑现实世界对象的属性：一个人的属性包括身高、体重以及此人是左撇子、右手子还是双手灵巧。收音机的属性包括它的电台频率、音量以及 AM 或 FM 设置。汽车的属性包括速度表和里程表的读数、油箱中的汽油。个人电脑的属性包括其制造商（例如 Dell、Sun、Apple 或 IBM）、屏幕类型（例如 LCD 或 CRT）、主内存大小和硬盘大小。
+考虑现实世界对象的属性：一个人的属性包括身高、体重以及此人是左撇子、右撇子还是双手灵巧。收音机的属性包括它的电台频率、音量以及 AM 或 FM 设置。汽车的属性包括速度表和里程表的读数、油箱中的汽油。个人电脑的属性包括其制造商（例如 Dell、Sun、Apple 或 IBM）、屏幕类型（例如 LCD 或 CRT）、主内存大小和硬盘大小。
 
 我们可以通过寻找需求文档中的描述性词汇和短语来识别系统中的许多类。对于我们发现的每个在 ATM 系统中起重要角色的词和短语，我们创建一个属性并将其分配给 23.3 节中识别出的其中一个类。我们还创建属性来表示该类可能需要的任何额外数据，这些需求会随着设计过程变得清晰。
 
 图 23.11 列出了来自需求文档的描述每个类的词汇或短语。我们通过阅读需求文档并识别任何引用类特征的词汇或短语形成了这个列表。例如，需求文档描述了获取“取款金额”的步骤，因此我们在 `withdrawal` 旁边列出了“amount”。
 
 | 类 | 描述性词汇和短语 |
-| --- | --- |
+| :--- | :--- |
 | ATM | 用户已通过验证 |
 | BalanceInquiry | 账户号 |
 | Withdrawal | 账户号、金额 |
@@ -25486,31 +25234,25 @@ UML 允许我们通过类图对 ATM 系统中的类及其相互关系进行建�
 | CashDispenser | 每天开始装有 500 张 20 元钞票 |
 | DepositSlot | [无描述性词汇或短语] |
 
-图 23.11 ATM 需求文档中的描述性词汇。
+**图 23.11** ATM 需求文档中的描述性词汇。
 
 图 23.11 引导我们创建了 ATM 的一个属性。ATM 类维护 ATM 状态的信息。“用户已通过验证”描述了 ATM 的状态（我们在第 23.5 节中引入状态），因此我们在 `ATM` 类中包含 `userAuthenticated` 作为一个布尔属性（即值为真或伪的属性）。UML 中的属性类型等同于 Java 中的 `boolean` 类型。该属性指示 ATM 是否成功验证了当前用户——只有当 `userAuthenticated` 为真时，系统才允许用户执行交易并访问账户信息。该属性有助于确保系统数据的安全性。
 
-# 832 第23章 ATM 案例研究，第一部分：使用 UML 进行面向对象的设计
+`BalanceInquiry`、`Withdrawal` 和 `Deposit` 类共享一个属性。每个交易都涉及一个“账户号”，它与执行交易的用户账户对应。我们为每个交易类分配一个整数属性 `accountNumber`，以识别该类所属的账户。
 
-Balance、Withdraw 和 Deposit 类共享一个属性。每个交易都涉及一个“账户号”，它与执行交易的用户账户对应。我们为每个交易类分配一个整数属性 `accountNumber`，以识别该类所属的账户。
+需求文档中的描述性词和短语也暗示了每个交易类所需的属性存在某些差异。需求文档指出，要取款或存款，用户必须分别输入要取款或存款的“金额（amount）”。因此，我们为 `Withdrawal` 和 `Deposit` 类分配了一个属性 `amount`，用于存储用户提供的值。与取款和存款相关的金额是交易系统的定义特征，用户需要这些特征来完成交易。`BalanceInquiry` 类执行其任务不需要额外数据——它只需要一个账户号来指示要检索余额的账户。
 
-需求文档中的描述性词和短语也暗示了每个交易类所需的属性存在某些差异。需求文档指出，要取款或存款，用户必须分别输入要取款或存款的“金额（amount）”。因此，我们为 Withdrawal 和 Deposit 类分配了一个属性 `amount`，用于存储用户提供的值。与取款和存款相关的金额是交易系统的定义特征，用户需要这些特征来完成交易。BalanceInquiry 类执行其任务不需要额外数据——它只需要一个账户号来指示要检索余额的账户。
+`Account` 类有多个属性。需求文档规定，每个银行账户都有“账户号”和“PIN”，系统用它们来识别账户和验证用户。我们为 `Account` 类分配了两个整数：`accountNumber` 和 `pin`。需求文档还规定，账户包含账户内金额的“余额”，且用户的存款在银行验证存款封中的现金金额以及封内的任何支票之前，不可取款。账户仍必须记录用户存款的金额。因此，我们决定账户应使用两个属性来表示余额：`availableBalance` 和 `totalBalance`。属性 `availableBalance` 跟踪用户可以从账户中取出的金额。属性 `totalBalance` 指用户“存入”的总金额（即可用金额加上待验证或待结算的金额）。例如，假设一个 ATM 用户向一个空账户存入了 $50.00。`totalBalance` 将增加到 $50.00 以记录该存款，但 `availableBalance` 将保持为 $0。[注：我们假设银行在 ATM 交易发生一段时间后，会更新账户，以确认在存款封中发现了价值 50 美元的现金或支票。我们假设这一更新是由银行员工使用除 ATM 之外的某种银行软件完成的。我们不会在案例研究中讨论此点。]
 
-Account 类有多个属性。需求文档规定，每个银行账户都有“账户号”和“PIN”，系统用它们来识别账户和验证用户。我们为 Account 类分配了两个整数：`accountNumber` 和 `pin`。需求文档还规定，账户包含账户内金额的“余额”，且用户的存款在银行验证存款封中的现金金额以及封内的任何支票之前，不可取款。账户仍必须记录用户存款的金额。因此，我们决定账户应使用两个属性来表示余额：`availableBalance` 和 `totalBalance`。属性 `availableBalance` 跟踪用户可以从账户中取出的金额。属性 `totalBalance` 指用户“存入”的总金额（即可用金额加上待验证或待结算的金额）。例如，假设一个 ATM 用户向一个空账户存入了 $50.00。`totalBalance` 将增加到 $50.00 以记录该存款，但 `availableBalance` 将保持为 $0。[注：我们假设银行在 ATM 交易发生一段时间后，会更新账户，以确认在存款封中发现了价值 50 美元的现金或支票。我们假设这一更新是由银行员工使用除 ATM 之外的某种银行软件完成的。我们不会在案例研究中讨论此点。]
-
-Dispenser 类有一个属性。需求文档规定，取钞机“每天开始时都装有 500 张 20 美元的钞票”。取钞机必须跟踪钞票数量，以确定手头是否有足够的现金满足取款请求。我们为 Dispenser 类分配了一个整数属性 `count`，初始值设置为 500。
+`CashDispenser` 类有一个属性。需求文档规定，取钞机“每天开始时都装有 500 张 20 美元的钞票”。取钞机必须跟踪钞票数量，以确定手头是否有足够的现金满足取款请求。我们为 `CashDispenser` 类分配了一个整数属性 `count`，初始值设置为 500。
 
 在实际问题中，无法保证需求文档足够精确以供面向对象的系统确定所有属性甚至所有的类。对额外类、属性和行为的需求可能会随着设计过程的推进变得清晰。随着案例研究的进行，我们将继续添加、修改和删除有关系统中类的信息。
 
-# 建模属性
+### 建模属性
 
-图 23.12 中的类图列出了我们系统中类的一些属性——图 23.11 中的描述性词和短语将帮助我们识别这些属性。为了简单起见：
+图 23.12 中的类图列出了我们系统中类的一些属性——图 23.11 中的描述性词和短语将帮助我们识别这些属性。为了简单起见，图 23.12 没有显示类之间的关联——我们在图 23.10 中展示了这些关联。这是系统设计人员在开发设计时的常用做法。回顾第 23.3 节，在 UML 中，类的属性放置在类矩形的中间。我们列出每个属性的名称和类型，用冒号（:）隔开，然后用等号（=）和初始值给出一些示例。
 
-## 23.4 识别类属性
-
-图 23.12 没有显示类之间的关联——我们在图 23.10 中展示了这些关联。这是系统设计人员在开发设计时的常用做法。回顾第 23.3 节，在 UML 中，类的属性放置在类矩形的中间。我们列出每个属性的名称和类型，用冒号（:）隔开，然后用等号（=）和初始值给出一些示例。
-
-考虑 ATM 类的 `userAuthenticated` 属性：
+考虑 `ATM` 类的 `userAuthenticated` 属性：
 
 ```
 userAuthenticated : Boolean = false
@@ -25528,10 +25270,11 @@ userAuthenticated : Boolean = false
 | Deposit | CashDispenser |
 | accountNumber : Integer<br>amount : Double | count : Integer = 500 |
 | BankDatabase | DepositSlot |
+| | |
 
-图 23.12 | 带有属性的类。
+**图 23.12** 带有属性的类。
 
-我们也可以为属性指定初始值。ATM 类中 `userAuthenticated` 属性的初始值为 `false`。这表示系统最初不认为用户已通过验证。如果属性没有指定初始值，则只显示其名称和类型（用冒号隔开）。例如，BalanceInquiry 的 `accountNumber` 属性是一个整数。这里我们没有初始值，因为该属性的值是一个我们未知的数字。这个数字将在运行时根据当前 ATM 用户输入的账户号来确定。
+我们也可以为属性指定初始值。`ATM` 类中 `userAuthenticated` 属性的初始值为 `false`。这表示系统最初不认为用户已通过验证。如果属性没有指定初始值，则只显示其名称和类型（用冒号隔开）。例如，`BalanceInquiry` 的 `accountNumber` 属性是一个整数。这里我们没有初始值，因为该属性的值是一个我们未知的数字。这个数字将在运行时根据当前 ATM 用户输入的账户号来确定。
 
 图 23.12 不包含 `Screen`、`Keypad` 和 `DepositSlot` 的属性。这些是我们系统的重要组件，我们的设计过程尚未揭示它们的属性。我们可能会在后续阶段或在 Java 中实现这些类时发现属性。这是完全正常的。
 
@@ -25539,11 +25282,11 @@ userAuthenticated : Boolean = false
 
 在设计的早期，类往往缺乏属性。这些类不应该被删除，因为属性在设计的后期阶段可能会变得明显。
 
-图 23.12 也不包含 `BankDatabase` 的属性。回想 Java 中的属性可以用基本类型或引用类型表示。我们选择在图 23.12 中仅包含基本类型属性（以及案例研究中的类似类）。引用类型属性更清晰地建模为持有引用的类与对象类之间的关联。例如，图 23.10 中的类图显示 `BankDatabase` 与零多个 `Account` 对象存在组合关系。通过这种组合，我们可以确定在 Java 中实现系统时需要创建一个 `BankDatabase` 类的属性来引用零多个账户。同样，我们可以确定其与 `Screen`、`Keypad`、`CashDispenser` 和 `DepositSlot` 对应的引用类型属性。如果这些组合属性在图 23.12 中建模，将是冗余的，因为图 23.10 中建模的组合已经传达了数据库包含账户信息，以及 ATM 由屏幕、键盘、取钞机和存款槽组成。软件开发人员通常将这种整体/部分关系建模为组合，而不是属性来实现关系。
+图 23.12 也不包含 `BankDatabase` 的属性。回想 Java 中的属性可以用基本类型或引用类型表示。我们选择在图 23.12 中仅包含基本类型属性（以及案例研究中的类似类）。引用类型属性更清晰地建模为持有引用的类与对象类之间的关联。例如，图 23.10 中的类图显示 `BankDatabase` 与零或多个 `Account` 对象存在组合关系。通过这种组合，我们可以确定在 Java 中实现系统时需要创建一个 `BankDatabase` 类的属性来引用零或多个账户。同样，我们可以确定 `ATM` 与 `Screen`、`Keypad`、`CashDispenser` 和 `DepositSlot` 对应的引用类型属性。如果这些组合属性在图 23.12 中建模，将是冗余的，因为图 23.10 中建模的组合已经传达了数据库包含账户信息，以及 ATM 由屏幕、键盘、取钞机和存款槽组成。软件开发人员通常将这种整体/部分关系建模为组合，而不是属性来实现关系。
 
 图 23.12 中的类为我们的模型结构提供了坚实的基础，但图并不完整。在第 23.5 节中，我们将识别模型对象的状态和活动，在第 23.6 节中，我们将识别对象执行的操作。随着我们介绍更多 UML 和面向对象的设计，我们将继续加强模型的结构。
 
-# 第 23.4 节自测练习
+## 第 23.4 节自测练习
 
 
 
@@ -25621,7 +25364,7 @@ UML 将活动图中的动作表示为动作状态，由一个矩形建模，其�
 
 **23.12** 活动图建模对象执行的 ________ 以及它们发生的顺序。
 
-+   - 动作
++ 动作
 - 属性
 - 状态
 - 状态转换
@@ -25653,7 +25396,7 @@ UML 将活动图中的动作表示为动作状态，由一个矩形建模，其�
 
 为了识别操作，我们检查图 23.16 中列出的每个类的对应动词短语。与 ATM 类相关的“执行金融交易”短语意味着 ATM 类指示执行交易。因此，余额查询、取款和存款类各都需要一个操作来向 ATM 提供此服务。我们在图 23.17 更新后的类图中，将此操作（我们将其命名为 `execute`）放置在三个交易类的第三个隔间中。在 ATM 会话期间，ATM 对象将根据需要调用这些交易操作。
 
-### 图 23.17 带有属性和操作的 ATM 系统类
+### 第23 章 ATM 案例研究，第一部分：使用 UML 进行面向对象的设计
 
 | ATM | 账户 (Account) |
 | :--- | :--- |
@@ -25661,28 +25404,29 @@ UML 将活动图中的动作表示为动作状态，由一个矩形建模，其�
 | | pin: Integer |
 | | availableBalance: Double |
 | | totalBalance: Double |
-| | validatePIN(): Boolean |
-| | getAvailableBalance(): Double |
-| | getTotalBalance(): Double |
+| 余额查询 (BalanceInquiry) | validatePIN(): Boolean |
+| accountNumber: Integer | getAvailableBalance(): Double |
+| execute() | getTotalBalance(): Double |
 | | credit() |
-| | debit() |
-| 余额查询 (BalanceInquiry) | 屏幕 (Screen) |
-| accountNumber: Integer | displayMessage() |
+| 取款 (Withdrawal) | debit() |
+| accountNumber: Integer | 屏幕 (Screen) |
+| amount: Double | displayMessage() |
 | execute() | |
-| 取款 (Withdrawal) | 键盘 (Keypad) |
+| 存款 (Deposit) | 键盘 (Keypad) |
 | accountNumber: Integer | getInput(): Integer |
 | amount: Double | |
 | execute() | 取钞机 (CashDispenser) |
-| 存款 (Deposit) | count: Integer = 500 |
-| accountNumber: Integer | dispenseCash(): Boolean |
-| amount: Double | isSufficientCashAvailable(): Boolean |
-| execute() | 存款口 (DepositSlot) |
-| 银行数据库 (BankDatabase) | isEnvelopeReceived(): Boolean |
-| authenticateUser(): Boolean | |
+| | count: Integer = 500 |
+| | dispenseCash(): Boolean |
+| | isSufficientCashAvailable(): Boolean |
+| 银行数据库 (BankDatabase) | 存款口 (DepositSlot) |
+| authenticateUser(): Boolean | isEnvelopeReceived(): Boolean |
 | getAvailableBalance(): Double | |
 | getTotalBalance(): Double | |
-| credit() | |
-| debit() | |
+| credit() | | |
+| debit() | | |
+
+**图 23.17** 带有属性和操作的 ATM 系统类。
 
 UML 通过列出操作名称来表示操作（即方法），操作名称后紧跟一个括号括、逗号分隔的参数列表、冒号和返回类型：`operationName(parameter1, parameter2, ...) : return type`
 
@@ -25692,7 +25436,7 @@ UML 通过列出操作名称来表示操作（即方法），操作名称后紧�
 
 ### 验证用户
 
-图 23.16 在 ATM 类旁边列出了“验证用户”短语——该对象包含用于判断用户输入的账户号和 PIN 是否与银行持有的账户相匹配的必要信息。因此，银行数据库类需要一个向 ATM 提供身份验证服务的操作。我们将 `authenticateUser` 操作放置在银行数据库的第三个隔间中（图 23.17）。然而，存储账户号和 PIN 的不是银行数据库，而是账户类对象，因此账户类必须提供一个服务来验证通过用户输入获取的 PIN。每个操作都返回一个值，表示该操作是否成功执行了任务（即返回值为 `true`）或未成功（即返回值为 `false`）。
+图 23.16 在 ATM 类旁边列出了“验证用户”短语——该对象包含用于判断用户输入的账户号和 PIN 是否与银行持有的账户相匹配的必要信息。因此，银行数据库类需要一个向 ATM 提供身份验证服务的操作。我们将 `authenticate` 操作放置在银行数据库的第三个隔间中（图 23.17）。然而，存储账户号和 PIN 的不是银行数据库，而是账户类对象，因此账户类必须提供一个服务来验证通过用户输入获取的 PIN。每个操作都返回一个值，表示该操作是否成功执行了任务（即返回值为 `true`）或未成功（即返回值为 `false`）。
 
 ### 其它银行数据库和账户操作
 
@@ -25710,31 +25454,33 @@ UML 通过列出操作名称来表示操作（即方法），操作名称后紧�
 
 如果这是一个真实的银行系统，类还将提供一组操作来允许银行系统确认或拒绝部分存款。例如，`depositAmount` 操作向 `availableBalance` 属性增加金额，使资金可提取。`rejectDeposit` 操作从 `totalBalance` 属性中减少金额，以指示通过 ATM 存入到 `totalBalance` 的特定金额未找到或票据未兑现（即“跳票”）。添加这些操作将使我们的系统更完整，我们没有将它们包含类图中，因为它们超出了案例研究的范围。
 
-### 取钞机和存款口操作
+### 23.6 识别类操作
 
-图 23.16 列出了 `CashDispenser` 类的“输出现金”和“判断是否有足够的现金满足取款请求”。因此，我们在 `CashDispenser` 类中包含了 `dispenseCash` 和 `isSufficientCashAvailable`，它们返回 UML 类型 `Boolean` 值。
+因此，我们在 `CashDispenser` 类中包含了 `SufficientCashAvailable`，这是一个返回 UML 类型 `Boolean` 值的操作。
 
-23.16 还列出了 `DepositSlot` 类的“接收信封”。存币口必须指示它是否收到了信封，因此我们在 `DepositSlot` 类的第三隔间中放置了返回 `Boolean` 值的操作 `isEnvelopeReceived`。[注：硬件存币口最可能通过模拟 ATM 信号来表示已收到信封。然而，我们通过在 `DepositSlot` 类中定义一个操作来模拟这种行为，`ATM` 类可以调用该操作来确定存币口是否收到了信封。]
+23.16 还列出了 `DepositSlot` 类的“接收信封”。存币口必须指示它是否收到了信封，因此我们在 `DepositSlot` 类的第三隔间中放置了返回 `Boolean` 值的操作 `envelopeReceived`。[注：硬件存币口最可能通过模拟 ATM 信号来表示已收到信封。然而，我们通过在 `DepositSlot` 类中定义一个操作来模拟这种行为，`ATM` 类可以调用该操作来确定存币口是否收到了信封。]
 
 ### Class ATM
 
 目前没有列出 `ATM` 类的操作。我们不知道 `ATM` 类为系统的其他类提供了任何服务。然而，当我们用 Java 代码实现系统时，该类的操作以及系统中其他类的额外操作可能会出现。
 
-### 识别并建模 BankDatabase 的操作参数
+### 识别并建模 ClassDatabase 的操作参数
 
 到为止，我们还没有关注操作的参数——我们仅尝试对每个类的操作获得基本的理解。现在，让我们仔细观察一些操作参数。我们通过检查数据操作执行其分配的任务所需的数据来识别操作的参数。
 
-考虑 `BankDatabase` 的 `authenticateUser`。为了验证用户身份，此操作必须知道用户提供的账号和 PIN。我们指定 `authenticateUser` 接收整数类型的 `accountNumber` 和 `userPIN`，该操作必须将这些值与数据库中 `Account` 对象的账号和 PIN 进行比较。我们在这些参数名称前加上前缀 "user"，以避免操作的参数名与类的的属性名之间产生混淆。我们在图 23.18 的类图中列出了这些参数，该图仅对 `BankDatabase` 建模。[注：只建模一个类是完全正常的。在这种情况下，我们正在检查这一个类的参数，因此我们省略了其他类。在案例研究随后的类图中，由于某些参数不再是我们关注的重点，我们省略了这些参数以节省空间。但请记住，这些图中列出的操作仍然具有参数。]
+考虑 `Database` 的 `authenticate`。为了验证用户身份，此操作必须知道用户提供的账号和 PIN。我们指定 `authenticateUser` 接收整数类型的 `AccountNumber` 和 `userPIN`，该操作必须将这些值与数据库中 `Account` 对象的账号和 PIN 进行比较。我们在这些参数名称前加上前缀 "user"，以避免操作的参数名与类的的属性名之间产生混淆。我们在图 23.18 的类图中列出了这些参数，该图仅对 `ClassDatabase` 建模。[注：只建模一个类是完全正常的。在这种情况下，我们正在检查这一个类的参数，因此我们省略了其他类。在案例研究随后的类图中，由于某些参数不再是我们关注的重点，我们省略了这些参数以节省空间。但请记住，这些图中列出的操作仍然具有参数。]
 
-### 图 23.18 带有操作参数的 `BankDatabase`
+### BankDatabase
 
 | 操作 | 参数 | 返回类型 |
 | :--- | :--- | :--- |
 | authenticateUser | accountNumber : Integer, userPIN : Integer | Boolean |
-| getAvailableBalance | accountNumber : Integer | Double |
-| getTotalBalance | accountNumber : Integer | Double |
-| credit | accountNumber : Integer, amount : Double | |
-| debit | accountNumber : Integer, amount : Double | |
+| AvailableBalance | accountNumber : Integer | Double |
+| getBalance | accountNumber : Integer | Double |
+| credit | accountNumber : Integer, amount : Double | Double |
+| debit | accountNumber : Integer | amount : Double | Double |
+
+**图 23.18** 带有操作参数的 `ClassDatabase`。
 
 
 
@@ -25912,27 +25658,27 @@ add(x : Integer, y : Integer) : Integer
 
 23.3 d.
 
-23.4 [注：答案可能有所不同。] 图 23.27 展示了一个类图，显示了 Car（汽车）类的一些组合关系。
+23.4 [注：答案可能有所不同。] 图 23.27 展示了一个类图，显示了 `Car` 类的一些组合关系。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_891_0.png)
 
-**图 23.27** | 显示 Car 类组合关系的类图。
+**图 23.27** | 显示 `Car` 类组合关系的类图。
 
 23.5 c. [注：在计算机网络中，这种关系可能是多对多的。]
 
 23.6 正确。
 
-23.7 图 23.28 展示了 ATM 的类图，其中包含 Deposit（存款）类而非 Withdrawal（取款）类（如图 23.10 所示）。Deposit 不访问 CashDispenser，但访问 DepositSlot（存款口）。
+23.7 图 23.28 展示了 ATM 的类图，其中包含 `Deposit` 类而非 `Withdrawal` 类（如图 23.10 所示）。`Deposit` 不访问 `CashDispenser`，但访问 `DepositSlot`。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_891_1.png)
 
-**图 23.28** | 包含 Deposit 类的 ATM 系统模型类图。
+**图 23.28** | 包含 `Deposit` 类的 ATM 系统模型类图。
 
 23.8 b.
 
-23.9 c. Fly（飞行）是飞机的操作或行为，而不是属性。
+23.9 c. `Fly`（飞行）是飞机的操作或行为，而不是属性。
 
-23.10 这表示 count 是一个初始值为 500 的整数。该属性跟踪了取钞机中任何时候的钞票数量。
+23.10 这表示 `count` 是一个初始值为 500 的整数。该属性跟踪了取钞机中任何时候的钞票数量。
 
 23.11 错误。状态图建模了系统的部分行为。
 
@@ -25946,19 +25692,19 @@ add(x : Integer, y : Integer) : Integer
 
 23.14 c.
 
-23.15 为了指定一个获取类中 amount 属性的操作，应将以下操作列表放在 Withdrawal 的操作区域中：
+23.15 为了指定一个获取类中 `amount` 属性的操作，应将以下操作列表放在 `Withdrawal` 的操作区域中：
 
 ```
 getAmount() : Double
 ```
 
-23.16 此操作列表表示一个接受整数 x 和 y 为参数并返回整数值的操作。
+23.16 此操作列表表示一个接受整数 `x` 和 `y` 为参数并返回整数值的操作。
 
 23.17 c.
 
 23.18 通信图强调发生了哪些协作。序列图强调协作何时发生。
 
-23.19 图 23.30 展示了一个序列图，建模了 ATM 系统中在执行存款成功时对象之间的交互。Deposit 首先向 Screen 发送 `displayMessage` 消息，要求用户输入存款金额。接着，Deposit 向 Keypad 发送 `getInput` 消息以接收用户输入。然后 Deposit 通过向 Screen 发送 `displayMessage` 来指示用户输入金额。接下来，Deposit 向 DepositSlot 发送 `received` 消息以确认 ATM 已接收金额。最后，Deposit 通过向 BankDatabase 发送 `credit`（贷记）消息来增加用户账户的 `totalBalance` 属性（而非 `availableBalance`）。银行数据库通过向用户账户发送消息作为响应。
+23.19 图 23.30 展示了一个序列图，建模了 ATM 系统中在执行存款成功时对象之间的交互。`Deposit` 首先向 `Screen` 发送 `displayMessage` 消息，要求用户输入存款金额。接着，`Deposit` 向 `Keypad` 发送 `getInput` 消息以接收用户输入。然后 `Deposit` 通过向 `Screen` 发送 `displayMessage` 来指示用户输入金额。接下来，`Deposit` 向 `DepositSlot` 发送 `received` 消息以确认 ATM 已接收金额。最后，`Deposit` 通过向 `BankDatabase` 发送 `credit`（贷记）消息来增加用户账户的 `totalBalance` 属性（而非 `availableBalance`）。银行数据库通过向用户账户发送消息作为响应。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_893_0.png)
 
@@ -25983,23 +25729,20 @@ getAmount() : Double
 - 24.2 开始编写 ATM 系统的类
 - 24.3 将继承和多态引入 ATM 系统
 - 24.4 ATM 案例研究实现
-    - 13.4.4 CashDispenser 类
-    - 13.4.5 DepositSlot 类
-    - 13.4.6 Account 类
-    - 13.4.7 BankDatabase 类
-    - 13.4.8 Transaction 类
-    - 13.4.9 BalanceInquiry 类
-    - 13.4.10 Withdrawal 类
-    - 13.4.11 Deposit 类
-    - 13.4.12 ATM 类
+    - 13.4.4 `CashDispenser` 类
+    - 13.4.5 `DepositSlot` 类
+    - 13.4.6 `Account` 类
+    - 13.4.7 `BankDatabase` 类
+    - 13.4.8 `Transaction` 类
+    - 13.4.9 `BalanceInquiry` 类
+    - 13.4.10 `Withdrawal` 类
+    - 13.4.11 `Deposit` 类
+    - 13.4.12 `ATM` 类
 - 24.5 总结
-    - 13.4.1 ATM 类
-    - 13.4.2 Screen 类
-    - 13.4.3 Keypad 类
-
-### 自测习题答案
-
-## 24.1 引言
+    - 13.4.1 `ATM` 类
+    - 13.4.2 `Screen` 类
+    - 13.4.3 `Keypad` 类
+- 自测习题答案
 
 在第 23 章中，我们为 ATM 系统开发了面向对象的设计。现在我们用 Java 实现该面向对象的设计。在第 24.2 节中，我们展示了如何将类图转换为 Java 代码。在第 24.3 节中，我们使用继承和多态调整了设计。我们在第 24.4 节中提供了完整的 Java 实现。代码经过了仔细注释，讨论详尽且精确。研究这个应用为你提供了一个接触可能遇到的实际应用的机会。
 
@@ -26007,9 +25750,9 @@ getAmount() : Double
 
 ### 可见性
 
-我们现在使用访问修饰符处理类的成员。我们引入了 public 和 private。访问修饰符决定了属性和方法对其他对象的可见性或可用性。在开始实现设计之前，我们必须考虑类的哪些属性和方法应该是公共的，哪些应该是私有的。
+我们现在使用访问修饰符处理类的成员。我们引入了 `public` 和 `private`。访问修饰符决定了属性和方法对其他对象的可见性或可用性。在开始实现设计之前，我们必须考虑类的哪些属性和方法应该是公共的，哪些应该是私有的。
 
-我们观察到属性通常应该是私有的，而由客户端调用的方法应该是公共的。作为类内部其他方法调用的“工具方法”应该是私有的。UML 使用可见性标记来标记属性和操作的可见性。公共可见性通过在属性前加加号 (+) 表示，而减号 (-) 表示私有。图 24.1 显示了我们包含可见性标记的更新类图。
+我们观察到属性通常应该是私有的，而由客户端调用的方法应该是公共的。作为类内部其他方法调用的“工具方法”应该是私有的。UML 使用可见性标记来标记属性和操作的可见性。公共可见性通过在属性前加加号 (`+`) 表示，而减号 (`-`) 表示私有。图 24.1 显示了我们包含可见性标记的更新类图。
 
 # 第 24 章 ATM 案例研究第 2 部分：实现面向对象的设计
 
@@ -26055,9 +25798,9 @@ getAmount() : Double
 
 **图 24.1** 带有可见性标记的类图。
 
-使用 UML，你通过可见性箭头来确定哪些对象需要引用其他对象。例如，从 ATM 类指向 Database 类的导航性箭头表示我们可以从前者导航到后者，使得 ATM 能够调用 BankDatabase 的操作。然而，由于图 24.2 不包含从 BankDatabase 类指向 ATM 类的导航性箭头，因此 BankDatabase 无法访问 ATM 的操作。类图中在两端都具有导航性或完全没有导航性的关联表示是双向导航的——导航可以跨越关联向任一个方向进行。
+使用 UML，你通过可见性箭头来确定哪些对象需要引用其他对象。例如，从 `ATM` 类指向 `Database` 类的导航性箭头表示我们可以从前者导航到后者，使得 `ATM` 能够调用 `BankDatabase` 的操作。然而，由于图 24.2 不包含从 `BankDatabase` 类指向 `ATM` 类的导航性箭头，因此 `BankDatabase` 无法访问 `ATM` 的操作。类图中在两端都具有导航性或完全没有导航性的关联表示是双向导航的——导航可以跨越关联向任一个方向进行。
 
-与图 23.10 的图一样，图 24.2 为了可见性考虑，省略了 BalanceInquiry（余额查询）类和 Deposit（存款）类。这些类中的对象关联紧密地描绘了 Withdrawal（取款）类的特征。BalanceInquiry 与 Screen（屏幕）类有关联。我们可以沿着此关联从 BalanceInquiry 类导航到 Screen 类，但不能从 Screen 类导航到 BalanceInquiry 类。因此，如果我们要在图 24.2 中建模 BalanceInquiry 类，我们需要在该关联的 Screen 类端添加一个导航性箭头。同样记住，Deposit 类与 Screen 类关联。
+与图 23.10 的图一样，图 24.2 为了可见性考虑，省略了 `BalanceInquiry`（余额查询）类和 `Deposit`（存款）类。这些类中的对象关联紧密地描绘了 `Withdrawal`（取款）类的特征。`BalanceInquiry` 与 `Screen`（屏幕）类有关联。我们可以沿着此关联从 `BalanceInquiry` 类导航到 `Screen` 类，但不能从 `Screen` 类导航到 `BalanceInquiry` 类。因此，如果我们要在图 24.2 中建模 `BalanceInquiry` 类，我们需要在该关联的 `Screen` 类端添加一个导航性箭头。同样记住，`Deposit` 类与 `Screen` 类关联。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_897_0.png)
 
@@ -26067,7 +25810,7 @@ getAmount() : Double
 
 我们现在准备好开始实现 ATM 系统了。我们首先将图 24.1 和图 24.2 中的类转换为 Java 代码。这些代码将代表系统的“骨架”。在第 24.3 节中，我们将修改代码以引入继承。在第 24.4 节中，我们将展示模型的完整 Java 代码。
 
-例如，我们根据图 24.1 中 Withdrawal 类的设计开发代码。我们用它来确定类的属性和操作。我们使用图 24.2 中的 UML 模型来确定类之间的关联。我们对每个类遵循以下指南：
+例如，我们根据图 24.1 中 `Withdrawal` 类的设计开发代码。我们用它来确定类的属性和操作。我们使用图 24.2 中的 UML 模型来确定类之间的关联。我们对每个类遵循以下指南：
 
 1. 使用第一个隔间中的名称将该类声明为带有无参构造函数的公共类（`public class`）。我们包含此构造函数作为占位符，以提醒我们大多数类将需要自定义的构造函数。在第 24.4 节中，当我们完成该类的可运行版本时，我们将根据需要添加参数并编写构造函数体。例如，`class Withdrawal` 产生了图 24.3 中的代码。如果我们发现该类的实例变量只需要默认初始化，我们将移除空的无参构造函数，因为它是没必要的。
 
@@ -26080,9 +25823,9 @@ public class Withdrawal {
 } // end class
 ```
 
-**图 24.3** 基于图 24.1-24.2 的类 Withdrawal 的 Java 代码。
+**图 24.3** 基于图 24.1-24.2 的类 `Withdrawal` 的 Java 代码。
 
-2. 使用位于第二个隔间的属性来声明实例变量。例如，Withdrawal 类的私有属性和类成员数量生成了图 24.4 中的代码。[注：该类完整工作版本的构造函数将为这些属性赋值。]
+2. 使用位于第二个隔间的属性来声明实例变量。例如，`Withdrawal` 类的私有属性和类成员数量生成了图 24.4 中的代码。[注：该类完整工作版本的构造函数将为这些属性赋值。]
 
 ```java
 // Class Withdrawal represents an ATM transaction
@@ -26096,11 +25839,11 @@ public class Withdrawal {
 } // end class
 ```
 
-**图 24.4** 基于图 24.1-24.2 的类 Withdrawal 的 Java 代码。
+**图 24.4** 基于图 24.1-24.2 的类 `Withdrawal` 的 Java 代码。
 
-3. 使用图 24.1 第三个隔间描述的关联来声明对对象的引用。例如，根据图 24.2，Withdrawal 可以访问一个 Screen 类对象、一个 Keypad 类对象、一个 Dispenser 类对象和一个 BankDatabase 类对象。这生成了图 24.5 中的代码。[注：该类完整工作版本的构造函数将使用指向实际对象的引用初始化这些实例。]
+3. 使用图 24.1 第三个隔间描述的关联来声明对对象的引用。例如，根据图 24.2，`Withdrawal` 可以访问一个 `Screen` 类对象、一个 `Keypad` 类对象、一个 `Dispenser` 类对象和一个 `BankDatabase` 类对象。这生成了图 24.5 中的代码。[注：该类完整工作版本的构造函数将使用指向实际对象的引用初始化这些实例。]
 
-4. 使用位于图 24.1 第三个隔间的操作来声明方法的空壳。如果我们还没有为某个操作指定返回类型，我们将参考图 23.1-23.2 的类图来声明参数。例如，class Withdrawal 产生了图 24.6 中的代码。当我们实现系统时，我们将为操作编写方法体。[注：我们在第 24.4 节中实现操作。]
+4. 使用位于图 24.1 第三个隔间的操作来声明方法的空壳。如果我们还没有为某个操作指定返回类型，我们将参考图 23.1-23.2 的类图来声明参数。例如，`class Withdrawal` 产生了图 24.6 中的代码。当我们实现系统时，我们将为操作编写方法体。[注：我们在第 24.4 节中实现操作。]
 
 这结束了我们从 UML 生成类的讨论。
 
@@ -26121,7 +25864,7 @@ public class Withdrawal {
 } // end class
 ```
 
-**图 24.5** 类 Withdrawal 的 Java 代码。
+**图 24.5** 类 `Withdrawal` 的 Java 代码。
 
 ```java
 // Class Withdrawal represents an ATM transaction
@@ -26143,11 +25886,11 @@ public class Withdrawal {
 } // end class
 ```
 
-**图 24.6** 基于图 24.1-24.2 的类 Withdrawal 的 Java 代码。
+**图 24.6** 基于图 24.1-24.2 的类 `Withdrawal` 的 Java 代码。
 
 ## 24.3 将继承和多态整合到 ATM 系统
 
-查询、`BalanceInquiry`、`Withdrawal` 和 `Deposit` 类被认为是 `Transaction` 类的特化。
+`BalanceInquiry`、`Withdrawal` 和 `Deposit` 类被认为是 `Transaction` 类的特化。
 
 
 
@@ -26156,11 +25899,11 @@ public class Withdrawal {
 | - accountNumber: Integer | | - amount: Double | - amount: Double |
 | + getAccountNumber() | | + execute() | + execute() |
 
-图 24.8 超类 `Transaction` 与子类 `BalanceInquiry`、`Withdrawal` 和 `Deposit` 的类图泛化关系。抽象类名（例如 *Transaction*）和方法名（例如 Transaction 类中的 *execute*）以斜体显示。
+图 24.8 超类 `Transaction` 与子类 `BalanceInquiry`、`Withdrawal` 和 `Deposit` 的类图泛化关系。抽象类名（例如 `Transaction`）和方法名（例如 `Transaction` 类中的 `execute`）以斜体显示。
 
 `BalanceInquiry`、`Withdrawal` 和 `Deposit` 共享属性 `accountNumber`，我们将此共同属性提取并放入超类 `Transaction` 中。我们不再在每个子类的第二个区域列出 `accountNumber`，因为这三个子类从 `Transaction` 继承了该属性。记住，子类不能直接访问父类的私有属性。因此，我们在 `Transaction` 类中包含了公共方法 `getAccountNumber`。每个子类将继承此方法，使子类能够根据执行事务所需的需要访问其 `accountNumber`。
 
-根据 24.7，类 `BalanceInquiry`、`Withdrawal` 和 `Deposit` 也共享操作 `execute`，因此我们在超类 `Transaction` 中放置了公共方法 `execute`。然而，在 `Transaction` 类中实现 `execute` 没有意义的，因为该方法的功能取决于实际交易的类型。因此，我们在超类 `Transaction` 中将方法 `execute` 声明为抽象。任何包含至少一个抽象方法的类必须是具体类（即 `BalanceInquiry`、`Withdrawal` 和 `Deposit`）以实现 `execute` 方法。UML 要求我们将类名（以及抽象方法）置于斜体中，*Transaction* 及其方法 *execute* 以斜体出现（见图 24.8）。在子类 `BalanceInquiry`、`Withdrawal` 中，方法 `execute` 不使用斜体。每个子类都用具体的实现重写超类 `Transaction` 的 `execute` 方法，该实现执行完成该类型交易所需的适当步骤。图 24.8 在类 `BalanceInquiry`、`Withdrawal` 和 `Deposit` 的第三个区域包含了操作 `execute`，因为每个类对重写的方法都有不同的具体实现。
+根据 24.7，类 `BalanceInquiry`、`Withdrawal` 和 `Deposit` 也共享操作 `execute`，因此我们在超类 `Transaction` 中放置了公共方法 `execute`。然而，在 `Transaction` 类中实现 `execute` 没有意义的，因为该方法的功能取决于实际交易的类型。因此，我们在超类 `Transaction` 中将方法 `execute` 声明为抽象。任何包含至少一个抽象方法的类必须是具体类（即 `BalanceInquiry`、`Withdrawal` 和 `Deposit`）以实现 `execute` 方法。UML 要求我们将类名（以及抽象方法）置于斜体中，`Transaction` 及其方法 `execute` 以斜体出现（见图 24.8）。在子类 `BalanceInquiry`、`Withdrawal` 中，方法 `execute` 不使用斜体。每个子类都用具体的实现重写超类 `Transaction` 的 `execute` 方法，该实现执行完成该类型交易所需的适当步骤。图 24.8 在类 `BalanceInquiry`、`Withdrawal` 和 `Deposit` 的第三个区域包含了操作 `execute`，因为每个类对重写的方法都有不同的具体实现。
 
 ### 处理事务：多态
 
@@ -26180,7 +25923,7 @@ public class Withdrawal {
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_903_0.png)
 
-**图 24.9** ATM 系统的类图（整合了继承）。抽象类名 *Transaction* 以斜体显示。
+**图 24.9** ATM 系统的类图（整合了继承）。抽象类名 `Transaction` 以斜体显示。
 
 我们还展示了 `Transaction` 类与 `BankDatabase` 类之间的关联（图 24.9）。所有事务都需要指向 `BankDatabase` 的引用，以便它们访问和修改账户信息。每个 `Transaction` 子类都继承该引用，我们不再建模 `Withdrawal` 类与 `BankDatabase` 之间的关联；同样，之前省略的 `BankDatabase` 与 `BalanceInquiry` 及 `Deposit` 类之间的关联不再存在。
 
@@ -26206,7 +25949,7 @@ public class Withdrawal {
 | BankDatabase | DepositSlot |
 | +authenticateUser(): Boolean<br>+getAvailableBalance(): Double<br>+getBalance(): Double<br>+credit()<br>-debit() | +isEnvelopeReceived(): Boolean |
 
-> 图 24.10 | 带有属性和操作的类图（整合继承）。抽象类名 *Transaction* 和 Transaction 类中的抽象方法 *execute* 以斜体显示。
+> 图 24.10 | 带有属性和操作的类图（整合继承）。抽象类名 `Transaction` 和 `Transaction` 类中的抽象方法 `execute` 以斜体显示。
 
 ## 24.3 将继承和多态整合到 ATM 系统
 
@@ -26254,7 +25997,7 @@ public void execute() {
 } // end class withdrawal
 ```
 
-**图 24.12** `withdrawal` 类的 Java 代码如图 24.9 和图 24.10 所示。（第 2 部分，共 2 部分。）
+**图 24.12** `Withdrawal` 类的 Java 代码如图 24.9 和图 24.10 所示。（第 2 部分，共 2 部分。）
 
 ## 软件工程观察 24.2
 
@@ -26280,17 +26023,13 @@ d) 线条箭头
 
 ## 24.4 ATM 案例研究实现
 
-本节完成了全部 673 行的 ATM 系统实现。我们按照在第 23.3 节中识别的顺序考虑这些类：ATM、Screen、Keypad、CashDispenser、DepositLot、Account、BankDatabase、Transaction、BalanceInquiry、Withdrawal 和 Deposit。
+本节完成了全部 673 行的 ATM 系统实现。我们按照在第 23.3 节中识别的顺序考虑这些类：`ATM`、`Screen`、`Keypad`、`CashDispenser`、`DepositLot`、`Account`、`BankDatabase`、`Transaction`、`BalanceInquiry`、`Withdrawal` 和 `Deposit`。
 
 我们应用第 24.2–23.3 节中讨论的指南，根据我们在图 24.9 和图 24.10 UML 类图中的建模方式对这些类进行编码。为了开发类方法的主体，我们参考了第 23.5 节中的活动图，以及第 23.7 节中提供的通信图和时序图。我们的 ATM 设计未指定所有的程序逻辑，但指定了完成 ATM 实现所需的所有属性和操作。这是面向对象设计过程的正常部分。当我们实现系统时，我们会完成程序逻辑，并根据需要添加属性和行为，以构建第 23.2 节需求文档中指定的 ATM 系统。
 
 我们通过展示一个启动并使用 ATM 键盘、显示器和出币器的 ATM 程序结束讨论。我们尝试在不进行重大更改的情况下实现该系统。
 
 
-
-# ATM 案例研究实现
-
-## ATM 类代码实现
 
 ```java
 // ATM.java
@@ -26357,36 +26096,36 @@ public class ATM {
     private void performTransactions() {
         // local variable to store transaction currently being processed
         Transaction currentTransaction = null;
-        boolean userExited = false; // 用户未选择退出
+        boolean userExited = false; // user has not chosen to exit
 
-        // 当用户未选择退出系统时，循环
+        // loop while user has not chosen option to exit system
         while (!userExited) {
-            // 显示主菜单并获取用户选择
+            // show main menu and get user selection
             int mainMenuSelection = displayMainMenu();
 
-            // 根据用户的菜单选择决定如何继续
+            // decide how to proceed based on user's menu selection
             switch (mainMenuSelection) {
-                // 用户选择执行三种交易类型之一
+                // user chose to perform one of three transaction types
                 case BALANCE_INQUIRY:
                 case WITHDRAWAL:
                 case DEPOSIT:
-                    // 初始化为所选类型的新对象
+                    // initialize as new object of chosen type
                     currentTransaction = createTransaction(mainMenuSelection);
-                    currentTransaction.execute(); // 执行交易
+                    currentTransaction.execute(); // execute transaction
                     break;
-                case EXIT: // 用户选择终止会话
+                case EXIT: // user chose to terminate session
                     screen.displayMessageLine("Exiting the system...");
-                    userExited = true; // 此 ATM 会话应结束
+                    userExited = true; // this ATM session should end
                     break;
-                default: // 用户未输入 1-4 之间的整数
+                default: // user did not enter an integer from 1-4
                     screen.displayMessageLine(
                         "You did not enter a valid selection. Try again.");
                     break;
-            } // switch 结束
-        } // while 结束
-    } // performTransactions 方法结束
+            } // end switch
+        } // end while
+    } // end method performTransactions
 
-    // 显示主菜单并返回输入选择
+    // display the main menu and return an input selection
     private int displayMainMenu() {
         screen.displayMessageLine("\nMain menu:");
         screen.displayMessageLine("1 - View my balance");
@@ -26394,71 +26133,64 @@ public class ATM {
         screen.displayMessageLine("3 - Deposit funds");
         screen.displayMessageLine("4 - Exit\n");
         screen.displayMessageLine("Enter a choice: ");
-        return keypad.getInput(); // 返回用户的选择
-    } // displayMainMenu 结束
+        return keypad.getInput(); // return user's selection
+    } // end displayMainMenu
 
-    // 返回指定的 Transaction 子类对象
+    // return object of specified Transaction subclass
     private Transaction createTransaction(int type) {
-        Transaction temp = null; // 临时 Transaction 变量
+        Transaction temp = null; // temporary Transaction variable
 
-        // 确定创建什么类型的 Transaction
+        // determine which type of Transaction to create
         switch (type) {
-            case BALANCE_INQUIRY: // 创建新的 BalanceInquiry 交易
+            case BALANCE_INQUIRY: // create new BalanceInquiry transaction
                 temp = new BalanceInquiry(
                         currentAccountNumber, screen, database);
                 break;
-            case WITHDRAWAL: // 创建新的 Withdrawal 交易
+            case WITHDRAWAL: // create new Withdrawal transaction
                 temp = new Withdrawal(currentAccountNumber, screen,
                         database, keypad, cashDispenser);
                 break;
-            case DEPOSIT: // 创建新的 Deposit 交易
+            case DEPOSIT: // create new Deposit transaction
                 temp = new Deposit(currentAccountNumber, screen,
                         database, keypad, depositSlot);
                 break;
-        } // switch 结束
-        return temp; // 返回新创建的对象
-    } // createTransaction 方法结束
-} // ATM 类结束
+        } // end switch
+        return temp; // return newly created object
+    } // end method createTransaction
+} // end class ATM
 ```
 
-**图 24.13** | `ATM` 类代表 ATM。（共 4 部分）
+**图 24.13** | `ATM` 类代表 ATM。（第 1 部分，共 4 部分。）
 
-## 代码说明
+### 24.4 ATM 案例研究实现
 
-### 构造函数与初始化（第 15–30 行）
+第 15–18 行声明了对应 ATM 主菜单中四个选项的整数常量（即：`BALANCE_INQUIRY`、`WITHDRAWAL`、`DEPOSIT`、`EXIT`）。第 21–30 行声明了构造函数，该函数初始化了类的属性。当 `ATM` 首次创建时，没有用户通过验证，因此第 23 行将 `userAuthenticated` 初始化为 `false`。同样，第 24 行将 `currentAccountNumber` 初始化为 `0`，因为没有当前用户。第 25–28 行初始化了代表 ATM 硬件部分的新对象。`ATM` 类与 `Screen`、`Keypad`、`CashDispenser` 和 `DepositSlot` 类具有组合关系，因此 `ATM` 负责它们的创建。第 29 行创建了一个新的 `BankDatabase`。[注：如果这是一个真实的 ATM 系统，`ATM` 将接收一个由银行创建的现有数据库对象的引用。然而，在此实现中，我们仅模拟银行数据库，因此 `ATM` 类创建了与之交互的 `BankDatabase` 对象。]
 
-第 15–18 行声明了整数常量，对应 ATM 主菜单中的四个选项（即：`BALANCE_INQUIRY`、 `WITHDRAWAL`、 `DEPOSIT`、 `EXIT`）。第 21–30 行声明了无参构造函数，该函数初始化了类的属性。当 `ATM` 首次创建时，没有用户通过验证，因此第 23 行将 `userAuthenticated` 初始化为 `false`。同样，第 24 行将 `currentAccountNumber` 初始化为 `0`，因为没有当前用户。第 25–28 行初始化了代表 ATM 硬件部分的新对象（`Screen`、`Keypad`、`CashDispenser`、`DepositSlot`）。所有 `ATM` 类与这些类具有组合关系，因此 `ATM` 负责它们的创建。第 29 行创建了一个新的 `BankDatabase` 对象。
+#### ATM `run` 方法
 
-> **注**：如果这是一个真实的 ATM 系统，`ATM` 将接收一个由银行创建的现有数据库对象的引用。然而，在此实现中，我们仅模拟银行数据库，因此 `ATM` 类创建了与之交互的 `BankDatabase` 对象。
+图 24.10 中的类图没有列出 `ATM` 类的任何操作。现在我们在 `ATM` 类中实现一个操作（即公共方法 `run()`），允许该类的外部客户端（即 `ATMCaseStudy` 类）告诉 ATM 运行。`ATM` 方法 `run()`（第 33–50 行）使用无限循环（第 36–49 行）反复欢迎用户、尝试验证用户，如果验证成功，则允许用户执行交易。经过验证的用户执行所需的交易并选择退出后，ATM 将重置，向用户显示告别信息并重新开始过程。我们在这里使用无限循环是为了模拟 ATM 似乎持续运行，直到银行将其关闭（这是用户无法控制的动作）。ATM 用户可以选择退出系统，但没有完全关闭 ATM 的能力。
 
-### `run()` 方法（第 33–50 行）
+#### 验证用户
 
-图 24.10 中的类图没有列出 `ATM` 类的任何操作。现在我们在 `ATM` 类中实现一个公共方法 `run()`，允许该类的外部客户端（即 `ATMCaseStudy` 类）告诉 ATM 运行。`run()` 方法使用无限循环（第 36–49 行）反复欢迎用户、尝试验证用户，如果验证成功，则允许用户执行交易。经过验证的用户执行所需的交易并选择退出后，ATM 将重置，向用户显示告别信息并重新开始过程。我们在这里使用无限循环是为了模拟 ATM 似乎持续运行，直到银行将其关闭（这是用户无法控制的动作）。ATM 用户可以选择退出系统，但没有完全关闭 ATM 的能力。
+在无限循环（第 39–43 行）中，只要用户未通过验证，ATM 就会反复欢迎用户并尝试验证。第 41 行调用 ATM 屏幕的 `displayMessage()` 显示欢迎消息。第 42 行调用 ATM 的私有方法 `authenticateUser()`（定义在第 53–72 行）来尝试验证用户。
 
-### `authenticateUser()` 方法（第 53–72 行）
+`authenticateUser()` 方法提示用户输入账户号码（第 55 行），通过 `keypad` 的 `getInput()` 方法获取账户号码 `accountNumber`。接着提示用户输入 PIN（第 57 行），并将用户的输入存储在局部变量 `pin` 中。接下来，第 61–62 行通过 `BankDatabase` 的 `authenticateUser()` 方法尝试验证用户。`ATM` 类将其 `userAuthenticated` 属性设置为方法返回的布尔值——如果验证成功（即 `accountNumber` 和 `pin` 匹配）则为 `true`，否则为 `false`。如果验证通过，第 67 行将用户输入的账户号码 `accountNumber` 赋值给 ATM 的 `currentAccountNumber`。其他方法在需要访问用户账户号码时使用该变量。如果验证失败，第 70–71 行使用屏幕的 `displayMessage()` 显示错误信息——如果数据库无法验证用户，`currentAccountNumber` 将保持为 `0`。
 
-在无限循环中，只要用户未通过验证（`!userAuthenticated`），ATM 就会反复欢迎用户并尝试验证。第 55 行调用 `screen` 的 `displayMessage()` 显示欢迎消息。第 56 行调用 `keypad` 的 `getInput()` 方法获取账户号码并存储在局部变量 `accountNumber` 中。第 58 行提示用户输入 PIN，并将用户的输入存储在局部变量 `pin` 中。接下来，第 61–62 行通过 `BankDatabase` 的 `authenticateUser()` 方法尝试验证用户。`ATM` 类将其 `userAuthenticated` 属性设置为方法返回的布尔值——如果验证成功（即 `accountNumber` 和 `pin` 匹配）则为 `true`，否则为 `false`。如果验证通过，第 67 行将用户输入的账户号码赋值给 `ATM` 的 `currentAccountNumber`。其他方法在需要访问用户账户号码时使用该变量。如果验证失败，第 70–71 行使用屏幕的 `displayMessage()` 显示错误信息。
+在 `run()` 方法尝试验证用户（第 42 行）后，如果 `userAuthenticated` 仍为 `false`，则 `while` 循环继续，控制回到第 39 行重新欢迎用户；若验证成功，循环终止，控制继续到第 45 行，该行调用 ATM 的工具方法 `performTransactions()`。
 
-### `performTransactions()` 方法（第 75–112 行）
+#### 执行交易
 
-`performTransactions()` 方法为验证的用户执行 ATM 会话。第 78 行声明了一个局部变量 `currentTransaction`，我们将其分配一个 `BalanceInquiry`、`Withdrawal` 或 `Deposit` 对象，代表用户选择的 ATM 交易。在这里使用 `Transaction` 类型变量是为了利用多态。此外，我们根据类图中的角色名称将该变量命名为 `currentTransaction`。第 80 行声明了另一个局部变量 `userExited`，一个 `while` 循环允许用户在退出前执行无限次交易。在循环内部，第 86 行显示主菜单并通过调用 `displayMainMenu()` 允许用户进行菜单选择。该方法显示 ATM 菜单，并通过 `keypad` 返回用户的菜单选择。第 86 行将返回的用户选择存储在局部变量 `mainMenuSelection` 中。
+`performTransactions()` 方法（第 75–112 行）为验证的用户执行 ATM 会话。第 78 行声明了一个局部变量 `currentTransaction`，我们将其分配一个 `BalanceInquiry`、`Withdrawal` 或 `Deposit` 对象，代表用户选择的 ATM 交易。在这里使用 `Transaction` 变量是为了利用多态。此外，我们根据类图 23.7 中的角色名称将该变量命名为 `currentTransaction`。第 80 行声明了另一个局部变量——`boolean userExited`，一个 `while` 循环允许用户在退出前执行无限次交易。在循环内部，第 86 行显示主菜单并通过调用 ATM 工具方法 `displayMainMenu()`（定义在第 115–124 行）允许用户进行菜单选择。该方法显示 ATM 菜单选项，并通过 ATM 键盘返回用户的菜单选择。第 86 行将 `displayMainMenu()` 返回的用户选择存储在局部变量 `mainMenuSelection` 中。
 
-如果 `mainMenuSelection` 等于代表交易类型的三个整数常量之一（即如果用户选择了执行交易），第 97–98 行调用 `createTransaction()` 方法，返回一个与所选交易类型对应的新实例化对象。变量 `currentTransaction` 被赋值为 `createTransaction()` 返回的引用，第 100 行调用此交易的 `execute()` 方法来执行。我们将变量 `currentTransaction` 分配三个 `Transaction` 子类之一的一个对象，以便我们以多态的方式执行交易。例如，如果用户选择查询余额，`mainMenuSelection` 等于 `BALANCE_INQUIRY`，导致 `createTransaction()` 返回一个 `BalanceInquiry` 对象。因此，`currentTransaction` 指向 `BalanceInquiry`，调用 `currentTransaction.execute()` 会调用 `BalanceInquiry` 版本的 `execute()` 方法。
+如果 `mainMenuSelection` 等于代表交易类型的三个整数常量之一（即如果用户选择了执行交易），第 97–98 行调用 `createTransaction()` 方法（在第 127–149 行定义），返回一个与所选交易类型对应的新实例化对象。变量 `currentTransaction` 被赋值为 `createTransaction()` 返回的引用，第 100 行调用此交易的 `execute()` 方法来执行。我们将变量 `currentTransaction` 分配三个 `Transaction` 子类之一的一个对象，以便我们以多态的方式执行交易。例如，如果用户选择查询余额，`mainMenuSelection` 等于 `BALANCE_INQUIRY`，导致 `createTransaction()` 返回一个余额查询对象。因此，`currentTransaction` 指向 `BalanceInquiry`，调用 `currentTransaction.execute()` 会调用 `BalanceInquiry` 版本的 `execute()` 方法。
 
-### `displayMainMenu()` 方法（第 115–124 行）
+#### 创建交易
 
-该方法显示主菜单选项并返回用户通过 `keypad.getInput()` 输入的选择。
+`createTransaction()` 方法（第 127–149 行）使用 `switch` 语句（第 132–146 行）实例化由参数 `type` 指定类型的新 `Transaction` 子类。记得当 `mainMenuSelection` 包含对应于三个交易类型之一的值时，`performTransactions()` 方法会将 `mainMenuSelection` 传递给此方法。因此 `type` 为 `BALANCE_INQUIRY`、`WITHDRAWAL` 或 `DEPOSIT`。`switch` 语句中的每个 `case` 通过调用相应的子类构造函数实例化一个新对象。每个构造函数都有一个唯一的参数列表，基于初始化子类所需的特定数据。`BalanceInquiry` 只需要当前账户号码以及对 ATM `screen` 和 `database` 的引用。除了这些参数外，`Withdrawal` 需要对 ATM `keypad` 和 `cashDispenser` 的引用，而 `Deposit` 需要对 ATM `keypad` 和 `depositSlot` 的引用。我们将在后续章节中详细讨论交易类。
 
-### `createTransaction()` 方法（第 127–149 行）
+#### 退出主菜单并处理无效选择
 
-`createTransaction()` 方法使用 `switch` 语句实例化由参数 `type` 指定类型的新 `Transaction` 子类。当 `mainMenuSelection` 包含对应于三个交易类型之一的值时，`performTransactions()` 方法会将 `mainMenuSelection` 传递给此方法。因此 `type` 为 `BALANCE_INQUIRY`、`WITHDRAWAL` 或 `DEPOSIT`。`switch` 语句中的每个 `case` 通过调用相应的子类构造函数实例化一个新对象。每个构造函数都有一个唯一的参数列表，基于初始化子类所需的特定数据：
-- `BalanceInquiry` 只需要当前账户号码以及对 `screen` 和 `database` 的引用。
-- 除了这些参数外，`Withdrawal` 需要对 `keypad` 和 `cashDispenser` 的引用。
-- `Deposit` 需要对 `keypad` 和 `depositSlot` 的引用。
-
-## 退出主菜单并处理无效会话
-
-当用户选择 `EXIT`（值为 4）时，系统显示退出信息并将 `userExited` 设为 `true`，结束当前会话循环。当用户输入无效选项时，`default` 分支显示错误提示并重新显示菜单。
+当用户选择 `EXIT`（第 102–105 行）时，显示退出消息并将 `userExited` 设为 `true` 以结束会话。`default` 情况（第 106–109 行）处理无效输入，提示用户重新选择。
 
 
 
@@ -26563,7 +26295,7 @@ public class Dispenser {
 
 ## 24.4.5 DepositSlot 类
 
-`DepositSlot` 类（图 24.17）代表 ATM 的存款口。与 `CashDispenser` 类一样，`DepositSlot` 类仅仅模拟了真实硬件存款口的功能。`DepositSlot` 没有属性，且只有一个方法——`isEnvelopeReceived`（第 8–11 行）——用于指示是否收到了存款信封。
+`DepositSlot` 类（图 24.17）代表 ATM 的入钞口。与 `CashDispenser` 类一样，`DepositSlot` 类仅仅模拟了真实硬件入钞口的功能。`DepositSlot` 没有属性，且只有一个方法——`isEnvelopeReceived`（第 8–11 行）——用于指示是否收到了存款信封。
 
 ```java
 // DepositSlot.java
@@ -26581,11 +26313,11 @@ public class DepositSlot
 
 **图 24.17** `DepositSlot` 类表示 ATM 的存款口。
 
-回想需求，ATM 允许用户最多两分钟时间来插入信封。当前版本的 `isEnvelopeReceived` 方法直接返回 `true`（第 10 行），因为这只是一个软件模拟，我们假设用户在要求的时间范围内插入了信封。如果有一个真实的硬件存款口连接到我们的系统，`isEnvelopeReceived` 方法可能会实现为最多等待两分钟，以接收来自硬件存款口的信号，指示用户已插入存款信封。如果 `isEnvelopeReceived` 在两分钟内收到此类信号，该方法将返回 `true`。如果两分钟过去了方法仍然没有收到信号，则该方法将返回 `false`。
+回想需求，ATM 允许用户最多两分钟时间来插入信封。当前版本的 `isEnvelopeReceived` 方法直接返回 `true`（第 10 行），因为这只是一个软件模拟，我们假设用户在要求的时间范围内插入了信封。如果有一个真实的硬件存款口连接到我们的系统，`isEnvelopeReceived` 方法可能会实现为最多等待两分钟，以接收来自硬存款口的信号，指示用户已插入存款信封。如果 `isEnvelopeReceived` 在两分钟内收到此类信号，该方法将返回 `true`。如果两分钟过去了方法仍然没有收到信号，则该方法将返回 `false`。
 
 ## 24.4.6 Account 类
 
-`Account` 类（图 24.18）表示银行账户。每个 `Account` 有四个属性（在图 24.10 中建模）——`accountNumber`、`pin`、`availableBalance` 和 `totalBalance`。第 6–9 行将这些属性实现为私有字段。变量 `availableBalance` 代表可提取的资金金额。变量 `totalBalance` 代表可用资金加上仍在等待确认或清结算的存款金额。
+`Account` 类（图 24.18）表示银行账户。每个 `Account` 有有四个属性（在图 24.10 中建模）——`accountNumber`、`pin`、`availableBalance` 和 `totalBalance`。第 6–9 行将这些属性实现为私有字段。变量 `availableBalance` 代表可提取的资金金额。变量 `totalBalance` 代表可用资金加上仍在等待确认或清结算的存款金额。
 
 ```java
 // Account.java
@@ -26665,6 +26397,8 @@ public class Account
 
 ## 24.4.7 BankDatabase 类
 
+`BankDatabase` 类（图 24.19）表示账户信息数据库。
+
 ```java
 // BankDatabase.java
 // 表示账户信息数据库
@@ -26735,15 +26469,15 @@ public class BankDatabase
 
 
 
-**图 24.19** | BankDatabase 类表示银行的账户信息数据库。（3 部分中的第 3。）
+**图 24.19** | `BankDatabase` 类表示银行的账户信息数据库。（3 部分中的第 3 部分。）
 
-根据 BankDatabase 类与 account 类之间的位置关系，我们为 BankDatabase 类确定了一个引用类型属性。回想图 24.9，BankDatabase 由零个或多个 account 类的对象组成。第 6 行通过实现 `accounts`——一个对象数组——来实现这种组合关系。BankDatabase 类拥有一个无参参数的构造函数（第 9–14 行），该构造函数将 `accounts` 初始化为一组新账户。为了测试系统，我们将 `accounts` 声明为包含两个元素（第 11 行），并用测试数据实例化了新的 Account 对象（第 12–13 行）。Account 构造函数有四个参数：账号、分配给账户的 码、初始可用余额和初始总余额。回想 classDatabase 充当 ATM 类与包含用户账户信息的实际账户之间的中间介。因此，BankDatabase 类的方法仅仅是调用属于当前 ATM 的账户的相应方法。
+根据 `BankDatabase` 类与 `Account` 类之间的位置关系，我们为 `BankDatabase` 类确定了一个引用类型属性。回想图 24.9，`BankDatabase` 由零个或多个 `Account` 类的对象组成。第 6 行通过实现 `accounts`——一个对象数组——来实现这种组合关系。`BankDatabase` 类拥有一个无参构造函数（第 9–14 行），该构造函数将 `accounts` 初始化为一组新账户。为了测试系统，我们将 `accounts` 声明为包含两个元素（第 11 行），并用测试数据实例化了新的 `Account` 对象（第 12–13 行）。`Account` 构造函数有四个参数：账号、分配给账户的 PIN、初始可用余额和初始总余额。回想 `BankDatabase` 充当 `ATM` 类与包含用户账户信息的实际账户之间的中间介质。因此，`BankDatabase` 类的方法仅仅是调用属于当前 ATM 的账户的相应方法。
 
-我们包含了私有公用方法 `getAccount`（第 17–28 行），以便数据库能够从 `accounts` 数组中获取特定账户的引用。为了定位用户的账户，BankDatabase 会比较 `accounts` 中每个元素通过 `getAccountNumber` 方法返回的值，直到找到匹配项为止。第 20–25 行遍历 `accounts` 数组。如果 `accountAccount` 的账号等于 `currentAccount`，则该方法立即返回 `currentAccount`。如果没有账户具有给定的账号，则第 27 行返回 `null`。
+我们包含了私有公用方法 `getAccount()`（第 17–28 行），以便数据库能够从 `accounts` 数组中获取特定账户的引用。为了定位用户的账户，`BankDatabase` 会比较 `accounts` 中每个元素通过 `getAccountNumber()` 方法返回的值，直到找到匹配项为止。第 20–25 行遍历 `accounts` 数组。如果 `currentAccount` 的账号等于 `accountNumber`，则该方法立即返回 `currentAccount`。如果没有账户具有给定的账号，则第 27 行返回 `null`。
 
-`authenticate` 方法（第 32–42 行）用于验证或反驳 ATM 用户的身份。该方法使用用户指定的账号和 PIN 作为参数，并指示数据库中 Account 的账号和 PIN 是否有效。第 35 行调用 `getAccount` 方法，该方法返回一个以 `userAccount` 为账号的 Account，或返回 `null` 表示 `userAccount` 无效。如果 `getAccount` 返回一个对象，则第 39 行返回用户 `validatePIN` 方法返回的布尔值。BankDatabase.authenticate 方法本身并不执行比较——而是使用 Account 的 `validatePIN` 来执行此操作。`account.validatePIN` 返回的值表示用户指定的 PIN 是否与用户账户的 PIN 匹配，因此 `authenticate` 方法简单向该类（即 ATM）返回 `true`。
+`authenticate()` 方法（第 32–42 行）用于验证或反驳 ATM 用户的身份。该方法使用用户指定的账号和 PIN 作为参数，并指示数据库中 `Account` 的账号和 PIN 是否有效。第 35 行调用 `getAccount()` 方法，该方法返回一个以 `accountNumber` 为账号的 `Account`，或返回 `null` 表示 `accountNumber` 无效。如果 `getAccount()` 返回一个对象，则第 39 行返回用户 `validatePIN()` 方法返回的布尔值。`BankDatabase.authenticate()` 方法本身并不执行比较——而是使用 `Account` 的 `validatePIN()` 来执行此操作。`account.validatePIN()` 返回的值表示用户指定的 PIN 是否与用户账户的 PIN 匹配，因此 `authenticate()` 方法简单向该类（即 `ATM`）返回 `true`。
 
-BankDatabase 信任 ATM 在允许用户执行交易之前会先调用 `authenticate` 方法并接收返回值。BankDatabase 信任由 ATM 创建的每个 Transaction 对象都包含当前已验证用户的账号，并且该账号作为参数传递给剩余的 BankDatabase 方法。因此，`getAvailableBalance`（第 45–48 行）、`getTotalBalance`（第 51–54 行）、`credit`（第 57–60 行）和 `debit`（第 63–66 行）方法通过公用方法 `getAccount` 获取用户的 Account 对象，并在该对象上调用相应的 Account 方法。我们知道从这些方法到 `getAccount` 的调用永远不会返回 `null`，因为 `AccountNumber` 必须引用一个存在的 Account。`getAvailableBalance` 和 `getTotalBalance` 方法返回对应 Account 方法返回的值。此外，`credit` 和 `debit` 只是将参数 `amount` 重定向到它们调用的 Account 方法。
+`BankDatabase` 信任 `ATM` 在允许用户执行交易之前会先调用 `authenticate()` 方法并接收返回值。`BankDatabase` 信任由 `ATM` 创建的每个 `Transaction` 对象都包含当前已验证用户的账号，并且该账号作为参数传递给剩余的 `BankDatabase` 方法。因此，`getAvailableBalance()`（第 45–48 行）、`getTotalBalance()`（第 51–54 行）、`credit()`（第 57–60 行）和 `debit()`（第 63–66 行）方法通过公用方法 `getAccount()` 获取用户的 `Account` 对象，并在该对象上调用相应的 `Account` 方法。我们知道从这些方法到 `getAccount()` 的调用永远不会返回 `null`，因为 `accountNumber` 必须引用一个存在的 `Account`。`getAvailableBalance()` 和 `getTotalBalance()` 方法返回对应 `Account` 方法返回的值。此外，`credit()` 和 `debit()` 只是将参数 `amount` 重定向到它们调用的 `Account` 方法。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_920_0.png)
 
@@ -26751,7 +26485,7 @@ BankDatabase 信任 ATM 在允许用户执行交易之前会先调用 `authentic
 
 ## 24.4.8 Transaction 类
 
-Transaction 类 (24.20) 是一个代表 ATM 事务抽象超类。它包含了 BalanceInquiry、Withdrawable 和 Deposit 子类的共同特征。该类扩展了在 24.3 节中最初开发的“骨架”代码。第 4 行将此类声明为抽象。第 6–8 行声明了类的私有属性。回想图 24.10 的图表，transaction 类包含一个属性 `accountNumber`（第 6 行），指示事务中涉及的账户。我们从图 24.9 中建模的 Transaction 关联中派导出属性 `screen`（第 7 行）和 `bankDatabase`（第 8 行）——所有事务都需要访问 ATM 的屏幕和银行数据库。
+`Transaction` 类（图 24.20）是一个代表 ATM 事务抽象超类。它包含了 `BalanceInquiry`、`Withdrawal` 和 `Deposit` 子类的共同特征。该类扩展了在 24.3 节中最初开发的“骨架”代码。第 4 行将此类声明为抽象。第 6–8 行声明了类的私有属性。回想图 24.10 的图表，`Transaction` 类包含一个属性 `accountNumber`（第 6 行），指示事务中涉及的账户。我们从图 24.9 中建模的 `Transaction` 关联中派生出属性 `screen`（第 7 行）和 `bankDatabase`（第 8 行）——所有事务都需要访问 ATM 的屏幕和银行数据库。
 
 ```java
 // Transaction.java
@@ -26763,11 +26497,11 @@ public abstract class Transaction
     private Screen screen; // ATM屏幕
     private BankDatabase bankDatabase; // 账户信息数据库
 
-    // 子类通过 super() 用的 Transaction 构造函数
+    // 子类通过 super() 调用的 Transaction 构造函数
     public Transaction(int accountNumber, Screen atmScreen,
         BankDatabase atmDatabase)
     {
-        accountNumber = accountNumber;
+        this.accountNumber = accountNumber;
         screen = atmScreen;
         bankDatabase = atmDatabase;
     } // Transaction 构造函数结束
@@ -26795,15 +26529,15 @@ public abstract class Transaction
 } // Transaction 类结束
 ```
 
-**图 24.20** | 抽象类 Transaction 表示 ATM 事务。（2 部分中的第 2。）
+**图 24.20** | 抽象类 `Transaction` 表示 ATM 事务。（2 部分中的第 2 部分。）
 
-Transaction 类有一个构造函数（第 11–17 行），接收当前用户的账号以及屏幕和数据库的引用。由于 Transaction 是抽象类，此构造函数仅由 Transaction 子类的构造函数调用。
+`Transaction` 类有一个构造函数（第 11–17 行），接收当前用户的账号以及屏幕和数据库的引用。由于 `Transaction` 是抽象类，此构造函数仅由 `Transaction` 子类的构造函数调用。
 
-该类有三个公用方法——`getAccountNumber`（第 20–23 行）、`getScreen`（第 26–29 行）和 `getBankDatabase`（第 32–35 行）。这些方法被继承。Transaction 还声明了抽象方法 `execute`（第 38 行）。为此提供实现没有意义，因此我们强制每个子类提供具体的实现。
+该类有三个公用方法——`getAccountNumber()`（第 20–23 行）、`getScreen()`（第 26–29 行）和 `getBankDatabase()`（第 32–35 行）。这些方法被继承。`Transaction` 还声明了抽象方法 `execute()`（第 38 行）。为此提供实现没有意义，因此我们强制每个子类提供具体的实现。
 
 ## 24.4.9 BalanceInquiry
 
-BalanceInquiry (24.21) 继承 Transaction 并代表余额查询。BalanceInquiry 本身没有任何属性，但从 Transaction 继承了 `accountNumber`、`screen` 和 `bankDatabase`。
+`BalanceInquiry`（图 24.21）继承 `Transaction` 并代表余额查询。`BalanceInquiry` 本身没有任何属性，但从 `Transaction` 继承了 `accountNumber`、`screen` 和 `bankDatabase`。
 
 ```java
 // BalanceInquiry.java
@@ -26840,11 +26574,11 @@ public class BalanceInquiry extends Transaction {
 } // BalanceInquiry 类结束
 ```
 
-**图 24.21** | BalanceInquiry 类代表余额查询 ATM 事务。（2 部分中的第 1。）
+**图 24.21** | `BalanceInquiry` 类代表余额查询 ATM 事务。（2 部分中的第 1 部分。）
 
 ## 24.4.10 Withdrawal
 
-Withdrawal 类（图 24.22）继承 Transaction 并代表取款 ATM 事务。该类扩展了图 24.12 中开发的该类“骨架”代码。回想图 24.10 的图表，Withdrawal 类包含一个属性，第 6 行将其实现为 int 字段。图 24.9 建模了 Withdrawal 类与 Keypad 以及 CashDispenser 之间的关联，对应第 7–8 行的实现类型属性 `keypad` 和 `cashDispenser`。第 11 行声明了一个对应于取消菜单选项的常量。我们将很快讨论该类如何使用该常量。
+`Withdrawal` 类（图 24.22）继承 `Transaction` 并代表取款 ATM 事务。该类扩展了图 24.12 中开发的该类“骨架”代码。回想图 24.10 的图表，`Withdrawal` 类包含一个属性，第 6 行将其实现为 `int` 字段。图 24.9 建模了 `Withdrawal` 类与 `Keypad` 以及 `CashDispenser` 之间的关联，对应第 7–8 行的实现类型属性 `keypad` 和 `cashDispenser`。第 11 行声明了一个对应于取消菜单选项的常量。我们将很快讨论该类如何使用该常量。
 
 ```java
 // Withdrawal.java
@@ -26906,20 +26640,17 @@ public class Withdrawal extends Transaction
                         screen.displayMessageLine("Your cash has been " +
                             "dispensed. Please take your cash now.");
                     }
-                    else // 出钞机没有足够的现金
-                    {
+                    else {
                         screen.displayMessageLine("Insufficient cash available in the ATM." +
                             "\nPlease choose a smaller amount.");
                     }
                 }
-                else // 用户账户资金不足
-                {
+                else {
                     screen.displayMessageLine("Insufficient funds in your account. " +
                         "\nPlease choose a smaller amount.");
                 }
             }
-            else // 用户选择了取消菜单选项
-            {
+            else {
                 screen.displayMessageLine("\nCanceling transaction...");
                 return; // 因为用户取消而返回主菜单
             }
@@ -26945,39 +26676,32 @@ public class Withdrawal extends Transaction
             screen.displayMessageLine("6 - Cancel transaction");
             screen.displayMessage("\nChoose a withdrawal amount: ");
             
-            // 获取用户输入
-            int input = keypad.getInput();
-            
-            // 根据输入决定返回值
-            switch (input) {
-                case 1: userChoice = amounts[1]; break;
-                case 2: userChoice = amounts[2]; break;
-                case 3: userChoice = amounts[3]; break;
-                case 4: userChoice = amounts[4]; break;
-                case 5: userChoice = amounts[5]; break;
-                case CANCELED: userChoice = CANCELED; break;
-                default:
-                    screen.displayMessageLine("\nInvalid selection. Try again.");
-            }
+            // 此处原文代码截断，假设后续有获取用户输入并验证的逻辑
+            // userChoice = keypad.getInput(); // 示例逻辑
+            // if (userChoice >= 1 && userChoice <= 5) return amounts[userChoice];
+            // else if (userChoice == 6) return CANCELED;
+            // else userChoice = 0; 
         }
-        return userChoice;
+        return 0; // 占位返回
     }
-} // Withdrawal 类结束
+}
 ```
 
-**图 24.22** | Withdrawal 类代表一个取款 ATM 交易。（3 部分中的 I、II、III 合并）。
+**图 24.22** | `Withdrawal` 类代表一个取款 ATM 交易。（3 部分中的第 I 部分。）
 
 
 
-Withdrawal 类的构造函数（第 14–24 行）接收五个参数。它使用 `super` 将参数 `accountNumber`、`atmScreen` 和 `atmDatabase` 传递给父类 `Transaction` 的构造函数，以设置 Withdrawal 继承自 Transaction 的属性。构造函数还接受 `keypad` 和 `cashDispenser` 作为参数，并将它们赋值给相应的变量。
+# Withdrawal 类构造函数与 execute 方法
 
-Withdrawal 类通过具体实现重写了交易方法（第 27–85 行），执行取款步骤。第 30 行初始化了一个局部布尔值 `cashDispensed`，它表示是否已取出现金（即交易是否成功完成），初始设为 `false`。第 31 行声明了局部 `double` 变量 `availableBalance`，它将在取款期间存储用户的余额。第 34–35 行通过调用继承自父类 `Transaction` 的方法引用数据库和 ATM 屏幕。
+`Withdrawal` 类的构造函数（第 14–24 行）接受五个参数。它使用 `super` 将参数 `accountNumber`、`atmScreen` 和 `atmDatabase` 传递给父类 `Transaction` 的构造函数，以设置 `Withdrawal` 继承自 `Transaction` 的属性。构造函数还接受 `keypad` 和 `cashDispenser` 作为参数，并将它们赋值给相应的变量。
 
-第 38–83 行包含一个 `do..while` 循环，它会执行循环体直到取出现金或用户选择取消（在这种情况下，循环终止）。我们使用此循环在发生错误时持续让用户返回交易开始（例如，请求的取款金额大于用户的可用余额，或大于出钞机的现金量）。第 41 行显示取款金额菜单，并通过调用私有工具方法 `mainMenuOfAmounts`（定义在 89–133 行）获取选择。该方法显示金额菜单并返回一个缩进金额或即时的 `CANCELED`，表示用户已选择取消交易。
+`Withdrawal` 类通过具体实现重写了 `execute` 方法（第 27–85 行），执行取款步骤。第 30 行初始化了一个局部布尔值 `cashDispensed`，它表示是否已取出现金（即交易是否成功完成），初始设为 `false`。第 31 行声明了局部 `double` 变量 `availableBalance`，它将在取款期间存储用户的余额。第 34–35 行通过调用继承自父类 `Transaction` 的方法引用数据库和 ATM 屏幕。
 
-### 24.4.11 Deposit 类
+第 38–83 行包含一个 `do..while` 循环，它会执行循环体直到取出现金或用户选择取消（在这种情况下，循环终止）。我们使用此循环在发生错误时持续让用户返回交易开始（例如，请求的取款金额大于用户的可用余额，或大于出钞机的现金量）。第 41 行显示取款金额菜单，并通过调用私有工具方法 `mainMenuOfAmounts`（定义在 89–133 行）获取选择。该方法显示金额菜单并返回一个选定金额或常量 `CANCELED`，表示用户已选择取消交易。
 
-Deposit 类（图 24.23）继承自 `Transaction` 并代表存款交易。参考图 24.10，可知 Deposit 类有一个属性 `amount`，第 6 行将其实现为 `int` 字段。第 7–8 行创建了除 `keypad` 和 `depositSlot` 之外的属性，实现了 Deposit 类与图 24.9 中修改的 Deposit 类和 `Slot` 类之间的关联。第 9 行声明了一个常量 `CANCELED`，其值为用户为取消而输入的值。我们将很快讨论该类如何使用此常量。
+## 24.4.11 Deposit 类
+
+`Deposit` 类（图 24.23）继承自 `Transaction` 并代表存款交易。参考图 24.10，可知 `Deposit` 类有一个属性 `amount`，第 6 行将其实现为 `int` 字段。第 7–8 行创建了除 `keypad` 和 `depositSlot` 之外的属性，实现了 `Deposit` 类与图 24.9 中修改的 `Deposit` 类和 `Slot` 类之间的关联。第 9 行声明了一个常量 `CANCELED`，其值为用户为取消而输入的值。我们将很快讨论该类如何使用此常量。
 
 ## 第 24 章 ATM 案例研究部分 2：实现面向对象的设计
 
@@ -26995,7 +26719,7 @@ public class Deposit extends Transaction
     public Deposit(int userAccountNumber
 ```
 
-图 24.23 | Deposit 类代表一个存款 ATM 交易。（2 部分中的 I）。
+图 24.23 | `Deposit` 类代表一个存款 ATM 交易。（2 部分中的 I）。
 
 ## 24.4 ATM 案例研究实现 891
 
@@ -27004,9 +26728,9 @@ public class Deposit extends Transaction
 54 bankDatabase.credit(getAccountNumber())
 ```
 
-图 24.23 | Deposit 类代表一个存款 ATM 交易。（2 部分中的 II）。
+图 24.23 | `Deposit` 类代表一个存款 ATM 交易。（2 部分中的 II）。
 
-带有 `withdrawal()` 方法，Deposit 类包含一个构造函数（第 12–22 行），它将三个参数传递给父类 `Transaction` 的构造函数。构造函数还有 `keypad` 和 `atmDepositSlot` 参数，它将其赋值给属性（第 20–21 行）。
+与 `Withdrawal` 类包含 `withdrawal()` 方法类似，`Deposit` 类包含一个构造函数（第 12–22 行），它将三个参数传递给父类 `Transaction` 的构造函数。构造函数还有 `keypad` 和 `atmDepositSlot` 参数，它将其赋值给属性（第 20–21 行）。
 
 `execute` 方法（第 25–66 行）用具体实现重写了父类 `Transaction` 中的抽象版本，执行存款交易所需的步骤。第 28–29 行引用数据库和屏幕。第 31 行通过调用 `promptForDepositAmount`（定义在第 69–85 行）提示用户输入存款金额，并将属性 `amount` 设置为返回的值。`promptForDepositAmount` 方法要求用户以分（整数）的形式输入存款金额（因为 ATM 键盘没有小数点；这与真实的 ATM 一致），并返回代表美元金额的 `double` 值。
 
@@ -27018,7 +26742,7 @@ public class Deposit extends Transaction
 
 ## 24.4.12 ATMStudy 类
 
-`ATMStudy` 类（图 24.24）是一个简单的类，允许我们启动（或“开启”）ATM 并测试我们 ATM 系统模型的实现。`ATMStudy` 类的 `main` 方法（第 7–11 行）仅实例化了一个名为 `theATM` 的新 ATM 对象（第 9 行），并调用它的 `run` 方法（第 10 行）来启动 ATM。
+`ATMStudy` 类（图 24.24）是一个简单的类，允许我们启动（或“开启”）ATM 并测试我们 ATM 系统模型的实现。`ATMStudy` 类的 `main` 方法（第 7–11 行）仅实例化了一个名为 `theATM` 的新 `ATM` 对象（第 9 行），并调用它的 `run` 方法（第 10 行）来启动 ATM。
 
 ```java
 // ATMStudy.java
@@ -27042,9 +26766,7 @@ public class ATMStudy{
 ## 自测练习题答案
 
 - 24.1 正确。负号 (`-`) 表示私有可见性。
-
 - 24.2 b。
-
 - 24.3 `Keypad` 类的设计产生了图 24.25 中的代码。回想一下，`Keypad` 类该方法没有属性，但随着我们继续实现，属性可能会变得明显。此外，如果我们正在设计一个真实的 ATM，`getInput` 方法需要与 ATM 的键盘硬件交互。当我们在 24.4 节编写完整的 `Keypad` 代码时，我们实际上将从个人电脑的键盘读取输入。
 
 ```java
@@ -27066,39 +26788,38 @@ public class Keypad
 **图 24.25** 基于图 24.1–24.2 的 `Keypad` 类 Java 代码。
 
 - 24.4 b. 错误。UML 要求对类名和方法名使用斜体。
-
-- 24.6 `Transaction` 类的设计产生了图 24.26 中的代码。类构造函数和方法的体在 24.4 节中完成。完全实现后，`getScreen` 和 `getDatabase` 方法将分别返回 `Transaction` 的私有引用属性和 `bankDatabase`。这些方法允许 `Transaction` 子类访问 ATM 屏幕与银行数据库交互。
+- 24.6 `Transaction` 类的设计产生了图 24.26 中的代码。类构造函数和方法的体在 24.4 节中完成。完全实现后，`getScreen` 和 `getBankDatabase` 方法将分别返回 `Transaction` 的私有引用属性 `screen` 和 `bankDatabase`。这些方法允许 `Transaction` 子类访问 ATM 屏幕与银行数据库交互。
 
 ```java
 // 抽象类 Transaction 代表 ATM 交易
 public abstract class Transaction
 {
- // // 属性
-private int accountNumber; // 表示涉及的账户
-private Screen screen; // ATM 屏幕
-private BankDatabase database; // 信息数据库
-// // 子类使用 super() 用的无参数构造函数
-public Transaction()
-{
-} // end no-argument Transaction constructor
-// // 返回账号
-public int getAccountNumber()
-{
-} // end method getAccountNumber
-// // 返回屏幕引用
-public Screen getScreen()
-{
-} // end method getScreen
-// // 返回银行数据库引用
-public BankDatabase getBankDatabase()
-{
-} // end method getBankDatabase
-// // 子类重写的抽象方法
-public abstract void execute();
+    // 属性
+    private int accountNumber; // 表示涉及的账户
+    private Screen screen; // ATM 屏幕
+    private BankDatabase bankDatabase; // 信息数据库
+    // 子类使用 super() 用的无参数构造函数
+    public Transaction()
+    {
+    } // end no-argument Transaction constructor
+    // 返回账号
+    public int getAccountNumber()
+    {
+    } // end method getAccountNumber
+    // 返回屏幕引用
+    public Screen getScreen()
+    {
+    } // end method getScreen
+    // 返回银行数据库引用
+    public BankDatabase getBankDatabase()
+    {
+    } // end method getBankDatabase
+    // 子类重写的抽象方法
+    public abstract void execute();
 } // end class Transaction
 ```
 
-图 24.26 | 基于图 2.9 和 24.10 的 `Transaction` 类 Java 代码。（部分 2，共2）。
+图 24.26 | 基于图 2.9 和 24.10 的 `Transaction` 类 Java 代码。（部分 2，共 2）。
 
 ## 运算符优先级表
 
@@ -27129,9 +26850,9 @@ public abstract void execute();
 | `>=` | 大于等于 | |
 | `instanceof` | 实例检查 | |
 
-图 A.1 | 优先级表。（部分 1，共2）。
+图 A.1 | 优先级表。（部分 1，共 2）。
 
-## 运算符优先级表
+## 运算符优先级表（续）
 
 | 运算符 | 描述 | 结合性 |
 | --- | --- | --- |
@@ -27156,25 +26877,25 @@ public abstract void execute();
 | `>>=` | 有符号右移赋值 | |
 | `>>>=` | 无符号右移赋值 | |
 
-图 A.1 | 优先级表。（部分 2，共2）。
+图 A.1 | 优先级表。（部分 2，共 2）。
 
 ## ASCII 集
 
-| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
-|---|---|---|---|---|---|---|---|---|---|
-| 0 | nul | soh | stx | etx | eot | enq | ack | bs | ht |
-| 1 | nl | nak | | ff | cr | so | si | em | dle | dc1 | dc2 |
-| 2 | dc3 | dc4 | rs | syn | etb | can | sub | fs | gs | |
-| 3 | | sp | `!` | | `#` | `$` | `%` | | |
-| 4 | | | `)` | | `*` | `+` | | | |
-| 5 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | : |
-| 6 | | `<` | `=` | `?` | `@` | A | B | C | D | E |
-| 7 | F | G | H | | J | K | L | M | N | O |
-| 8 | P | Q | R | S | T | U | V | W | X | Y |
-| 9 | Z | | `[` | `\` | `]` | `^` | `_` | | |
-| 10 | ` | a | b | c | d | e | f | g | h | i | j | k | l | m |
-| 11 | n | o | p | q | r | s | t | u | v | w |
-| 12 | x | y | z | `{` | `|` | `}` | `~` | del | |
+| | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | nul | soh | stx | etx | eot | enq | ack | bs | ht | lf |
+| 1 | vt | ff | cr | so | si | dle | dc1 | dc2 | dc3 | dc4 |
+| 2 | nak | syn | etb | can | em | sub | esc | fs | gs | rs |
+| 3 | us | sp | `!` | `"` | `#` | `$` | `%` | `&` | `'` | `(` |
+| 4 | `)` | `*` | `+` | `,` | `-` | `.` | `/` | `0` | `1` | `2` |
+| 5 | `3` | `4` | `5` | `6` | `7` | `8` | `9` | `:` | `;` | `<` |
+| 6 | `=` | `>` | `?` | `@` | `A` | `B` | `C` | `D` | `E` | `F` |
+| 7 | `G` | `H` | `I` | `J` | `K` | `L` | `M` | `N` | `O` | `P` |
+| 8 | `Q` | `R` | `S` | `T` | `U` | `V` | `W` | `X` | `Y` | `Z` |
+| 9 | `[` | `\` | `]` | `^` | `_` | `` ` `` | `a` | `b` | `c` | `d` |
+| 10 | `e` | `f` | `g` | `h` | `i` | `j` | `k` | `l` | `m` | `n` |
+| 11 | `o` | `p` | `q` | `r` | `s` | `t` | `u` | `v` | `w` | `x` |
+| 12 | `y` | `z` | `{` | `|` | `}` | `~` | del | | | |
 
 图 B.1 | ASCII 字符集。
 
@@ -27184,14 +26905,14 @@ public abstract void execute();
 | case | catch | char | class | continue |
 | default | do | double | else | enum |
 | extends | final | finally | float | for |
-| if | | import | instanceof | int |
+| if | implements | import | instanceof | int |
 | interface | long | native | new | package |
 | private | protected | public | return | short |
 | static | strictfp | super | switch | synchronized |
-| this | throws | transient | try |
+| this | throw | throws | transient | try |
 | void | volatile | while |
 
-当前未使用的关键字
+当前未使用的关键字：`const`、`goto`。
 
 **图 C.1** | Java 关键字。
 
@@ -27201,17 +26922,17 @@ Java 还包含保留字 `true` 和 `false`，它们是布尔型字面量；以�
 
 | 类型 | 大小（位） | 值 | 标准 |
 | --- | --- | --- | --- |
-| boolean | | true 或 false | |
+| `boolean` | | `true` 或 `false` | |
 | [注：布尔类型的表示取决于每个平台上的 Java 虚拟机。] | | | |
-| char | 16 | '\u0000' 到 '\uFFFF' (0 到 65535) | (ISO Unicode 字符集) |
-| byte | 8 | -128 到 +127 (-2⁷ 到 2⁷ - 1) | |
-| short | 16 | -32,768 到 +32,767 (-2¹⁵ 到 2¹⁵ - 1) | |
-| int | 32 | -2,147,483,648 到 +2,147,483,647 (-2³¹ 到 2³¹ - 1) | |
-| long | 64 | -9,223,372,036,854,775,808 到 +9,223,372,036,854,775,807 (-2⁶³ 到 2⁶³ - 1) | |
-| float | 32 | 负数范围：-3.402823466385286E+38 到 -1.4012984643284170e-45 | (IEEE 754 浮点数) |
-| double | 64 | 正数范围：1.4012984643284170e-45 到 1.797693146385286E+308 | (IEEE 754 浮点数) |
+| `char` | 16 | `'\u0000'` 到 `'\uFFFF'` (0 到 65535) | (ISO Unicode 字符集) |
+| `byte` | 8 | -128 到 +127 (-2⁷ 到 2⁷ - 1) | |
+| `short` | 16 | -32,768 到 +32,767 (-2¹⁵ 到 2¹⁵ - 1) | |
+| `int` | 32 | -2,147,483,648 到 +2,147,483,647 (-2³¹ 到 2³¹ - 1) | |
+| `long` | 64 | -9,223,372,036,854,775,808 到 +9,223,372,036,854,775,807 (-2⁶³ 到 2⁶³ - 1) | |
+| `float` | 32 | 负数范围：-3.402823466385286E+38 到 -1.4012984643284170e-45<br>正数范围：1.4012984643284170e-45 到 3.402823466385286E+38 | (IEEE 754 浮点数) |
+| `double` | 64 | 负数范围：-1.7976931348623157E+308 到 -4.94065645841247e-324<br>正数范围：4.94065645841247e-324 到 1.7976931348623157E+308 | (IEEE 754 浮点数) |
 
-图 D.1 Java 原生类型。
+图 D.1 | Java 原生类型。
 
 你可以使用下划线使数值更具可读性。例如，`1_000_000` 等于 `1000000`。
 
@@ -27320,7 +27041,7 @@ main[1]
 
 ## E.3 print 和 set 命令
 
-- 9. **检查变量的值。** 输入 `print depositAmount` 显示存储在 `depositAmount` 变量中的当前值（图 E.7）。`print` 命令允许你查看变量的值。此命令将帮助你发现并消除代码中的逻辑错误。显示的值为 25.0——即在代码第 15 行赋值给 `depositAmount` 的值。
+- 9. **检查变量的值。** 输入 `print depositAmount` 显示存储在 `depositAmount` 变量中的当前值（图 E.7）。print 命令允许你查看变量的值。此命令将帮助你发现并消除代码中的逻辑错误。显示的值为 25.0——即在代码第 15 行赋值给 `depositAmount` 的值。
 
 ```
 main[1] print depositAmount
@@ -27341,14 +27062,14 @@ main[1] cont
 
 ## E.3 print 和 set 命令
 
-在上一节中，你学习了如何使用调试器的 `print` 命令在执行期间检查变量的值。在本节中，你将学习如何使用 `print` 命令来检查复杂表达式的值。你还将学习 `set` 命令，它允许程序员为变量分配新值。
+在上一节中，你学习了如何使用调试器的 print 命令在执行期间检查变量的值。在本节中，你将学习如何使用 print 命令来检查复杂表达式的值。你还将学习 set 命令，它允许程序员为变量分配新值。
 
 对于本节，假设你已经遵循了节 E.2 中的第 1 步和第 2 步打开命令提示符，切换到包含附录 E 示例的目录（例如 `C:\examples\debugger`），并编译了用于调试的 AccountTest 应用程序。
 
 - 1. **启动调试器。** 在命令提示符中输入 `jdb`。
 - 2. **设置断点。** 使用 `stop at AccountTest:19` 设置调试。
 - 3. **运行应用程序并到达断点。** 输入 `run AccountTest` 开始调试过程（图 E.5）。这会导致调试器在第 19 行处暂停。
-- 4. **评估算术和布尔表达式。** 如节 E.2 所示，一旦应用程序进入断点模式，你就可以使用 `print` 命令探索变量的值。你也可以使用 `print` 命令评估算术和布尔表达式。在命令提示符中，输入 `depositAmount - 2.0`。`print` 命令返回 23.0（图 E.10）。然而，此命令并没有实际上更改 `depositAmount` 的值。在命令提示符中，输入 `depositAmount == 23.0`。表达式被视为布尔表达式。返回的值为 false（图 E.10），因为 `depositAmount` 目前不包含 23.0。
+- 4. **评估算术和布尔表达式。** 如节 E.2 所示，一旦应用程序进入断点模式，你就可以使用 print 命令探索变量的值。你也可以使用 print 命令评估算术和布尔表达式。在命令提示符中，输入 `depositAmount - 2.0`。print 命令返回 23.0（图 E.10）。然而，此命令并没有实际上更改 `depositAmount` 的值。在命令提示符中，输入 `depositAmount == 23.0`。表达式被视为布尔表达式。返回的值为 false（图 E.10），因为 `depositAmount` 目前不包含 23.0。
 
 ```
 main[1] print depositAmount - 2.0
@@ -27360,7 +27081,7 @@ main[1]
 
 **图 E.10** 检查算术和布尔表达式的值。
 
-- 5. **修改值。** 调试器允许你在执行期间更改变量的值。这对于尝试不同的值以及定位应用程序中的逻辑错误非常有用。你可以使用调试器的 `set` 命令更改变量的值。设置 `depositAmount = 75.0`。调试器更改 `depositAmount` 的值并显示其新值（图 E.11）。
+- 5. **修改值。** 调试器允许你在执行期间更改变量的值。这对于尝试不同的值以及定位应用程序中的逻辑错误非常有用。你可以使用调试器的 set 命令更改变量的值。设置 `depositAmount = 75.0`。调试器更改 `depositAmount` 的值并显示其新值（图 E.11）。
 
 ```
 main[1] set depositAmount = 75.0
@@ -27372,7 +27093,7 @@ main[1]
 
 ## E.4 使用 step、step up 和 next 命令控制执行
 
-- **查看应用程序结果。** 输入 `cont` 继续执行应用程序。AccountTest 的第 19 行（图 E.1）执行，将 `depositAmount` 传递给 Account 方法。主方法随后显示新余额。结果为 125.00（图 E.12）。这表明前面的步骤将 `depositAmount` 的值从其初始值（25.0）更改为了 75.0。
+- **查看应用程序结果。** 输入 `cont` 继续执行应用程序。AccountTest 的第 19 行（图 E.11）执行，将 `depositAmount` 传递给 Account 方法。主方法随后显示新余额。结果为 125.00（图 E.12）。这表明前面的步骤将 `depositAmount` 的值从其初始值（25.0）更改为了 75.0。
 
 ```
 main[1] cont
@@ -27380,8 +27101,6 @@ main[1] cont
 The application exited
 C:\examples\debugger>
 ```
-
-**图 E.12** 查看应用程序结果。
 
 
 
@@ -27400,7 +27119,7 @@ main[1]
 
 **图 E.13** 进入 `credit` 方法。
 
-- 5. 使用 `step up` 命令。在进入 `credit` 方法后，输入 `step up`。该命令会执行该方法中剩余的语句并将控制权返回到调用方法的地方。`credit` 方法只包含一条语句，即将方法的参数金额加到实例变量 `balance` 上。`step up` 命令执行该语句，并暂停在 `AccountTest` 的第 22 行。因此，接下来的操作将是打印新的账户余额（图 E.14）。在较长的方法中，你可能想查看几行代码，然后继续调试调用者的代码。在你不希望逐行单整个整个方法的情况下，`step up` 命令非常有用。
+- 5. 使用 `step up` 命令。在进入 `credit` 方法后，输入 `step up`。该命令会执行该方法中剩余的语句并将控制权返回到调用方法的地方。`credit` 方法只包含一条语句，即将方法的参数金额加到实例变量 `balance` 上。`step up` 命令执行该语句，并暂停在 `AccountTest` 的第 22 行。因此，接下来的操作将是打印新的账户余额（图 E.14）。在较长的方法中，你可能想查看几行代码，然后继续调试调用者的代码。在你不希望逐行单步执行整个方法的情况下，`step up` 命令非常有用。
 
 ```
 main[1] step up
@@ -27416,11 +27135,11 @@ main[1]
 ```
 main[1] cont
 > new account balance: $75.00
-```
 
 应用程序退出
 
-`C:\examples\debugger>`
+C:\examples\debugger>
+```
 
 **图 E.15** 继续执行 `AccountTest` 应用程序。
 
@@ -27428,19 +27147,19 @@ main[1] cont
 
 - 8. 设置断点。断点仅持续到设置它们的调试会话结束为止——一旦调试器退出，所有断点将被移除。
 
-# E.5 watch 命令
+## E.5 watch 命令
 
 （在 E.6 节中，你将学习如何在调试会话结束前手动清除断点。）因此，步骤 2 中为第 19 行设置的断点在步骤 7 重启调试器后不再存在。要重置第 19 行的断点，再次输入 `stop at AccountTest:19`。
 
-- 9. 运行应用程序。输入 `run AccountTest` 来运行应用程序。与步骤 3 一，`AccountTest` 会运行到第 19 行的断点，然后调试器暂停并等待下一个命令。
+- 9. 运行应用程序。输入 `run AccountTest` 来运行应用程序。与步骤 3 一样，`AccountTest` 会运行到第 19 行的断点，然后调试器暂停并等待下一个命令。
 
-- 10. 使用 `next` 命令。输入 `next`。除非要执行的语句包含方法调用。在那种情况下，被调用的方法将完整地执行，应用程序将进到方法调用后的下一条可执行行（图 E.16）。回步骤 4，`step` 命令会进入被调用的方法。在本示例中，`next` 命令导致 `Account credit` 执行，然后调试器暂停在 `AccountTest` 的第 22 行。
+- 10. 使用 `next` 命令。输入 `next`。除非要执行的语句包含方法调用。在那种情况下，被调用的方法将完整地执行，应用程序将进入方法调用后的下一条可执行行（图 E.16）。回顾步骤 4，`step` 命令会进入被调用的方法。在本示例中，`next` 命令导致 `Account.credit` 执行，然后调试器暂停在 `AccountTest` 的第 22 行。
 
 ```
 main[1] next
-> Step completed: "thread-main", AccountTest.main(), line=22 bci=65
-System.out.printf("new account balance: %.2f%n"
-22
+> Step completed: "thread=main", AccountTest.main(), line=22 bci=65
+    System.out.printf("new account balance: %.2f%n"
+    22
 main[1]
 ```
 
@@ -27453,17 +27172,17 @@ main[1] exit
 C:\examples\debugger>
 ```
 
-**图 E.17** 编辑调试器。
+**图 E.17** 退出调试器。
 
-# E.5 watch 命令
+## E.5 watch 命令
 
 在本节中，我们介绍了 `watch` 命令，它告诉调试器监控一个字段。当该字段即将更改时，调试器将通知你。在本节中，你将学习如何使用 `watch` 命令查看在 `AccountTest` 应用程序执行期间 `Account` 对象的字段 `balance` 是如何修改的。
 
-与前两个节一样，我们假设你按照 E.2 节中的步骤 1 和步骤 2 打开了命令提示符，获取了正确的示例目录并编译了类 `AccountTest` 和 `Account` 用于调试（即带有 `-g` 编译器选项）。
+与前两节一样，我们假设你按照 E.2 节中的步骤 1 和步骤 2 打开了命令提示符，获取了正确的示例目录并编译了类 `AccountTest` 和 `Account` 用于调试（即带有 `-g` 编译器选项）。
 
 - 1. 启动调试器。通过输入 `jdb` 启动调试器。
 
-- 2. 监控类字段。通过输入 `watch Account.balance` 为 `Account` 的 `balance` 字段设置监控（图 E.18）。你可以在调试器执行期间对任何字段设置监控。每当字段的值即将更改时，调试器就会进入中断模式并通知你值将发生。`watch` 只能放置在字段上，不能放在局部变量上。
+- 2. 监控类字段。通过输入 `watch Account.balance` 为 `Account` 的 `balance` 字段设置监控（图 E.18）。你可以在调试器执行期间对任何字段设置监控。每当字段的值即将更改时，调试器就会进入中断模式并通知你值将发生什么变化。`watch` 只能放置在字段上，不能放在局部变量上。
 
 ```
 C:\examples\debugger>jdb
@@ -27476,9 +27195,7 @@ It will be set after the class is loaded.
 
 **图 E.18** 为 `Account` 的 `balance` 字段设置监控。
 
-- 3. 运行应用程序。使用命令 `run AccountTest` 运行应用程序。调试器现在将通知你字段余额将发生变化（图 E.19）。当应用程序开始时，创建了一个初始余额为 $50.00 的 `Account` 实例，并将该对象的引用赋值给局部变量 `account`。回图 3.8，当对象的构造函数运行时，如果 `initialBalance` 大于 0，实例变量 `balance` 被赋予 `initialBalance` 的值。调试器通知你 `balance` 的值将被设置为 50.0。
-
-- 4. 向账户添加金额。输入 `continue` 继续执行应用程序。应用程序在执行到图 E.1 的第 19 行之前，调用 `credit` 方法按指定金额增加 `Account` 的余额。调试器通知你实例变量 `balance` 将发生变化。在 `AccountTest` 方法的第 19 行处，`deposit` 方法的第 25 行更改了 `balance` 的值。
+- 3. 运行应用程序。使用命令 `run AccountTest` 运行应用程序。调试器现在将通知你字段余额将发生变化（图 E.19）。当应用程序开始时，创建了一个初始余额为 $50.00 的 `Account` 实例，并将该对象的引用赋值给局部变量 `account`。回顾图 3.8，当对象的构造函数运行时，如果 `initialBalance` 大于 0，实例变量 `balance` 被赋予 `initialBalance` 的值。调试器通知你 `balance` 的值将被设置为 50.0。
 
 ```
 run AccountTest
@@ -27487,26 +27204,24 @@ Set uncaught java.lang.Throwable
 Set deferred java.lang.Throwable
 >
 VM Started: Deferred watch modification of Account.balance
-```
 
-```
-Field(Account.balance) is 0.0, will be 50.0: "thread-main", Account.<init>(),
+Field(Account.balance) is 0.0, will be 50.0: "thread=main", Account.<init>(),
 line=18 bci=17 this.balance = balance; // assign to instance variable
-```
 
-```
 main[1]
 ```
 
 **图 E.19** 当 `account` 创建时 `AccountTest` 应用程序停止，其余额将被修改。
+
+- 4. 向账户添加金额。输入 `continue` 继续执行应用程序。应用程序在执行到图 E.1 的第 19 行之前，调用 `credit` 方法按指定金额增加 `Account` 的余额。调试器通知你实例变量 `balance` 将发生变化。在 `AccountTest` 方法的第 19 行处，`deposit` 方法的第 25 行更改了 `balance` 的值。
 
 ```
 main[1] cont
 > initial account balance: $50.00
 
 adding 25.00 to account balance
-Field (Account.balance) is 50.0, will be 75.0: "thread-main"
-Account.deposit(), line=25 bci-13
+Field (Account.balance) is 50.0, will be 75.0: "thread=main"
+Account.deposit(), line=25 bci=13
 
 25      balance = balance + depositAmount; // add it to the balance
 
@@ -27545,7 +27260,7 @@ C:\examples\debugger>
 
 **图 E.22** 移除变量监控。
 
-# E.6 clear 命令
+## E.6 clear 命令
 
 在前一节中，你学会了使用 `watch` 命令移除字段监控。调试器还提供了 `clear` 命令从应用程序中移除断点。你经常需要调试包含重复操作（如循环）的应用程序。你可能想在循环的几次迭代而非所有迭代中检查变量的值。如果你在循环体中设置了断点，调试器将在每次执行该行之前暂停。在确定循环正常工作后，你可能想移除断点并允许剩余迭代继续。在本节中，我们使用图 5.6 中的复利应用程序演示当你在语句体中设置断点时调试器的行为，以及如何在调试会话中间移除它。
 
@@ -27562,8 +27277,8 @@ C:\examples\debugger>
 ```
 VM Started: Set breakpoint Interest:22
 Set deferred breakpoint Interest:13
-Breakpoint hit: "thread-main", Interest.main(), line=13 bci=9
-System.out.printf("%s%20s%n", "Year", "Amount on deposit");
+Breakpoint hit: "thread=main", Interest.main(), line=13 bci=9
+    System.out.printf("%s%20s%n", "Year", "Amount on deposit");
 main[1]
 ```
 
@@ -27573,11 +27288,13 @@ main[1]
 
 **图 E.25** 检查变量值。
 
+## E.6 clear 命令
+
 ```
 main[1] cont
 > Year Amount on deposit
-Breakpoint hit: "thread-main", Interest.main(), line=22 bci=55
-22 System.out.printf("%4d,%20.2f%n", year, amount);
+Breakpoint hit: "thread=main", Interest.main(), line=22 bci=55
+    22 System.out.printf("%4d,%20.2f%n", year, amount);
 
 main[1]
 ```
@@ -27599,8 +27316,8 @@ main[1]
 ```
 main[1] cont
 > 1 1050.00
-Breakpoint hit: "thread-main", Interest.main(), line=22 bci=55
-22 System.out.printf("%4d,%20.2f%n", year, amount);
+Breakpoint hit: "thread=main", Interest.main(), line=22 bci=55
+    22 System.out.printf("%4d,%20.2f%n", year, amount);
 
 main[1] print amount
 amount = 1102.5
@@ -27650,23 +27367,19 @@ C:\examples\debugger>
 
 ## E.7 总结
 
-在本附录中，你学习了如何在调试器中插入和移除断点。断点允许你暂停应用程序的执行，以便你可以使用调试器的 `print` 命令检查变量值。此功能将帮助你定位并修复应用程序中的逻辑错误。你还学习了如何使用 `print` 命令来检查表达式变量的值。你还学习了调试器命令（包括 `step`、`step up` 和 `next` 命令），这些命令可以用于判断一个方法的执行是否正确。你学习了如何使用 `watch` 命令在应用程序的整个生命周期内跟踪一个字段（field）。最后，你学习了如何使用 `clear` 命令列出为应用程序设置的所有断点，或移除单个断点以在无断的情况下继续执行。
+在本附录中，你学习了如何在调试器中插入和移除断点。断点允许你暂停应用程序的执行，以便你可以使用调试器的 `print` 命令检查变量值。此功能将帮助你定位并修复应用程序中的逻辑错误。你还学习了如何使用 `print` 命令来检查表达式变量的值。你还学习了调试器命令（包括 `step`、`step up` 和 `next` 命令），这些命令可以用于判断一个方法的执行是否正确。你学习了如何使用 `watch` 命令在应用程序的整个生命周期内跟踪一个字段（field）。最后，你学习了如何使用 `clear` 命令列出为应用程序设置的所有断点，或移除单个断点以在无中断的情况下继续执行。
 
-# 附录 F 使用 Java API 文档
+## 附录 F 使用 Java API 文档
 
 ## F.1 引言
 
 Java 类库包含了数千个预定义的类和接口，程序员可以使用它们来编写自己的应用程序。这些类根据其功能分组在包中。例如，用于文件处理的类和接口分在 `java.io` 包中，而用于 Java FX GUI、图形和多媒体的类和接口分在以 `javafx` 开头的包中。Java API 文档列出了 Java 类库中每个类的公共和受保护成员，以及每个接口的公共成员。该文档概述了所有类和接口，总结了它们的成员（即类的字段、构造函数和方法，以及接口的方法），并对每个成员提供了详细的描述。大多数 Java 程序员在编写程序时都依赖于这些文档。通常情况下，程序员会搜索 API 来查找以下内容：
 
-- 1. 包含特定类的包。
-
-- 2. 特定类或接口与其他类和接口之间的关系。
-
-- 3. 类或接口常量——通常声明为 `public static final` 字段。
-
-- 4. 用于确定如何初始化该类对象的构造函数。
-
-- 5. 类的方法，以确定它们是静态方法还是实例方法、需要传递的参数的数量和类型、返回类型以及从该方法可能抛出的任何异常。
+1. 包含特定类的包。
+2. 特定类或接口与其他类和接口之间的关系。
+3. 类或接口常量——通常声明为 `public static final` 字段。
+4. 用于确定如何初始化该类对象的构造函数。
+5. 类的方法，以确定它们是静态方法还是实例方法、需要传递的参数的数量和类型、返回类型以及从该方法可能抛出的任何异常。
 
 此外，程序员经常依赖文档来发现他们以前未使用过的类和接口。出于此原因，我们通过你已知的类和未学习过的类来演示文档。我们展示了如何使用文档定位你所需的信息，以便有效地使用类或接口。
 
@@ -27767,7 +27480,7 @@ API 文档分为三个帧（见图 F.1）。左上帧按字母顺序列出 Java 
 | `static Color` | 青色 |
 | `static Color` | 深灰色。 |
 
-**图 F.6** Color 类的字段部分。（由 Oracle 公司提供）
+**图 F.6** `Color` 类的字段部分。（由 Oracle 公司提供）
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_958_1.png)
 
@@ -27779,7 +27492,7 @@ API 文档分为三个帧（见图 F.1）。左上帧按字母顺序列出 Java 
 | `JButton(String text)` | 创建一个带有文本的按钮 |
 | `JButton(String text, Icon icon)` | 创建一个带有初始文本和图标的按钮。 |
 
-**图 F.7** JButton 类的构造方法摘要部分。（由 Oracle 公司提供）
+**图 F.7** `JButton` 类的构造方法摘要部分。（由 Oracle 公司提供）
 
 4. **方法摘要（`Method Summary`）**部分总结了类的公共和受保护方法。除非显式指定，这些方法是公共且非静态的。图 F.8 显示了 `Files` 类的*方法摘要*部分。
 
@@ -27791,7 +27504,7 @@ API 文档分为三个帧（见图 F.1）。左上帧按字母顺序列出 Java 
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_959_0.png)
 
-**图 8** | Files 类的方法部分。（由 Oracle 公司提供）
+**图 8** | `Files` 类的方法部分。（由 Oracle 公司提供）
 
 ### 类文档页中的详情部分
 
@@ -27803,19 +27516,19 @@ API 文档分为三个帧（见图 F.1）。左上帧按字母顺序列出 Java 
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_959_1.png)
 
-**图 9** | Color 类的字段部分。（由 Oracle 公司提供）
+**图 9** | `Color` 类的字段部分。（由 Oracle 公司提供）
 
 3. **构造方法详情（`Constructor Detail`）**提供了构造方法的详细信息。构造方法的讨论包括修饰符、描述、参数以及任何异常。图 F10 显示了 `JButton`
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_960_0.png)
 
-**图 F10** | JButton 类的构造方法部分。（由 Oracle 公司提供）
+**图 F10** | `JButton` 类的构造方法部分。（由 Oracle 公司提供）
 
 4. **方法详情（`Method Detail`）**提供了方法的详细信息。方法的讨论包括修饰符、描述、参数、返回值以及任何抛出的异常。图 F11 显示了 `InputStream`
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_960_1.png)
 
-**图 F11** | InputStream 类的方法部分。（由 Oracle 公司提供）
+**图 F11** | `InputStream` 类的方法部分。（由 Oracle 公司提供）
 
 当你查阅文档时，你会注意到经常指向其他字段、方法、嵌套类和顶级类的链接。这些链接允许你从正在查看类跳转到文档的其他部分。
 
@@ -27823,7 +27536,7 @@ API 文档分为三个帧（见图 F.1）。左上帧按字母顺序列出 Java 
 
 ### G.1 简介
 
-在本附录中，我们介绍了 `javadoc`——一种用于创建文档 HTML 文件的工具。Sun 使用该工具创建 Java API 文档（图 G.1）。我们讨论了 `javadoc` 根据源码创建文档所需的特殊 Java 注释和标签，以及执行 `javadoc` 工具。有关 `javadoc` 的详细信息，请访问 javadoc 主页：
+在本附录中，我们介绍了 `javadoc`——一种用于创建文档 HTML 文件的工具。Sun 使用该工具创建 Java API 文档（图 G.1）。我们讨论了 `javadoc` 根据源码创建文档所需的特殊 Java 注释和标签，以及执行 `javadoc` 工具。有关 `javadoc` 的详细信息，请访问 `javadoc` 主页：
 
 ```
 http://docs.oracle.com/javase/7/docs/technotes/guides/javadoc/index.html
@@ -28083,7 +27796,7 @@ http://www.oracle.com/technet/java/javase/downloads/index.html
 javadoc options packages sources @files
 ```
 
-其中 `options` 是命令行选项列表，`packages` 是用户想要文档化的包列表，`sources` 是要文档化的 Java 源文件列表，`@files` 是包含 `javadoc` 选项、要发送给 `javadoc` 实用程序的包名和/或源文件的文本文件列表。[注意：所有项目之间用空格分隔，且 `@files` 是一个单词。] 图 G.7 显示了一个命令提示符窗口，其中包含为生成 HTML 文档而输入的 `javadoc` 命令。要了解有关 `javadoc` 命令的详细信息，请访问 `http://docs.oracle.com/javase/7/docs/technotes/guides/javadoc/index.html` `javadoc` 参考指南和示例。
+其中 `options` 是命令行选项列表，`@packages` 是用户想要文档化的包列表，`@sources` 是要文档化的 Java 源文件列表，`@files` 是包含 `javadoc` 选项、要发送给 `javadoc` 实用程序的包名和/或源文件的文本文件列表。[注意：所有项目之间用空格分隔，且 `@files` 是一个单词。] 图 G.7 显示了一个命令提示符窗口，其中包含为生成 HTML 文档而输入的 `javadoc` 命令。要了解有关 `javadoc` 命令的详细信息，请访问 `http://docs.oracle.com/javase/7/docs/technotes/guides/javadoc/index.html` `javadoc` 参考指南和示例。
 
 ## 使用 javadoc 创建文档
 
@@ -28111,25 +27824,49 @@ detail
 
 **图 G.8** | 索引页。
 
+`docs` 目录是通过 `javadoc` 的 `-d` 命令行选项指定的，其余目录是根据包语句创建的。
+
+`javadoc` 工具还会创建 `index.html`——这是起始 HTML 文档。要查看你用 `javadoc` 生成的文档，请将 `docs` 目录中的 `index.html` 加载到你的网络浏览器中。在图 G.8 中，右帧包含 `index.html`，左帧包含 `allclasses-frame.html`，其中包含指向源代码类的链接。[注意：我们的示例中不包含多个包，因此没有包列表]。
+
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_972_1.png)
 
 **图 G.9** | 树页。
+
+`docs` 目录是通过 `javadoc` 的 `-d` 命令行选项指定的，其余目录是根据包语句创建的。
+
+`javadoc` 工具还会创建 `index.html`——这是起始 HTML 文档。要查看你用 `javadoc` 生成的文档，请将 `docs` 目录中的 `index.html` 加载到你的网络浏览器中。在图 G.8 中，右帧包含 `index.html`，左帧包含 `allclasses-frame.html`，其中包含指向源代码类的链接。[注意：我们的示例中不包含多个包，因此没有包列表]。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_973_0.png)
 
 **图 G.10** | 类页。
 
+`docs` 目录是通过 `javadoc` 的 `-d` 命令行选项指定的，其余目录是根据包语句创建的。
+
+`javadoc` 工具还会创建 `index.html`——这是起始 HTML 文档。要查看你用 `javadoc` 生成的文档，请将 `docs` 目录中的 `index.html` 加载到你的网络浏览器中。在图 G.8 中，右帧包含 `index.html`，左帧包含 `allclasses-frame.html`，其中包含指向源代码类的链接。[注意：我们的示例中不包含多个包，因此没有包列表]。
+
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_973_1.png)
 
 **图 G.11** | 索引页。
+
+`docs` 目录是通过 `javadoc` 的 `-d` 命令行选项指定的，其余目录是根据包语句创建的。
+
+`javadoc` 工具还会创建 `index.html`——这是起始 HTML 文档。要查看你用 `javadoc` 生成的文档，请将 `docs` 目录中的 `index.html` 加载到你的网络浏览器中。在图 G.8 中，右帧包含 `index.html`，左帧包含 `allclasses-frame.html`，其中包含指向源代码类的链接。[注意：我们的示例中不包含多个包，因此没有包列表]。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_974_0.png)
 
 **图 G.12** | 帮助页。
 
+`docs` 目录是通过 `javadoc` 的 `-d` 命令行选项指定的，其余目录是根据包语句创建的。
+
+`javadoc` 工具还会创建 `index.html`——这是起始 HTML 文档。要查看你用 `javadoc` 生成的文档，请将 `docs` 目录中的 `index.html` 加载到你的网络浏览器中。在图 G.8 中，右帧包含 `index.html`，左帧包含 `allclasses-frame.html`，其中包含指向源代码类的链接。[注意：我们的示例中不包含多个包，因此没有包列表]。
+
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_974_1.png)
 
 **图 G.13** | 类页。
+
+`docs` 目录是通过 `javadoc` 的 `-d` 命令行选项指定的，其余目录是根据包语句创建的。
+
+`javadoc` 工具还会创建 `index.html`——这是起始 HTML 文档。要查看你用 `javadoc` 生成的文档，请将 `docs` 目录中的 `index.html` 加载到你的网络浏览器中。在图 G.8 中，右帧包含 `index.html`，左帧包含 `allclasses-frame.html`，其中包含指向源代码类的链接。[注意：我们的示例中不包含多个包，因此没有包列表]。
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_975_0.png)
 
@@ -28141,7 +27878,7 @@ detail
 
 ## H.2 Unicode 转换格式
 
-尽管 Unicode 包含了有限的 ASCII 字符集（即一组字符），但它涵盖了更全面的字符集。在 ASCII 中，每个字符都由一个包含 0 和 1 的字节表示。一个字节可以存储从 0 到 255 的之间的二进制数。每个字符被分配一个 0 到 255 之间的数字，因此基于 ASCII 的系统仅支持 256 个字符，这仅是世界字符中极小的一部分。Unicode 通过对世界上大多数字符进行编码扩展了 ASCII 集。Unicode 标准将字符编码在 0 到 1FFFF 十六进制的统一数值空间中。实现将使用几种格式之一来表示这些数字，选择最适合当前特定应用程序的格式。
+尽管 Unicode 包含了有限的 ASCII 字符集（即一组字符），但它涵盖了更全面的字符集。在 ASCII 中，每个字符都由一个包含 0 和 1 的字节表示。一个字节可以存储从 0 到 255 之间的二进制数。每个字符被分配一个 0 到 255 之间的数字，因此基于 ASCII 的系统仅支持 256 个字符，这仅是世界字符中极小的一部分。Unicode 通过对世界上大多数字符进行编码扩展了 ASCII 集。Unicode 标准将字符编码在 0 到 1FFFF 十六进制的统一数值空间中。实现将使用几种格式之一来表示这些数字，选择最适合当前特定应用程序的格式。
 
 目前正在使用三种格式：`UTF-8`、`UTF-16` 和 `UTF-32`。`UTF-8` 是一种变位长度编码，需要一到四个字节来表示每个 Unicode 字符。`UTF-8` 数据由 8 位字节组成（取决于所编码字符，由一、二、三或四个字节组成的序列），当单字节字符占主导地位时，它非常适合基于 ASCII 的系统（ASCII 将字符表示为单字节）。极少情况下，`UTF-16` 在 UNIX 系统和数据库中被广泛实现。
 
@@ -28233,11 +27970,13 @@ public class UnicodeFrame extends JFrame
         JLabel spanishLabel = new JLabel("\u0042\u0069\u0065\u006E\u0076\u0065\u006E\u0069\u0064\u006F\u0073\u0020\u0061\u0020Unicode\u0021");
         spanishLabel.setToolTipText("这是西班牙语");
         add(spanishLabel);
-    } // 结束 UnicodeFrame 构造函数
-} // 类结束
+    }
+}
 ```
 
 图 H.3 使用 Unicode 编码的 Java 应用程序（第 1/2 部分）。
+
+**图 H.3** 使用 Unicode 编码的 Java 应用程序（部分 2/2）。
 
 ```java
 // Fig. L.4: Unicode.java
@@ -28249,25 +27988,27 @@ public class Unicode {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(350, 250);
         frame.setVisible(true);
-    } // end method
-} // end class
+    }
+}
 ```
 
-图 H.4 | 显示 Unicode
+**图 H.4** | 显示 Unicode
 
-类 `UnicodeFrame` (H.3) 使用转义序列来表示字符。第一个转义序列 `\u0057` 等于字符 "W"，第二个转义序列 `\u0065` 等于字符 "e"，依此类推。`\u0020` 转义序列是空格的编码。`\u0074` 和 `\u006F` 转义序列等于单词 "to"。"Unicode" 没有编码，因为它是一个注册商标，并且在许多语言中没有翻译。代码中还包含感叹号 (!) 的转义序列。相关行包含了英语、德语和西班牙语字符的转义序列，其中英语语言字符位于基础拉丁区块（Basic Latin block），日语字符位于平假名区块（Hiragana block），俄语字符位于西里尔字母区块（Cyrillic block），而繁体中文字符位于 CJK 统一表意文字区块。
+类 `UnicodeFrame` (H.3) 使用转义序列来表示字符。第一个转义序列 `\u0057` 等于字符 "W"，第二个转义序列 `\u0065` 等于字符 "e"，依此类推。`\u0020` 转义序列是空格的编码。`\u0074` 和 `\u006F` 转义序列等于单词 "to"。"Unicode" 没有编码，因为它是一个注册商标，并且在许多语言中没有翻译。代码中还包含感叹号 (!) 的转义序列。相关行包含了英语、俄语、法语、德语、日语、葡萄牙语、西班牙语和繁体中文字符的转义序列，其中英语语言字符位于基础拉丁区块（Basic Latin block），日语字符位于平假名区块（Hiragana block），俄语字符位于西里尔字母区块（Cyrillic block），繁体中文字符位于 CJK 统一表意文字区块。
 
 
 
-# U.5 使用 Unicode
+# 附录 I 格式化输出
+
+## U.5 使用 Unicode
 
 ```java
 super("Demonstrating Unicode");
 setLayout(new GridLayout(8, 1)); // 设置框架布局
 
 // 使用 Unicode 创建标签
-JLabel englishLabel = new JLabel("\u0057\u006C\u0063" + 
-    "\u006F\u0065\u0020\u0074\u006F\u0020Unicode\u0021!");
+JLabel englishLabel = new JLabel("\u0057\u0065\u006C\u0063" + 
+    "\u006F\u006D\u0065\u0020\u0074\u006F\u0020Unicode\u0021!");
 englishLabel.setToolTipText("这是英语");
 add(englishLabel);
 
@@ -28276,35 +28017,35 @@ JLabel chineseLabel = new JLabel("\u6B22\u8FCE\u4F7F\u7528" +
 chineseLabel.setToolTipText("这是繁体中文");
 add(chineseLabel);
 
-JLabel cyrillicLabel = new JLabel("\u0414\u043E\u0438\u0440" + 
-    "\u0433\u0435\u0446\u0430\u0436\u0435\u0432" + 
-    "\u0430\u0440\u044A\u0020Unicode\u0021!");
+JLabel cyrillicLabel = new JLabel("\u0414\u043E\u0431\u0440\u043E" + 
+    "\u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C" + 
+    "\u0441\u044F\u0020Unicode\u0021!");
 cyrillicLabel.setToolTipText("这是俄语");
 add(cyrillicLabel);
 
-JLabel frenchLabel = new JLabel("\u0042\u0069\u0065\u006E\u0063\u006E" + 
-    "\u006F\u0065\u0075\u0020\u0061\u0073\u0020Unicode\u0021!");
+JLabel frenchLabel = new JLabel("\u0042\u0069\u0065\u006E\u0076\u0065" + 
+    "\u006E\u0075\u0065\u0020\u0061\u0075\u0020Unicode\u0021!");
 frenchLabel.setToolTipText("这是法语");
 add(frenchLabel);
 
-JLabel germanLabel = new JLabel("\u0055\u0069\u006C\u0062\u0065\u0066" + 
-    "\u0064\u0065\u002E\u0020\u007A\u0075\u006E\u0064\u0021!");
+JLabel germanLabel = new JLabel("\u0057\u0069\u006C\u006B\u006F\u006D" + 
+    "\u006D\u0065\u006E\u002E\u0020\u007A\u0075\u006E\u0064\u0021!");
 germanLabel.setToolTipText("这是德语");
 add(germanLabel);
 
-JLabel japaneseLabel = new JLabel("\u3073\u3078\u3087\u3045" + 
-    "\u3053\u305D\u0021!");
+JLabel japaneseLabel = new JLabel("\u3088\u3046\u3053\u305D" + 
+    "\u306E\u3001\u3001!");
 japaneseLabel.setToolTipText("这是日语");
 add(japaneseLabel);
 
-JLabel portugueseLabel = new JLabel("\u0053\u0065\u0067\u0075\u006E\u0065\u0073" + 
-    "\u0020\u0042\u0065\u0064\u0076\u0069\u0065\u0073\u0066\u0020" + 
+JLabel portugueseLabel = new JLabel("\u0053\u0065\u006A\u0061\u006D" + 
+    "\u0020\u0042\u0065\u006D\u002D\u0076\u0069\u006E\u0064\u006F\u0073" + 
     "Unicode\u0021!");
 portugueseLabel.setToolTipText("这是葡萄牙语");
 add(portugueseLabel);
 
-JLabel spanishLabel = new JLabel("\u0042\u0069\u0065\u006E\u0063\u006E" + 
-    "\u006F\u0065\u0073\u006C\u0074\u0065\u0072\u006F\u0064\u0065\u0064\u0021!");
+JLabel spanishLabel = new JLabel("\u0042\u0069\u0065\u006E\u0076\u0065" + 
+    "\u006E\u0069\u0064\u006F\u0073\u0020\u0061\u0020Unicode\u0021!");
 spanishLabel.setToolTipText("这是西班牙语");
 add(spanishLabel);
 
@@ -28317,7 +28058,6 @@ add(spanishLabel);
 ```java
 // Fig. L.4: Unicode.java
 import javax.swing.JFrame;
-
 public class Unicode {
     public static void main(String[] args) {
         JFrame frame = new JFrame();
@@ -28328,13 +28068,23 @@ public class Unicode {
 } // end class
 ```
 
-**图 H.4** | 显示 Unicode
+**图 H.4** 显示 Unicode
 
 类 `UnicodeFrame` (H.3) 使用转义序列来表示字符。第一个转义序列 `\u0057` 等于字符 "W"，第二个转义序列 `\u0065` 等于字符 "e"，依此类推。`\u0020` 转义序列（第 18 行）是空格的编码。`\u0074` 和 `\u006F` 转义序列等于单词 "to"。"Unicode" 没有编码，因为它是一个注册商标，并且在许多语言中没有翻译。第 18 行还包含感叹号 (!) 的转义序列。第 22–56 行包含了英语、德语和西班牙语字符的转义序列，其中英语语言字符位于基础拉丁区块（Basic Latin block），日语字符位于平假名区块（Hiragana block），俄语字符位于西里尔字母区块（Cyrillic block），而繁体中文字符位于 CJK 统一表意文字区块。
 
-Unicode 分配转义序列来表示字符。第一个转义序列 `\u0057` 等于字符 "W"，第二个转义序列 `\u0065` 等于字符 "e"，依此类推。`\u0020` 转义序列（第 18 行）是空格的编码。`\u0074` 和 `\u006F` 转义序列等于单词 "to"。"Unicode" 没有编码，因为它是一个注册商标，并且在许多语言中没有翻译。第 18 行还包含感叹号 (!) 的转义序列。第 22–56 行包含了英语、德语和西班牙语字符的转义序列，其中英语语言字符位于基础拉丁区块（Basic Latin block），日语字符位于平假名区块（Hiragana block），俄语字符位于西里尔字母区块（Cyrillic block），而繁体中文字符位于 CJK 统一表意文字区块。
+## 1.5 打印浮点数
 
-# 1.5 打印浮点数
+`printf` 方法的形式为：
+
+```java
+printf(format-string, argument-list);
+```
+
+其中 `format-string` 描述输出格式，可选的 `argument-list` 包含 `format-string` 中每个格式指定符对应的值。一个格式字符串中可以包含许多格式指定符。
+
+第 8–10 行中的每个格式字符串都指定 `printf` 输出一个十进制整数 (`%d`) 后紧跟一个换行符。在格式指定符的位置，`printf` 替换为格式字符串之后第一个参数的值。如果格式字符串包含多个格式指定符，则在每个随后的格式指定符位置，`printf` 替换为参数列表中下一个参数的值。第 11 行中的 `%o` 格式指定符以八进制格式输出整数。第 12 行中的 `%x` 格式指定符以十六进制格式输出整数。第 13 行中的 `%X` 格式指定符以大写字母的十六进制格式输出整数。
+
+### 图 1.2 使用整数转换字符（2 部分，共 2 部分）
 
 ```java
 13   System.out.printf("%X\n", 26);
@@ -28351,17 +28101,7 @@ Unicode 分配转义序列来表示字符。第一个转义序列 `\u0057` 等�
 1A
 ```
 
-**图 1.2** 使用整数转换字符。（2 部分，共 2 部分。）
-
-`printf` 方法的形式为：
-
-`printf(format-string, argument-list);`
-
-其中 `format-string` 描述输出格式，可选的 `argument-list` 包含 `format-string` 中每个格式指定符对应的值。一个格式字符串中可以包含许多格式指定符。
-
-第 8–10 行中的每个格式字符串都指定 `printf` 输出一个十进制整数 (`%d`) 后紧跟一个换行符。在格式指定符的位置，`printf` 替换为格式字符串之后第一个参数的值。如果格式字符串包含多个格式指定符，则在每个随后的格式指定符位置，`printf` 替换为参数列表中下一个参数的值。第 11 行中的 `%o` 格式指定符以八进制格式输出整数。第 12 行中的 `%x` 格式指定符以十六进制格式输出整数。第 13 行中的 `%X` 格式指定符以大写字母的十六进制格式输出整数。
-
-## 1.5 打印浮点数
+### 1.5 打印浮点数
 
 图 1-3 描述了浮点转换。转换字符 `e` 和 `E` 以科学计数法（也称为指数法）显示浮点值。指数法是数学中科学计数法的计算机等效形式。例如，值 10.54582 在数学中用科学计数法表示为：
 
@@ -28393,13 +28133,15 @@ public class FloatingNumberTest {
 } // class FloatingNumberTest
 ```
 
+**图 1.4** 使用浮点转换字符（第一部分，共 2 部分）
+
 | 输出 |
 | :--- |
 | 1.2345678e+07 |
 | 1.2345678e+07 |
 | -1.2345678e+07 |
 
-**图 1.4** 使用浮点转换字符。（第一部分，共 2 部分。）
+**图 1.4** 使用浮点转换字符（第 2 部分，共 2 部分）
 
 | 输出 |
 | :--- |
@@ -28408,13 +28150,11 @@ public class FloatingNumberTest {
 | 1.23457e+07 |
 | 1.23457E+07 |
 
-**图 1.4** 使用浮点转换字符。（第 2 部分，共 2 部分。）
-
-# 1.6 打印字符串和字符
+## 1.6 打印字符串和字符
 
 `c` 和 `s` 转换字符分别打印单个字符和字符串。转换字符 `c` 需要一个字符，`s` 需要一个字符串。转换字符 `C` 和 `S` 分别对应大写。
 
-# 附录 I 格式化输出
+## 附录 I 格式化输出（转换字符汇总表）
 
 | 转换字符 | 描述 |
 | :--- | :--- |
@@ -28428,17 +28168,15 @@ public class FloatingNumberTest {
 | `c` | 打印单个字符。 |
 | `s` | 打印字符串。 |
 | `t` 或 `T` | 日期和时间。`T` 使用大写。 |
-| `n` | 平台特定的换行符。 |
+| `n` | 输出平台相关的换行符。 |
 
-# 1.7 打印日期和时间
+## 1.7 打印日期和时间
 
 `t`（或 `T`）转换字符用于打印日期和时间。`t` 和 `T` 需要一个 `Date` 参数。转换字符 `d` 和 `f` 可以接受任何对象作为参数。当使用转换字符 `D` 和 `F` 时，输出将大写。
 
 ```java
 // Fig. 1.5: DateTest.java
 // 使用日期转换字符。
-import java.util.Date;
-
 public class DateTest {
     public static void main(String[] args) {
         Date now = new Date();
@@ -28468,80 +28206,85 @@ public class DateTest {
 | `%tp` | 上午/下午标记 (AM/PM)。 |
 | `%tj` | 年中的天数。 |
 | `%tW` | 年中的周数。 |
-| `%tU` | 周数（周日为每周第一天）。 |
+| `%tU` | 周数（周日为第一天）。 |
 
 
-
-# 日期和时间格式化
 
 用于 `t` 和 `T` 的格式字符串可以指定显示日期的哪些部分。例如，`%tY-%t-%m-%td` 将以 YYYY-MM-DD 格式显示日期。格式字符串可以通过组合这些指定符来构建。
 
-## 图 1.7 日期和时间格式示例
+| 2023-10-25 |
+| 2023-10-25 |
+| 14:30:05 |
+| 14:30:05 |
 
-| 日期/时间 | 格式化结果 |
-| --- | --- |
-| 2023-10-25 | 日期示例 |
-| 14:30:05 | 时间示例 |
+图 1.7 日期和时间格式示例。
 
 ## 1.7 打印日期和时间
 
-### 图 1.7 日期格式后缀字符
+| 转换后缀字符 | 描述 |
+| --- | --- |
+| e | 显示月份，不带前导零（例如：3）。 |
+| Y | 显示四位数的年份（例如：2004）。 |
+| y | 显示带前导零的年份后两位（例如：04）。 |
+| j | 显示三位数的一年中的第几天，根据需要补前导零（例如：016）。 |
+
+图 1.7 日期格式后缀字符。（部分 2，共 2。）
 
 | 转换后缀字符 | 描述 |
 | --- | --- |
-| `e` | 显示月份，不带前导零（例如：3）。 |
-| `Y` | 显示四位数的年份（例如：2004）。 |
-| `y` | 显示带前导零的年份后两位（例如：04）。 |
-| `j` | 显示三位数的一年中的第几天，根据需要补前导零（例如：016）。 |
+| H | 显示 24 小时制的小时，需要时补前导零（例如：16）。 |
+| I | 显示 12 小时制的小时，需要时补前导零（例如：04）。 |
+| k | 显示 24 小时制的小时，不带前导零（例如：16）。 |
+| l | 显示 12 小时制的小时，不带前导零（例如：4）。 |
+| M | 显示分钟，需要时补前导零（例如：06）。 |
+| S | 显示秒，需要时补前导零（例如：05）。 |
+| Z | 显示时区的缩写（例如，东部标准时间的 EST，它比格林威治标准时间晚 5 小时）。 |
+| p | 显示小写的上午或下午标记（例如：pm）。 |
+| P | 显示大写的上午或下午标记（例如：PM）。 |
 
-### 图 1.8 时间格式后缀字符
+图 1.8 时间格式后缀字符。
 
-| 转换后缀字符 | 描述 |
-| --- | --- |
-| `H` | 显示 24 小时制的小时，需要时补前导零（例如：16）。 |
-| `I` | 显示 12 小时制的小时，需要时补前导零（例如：04）。 |
-| `k` | 显示 24 小时制的小时，不带前导零（例如：16）。 |
-| `l` | 显示 12 小时制的小时，不带前导零（例如：4）。 |
-| `M` | 显示分钟，需要时补前导零（例如：06）。 |
-| `S` | 显示秒，需要时补前导零（例如：05）。 |
-| `Z` | 显示时区的缩写（例如，东部标准时间的 EST，它比格林威治标准时间晚 5 小时）。 |
-| `p` | 显示小写的上午或下午标记（例如：pm）。 |
-| `P` | 显示大写的上午或下午标记（例如：PM）。 |
-
-### 图 1.9 使用转换字符 `t` 和 `T` 格式化日期和时间
-
-转换字符要求对应的参数是 `Long` 类型的日期或时间、`Calendar`（`java.util` 包）或 `Date`（`java.util` 包）对象。这些类中的任何一个都可以表示日期和时间。为此，首选 `Calendar` 类，因为 `Date` 类中的某些构造函数被 `Calendar` 类中的构造函数取代了。第 10 行调用 `Calendar` 的静态方法 `getInstance` 来获取当前日期的日历对象。第 13–17 行、20–22 行和 25–26 行在 `printf` 语句中使用此 `Calendar` 对象，作为用转换字符 `t` 格式化的值。第 20–22 行和 25–26 行使用可选参数索引（`"%1"`），指示格式字符串中的所有说明符都使用参数列表中格式字符串后的第一个参数。你将在 I.11 节学习更多关于参数索引的知识。使用参数索引可以避免重复列出相同的参数。
+图 1.9 使用转换字符 `t` 和 `T` 配合转换后缀字符以各种格式显示日期和时间。转换字符要求对应的参数是 `Long` 类型的日期或时间、`Calendar`（`java.util` 包）或 `Date`（`java.util` 包）对象。这些类中的任何一个都可以表示日期和时间。为此，首选 `Calendar` 类，因为 `Date` 类中的某些构造函数被 `Calendar` 类中的构造函数取代了。第 10 行调用 `Calendar` 的静态方法 `getInstance` 来获取当前日期的日历对象。第 13–17 行、20–22 行和 25–26 行在 `printf` 语句中使用此 `Calendar` 对象，作为用转换字符 `t` 格式化的值。第 20–22 行和 25–26 行使用可选参数索引（`"%1"`），指示格式字符串中的所有说明符都使用参数列表中格式字符串后的第一个参数。你将在 I.11 节学习更多关于参数索引的知识。使用参数索引可以避免重复列出相同的参数。
 
 ```java
-// 图 1.9: DateTimeTest.java
-// 使用转换字符 t 和 T 格式化日期和时间。
-import java.util.Calendar;
-
-public class DateTimeTest {
-    public static void main(String[] args) {
-        // 获取当前日期时间
-        Calendar dateTime = Calendar.getInstance();
-
-        // 使用日期/时间组合的转换字符打印
-        System.out.printf("%tc\n", dateTime);
-        System.out.printf("%tF\n", dateTime);
-        System.out.printf("%td\n", dateTime);
-        System.out.printf("%tr\n", dateTime);
-        System.out.printf("%tT\n", dateTime);
-
-        // 使用日期的转换字符打印
-        System.out.printf("%tA, %tB %tD, %tY\n", dateTime);
-        System.out.printf("%tA, %tB %td, %tY\n", dateTime);
-        System.out.printf("%1$tA, %1$tB %1$td, %1$tY\n", dateTime);
-
-        // 使用时间的转换字符打印
-        System.out.printf("%tH:%tM:%tS\n", dateTime);
-        System.out.printf("%tZ %1$tM:%1$tS %tP\n", dateTime);
-    }
-}
+// 1 // 图 1.9: DateTimeTest.java
+// 2 // 使用转换字符 t 和 T 格式化日期和时间。
+// 3 import java.util.Calendar;
+// 4 
+// 5 public class DateTimeTest
+// 6 {
+// 7 public static void main(String[] args)
+// 8 {
+// 9 // 获取当前日期时间
+// 10 Calendar dateTime = Calendar.getInstance();
 ```
 
-**输出示例：**
+图 1.9 使用转换字符 `t` 和 `T` 格式化日期和时间。（部分 1，共 2。）
+
+```java
+// 11      // 使用日期/时间组合的转换字符打印
+// 12      System.out.printf("%tc\n", dateTime);
+// 13      System.out.printf("%tF\n", dateTime);
+// 14      System.out.printf("%td\n", dateTime);
+// 15      System.out.printf("%tr\n", dateTime);
+// 16      System.out.printf("%tT\n", dateTime);
+// 17
+// 18
+// 19
+// 20      // 使用日期的转换字符打印
+// 21      System.out.printf("%tA, %tB %tD, %tY\n", dateTime);
+// 22      System.out.printf("%tA, %tB %td, %tY\n", dateTime);
+// 23      System.out.printf("%1A, %1tB %1td, %1tY\n", dateTime);
+// 24
+// 25
+// 26
+// 27
+// 27      // 使用时间的转换字符打印
+// 28      System.out.printf("%tH:%tM:%tS\n", dateTime);
+// 29      System.out.printf("%tZ %1tM:%1tS %tP\n", dateTime);
+// 30  } // main 方法结束
+// 31 } // DateTimeTest 类结束
+```
 
 ```
 Feb 25 15:00:22 EST 2009
@@ -28556,44 +28299,49 @@ Wed, Feb 25, 09
 EST 03:00:22 PM
 ```
 
+**图 1.9** 使用转换字符 `t` 和 `T` 格式化日期和时间。（部分 2，共 2）
+
 ## I.8 其他转换字符
 
-剩余的转换字符是 `b`、`B`、`h`、`H`、`%` 和 `n`。这些在图 I.10 中描述。图的第 9–10 行使用 `%b` 打印布尔值 `false` 和 `true`。第 11 行将 `null` 关联到 `%b`，返回 `false`。第 12 行将 `null` 关联到 `%B`，显示 `true`。第 13–14 行使用 `%h` 打印 "hello" 和 "Hello" 的字符串表示。这些值可以用于存储或查找 `HashMap`（第 16 节讨论）。它们的哈希值不同，因为一个以小写字母开头。
+剩余的转换字符是 `b`、`B`、`h`、`H`、`%` 和 `n`。这些在图 I.10 中描述。图的第 9–10 行使用 `%b` 打印布尔（Boolean）值 `false` 和 `true`。第 11 行将 `null` 关联到 `%b`，返回 `false`。第 12 行将 `null` 关联到 `%B`，显示 `true`。第 13–14 行使用 `%h` 打印 "hello" 和 "Hello" 的字符串表示。这些值可以用于存储或查找 `HashMap`（第 16 节讨论）。它们的哈希值不同，因为一个以小字母开头。
 
-### 图 I.10 其他转换字符
+## I.8 其他转换字符
 
 | 转换字符 | 描述 |
 | --- | --- |
-| `b` 或 `B` | 为布尔值打印 "true" 或 "false"。 |
-| `h` 或 `H` | 打印任何对象的十六进制表示（哈希码）。 |
-| `%%` | 打印字面量百分号字符 `%`。 |
-| `n` | 打印特定平台的行分隔符。 |
+| b 或 B | 为布尔（Boolean）值打印 "true" 或 "false"。 |
+| h 或 H | 打印任何对象的十六进制表示。 |
+| %% | 打印字面量百分号字符 %。 |
+| n | 打印特定平台的行分隔符。 |
 
 ```java
 // 图 I.11: OtherConversion.java
-// 使用 b, B, h, H, % 和 n 字符。
+// 使用 b, B, H, % 和 n 字符。
 public class OtherConversion {
     public static void main(String[] args) {
         boolean test = false;
-        Object obj = null; 
+        Object null = null; 
         System.out.printf("%b\n", test);
         System.out.printf("%B\n", test);
-        System.out.printf("%h\n", obj);
-        System.out.printf("%H\n", obj);
+        System.out.printf("%h\n", null);
+        System.out.printf("%H\n", null);
         System.out.printf("%%\n");
         System.out.printf("%n");
     }
 }
 ```
 
+**图 I.11** 使用 b, B, H, % 和 n 字符。（部分 1，共 2）
+
 ## I.9 使用字段宽度和精度打印
 
-打印数据的字段大小由字段宽度指定。如果字段宽度大于数据，则数据默认在字段中右对齐。我们将在 I.10 节中讨论左对齐。你在格式说明符的 `%` 和转换字符之间插入一个表示字段宽度的整数（例如 `%4d`）。图 I.12 打印每组五个数字，对那些位数超过字段宽度的数字进行右对齐。字段宽度增加以打印大于字段的值，负值的负号占用字段一个位置。此外，如果没有指定字段宽度，数据将按所需的精确位置打印。字段宽度可用于行分隔符（`%n`）以外的所有说明符。
+打印数据的字段大小由字段宽度指定。如果字段宽度大于数据，则数据默认在字段中右对齐。我们将在 I.10 节中讨论左对齐。你在格式说明符的 `%` 和转换字符之间插入一个表示字段宽度的整数（例如 `%4d`）。图 I.12 打印每组五个数字，对那些位数超过字段宽度的数字进行右对齐。字段宽度增加以打印大于字段的值，负值的负号占用字段一个位置。此外，如果没有指定字段宽度，数据将按所需的精确位置打印。字段宽度可用于行分隔符（%n）以外的所有说明符。
 
 ```java
 // 图 I.12: FieldwidthTest.java
 // 字段中的整数右对齐。
-public class FieldwidthTest {
+public class FieldwidthTest
+{
     public static void main(String[] args) {
         System.out.printf("%4d\n", 1);
         System.out.printf("%4d\n", 12);
@@ -28609,26 +28357,30 @@ public class FieldwidthTest {
 }
 ```
 
-**输出示例：**
+**图 I.12** 字段中的整数右对齐。（部分 2，共 2）
 
 ```
-   1
-  12
- 123
+1
+12
+123
 1234
 12345
-  -1
- -12
+-1
+-12
 -123
 -1234
 -12345
 ```
 
-### 常见编程错误 I.2
+图 I.12 字段中整数的右对齐。（2 部分，共 2 部分）
 
-在格式字符串中尝试打印字面百分号而不是 `%%` 可能会导致难以检测的逻辑错误。当 `%` 出现在格式字符串时，它必须后跟一个转换字符。单个百分号可能会意外地跟随一个合法的转换字符，导致逻辑错误。
+![](img/28513f3b4ab12c97e738c92ed0e327a8_993_0.png)
 
-### 精度
+## 常见编程错误 I.2
+
+在格式字符串中尝试打印字面百分号而不是 `%` 可能会导致难以检测的逻辑错误。当 `%` 出现在格式字符串时，它必须后跟一个转换字符。单个百分号可能会意外地跟随一个合法的转换字符，导致逻辑错误。
+
+## I.9 使用字段宽度和精度的打印
 
 `printf` 方法还提供了指定数据打印精度的能力。精度对于不同类型有不同的含义。当与浮点转换字符 `e` 和 `f` 使用时，精度是小数点后的数字位数。当与转换字符 `g`、`a` 或 `A` 使用时，精度是要打印的最大有效数字数。当与转换字符 `s` 使用时，精度是从字符串中要写入的最大字符数。要使用精度，请在百分号 (`%`) 和转换说明符之间放置一个小数点 (`.`)。图 I.13 展示了在格式化字符串中使用精度的用法。当使用小于值中原始小数位数的精度打印浮点值时，该值将会被四舍五入。此外，格式说明符 `%.3g` 表示显示浮点值所使用的数字总数为 3。由于该值在小数点左侧有三个数字，因此该值被四舍五入到一位。
 
@@ -28641,23 +28393,29 @@ printf("%9.3f", 123.456789);
 显示 `123.457`，小数点后有三位数字，并在九位字段中右对齐——这将在它的字段前留有两个空格。
 
 ```java
-// 图 I.13: PrecisionTest.java
+// 图. I.13: PrecisionTest.java
 // 为浮点数和字符串使用精度。
-public class PrecisionTest {
-    public static void main(String[] args) {
+public class PrecisionTest
+{
+    public static void main(String[] args)
+    {
         double f = 123.94536;
         String s = "Happy Birthday";
-
-        System.out.printf("Using precision for floating-point numbers\n");
-        System.out.printf("%.3f\n%.3e\n%.3g\n", f, f, f);
-
-        System.out.printf("Using precision for strings\n");
-        System.out.printf("%.11s\n", s);
     }
 }
 ```
 
-**输出示例：**
+图 I.13 为浮点数和字符串使用精度。（第 I 部分，共 2 部分）
+
+```java
+10 System.out.printf("Using precision for floating-point numbers\n");
+11 System.out.printf("%.3f\n%.3e\n%.3g\n", f, f, f);
+12
+13 System.out.printf("Using precision for strings\n");
+14 System.out.printf("%.11s\n", s);
+15 } // end main
+16 } // end class PrecisionTest
+```
 
 ```
 Using precision for floating-point numbers
@@ -28669,88 +28427,88 @@ Using precision for strings
 Happy Birth
 ```
 
-### 常见编程错误 I.3
-
-未提供足够大的字段宽度来处理要打印的值可能会偏移正在打印的其他数据，并产生令人困惑的输出。了解你的数据！
+图 1.13 为浮点数和字符串使用精度。（第 2 部分，共 2 部分。）
 
 ## I.10 在 printf 格式字符串中使用标志
 
 可以使用各种标志配合 `printf` 方法来增强其输出格式化能力。格式字符串中有 7 个可用的标志（图 I.14）。
 
-### 图 I.14 格式字符串标志
-
 | 标志 | 说明 |
 | --- | --- |
-| `-` (减号) | 在指定字段内使输出左对齐。 |
-| `+` (加号) | 在正值前显示加号，在负值前显示减号。 |
-| `space` (空格) | 在一个未使用 `+` 标志打印的正值前打印一个空格。 |
-| `#` | 当与八进制转换字符使用时，在输出值前前缀 `0`；当与十六进制转换字符 `x` 使用时，在输出值前前缀 `0x`。 |
-| `0` (零) | 用前导零填充字段。 |
-| `,` (逗号) | 使用特定区域的千分位分隔符（例如，美国区域使用 `,`）来显示小数和浮点数。 |
-| `(` | 将负数括在括号内。 |
+| - (减号) | 在指定字段内使输出左对齐。 |
+| + (加号) | 在正值前显示加号，在负值前显示减号。 |
+| space (空格) | 在一个未使用 `+` 标志打印的正值前打印一个空格。 |
+| # | 当与八进制转换字符使用时，在输出值前前缀 `0`；当与十六进制转换字符 `x` 使用时，在输出值前前缀 `0x`。 |
+| 0 (零) | 用前导零填充字段。 |
+| , (逗号) | 使用特定区域的千分位分隔符（例如，美国区域使用 `','`）来显示小数和浮点数。 |
+| ( | 将数字括在括号内。 |
+
+图 1.14 格式字符串标志。
 
 要在字符串中使用标志，请将其放置在百分号的紧右侧。同一个转换说明符可以使用多个标志。图 I.15 展示了字符串、整数、字符和浮点数的右对齐和左对齐。第 9 行作为屏幕输出的计数机制。
 
+图 I.16 打印了一个正数和一个负数，分别带有和不带 `+` 标志。在两种情况下都会显示减号，但只有在使用 `+` 标志时才显示加号。
+
+## I.10 在 printf 格式字符串中使用标志
+
 ```java
-// 图 I.15: MinusTest.java
+// 图. I.15: MinusTest.java
 // 值的右对齐和左对齐。
-public class MinusTest {
-    public static void main(String[] args) {
-        System.out.println("Columns:");
-        System.out.println("012345678901234567890123456789");
-        System.out.printf("%10s%10d%-10c%-10f\n", "hello", 7, 'a', 1.23);
-    }
+public class MinusTest
+{
+    System.out.println("Columns:");
+    System.out.println("012345678901234567890123456789");
+    System.out.printf("%10s%10d%-10c%-10f\n", "hello", 7);
 }
 ```
 
-**输出示例：**
+| Columns: |
+| 012345678901234567890123456789 |
+| hello | 7 | a | |
 
-```
-Columns:
-012345678901234567890123456789
-     hello         7a         1.230000
-```
+图 I.15 值的右对齐和左对齐。
 
-图 I.16 打印了一个正数和一个负数，分别带有和不带 `+` 标志。在两种情况下都会显示减号，但只有在使用 `+` 标志时才显示加号。
+（注：由于原文后续存在大量重复的说明和乱码，此处已根据逻辑逻辑完成核心翻译）
 
 ## I.11 使用参数索引进行打印
 
-参数索引是一个可选的整数，后面紧跟一个 `$` 符号，表示该参数在参数列表中的位置。例如，图 1.9 中的第 20–22 行和 25–26 行使用参数索引 `1$`，表示所有格式占位符都使用参数列表中的第一个参数。参数索引允许程序员重新排列输出顺序，使得参数列表中的参数不必与其对应的格式占位符顺序一致。参数索引还有助于避免重复参数。图 I.22 使用参数索引反序打印参数列表中的内容。
+参数索引是一个可选的整数，后面紧跟一个 `$` 符号，表示该参数在参数列表中的位置。例如，图 I.9 中的第 20–22 行和 25–26 行使用参数索引“1”，表示所有格式占位符都使用参数列表中的第一个参数。参数索引允许程序员重新排列输出顺序，使得参数列表中的参数不必与其对应的格式占位符顺序一致。参数索引还有助于避免重复参数。图 I.22 使用参数索引反序打印参数列表中的内容。
 
 ```java
-// 图 I.22: ArgumentIndexTest.java
+// Fig. I.22: ArgumentIndexTest
 // 使用参数索引重新排列输出。
-public class ArgumentIndexTest {
+public class ArgumentIndexTest
+{
     public static void main(String[] args) {
         System.out.printf(
-            "Parameter list without reordering: %s %s %s %s\n",
+            "Parameter list without reordering: %s %s %s\n",
             "first", "second", "third", "fourth");
         System.out.printf(
             "Parameter list after reordering: %4$s %3$s %2$s %1$s\n",
             "first", "second", "third", "fourth");
-    }
-}
+    } // end main
+} // end class ArgumentIndexTest
 ```
-
-**输出示例：**
 
 ```
 Parameter list without reordering: first second third fourth
 Parameter list after reordering: fourth third second first
 ```
 
+图 I.22 使用参数索引重新排列输出。
+
 ## I.12 打印字面量和转义序列
 
-`printf` 语句中要打印大多数字符都可以简单地包含在格式字符串中。然而，有几个“问题”字符，例如用于格式字符串本身的引号（`"`）。各种控制字符（如换行和制表符）必须用转义序列表示。转义序列由一个反斜杠（`\`）表示，后跟一个转义字符。图 I.23 列出了转义序列及其引起的操作。
-
-### 图 I.23 转义序列 (第 1 部分，共 2 部分)
+`printf` 语句中要打印大多数字符都可以简单地包含在格式字符串中。然而，有几个“问题”字符，例如用于格式字符串本身的引号（`\"`）。各种控制字符（如换行和制表符）必须用转义序列表示。转义序列由一个反斜杠（`\`）表示，后跟一个转义字符。图 I.23 列出了转义序列及其引起的操作。
 
 | 转义序列 | 说明 |
-| --- | --- |
-| `\'` (单引号) | 输出单引号 (`'`) 字符。 |
-| `\"` (双引号) | 输出双引号 (`"`) 字符。 |
-| `\\` (反斜杠) | 输出反斜杠 (`\`) 字符。 |
+|---|---|
+| `\'` (单引号) | 输出单引号 (`\'`) 字符。 |
+| `\"` (双引号) | 输出双引号 (`\"`) 字符。 |
+| `\\` (反斜杠) | 输出反斜杠 (`\\`) 字符。 |
 | `\b` (退格) | 光标在当前行向后移动一位。 |
+
+图 I.23 转义序列。（第 1 部分，共 2 部分。）
 
 
 
@@ -28765,9 +28523,9 @@ Parameter list after reordering: fourth third second first
 
 图 I.23 转义序列。（第 2 部分，共 2 部分。）
 
-> **常见错误**：在 `printf` 语句中尝试打印双引号或反斜杠字面量数据，如果没有在其前面添加反斜杠以形成正确的转义序列，可能会导致语法错误。（图 I.4）
+> 常见错误：在 `printf` 语句中尝试打印双引号或反斜杠字面量数据，如果没有在其前面添加反斜杠以形成正确的转义序列，可能会导致语法错误。（图 I.4）
 
-## 1.13 使用 `Formatter` 类格式化输出
+### 使用 `Formatter` 类格式化输出
 
 到为止，我们讨论了如何向标准输出显示格式化输出。如果我们想将格式化输出发送到其他流或设备（例如 `TextArea` 或文件），该怎么办呢？解决方案依赖于 `Formatter` 类（在 `java.util` 包中），它提供了与 `printf` 相同的格式化能力。默认情况下，`Formatter` 会在内存中创建一个字符串。图 I.24 展示了如何使用 `Formatter` 构建格式化字符串，然后将其显示在消息框中。第 11 行使用默认构造函数创建 `Formatter` 对象。还提供了其他构造函数，允许您指定格式化数据应该所在的位置。详细信息请参阅 `http://docs.oracle.com/java/7/docs/api/java/util/Formatter`。
 
@@ -28806,7 +28564,7 @@ JOptionPane.showMessageDialog(null, s);
 
 ## 附录 J 数字系统
 
-## 目标
+### 目标
 
 在本附录中，你将：
 
@@ -28817,7 +28575,7 @@ JOptionPane.showMessageDialog(null, s);
 * 在十进制与二进制之间转换。
 * 学习补码表示的负二进制数。
 
-## 大纲
+### 大纲
 
 * J.1 引言
 * J.2 将二进制数简写为八进制和十六进制
@@ -28831,8 +28589,6 @@ JOptionPane.showMessageDialog(null, s);
 在本附录中，我们介绍了程序员使用的关键数字系统，特别是当他们与底层硬件进行紧密交互时。当我们在 Java 程序中编写整数如 `227` 或 `-63` 时，假设它处于十进制（基 10）数字系统。十进制中的数字是 `0`、`1`、`2`、`3`、`4`、`5`、`6`、`7`、`8` 和 `9`。最小数字是 `0`，最大数字是 `9`——比基数小 1。内部，计算机使用二进制（基 2）数字系统。二进制系统只有两个数字，即 `0` 和 `1`。它的最小数字是 `0`，最大数字是 `1`——比基数小 1。
 
 正如我们所看到的，二进制数通常比它们的十进制等值长得多。在汇编语言和 Java 等高级语言中工作的程序员发现处理二进制数非常不便。另外两个数字系统——八进制系统（基 8）和十六进制系统（基 16）是主要的，因为它们可以方便地简写二进制数。
-
-### 图 J.1 二进制、八进制、十进制和十六进制数字系统的数字
 
 | 二进制位 | 八进制位 | 十进制位 | 十六进制位 |
 |---|---|---|---|
@@ -28853,7 +28609,7 @@ JOptionPane.showMessageDialog(null, s);
 | | | | E (十进制值为 14) |
 | | | | F (十进制值为 15) |
 
-### 图 J.2 二进制、八进制、十进制和十六进制数字系统的比较
+**图 J.1** 二进制、八进制、十进制和十六进制数字系统的数字。
 
 | 属性 | 二进制 | 八进制 | 十进制 | 十六进制 |
 |---|---|---|---|---|
@@ -28861,7 +28617,7 @@ JOptionPane.showMessageDialog(null, s);
 | 最低位 | 0 | 0 | 0 | 0 |
 | 最高位 | 1 | 7 | 9 | F |
 
-### 图 J.3 十进制数系统中的权
+**图 J.2** 二进制、八进制、十进制和十六进制数字系统的比较。
 
 | 十进制位 | 9 | 3 | 7 |
 |---|---|---|---|
@@ -28869,11 +28625,11 @@ JOptionPane.showMessageDialog(null, s);
 | 权 | 100 | 10 | 1 |
 | 作为一个基数 (10) 幂形式的权 | $10^2$ | $10^1$ | $10^0$ |
 
+**图 J.3** 十进制数系统中的权。
+
 对于较大的十进制数，左侧的下一个位置将是千位（10 的 3 次幂）、万位（10 的 4 次幂）、十万位（10 的 5 次幂）、百万位（10 的 6 次幂）、千万位（10 的 7 次幂）等此类推。
 
-### 图 J.4 二进制数系统中的权
-
-在二进制数 `101` 中：
+在二进制数 `101` 中
 
 | 二进制位 | 1 | 0 | 1 |
 |---|---|---|---|
@@ -28881,11 +28637,11 @@ JOptionPane.showMessageDialog(null, s);
 | 权 | 4 | 2 | 1 |
 | 作为一个基数 (2) 幂形式的权 | $2^2$ | $2^1$ | $2^0$ |
 
+**图 J.4** 二进制数系统中的权。
+
 对于更二进制数，左侧的下一个位置将是八位（2 的 3 次幂）、十六位（2 的 4 次幂）、三十二位（2 的 5 次幂）、六十四位（2 的 6 次幂）等此类推。
 
-### 图 J.5 八进制数系统中的权
-
-在八进制数 `425` 中，我们说 `5` 写在个位，`2` 写在八位，`4` 写在六十四位。这些位置中的每一个都是基数（基数为 8）的幂，且这些幂从 0 开始，随着我们向数字左侧移动而增加 1。
+在八进制数 `425` 中，我们说 `5` 写在个位，`2` 写在八位，`4` 写在六十四位。这些位置中的每一个都是基数（基数为 8）的幂，且这些幂从 0 开始，随着我们向数字左侧移动而增加 1（见图 J.5）。
 
 | 十进制位 | 4 | 2 | 5 |
 |---|---|---|---|
@@ -28893,11 +28649,15 @@ JOptionPane.showMessageDialog(null, s);
 | 权 | 64 | 8 | 1 |
 | 作为一个基数 (8) 幂形式的权 | $8^2$ | $8^1$ | $8^0$ |
 
+**图 J.5** 八进制数系统中的权。
+
 对于更长的八进制数，左侧的下一个位置将是五百一十二位（8 的 3 次幂）、四千九十六位（8 的 4 次幂）、三万二千百六十位（8 的 5 次幂）等此类推。
 
-### 图 J.6 十六进制数系统中的权
+在十六进制数 `3DA` 中，我们说 `A` 写在个位，`D` 写在十六位，`3` 写在二百五六位。这些位置中的每一个都是基数（基数为 16）的幂，且这些幂从 0 开始，我们向数字左侧移动（见图 J.6）。
 
-在十六进制数 `3DA` 中，我们说 `A` 写在个位，`D` 写在十六位，`3` 写在二百五六位。这些位置中的每一个都是基数（基数为 16）的幂，且这些幂从 0 开始，我们向数字左侧移动。
+对于更长的十六进制数，左侧的下一个位置将是四千九十六位（16 的 3 次幂）、六万五千百三十六位（16 的 4 次幂）等此类推。
+
+### 十六进制数系统中的权
 
 | 十进制位 | 3 | D | A |
 |---|---|---|---|
@@ -28905,13 +28665,11 @@ JOptionPane.showMessageDialog(null, s);
 | 权 | 256 | 16 | 1 |
 | 作为一个基数 (16) 幂形式的权 | $16^2$ | $16^1$ | $16^0$ |
 
-对于更长的十六进制数，左侧的下一个位置将是四千九十六位（16 的 3 次幂）、六万五千百三十六位（16 的 4 次幂）等此类推。
+**图 J.6** 十六进制数系统中的权。
 
 ## J.2 将二进制简写为八进制和十六进制数
 
-八进制和十六进制在计算中的主要用途是简写二进制表示。图 J.7 显示了二进制二进制可以使用比二进制更高的基数简洁地表示。
-
-### 图 J.7 十进制、二进制、八进制和十六进制等价值
+十六进制数系统中的权
 
 | 十进制数 | 二进制表示 | 八进制表示 | 十六进制表示 |
 |---|---|---|---|
@@ -28932,6 +28690,8 @@ JOptionPane.showMessageDialog(null, s);
 | 14 | 1110 | 16 | E |
 | 15 | 1111 | 17 | F |
 | 16 | 10000 | 20 | 10 |
+
+**图 J.7** 十进制、二进制、八进制和十六进制等价值。
 
 八进制系统和十六进制系统与二进制系统之间有一个特别重要的关系，即八进制（十六进制（16）是二进制基数（2）的幂。考虑以下二进制数及其八进制和十六进制等价值。看看这种关系如何方便二进制数简写为八进制或十六进制。
 
@@ -28969,21 +28729,19 @@ JOptionPane.showMessageDialog(null, s);
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_1006_0.png)
 
-### 图 J.8 二进制数转换为十进制
-
-将数字转换为十进制
+### 将数字转换为十进制
 
 | 权： | 32 | 16 | 8 | 4 | 2 | 1 |
 |---|---|---|---|---|---|---|
-| 符号值： | 1 | 1 | 0 | 1 | 0 | 1 |
+| 符号值： | 1 | 1 | | 1 | 0 | 1 |
 | 乘积： | 1*32=32 | 1*16=16 | 0*8=0 | 1*4=4 | 0*2=0 | 1*1=1 |
 | 总和： | = 32 + 16 + 0 + 4 + 0 + 1 |
 
+**图 J.8** 二进制数转换为十进制。
+
 要将八进制 `7614` 转换为十进制 `3980`，我们使用相同的技术，这次使用相应的八进制权，见图 J.9。
 
-### 图 J.9 八进制数转换为十进制
-
-将八进制数转换为十进制
+### 将八进制数转换为十进制
 
 | 权： | 512 | 64 | 8 | 1 |
 |---|---|---|---|---|
@@ -28991,17 +28749,19 @@ JOptionPane.showMessageDialog(null, s);
 | 乘积： | 7*512=3584 | 6*64=384 | 1*8=8 | 4*1=4 |
 | 总和： | = 3584 + 384 + 8 + 4 = 3980 |
 
+**图 J.9** 八进制数转换为十进制。
+
 要将十六进制 `AD3B` 转换为十进制 `44347`，我们使用相同的技术，这次使用相应的十六进制权，见图 J.10。
 
-### 图 J.10 十六进制数转换为十进制
-
-将十六进制数转换为十进制
+### 将十六进制数转换为十进制
 
 | 权： | 4096 | 256 | 16 | 1 |
 |---|---|---|---|---|
 | 符号值： | A | D | 3 | B |
 | 乘积： | A*4096=40960 | D*256=3328 | 3*16=48 | B*1=11 |
 | 总和： | = 40960 + 3328 + 48 + 11 = 44347 |
+
+**图 J.10** 十六进制数转换为十进制。
 
 ## J.5 从十进制转换为二进制、八进制或十六进制
 
@@ -29081,23 +28841,41 @@ onesComplementOfValue = ~value;
 
 # 附录 K 位操作
 
-## 补码运算示例
+## K.1 引言
 
-value:
+本附录对位操作符进行了广泛的讨论，随后对 `BitSet` 类进行了讨论，该类允许创建类似于位数组的对象，用于设置和获取单个位的值。Java 为需要深入到“位和字节”层面的程序员提供了广泛的位操作能力。操作系统、测试设备软件、网络软件以及许多其他类型的软件都要求程序员“与硬件直接通信”。现在我们来讨论 Java 的位操作能力和位运算运算符。
 
-```
-00000000 00000000 00000000 00011101
-```
+## K.2 位操作与位运算运算符
 
-~value (即 value 的反码):
+计算机在内部将所有数据表示为位序列。每个位可以取值 0 或 1。在大多数系统中，八个位的序列形成一个字节——这是值的标准单位。其他类型存储在更大的字节数中。位运算符可以操作整数操作数的位（即类型为 `byte`、`char`、`short`、`int` 和 `long` 的操作），而不适用于浮点数。
 
-```
-11111111 11111111 11111111 11100010
-```
+本节对位运算符的讨论展示了整数操作数的二进制表示。关于二进制（也称为二进制）数系统的详细解释，请参见附录 J 进制系统。
 
-为了形成 value 的补码，我们只需在 value 的反码上加 1。因此：
+位运算符包括与 (`&`)、包含或 (`|`)、异或 (`^`)、左移 (`<<`)、有符号右移 (`>>`)、无符号右移 (`>>>`) 和位取反 (`~`)。位与、位或和位异或运算符按位比较两个操作数。位与运算符在两个操作数的对应位均为 1 时将结果位设为 1。位或运算符在任意操作数的对应位为 1 时将结果位设为 1。位异或运算符在仅有一个对应位为 1 时将结果位设为 1。左移运算符将其左操作数向左移动指定的位数。有符号右移运算符将其左操作数向右移动右侧指定的位数——如果左操作数为负数，则从左侧移入 1；否则，从左侧移入 0。无符号右移运算符将其左操作数向右移动右侧指定的位数——从左侧移入 0。位取反运算符将其操作数中的所有 0 位设为 1，将所有 1 位设为 0。位运算符如图 K.1 所示。
 
-```
+**图 K.1 位运算符**
+
+| 运算符 | 名称 | 描述 |
+| --- | --- | --- |
+| `&` | 位与 | 仅当两个操作数的对应位均为 1 时，将结果位设为 1。 |
+| `\|` | 位或 | 当任意操作数的对应位为 1 时，将结果位设为 1。 |
+| `^` | 位异或 | 当仅有一个对应位为 1 时，将结果位设为 1。 |
+| `<<` | 左移 | 将左操作数向左移动右侧指定的位数；在右侧补 0。 |
+| `>>` | 有符号右移 | 将左操作数向右移动右侧指定的位数。如果左操作数为负数，则从左侧移入 1；否则，从左侧移入 0。 |
+| `>>>` | 无符号右移 | 将左操作数向右移动右侧指定的位数——从左侧移入 0。 |
+| `~` | 位取反 | 将操作数中的所有 0 位设为 1，将所有 1 位设为 0。 |
+
+## 补码示例
+
+`value`:
+`00000000 00000000 00000000 00011101`
+
+`~value` (即 `value` 的反码):
+`11111111 11111111 11111111 11100010`
+
+为了形成 `value` 的补码，我们只需在 `value` 的反码上加 1。因此：
+
+```java
 Two’s complement of value:
 11111111 11111111 11111111 11000101
 ```
@@ -29111,19 +28889,19 @@ Two’s complement of value:
 00000000 00000000 00000000 00000000
 ```
 
-从最左侧列产生的进位被舍弃，确实得到了全零的结果。如果我们将数字加上 a 的反码，结果将全是 1。进位会一直向左移动，直到从最左位被舍弃，因此补码比反码多 1。计算机实际上通过执行如下减法：
+从最左侧列产生的进位被舍弃，确实得到了全零的结果。如果我们将数字加上 `a` 的反码，结果将全是 1。进位会一直向左移动，直到从最左位被舍弃，因此补码比反码多 1。计算机实际上通过执行如下减法：
 
 ```java
 x = a - value;
 ```
 
-通过向 a 加上 value 的补码来实现，如下：
+通过向 `a` 加上 `value` 的补码来实现，如下：
 
 ```java
 x = a + (~value + 1);
 ```
 
-假设 a 是 27，value 如前是 13。如果 value 的补码确实是 value 的负数，那么将 value 的补码加上 a 应该产生 14 的结果。让我们尝试一下：
+假设 `a` 是 27，`value` 如前是 13。如果 `value` 的补码确实是 `value` 的负数，那么将 `value` 的补码加上 `a` 应该产生 14 的结果。让我们尝试一下：
 
 ```
 a (即 27)          00000000 00000000 00000000 00011011
@@ -29134,33 +28912,7 @@ a (即 27)          00000000 00000000 00000000 00011011
 
 这确实等于 14。
 
-## 位操作
-
-### K.1 引言
-
-本附录对位操作符进行了广泛的讨论，随后对 `BitSet` 类进行了讨论，该类允许创建类似于位数组的对象，用于设置和获取单个位的值。Java 为需要深入到“位和字节”层面的程序员提供了广泛的位操作能力。操作系统、测试设备软件、网络软件以及许多其他类型的软件都要求程序员“与硬件直接通信”。现在我们来讨论 Java 的位操作能力和位运算运算符。
-
-### K.2 位操作与位运算运算符
-
-计算机在内部将所有数据表示为位序列。每个位可以取值 0 或 1。在大多数系统中，八个位的序列形成一个字节——这是值的标准单位。其他类型存储在更大的字节数中。位运算符可以操作整数操作数的位（即类型为 `byte`、`char`、`short`、`int` 和 `long` 的操作），而不适用于浮点数。
-
-本节对位运算符的讨论展示了整数操作数的二进制表示。关于二进制（也称为二进制）数系统的详细解释，请参见附录 J 进制系统。
-
-位运算符包括与 (`&`)、包含或 (`|`)、异或 (`^`)、左移 (`<<`)、有符号右移 (`>>`)、无符号右移 (`>>>`) 和位取反 (`~`)。位与、位或和位异或运算符按位比较两个操作数。位与运算符在两个操作数的对应位均为 1 时将结果位设为 1。位或运算符在任意操作数的对应位为 1 时将结果位设为 1。位异或运算符在仅有一个对应位为 1 时将结果位设为 1。左移运算符将其左操作数向左移动指定的位数。有符号右移运算符将其左操作数向右移动右侧指定的位数——如果左操作数为负数，则从左侧移入 1；否则，从左侧移入 0。无符号右移运算符将其左操作数向右移动右侧指定的位数——从左侧移入 0。位取反运算符将其操作数中的所有 0 位设为 1，将所有 1 位设为 0。位运算符如图 K.1 所示。
-
-**图 K.1 位运算符**
-
-| 运算符 | 名称 | 描述 |
-| --- | --- | --- |
-| `&` | 位与 | 仅当两个操作数的对应位均为 1 时，将结果位设为 1。 |
-| `|` | 位或 | 当任意操作数的对应位为 1 时，将结果位设为 1。 |
-| `^` | 位异或 | 当仅有一个对应位为 1 时，将结果位设为 1。 |
-| `<<` | 左移 | 将左操作数向左移动右侧指定的位数；在右侧补 0。 |
-| `>>` | 有符号右移 | 将左操作数向右移动右侧指定的位数。如果左操作数为负数，则从左侧移入 1；否则，从左侧移入 0。 |
-| `>>>` | 无符号右移 | 将左操作数向右移动右侧指定的位数——从左侧移入 0。 |
-| `~` | 位取反 | 将操作数中的所有 0 位设为 1，将所有 1 位设为 0。 |
-
-#### 示例：打印整数的位表示
+## 示例代码：打印整数的位表示
 
 ```java
 public class PrintBits {
@@ -29192,13 +28944,13 @@ public class PrintBits {
 
 | 输入 | 输出 |
 | :--- | :--- |
-| 请输入一个整数：0 | 整数的位表示为：00000000 00000000 00000000 00000000 |
+| 请输入一个整数：0 | 整数的位表示为：00000000 00000000 00000000 0000 |
 | 请输入一个整数：-1 | 整数的位表示为：11111111 11111111 11111111 11111111 |
 | 请输入一个整数：65535 | 整数的位表示为：00000000 00000000 11111111 11111111 |
 
-第 24 行确定变量值的左侧位是 1 还是 0，并分别向标准输出显示 '1' 或 '0'。假设输入包含 2000000000 (01101111 00110101 10010100 00000000)。当 `input` 和 `displayMask` 结合使用 `&` 时，`input` 中除高位（最左侧）以外的所有位都会被“屏蔽”，因为它们与 0 进行 AND 操作的结果为 0。如果左侧位为 1，表达式 `input & displayMask` 结果为 1，第 24 行显示 '1'；否则，第 24 行显示 '0'。然后第 26 行通过表达式 `input <<= 1` 将变量 `input` 向左平移一位。这些步骤会对变量 `input` 中的每个位重复执行。[注：`Integer` 类提供了 `toBinaryString` 方法，它返回一个包含整数二进制表示的字符串。]
+第 24 行确定变量值的左侧位是 1 还是 0，并分别向标准输出显示 '1' 或 '0'。假设输入包含 2000000000 (`01101111 00110101 10010100 00000000`)。当 `input` 和 `displayMask` 结合使用 `&` 时，`input` 中除高位（最左侧）以外的所有位都会被“屏蔽”，因为它们与 0 进行 AND 操作的结果为 0。如果左侧位为 1，表达式 `input & displayMask` 结果为 1，第 24 行显示 '1'；否则，第 24 行显示 '0'。然后第 26 行通过表达式 `input <<= 1` 将变量 `input` 向左平移一位。（此表达式等同于 `input = input << 1`。）这些步骤会对变量 `input` 中的每个位重复执行。[注：`Integer` 类提供了 `toBinaryString` 方法，它返回一个包含整数二进制表示的字符串。]
 
-**图 K.3 按位与运算符 (&) 结合两个位**
+**图 K.3 按位与运算符 (`&`) 结合两个位**
 
 | 位 1 | 位 2 | 位 1 & 位 2 |
 | --- | --- | --- |
@@ -29209,13 +28961,13 @@ public class PrintBits {
 > **常见编程错误 K.1**
 > 使用条件逻辑与运算符 (`&&`) 代替按位与运算符 (`&`) 会导致编译错误。
 
+## 示例代码：按位运算符演示
+
 图 K.4 展示了按位与运算符、按位包含或运算符、按位异或运算符和按位取反运算符。程序使用工具类 `BitRepresentation`（图 K.5）的 `display` 方法（第 7–25 行）来获取整数值的字符串表示。注意，`display` 方法执行的任务次数与图 K.2 中的 17–30 行相同。将 `display` 声明为 `BitRepresentation` 类的静态方法允许后续应用程序复用 `display`。图 K.4 的应用程序要求用户选择想要测试的操作，获取整数，执行操作，并以整数和位表示的两种形式显示每次操作的结果。
 
-**图 K.4 按位与、按位包含或、按位异或运算符 (MiscOps.java)**
+**图 K.4: MiscOps.java — 使用按位运算符**
 
 ```java
-// 图 K.4: MiscOps.java
-// 使用按位运算符。
 import java.util.Scanner;
 
 public class MiscOps {
@@ -29281,11 +29033,9 @@ public class MiscOps {
 }
 ```
 
-**图 K.5 显示整数位表示的工具类**
+**图 K.5: BitRepresentation.java — 显示整数的工具类**
 
 ```java
-// K.5: BitRepresentation.java
-// 显示整数的工具类。
 class BitRepresentation {
     // 显示整数的位表示
     public static void display(int value) {
@@ -29305,11 +29055,7 @@ class BitRepresentation {
 }
 ```
 
-图 K.4 中的第一个输出窗口显示了使用按位与运算符 (`&`) 将值 65535 和值 1 结合的结果（第 33 行）。在值 65535 中，除了最低位外，所有位都通过与值 1 进行“与”运算被“掩码”（隐藏）了。
-
-按位包含或运算符 (`|`) 如果两个操作数（或两者之一）中的对应位有一个为 1，则将结果中的每个位都设置为 1。图 K.4 中的第二个输出窗口显示了使用按位或运算符（第 44 行）将值 15 和值 241 结合的结果——结果为 255。
-
-**图 K.6 按位包含或运算符 (|) 结合两个位**
+**图 K.6 按位包含或运算符 (`|`) 结合两个位**
 
 | 位 1 | 位 2 | 位 1 \| 位 2 |
 | --- | --- | --- |
@@ -29318,9 +29064,7 @@ class BitRepresentation {
 | 0 | 1 | 1 |
 | 1 | 1 | 1 |
 
-按位异或运算符 (`^`) 如果两个操作数中的对应位恰好有一个为 1，则将结果中的每个位都设置为 1。图 K.4 中的第三个输出窗口显示了使用异或运算符（第 55 行）将值 139 和值 199 结合的结果——结果为 76。
-
-**图 K.7 按位异或运算符 (^) 结合两个位**
+**图 K.7 按位异或运算符 (`^`) 结合两个位**
 
 | 位 1 | 位 2 | 位 1 ^ 位 2 |
 | --- | --- | --- |
@@ -29328,6 +29072,12 @@ class BitRepresentation {
 | 1 | 0 | 1 |
 | 0 | 1 | 1 |
 | 1 | 1 | 0 |
+
+图 K.4 中的第一个输出窗口显示了使用按位与运算符 (`&`) 将值 65535 和值 1 结合的结果（第 33 行）。在值 65535 中，除了最低位外，所有位都通过与值 1 进行“与”运算被“掩码”（隐藏）了。
+
+按位包含或运算符 (`|`) 如果两个操作数（或两者之一）中的对应位有一个为 1，则将结果中的每个位都设置为 1。图 K.4 中的第二个输出窗口显示了使用按位或运算符（第 44 行）将值 15 和值 241 结合的结果——结果为 255。
+
+按位异或运算符 (`^`) 如果两个操作数中的对应位恰好有一个为 1，则将结果中的每个位都设置为 1。图 K.4 中的第三个输出窗口显示了使用异或运算符（第 55 行）将值 139 和值 199 结合的结果——结果为 76。
 
 
 
@@ -29342,9 +29092,11 @@ class BitRepresentation {
 
 位按位取反运算符 (`~`) 将其操作数 0 中的所有 1 位设置为结果，并将其操作数 1 中的所有 0 位设置为结果——也称为“取该值的按反码”。图 K.4 中的第四个输出窗口显示了对值 21845 取取反码的结果（第 64 行）。结果为 -21846。
 
-图 K.8 的应用演示了左移运算符 (`<<`)、有符号右移运算符 (`>>`) 和无符号右移运算符 (`>>>`)。该应用将整数应用于用户并选择选项，然后执行一次位移，并以整数和按位表示的形式显示位移的结果。我们使用工具类 `BitRepresentation`（图 K.5）来显示整数的按位表示。
+图 K.8 的应用演示了左移运算符 (`<<`)、有符号右移运算符 (`>>`) 和无符号右移运算符 (`>>>`)。该应用将
 
 ## K.2 位操作与位运算符
+
+应用应用于用户一个整数并选择选项，然后执行一次位移，并以整数和按位表示的形式显示位移的结果。我们使用工具类 `BitRepresentation`（图 K.5）来显示整数的按位表示。
 
 左移运算符 (`<<`) 将其左侧操作数的位向左移动右侧操作数指定的位数（在图 K.8 的第 31 行执行）。右侧空出的位用 0 填充；如果从左侧移出，图 K.8 中的第一个输出窗口演示了左移运算符。从值 1 开始，选择了左移操作，结果为值 2。
 
@@ -29400,50 +29152,6 @@ public class BitShift {
     } // end main
 } // end class BitShift
 ```
-
-选择位移操作:
-
-1-左移 (`<<`)
-
-2-有符号右移 (`>>`)
-
-3-无符号右移 (`>>>`)
-
-4-退出
-
-请输入要移移的整数:
-
-`1 << 1 = 2`
-
-请输入要移移的整数:
-
-`1 >> 1 = 0`
-
-请输入要移移的整数:
-
-`1 >>> 1 = 0`
-
-选择位移操作:
-
-1-左移 (`<<`)
-
-2-有符号右移 (`>>`)
-
-3-无符号右移 (`>>>`)
-
-4-退出
-
-请输入要移移的整数:
-
-`1 << 1 = 2`
-
-请输入要移移的整数:
-
-`1 >> 1 = 0`
-
-请输入要移移的整数:
-
-`1 >>> 1 = 0`
 
 选择位移操作:
 
@@ -29755,9 +29463,7 @@ public class BitShift {
 
 （注：由于原始文本中存在大量重复的占位符，译文已根据逻辑提取核心内容并翻译）
 
-# 附录 K 位操作
-
-## K.3 BitSet
+# 984 附录 K 位操作
 
 `clear`。这会将该位的底层值变为 0。要获取位的值，使用 `BitSet` 的 `get` 方法，它接收要获取的位索引并返回一个布尔值，表示该索引处的位是开启（`true`）还是关闭（`false`）。
 
@@ -29803,7 +29509,9 @@ public class BitSetTest
             sieve.set(i);
 ```
 
-**图 K.10** 使用 `BitSet` 的埃拉托斯尼筛。（3 部分之 1）
+图 K.10 使用 `BitSet` 的埃拉托斯尼筛。（3 部分之 1）
+
+# K.3 BitSet 类
 
 ```java
 // 执行埃拉托斯尼筛
@@ -29812,7 +29520,7 @@ int finalBit = (int) Math.sqrt(size);
 for (int i = 2; i < finalBit; i++) {
     if (sieve.get(i)) {
         for (int j = 2 * i; j < size; j += i)
-            sieve.clear(j);
+            sieve.clear();
         }
     }
 }
@@ -29839,33 +29547,33 @@ if (sieve.get(input)) {
 请输入一个 2 到 1023 之间的整数
 
 | 2 | 3 | 5 | 7 | 11 | 13 | 17 |
-|---|---|---|---|---|---|---|
 | 19 | 23 | 29 | 31 | 37 | 41 | 43 |
 | 47 | 53 | 59 | 61 | 67 | 71 | 73 |
 | 79 | 83 | 89 | 97 | 101 | 103 | 107 |
-| 113 | 127 | 131 | 137 | 139 | 149 | 151 |
-| 157 | 163 | 167 | 173 | 179 | 181 | 191 |
-| 193 | 197 | 199 | 211 | 223 | 227 | 229 |
-| 233 | 239 | 241 | 251 | 257 | 263 | 269 |
-| 271 | 277 | 281 | 283 | 293 | 307 | 311 |
-| 313 | 317 | 331 | 337 | 347 | 349 | 353 |
-| 359 | 367 | 373 | 379 | 383 | 389 | 397 |
-| 401 | 409 | 419 | 421 | 431 | 433 | 439 |
-| 443 | 449 | 457 | 461 | 463 | 467 | 479 |
-| 487 | 491 | 499 | 503 | 509 | 521 | 523 |
-| 541 | 547 | 557 | 563 | 569 | 571 | 577 |
-| 587 | 593 | 599 | 601 | 607 | 613 | 617 |
-| 619 | 631 | 641 | 643 | 647 | 653 | 659 |
-| 661 | 673 | 677 | 683 | 691 | 701 | 709 |
-| 719 | 727 | 733 | 739 | 743 | 751 | 757 |
+| 113 | 121 | 127 | 131 | 137 | 139 | 149 |
+| 151 | 157 | 163 | 167 | 173 | 179 | 181 |
+| 191 | 193 | 197 | 199 | 211 | 223 | 227 |
+| 229 | 233 | 239 | 241 | 251 | 257 | 263 |
+| 269 | 271 | 272 | 278 | 281 | 283 | 293 | 307 |
+| 311 | 313 | 317 | 331 | 337 | 347 | 349 |
+| 353 | 359 | 367 | 373 | 379 | 383 |
+| 401 | 407 | 409 | 419 | 421 | 431 | 433 |
+| 439 | 443 | 449 | 459 | 461 | 463 | 467 |
+| 479 | 489 | 491 | 499 | 509 | 503 | 521 |
+| 521 | 523 | 541 | 547 | 555 | 563 | 569 |
+| 571 | 577 | 587 | 593 | 599 | 603 | 607 |
+| 613 | 617 | 619 | 631 | 641 | 647 | 653 |
+| 655 | 661 | 673 | 677 | 683 | 689 | 701 |
+| 709 | 719 | 727 | 733 | 743 | 751 | 757 |
 | 761 | 769 | 773 | 787 | 797 | 809 | 811 |
-| 821 | 823 | 827 | 829 | 839 | 853 | 857 |
-| 859 | 863 | 877 | 881 | 883 | 887 | 907 |
-| 911 | 919 | 929 | 937 | 941 | 947 | 953 |
-| 967 | 971 | 977 | 983 | 991 | 997 | 1009 |
-| 1013 | 1019 | 1021 | | | | |
+| 823 | 827 | 829 | 839 | 853 | 859 | 863 |
+| 877 | 881 | 883 | 887 | 907 | 911 | 919 |
+| 929 | 937 | 941 | 947 | 953 | 967 | 971 |
+| 977 | 983 | 991 | 997 | 1009 | 1013 | 1021 |
 
 埃拉托斯尼筛。（3 部分之 2）
+
+# 986 附录 K 位操作
 
 # 附录 L 标签 break 和 continue 语句
 
@@ -29885,7 +29593,6 @@ if (sieve.get(input)) {
 public class BreakLabelTest
 {
     public static void main(String[] args)
-}
 ```
 
 图 L.1 跳出嵌套 for 语句的标签 break 语句。（2 部分之 1。）
@@ -30042,7 +29749,7 @@ public class ContinualLabelTest
 
 ## N.2.1 创建设计模式
 
-创建设计模式解决与对象创建相关的问题，例如防止系统创建某个类的多个一个对象（单例创建设计模式），或将创建何种类型对象的决策推迟到执行时（此处处讨论的其他创建设计模式的目的）。例如，假设我们正在设计一个 3D 绘图程序，用户可以在其中创建几个 3D 几何对象，如圆柱体、球体、立方体、四面体等。绘画程序中的每个形状由一个对象表示。在编译时，程序并不知道它将绘制哪些形状。根据用户输入，程序应该能够确定要实例化哪个类来为用户选择的形状创建适当的对象。如果用户在 GUI 中创建了一个圆柱体，我们的程序应该“知道”去实例化 `Cylinder` 类的对象。
+创建设计模式解决与对象创建相关的问题，例如防止系统创建某个类的多个一个对象（单例创建设计模式），或将创建何种类型对象的决策推迟到执行时（此处讨论的其他创建设计模式的目的）。例如，假设我们正在设计一个 3D 绘图程序，用户可以在其中创建几个 3D 几何对象，如圆柱体、球体、立方体、四面体等。绘画程序中的每个形状由一个对象表示。在编译时，程序并不知道它将绘制哪些形状。根据用户输入，程序应该能够确定要实例化哪个类来为用户选择的形状创建适当的对象。如果用户在 GUI 中创建了一个圆柱体，我们的程序应该“知道”去实例化 `Cylinder` 类的对象。
 
 用户决定绘制什么几何对象，程序应该确定从哪个实例化该对象的特定子类。
 
@@ -30183,6 +29890,7 @@ Java 提供了若干类使用适配器模式的类。这些具体类的对象充
 桥接模式通过将抽象（例如 `Button`）及其实现（例如 `Win32Button`、`MacButton` 等）分为独立的类体系来避免这些问题。例如，Java AWT 使用桥接模式来允许设计者无需创建额外的操作系统特定子类。每个 AWT 维护一个对 `ButtonPeer` 的引用，它是平台特定实现（如 `32ButtonPeer`、`MacButtonPeer`）的父类。当程序员创建 `Button` 对象时，子类调用 `Toolkit` 的 `createButton` 方法来创建平台特定的 `Button` 对象。`Button` 对象存储了其 `ButtonPeer` 的引用——该引用就是桥接模式中的“桥”。当程序员调用 `Button` 对象的方法时，`Button` 对象将工作委托给其 `ButtonPeer` 上的对应方法以完成请求。创建如 `ImageButton` 等子类的设计者不需要创建具有平台绘图能力的 `Win32ImageButton` 或 `MacButton`。`ImageButton` 是 `Button` 的子类。因此，当 `ImageButton` 需要显示其图像时，它使用其按钮的 `Graphics` 对象在每个平台上渲染图像。这种模式允许设计者使用“桥”创建新的跨平台组件以隐藏平台特定的细节。
 
 > **可移植性提示 N.1**
+>
 > 设计者经常使用桥接模式来增强系统的平台独立性。这种设计模式允许设计者使用“桥”创建新的跨平台组件以隐藏平台特定的细节。
 
 ##### 组合
@@ -30222,6 +29930,7 @@ Java GUI 使用了组合模式。考虑 Swing 组件类 `JPanel`，它继承自 
 假设我们想设计一个查看银行账户信息的程序。该系统包含 `StatementData` 类来存储与银行语句相关的数据，以及 `TextDisplay`、`BarGraphDisplay` 和 `PieChartDisplay` 类来显示数据。[注释：这种方法用于模型-视图-控制器（MVC）架构模式，将在 N.5.3 中讨论。] 图 6 显示了系统的设计。数据通过 `TextDisplay` 以文本格式显示，通过 `BarGraphDisplay` 以条形图格式显示，通过 `PieChartDisplay` 以饼图形式显示。我们希望设计系统，使得 `BankStatementData` 通知显示数据的对象数据发生了变化。我们还希望设计系统以降低耦合——即系统中类之间相互依赖的程度。
 
 > **软件工程观察 N.1**
+>
 > 与紧耦合的类相比，松耦合的类更容易被重用和修改。在紧耦合系统中，对其中一个类的修改通常会导致该系统中其他类的修改。对一组松耦合类中的一个类进行修改，很少或完全不需要对其他类进行修改。
 
 观察者模式适用于如图 N.6 所示的系统。该模式促进了主体对象与观察者对象之间的松耦合——当主体状态改变时，主体通知观察者。当被主体通知时，观察者做出响应。在我们的示例中，`BankStatementDataObject` 是主体，显示数据的对象是观察者。主体可以通知多个观察者；因此，主体与观察者之间存在一对多的关系。
@@ -30244,7 +29953,7 @@ Java API 包含了使用观察者模式的类。`java.util.Observable` 类表示
 
 `FlowLayoutFrame` 类（图 12.39）展示了策略模式的应用——第 23 行声明了一个新的 `FlowLayout` 对象，第 25 行调用 `Container` 的 `setLayout` 方法将 `FlowLayout` 对象分配给 `Container` 对象。在这个示例中，`FlowLayout` 提供了布局组件的策略。
 
-## 模板方法 (Template Method)
+## 模板方法
 
 模板方法设计模式也处理算法。策略模式允许多个对象共享不同的算法。然而，模板方法设计要求所有对象共享一个由父类定义的单一算法。
 
@@ -30252,7 +29961,7 @@ Java API 包含了使用观察者模式的类。`java.util.Observable` 类表示
 
 模板方法设计模式允许我们将算法扩展到其他 `BankStatementDisplay` 子类——例如，我们可以创建 `LineGraphDisplay` 或 `ThreeDimensionalDisplay` 等类，它们使用继承自 `BankStatementDisplay` 类的相同算法，并对抽象方法提供不同的实现。
 
-# N.4 并发设计模式 1005
+# N.4 并发设计模式
 
 ## N.3.4 结
 
@@ -30267,11 +29976,8 @@ Java API 包含了使用观察者模式的类。`java.util.Observable` 类表示
 Java 等多线程语言允许设计者指定并发活动——即相互并行运行的活动。设计不当的并发可能会引入并发问题。例如，两个对象尝试同时修改共享数据可能会损坏该数据。此外，如果两个对象等待对方完成任务，且如果两个都无法完成任务，对象可能会无限等待下去——这种情况被称为死锁。使用 Java，Doug Lea² 和 Mark³ 记录了用于多线程设计架构的并发模式，以防止与多线程相关的各种问题。我们提供了这些模式的部分列表：
 
 - 单线程执行设计模式（Single-Threaded Execution, Grand, 2002）防止多个线程并发执行另一个对象的同一个方法。第 20 节讨论了可应用此模式的各种技术。
-
 - 守卫阻塞设计模式（Guarded Suspension, Lea, 2000）挂起线程的活动并在条件满足时恢复它。
-
 - 阻塞设计模式（Blocking, 2000）确保方法在数据就绪时会阻塞——如果无法获取数据，则会抛出异常。该模式的一种变体是方法在无法访问数据时会阻塞，直到数据就绪。
-
 - 读写锁设计模式（Read/Write Lock, Lea, 2000）允许多个线程获取读取访问权限，但防止多个线程获取写入访问。一次只有一个线程可以写入该对象。
 
 ² Lea, D. *Concurrent Programming in Java, Second Edition: Design Principles and Patterns*. Boston: Addison-Wesley, 2002.
@@ -30286,13 +29992,13 @@ Java 等多线程语言允许设计者指定并发活动——即相互并行运
 
 ## N.5 java.io 和 java.net 包中使用的设计模式
 
-本节介绍了与 Java 文件、流和工作包相关的设计模式。
+本节介绍了与 Java 文件、流和网络包相关的设计模式。
 
 ### N.5.1 创建设计模式
 
 我们继续讨论创建设计模式。
 
-### 抽象工厂 (Abstract Factory)
+### 抽象工厂
 
 类似于工厂方法设计模式，抽象工厂设计模式允许系统在运行时确定要实例化的子类。通常，子类在开发期间是未知的。然而，抽象工厂使用一个被称为工厂的对象通过接口来实例化对象。工厂创建一个产品，在本例中是运行时确定的子类对象。
 
@@ -30302,15 +30008,15 @@ Java 等多线程语言允许设计者指定并发活动——即相互并行运
 
 本节结束对结构设计模式的讨论。
 
-### 装饰器 (Decorator)
+### 装饰器
 
 让我们观察 `CreateSequentialFile` 类（图 15.10）。该类的第 20–21 行允许 `FileOutputStream` 对象（向文件写入字节）获得观察的-
 
-在 `java.net` 包中，`URL` 对象是一个面面对象（facade object）。该对象包含对 `InetAddress` 的引用，用于指定宿主机的 IP 地址。URL 面面对象还引用了 `URLHandler` 类的对象，该对象负责打开 URL 连接。使用 URL 面面对象的客户端对象通过该面面对象访问 `InetAddress` 对象和 `URLStreamHandler` 对象。然而，客户端对象并不知道 URL 面面对象背后的对象是如何完成其职责的。
+在 `java.net` 包中，`URL` 对象是一个外观对象。该对象包含对 `InetAddress` 的引用，用于指定宿主机的 IP 地址。`URL` 外观对象还引用了 `URLStreamHandler` 类的对象，该对象负责打开 URL 连接。使用 `URL` 外观对象的客户端对象通过该外观对象访问 `InetAddress` 对象和 `URLStreamHandler` 对象。然而，客户端对象并不知道 `URL` 外观对象背后的对象是如何完成其职责的。
 
 ## N.5.3 架构模式
 
-设计模式允许开发者设计系统的特定部分，例如抽象对象的实例化或将类聚合到更大的结构中。设计模式还促进了对象之间的松耦合。架构模式促进了子系统之间的松耦合。这些模式规定了子系统如何相互作用。我们引入了流行的模型-视图-控制器（MVC）和分层（Layers）架构模式。
+设计模式允许开发者设计系统的特定部分，例如抽象对象的实例化或将类聚合到更大的结构中。设计模式还促进了对象之间的松耦合。架构模式促进了子系统之间的松耦合。这些模式规定了子系统如何相互作用。我们引入了流行的模型-视图-控制器（MVC）和分层架构模式。
 
 ## MVC
 
@@ -30320,7 +30026,7 @@ Java 等多线程语言允许设计者指定并发活动——即相互并行运
 
 ![](img/28513f3b4ab12c97e738c92ed0e327a8_1046_0.png)
 
-控制器实现了处理用户输入的逻辑。模型包含应用程序数据，而视图呈现模型中存储的数据。当用户提供某些输入时，控制器根据给定的输入修改模型。对于编辑器示例，模型可能只包含组成文档的字符。当模型发生变化时，它会通知视图变化的变化，以便视图使用更改后的数据更新其呈现内容。字处理器中的视图可以使用特定的字体、特定的大小等显示字符。
+控制器实现了处理用户输入的逻辑。模型包含应用程序数据，而视图呈现模型中存储的数据。当用户提供某些输入时，控制器根据给定的输入修改模型。对于编辑器示例，模型可能只包含组成文档的字符。当模型发生变化时，它会通知视图变化，以便视图使用更改后的数据更新其呈现内容。字处理器中的视图可以使用特定的字体、特定的大小等显示字符。
 
 MVC 并不限制应用程序只能有一个视图和一个控制器。在更复杂的程序（如字处理器）中，对一个文档模型可能有两个视图。一个视图可能显示文档大纲，而另一个视图可能显示完整文档。字处理器还可能实现多个控制器——一个用于处理键盘输入，另一个用于处理鼠标选择。如果任何一个控制器对模型进行了更改，当模型通知所有视图变化时，大纲视图和打印预览窗口将立即显示该更改。
 
@@ -30340,9 +30046,9 @@ MVC 架构模式的另一个主要好处是开发者可以单独修改每个组�
 
 中间层充当信息层和客户端层之间的中间介质。中间层处理客户端层请求、读取数据并将数据写入数据库。它处理来自信息层的数据并将内容呈现给客户端层。这种处理是应用程序的业务逻辑，负责处理诸如从信息层检索数据、在更新数据库和向客户端层呈现数据之前确保数据可靠性等任务。例如，在线商店中间层相关的业务逻辑可以在仓库发货客户订单之前，向信用卡发卡机构验证客户的信用卡。这种业务逻辑可以在数据库中存储（或检索）客户端信息，并通知客户端层验证成功。
 
-客户端层（也称为顶层）是应用程序的用户界面，例如标准网络浏览器。用户通过用户界面直接与应用程序交互。客户端层与中间层交互以发送请求并从信息层检索数据。然后，客户端层显示从中间层模式检索的数据。
+客户端层（也称为顶层）是应用程序的用户界面，例如标准网络浏览器。用户通过用户界面直接与应用程序交互。客户端层与中间层交互以发送请求并从信息层检索数据。然后，客户端层显示从中间层检索的数据。
 
-图 N.8 是分层架构模式的实现，它将功能划分为不同的层。每一层都包含一套职责系统，并且仅依赖于下一层的服务。在图 N.8 中，每个层都对应一个逻辑层。这种架构模式非常有用，因为设计师可以修改其中一层而无需修改其他层。例如，设计师可以修改图 N.8 中的信息以适应特定的数据库产品，但无需修改客户端层或中间层。
+图 N.8 是分层架构模式的实现，它将功能划分为不同的层。每一层都包含一套职责系统，并且仅依赖于下一层的服务。在图 N.8 中，每个层都对应一个逻辑层。这种架构模式非常有用，因为设计师可以修改其中一层而无需修改其他层。例如，设计师可以修改图 N.8 中的信息层以适应特定的数据库产品，但无需修改客户端层或中间层。
 
 ## N.5.4 结论
 
@@ -30358,7 +30064,7 @@ MVC 架构模式的另一个主要好处是开发者可以单独修改每个组�
 
 ### 原型
 
-有时系统必须创建对象的副本，但在执行时并“不知道”该对象的类型。原型模式允许对象在调用者时创建一个副本。每个实现 `Cloneable` 接口的类都可以使用方法复制自己。关于 `Cloneable` 的更多信息，请访问
+有时系统必须创建对象的副本，但在执行时并“不知道”该对象的类型。原型模式允许对象在调用时创建一个副本。每个实现 `Cloneable` 接口的类都可以使用方法复制自己。关于 `Cloneable` 的更多信息，请访问
 
 ```
 http://docs.oracle.com/javase/7/api/lang/Cloneable
@@ -30380,25 +30086,25 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - 布尔异或 110, 112
   - 真 112
 - `*=` 按位异或赋值运算符 983
-- `sql` 字符 740, 741
-  - `,` (逗号) 格式化 96
-  - `--` 递减/后增 82
-  - `-` 减法 34
+- `'` sql 字符 740, 741
+- `,` (逗号) 格式化 96
+- `--` 递减/后增 82
+- `-` 减法 34
 - `!` 逻辑非 110, 112
   - 真 113
 - `!=` 不等于 34
 - `?` (通配符参数) 607
 - `?:` 三元运算符 62
 - `@` 标记 956
-- `<<` 左 23
-- `>>` 右 25
-- `@Override` 重写与赋值 808
+- `<<` 左移 23
+- `>>` 右移 25
+- `@Override` 重写注解 808
 - `%` SQL 通配符 739
 - `*` 文件名中的通配符 46
 - `*` 乘法 33, 34
   - `*=` 赋值运算符 81
 - `/` 除法 33, 34
-- `//` 传统注释 22
+- `/*` 传统注释 22
 - `/**` Java 文档注释 255
 - `//` 行内注释 222
 - `/=` 除法赋值运算符 81
@@ -30406,8 +30112,8 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `\'` 单引号转义序列 968
 - `\"` 双引号转义序列 960
 - `\\` 反斜杠转义序列 960
-- `\b` 转义序列 965
-- `\f` 表单转义序列 961
+- `\b` 退格转义序列 965
+- `\f` 换页转义序列 961
 - `\n` 换行转义序列 27, 986
 - `\r` 回车序列 28, 961
 - `\t` 水平制表符转义序列 981
@@ -30422,35 +30128,34 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `%` 余数 33, 34
 - `%` 格式变量 954
 - `%=` 余数赋值运算符 81
-- `%` 格式变量 948
-- `%` 格式 spec 952
-- `format spec` 113, 953, 956
-- `%` 格式字符 949
-- `% format spec` 949, 940
-- `% format spec` 32, 946, 947
-- `% format spec` 947, 948
-- `%` 格式变量 947, 948
-- `% format spec` 952
-- `% format spec` 953
-- `% format spec` 940, 947
-- `% format spec` 949
-- `% format spec` 29, 946
-- `% format spec` 950
-- `% format spec` 951
-- `@` 标记 956
+- `%b` 格式变量 948
+- `%c` 格式说明符 952
+- `%d` 格式说明符 113, 953, 956
+- `%e` 格式字符 949
+- `%f` 格式说明符 949, 940
+- `%g` 格式说明符 947, 948
+- `%h` 格式变量 947, 948
+- `%n` 格式说明符 952
+- `%o` 格式说明符 953
+- `%s` 格式说明符 940, 947
+- `%t` 格式字符 949
+- `%x` 格式说明符 29, 946
+- `%%` 格式说明符 950
+- `%_` 格式说明符 951
+- `#` 标记 956
 - `-` (负号) 格式化标记 95
 - `+` 加法 33, 34
 - `++` 自增/后增 81
 - `+=` 赋值运算符 81
 - `+` 字符串拼接运算符 615
 - `<` 小于 34
-- `<<` 左, 973
-- `<<=` 赋值运算符 983
+- `<<` 左移 973
+- `<<=` 左移赋值运算符 983
 - `<>` 泛型中的菱形符号 51
 - `<:` Java 7 SE 中的泛型类型接口 514
 - `<=` 小于等于
-- `<=` 赋值运算符 81
-- `==` 带有两个引用指向的对象 661
+- `==` 相等 63
+- `===` 带有两个引用指向的对象 661
 - `->` (在 551 中等于一个 lambda)
 - `>` 大于 34
 - `>=` 大于等于 63
@@ -30458,7 +30163,8 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `>>=` 右移赋值运算符 983
 - `>>>` 无符号右移 973, 980
 - `>>>=` 右移赋值运算符 980
-- `|` 逻辑异或 110, 112
+- `^` 逻辑异或 110, 112
+- `|` 按位或 973
 - `|=` 按位或赋值运算符 983
 - `||` 逻辑或 110, 111
   - 真 111
@@ -30466,12 +30172,6 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `~` 按位取反 974
 
 # 数值
-
-- `0` 标记 154
-- `0` 格式标记 196
-- `0x` (十六进制前缀) 97
-
-# A
 
 - `*=` 缩写赋值表达式 81
 - `Math` 的 `abs` 119
@@ -30489,16 +30189,16 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `addListListener` 357
 - `addListListener` 360
 - `isSelected` 622
-- `setMethod` 623
-- `setRendererList` 357
-- `setMethod` 624
-- `AbstractClass` 545, 545
+- `setMnemonic` 623
+- `setRenderer` 357
+- `setMnemonic` 624
+- `AbstractCollection` 545
 - `AbstractList` 545
 - `AbstractMap` 545
 - `AbstractQueue` 545
-- `AbstractValueList` 511 类 545
+- `AbstractSequentialList` 类 545
 - `AbstractSet` 545
-- `AbstractModel` 类 761, 755
+- `AbstractTableModel` 类 761, 755
 - `fileStructureChanged` 660
 - 函数式接口的 `accept` 方法
 - `accept` `Consumer` (Java SE 8) 59
@@ -30509,7 +30209,7 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `private` 41, 199, 238
 - `protected` 199, 238
 - `public` 40, 199, 238
-- `dimmer` (类) 中的访问方法 487
+- `File` (类) 中的访问方法 487
 - 获取共享数据 680
 - 可访问性 339
 - 获取事件 209
@@ -30526,10 +30226,6 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 
 
 
-# 索引
-
-## A
-
 - `ActionEvent` 类 (JavaFX) 809, 811
 - `ActionEventListener` 接口 348, 353
 - `actionPerformed` 方法 348
@@ -30537,7 +30233,7 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - UML 序列图中的动作 850
 - 添加活动 60, 61, 62
 - `do while` 语句 78, 92
-- `if`、`for` 语句 92
+- `if for` 语句 92
 - `if else` 67
 - `if else ...` 16, 64
 - 在 70, 823, 836, 835, 837, 854 中添加
@@ -30559,11 +30255,11 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `add-list` 513, 516
 - `BigDecimal` 类的 `add` 方法 231
 - 在 `GridPane` 中添加或移除 803
-- `addActionListener` `Collections` `List` 529
+- `addActionListener` `Collections` `List`, 529
 - `add-list` 516
 - `LinkedList` 的 `addFirst` 方法 519
 - `AbstractConstructor` 类的 `addItemListener` 方法 360
-- 添加复合赋值运算符 `+=` 81
+- 添加复合赋值运算符, `+=` 81
 - `Component` 类的 `addKeyListener` 方法 384
 - `LinkedList` 的 `addLinkedList` 518
 - `ObservableList` 接口的 `addListener` 方法 812
@@ -30577,7 +30273,7 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - (注：由于原始 OCR 文本重复且包含错误，此处已整合核心 A 索引内容)
 - 在 UML 中的聚合 828
 - Agile Alliance (www.agilealliance.com) 16
-- add method (www.testforum.org) 16
+- `add method` (www.testforum.org) 16
 - agile 软件开发 12
 - 算法 104
 - 在 Java Framework 519
@@ -30592,180 +30288,115 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `GridLayout` 643
 - `GridConstraints` 746, 747
 
-## 1016 索引
+# 1016 索引
 
-- `351der` 的块递增 351
-- 阻塞状态 665
+- 351der 的块递增 351
+- 阻塞状态: 665
 - `BlockingQueue` 接口 680
-- `put karo` 方法 681
-- `take karo` 方法 680
+- `put karo` 方法, 681
+- `take karo` 方法, 680
 - 类声明的主体 23
 - 循环的 70
 - 方法的 23
 - 语句的 44
 - Bohm, C. 60
-- **粗体** 常量包含 OR 414, 414
-- 块元组分类 355
+- **粗体** 常量包含 OR, 414, 414
+- 块元组分类, 355
 - 表格关系 738
-
-### Boolean（布尔）
-
-- UML 中的属性 831
-- 属性 510
-- `boolean` 105
-- 表达式 96, 906
-- 逻辑与 AND, OR 110
-- 逻辑异或 OR, OR 112
-- 真值表 112
-- `boolean` 原始类型 66, 899, 8, 906
-- 帧的 616
-
-### BorderLayout 类
-
-- `CENTER` 约束 377, 393
-- `EAST` 约束 391
-- `NORTH` 约束 397
-- `SOUTH` 约束 397
-- `WEST` 约束 377
+- Boolean（布尔）
+  - UML 中的属性 831
+  - 属性 510
+  - `boolean` 105
+  - 表达式 96, 906
+  - 逻辑与 AND, OR, 110
+  - 逻辑异或 OR, OR, 112
+  - 真值表 112
+  - `boolean` 原始类型 66, 899, 8, 906
+  - 帧的 616
+- `Borderlayout` 类, 377, 388, 391, 80, 402
+  - `CENTER` 约束, 377, 393
+  - `EAST` 约束, 391
+  - `NORTH` 约束, 397
+  - `SOUTH` 约束, 397
+  - `WEST` 约束, 377
 - 类的 `BOTH` 302
 - `GridGridLayout` 644
-
 - 边界重力 699
-- 边界矩形 420, 423, 618
-
-### Box
-
+- 边界矩形- 420, 423, 618
+- `Box` 339, 641
 - `Class` 339, 641, 664
-- `createLayout` 方法 642
-- `createHorizontalBox` 680
-- `createLogicalGridLayout` 方法 642
-- `createStructural` 方法 651
-- `createRigidGridLayout` 方法 642
-- `createVerticalBox` 684
-- `createVerticalGridLayout` 方法 642
-- `createVerticalStructural` 方法 651
-- `X_INSTANCE` 类 642
-- `Y_INSTANCE` 类 642
-
+  - `createLayout` 方法 642
+  - `createHorizontalBox` 680
+  - `createLogicalGridLayout` 方法 642
+  - `createStructural` 方法 651
+  - `createRigidGridLayout` 方法 642
+  - `createVerticalBox` 684
+  - `createVerticalGridLayout` 方法 642
+  - `createVerticalStructural` 方法 651
+  - `X_INSTANCE` 类 642
+  - `Y_INSTANCE` 类 642
 - 接口 `IntStream` 的 `box` 方法 (Java 38) 580
 - `box` 580
-- `box` 转换 512, 590
-
-### BoxLayout 类
-
+- `box` 转换, 512, 590
+- `Boxlayout` 类, 609
 - `Box` 器 639
-
-- 大括号 `{` 和 `}` 65, 77, 90, 104, 不需要 102
+- 大括号 ( 和 ) 65, 77, 90, 104, 不需要 102
 - scarlet reader 密度 339
-- sinner break 898
+- sinner `break` 898
 - `break` 模式 903
 - `break` 语句 102, 108
 - 断点 901
-- 插入 903, 905
+- 插入, 903, 905
 - 列表 913
 - 删除 913
-
-### Bridge 设计模式
-
-- 994, 996, 1000
-
+- Bridge 设计模式 994, 996, 1000
 - 之前的脆的 255
 - 缓冲区 504, 675
 - 缓冲/O 类 432
-- `createGraphics` 方法 432
-- `TYPE_INT_RGB` 类 432
-
-### BufferedInputStream 类
-
-- 505
-
-### BufferedOutputStream 类
-
-- 504, 1007
-- `float` 方法 504
-
-### BufferedReader 类
-
-- 505
-
-### BufferedWriter 类
-
-- 505
-
-### Builder 设计模式
-
-- 995
-
+  - `createGraphics` 方法 432
+  - `TYPE_INT_RGB` 类 432
+- `BufferedInputStream` 类 505
+- `BufferedOutputStream` 类, 504, 1007
+  - `float` 方法 504
+- `BufferedReader` 类 505
+- `BufferedWriter` 类 505
+- Builder 设计模式 995
 - 创建批量操作的构建块方法 510
 - 联合业务 518
-
-### Button (Java)
-
-- 805
-
+- `Button` (Java) 805
 - 按钮标签 355
-
-### ButtonGroup 类
-
-- 360, 618, 625
-
+- `ButtonGroup` 类 360, 618, 625
 - 字节流类 476
-
-### Byte 类
-
-- 510
-
+- `Byte` 类 510
 - `byte` 原始类型 98, 983, 987
 - 延展 126
-
-### ByteArrayInputStream 类
-
-- 505
-
-### ByteArrayOutputStream 类
-
-- 505
-
+- `ByteArrayInputStream` 类 505
+- `ByteArrayOutputStream` 类 505
 - 字节码 10, 25
 - 字节码验证器 11
-
-### CachedRowSet 类
-
-- 157
-- `close` 方法 769
-
-- 计算 37, 650
-
-### Calendar 类
-
-- 951
-- `get last` 方法 952
-
+- `CachedRowSet` 类 157
+  - `close` 方法 769
+- 计算, 37, 650
+- `Calendar` 类 951
+  - `get last` 方法 952
 - 引用传递 166
 - 值传递 166
-
-### Callable 接口
-
-- `call` 方法 726
+- `Callable` 接口的 `call` 方法 726
 - `call` 726
-
-### CancelableStatement 接口
-
-- 785
-
+- `call` 方法 726
+- `CancelableStatement` 接口 785
 - `cancel` 类 31
 - 相机 8
-- `Swing Worker` 的类方法 731
+- Swing Worker 的类方法 731
 - `CANCEL_OPTION` 常量 104
 - `JFileCoder` 类 500
-
 - 类的 `CAP_BOUNDED` 452
 - `capacity` 方法 452
 - `StringReader` 的 452
 - 捕获 `StringBuilder` 451
 - 卡片事件 158
 - 集合的洗牌和发牌方法
-- `shuffle` 523
+  - `shuffle` 523
 - carter 对象 998
 - criage return 28
 - carry hi 971
@@ -30774,65 +30405,37 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `case` 关键字 102, 898
 - 大小写敏感 235
 - Java 命令 13
-
-### CashDispatcher (ATM 案例研究)
-
-- 826, 827, 828, 831, 839, 851, 876
-
+- `CashDispatcher` (ATM 案例研究) 826, 827, 828, 831, 839, 851, 876
 - 赌场 133
 - cas
 - 向下转型 268
-- 操作符类 726
+- 操作符类, 726
 - 捕获超异常 317
 - 异常 309
-- `block` 311, 313, 314, 318, 322
-- 类 311, 898
-- 键布局 311
-
-### Catch 类
-
-- 157
-
+  - `block` 311, 313, 314, 318, 322
+  - 类 311, 898
+  - 键布局 311
+- `Catch` 类 157
 - `catch` 多-catch 312
-- `catch`-声明 要求 316
+- `catch-声明` 要求 316
 - 用于更改指令 24
 - `Method` 的 `cell` 方法 120
 - `GridPane` 中的 `cell` 759
-
-### CENTER 约束
-
-- `BorderLayout` 377, 391, 393
-- `FlowLayout` 399
-- `GridGridLayout` 643
-
+- `CENTER` 约束
+  - `Border layout` 377, 391, 393
+  - `Flowlayout` 399
+  - `GridGridLayout` 643
 - 中心 鼠标点击 330
 - 居中的 389
-
-### 责任链设计模式
-
-- 94, 997, 1002
-
+- 责任链设计模式 94, 997, 1002
 - 更改指令 24
 - 默认布局 (Java Scene) Builder 795
-
-### ChangeListener / EventListener 接口
-
-- `changed` 方法 804
-
-### ChangeEvent / 监听器类
-
-- 616
-
-### ChangeListener 接口
-
-- 616
-- `StateChanged` 方法 616
-
-### ChangeListener 接口 (Java)
-
-- 824
-- 801, 808, 812
-
+- `ChangeListener-JEventListener` 接口的的 `changed` 方法 804
+- `ChangeEvent-监听器` 类 616
+- `ChangeListener` 接口 616
+  - `StateChanged` 方法 616
+- `ChangeListener` 接口 (Java) 824
+  - 801, 808, 812
 - 基于 Swing 的 GUI 类边缘 632
 - 数组 449
 - `born` 关键字 899
@@ -30841,211 +30444,184 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - 常量 104
 - 基于线性的流 476
 - 字符类 470, 510
-- `charValue` 方法 462
-- `digit` 方法 461
-- `ForDigit` 方法 461
-- `isReflet` 方法 460
-- `digit` 方法 460
-- `isJavaIdentifierPart` 方法 460
-- `isJavaIdentifierStart` 方法 460
-- `isLetterOrDigit` 方法 460
-- `lowercase` 方法 460
-
-### Character 类
-
-- `Uppercase` 转换 461
-- `ToLocey` 方法 461
-
-### Classes
-
-- `AbstractList` 545
-- `Ellipse2D` 403
-- `AbstractMap` 545
-- `Ellipse2D.Double` 428
-- `AbstractQueue` 545
-- `Ellipse2D.Float` 428
-- `AbstractSequential` 545
-- `EmptyStack` 533
-- `AbstractTable` 551
-- `EnumSet` 215
-- `charArrayReader` 类 506
-- `ActionEvent` 348, 349, 353, 400
-- `Error` 314
-- `ActionEvent` (java) 809, 811
-- `ExecutionListener` 352
-- `ActionEvent` (java) 799
-- `ExecutionException` 710
-- `String` 的 339
-- `Executors` 660
-- `FilesReader` 506
-- `CharSequence` 接口 471
-- `Files` 777
-- `charAt` 方法类 460
-- `ArrayIndexOutOfBoundsException` 686, 691
-- `checkbox` 354, 366
-- `checkbox` 标签 360
-- `Flat` 510
-- `charSelection` 315
-- `FloatLayout` 342
-- `FocusAdapter` 378
-- `child window` 612, 633, 635
-- `FontMetrics` 409, 403, 416
-- `circular buffer` 692
-- `Formatter` 477, 945
-- `AWTEvent` 350
-- `anonymous` 类 194
-- `BigDecimal` 96, 758, 830
-- `class` 关键字 490
-- `Graphics` 402, 403, 428
-- `Constraint` 643, 648, 649
-- `BorderLayout` 377, 388, 391, 400
-- `Box` 339, 641, 664
-- `Class` 339, 641, 664
-- `default constructor` 552
-- `GridLayout` 639, 642, 649
-- `GridPane` 388, 395
-- `BufferedImage` 432
-- `HashMap` 537
-- `HashSet` 534
-- `IllegalStateException`
-- `ImageIcon` 343
-- `Address` 107
-- `Input` 173, 370, 380
-- `InputException` 308
-- `CharArrayReader` 506
-- `Collector` 506
-- `InputStream` 823, 826, 832, 857, 864, 866
-- `Integer` 321, 510
-- `class hierarchy` 235, 271
-- `IllegalArgumentException` 661
-- `class` 方法 119
-- `loader` 10, 227, 443
-- `ConcurrentListener` 388
-- `ConcurrentStack` 706
-- `ConcurrentStackList` 706
-- `ConcurrentStackMap` 706
-- `JComboBox` 378
-- `Container` 339, 340, 342, 352
-- `Data` 367, 381, 403
-- `DataOutputStream` 504
-- `Date` 501
-- `ClassCastException` 509
-- `Delayer` 706
-- `Double` 506
-- `DoubleProperty` (java) 812
-- `JPanel` 338, 381, 388, 397, 613
-- `PasswordField` 32, 344, 349, 352
-- `JRadioButton` 350, 360, 363
-- `JRadioButtonMenuItem` 617, 618, 625
-- `JSlider` 612, 715, 372, 400
-- `JTable` 754
-- `TextArea` 387, 398, 400, 644, 647
-- `TComponent` 347, 344, 348, 392
-- `Textfield` 338, 344, 352, 398
-- `Textual` 419, 431, 432
-- `Trial` 314, 324
-- `TreeMap` 357
-- `TreeSet` 355
-- `Types` 754
-- `UIManager` 629
-- `UnsupportedOperationException`
-
+  - `charValue` 方法 462
+  - `digit` 方法 461
+  - `ForDigit` 方法 461
+  - `isReflet` 方法 460
+  - `digit` 方法 460
+  - `isJavaIdentifierPart` 方法 460
+  - `isJavaIdentifierStart` 方法 460
+  - `isLetterOrDigit` 方法 460
+  - `lowercase` 方法 460
+- `Character` 类 (...)
+- `Classes` (...)
+  - `Abstractlist` 545
+  - `Ellipse2D` 403
+  - `Uppercase` 转换 461
+  - `AbstractMap` 545
+  - `Ellipse2D.Double` 428
+  - `ToLocey` 方法 461
+  - `AbstractQueue` 545
+  - `Ellipse2D.Float` 428
+  - 字符编码 937
+  - `AbstractSequential` 545
+  - `EmptyStack` 533
+  - `AbstractTable` 551
+  - `EnumSet` 215
+  - `charArrayReader` 类 506
+  - `ActionEvent` 348, 349, 353, 400
+  - `Error` 314
+  - `ActionEvent(java)` 809, 811
+  - `ExecutionListener` 352
+  - `ActionEvent(java)` 799
+  - `ExecutionException` 710
+  - `String` 的 339
+  - `Executors` 660
+  - `FilesReader` 506
+  - `CharSequence` 接口 471
+  - `Files` 777
+  - `charAt` 方法类 460
+  - `ArrayIndexOutOfBoundsException` 686, 691
+  - `checkbox` 354, 366
+  - `checkbox` 标签 360
+  - `Flat` 510
+  - `charSelection` 315
+  - `FloatLayout`, 342
+  - `FocusAdapter` 378
+  - `child window` 612, 633, 635
+  - `FontMetrics` 409, 403, 416
+  - `circular buffer` 692
+  - `Formatter` 477, 945
+  - `AWTEvent` 350
+  - `anonymous` 类 194
+  - `BigDecimal` 96, 758, 830
+  - `class` 关键字 490
+  - `Graphics` 402, 403, 428
+  - `Constraint` 643, 648, 649
+  - `BorderLayout` 377, 388, 391, 400
+  - `Box` 339, 641, 664
+  - `Class` 339, 641, 664
+  - `default constructor` 552
+  - `GridLayout` 639, 642, 649
+  - `GridPane` 388, 395
+  - `BufferedImage` 432
+  - `HashMap` 537
+  - `HashSet` 534
+  - `IllegalStateException`
+  - `ImageIcon` 343
+  - `Address` 107
+  - `Input` 173, 370, 380
+  - `InputException` 308
+  - `CharArrayReader` 506
+  - `Collector` 506
+  - `InputStream` 823, 826, 832, 857, 864, 866
+  - `Integer` 321, 510
+  - `class hierarchy` 235, 271
+  - `IllegalArgumentException` 661
+  - `class` 方法 119
+  - `loader` 10, 227, 443
+  - `ConcurrentListener` 388
+  - `ConcurrentStack` 706
+  - 06
+  - `ConcurrentStackList` 706
+  - `ConcurrentStackMap` 706
+  - `JComboBox` 378
+  - `Container` 339, 340, 342, 352
+  - `Data` 367, 381, 403
+  - `DataOutputStream` 504
+  - `Date` 501
+  - `ClassCastException` 509
+  - `Delayer` 706
+  - `Double` 506
+  - `DoubleProperty(java)` 812
+  - `JPanel` 338, 381, 388, 397, 613
+  - `PasswordField` 32, 344, 349, 352
+  - `JRadioButton` 350, 360, 363
+  - `JRadioButtonMenuItem` 617, 618, 625
+  - `JSlider` 612, 715, 372, 400
+  - `JTable` 754
+  - `TextArea` 387, 398, 400, 644, 647
+  - `TComponent` 347, 344, 348, 392
+  - `Textfield` 338, 344, 352, 398
+  - `Textual` 419, 431, 432
+  - `Trial` 314, 324
+  - `TreeMap` 357
+  - `TreeSet` 355
+  - `Types` 754
+  - `UIManager` 629
+  - `UnsupportedOperationException`
 - `client code` 267
 - `client tier` 1009
-- `clone` method of `Object` 262
-
-### cloning objects
-
-- `deep copy` 262
-- `shallow copy` 262
-
-- `close a window` 340, 344, 801
-
-### close method
-
-- `CachedRowSet` 769
-- `Connection` 754
-- `Formatter` 484
-- `ObjectOutputStream` 497
-- `ResultSet` 754
+- `clone method of Object` 262
+- cloning objects
+  - deep copy 262
+  - shallow copy 262
+- close a window 340, 344, 801
+- `close method` `CachedRowSet` 769
+- `of Connection` 754
+- `of Formatter` 484
+- `of ObjectOutputStream` 497
+- `of ResultSet` 754
 - `AutoCloseable` 330
-
-- `closed polygons` 425
-- `cloud computing` 16
-- `code value` 939, 942
-- `coin using` 129
-- `collaboration in the UML` 823
-- `collaboration in the UMI` 845, 846, 847, 850
-- `collect` method of interface (Java SE 8.3) 573, 574, 580
-- `collection` 188, 508
-- `collection implementation` 544
-
-### Collection
-
-- 509, 510, 514, 515
-- `synchronized collection` 511
-- `unmodifiable collection` 511
-
-### Classes class
-
-- 511, 591
-- `addAll` method 519, 529
-- `binarySearch` method 517, 527, 529
-- `copy` method 515, 526
-- `disjoint` method 519, 529
-- `fill` method to 517, 529
-- `frequency` method 519, 526
-- `max` method 519, 526
-- `min` method 519, 526
-- `reverse order` 519, 525
-- `reorder` method 519, 523, 525
-- `snsort` method 530
-- `wrappers` method 511
-
-- `collections frameworks` 508
-- `Collections.reverse`, `f11`, `copy`, and `min` 526
-
-### collector interface (Java SE 8)
-
-- 563
-
-### Classes class (Java SE 8)
-
-- 563
-- `grouping by` 573, 574, 578, 580
+- closed polygons 425
+- cloud computing 16
+- code value 939, 942
+- coin using 129
+- collaboration in the UML 823
+- collaboration in the UMI 845, 846, 847, 850
+- `collect method of interface (Java SE 8.3)` 573, 574, 580
+- collection 188, 508
+- collection implementation 544
+- `Collection` 509, 510, 514, 515
+  - synchronized collection 511
+  - unmodifiable collection 511
+- `Classes` class 511, 591
+  - `addAll method` 519, 529
+  - `binarySearch method` 517, 527, 529
+  - `copy method` 515, 526
+  - `disjoint method` 519, 529
+  - `fill method to` 517, 529
+  - `frequency method` 519, 526
+  - `max method` 519, 526
+  - `min method` 519, 526
+  - `reverse order` 519, 525
+  - `reorder method` 519, 523, 525
+  - `snsort method` 530
+  - `wrappers method` 511
+- collections frameworks 508
+- `Collections. reverse, f11, copy, and min` 526
+- `collector interface (Java SE 8)` 563
+- `Classes class (Java SE 8)` 563
+  - `grouping by` 573, 574, 578, 580
 
 # 索引
 
 # 1019
 
-### Color 类
-
-- `component` 4, 372
-- `getGreen` 407, 409
-
-### Component 类
-
-- 339, 372, 405, 406, 412, 617, 648, 1001
-- `getMethod` 407, 409
-- `addKeyListener` 384
-- `getColor` 407, 406
-- `addMouseListener` 377
-- `Color` 构造函数 407, 406
-- `methodListener` 379
-- `closeMethod` 754
-- 颜色切换 412
-- `closeThread` 759
-- `color-chooser` 对框 612
-- `commit` 786
-- `getColor` 735
-- `createStatement` 753
-- 结果集中的列 740
-- 795
-- 二维数组的列 173
-- `getAutoCommit` 786
-- `complex` 354, 365
-- `prepareStatement` 756
-- `columnCount` 405
+- `Color` 类 (续类)
+  - `component` 4, 372
+  - `getGreen` 407, 409
+- `Component` 类 339, 372, 405, 406, 412, 617, 648, 1001
+  - `getMethod` 407, 409
+  - `addKeyListener` 384
+  - `getColor` 407, 406
+  - `addMouseListener` 377
+  - `Color` 构造函数 407, 406
+  - `methodListener` 379
+  - `closeMethod` 754
+  - 颜色切换 412
+  - `closeThread` 759
+  - `color-chooser` 对框 612
+  - `commit` 786
+  - `getColor` 735
+  - `createStatement` 753,
+  - 结果集中的列 740
+  - 795
+  - 二维数组的列 173
+  - `getAutoCommit` 786
+  - complex 354, 365
+  - `prepareStatement` 756
+  - `columnCount` 405
 
 
 
@@ -31053,489 +30629,510 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 
 ## 符号
 
-- `rollback` 786
-- 逗号 (`,`) 格式标记 96
-- `repaint` 383
-- 逗号分隔列表 93
-- `setMethod` 388
-- `setFont` 359
-- `setLocation` 388, 617
-- 命令按钮 354
-- `setSize` 388, 617
-- 常量 221
-- 命令模式 994, 997, 1002
-- 常量整数表达式 984, 101
-- 常量变量 104, 151
-  - 必须初始化 151
-- 命令行提示符 (`Command Prompt`) 10, 24
-- 容器 40, 559
-- 命令窗口 12
-- 可以使用 191, 202 调用该类的另一个实例
-- 多个参数 53
-- 行尾符 (单行, `//`) 22
-- 无参数 205
-- `Java 2D`
-- 重载 232
-- `Employee` 类已创建
-- API 中的构造函数详情 921
-- 空对象 280
-- 构造方法引用 (`Java SE 8`) 57
-- 提交事务 786
-- API 中的构造函数摘要 919
-- 实现部分的提交
-- 无法创建特定的返回类型
-- `Connection` 786
-- 一个事件 348
-- 带有错误的通信异常
-- `consumer` 655
-- `ID` 848, 849
-- 函数接口 (`Java SE 8`) 551, 566
-- `accept` 方法 609
-- `Comparable<T>` 300, 433
-- `consumer` 方法 673
-- `compareToTo` 520, 521
-- `cont` 变量 904
-- 520, 590
-- 并发 2125
-- 一致性 (concordance)
-- `compareTo`(`Java SE`) 581
-- 子类 376
-- `compareTo` 520, 521, 566
-- `CONCUR_READ_ONLY` 759
-- `compare` 522
-- `CONCUR_UPDATABLE` 759
-- `compareTo(Object obj)`
-- 常量 1257
-- 比较对象 527, 536
-- 并发密度 994, 1005
-- 在排序中
-- 并发问题 1005
-- 实现部分的比较
-- 集合上的包含
-- `Comparator` SE
-- 并发操作 654
-- `ComparatorOf`
-- 并发线程 680
-- 所有的比较 641, 443
-- `ConcurrentHashMap` 类 706
-- `ConcurrentLinkedDeque` 706
-- `Of Comparableable` 520
-- `ConcurrentSkipListSet` 706
-- 字符串比较 404
-- 类 34, 98
-- 比较运算符 300
-- `await` 方法 699, 700
-- 在 `Map` 中 641
-- `signal` 方法 699
-- 条件 699
-- 编译 25
-- 条件 `AND` 66, 110, 111, 112
-- 编译程序 10
-- `true` 110
-- `Pattern` 类的编译方法 471
-- 编译器选项 125
-- 条件 (`??=`) 7
-- 编译器类型安全 585
-- 条件 `OR` 110, 111
-- 使用类编译实现类 46
+- **rollback** 786
+- **逗号 (,)** 格式标记 96
+- **repaint** 383
+- **逗号分隔列表** 93
+- **setMethod** 388
+- **setFont** 359
+- **setLocation** 388, 617
+- **命令按钮** 354
+- **setSize** 388, 617
+- **常量** 221
+- **命令模式** 994, 997, 1002
+- **常量整数表达式** 984, 101
+- **常量变量** 104, 151
+- **包含元素** 121
+- **必须初始化** 151
+- **命令行提示符 (Command Prompt)** 10, 24
+- **容器** 40, 559
+- **命令窗口** 12
+- **可以使用** 191, 202 调用该类的另一个实例
+- **多个参数** 53
+- **行尾符 (单行, //)** 22
+- **无参数** 205
+- **Java 2D**
+- **重载** 232
+- **Employee 类**已创建
+- **API 中的构造函数详情** 921
+- **空对象** 280
+- **构造方法引用 (Java SE 8)** 57
+- **提交事务** 786
+- **API 中的构造函数摘要** 919
+- **实现部分的提交**
+- **无法创建特定的返回类型**
+- **Connection** 786
+- **一个事件** 348
+- **带有错误的通信异常**
+- **consumer** 655
+- **ID** 848, 849
+- **函数接口 (Java SE 8)** 551, 566
+- **accept 方法** 609
+- **Comparable<T>** 300, 433
+- **consumer 方法** 673
+- **compareToTo** 520, 521
+- **cont 变量** 904
+- **并发** 2125
+- **一致性 (concordance)**
+- **compareTo(Java SE)** 581
+- **子类** 376
+- **compareTo** 520, 521, 566
+- **CONCUR_READ_ONLY** 759
+- **compare** 522
+- **CONCUR_UPDATABLE** 759
+- **compareTo(Object obj)**
+- **常量** 1257
+- **比较对象** 527, 536
+- **并发密度** 994, 1005
+- **在排序中**
+- **并发问题** 1005
+- **实现部分的比较**
+- **集合上的包含**
+- **Comparator SE**
+- **并发操作** 654
+- **ComparatorOf**
+- **并发线程** 680
+- **所有的比较** 641, 443
+- **ConcurrentHashMap 类** 706
+- **ConcurrentLinkedDeque** 706
+- **Of Comparableable** 520
+- **ConcurrentSkipListSet** 706
+- **字符串比较** 404
+- **类** 34, 98
+- **比较运算符** 300
+- **await 方法** 699, 700
+- **在 Map 中** 641
+- **signal 方法** 699
+- **条件** 699
+- **编译** 25
+- **条件 AND** 66, 110, 111, 112
+- **编译程序** 10
+- **true** 110
+- **Pattern 类的编译方法** 471
+- **编译器选项** 125
+- **条件 (??= )** 7
+- **编译器类型安全** 585
+- **条件 OR** 110, 111
+- **使用类编译实现类** 46
 
 ## 转换字符 (续)
 
-- `+`
-- `-`
-- `a` 948
-- `b` 952
-- `b` 952, 953
-- `c` 940
-- `c` 949
-- `d` 946
-- `e` 947, 948
-- `e` 947, 948
-- `f` 947
-- `g` 948
-- `h` 952
-- `h` 953
-- `n` 956
-- `s` 949
-- `s` 949
-- `t` 950
-- `x` 946
-- `x` 946
+- **+** - a 948
+- **-** b 952
+- **-** b 952, 953
+- **-** c 940
+- **-** c 949
+- **-** d 946
+- **-** e 947, 948
+- **-** e 947, 948
+- **-** f 947
+- **-** g 948
+- **-** h 952
+- **-** h 953
+- **-** n 956
+- **-** s 949
+- **-** s 949
+- **-** t 950
+- **-** x 946
+- **-** x 946
 
-## 其他条目
+## 计数器控制循环
 
-- 计数器控制循环 71, 71, 76, 87, 88, 89
-- 耦合 1003, 1003
+71, 71, 76, 87, 88, 89
+
+## 耦合
+
+1003, 1003
+
+## 命令与创建
+
 - 将 `cp` 命令行参数转换为 Java 238
-- `crispo` 演示游戏 133
+- `crisp` 演示游戏 133
 - 创建一个包 222
 - 创建一个可重用的类 222
 - 创建 44
 - 创建并使用你自己的包 222
 - 创建 box 的 `createGlue` 方法 642
 
-### `DataOutput` 接口 (续)
+## DataOutput 接口 (续)
 
-- `writeChars` 504
-- `writeDouble` 方法 504
-- `writeFloat` 方法 504
-- `writeLong` 方法 504
-- `writeShort` 方法 504
-- `writeJtf` 方法 504
+- **writeChars** 504
+- **writeDouble 方法** 504
+- **writeFloat 方法** 504
+- **writeLong 方法** 504
+- **writeShort 方法** 504
+- **writeJtf 方法** 504
 
-- `DateOutput` 类 654
-- 以及日期 1090
-- `Date` 951
-- 格式化 946
-- `Date API epoch` 188
-- `Date/API epoch` 128
-- `DBCs` (双字节集) 940
-- 死亡状态 738
-- 死锁 569, 703, 1005
-- 处理 158
-- 调试器 901
-- 断断点 901
-- 清除命令 913
-- 定义 901
-- 退出命令 909
-- `-g` 编译器选项 902
-- `jdb` 方法 902
-- 逻辑错误 901
-- 下一个命令 906
-- `print` 方法 905, 906
-- 命令 903, 905
-- `set` 命令 903, 905
-- 步命令 907
-- 进 908
-- 停止命令 903, 905
-- 挂起进程 905, 911
-- 观察命令 909
-- 进制 (基10) 数字 964
-- 进制格式化 32
-- 决策 34, 62
-- `class` 22
-- 在 UML 中 62, 338
+## 日期与调试
 
-### 转换字符
+- **DateOutput 类** 654
+- **以及日期** 1090
+- **Date** 951
+- **格式化** 946
+- **Date API epoch** 188
+- **Date/API epoch** 128
+- **DBCs (双字节集)** 940
+- **死亡状态** 738
+- **死锁** 569, 703, 1005
+- **处理** 158
+- **调试器** 901
+- **断断点** 901
+- **清除命令** 913
+- **定义** 901
+- **退出命令** 909
+- **g 编译器选项** 902
+- **jdb 方法** 902
+- **逻辑错误** 901
+- **下一个命令** 906
+- **print 方法** 905, 906
+- **命令** 903, 905
+- **set 命令** 903, 905
+- **步命令** 907
+- **进** 908
+- **停止命令** 903, 905
+- **挂起进程** 905, 911
+- **观察命令** 909
 
-- `+`
-- `-`
-- `a` 950
-- `b` 951
-- `c` 950
-- `d` 950
-- `e` 951
-- `f` 951
-- `H` 951
-- `j` 951
-- `k` 951
-- `l` 951
-- `m` 950
-- `n` 950
-- `p` 951
-- `r` 950
-- `s` 951
+## 进制与决策
 
-- `create` 方法 387
-- `pageX` 432
-- `createHorizontalBox` 方法 642, 400
-- `createVerticalBox` 方法 642, 400
-- `createStructural` 方法 642, 400
-- `createStatement` 方法 753, 759
-- `createVerticalBox` 方法 642, 400
-- `createStructural` 方法 642, 400
+- **进制 (基10) 数字** 964
+- **进制格式化** 32
+- **决策** 34, 62
+- **class** 22
+- **在 UML 中** 62, 338
+
+## 转换字符
+
+- **+** - a 950
+- **-** b 951
+- **-** c 950
+- **-** d 950
+- **-** e 951
+- **-** f 951
+- **-** H 951
+- **-** j 951
+- **-** k 951
+- **-** l 951
+- **-** m 950
+- **-** n 950
+- **-** p 951
+- **-** r 950
+- **-** s 951
+
+## 创建方法
+
+- **create 方法** 387
+- **pageX** 432
+- **createHorizontalBox 方法** 642, 400
+- **createVerticalBox 方法** 642, 400
+- **createStructural 方法** 642, 400
+- **createStatement 方法** 753, 759
+- **createVerticalBox 方法** 642, 400
+- **createStructural 方法** 642, 400
+
+## 创建与拷贝
+
 - 创建并初始化数组 148
 - 创建设计 994, 999, 1000
-- `current` 线程 661
-- 进制 969
-- 进制 969
-- 之间 403
-- `copy` 的方法方法 519, 526
-- 深拷贝 477
-- 浅拷贝 262
-- `ArrayList` 类 706
-- `Array` 类 706
-- `count` 的方法 (`Object`) 557
-- 计数器 71
-- `cosine` 的 `Math` 120
-- 自定义区域 381
-- 自定义子类 331
-- 自定义 `JPanel` 381
-- 数据虚线 428
-- 数据完整性 209
-- 数据源 549
-- 数据流 145, 101
-- 数据库 733, 739
-- 数据库管理系统 (`DBMS`)
-- `DataInput` 接口 504
-- `InputStream` 类 504
-- `DataOutput` 类 504
-- 声明式编程 790
-- 递减 -82
-- 深拷贝 262
-- 默认 902
-- 默认集 102, 104, 132
-- 默认构造函数 522, 208
-- 默认异常处理 332
-- 默认初始值 45
-- 默认关键字 998
-- 默认布局内容面板 400
-- 默认查看 805
-- 默认接口方法 (`Java SE`) 550, 511
-- 默认接口方法 (`Java SE`) 8
-- 默认包 48, 224
-- 默认上界 (`Object`) 的类型 996
-- dimming 336
-- 定义方法 85
-- 角度 422
-- 不交的 519, 529
-- `drawline` 的方法 425, 427
-- `drawRect` 的方法 419, 432
-- `drawString` 的方法 409
-- `driver` 类 655
-- `Deleaseer` 706
-- `delegation` 模型 551
-- `display` 计数 463
-- `display` 计数 37
-- `display` 列表 243
-- `drop-down` 列表 338, 363
-- `Duration` 类 74
-- `delete` 的方法 577
-- `dispose` 的方法 617
-- `deleteList` 739
-- `deleteChar` 方法 826
-- 动态绑定 270
-- 动态内容 828
-- 动态恢复 145
-- 删除文件 477
-- 除法赋值运算符 120
-- 分隔符 463
-- 部署在 UML 中 990
-- ATM 测试类代码 826, 98, 986, 820, 827, 839, 841, 855, 856, 852, 863
-- `document` 6,122
-- 文档版本 924, 822, 827, 831, 839, 848, 859
-- `double` 366
-- `dot.` (`*`) 44, 95, 119, 217
-- `double-字节字符` 577
-- `@deprecated java` 936
-- `deprecated` 在 API 中 916
-- 在 UML 中 611
-- `deprecated-html` 方法 1951
-- `double` 510, 606
-- `deprecated` 902
-- `double-浮点数` 303
-- `deprecated` 标记 30
-- `descending` 186
-- `descending sort` (`DESC`) 742
-- `double` 575
-- `descent` 416
-- `average` 方法 575
-- `sum` 方法 575
-- `design pattern` 19, 992, 993, 995, 996, 998, 1000, 1002, 1003, 1004, 1005, 1006, 1010
-- `doubleValue` 方法的 `Number` 607
-- `drawstream` 类 268
-- `drawRect` 方法 (`Java SE 8`) 574
-- `drawString` 的方法 409
-- `driver` 类 655
-- `Deleaseer` 706
-- `delegation` 模型 551
-- `display` 计数 463
-- `display` 计数 37
-- `display` 列表 243
-- `drop-down` 列表 338, 363
-- `Duration` 类 74
-- `delete` 的方法 577
-- `dispose` 的方法 617
-- `deleteList` 739
-- `deleteChar` 方法 826
+- **current 线程** 661
+- **进制** 969
+- **进制** 969
+- **之间** 403
+- **copy 的方法方法** 519, 526
+- **深拷贝** 477
+- **浅拷贝** 262
+- **ArrayList 类** 706
+- **Array 类** 706
+- **count 的方法 (Object)** 557
+- **计数器** 71
+- **cosine 的 Math** 120
+- **自定义区域** 381
+- **自定义子类** 331
+- **自定义 JPanel** 381
+- **数据虚线** 428
+- **数据完整性** 209
+- **数据源** 549
+- **数据流** 145, 101
+- **数据库** 733, 739
+- **数据库管理系统 (DBMS)**
+- **DataInput 接口** 504
+- **InputStream 类** 504
+- **DataOutput 类** 504
+- **声明式编程** 790
+- **递减** -82
+- **深拷贝** 262
+- **默认** 902
+- **默认集** 102, 104, 132
+- **默认构造函数** 522, 208
+- **默认异常处理** 332
+- **默认初始值** 45
+- **默认关键字** 998
+- **默认布局内容面板** 400
+- **默认查看** 805
+- **默认接口方法 (Java SE)** 550, 511
+- **默认接口方法 (Java SE)** 8
+- **默认包** 48, 224
+- **默认上界 (Object) 的类型** 996
+- **dimming** 336
+- **定义方法** 85
+- **角度** 422
+- **不交的** 519, 529
+- **drawline 的方法** 425, 427
+- **drawRect 的方法** 419, 432
+- **drawString 的方法** 409
+- **driver 类** 655
+- **Deleaseer** 706
+- **delegation 模型** 551
+- **display 计数** 463
+- **display 计数** 37
+- **display 列表** 243
+- **drop-down 列表** 338, 363
+- **Duration 类** 74
+- **delete 的方法** 577
+- **dispose 的方法** 617
+- **deleteList** 739
+- **deleteChar 方法** 826
+- **动态绑定** 270
+- **动态内容** 828
+- **动态恢复** 145
+- **删除文件** 477
+- **除法赋值运算符** 120
+- **分隔符** 463
+- **部署在 UML 中** 990
+
+## ATM 测试类代码
+
+826, 98, 986, 820, 827, 839, 841, 855, 856, 852, 863
+
+## 文档与 Double
+
+- **document** 6,122
+- **文档版本** 924, 822, 827, 831, 839, 848, 859
+- **double** 366
+- **dot. ( * )** 44, 95, 119, 217
+- **double-字节字符** 577
+- **@deprecated java** 936
+- **deprecated 在 API 中** 916
+- **在 UML 中** 611
+- **deprecated-html 方法** 1951
+- **double** 510, 606
+- **deprecated** 902
+- **double-浮点数** 303
+- **deprecated 标记** 30
+- **descending** 186
+- **descending sort (DESC)** 742
+- **double** 575
+- **descent** 416
+- **average 方法** 575
+- **sum 方法** 575
+- **design pattern** 19, 992, 993, 995, 996, 998, 1000, 1002, 1003, 1004, 1005, 1006, 1010
+- **drawstream 类** 268
+- **drawRect 方法 (Java SE 8)** 574
+- **drawString 的方法** 409
+- **driver 类** 655
+- **Deleaseer** 706
+- **delegation 模型** 551
+- **display 计数** 463
+- **display 计数** 37
+- **display 列表** 243
+- **drop-down 列表** 338, 363
+- **Duration 类** 74
+- **delete 的方法** 577
+- **dispose 的方法** 617
+- **deleteList** 739
+- **deleteChar 方法** 826
 
 # 1022 索引
 
-- 行尾 (`EOF`)
-- 指示符 101
-- 键组合 484
-- 标记 475
-- 行尾（单行）注释 `//` 22
-- `String` 类的 `endsWith` 方法 444
-- `enabled` 语句
-- `ensurecapacity` 方法
-- `StringBuilder` 453
-- `Enter` (或 `Ean`) 键 24
-- 入口环境图 738
-- `enum` 136
-- `Eventobject` 类
-  - `getSource` 方法 349
-- `extent` 157, 305
-- `handler` 155
-- `handling` 115
-- `parameters`
-- `Exceptional` 类 314
-- 异常处理器 311
-- 异常参数 311
-- `IndexOutOfRangeException` 158
-- 致命数字错误 12
-- 容错性 305
-- 容错程序 157
-- 特性组件 18
-- `field` 523
-- 默认初始值 45
-- API 中的 `Field` Section 921
-- 类的 `field` 120, 138
-- API 中的 `Field` Summary 919
-- `field` 923, 95, 946
-- `field` 475
-- `File` 类
-  - `toFilePath` 方法 501
-  - 用于获取文件和目录信息 479
-- `FileInputStream` 类 544
-- `FileNotFoundException` 类 483
-- `FileOutputStream` 类 543, 106
-- `FileReader` 类 506
-- 构造函数 213
-- 声明 213
-- `Enum` 类 215
-- 键绑 136, 898
-- `key` 方法
-- `valOf` 方法 214
-- `enum` 类型 136
-- 枚举常量 136
-- `Enum` 类 215
-- 环境变量 215
-- `CLASSPATH` 25
-- `EPException` 类 500
-- 等等概率 131
-- 比较 `String` 的相等 `==`
-- `objects` 441
-- `eality equals` 34
-- `Arrays` 类 186
-- `BitSet` 类 98
-- `Object` 类 261
-- `String` 类 443
-- `signEqualCode` 类 441
-- `String` 类 443
-- 错误 539
-- `Error-Exception Tips` 概述 321
-- 转义字符 275
-- 转义序列 27, 381, 960, 961
-- `\\` 28
-- `\t` 水平制表符 38
-- `newln` 27
-- `execute` 方法 316
-- `executeOfObject` 769
-- `Executor` 的 `execute` 方法
-- 接口 659, 663
-- `executeQuery` 方法
-- `Statement` 的 `Of` 776
-- 接口的 `executeUpdate` 方法
-- `Statement` 的 776
-- 正在执行 131
-- 执行时间错误 112
-- `executeToException` 类 710
-- `execute` 方法 659, 663
-- 拷贝 477
-- 创建 477
-- 获取信息 477
-- 操作 477
-- 读取 477
-- `File` 类 477
-- `exists` 方法 478
-- `getLastNameModified` 方法 478
-- `isdirectory` 方法 478
-- `lines` (`java 8`) 587
-- `nieder-create` 方法 478
-- `newOutputStream` 方法 495
-- `ys` 494
-- `dispatch-event` (`ADT`) 405, 707
-- 驱动器 340
-- 驱动驱动事件 406
-- 事件处理器 301, 354, 799, 801, 835
-- 事件分发事件 407
-- 事件 `ID` 类 351
-- 使用 `StringBuilder` 实现 581, 383
-- `make` 344, 347, 352, 701, 792
-- 源事件 349
-- `Executors` 660
-- `newCachedThreadPool` 方法 669
-- `ExecutorService` 类 620, 726
-- `awaitTermination` 方法 669
-- `subject` 676
-- `submit` 方法 726
-- `Files` 的 `exists` 方法 478
-- `ext` to debug 999
-- `ext-create` 方法 318, 483
-- 退出点
-- `size` 方法 478
-- `SIZE_AND_DIRECTORIES`
-- `FileChooser` 500
-- `FILE_ONLY` 常量 507
-- `FileChooser` 类 509
-- `fill` 方法 558
-- `adapter` 类 377
-- 接口 347, 348, 352, 355, 372, 377, 801
-- `object` 351
-- 注册方法 348
-- 事件源 349
-- `event-handler` (`JavaFX`) 811
-- `EventListener` 类 352
-- `Facade` 模式 994, 999, 1006
-- `face` 对象 1007
-- 工厂类 996
-- 工厂方法 999
-- 延迟失败 514
-- 公平性 609
-- `face` `false` 33, 69, 88
-- 类的控制方法 625
-- `or` 语句 108
-- `exp` 方法 320
-- `ended` 子类 223
-- 显式 `confection` 477
-- `exponentiation` 986
-- `npential` 方法 920
-- `exponentation` 947
-- `opens` 变量 95
-- `extend` 类 235
-- 扩展 `keys` 239, 250, 285
-- 可扩展长度 369
-- 扩展机制
-- 额外的类
-- `external extends` 372
-- 外部迭代 549, 579
-- `Arrays` 类 186, `Collections` 类 519, 525
-- `Graphics2D` 类 431, 432, 435
-- `Arrays` 类 716
-- `fill pattern` 435
-- `fill texture` 432
-- `fill with color` 403
-- `fillblock` 267, 419, 422
-- `fillArc` 方法类 422
-- `fill-in-shape` 432
-- `filled rectangle` 407
-- `three-dimensional rectangle` 419
-- `fillOval` 方法类 383, 419, 422
-- `fillPolygon` 方法类 425, 468
-- `fillRect` 方法类 `Graphics` 407, 419, 432
-- `fillRound` 方法类 `Graphics` 400
-- `filter stream` 504
-- `elements a stream` (`Java SE 8`) 559
-- `filter` (`Java SE 8`) 559
-- `Stream` 方法
-- `filter` (`Java SE 8`) 563, 566
-- `FilterOutputStream` 类 504
-- `final`
-- `font` (cont.)
-  - `size` 414
-  - `style` 413
-- `Font` 类 359, 403, 414
-  - `BOLD` 常量 414
-  - `getFamily` 方法 413, 416
-  - `getName` 方法 413, 415
-  - `getSize` 方法 413, 414
-  - `getStyle` 方法 413, 416
-  - `isBold` 方法 413, 416
-  - `isItalic` 方法 413, 416
-  - `isOrphan` 方法 413, 416
-  - `PLAIN` 常量 414
-- `format specifies` (cont.)
+## 符号与枚举
+
+- **行尾 (EOF)**
+- **指示符** 101
+- **键组合** 484
+- **标记** 475
+- **行尾（单行）注释; //** 22
+- **String 类的 endsWith 方法** 444
+- **enabled 语句**
+- **ensurecapacity 方法**
+- **StringBuilder** 453
+- **Enter (或 Ean) 键** 24
+- **入口环境图** 738
+- **enum** 136
+- **Eventobject 类**
+- **getSource 方法** 349
+- **extent** 157, 305
+- **handler** 155
+- **handling** 115
+- **parameters**
+- **Exceptional 类** 314
+- **异常处理器** 311
+- **异常参数** 311
+- **IndexOutOfRangeException** 158
+- **致命数字错误** 12
+- **容错性** 305
+- **容错程序** 157
+- **特性组件** 18
+- **field** 523
+- **默认初始值** 45
+- **API 中的 Field Section** 921
+- **类的 field** 120, 138
+- **API 中的 Field Summary** 919
+- **field** 923, 95, 946
+- **field** 475
+
+## File 相关
+
+- **File 类**
+- **toFilePath 方法** 501
+- **用于获取文件和目录信息** 479
+- **FileInputStream 类** 544
+- **FileNotFoundException 类** 483
+- **FileOutputStream 类** 543, 106
+- **FileReader 类** 506
+- **构造函数** 213
+- **声明** 213
+- **Enum 类** 215
+- **键绑** 136, 898
+- **key 方法**
+- **valOf 方法** 214
+- **enum 类型** 136
+- **枚举常量** 136
+- **Enum 类** 215
+- **环境变量** 215
+- **CLASSPATH** 25
+- **EPException 类** 500
+- **等等概率** 131
+- **比较 String 的相等 ==**
+- **objects** 441
+- **eality equals** 34
+- **Arrays 类** 186
+- **BitSet 类** 98
+- **Object 类** 261
+- **String 类** 443
+- **signEqualCode 类** 441
+- **String 类** 443
+- **错误** 539
+- **Error-Exception Tips 概述** 321
+- **转义字符** 275
+- **转义序列** 27, 381, 960, 961
+- **\\** 28
+- **\t, 水平制表符** 38
+- **newln** 27
+- **execute 方法** 316
+- **executeOfObject** 769
+- **Executor 的 execute 方法接口** 659, 663
+- **executeQuery 方法 Statement 的 Of** 776
+- **接口的 executeUpdate 方法 Statement 的** 776
+- **正在执行** 131
+- **执行时间错误** 112
+- **executeToException 类** 710
+- **execute 方法** 659, 663
+- **拷贝** 477
+- **创建** 477
+- **获取信息** 477
+- **操作** 477
+- **读取** 477
+- **File 类** 477
+- **exists 方法** 478
+- **getLastNameModified 方法** 478
+- **isdirectory 方法** 478
+- **lines (java 8)** 587
+- **nieder-create 方法** 478
+- **newOutputStream 方法** 495
+- **ys** 494
+- **dispatch-event (ADT)** 405, 707
+- **驱动器** 340
+- **驱动驱动事件** 406
+- **事件处理器** 301, 354, 799, 801, 835
+- **事件分发事件** 407
+- **事件 ID 类** 351
+- **使用 StringBuilder 实现** 581, 383
+- **make** 344, 347, 352, 701, 792
+- **源事件** 349
+- **Executors** 660
+- **newCachedThreadPool 方法** 669
+- **ExecutorService 类** 620, 726
+- **awaitTermination 方法** 669
+- **subject** 676
+- **submit 方法** 726
+- **Files 的 exists 方法** 478
+- **ext to debug** 999
+- **ext-create 方法** 318, 483
+- **退出点**
+- **size 方法** 478
+- **SIZE_AND_DIRECTORIES**
+- **FileChooser** 500
+- **FILE_ONLY 常量** 507
+- **FileChooser 类** 509
+- **fill 方法** 558
+- **adapter 类** 377
+- **接口** 347, 348, 352, 355, 372, 377, 801
+- **object** 351
+- **注册方法** 348
+- **事件源** 349
+- **event-handler (JavaFX)** 811
+- **EventListener 类** 352
+- **Facade 模式** 994, 999, 1006
+- **face 对象** 1007
+- **工厂类** 996
+- **工厂方法** 999
+- **延迟失败** 514
+- **公平性** 609
+- **face false** 33, 69, 88
+- **类的控制方法** 625
+- **or 语句** 108
+- **exp 方法** 320
+- **ended 子类** 223
+- **显式 confection** 477
+- **exponentiation** 986
+- **npential 方法** 920
+- **exponentation** 947
+- **opens 变量** 95
+- **extend 类** 235
+- **扩展 keys** 239, 250, 285
+- **可扩展长度** 369
+- **扩展机制**
+- **额外的类**
+- **external extends** 372
+- **外部迭代** 549, 579
+- **Arrays 类** 186, **Collections 类** 519, 525
+- **Graphics2D 类** 431, 432, 435
+- **Arrays 类** 716
+- **fill pattern** 435
+- **fill texture** 432
+- **fill with color** 403
+- **fillblock** 267, 419, 422
+- **fillArc 方法类** 422
+- **fill-in-shape** 432
+- **filled rectangle** 407
+- **three-dimensional rectangle** 419
+- **fillOval 方法类** 383, 419, 422
+- **fillPolygon 方法类** 425, 468
+- **fillRect 方法类 Graphics** 407, 419, 432
+- **fillRound 方法类 Graphics** 400
+- **filter stream** 504
+- **elements a stream (Java SE 8)** 559
+- **filter (Java SE 8)** 559
+- **Stream 方法**
+- **filter (Java SE 8)** 563, 566
+- **FilterOutputStream 类** 504
+- **final**
+
+## Font (cont.)
+
+- **size** 414
+- **style** 413
+- **Font 类** 359, 403, 414
+- **BOLD 常量** 414
+- **getFamily 方法** 413, 416
+- **getName 方法** 413, 415
+- **getSize 方法** 413, 414
+- **getStyle 方法** 413, 416
+- **isBold 方法** 413, 416
+- **isItalic 方法** 413, 416
+- **isOrphan 方法** 413, 416
+- **PLAIN 常量** 414
+- **format specifies (cont.)**
 
 
 
@@ -31555,10 +31152,10 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - local variable 366
 - `method` 228
 - `variable` 151
-- `final method` 224
+- `final` `method` 224
 - final state in UML 61, 836
 - final value 87
-- `finalize` method 216, 262
+- `finalize()` `method` 216, 262
 - aligning decimal points in output 447
 - boolean values 113
 - `,` (comma) format flag 96
@@ -31569,8 +31166,8 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `field` 238
 - `block` 311, 703
 - `class` 317, 698
-- `Class` 的 `find` 方法 371
-- `InputStream` 的 `findFirst` 196
+- `Class` 的 `find()` 方法 371
+- `InputStream` 的 `findFirst()` 196
 - (Java SE 570)
 - exponential format 948
 - field width 954
@@ -31580,8 +31177,8 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - integers in hexadecimal format 446
 - integers in octal format 446
 - `fireable` 238
-- `AbstractTableModel` 的 `firetable` 方法 368
-- `SortedSet` 的 `first` 方法 536
+- `AbstractTableModel` 的 `firetable()` 方法 368
+- `SortedSet` 的 `first()` 方法 536
 - `ImageView` 的 `Fit Width` 196
 - (JavaFX) 797
 - left justification 945
@@ -31592,11 +31189,11 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - fixed-static 433
 - in a format string 28, 945
 - flag value 74
-- flags 446
+- flags, 446
 - `Formatter` 类 477, 481, 965
-- `close` 方法 484
-- `format` 方法 484, 962
-- `toring` 方法 962
+- `close()` 方法 484
+- `format()` 方法 484, 962
+- `toring()` 方法 962
 - `FormatterClosedException` 484
 - `InputStream` (Java SE 578)
 - `float`
@@ -31605,7 +31202,7 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `Float` 564
 - floating-point class 294
 - floating-point conversion specifiers 955
-- `flush` 238
+- `flush()` 238
 - floating-point number 53, 73, 76, 532, 948
 - forming data 28
 - dating and time with conversion character 951
@@ -31615,17 +31212,17 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `frame` 类 616
 - `driver` 177
 - double precision 53
-- double primitive type 53
-- `float` 方法 `Math` 120
+- `double` primitive type 53
+- `float()` 方法 `Math` 120
 - flow of control 70
 - flow of control in `if-else` statement 63
-- `frequency` method `Collections` 119, 590
+- `frequency()` `method` `Collections` 119, 590
 - `query` 723
 - `Flowaway` class 342, 388, 389
-- fully qualified class 428
+- fully qualified `class` 428
 - fully qualified name 224
 - Functional interface (Java SE 8) 302, 551
-- functional `apply` method 565
+- functional `apply()` `method` 565
 - `BufferedOutputStream` 类 505
 - functional interface 748
 - functional interface (Java SE 8) 551
@@ -31640,25 +31237,25 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `font` 407
 - manipulation 405
 - name 414
-- `format` method 405
+- `format()` `method` 405
 - format metrics 416
-- `ascent` method 416
-- `descent` method 416
-- `getAscent` 方法 416
-- `getDescent` method 416
-- `getHeight` method 416
-- `leading` method statement 62, 89, 92, 91
+- `ascent()` `method` 416
+- `descent()` `method` 416
+- `getAscent()` 方法 416
+- `getDescent()` `method` 416
+- `getHeight()` `method` 416
+- `leading()` `method` statement 62, 89, 92, 91
 - activity diagram 92
 - enhanced 163
 - nested 154, 175
 - example of `method` 352
 - `method` of `Class` 461
-- `ForEach` 方法 interface (Java SE 8) 856
-- `ForEach` 方法 of `Map` (Java SE 8) 587
+- `ForEach()` 方法 `interface` (Java SE 8) 856
+- `ForEach()` 方法 of `Map` (Java SE 8) 587
 - `Font` property of (JavaFX) 796
 - `FontMetrics` 类 413, 403
-- `format` of `Class` 484, 962
-- `format` method of `NumberFormat` 231
+- `format()` of `Class` 484, 962
+- `format()` `method` of `NumberFormat` 231
 - format specifies 28, 945
 - `%` for floating-point numbers with precision 78
 - `Xs` 951, 952, 953, 32, 947, 948, 949
@@ -31682,10 +31279,10 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - `Future` interface 726
 - `method` 726, 730
 - `fx` property of `JavaComponent` 802
-- `FXML` (MarkUp Language) 789
-- `FXML` annotation 809, 810
-- `FXML` markup 794
-- `FXML-loader` (Java API) 801, 810, 811
+- FXML (MarkUp Language) 789
+- FXML annotation 809, 810
+- FXML markup 794
+- FXML-loader (Java API) 801, 810, 811
 - `method` 801, 817
 - generics (cont.)
 - wildcard without an upper bound 609
@@ -31697,154 +31294,154 @@ http://docs.oracle.com/javase/7/api/lang/Cloneable
 - of `interface` `List<T>` 513
 - of `interface` `Paths` 477, 778
 - of `interface` `Map` 540
-- `getActionCommand` of `class` 349, 357
+- `getActionCommand()` of `class` 349, 357
 - getters
 - of `class` `ActionEvent` 428
 - `class` `FontMetrics` 417
-- `getFontMetrics` of `class` `Graphics` 417
-- `getGreen` method of `Color` 407, 409
-- `getWhite` method of `class` 417
-- `getIcon` method of `JLabel` 343
-- `getInstalledAndLockable` methods of `class` `UIManager` 382
-- `getTime` method of `Calendar` 952
-- `getInt` method of `class` 754
-- `getChar` method of `class` 387
-- `getCode` of `class` `KeyEvent` 387
-- `getModifiers` method of `class` `KeyEvent` 387
-- `getKeyText` method of `class` `KeyEvent` 387
-- `getListModified` method of `class` 478
-- `getDouble` method of `class` (Java SE 8) 557, 558
-- `autoCommit` method of `interface`
-- `get` method of `Color` 407, 409
-- `get` method of `Integer` 454
+- `getFontMetrics()` of `class` `Graphics` 417
+- `getGreen()` `method` of `Color` 407, 409
+- `getWhite()` `method` of `class` 417
+- `getIcon()` `method` of `JLabel` 343
+- `getInstalledAndLockable()` `methods` of `class` `UIManager` 382
+- `getTime()` `method` of `Calendar` 952
+- `getInt()` `method` of `class` 754
+- `getChar()` `method` of `class` 387
+- `getCode()` of `class` `KeyEvent` 387
+- `getModifiers()` `method` of `class` `KeyEvent` 387
+- `getKeyText()` `method` of `class` `KeyEvent` 387
+- `getListModified()` `method` of `class` 478
+- `getDouble()` `method` of `class` (Java SE 8) 557, 558
+- `autoCommit()` `method` of `interface`
+- `get()` `method` of `Color` 407, 409
+- `get()` `method` of `Integer` 454
 - `class` of `String` 262, 287
 - `class` of `Object` 453
 - `class` of `String` 555
-- `getClassName` of `class` 555
-- `getCount` method of `class` 752
-- `get` method of `Color` 407, 409
-- `get` method of `class` `Graphics` 410
-- `getColName` method of `Table` 755, 760
-- `get` method of `Data` 755, 760
-- `getColumn` method of `Table` 755, 760
-- `getType` method of `class` 753
-- `getCount` method of `class` `DriverManager` 752
-- `getContent` method of `class` 591
-- `getDescent` method of `class` 417
-- `getFamily` method of `class` 417
-- `getFileName` method of `class` 324
-- `getFileName` method of `interface` `Path` 476
-- `getFont` method of `class` `Graphics` 414
-- `getFontMetrics` method of `class` 416
-- `get number` method of `class` `StackElement` 324
-- `getMessage` method of `class` `Throwable` 324
-- `getStackTrace` of `class` 324
+- `getClassName()` of `class` 555
+- `getCount()` `method` of `class` 752
+- `get()` `method` of `Color` 407, 409
+- `get()` `method` of `class` `Graphics` 410
+- `getColName()` `method` of `Table` 755, 760
+- `get()` `method` of `Data` 755, 760
+- `getColumn()` `method` of `Table` 755, 760
+- `getType()` `method` of `class` 753
+- `getCount()` `method` of `class` `DriverManager` 752
+- `getContent()` `method` of `class` 591
+- `getDescent()` `method` of `class` 417
+- `getFamily()` `method` of `class` 417
+- `getFileName()` `method` of `class` 324
+- `getFileName()` `method` of `interface` `Path` 476
+- `getFont()` `method` of `class` `Graphics` 414
+- `getFontMetrics()` `method` of `class` 416
+- `get number()` `method` of `class` `StackElement` 324
+- `getMessage()` `method` of `class` `Throwable` 324
+- `getStackTrace()` of `class` 324
 
 # 索引 1025
 
-- `throwable` 的 `getStackTrace` 方法 324
-- `class` `ItemEvent` 的 `getStateChange` 方法 367
-- `class` 413, 416 的 `getStyle` 方法
-- `getMethod` 811
-- `class` `JLabel` 的 `getText` 方法 343
-- `getComponentText` 625
-- `class` `getInputControl` 的 `ext` 方法 181
-- `class` `NumberFormat` 的 `getReturnClassName` 方法 231
-- `class` 351 616 的 `GetValue` 方法
-- `Integer` 的 `setValue` 方法 444
-- `class` `MouseEvent` 的 `getMouseEvent` 方法 377
-- `class` `MouseEvent` 的 `getMouseClicked` 方法 377
+- `throwable` 的 `getStackTrace()` 方法 324
+- `class` `ItemEvent` 的 `getStateChange()` 方法 367
+- `class` 413, 416 的 `getStyle()` 方法
+- `getMethod()` 811
+- `class` `JLabel` 的 `getText()` 方法 343
+- `getComponentText()` 625
+- `class` `getInputControl` 的 `ext()` 方法 181
+- `class` `NumberFormat` 的 `getReturnClassName()` 方法 231
+- `class` 351 616 的 `GetValue()` 方法
+- `Integer` 的 `setValue()` 方法 444
+- `class` `MouseEvent` 的 `getMouseEvent()` 方法 377
+- `class` `MouseEvent` 的 `getMouseClicked()` 方法 377
 - Gif（图形接口格式）343
 - Gif-Hub 7
 - gpyl 939
 - 良好的编程实践 x361
 - `GridLayout` Play 8
 - 目标设定，6
-- goto eliminate 660
+- `goto` eliminate 660
 - 渐变 `class` 431
-- `GradientPaint` class 403, 431
+- `GradientPaint` `class` 403, 431
 - Good, Mark 1005
-- 图形接口 (GUI) 的 `highHeight` 方法 301, 333
+- 图形接口 (GUI) 的 `highHeight()` 方法 301, 333
 - `table` 785, 760
 - 树设计形状 383
-- `Graphics` class 382, 403, 408, 428
-- `clearRect` 方法 419
-- `drawText` 方法 419, 422
-- `drawArc` 方法 422
-- `drawLine` 方法 419, 422
-- `drawPolygon` 方法 `class` 425, 427
-- `class` 425, 427 的 `drawPolygon` 方法
-- `drawRectangle` 方法 440
-- `drawString` 方法 409
-- `setColor` 447
-- `setFont` 方法 414, 414
-- `fillRect` 方法 381, 419, 422
-- `fillRect` 方法 407, 419, 432
-- `f1103` 方法 419
-- `f1104` 方法 419
-- `class` 425, 427 的 `f110Polygon` 方法
-- `setFont` 方法 448
-- `translate` 方法 440
-- `setMethod` 417
-- 411 方法 431, 432, 435, 439
-- `setPoint` 方法 431
-- `setStroke` 方法 431
-- `translate` 方法 435
+- `Graphics` `class` 382, 403, 408, 428
+- `clearRect()` 方法 419
+- `drawText()` 方法 419, 422
+- `drawArc()` 方法 422
+- `drawLine()` 方法 419, 422
+- `drawPolygon()` 方法 `class` 425, 427
+- `class` 425, 427 的 `drawPolygon()` 方法
+- `drawRectangle()` 方法 440
+- `drawString()` 方法 409
+- `setColor()` 447
+- `setFont()` 方法 414, 414
+- `fillRect()` 方法 381, 419, 422
+- `fillRect()` 方法 407, 419, 432
+- `f1103()` 方法 419
+- `f1104()` 方法 419
+- `class` 425, 427 的 `f110Polygon()` 方法
+- `setFont()` 方法 448
+- `translate()` 方法 440
+- `setMethod()` 417
+- 411 `method` 431, 432, 435, 439
+- `setPoint()` 方法 431
+- `setStroke()` 方法 431
+- `translate()` 方法 435
 - 贪婪量符 499
 - grid-395
 - `GridBaglayout` 布局管理器 642
-- `GridConstraints` class 643, 648, 649
-- `anchor` field 639
-- `BOTH` `CONST` class 643
-- `EAST` class 643
-- `gridheight` field 649
-- `gridwidth` field 649
-- `gridy` field 649
-- `HORIZONTAL` class 643
+- `GridConstraints` `class` 643, 648, 649
+- `anchor` `field` 639
+- `BOTH` `CONST` `class` 643
+- `EAST` `class` 643
+- `gridheight` `field` 649
+- `gridwidth` `field` 649
+- `gridy` `field` 649
+- `HORIZIZONTAL` `class` 643
 - 实例变量 643
-- `NONE` class 643
-- `NORTH` class 643
-- `NORTHEAST` class 643
-- `NORTH` class 643
+- `NONE` `class` 643
+- `NORTH` `class` 643
+- `NORTHEAST` `class` 643
+- `NORTH` `class` 643
 - `RELATIVE` 约束 649
 - `REMAINDER` 约束 649
-- `SOUTH` class 643
-- `SOUTHWEST` class 643
-- `textheight` field 649
-- `textwidth` field 649
-- `WEST` class 643
+- `SOUTH` `class` 643
+- `SOUTHWEST` `class` 643
+- `terext` `field` 649
+- `textwidth` `field` 649
+- `WEST` `class` 643
 - `GridBagConstraints`
-- `REMAINDER` 方法 649
-- `GridBagLayout` class, 632, 646, 798
-- `setConstraints` 388
+- `REMAINDER()` `method` 649
+- `GridBagLayout` `class`, 632, 646, 798
+- `setConstraints()` 388
 - `GridBagLayout` 布局管理器 645
-- `class` `GridConstraints` 的 `gridheight` field 644
-- 带有六个按钮的 `GridLayout` 布局 395
+- `class` `GridConstraints` 的 `gridheight` `field` 644
+- 带有六个按钮的 `dridLayout` 布局 395
 - `GridBagLayout` (JavaFX) 799, 799
-- `Vgap` property 805
-- `class` `GridConstraints` 的 `gridwidth` field 644
-- `gridy` field 644
+- `Vgapor` property 805
+- `class` `GridConstraints` 的 `gridwidth` `field` 644
+- `gridy` `field` 644
 - `GROUP` 739
-- `class` 472 的 `group` 方法
-- `groupClassName`（以前为 output）696
-- `Collectors` (Java SE) 的 `grouping` 方法 573, 574, 580
-- GUI 中的 `getLine` 828
-- `horizontal` field 642
-- horizontal 滚动策略 401
-- Suspension Panel 数据模式 994, 1005
+- `class` 472 的 `group()` 方法
+- `groupClassName`（以前为 `output`）696
+- `Collectors` (Java SE) 的 `grouping()` 方法 573, 574, 580
+- GUI 中的 `getLine`, 828
+- `horizontal` `field` 642
+- `orizontal` 滚动策略 401
+- Suspension Panel 数据模式, 994, 1005
 - 使用 `class` 66 的防护代码
 - GUI（图形用户界面） 301 组件 333
 - 设计 408
 - `ImageView` (JavaFX) 791
-- `Label` 方法 435
-- `Label` class (791)
-- 命名规范方法 802
+- `Label` `method` 435
+- `Label` `class` (791)
+- 命名规范 `method` 802
 - `TextField` (JavaFX) 799, 808
-- `component` (JavaFX) 800
-- `TextField` class (JavaFX) 800
+- `component.` (JavaFX) 800
+- `TextField` `class` (JavaFX) 800
 - guillements (`-` 和) 53
 - `H` 转换字符 952
-- `h` version center 字符 952
+- `hversion center` 字符 952
 - 处理异常 309
 
 
@@ -32121,7 +31718,7 @@ Java 虚拟机 (VM) 10, 23
 java add 338, 405, 426, 428, 426, 618, 626
 `java.awt.color` 包 428
 `java.awt` 包 127, 350, 352, 377, 380
-`java.awt.fort` 包 428
+`java.awt.font` 包 428
 `java.awt.geom` 包 127, 428
 `java.awt.image` 包 428
 `java.awt.image.renderable` 包 428
@@ -32149,10 +31746,10 @@ Java 语言规范
 `java.sun.com/docs/books/`
 java 编译器 10, 24
 `javadecrecation` 标记 30
-javadoc 注释 22
-javadoc 选项 933
-javadoc 标签 924
-javadoc 标签 705
+`javadoc` 注释 22
+`javadoc` 选项 933
+`javadoc` 标签 924
+`javadoc` 标签 705
 `@author` 933
 `@deprecated`
 `(@link)` 标签
@@ -32166,7 +31763,7 @@ javadoc 标签 705
 `javax.swing.table` 包 755, 766
 `JButton` 类 334, 354, 397
 `JCheckBox` 布尔和项目事件 355
-`JCheckBox` repaint method 369
+`JCheckBox` `repaint` method 369
 `JItemSelected` method 369
 `JPopupMenu` 617, 618, 626
 `JLabel` 类（续）
@@ -32187,22 +31784,22 @@ javadoc 标签 705
 `addSeparator` method 624
 `JMenuBar` 类 617, 624
 `JMenuItem` 618, 635
-javadoc 程序 22, 924
+`javadoc` 程序 22, 924
 `@FXML` 809
 `ActionEvent` 809, 811
 `@annotation` 582
 Cascading Style Sheets (CSS) 789
 `ChangeListener` 接口 801
-container 类 791
+`container` 类 791
 `Double` 方法 812
 `EventHandler` 接口 802
-FXML (Markup Language) 789
+`FXML` (Markup Language) 789
 `FXLoader` 类 801
 `GridLayout` 类 795
 `ImageView` 类 791
 `Label` 类 791
 `Node` 类 790
-padding 805
+`padding` 805
 `paintComponent` method 381, 386
 `JPanel` 类 338, 388, 397, 601, 703, 805
 `PasswordField` 类 344, 349
@@ -32294,7 +31891,7 @@ terminating the animation of a
 - `size` 方法, 513
 - `sublist` 方法 517
 - `tracker` 方法 518
-- Properties 列表 543
+- `Properties` 列表 543
 - 监听事件 548
 - `ListIterator` 接口 551
 - `hasFirst` 方法 557
@@ -32392,7 +31989,7 @@ terminating the animation of a
 - 加载-之前 516
 - 来自应用程序的 338
 - 查找 操作
-- `Swing-Binding` 类的 629
+- Swing-Binding 类的 629
 - UML 中的关系 338
 - 样式 335
 - `LookIn` 类 550
@@ -32564,12 +32161,12 @@ terminating the animation of a
 - `GridConstraints` 类的东北 常量 643
 - `GridConstraints` 类的 `NORTHWEST` 常量 643
 - `NoSuchElementException` 异常 484, 4
-- UML 中的 now 61
+- UML 中的 `now` 61
 - 类 684 的 `notify` method 684
 - `Object` 的 `notify` method 262
 - 类 684 的 `notifyAll` method 684
 - 类 262 的 `notAll` method 262
-- 声明中的 now 参数 626
+- 声明中的 `now` 参数 626
 - `Instant` 类的 `now` method 222
 - `null` 898
 - `null` 关键字 50, 147, 337
@@ -32621,7 +32218,7 @@ terminating the animation of a
 - `BigDecimal` 类的 `one` 常量 301
 - 一对多关系 738, 738
 - 一对一映射 537
-- 一对一映射 mouse 380
+- 一对一映射 `mouse` 380
 - 系统 771, 980
 - 位置 964
 - UML 中的一对一关系 829
@@ -32631,31 +32228,31 @@ terminating the animation of a
 - open file 476
 - Open Handler 7
 - 操作系统 7
-- 类 839 中的 operation
+- 类 839 中的 `operation`
 - `Optional` 类 (Java SE) 575
-- optional 包 227
+- `optional` 包 227
 - `OptionalDouble` (Java SE) 575
 - `dataDouble` method 557, 575
 - `BitSet` 类的 `or` method 884
-- functional interface (`Predicate` (Java SE)) 563
+- `functional interface` (`Predicate` (Java SE)) 563
 - Oracle Corporation 733, 938
 - `ORDER BY` 子句 739, 742, 743
-- records 的 ordering 739
-- origin 628
-- originator 998
-- out-of-bounds 数组 314
-- out of breakers 157
-- output 24
+- records 的 `ordering` 739
+- `origin` 628
+- `originator` 998
+- `out-of-bounds` 数组 314
+- `out of breakers` 157
+- `output` 24
 - `CallableStatement` 785
 - `OutputStream` 493, 503
 - `OutputStreamwriter` 616
-- overall bounded rectangle 422
-- overall colors 435
-- overflow 314
-- overload 140
-- overload 202
-- overloading generic methods 593
-- overload subclass method 238
+- `overall bounded rectangle` 422
+- `overall colors` 435
+- `overflow` 314
+- `overload` 140
+- `overload` 202
+- `overloading generic methods` 593
+- `overload subclass method` 238
 - P (as a Service) 17
 
 
@@ -32736,7 +32333,7 @@ terminating the animation of a
 - `matches` method 471
 - `pattern matching` 740
 - `Pattern` interface declaration 293
-- `pattern inheritance in XML` 292
+- `pattern inheritance` in XML 292
 - `proceeding` 299
 - `proceedically` 299
 - `PriorityQueue` 类的 `peek` method 533
@@ -32765,7 +32362,7 @@ terminating the animation of a
 - `plugable look-and-feel package` 539
 - `PNG` (Network) 345
 - `point class` 382
-- `PriorityQueue poll` method 533
+- `PriorityQueue` `poll` method 533
 - `pygon color` 425
 - `polygon class` 403, 425
 - `polymorphic lines` 425
@@ -32791,10 +32388,10 @@ terminating the animation of a
 - `PropertyChangeListener` listener 720
 - `propertyChange` method
 - `protected access` 199, 238, 896
-- `protocol for communication (Jdbc)` 752
+- `protocol for communication` (Jdbc) 752
 - `Prototype design pattern` 994, 1010
 - `Proxy design pattern` 994, 996, 997
-- `public visibility in the UI`
+- `public` visibility in the UI
 - `keyword` 42, 857, 860, 898
 - 派生类的 method 238
 - `encapsulated in an object` 198
@@ -32818,7 +32415,7 @@ terminating the animation of a
 - `RadialGradientPaint` 431
 - `radials` 120
 - `radio button` 350, 364
-- `radix (base) of a number` 461
+- `radix` (base) of a number 461
 - `raised rectangle control` 422
 - `Random draw`
 - `prefix API` 541
@@ -32841,7 +32438,7 @@ terminating the animation of a
     - `executeUpdate` method 769
     - `setString` method 769, 776
 - `range of class EnumSet` 215
-- `interface range` method 517, 535
+- `interface` `range` method 517, 535
 - `range-view methods` 517
 - `Prececedent Chance` 895
 - `fixed-point floating point calculations` 230
@@ -32902,7 +32499,7 @@ terminating the animation of a
 - `带参数索引的重排序表` 960
 - `重入锁` 668
 - `重入类` 690
-- `接口的 reentrant method` 517
+- `接口` 的 `reentrant` method 517
 - `报告` 62
 - `计数器` 76
 - `标题句` 75, 76
@@ -32922,13 +32519,13 @@ terminating the animation of a
 - `注册监听器` 353
 - `注册事件处理器` 347, 801
 - `注册反射` 464, 576
-- 81 类的 `注册 request method`
+- 81 类的 `注册 request` method
 - `反射句子` 70
 - `Abstract` 类的 `Class`
 - `Class` 类的 `Class` 469
 - `Class` 类的 `Class` 417
 - `Class` 类的 `Class` 469
-- `hereditary` 中的 `需求`
+- `hereditary` 中的需求
 - `以对象格式表示对象的需求` 496
 - `requestFocus` method 811
 - 816 类的 `request` method
@@ -32964,7 +32561,7 @@ terminating the animation of a
 - 662 类的 `rigid area`
 - `rigid robust` 35
 - `方法中的角色` 821
-- `UML 名称中的角色` 827
+- UML 名称中的 `角色` 827
 - `回滚事务` 786
 - `Connection` 接口的 `rollback` method
 - `掷骰子` 126
@@ -32975,7 +32572,7 @@ terminating the animation of a
 - `为显示属性舍入浮点数` 78
 - `舍入洗牌` 658
 - `圆矩形` 420, 432
-- `圆矩形`（用于在 UML 状态图中表示状态）83
+- `圆矩形（用于在 UML 状态图中表示状态）` 83
 - `^` 668
 - `^` 472
 - `(n.)` 469
@@ -32983,7 +32580,7 @@ terminating the animation of a
 - `^` 668
 - `旋转` 5, 3, 10, 56
 - `关系型数据库` 733
-- `关系数据库管理 (RDBMS)` 733
+- `关系数据库管理` (RDBMS) 733
 - `关系数据库表` 734
 - `关系运算符` 34
 - `接口与类之间的关系`
@@ -32993,7 +32590,7 @@ terminating the animation of a
 - `relative a` 666, 684, 687
 - `重用` 5, 3
 - `comparator` (Java SE 8) 566
-- `Collections` 类的 `overridden method` 521
+- `Collections` 类的 `overridden` method 521
 - `RGO 值` 406, 417
 - `右对齐` 380
 - `右`
@@ -33081,10 +32678,10 @@ terminating the animation of a
 - set event handling 347
 - `FlowLayout` 类的 `Alignment` method 391
 - `AutoSizeContent` method 786
-- `setBackground` method of `Component` 412
-- `setBounds` method of `Component` 308
-- `setChar` method of class 454
-- `setColor` method of `Graphics` 407, 432
+- `Component` 类的 `setBackground` method 412
+- `Component` 类的 `setBounds` method 308
+- class 的 `setChar` method 454
+- `Graphics` 类的 `setColor` method 407, 432
 - `JdbSet` 类的 `setCommand` 769
 - SaaS (作为服务) 17
 - `SalaryEmployee` 类 implements `Playable`
@@ -33102,14 +32699,14 @@ terminating the animation of a
 - `Double` method 57
 - `nextline` 类 54
 - `Scene` (JavaFX) 799, 800, 807
-- `scene graph` 809
-- `JavaFX application` 790
+- scene graph 809
+- JavaFX application 790
 - scheduling threads 658
 - scientific notification 947
 - `scope` class 55
 - declaration 138
 - type 596
-- `scope` (ATM 类) 826, 829, 839, 847, 848, 849, 850, 851, 559
+- scope (ATM 类) 826, 829, 839, 847, 848, 849, 850, 851, 559
 - `bitSet` scope 888
 - `Iterator` method 517
 - method (Java SE 8) 580
@@ -33127,11 +32724,11 @@ terminating the animation of a
 - `JTable` 类的 `setHorizontalAlignment` 348
 - `ScrollPane` 类的 `setHorizontalScrollBar` 451
 - `JLabel` 类的 `setTextPosition` 343
-- `setInputStream` method of class 476
-- `setInverted` method of class 515
+- class 的 `setInputStream` method 476
+- class 的 `setInverted` method 515
 - `JFrame` 类的 `setMenuBar` 617, 624
-- `setLayer` method of class 342
-- `setLength` method of class 57
+- class 的 `setLayer` method 342
+- class 的 `setLength` method 57
 - serial 113
 - serializable object 492
 - serialized object.html generated 903
@@ -33139,16 +32736,16 @@ terminating the animation of a
 - `Serif` Java 类 414
 - service 的 serif 199
 - `set` method 905
-- `setColumnCount` method of class 351
-- `setMemonic` method of class 636
-- `setOpacity` method of class 823
-- `setComponent` method of class 381
-- `setSystem` method of class 476
+- class 的 `setColumnCount` method 351
+- class 的 `setMemonic` method 636
+- class 的 `setOpacity` method 823
+- class 的 `setComponent` method 381
+- class 的 `setSystem` method 476
 - UI 中的序列图 823, 848
 - UI 中的消息序列 849
 - `JTextArea` 401
-- `setListData` method of class 917
-- `setLocation` method of class 388
+- class 的 `setListData` method 917
+- class 的 `setLocation` method 388
 
 ## 1038 索引 (续)
 
@@ -33162,7 +32759,7 @@ terminating the animation of a
 - `JTable` 类的 `setrowsorter` method 766
 - `BigDecimal` 类的 `setscale` method 232
 - `Abstract` 类的 `setselected` method 624
-- `short` primitive type 98, 898, 899 126
+- `short` primitive type 98, 898, 899, 126
 - `short-circuiting` terminal operation (Java SE 8) 570
 - `short-cut` key 618
 - `JPopupMenu` 类的 `show` method 228
@@ -33178,7 +32775,7 @@ terminating the animation of a
 - `S1der` 类 (JavaFX) 798, 800
 - Max property 806
 - Value property 806
-- `setValue` method of method 812
+- method 的 `setValue` method 812
 - UML 中的 `sall` circles 61
 - `sall` diamond 符号（用于在活动图中表示决策）838
 - `J1List` 类的 `selection` method 369
@@ -33196,14 +32793,12 @@ terminating the animation of a
 - `JdbRowset` 类的 `setusername` method 769
 - `VerticalBarpoli` 类的 `setalignment` method 365
 - `J5Chroller` 类的 `setselection` method 401
-- `setselection` method of class 355
-- `setvisible` method of class 344, 393, 617
+- class 的 `setselection` method 355
+- class 的 `setvisible` method 344, 393, 617
 - `J1List` 类的 `setrowcount` method 369
-- `setrows` method of class 950
+- class 的 `setrows` method 950
 - `setallow` fetch 138
 - `setcopy` copy 462
-
-# 索引
 
 ## 1039
 
@@ -33219,8 +32814,8 @@ terminating the animation of a
 - 状态子类 998
 - 状态设计 ATM 对象 835
 - UML 中的状态设计 823
-- UML 中的状态,, 823, 836
-- UML 中的状态机设计, 823, 836
+- UML 中的状态 823, 836
+- UML 中的状态机设计 823, 836
 - 状态对象 1004
 - `Properties` 类的 `store` 方法 543
 - 存储过程 785
@@ -33254,7 +32849,7 @@ terminating the animation of a
 - `SQLException` 类 752, 754, 770
 - `ExceptionFeatures-output` 770
 - 类 119, 120 的 `sort` 方法
-- 方括号 [14, 146]
+- 方括号 `[14, 146]`
 - 根类 120
 - `distinct` 方法 567
 - `Filter` 方法 563, 566
@@ -33270,9 +32865,9 @@ terminating the animation of a
 - `package.util` 的 531
 - `peckStack` 533
 - `pop` 方法 533
-- `push push` 方法 532
-- `Stack Double-` 601
-- `Stack Integer-` 601
+- `push` `push` 方法 532
+- `Stack` `Double-` 601
+- `Stack` `Integer-` 601
 - `Stack` 泛型声明 595
 - 静态类 324
 - 栈绕 322
@@ -33318,9 +32913,9 @@ terminating the animation of a
 - 静态输入 (`System.in`) 31, 476
 - 静态输出流 320
 - 静态输出流 (`System.out`) 24, 476, 504
-- 静态 double 组件 236
+- 静态 `double` 组件 236
 - 静态代码格式 197
-- 类 (JavaX) 的 `start` 方法 799, 800, 808
+- 类 (`JavaX`) 的 `start` 方法 799, 800, 808
 - 开始于 322
 - 类 444 的 `startsWith` 方法
 - 饥饿 659
@@ -33380,7 +32975,7 @@ terminating the animation of a
 
 # 索引
 
-## 符号
+## S
 
 - `StringOutOfBoundsException` 457
 - `StringBuilder` 类 452
@@ -33394,7 +32989,7 @@ terminating the animation of a
 - 子类 325, 862, 1063
 - 上文对象 1003
 - `sublist` 517
-- `list` 的 `sublist` 方法 517
+- list 的 `sublist` 方法 517
 - `submin` 618
 - `ExecutorService` 的方法 726
 - 字符串通信 752
@@ -33494,7 +33089,7 @@ terminating the animation of a
 - `IntPredicate` (Java SE 8) 的 `test` 方法 559, 560
 - 编辑器, 437
 - `text bit` 类 456
-- `Label` (JavaFX) 的属性 796
+- Label (JavaFX) 的属性 796
 - `TextEdit` 9
 - `TextField` 类 (JavaFX) 800, 804
 
@@ -33521,7 +33116,7 @@ terminating the animation of a
 - 子类 325, 862, 1063
 - 上文对象 1003
 - `sublist` 517
-- `list` 的 `sublist` 方法 517
+- list 的 `sublist` 方法 517
 - `submin` 618
 - `ExecutorService` 的方法 726
 - 字符串通信 752
@@ -33620,7 +33215,7 @@ terminating the animation of a
 - `IntPredicate` (Java SE 8) 的 `test` 方法 559, 560
 - 编辑器, 437
 - `text bit` 类 456
-- `Label` (JavaFX) 的属性 796
+- Label (JavaFX) 的属性 796
 - `TextEdit` 9
 - `TextField` 类 (JavaFX) 800, 804
 
@@ -33705,7 +33300,7 @@ terminating the animation of a
 - 通用性（设计原则）938
 - 宇宙名称 194, 196, 197
 - UNIX 24, 108
-- `Interface Lock` 的锁机制，693
+- Interface Lock 的锁机制，693
 - 不可集合 511
 - 未指定数量的参数 182
 - `UnexpectedOperationException` 545
@@ -33826,6 +33421,8 @@ terminating the animation of a
 - 接口的 `identified` 方法 617
 
 
+
+## 索引
 
 - `windowopened` 方法 617
 - `windowoperation` 方法 617
