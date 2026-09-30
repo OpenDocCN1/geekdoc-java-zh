@@ -89518,7 +89518,6 @@ class Adapter extends ArrayAdapter<ResolveInfo> {
 
 用户在面对一个 `Intent` 时，希望知道哪些 activity 是首选的。`PackageManager` 提供了 `getPreferredActivities()` 方法，它返回一个 `ResolveInfo` 列表，每个对象包含一个首选 activity 的信息。
 
-当 ` `` `的 `，```````，，那些那些那些被““首启动”的 activity。
 
 在现代版本的 Android 中，有一个 `LauncherApps` 类可以简化许多此类工作，并考虑了如 Android 工作配置。要真正实现主屏幕风格的启动器，你可能想要使用 `LauncherApps`。然而，使用 `PackageManager` 来查找哪些可以处理某些 `Intent` 结构被主主屏幕启动器之外之外。
 
