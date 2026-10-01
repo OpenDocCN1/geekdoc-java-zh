@@ -4577,20 +4577,12 @@ Moniza 移过头去，脸轻微抽动。
 还提到 Gerald、McCulloch、Newman 和 Tabitha 应被视为低优先级。局资源应当重新分配，特别是考虑到此行动的预算已达到美元，而整体预算考虑现在为 X 美元。
 
 6Degrees 擅长利用毫无防备的中间人执行大部分采购行动。
+的律师事务所也表示，由于案件关注度很高，该律所对嫌疑人产生了兴趣，可能是由于类似的“破坏者”利用其服务的策略。并非不可信的公民，目前正面临持续的严密努力。TEDAC 已帮助调查人员追踪了从所使用的易制爆炸装置（IED）到各种销售渠道和制造商的众多组件。硝酸铵和燃料油为对三座燃煤发电厂的攻击提供了纵燃手段，而矿井管道和气体炸弹是使用不复杂的 IED 执行的。某些电气元件已追溯到不同的制造商。
 
-X X X X X X X X X X X X X 一家在 X X X X X X X X X X X X X X X X X X X X X P X X X X X X X X X X X X X X X X X X X X X X X X X X 的律师事务所也表示，由于案件关注度很高，该律所对嫌疑人产生了兴趣，可能是由于类似的“破坏者”利用其服务的策略。X X X X X X X X X X X X X X X X X X X X X P X X X 并非不可信的公民，目前正面临持续的严密努力。TEDAC 已帮助调查人员追踪了从所使用的易制爆炸装置（IED）到各种销售渠道和制造商的众多组件。硝酸铵和燃料油为对三座燃煤发电厂的攻击提供了纵燃手段，而矿井管道和气体炸弹是使用不复杂的 IED 执行的。某些电气元件已追溯到不同的制造商。X X X 揭露 X X X X X X X X X X X X X X X X X X X X X P X X X X X X X X X X X X X X X X X X X X X X X X X X X
+购买这些电气元件的地理多样性增加了调查的复杂性。科罗拉州管道爆炸案中随后使用的电引爆器被追溯到萨斯喀彻省的一个供应商，而设备中使用的 12V 电池碎片是在拉里德的一个零售加油站购买的。肯塔基州燃电厂爆炸案中使用的引爆器的独特特征最终帮助该女士确认 McCulloch 为爆破帽的购买者。Newman 在建筑公司 Otwell Inc. 负责库存工作，揭露了通过替手买家（如 Mitchell、Tabitha）采购某些物品的内情。用于燃电厂爆炸案的货车是从 Tabitha 的业务车队非法获取的。使用 3D 打印机允许炸弹将某些组件替换为 CVIN 号，这就是为什么调查人员花了很长时间才找到货车的来源。
 
-购买这些电气元件的地理多样性增加了调查的复杂性。科罗拉州管道爆炸案中随后使用的电引爆器被追溯到萨斯喀彻省的一个供应商，而设备中使用的 12V 电池碎片是在拉里德的一个零售加油站购买的。肯塔基州燃电厂爆炸案中使用的引爆器的独特特征最终帮助该女士确认 McCulloch 为爆破帽的购买者。Newman 在建筑公司 Otwell Inc. 负责库存工作，X X X X X X X X X X X X X X X X X X X X X P X X X X X X X X X X X X X X X X X X X X X X 揭露了通过替手买家（如 Mitchell、Tabitha）采购某些物品的内情。用于燃电厂爆炸案的货车是从 Tabitha 的业务车队非法获取的。使用 3D 打印机允许炸弹将某些组件替换为 CVIN 号，这就是为什么调查人员花了很长时间才找到货车的来源。
+对 501(c4) A Fire Blue Fire 和 501(c3) A Fire Blue Fire Mutual Aid 的调查工作继续提供丰厚的调查回报。X X X 表示 Kara Morris 辞职后，几名高层员工也注册了抗议，包括此前受过审查的计算机科学家 Liza Yudong。Rekia Reynolds 现担任领导职务，将接受与 Morris 类似的协议，但分析要求关注其他地方。Reynolds 继续维持与 Tom Levine 的关系，尽管两人在内部是对立的，并在员工面前发生冲突。
 
-对 501(c4) A Fire Blue Fire 和 501(c3) A Fire Blue Fire Mutual Aid 的调查工作继续提供丰厚的调查回报。X X X 表示 Kara Morris 辞职后，几名高层员工也注册了抗议，包括此前受过审查的计算机科学家 Liza Yudong。X X X X X X X X X X X X X X X X X X X X X X P Rekia Reynolds 现担任领导职务，将接受与 Morris 类似的协议，但分析要求关注其他地方。X X X X X X X X X X X X X X X X X X X X X X P X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X。Reynolds 继续维持与 Tom Levine 的关系，尽管两人在内部是对立的，并在员工面前发生冲突。
-
-X X X X X X X X X X X X X X X X X X X X X P X X X X X X X X X X X X X X X X
-
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
-
-X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X
 
 
 
