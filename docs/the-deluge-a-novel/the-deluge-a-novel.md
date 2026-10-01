@@ -4572,7 +4572,7 @@ Moniza 移过头去，脸轻微抽动。
 
 摘要：报告详细说明了涉及近十年的生态恐怖主义活动和攻击的低优先级关注人员。尽管进行了多次备受关注的逮捕，但反恐联合任务小组认为，调查尚未在组织核心内部发现被起诉的主要嫌疑人。之前的关注人员可能被排除为持续威胁。
 
-详情：作为对 X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X X 调查的一部分，来源和方法将进行部分编辑。逮捕与行动之间仍存在脱节。虽然 Mitchell Corbin、Tabitha 和 John George Gerald Jr. 确实有轻微违规、被捕并面临诉讼，但没有证据表明他们是小组的活跃成员。Daniel Porter McCulloch 和 Marie Karina Newman 没有警方记录。被捕人员中似乎没有人向环保事业激进化，Miles Russ Kroll 可能除外。X X X X X X X X X X X 认为这些人之所以之所以被招募是因为他们是非意识形态立场，且对 6Degrees 的行动能力缺乏了解。建议将用于监控羁押嫌疑人及其网络的有限资源重新分配。预测分析也得出了相同的结论。
+详情：作为对 ... 调查的一部分，来源和方法将进行部分编辑。逮捕与行动之间仍存在脱节。虽然 Mitchell Corbin、Tabitha 和 John George Gerald Jr. 确实有轻微违规、被捕并面临诉讼，但没有证据表明他们是小组的活跃成员。Daniel Porter McCulloch 和 Marie Karina Newman 没有警方记录。被捕人员中似乎没有人向环保事业激进化，Miles Russ Kroll 可能除外。... 认为这些人之所以之所以被招募是因为他们是非意识形态立场，且对 6Degrees 的行动能力缺乏了解。建议将用于监控羁押嫌疑人及其网络的有限资源重新分配。预测分析也得出了相同的结论。
 
 还提到 Gerald、McCulloch、Newman 和 Tabitha 应被视为低优先级。局资源应当重新分配，特别是考虑到此行动的预算已达到美元，而整体预算考虑现在为 X 美元。
 
