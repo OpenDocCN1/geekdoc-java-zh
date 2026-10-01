@@ -6886,7 +6886,7 @@ Correspondence of grid and prosodic tree.
 |---|---|---|---|---|---|---|---|---|
 | | | | | | | | | | |
 | X | X | X | X | | | |
-| X X X X X X | X X X | | |
+| ... | ... | | |
 
 | W S S W | | S W | S W | S W | S W |
 | (7) | Σ S | V S | V S | V S |
