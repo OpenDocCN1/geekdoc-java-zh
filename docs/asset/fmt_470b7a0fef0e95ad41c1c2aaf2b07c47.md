@@ -1,0 +1,86 @@
+
+```java
+// Fig. 20.10: StackTest2.java
+// 将泛型 Stack 对象传递给泛型方法。
+public class StackTest2 {
+    public static void main(String[] args) {
+        Double[] doubleElements = {1.1, 2.2, 3.3, 4.4, 5.5};
+        Integer[] integerElements = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        // 创建一个 Stack<Double> 和一个 Stack<Integer>
+        Stack<Double> doubleStack = new Stack<>();
+        Stack<Integer> integerStack = new Stack<>();
+
+        // 将 doubleElements 的元素推入 doubleStack
+        testPush("double", doubleStack, doubleElements);
+        testPop("double", doubleStack); // 从 doubleStack 弹出
+
+        // 将 integerElements 的元素推入 integerStack
+        testPush("integer", integerStack, integerElements);
+        testPop("integer", integerStack); // 从 integerStack 弹出
+    }
+
+    // 泛型方法 testPush 将元素推入 Stack
+    public static <T> void testPush(String name, Stack<T> stack, T[] elements) {
+        System.out.printf("%n%nPushing elements onto %s%n", name);
+        for (T element : elements) {
+            System.out.printf("%s ", element);
+            stack.push(element); // 将元素推入栈
+        }
+    }
+
+    // 泛型方法 testPop 从 Stack 弹出元素
+    public static <T> void testPop(String name, Stack<T> stack) {
+        // 从栈中弹出元素
+        try {
+            System.out.printf("%nPopping elements from %s%n", name);
+            T popValue; // 存储从栈移除的元素
+            while (true) {
+                popValue = stack.pop();
+                System.out.printf("%s ", popValue);
+            }
+        } catch (EmptyStackException emptyStackException) {
+            System.out.println();
+            emptyStackException.printStackTrace();
+        }
+    }
+} // 结束类 StackTest2
+```
+
+**图 20.10** 将泛型 Stack 对象传递给泛型方法。（部分 1，共 2。）
+
+![](img/6851b408bcf88c7702f7d951642252f8_899_0.png)
+
+**图 20.10** 将 Stack 对象传递给泛型方法。（部分 2，共 2）
+
+第 11–12 行分别创建了 `Stack<Double>` 和 `Stack<Integer>` 对象。15–16 行和 19–20 行调用泛型方法 `testPush` 和 `testPop` 来测试 Stack 对象。由于类型参数只能表示引用类型，为了能够将数组 `doubleElements` 和 `integerElements` 传递给泛型方法 `testPush`，第 7–8 行定义的数组被包装为 `Double` 和 `Integer` 类型。当这些数组用基本值初始化时，编译器会对每个基本值进行自动装箱。
+
+泛型 `testPush`（第 24–35 行）使用第 24 行指定的类型参数 `T` 来表示 `Stack<T>` 中存储的数据。该泛型方法接受三个参数：一个用于输出的代表 `Stack<T>` 对象名称的 String；一个指向 `Stack<T>` 对象的引用；以及一个 `T` 类型的数组——即要推入 `Stack<T>` 的元素类型。编译器在调用时会强制执行 Stack 的类型与要推入栈的元素之间的一致性，这就是泛型方法调用的真正价值。泛型方法 `testPop`（第 38–58 行）接受两个参数：一个用于输出的代表 `Stack<T>` 对象名称的 String，以及指向 `Stack<T>` 对象的引用。
+
+# 20.7 原始类型
+
+20.6 节中对泛型类 `Stack` 的测试使用类型参数 `Double` 和 `Integer` 实例化 `Stack`。也可以在不指定类型参数的情况下实例化泛型 `Stack`，如下：
+
+```java
+Stack objectStack = new Stack(5); // 未指定类型参数
+```
+
+在这种情况下，`objectStack` 具有一个原始类型——编译器在泛型类中为每个类型参数隐式地使用 `Object` 类型。前面的语句创建了一个可以存储任何类型对象的 `Stack`。这对于与旧版本的后兼容性非常重要。例如，Java 集合框架（第 16 章）的数据结构都存储对 `Object` 的引用，而现在它们被实现为泛型类型。
+
+原始类型是 `Object` 的子类。这种赋值是被允许的，因为 `Stack<Double>` 中的元素（即 `Double` 对象）是特定的对象——`Double` 类是 `Object` 的间接子类。
+
+```java
+Stack rawStack2 = new Stack<Double>(5);
+```
+
+同样，声明中指定了类型参数的原始变量可以赋值原始类型对象，例如：
+
+```java
+Stack<Integer> integerStack = new Stack(10);
+```
+
+虽然这种赋值是被允许的，但不安全，因为原始类型的 `Stack` 可能会存储 `Integer` 以外的类型。在这种情况下，编译器会发出警告消息，指示该赋值是不安全的。
+
+## 在泛型类中使用原始类型
+
+图 20.11 的测试程序使用了原始类型的概念。第 11 行实例化了原始类型的泛型 `Stack`，这表示 `rawStack1` 可以持有任何类型的对象。第 14 行将 `Stack<Double>` 赋值给 `rawStack2`，其声明为原始类型的 `Stack`。第 17 行将原始类型的 `Stack` 赋值给 `Stack<Integer>`，这是合法的。这种赋值是不安全的，因为原始类型的 `Stack` 可能会存储 `Integer` 以外的类型。在这种情况下，编译器会发出警告消息，指示该赋值是不安全的。
